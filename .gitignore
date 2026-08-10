@@ -5,11 +5,11 @@
 .vscode/
 
 # === Docker i budowanie obrazu ===
-# Dockerfile
+Dockerfile
 build.sh
 build.number
 build.number.lock
-# *.dockerignore
+*.dockerignore
 Directory.Build.props
 
 # === Logi ===
@@ -24,9 +24,9 @@ bin/
 **/.git.bak/
 
 # === Per-projektowe .gitignore (nie potrzebne w monorepo) ===
-ModelDto/.gitignore
-WordParser/.gitignore
-WordParserCore/.gitignore
+src/Saga.Model/.gitignore
+src/Saga.Cli/.gitignore
+src/Saga.Core/.gitignore
 WordParserApi/.gitignore
 
 # === Pozostałe ===
@@ -43,5 +43,22 @@ docs.*.md
 # === Repozytorium dokumentów roboczych ===
 DocRepo/
 
+# === Lokalne lustro zewnętrznej schemy (tylko do odczytu) + narzędzie i metadane ===
+schema-pg/
+schema/.upstream.txt
+tools/sync-schema-pg.sh
+
+# === Lokalne artefakty testowe (nie wersjonowane) ===
+tests/Saga.Core.Tests/Artifacts/*.docx
+tests/Saga.Core.Tests/Artifacts/*.xml
+
 # === Projekty zawieszone ===
 WordParserApi/
+
+# === Artefakty ===
+Artifacts/
+docs/internal/
+
+# Raporty narzędzia CorpusValidator (generowane do bieżącego katalogu)
+corpus-report.*
+documents
