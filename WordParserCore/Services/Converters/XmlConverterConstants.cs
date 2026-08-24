@@ -60,6 +60,10 @@ namespace WordParserCore.Services.Converters
                     internal const string GUID = "GUID";
                     internal const string Role = "rola";
                     internal const string URI = "eliURI";
+                    internal const string SigningAuthority = "OrganPodpisujacy";
+                    internal const string SigningPerson = "OsobaPodpisujaca";
+                    internal const string RoleIssuing = "wydający";
+                    internal const string RoleSigning = "podpisujący";
                 }
             }
 
@@ -107,6 +111,10 @@ namespace WordParserCore.Services.Converters
             internal const string PatoParagraph = "pato-ustep";
             internal const string ParagraphImplicit = "ustep-n";
             internal const string PatoParagraphImplicit = "pato-ustep-n";
+            internal const string CodeParagraph = "paragraf-kodeksu";
+            internal const string PatoCodeParagraph = "pato-paragraf-kodeksu";
+            internal const string CodeParagraphImplicit = "paragraf-kodeksu-n";
+            internal const string PatoCodeParagraphImplicit = "pato-paragraf-kodeksu-n";
             internal const string Point = "punkt";
             internal const string PatoPoint = "pato-punkt";
             internal const string Letter = "litera";
@@ -180,6 +188,14 @@ namespace WordParserCore.Services.Converters
             internal static class Instruction
             {
                 internal const string Repeal = "uchyl";
+            }
+
+            internal static class Odnosnik
+            {
+                internal const string Element = "odnosnik";
+                internal const string ReferenceElement = "odsylacz-do-odnosnika";
+                internal const string IdAttribute = "id-odnosnika";
+                internal const string SymbolAttribute = "symbol";
             }
 
             internal const string Num = "nr";

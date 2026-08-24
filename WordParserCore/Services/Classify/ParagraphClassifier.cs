@@ -93,6 +93,14 @@ namespace WordParserCore.Services.Classify
 			if (styleType == "WRAPUP")
 				return BuildWrapUpResult(styleType, isAmend, byStyle: true, IsWrapUpByText(text));
 
+			if (styleType == "SIGNATURE")
+				return new ClassificationResult
+				{
+					Kind       = ParagraphKind.Signature,
+					Confidence = 100,
+					StyleType  = styleType,
+				};
+
 			// Sygnał ze stylu (null gdy AMENDMENT lub nieznany)
 			ParagraphKind? styleKind = isAmend ? null : MapStyleToKind(styleType);
 
@@ -127,6 +135,9 @@ namespace WordParserCore.Services.Classify
 			    styleId.StartsWith("ZZ",  StringComparison.OrdinalIgnoreCase) ||
 			    styleId.StartsWith("Z_",  StringComparison.OrdinalIgnoreCase))
 				return "AMENDMENT";
+
+			if (styleId.StartsWith("NAZORGWYD", StringComparison.OrdinalIgnoreCase))
+				return "SIGNATURE";
 
 			if (styleId.StartsWith("ART", StringComparison.OrdinalIgnoreCase)) return "ART";
 			if (styleId.StartsWith("UST", StringComparison.OrdinalIgnoreCase)) return "UST";

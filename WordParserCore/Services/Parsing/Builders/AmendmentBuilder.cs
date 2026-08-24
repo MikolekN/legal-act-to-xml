@@ -274,6 +274,7 @@ namespace WordParserCore.Services.Parsing.Builders
 				{
 					first.Number = number;
 					first.IsImplicit = false;
+					ParsingFactories.ApplyCodeParagraphRole(first, text);
 					ParsingFactories.SetContentAndSegments(first, contentText);
 					_currentParagraph = first;
 				}
@@ -286,6 +287,7 @@ namespace WordParserCore.Services.Parsing.Builders
 						Number = number,
 						IsImplicit = false
 					};
+					ParsingFactories.ApplyCodeParagraphRole(paragraph, text);
 					ParsingFactories.SetContentAndSegments(paragraph, contentText);
 					_currentArticle.Paragraphs.Add(paragraph);
 					_currentParagraph = paragraph;
@@ -299,6 +301,7 @@ namespace WordParserCore.Services.Parsing.Builders
 					Number = number,
 					IsImplicit = false
 				};
+				ParsingFactories.ApplyCodeParagraphRole(paragraph, text);
 				ParsingFactories.SetContentAndSegments(paragraph, contentText);
 				content.Paragraphs.Add(paragraph);
 				_currentParagraph = paragraph;

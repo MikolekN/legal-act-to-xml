@@ -8,6 +8,7 @@ namespace WordParserCore.Services.Classify
 		Letter,
 		Tiret,
 		WrapUp,
+		Signature,
 		Unknown
 	}
 }
