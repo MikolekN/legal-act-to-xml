@@ -18,6 +18,21 @@ namespace WordParserCore.Services.Parsing
 	{
 		private static readonly EntityNumberService _numberService = new();
 		private static readonly Regex WrapUpPrefixPattern = new(@"^(\u2013|-)\s*", RegexOptions.Compiled);
+		private static readonly Regex CodeParagraphMark = new(
+			$@"^{ParagraphClassifier.OptionalQuotePrefix}\u00a7", RegexOptions.Compiled);
+
+		/// <summary>
+		/// Oznacza paragraf kodeksu (§): rola "par", prefiks eId "par", etykieta "§".
+		/// </summary>
+		public static void ApplyCodeParagraphRole(DtoParagraph paragraph, string? sourceText)
+		{
+			if (sourceText == null || !CodeParagraphMark.IsMatch(sourceText.TrimStart()))
+				return;
+
+			paragraph.Role = DtoParagraph.CodeParagraphRole;
+			paragraph.EIdPrefix = DtoParagraph.CodeParagraphRole;
+			paragraph.DisplayLabel = "\u00a7";
+		}
 
 		/// <summary>
 		/// Usuwa prefiks numeru ustepu (np. "1. ") z tekstu.
@@ -273,6 +288,7 @@ namespace WordParserCore.Services.Parsing
 					Number = _numberService.Parse(match.Groups[1].Value),
 					IsImplicit = false
 				};
+				ApplyCodeParagraphRole(paragraph, normalizedTail);
 				SetContentAndSegments(paragraph, contentText);
 				return paragraph;
 			}

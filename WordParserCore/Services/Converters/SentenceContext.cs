@@ -39,7 +39,7 @@ namespace WordParserCore.Services.Converters
                 new XAttribute(XmlConverterConstants.Contents.Sentence.FragmentGUID, Guid.NewGuid().ToString()),
                 // new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, "yyyy-MM-dd"),
                 // new XAttribute(XmlConverterConstants.Contents.UnitStatus, "obowiazuje"),
-                text);
+                FootnoteXmlConverter.BuildTextContent(text));
 
         internal static XElement ToXml(int number, string guid, int fragment, string text) =>
             Element(XmlConverterConstants.Contents.Sentence.Element,
@@ -49,6 +49,6 @@ namespace WordParserCore.Services.Converters
                 new XAttribute(XmlConverterConstants.Contents.Sentence.FragmentGUID, Guid.NewGuid().ToString()),
                 // new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, "yyyy-MM-dd"),
                 // new XAttribute(XmlConverterConstants.Contents.UnitStatus, "obowiazuje"),
-                text);
+                FootnoteXmlConverter.BuildTextContent(text));
     };
 }
