@@ -17,6 +17,11 @@ namespace ModelDto.EditorialUnits
         /// Oznacza ustep niejawny (tworzony na podstawie reguly, bez jawnego oznaczenia w tekscie).
         /// </summary>
         public bool IsImplicit { get; set; }
+
+        /// <summary>
+        /// Niejawnosc wyliczona ze struktury artykulu nadrzednego (jedyny ustep = niejawny).
+        /// Null gdy brak kontekstu artykulu — wowczas obowiazuje flaga IsImplicit.
+        /// </summary>
         public bool? IsImplicitComputed => Article == null ? null : Article.Paragraphs.Count <= 1;
 
 
@@ -36,7 +41,12 @@ namespace ModelDto.EditorialUnits
         public Amendment? Amendment { get; set; }
 
         /// <summary>
-        /// Role moze okreslac specjalne mapowania/nazewnictwo (np. "prg" dla paragrafu w kodeksie).
+        /// Rola paragrafu kodeksu (§) — jednostka mapowana na element paragraf-kodeksu
+        /// </summary>
+        public const string CodeParagraphRole = "par";
+
+        /// <summary>
+        /// Role moze okreslac specjalne mapowania/nazewnictwo (np. "par" dla paragrafu w kodeksie).
         /// </summary>
         public string? Role { get; set; }
 

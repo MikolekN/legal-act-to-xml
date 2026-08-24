@@ -22,7 +22,7 @@ namespace WordParserCore.Services.Converters
                 && (paragraph.Amendment == null || paragraph.Amendment.Content == null))
                 return null;
 
-            var paragraphElement = GetParagraphElement(isImplicit, isPathological);
+            var paragraphElement = GetParagraphElement(paragraph, isImplicit, isPathological);
 
             // === Atrybuty ===
 
@@ -71,14 +71,24 @@ namespace WordParserCore.Services.Converters
             return paragraphElement;
         }
 
-        private static XElement GetParagraphElement(bool isImplicit, bool isPathological)
+        private static XElement GetParagraphElement(Paragraph paragraph, bool isImplicit, bool isPathological)
         {
+            var isCodeParagraph = paragraph.Role == Paragraph.CodeParagraphRole;
+
             return (isImplicit, isPathological) switch
             {
-                (true, true)   => Element(XmlConverterConstants.Contents.PatoParagraphImplicit),
-                (true, false)  => Element(XmlConverterConstants.Contents.ParagraphImplicit),
-                (false, true)  => Element(XmlConverterConstants.Contents.PatoParagraph),
-                (false, false) => Element(XmlConverterConstants.Contents.Paragraph)
+                (true, true)   => Element(isCodeParagraph
+                    ? XmlConverterConstants.Contents.PatoCodeParagraphImplicit
+                    : XmlConverterConstants.Contents.PatoParagraphImplicit),
+                (true, false)  => Element(isCodeParagraph
+                    ? XmlConverterConstants.Contents.CodeParagraphImplicit
+                    : XmlConverterConstants.Contents.ParagraphImplicit),
+                (false, true)  => Element(isCodeParagraph
+                    ? XmlConverterConstants.Contents.PatoCodeParagraph
+                    : XmlConverterConstants.Contents.PatoParagraph),
+                (false, false) => Element(isCodeParagraph
+                    ? XmlConverterConstants.Contents.CodeParagraph
+                    : XmlConverterConstants.Contents.Paragraph)
             };
         }
 

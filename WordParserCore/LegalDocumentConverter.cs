@@ -14,6 +14,8 @@ namespace WordParserCore
         {
             var rootElement = Element(XmlConverterConstants.RootElement, new XAttribute(XNamespace.Xmlns + "now", XmlConverterConstants.AmendmentNamespace));
 
+            FootnoteXmlConverter.Initialize(document.Footnotes);
+
             var actElement = Element(XmlConverterConstants.Act);
             rootElement.Add(actElement);
 
@@ -57,10 +59,9 @@ namespace WordParserCore
                 foreach (var position in document.SourceJournal.Positions)
                     metaElement.Add(Element(XmlConverterConstants.Metadata.PositionElement, position));
 
-            // if (document.SourceJournal.SourceString == String.Empty)
-            //     metaElement.Add(Element(XmlConverterConstants.Metadata.DisplayAddressElement, ""));
-            // else
-            //     metaElement.Add(Element(XmlConverterConstants.Metadata.DisplayAddressElement, document.SourceJournal.SourceString));
+            if (document.SourceJournal.Year != null && document.SourceJournal.Positions.Any())
+                metaElement.Add(Element(XmlConverterConstants.Metadata.DisplayAddressElement,
+                    $"{document.SourceJournal.PublisherShort()} {document.SourceJournal.Year} poz. {document.SourceJournal.Positions.First()}"));
 
             metaElement.Add(Element(XmlConverterConstants.Metadata.TitleElement, document.Title));
 
@@ -105,11 +106,31 @@ namespace WordParserCore
             var organy = Element(XmlConverterConstants.Metadata.Authorities.Element);
             var organ = Element(XmlConverterConstants.Metadata.Authorities.Authority.Element);
             organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.GUID, Guid.NewGuid().ToString()));
-            organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.Role, "wydający"));
+            organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.Role, XmlConverterConstants.Metadata.Authorities.Authority.RoleIssuing));
             organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.URI, "URI"));
             var nazwa = Element(XmlConverterConstants.Metadata.Authorities.Authority.Name, "UNKNOWN");
             organ.Add(nazwa);
             organy.Add(organ);
+
+            foreach (var signature in document.Signatures)
+            {
+                var signingOrgan = Element(XmlConverterConstants.Metadata.Authorities.Authority.Element);
+                signingOrgan.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.GUID, Guid.NewGuid().ToString()));
+                signingOrgan.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.Role, XmlConverterConstants.Metadata.Authorities.Authority.RoleSigning));
+                signingOrgan.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.URI, "URI"));
+
+                var separatorIndex = signature.IndexOf(':');
+                var authorityName = separatorIndex > 0 ? signature[..separatorIndex].Trim() : signature;
+                var personName = separatorIndex > 0 ? signature[(separatorIndex + 1)..].Trim() : string.Empty;
+
+                signingOrgan.Add(Element(XmlConverterConstants.Metadata.Authorities.Authority.Name, authorityName));
+                signingOrgan.Add(Element(XmlConverterConstants.Metadata.Authorities.Authority.SigningAuthority, authorityName));
+                if (!string.IsNullOrEmpty(personName))
+                    signingOrgan.Add(Element(XmlConverterConstants.Metadata.Authorities.Authority.SigningPerson, personName));
+
+                organy.Add(signingOrgan);
+            }
+
             metaElement.Add(organy);
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.KeywordsElement, "COMPLEX"));
@@ -143,7 +164,8 @@ namespace WordParserCore
 
         private static void PrepareTitle(LegalDocument document, XElement rootElement)
         {
-            var titleElement = Element(XmlConverterConstants.Title.Element, document.TitleElement);
+            var titleElement = Element(XmlConverterConstants.Title.Element,
+                FootnoteXmlConverter.BuildTextContent(document.TitleElement));
             rootElement.Add(titleElement);
         }
     }

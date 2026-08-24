@@ -10,15 +10,15 @@ namespace ModelDto
 {
     /// <summary>
     /// Model aktu prawnego - wrapper całej struktury dokumentu legislacyjnego.
-    /// 
+    ///
     /// Zawiera metadane dotyczące całego aktu oraz hierarchię jego struktury.
     /// W konstruktorze tworzona jest minimalna pełna hierarchia od części do oddziału,
     /// a jednostki nieobecne w tekście pozostają jako IsImplicit = true.
-    /// 
+    ///
     /// Przykładowa pełna hierarchia:
-    /// Część (Part) → Księga (Book) → Tytuł (Title) → Dział (Division) → 
+    /// Część (Part) → Księga (Book) → Tytuł (Title) → Dział (Division) →
     /// Rozdział (Chapter) → Oddział (Subchapter) → Artykuł (Article)
-    /// 
+    ///
     /// Struktura w LegalDocument:
     /// LegalDocument
     ///   ├─ Type: Statute/Regulation/Code (determinuje nazewnictwo jednostek)
@@ -104,11 +104,43 @@ namespace ModelDto
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
 
+        /// <summary>
+        /// Data wydania aktu — z linii "z dnia ..." pod rodzajem aktu.
+        /// </summary>
         public DateTime? PublicationDate { get; set; }
+
+        /// <summary>
+        /// Data ogłoszenia w dzienniku urzędowym — z nagłówka pierwszej strony.
+        /// </summary>
         public DateTime? AnnouncementDate { get; set; }
-        public string TypeElement { get; set; }
-        public string DateElement { get; set; }
-        public string TitleElement { get; set; }
+
+        /// <summary>
+        /// Rodzaj aktu z pierwszej linii dokumentu (np. "USTAWA") — element rodzaj-aktu w XML.
+        /// </summary>
+        public string TypeElement { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Linia daty aktu (np. "z dnia 18 grudnia 2025 r.") — element data w XML.
+        /// </summary>
+        public string DateElement { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Przedmiot regulacji (np. "o zmianie ustawy ...") — element tytul w XML.
+        /// Może zawierać marker odnośnika "[N)]".
+        /// </summary>
+        public string TitleElement { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Odnośniki (przypisy dolne) aktu, w kolejności występowania.
+        /// Odwołania w treści oznaczane są w ContentText markerem "[N)]".
+        /// </summary>
+        public List<Footnote> Footnotes { get; set; } = new();
+
+        /// <summary>
+        /// Podpisy pod aktem — linie w postaci "Organ: Osoba"
+        /// (np. "Prezydent Rzeczypospolitej Polskiej: ...").
+        /// </summary>
+        public List<string> Signatures { get; set; } = new();
 
         /// <summary>
         /// Zwraca etykietę wyświetlającą dla głównej jednostki redakcyjnej (artykułu).

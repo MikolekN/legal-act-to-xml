@@ -104,7 +104,8 @@ namespace WordParserCore
                 return false;
 
             var styleVal = rp.RunStyle?.Val?.Value;
-            if (styleVal is "IGindeksgrny" or "Odwoanieprzypisudolnego")
+            if (styleVal != null &&
+                (styleVal.StartsWith("IG", StringComparison.Ordinal) || styleVal == "Odwoanieprzypisudolnego"))
                 return true;
 
             if (rp.VerticalTextAlignment?.Val?.Value == VerticalPositionValues.Superscript)

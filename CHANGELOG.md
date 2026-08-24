@@ -5,6 +5,12 @@ Wszystkie istotne zmiany w tym projekcie będą dokumentowane w tym pliku.
 Format oparty jest na Keep a Changelog,
 a wersjonowanie zgodne z Semantic Versioning.
 
+## [1.0.1] - 2026-07-06
+### Dodano
+- rozróżnianie paragrafów kodeksu od ustępów.
+- odnośniki (przypisy dolne).
+- podpisy pod aktem.
+
 ## [0.2.15] - 2026-06-29
 ### Dodano
 - instrukcje nowelizacyjne typu uchyl.

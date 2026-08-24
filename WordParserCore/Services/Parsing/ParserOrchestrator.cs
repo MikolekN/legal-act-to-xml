@@ -47,6 +47,12 @@ namespace WordParserCore.Services.Parsing
 				NumberingHint = hint,
 			});
 
+			if (classification.Kind == ParagraphKind.Signature)
+			{
+				context.Document.Signatures.Add(rawText);
+				return;
+			}
+
 			if (HandleAmendmentFlow(context, classification, text, styleId)) return;
 
 			if (_structureProcessor.Process(context, classification, text, styleId))
