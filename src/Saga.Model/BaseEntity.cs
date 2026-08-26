@@ -31,7 +31,7 @@ namespace Saga.Model
         Subchapter
     }
 
-    public abstract class BaseEntity
+    public abstract class BaseEntity: IEntersIntoForce
     {
         public Guid Guid { get; set; } = Guid.NewGuid();
 
@@ -39,18 +39,18 @@ namespace Saga.Model
         /// Typ jednostki semantycznej (np. Article/Paragraph/Point/Letter/Tiret/...)
         /// </summary>
         public UnitType UnitType { get; set; } = UnitType.Unknown;
-        
+
         /// <summary>
         /// Etykieta do wyświetlenia (np. "art.", "ust.", "§")
         /// </summary>
-        public string DisplayLabel { get; set; } = string.Empty;        
-        
+        public string DisplayLabel { get; set; } = string.Empty;
+
         /// <summary>
         /// Prefiks używany przy generowaniu eId (np. "art"/"ust"/"pkt"/"lit"/"tir"/"cz"/"ks" ...).
         /// Można go nadpisać w klasach pochodnych jeżeli konieczne.
         /// </summary>
         public string EIdPrefix { get; set; } = string.Empty;
-       
+
         /// <summary>
         /// Numer encji (np. 10 dla artykułu, 2 dla ustępu, f dla litery).
         /// Zawiera rozbicie na komponenty: część liczbowa, tekstowa i indeks górny.
@@ -59,7 +59,7 @@ namespace Saga.Model
 
         //TODO: ContentText to tekst jednostki redakcyjnej. Tymczasowo jest to string, ale trzeba uwzgędnić:
         // - możliwość występowania elementów osadzonych, jak tabele, grafiki, wzory matematyczne itp.
-        // - obecnie konwertujemy wszystko do tekstu płaskiego, ale w przyszłości będzie potrzebny model drzewa, 
+        // - obecnie konwertujemy wszystko do tekstu płaskiego, ale w przyszłości będzie potrzebny model drzewa,
         //  dzieląc na poszczególne akapity (zdania)
         // Do rozważenia - Content trzymać w formie HTML z formatowaniem?
         public string ContentText { get; set; } = string.Empty;
@@ -68,7 +68,7 @@ namespace Saga.Model
         /// Data wejścia w życie danej jednostki redakcyjnej.
         /// </summary>
         public DateTime EffectiveDate { get; set; }
-        
+
         /// <summary>
         /// Komunikaty walidacji/diagnostyki zestawiane podczas parsowania
         /// (błędy, ostrzeżenia, informacje o jakości dokumentu).

@@ -22,33 +22,43 @@ namespace Saga.Core.Services.Converters
         /// <summary>
         /// GUID przetwarzanego zdania
         /// </summary>
-        internal string ReferenceSentenceGUID { get; init; }
+        internal string? ReferenceSentenceGUID { get; init; }
 
-        internal SentenceContext(int currentFragment, int referenceSentenceNumber, string referenceSentenceGUID)
+        internal SentenceContext(int currentFragment,
+                                    int referenceSentenceNumber = 1,
+                                    string? referenceSentenceGUID = null)
 		{
 			CurrentFragment = currentFragment;
 			ReferenceSentenceNumber = referenceSentenceNumber;
+            if (referenceSentenceGUID is null)
+                referenceSentenceGUID = Guid.NewGuid().ToString();
 			ReferenceSentenceGUID = referenceSentenceGUID;
 		}
 
-        internal static XElement ToXml(SentenceContext context, string text) =>
-            Element(XmlConverterConstants.Contents.Sentence.Element,
+        internal static XElement ToXml(SentenceContext context, string text, string? entry = null)
+        {
+            var sentence = Element(XmlConverterConstants.Contents.Sentence.Element,
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Number, context.ReferenceSentenceNumber),
-                new XAttribute(XmlConverterConstants.Contents.Sentence.GUID, context.ReferenceSentenceGUID),
+                new XAttribute(XmlConverterConstants.Contents.GUID, context.ReferenceSentenceGUID is null ? Guid.NewGuid().ToString() : context.ReferenceSentenceGUID),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Fragment, context.CurrentFragment),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.FragmentGUID, Guid.NewGuid().ToString()),
-                // new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, "yyyy-MM-dd"),
-                // new XAttribute(XmlConverterConstants.Contents.UnitStatus, "obowiazuje"),
                 text);
+            if (entry is not null)
+                sentence.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, entry));
+            return sentence;
+        }
 
-        internal static XElement ToXml(int number, string guid, int fragment, string text) =>
-            Element(XmlConverterConstants.Contents.Sentence.Element,
+        internal static XElement ToXml(string text, int number = 1, string? guid = null, int fragment = 1, string? entry = null)
+        {
+            var sentence = Element(XmlConverterConstants.Contents.Sentence.Element,
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Number, number),
-                new XAttribute(XmlConverterConstants.Contents.Sentence.GUID, guid),
+                new XAttribute(XmlConverterConstants.Contents.GUID, guid is null ? Guid.NewGuid().ToString() : guid),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Fragment, fragment),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.FragmentGUID, Guid.NewGuid().ToString()),
-                // new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, "yyyy-MM-dd"),
-                // new XAttribute(XmlConverterConstants.Contents.UnitStatus, "obowiazuje"),
                 text);
+            if (entry is not null)
+                sentence.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, entry));
+            return sentence;
+        }
     };
 }

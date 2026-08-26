@@ -57,9 +57,11 @@ namespace Saga.Core.Tests
 		}
 
 		/// <summary>
-		/// Ścieżka dokumentu referencyjnego w lokalnym repozytorium dokumentów (DocRepo/).
+		/// Katalog DocRepo/ odnaleziony powyżej katalogu wyjściowego testów, albo null, gdy go nie ma.
+		/// Wariant nierzucający: na jego podstawie <see cref="DocRepoFactAttribute"/> decyduje
+		/// o pominięciu testu, zanim ten w ogóle wystartuje.
 		/// </summary>
-		public static string GetReferenceDocPath(string fileName)
+		public static string? FindReferenceDocDirectory()
 		{
 			var dir = new DirectoryInfo(AppContext.BaseDirectory);
 			while (dir != null && !Directory.Exists(Path.Combine(dir.FullName, "DocRepo")))
@@ -67,13 +69,64 @@ namespace Saga.Core.Tests
 				dir = dir.Parent;
 			}
 
-			if (dir == null)
+			return dir == null ? null : Path.Combine(dir.FullName, "DocRepo");
+		}
+
+		/// <summary>
+		/// Ścieżka dokumentu referencyjnego w lokalnym repozytorium dokumentów (DocRepo/).
+		/// Rzuca, gdy katalogu brak — to zabezpieczenie na wypadek testu bez [DocRepoFact],
+		/// który przy braku danych i tak nie miałby czego sprawdzić.
+		/// </summary>
+		public static string GetReferenceDocPath(string fileName)
+		{
+			var docRepo = FindReferenceDocDirectory();
+			if (docRepo == null)
 			{
 				throw new DirectoryNotFoundException(
 					"Nie znaleziono katalogu DocRepo powyżej katalogu testów — dokumenty referencyjne są lokalne (niewersjonowane).");
 			}
 
-			return Path.Combine(dir.FullName, "DocRepo", fileName);
+			return Path.Combine(docRepo, fileName);
+		}
+
+		/// <summary>
+		/// Powód pominięcia testu opartego na dokumentach z DocRepo/, albo null, gdy komplet jest
+		/// na miejscu. Komunikat niesie tę samą informację co dawny wyjątek — czego brakuje
+		/// i skąd to wziąć — żeby pominięcie nie zamiatało problemu pod dywan.
+		/// </summary>
+		public static string? DescribeMissingReferenceDocs(params string[] fileNames)
+		{
+			var docRepo = FindReferenceDocDirectory();
+			if (docRepo == null)
+			{
+				return "Brak katalogu DocRepo/ powyżej katalogu testów — dokumenty referencyjne są lokalne "
+					+ "(niewersjonowane). Przywróć DocRepo/, żeby ten test się wykonał.";
+			}
+
+			var missing = new List<string>();
+			foreach (var fileName in fileNames)
+			{
+				if (!File.Exists(Path.Combine(docRepo, fileName)))
+				{
+					missing.Add(fileName);
+				}
+			}
+
+			return missing.Count == 0
+				? null
+				: $"Brak niewersjonowanych dokumentów referencyjnych w {docRepo}: {string.Join(", ", missing)}.";
+		}
+
+		/// <summary>
+		/// Powód pominięcia testu opartego na goldenie z Artifacts/, albo null, gdy golden istnieje.
+		/// </summary>
+		public static string? DescribeMissingArtifact(string fileName)
+		{
+			var path = GetArtifactPath(fileName);
+			return File.Exists(path)
+				? null
+				: $"Brak goldenu {path} — jest lokalny (niewersjonowany). Wygeneruj go przez "
+					+ "UPDATE_SNAPSHOTS=1 dotnet test i zrewiduj przed użyciem.";
 		}
 
 		/// <summary>

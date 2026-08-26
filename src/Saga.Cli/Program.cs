@@ -398,10 +398,8 @@ namespace Saga.Cli
                 PrintAmendmentContent(amendment.Content, indent);
             }
 
-            if (amendment.EffectiveDate.HasValue)
-            {
-                Console.WriteLine($"{indent}║  Wejście w życie: {amendment.EffectiveDate.Value:yyyy-MM-dd}");
-            }
+            if (amendment.EffectiveDate != default)
+                Console.WriteLine($"{indent}║  Wejście w życie: {amendment.EffectiveDate:yyyy-MM-dd}");
 
             Console.WriteLine($"{indent}╚══════════════════════════════════════");
         }

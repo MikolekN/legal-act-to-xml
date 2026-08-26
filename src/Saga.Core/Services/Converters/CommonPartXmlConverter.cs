@@ -1,7 +1,6 @@
 using System.Xml.Linq;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
-using Serilog;
 using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters
@@ -22,31 +21,17 @@ namespace Saga.Core.Services.Converters
                     if (context != null)
                     {
                         context.CurrentFragment += 1;
-                        textElement.Add(SentenceContext.ToXml(context, wrapUp.ContentText));
+                        textElement.Add(SentenceContext.ToXml(context, wrapUp.ContentText, entry: wrapUp.EffectiveDate == default ? null : wrapUp.EffectiveDate.ToString("yyyy-MM-dd")));
                     }
                     else
                     {
-                        textElement.Add(SentenceContext.ToXml(1, Guid.NewGuid().ToString(), 1, wrapUp.ContentText));
+                        textElement.Add(SentenceContext.ToXml(text: wrapUp.ContentText, entry: wrapUp.EffectiveDate == default ? null : wrapUp.EffectiveDate.ToString("yyyy-MM-dd")));
                     }
                     var commonPartElement = Element(GetCommonPartName(entity, nesting));
 
-                    // === Atrybuty ===
-                    // commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, entity.Id));
                     commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, wrapUp.Guid.ToString()));
 
-                    // Data wejścia w życie jednostki (opcjonalna)
-                    if (wrapUp.EffectiveDate != default)
-                        commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, wrapUp.EffectiveDate.ToString("yyyy-MM-dd")));
-
-                    // Status jednostki
-                    // commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.UnitStatus, wrapUp.Status));
-
-                    // Opinie
-                    // commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.Opinions, wrapUp.Opinions));
-
-                    // Marginesy
-                    // commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginLeft, wrapUp.MarginLeft));
-                    // commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginRight, wrapUp.MarginRight));
+                    UnitLifecycleXml.Apply(commonPartElement, wrapUp);
 
                     commonPartElement.Add(textElement);
                     element.Add(commonPartElement);

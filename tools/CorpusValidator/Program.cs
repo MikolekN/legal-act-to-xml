@@ -17,6 +17,89 @@ using Saga.Core.Services.Classify.Document;
 // Domyślny korpus (gitignore'owany, lokalny): DocRepo/Akty ogłoszone (szczotki)
 // ============================================================================
 
+// Tryb raportu klauzuli wejścia w życie — dowolny układ katalogów, przeszukiwany rekurencyjnie
+// (documents/ ma układ <root>/<rok>, nie <root>/<rok>/<KATEGORIA> jak walidacja klasyfikatora):
+//   dotnet run --project tools/CorpusValidator -- --entry-into-force <root> [<raport.txt>]
+// Zrzut kanonicznego modelu pojedynczego pliku — do oglądania, co parser faktycznie zbudował
+// (łącznie z treścią nowelizacji, której nie widać w raporcie korpusowym). Data ogłoszenia jest
+// opcjonalna, ale BEZ NIEJ formuły względne („po upływie 14 dni od dnia ogłoszenia") pozostają
+// nierozstrzygnięte i cały zrzut wychodzi bez dat:
+//   dotnet run --project tools/CorpusValidator -- --dump <plik.docx> <wyjscie.xml> [<rrrr-MM-dd>]
+if (args.Length > 2 && args[0] == "--dump")
+{
+    using var dumpStream = System.IO.File.OpenRead(args[1]);
+    var dumped = Saga.Core.LegalDocumentParser.Parse(dumpStream, System.IO.Path.GetFileName(args[1]),
+        new Saga.Core.ParseOptions { Policy = Saga.Core.ParsePolicy.AlwaysParse });
+    if (dumped.Document is null)
+    {
+        Console.Error.WriteLine("Parser nie zbudował modelu.");
+        return 1;
+    }
+
+    // TYMCZASOWE OBEJŚCIE braku parsowania daty ogłoszenia — patrz AnnouncementDateScaffold.
+    CorpusValidator.AnnouncementDateScaffold.Reapply(dumped.Document, ParseDate(args, 3));
+
+    System.IO.File.WriteAllText(args[2],
+        Saga.Core.Services.Converters.CanonicalDtoXmlSerializer.Serialize(dumped.Document));
+    Console.Error.WriteLine($"Zrzut modelu: {args[2]}");
+    return 0;
+}
+
+// Eksport schemaPL pojedynczego pliku — przez ten sam LegalDocumentConverter, którego używa CLI.
+// W odróżnieniu od --dump (kanoniczny zrzut DTO, format diagnostyczny) daje wyjście porównywalne
+// wprost z plikami referencyjnymi RCL:
+//   dotnet run --project tools/CorpusValidator -- --xml <plik.docx> <wyjscie.xml> [<rrrr-MM-dd>]
+if (args.Length > 2 && args[0] == "--xml")
+{
+    using var xmlStream = System.IO.File.OpenRead(args[1]);
+    var converted = Saga.Core.LegalDocumentParser.Parse(xmlStream, System.IO.Path.GetFileName(args[1]),
+        new Saga.Core.ParseOptions { Policy = Saga.Core.ParsePolicy.AlwaysParse });
+    if (converted.Document is null)
+    {
+        Console.Error.WriteLine("Parser nie zbudował modelu.");
+        return 1;
+    }
+
+    // TYMCZASOWE OBEJŚCIE braku parsowania daty ogłoszenia — patrz AnnouncementDateScaffold.
+    CorpusValidator.AnnouncementDateScaffold.Reapply(converted.Document, ParseDate(args, 3));
+
+    Saga.Core.Services.LegalDocumentConverter.Convert(converted.Document).Save(args[2]);
+    Console.Error.WriteLine($"Eksport schemaPL: {args[2]}");
+    return 0;
+}
+
+// Eksport schemaPL CAŁEGO korpusu + sprawdzenie wymagań na wyjściu XML (a nie na modelu):
+//   dotnet run --project tools/CorpusValidator -- --xml-corpus <root> <katalog-wyjsciowy> [<rrrr-MM-dd>]
+if (args.Length > 2 && args[0] == "--xml-corpus")
+    return CorpusValidator.SchemaPlExportReport.Run(args[1], args[2], ParseDate(args, 3));
+
+// Zestawienie dat wejścia w życie ze zrzutu z plikiem referencyjnym RCL (schemaPL):
+//   dotnet run --project tools/CorpusValidator -- --compare-eif <referencja.xml> <zrzut.xml> [<raport.txt>]
+if (args.Length > 2 && args[0] == "--compare-eif")
+    return CorpusValidator.EntryIntoForceComparison.Run(args[1], args[2], args.Length > 3 ? args[3] : null);
+
+if (args.Length > 0 && args[0] == "--entry-into-force")
+{
+    var eifRoot = args.Length > 1 ? args[1] : "documents";
+    var eifReport = args.Length > 2 ? args[2] : "raport-eif.txt";
+    return CorpusValidator.EntryIntoForceReport.Run(eifRoot, eifReport, ParseDate(args, 3));
+}
+
+// Data ogłoszenia z wiersza poleceń — nierozpoznana wartość jest błędem, a nie cichym null,
+// bo pomyłka w formacie dawałaby raport bez dat wyglądający jak regres parsera.
+static DateTime? ParseDate(string[] arguments, int index)
+{
+    if (arguments.Length <= index)
+        return null;
+
+    if (DateTime.TryParseExact(arguments[index], "yyyy-MM-dd",
+            System.Globalization.CultureInfo.InvariantCulture,
+            System.Globalization.DateTimeStyles.None, out var date))
+        return date;
+
+    throw new ArgumentException($"Nieprawidłowa data ogłoszenia: „{arguments[index]}\" (oczekiwano rrrr-MM-dd).");
+}
+
 var corpusRoot = args.Length > 0
     ? args[0]
     : "DocRepo/Akty ogłoszone (szczotki)";

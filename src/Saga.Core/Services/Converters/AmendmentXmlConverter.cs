@@ -1,7 +1,6 @@
 using System.Xml.Linq;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
-using Serilog;
 using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters

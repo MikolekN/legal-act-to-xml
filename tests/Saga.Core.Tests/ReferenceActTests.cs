@@ -15,7 +15,7 @@ namespace Saga.Core.Tests
 		private static Saga.Model.LegalDocument ParseDocument(string tempPath)
 			=> LegalDocumentParser.Parse(tempPath, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
 
-		[Fact]
+		[DocRepoFact("doc001.docx")]
 		public void ReferenceAct_DefaultPolicy_IsRecognizedAsLegalAct()
 		{
 			// Strażnik fałszywego negatywu na REALNYM akcie: zmiana punktacji/progów klasyfikatora,
@@ -36,7 +36,7 @@ namespace Saga.Core.Tests
 			}
 		}
 
-		[Fact]
+		[DocRepoFact("doc001.docx")]
 		public void ReferenceAct_ContainsAtLeastOneArticle()
 		{
 			var tempPath = GetTemporaryCopyPath("doc001.docx");
@@ -52,7 +52,7 @@ namespace Saga.Core.Tests
 			}
 		}
 
-		[Fact]
+		[DocRepoFact("doc001.docx")]
 		public void ReferenceAct_Point8_ContainsLetterAndTiretNumbers()
 		{
 			var tempPath = GetTemporaryCopyPath("doc001.docx");

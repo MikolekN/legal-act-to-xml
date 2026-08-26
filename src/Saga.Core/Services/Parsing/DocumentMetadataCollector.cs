@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Saga.Model;
+using Saga.Core.Helpers;
 using Saga.Core.Services.Classify.Document;
 
 namespace Saga.Core.Services.Parsing
@@ -25,12 +26,6 @@ namespace Saga.Core.Services.Parsing
 	/// </summary>
 	public sealed class DocumentMetadataCollector
 	{
-		private static readonly Dictionary<string, int> Months = new(StringComparer.OrdinalIgnoreCase)
-		{
-			["stycznia"] = 1, ["lutego"] = 2, ["marca"] = 3, ["kwietnia"] = 4, ["maja"] = 5, ["czerwca"] = 6,
-			["lipca"] = 7, ["sierpnia"] = 8, ["września"] = 9, ["października"] = 10, ["listopada"] = 11, ["grudnia"] = 12,
-		};
-
 		private readonly List<string> _titleParts = new();
 		private DateTime? _actDate;
 		private bool _kindSeen;
@@ -118,18 +113,14 @@ namespace Saga.Core.Services.Parsing
 		{
 			if (_actDate.HasValue)
 				return;
-			if (!Months.TryGetValue(month, out var mo) ||
+			if (!PolishDates.TryMonth(month, out var mo) ||
 			    !int.TryParse(day, out var d) ||
 			    !int.TryParse(year, out var y))
 				return;
-			try
-			{
-				_actDate = new DateTime(y, mo, d);
-			}
-			catch (ArgumentOutOfRangeException)
-			{
-				// Niepoprawna data (np. 31 lutego) — pomijamy datę strukturalną, wiersz zostaje w tytule.
-			}
+
+			// Niepoprawna data (np. 31 lutego) — pomijamy datę strukturalną, wiersz zostaje w tytule.
+			if (PolishDates.TryBuild(y, mo, d, out var parsed))
+				_actDate = parsed;
 		}
 
 		private static bool IsKindHeader(string t) =>

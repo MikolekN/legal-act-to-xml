@@ -66,8 +66,15 @@ namespace Saga.Core.Tests
 		[InlineData("pierwsza", 1)]
 		[InlineData("PIERWSZA", 1)]
 		[InlineData("trzecia", 3)]
-		public void WordOrdinal_Parses(string word, int expected) =>
-			Assert.Equal(expected, RomanNumeralConverter.WordOrdinalToInt(word));
+		// Formy MĘSKIE — wymagane przez „DZIAŁ PIERWSZY"/„TYTUŁ PIERWSZY"; wcześniej cicho padały,
+		// bo słownik jednostek wyższych znał wyłącznie rodzaj żeński.
+		[InlineData("pierwszy", 1)]
+		[InlineData("trzeci", 3)]
+		public void WordOrdinal_Parses(string word, int expected)
+		{
+			Assert.True(PolishNumerals.TryParseOrdinal(word, out var value));
+			Assert.Equal(expected, value);
+		}
 
 		// ============================================================
 		// Budowanie drzewa
@@ -98,9 +105,9 @@ namespace Saga.Core.Tests
 			Assert.Equal("Odpowiedzialność", division.Chapters[1].Heading);
 
 			var ids = ctx.Document.Articles.Select(a => a.Id).ToList();
-			Assert.Contains("rozd_1__art_1", ids);
-			Assert.Contains("rozd_1__art_2", ids);
-			Assert.Contains("rozd_2__art_3", ids);
+			Assert.Contains("rozdz_1__art_1", ids);
+			Assert.Contains("rozdz_1__art_2", ids);
+			Assert.Contains("rozdz_2__art_3", ids);
 		}
 
 		[Fact]
@@ -117,7 +124,7 @@ namespace Saga.Core.Tests
 			Assert.Equal(2, division.Number?.NumericPart);
 
 			var article = ctx.Document.Articles.Single();
-			Assert.Equal("dz_II__art_5", article.Id);
+			Assert.Equal("dzial_II__art_5", article.Id);
 		}
 
 		[Fact]
@@ -129,7 +136,7 @@ namespace Saga.Core.Tests
 			Feed(orch, ctx, "Rozdział 1", "Oddział 1", "Art. 7. Tresc.");
 
 			var article = ctx.Document.Articles.Single();
-			Assert.Equal("rozd_1__oddz_1__art_7", article.Id);
+			Assert.Equal("rozdz_1__oddz_1__art_7", article.Id);
 		}
 
 		[Fact]
@@ -144,8 +151,8 @@ namespace Saga.Core.Tests
 
 			var ids = ctx.Document.Articles.Select(a => a.Id).ToList();
 			Assert.Contains("art_1", ids);
-			Assert.Contains("rozd_1__art_2", ids);
-			Assert.DoesNotContain("rozd_1__art_1", ids);
+			Assert.Contains("rozdz_1__art_2", ids);
+			Assert.DoesNotContain("rozdz_1__art_1", ids);
 		}
 
 		[Fact]
@@ -197,7 +204,7 @@ namespace Saga.Core.Tests
 			var ctx = ConnectedContext();
 			Feed(orch, ctx, "ROZDZIAŁ 1A", "Art. 1. Tresc.");
 
-			Assert.Equal("rozd_1A__art_1", ctx.Document.Articles.Single().Id);
+			Assert.Equal("rozdz_1A__art_1", ctx.Document.Articles.Single().Id);
 		}
 
 		[Fact]
@@ -210,7 +217,7 @@ namespace Saga.Core.Tests
 			var division = ctx.Document.RootPart.Books[0].Titles[0].Divisions[0];
 			Assert.Equal("IVa", division.Number?.Value);
 			Assert.Equal(4, division.Number?.NumericPart);
-			Assert.Equal("dz_IVa__art_5", ctx.Document.Articles.Single().Id);
+			Assert.Equal("dzial_IVa__art_5", ctx.Document.Articles.Single().Id);
 		}
 
 		[Fact]
@@ -224,7 +231,7 @@ namespace Saga.Core.Tests
 			var book = ctx.Document.RootPart.Books[0];
 			Assert.False(book.IsImplicit);
 			Assert.Equal("I", book.Number?.Value);
-			Assert.Equal("ks_I__art_1", ctx.Document.Articles.Single().Id);
+			Assert.Equal("ksi_I__art_1", ctx.Document.Articles.Single().Id);
 		}
 
 		[Fact]

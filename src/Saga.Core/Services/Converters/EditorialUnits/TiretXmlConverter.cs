@@ -15,29 +15,10 @@ namespace Saga.Core.Services.Converters
 
             var tiretElement = Element(GetTiretElementName(nesting, isPathological));
 
-            // === Atrybuty ===
             tiretElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, tiret.Id));
             tiretElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, tiret.Guid.ToString()));
 
-            // Data wejścia w życie jednostki (opcjonalna)
-            if (tiret.EffectiveDate != default)
-                tiretElement.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, tiret.EffectiveDate.ToString("yyyy-MM-dd")));
-
-            // Status jednostki
-            // tiretElement.Add(new XAttribute(XmlConverterConstants.Contents.UnitStatus, tiret.Status));
-
-            // Opinie
-            // tiretElement.Add(new XAttribute(XmlConverterConstants.Contents.Opinions, tiret.Opinions));
-
-            // Marginesy
-            // tiretElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginLeft, tiret.MarginLeft));
-            // tiretElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginRight, tiret.MarginRight));
-
-            // === Elementy potomne ===
-            // Tiret nie posiada numeru (typ bez elementu <nr>).
-
-            // formatowanie (opcjonalne)
-            // tiretElement.Add(Element(XmlConverterConstants.Contents.Formatting));
+            UnitLifecycleXml.Apply(tiretElement, tiret);
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(tiret.TextSegments, previousSentenceContext, textSectionElement);
@@ -47,6 +28,8 @@ namespace Saga.Core.Services.Converters
                 textSectionElement.Add(amendmentElements);
                 tiretElement.Add(textSectionElement);
             }
+
+            EmbeddedContentXmlConverter.AppendEmbedded(tiretElement, tiret);
 
             foreach (var nextTiret in tiret.Tirets)
                 tiretElement.Add(TiretXmlConverter.ToXml(nextTiret, isPathological, nesting + 1, contextToPass));

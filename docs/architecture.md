@@ -397,12 +397,36 @@ Kaskadowe tworzenie encji implicit:
 | **`LegalReferenceService`** | Parsowanie odwołań strukturalnych z tekstu ("art. 5", "ust. 2", "pkt 3a", "lit. b") do `StructuralReference`. |
 | **`JournalReferenceService`** | Parsowanie publikatorów (Dz. U.) z treści artykułów nowelizujących i uzupełnianie listy `JournalInfo`. |
 
+### 6.3b Wejście w życie (`Services/EntryIntoForce/`)
+
+Uruchamiany raz, po zbudowaniu modelu — wymaga kompletnego drzewa, wraz z nowelizacjami.
+Punktem odniesienia dla formuł względnych („po upływie 14 dni od dnia ogłoszenia") jest
+`LegalDocument.AnnouncementDate`. Parser nie odczytuje jej z dokumentu, więc te formuły
+pozostają nierozstrzygnięte — patrz [backlog § 3b](backlog.md).
+
+| Klasa | Rola |
+|---|---|
+| **`EntryIntoForceService`** | Orkiestracja: skan → reguła ogólna → wyjątki → mapa wyjątków → propagacja. |
+| **`EntryIntoForceClauseScanner`** | Znajduje kandydatów na klauzulę w kolejności dokumentu, z filtrami negatywnymi (klauzula w cytacie, w artykule nowelizującym, wystąpienie rzeczownikowe). |
+| **`EntryIntoForceFormulaParser`** + **`EntryIntoForcePatterns`** | Rozpoznanie brzmienia z zamkniętego katalogu § 45 ZTP; operand liczbowy albo słowny (przez `PolishNumerals`). |
+| **`EntryIntoForceDateResolver`** | Arytmetyka dat dla rozpoznanej formuły. |
+| **`UnitReferenceTokenizer`** | Rozbija powołanie na tokeny (słowo kluczowe, oznaczenie, przedział, separator, znacznik zakresu). Normalizuje też szyk „liczebnik przed słowem kluczowym": „tiret drugie pierwsze podwójne tiret" to jedna ścieżka `tir_2__dwtir_1`, a nie dwa tirety — rozstrzyga brak separatora między oznaczeniami. |
+| **`DesignationRange`** | Rozwija przedziały oznaczeń („85c–85j", „19-21", „a–c", „czwarte–szóste"). Przedział niejednoznaczny („5a"–„7b") zwraca null, żeby wywołujący go oflagował zamiast zgadywać. |
+| **`UnitEnumerationParser`** + **`UnitPathCursor`** | Rozkład powołania jednostek („art. 1 pkt 9 w zakresie art. 85a ust. 1") na ścieżki — patrz [ADR-0010](adr/0010-jeden-kursor-sciezki-jednostek.md). Granica zakresu: wewnątrz „w zakresie…" wolno zostać na poziomie albo zejść głębiej, ale powrót W GÓRĘ kończy zakres i wraca do wyliczenia głównego („…w zakresie uchylanego pkt 5 i art. 5"). |
+| **`EntryIntoForceTargetResolver`** | Odnajduje encję wskazaną ścieżką — w akcie i w przytoczonej treści nowelizacji. Rozstrzyga ścieżki, dat NIE zapisuje. |
+| **`EditorialUnitWalker`** | Jedyne miejsce, które wie, co jest czyim dzieckiem; treść cytatu odwiedzana tylko na żądanie. |
+| **`EntryIntoForceExceptionMap`** | Rozstrzygnięcia wyjątków przypięte do encji (klucz po tożsamości, bo eId nie jest w akcie unikalny). `null` = cel znany, data nie. |
+| **`EffectiveDatePropagator`** | Kolorowanie drzewa: data ogólna trafia na wszystkie jednostki i zdania, wyjątek nadpisuje ją w dół, a **brak daty znaczy nierozstrzygnięty wyjątek** — patrz [ADR-0011](adr/0011-data-ogolna-rozsylana-po-calym-drzewie.md). |
+
 ### 6.4 Helpery (`Helpers/`)
 
 | Klasa | Rola |
 |---|---|
 | **`ParagraphExtensions`** | Metody rozszerzające `Paragraph` (OpenXml) — bezpieczne pobieranie `StyleId` z null-checkiem na `ParagraphProperties`. |
-| **`StringExtensions`** | Metody rozszerzające `string` — `Sanitize()` (kolapsowanie białych znaków, zamiana en-dash), `ExtractOrdinal()`, `ExtractDate()`. |
+| **`StringExtensions`** | Metody rozszerzające `string` — `Sanitize()` (kolapsowanie białych znaków, zamiana en-dash) i `ExtractOrdinal()`. |
+| **`PolishDates`** | Nazwy miesięcy i parsowanie dat w formie długiej („1 stycznia 2025 r."). Metody `Try*` nie rzucają — data niemożliwa („31 lutego") zwraca `false`. Alternatywa miesięcy jest `const`, bo leksykon jest zamknięty. |
+| **`PolishNumerals`** | JEDYNE źródło prawdy o polskich liczebnikach: porządkowe (rdzeń + końcówki, wszystkie rodzaje), główne w dopełniaczu (formy dokładne), mnożne („podwójne"), składanie 1–99 z dwóch wyrazów. Wystawia też GENEROWANE ze słownika fragmenty regexa do wyszukiwania — patrz [ADR-0009](adr/0009-jedno-zrodlo-liczebnikow-polskich.md). |
+| **`RomanNumeralConverter`** | Wyłącznie cyfry rzymskie (`RomanToInt`/`ToRoman`) dla jednostek systematyzacyjnych; kanonizuje eId („KSIĘGA PIERWSZA" i „KSIĘGA I" → `ks_I`). Liczebniki słowne rozstrzyga `PolishNumerals`. |
 | **`StyleLibraryMapper`** | Statyczna mapa styli dokumentów prawnych — mapuje StyleId na czytelne nazwy. Zawiera `AmendmentStyleInfoMap` z metadanymi styli nowelizacyjnych. |
 | **`AmendmentStyleDecoder`** | Dekoder styli nowelizacyjnych — rozpoznaje instrument zmiany (`AmendmentInstrument`), typ celu (`AmendmentTargetKind`), kontekst nadrzędny. |
 | **`EnumExtensions`** | Metoda `ToDescription()` na enumach — odczyt atrybutu `[EnumDescription]`. |

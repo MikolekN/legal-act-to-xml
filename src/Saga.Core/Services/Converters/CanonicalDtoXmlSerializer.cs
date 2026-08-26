@@ -1,15 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
 using Saga.Model.SystematizingUnits;
-
-#nullable enable
 
 namespace Saga.Core.Services.Converters
 {
@@ -218,8 +212,7 @@ namespace Saga.Core.Services.Converters
 			var el = new XElement("amendment",
 				new XAttribute("operation", amendment.OperationType.ToString()));
 
-			if (amendment.EffectiveDate.HasValue)
-				el.Add(new XAttribute("effectiveDate", amendment.EffectiveDate.Value.ToString("yyyy-MM-dd")));
+            el.Add(new XAttribute("effectiveDate", amendment.EffectiveDate.ToString("yyyy-MM-dd")));
 
 			AddJournalElement(el, "targetAct", amendment.TargetLegalAct);
 
@@ -317,6 +310,8 @@ namespace Saga.Core.Services.Converters
 					new XAttribute("type", segment.Type.ToString()));
 				if (!string.IsNullOrEmpty(segment.Role))
 					segmentEl.Add(new XAttribute("role", segment.Role));
+				if (segment.EffectiveDate != default)
+					segmentEl.Add(new XAttribute("effectiveDate", segment.EffectiveDate.ToString("yyyy-MM-dd")));
 				segmentEl.Add(segment.Text);
 				el.Add(segmentEl);
 			}
