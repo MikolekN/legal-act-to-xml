@@ -10,7 +10,7 @@ namespace Saga.Model
     /// Model nowelizacji - pełna reprezentacja zmiany w akcie prawnym.
     /// Nowelizacja może dotyczyć uchylenia, dodania lub zmiany brzmienia jednostek redakcyjnych.
     /// </summary>
-    public class Amendment
+    public class Amendment: IEntersIntoForce
     {
         /// <summary>
         /// Unikalny identyfikator nowelizacji.
@@ -43,14 +43,12 @@ namespace Saga.Model
         /// <summary>
         /// Data wejścia w życie nowelizacji.
         /// </summary>
-        public DateTime? EffectiveDate { get; set; }
+        public DateTime EffectiveDate { get; set; }
 
         public override string ToString()
         {
             var targetStr = string.Join(", ", Targets.Select(t => t.ToString()));
-            return $"{OperationType}: {targetStr} (wejście w życie: {EffectiveDate?.ToShortDateString() ?? "nieokreślone"})";
+            return $"{OperationType}: {targetStr} (wejście w życie: {EffectiveDate.ToShortDateString() ?? "nieokreślone"})";
         }
     }
-
-    
 }

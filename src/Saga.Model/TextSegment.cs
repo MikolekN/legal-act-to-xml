@@ -1,12 +1,14 @@
 #nullable enable
 
+using System;
+
 namespace Saga.Model
 {
     /// <summary>
     /// Segment tekstu w jednostce redakcyjnej, np. pojedyncze zdanie.
     /// Umożliwia precyzyjne kotwiczenie nowelizacji na poziomie zdań.
     /// </summary>
-    public class TextSegment
+    public class TextSegment: IEntersIntoForce
     {
         /// <summary>
         /// Typ segmentu (np. Sentence).
@@ -27,5 +29,10 @@ namespace Saga.Model
         /// Opcjonalna rola segmentu (np. "ListIntro").
         /// </summary>
         public string? Role { get; set; }
+
+        /// <summary>
+        /// Data wejścia w życie danej jednostki redakcyjnej.
+        /// </summary>
+        public DateTime EffectiveDate { get; set; }
     }
 }

@@ -102,7 +102,7 @@ namespace Saga.Core.Tests
 			var journalDesc = (journal.Year is > 0) || journal.Positions.Count > 0
 				? $"{journal.Year ?? 0}/{string.Join(",", journal.Positions)}"
 				: "-";
-			var effective = amendment.EffectiveDate?.ToString("yyyy-MM-dd") ?? "-";
+			var effective = amendment.EffectiveDate.ToString("yyyy-MM-dd") ?? "-";
 			sb.AppendLine($"{indent}AMENDMENT {amendment.OperationType} obj={amendment.Content?.ObjectType.ToString() ?? "brak"} " +
 				$"targets=[{targets}] journal={journalDesc} effective={effective}");
 

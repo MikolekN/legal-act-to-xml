@@ -32,7 +32,7 @@ namespace Saga.Core.Tests
 			}
 		}
 
-		[Fact]
+		[DocRepoFact("doc001.docx", RequiredArtifact = "doc001.snapshot.xml")]
 		public void Doc001_CanonicalXml_MatchesSnapshot()
 		{
 			var actual = ParseReferenceActToCanonicalXml();
@@ -53,7 +53,7 @@ namespace Saga.Core.Tests
 			Assert.Equal(expected, actual);
 		}
 
-		[Fact]
+		[DocRepoFact("doc001.docx")]
 		public void Doc001_Parse_IsDeterministic()
 		{
 			var first = ParseReferenceActToCanonicalXml();

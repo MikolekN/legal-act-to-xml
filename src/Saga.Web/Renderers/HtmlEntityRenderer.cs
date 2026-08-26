@@ -192,10 +192,9 @@ static class HtmlEntityRenderer
             RenderAmendmentContent(sb, amendment.Content, depth + 1, tooltip, contentClass);
         }
 
-        if (amendment.EffectiveDate.HasValue)
-        {
-            AppendLine(sb, depth + 1, $"<span class=\"amendment-item\">Wejscie w zycie: {amendment.EffectiveDate.Value:yyyy-MM-dd}</span>");
-        }
+
+        var entryIntoForce = amendment.EffectiveDate == default ? "nieokreślone" : $"{amendment.EffectiveDate:yyyy-MM-dd}";
+        AppendLine(sb, depth + 1, $"<span class=\"amendment-item\">Wejscie w zycie: {entryIntoForce}</span>");
     }
 
     private static void RenderAmendmentContent(StringBuilder sb, AmendmentContent content, int depth, string? tooltip, string? extraClass)

@@ -64,8 +64,11 @@ namespace Saga.Core.Services.Parsing
 		// Token jednostki redakcyjnej + opcjonalne oznaczenie: cyfrowe („7a", „5a-5g"), literowe („b", „za")
 		// lub słowne — liczebnik porządkowy („zdanie drugie", „tiret trzecie" — forma kanoniczna § 57 ust. 6 ZTP).
 		// Formy mnogie („tirety", „zdania") w alternatywie jednostki, by sufiks nie wpadał do oznaczenia.
-		private const string UnitToken =
-			@"(?<unit>art\.|§|ust\.|pkt|lit\.|tirety|tiret|zdani[ea])\s*(?<no>\d+[a-zA-Z]*(?:[-–]\d+[a-zA-Z]*)?|[a-z]{1,2}\b|\p{Ll}+\b)?";
+		private static readonly string UnitToken =
+			@"(?<unit>art\.|§|ust\.|pkt|lit\.|tirety|tiret|zdani[ea])\s*(?<no>\d+[a-zA-Z]*(?:[-–]\d+[a-zA-Z]*)?|[a-z]{1,2}\b|"
+			+ PolishNumerals.OrdinalAlternation + @")?";
+
+		private static readonly Regex UnitTokenPattern = new(UnitToken, RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
 		/// <summary>„ust. 2 otrzymuje brzmienie:" / „art. 5 i 6 otrzymują brzmienie:" — token przy czasowniku.</summary>
 		internal static readonly Regex ChangeCommandPattern = new(
@@ -135,19 +138,9 @@ namespace Saga.Core.Services.Parsing
 			return null;
 		}
 
-		// Liczebniki porządkowe nijakie („tiret pierwsze", „zdanie drugie") — § 57 ust. 6 ZTP nakazuje
-		// powoływać tirety liczebnikiem porządkowym, więc to forma KANONICZNA, nie anomalia.
-		private static readonly System.Collections.Generic.Dictionary<string, int> NeuterOrdinals =
-			new(System.StringComparer.OrdinalIgnoreCase)
-		{
-			["pierwsze"] = 1, ["drugie"] = 2, ["trzecie"] = 3, ["czwarte"] = 4, ["piąte"] = 5,
-			["szóste"] = 6, ["siódme"] = 7, ["ósme"] = 8, ["dziewiąte"] = 9, ["dziesiąte"] = 10,
-			["jedenaste"] = 11, ["dwunaste"] = 12, ["trzynaste"] = 13, ["czternaste"] = 14,
-			["piętnaste"] = 15, ["szesnaste"] = 16, ["siedemnaste"] = 17, ["osiemnaste"] = 18,
-			["dziewiętnaste"] = 19, ["dwudzieste"] = 20,
-		};
-
-		/// <summary>Wartość liczbowa oznaczenia: wiodące cyfry („7a"→7) lub liczebnik nijaki („pierwsze"→1).</summary>
+		/// <summary>
+		/// Wartość liczbowa oznaczenia: wiodące cyfry („7a"→7) lub liczebnik porządkowy nijaki („pierwsze"→1).
+		/// </summary>
 		private static int? OrdinalValue(string? designation)
 		{
 			if (string.IsNullOrEmpty(designation))
@@ -160,7 +153,7 @@ namespace Saga.Core.Services.Parsing
 				return int.TryParse(designation[..i], out var n) ? n : null;
 			}
 
-			return NeuterOrdinals.TryGetValue(designation, out var ord) ? ord : null;
+			return PolishNumerals.TryParseOrdinal(designation, out var ord) ? ord : null;
 		}
 
 		private static AmendmentCommand Build(AmendmentCommandKind kind, Match m)
@@ -180,7 +173,7 @@ namespace Saga.Core.Services.Parsing
 		private static (AmendmentTargetKind Kind, string? Number)? LastUnitBefore(string text, int beforeIndex)
 		{
 			Match? last = null;
-			foreach (Match m in Regex.Matches(text[..beforeIndex], UnitToken, RegexOptions.IgnoreCase))
+			foreach (Match m in UnitTokenPattern.Matches(text[..beforeIndex]))
 				last = m;
 			if (last == null)
 				return null;

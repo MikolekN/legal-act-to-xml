@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Saga.Model.EditorialUnits;
 
@@ -12,6 +13,11 @@ namespace Saga.Model.SystematizingUnits
         /// Tytuł oddziału (np. "Zakres stosowania", "Definicje")
         /// </summary>
         public string Heading { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Data wejścia w życie nagłówka oddziału, niezależna od daty samego oddziału.
+        /// </summary>
+        public DateTime HeadingEffectiveDate { get; set; }
 
         /// <summary>
         /// Czy oddział jest domyślny/ukryty (niejawny w dokumencie).

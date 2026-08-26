@@ -16,30 +16,11 @@ namespace Saga.Core.Services.Converters
 
             var letterElement = GetLetterElement(isPathological);
 
-            // === Atrybuty ===
             letterElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, letter.Id));
             letterElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, letter.Guid.ToString()));
 
-            // Data wejścia w życie jednostki (opcjonalna)
-            if (letter.EffectiveDate != default)
-                letterElement.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, letter.EffectiveDate.ToString("yyyy-MM-dd")));
+            UnitLifecycleXml.Apply(letterElement, letter);
 
-            // Status jednostki
-            // letterElement.Add(new XAttribute(XmlConverterConstants.Contents.UnitStatus, letter.Status));
-
-            // Opinie
-            // letterElement.Add(new XAttribute(XmlConverterConstants.Contents.Opinions, letter.Opinions));
-
-            // Marginesy
-            // letterElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginLeft, letter.MarginLeft));
-            // letterElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginRight, letter.MarginRight));
-
-            // === Elementy potomne ===
-
-            // Formatowanie (opcjonalne)
-            // letterElement.Add(Element(XmlConverterConstants.Contents.Formatting));
-
-            // Numer litery
             letterElement.Add(Element(XmlConverterConstants.Contents.Num, letter.Number == null ? "UNKNOWN" : letter.Number.Value));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
@@ -50,6 +31,8 @@ namespace Saga.Core.Services.Converters
                 textSectionElement.Add(amendmentElements);
                 letterElement.Add(textSectionElement);
             }
+
+            EmbeddedContentXmlConverter.AppendEmbedded(letterElement, letter);
 
             foreach (var tiret in letter.Tirets)
                 letterElement.Add(TiretXmlConverter.ToXml(tiret, isPathological, 1, contextToPass));

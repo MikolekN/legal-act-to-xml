@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using Saga.Core.Helpers;
 
 namespace Saga.Core.Services.Classify.Document
 {
@@ -72,7 +73,7 @@ namespace Saga.Core.Services.Classify.Document
 
 		/// <summary>§ 17: data aktu (miesiąc słownie). Dopuszcza końcowy odnośnik [N)]/[N] (TJ często opatruje datę przypisem).</summary>
 		internal static readonly Regex ActDateLinePattern = new(
-			@"^z\s+dnia\s+(?<day>\d{1,2})\s+(?<month>stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|września|października|listopada|grudnia)\s+(?<year>\d{4})\s*r\.(?:\s*\[\d+\)?\])?$",
+			@"^z\s+dnia\s+(?<day>\d{1,2})\s+(?<month>" + PolishDates.MonthAlternation + @")\s+(?<year>\d{4})\s*r\.(?:\s*\[\d+\)?\])?$",
 			RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
 		/// <summary>§ 18-19 / § 120 ust. 6: przedmiot aktu.</summary>

@@ -1,18 +1,20 @@
 #nullable enable
 
+using System;
+
 namespace Saga.Model.SystematizingUnits
 {
     /// <summary>
     /// Kontrakt dla jednostek systematyzujących (organizacyjnych) aktu prawnego.
-    /// 
+    ///
     /// Jednostki systematyzujące służą do strukturyzacji aktu prawnego w bloki tematyczne,
     /// ale same nie zawierają treści prawnej (w przeciwieństwie do jednostek redakcyjnych).
-    /// 
+    ///
     /// Przykłady: Część, Księga, Tytuł, Dział, Rozdział, Podrozdział.
-    /// 
+    ///
     /// Uwaga: Każdy akt zawiera pełną minimalną hierarchię jednostek systematyzujących,
     /// a jednostki nieobecne w tekście są oznaczane jako IsImplicit = true.
-    /// 
+    ///
     /// Każda jednostka systematyzująca ma:
     /// - Heading: krótki tytuł opisujący zakres tematyczny (np. "Przepisy ogólne", "Odpowiedzialność karna")
     /// - Number: numer jednostki (np. "I", "II", "1", "2")
@@ -26,6 +28,11 @@ namespace Saga.Model.SystematizingUnits
         /// Przykłady: "Przepisy ogólne", "Odpowiedzialność karna", "Postępowanie administracyjne".
         /// </summary>
         string Heading { get; set; }
+
+        /// <summary>
+        /// Data wejścia w życie nagłówka jednostki systematyzacyjnej.
+        /// </summary>
+        DateTime HeadingEffectiveDate { get; set; }
 
         /// <summary>
         /// Czy jednostka jest domyślna/ukryta (niejawna w dokumencie).

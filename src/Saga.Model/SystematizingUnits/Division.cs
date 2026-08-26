@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Saga.Model.SystematizingUnits
@@ -13,6 +14,11 @@ namespace Saga.Model.SystematizingUnits
         public string Heading { get; set; } = string.Empty;
 
         /// <summary>
+        /// Data wejścia w życie nagłówka działu, niezależna od daty samego działu.
+        /// </summary>
+        public DateTime HeadingEffectiveDate { get; set; }
+
+        /// <summary>
         /// Czy dział jest domyślny/ukryty (niejawny w dokumencie).
         /// </summary>
         public bool IsImplicit { get; set; } = true;
@@ -20,7 +26,7 @@ namespace Saga.Model.SystematizingUnits
         public Division()
         {
             UnitType = UnitType.Division;
-            EIdPrefix = "dz";
+            EIdPrefix = "dzial";
             DisplayLabel = "dz.";
         }
 
