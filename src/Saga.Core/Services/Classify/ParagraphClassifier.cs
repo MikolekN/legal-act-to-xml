@@ -103,13 +103,13 @@ namespace Saga.Core.Services.Classify
 		// (opcjonalny sufiks litery jednostki wtrąconej, „IVa") lub liczebnik słowny; rozstrzyga walidacja,
 		// więc „Część majątku…" nie zostanie uznane za jednostkę. Rozdział/Oddział: cyfra arabska + sufiks.
 		internal static readonly Regex PartUnitPattern = new(
-			@"^(?:CZĘŚĆ|Część)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+)\s*[.,]?\s*$", RegexOptions.Compiled);
+			@"^(?:CZĘŚĆ|Część)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)\s*[.,]?\s*$", RegexOptions.Compiled);
 		internal static readonly Regex BookUnitPattern = new(
-			@"^(?:KSIĘGA|Księga)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+)\s*[.,]?\s*$", RegexOptions.Compiled);
+			@"^(?:KSIĘGA|Księga)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)\s*[.,]?\s*$", RegexOptions.Compiled);
 		internal static readonly Regex TitleUnitPattern = new(
-			@"^(?:TYTUŁ|Tytuł)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+)\s*[.,]?\s*$", RegexOptions.Compiled);
+			@"^(?:TYTUŁ|Tytuł)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)\s*[.,]?\s*$", RegexOptions.Compiled);
 		internal static readonly Regex DivisionUnitPattern = new(
-			@"^(?:DZIAŁ|Dział)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+)\s*[.,]?\s*$", RegexOptions.Compiled);
+			@"^(?:DZIAŁ|Dział)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)\s*[.,]?\s*$", RegexOptions.Compiled);
 		internal static readonly Regex ChapterUnitPattern = new(
 			@"^(?:ROZDZIAŁ|Rozdział)\s+(?<n>\d+[a-zA-Z]{0,3})\s*[.,]?\s*$", RegexOptions.Compiled);
 		internal static readonly Regex SubchapterUnitPattern = new(
@@ -383,8 +383,11 @@ namespace Saga.Core.Services.Classify
 		/// </summary>
 		private static (int numeric, string suffix)? ParseHigherUnitToken(string token)
 		{
-			var n = RomanNumeralConverter.Parse(token);
+			var n = RomanNumeralConverter.RomanToInt(token);
 			if (n != null) return (n.Value, string.Empty);
+
+			if (PolishNumerals.TryParseOrdinal(token, out var wordValue))
+				return (wordValue, string.Empty);
 
 			int b = token.Length;
 			while (b > 0 && char.IsLower(token[b - 1])) b--;

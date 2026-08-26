@@ -29,8 +29,36 @@ namespace Saga.Model.EditorialUnits
         public Tiret()
         {
             UnitType = UnitType.Tiret;
-            EIdPrefix = "tir";
+            EIdPrefix = PrefixForDepth(1);
             DisplayLabel = "tiret";
+        }
+
+        /// <summary>
+        /// Prefiks eId (levelType) tiretu wg głębokości zagnieżdżenia:
+        /// 1 → „tir", 2 → „dwtir", 3 → „trtir", 4 → „cztir", 5 → „pitir".
+        /// </summary>
+        public static string PrefixForDepth(int depth) => depth switch
+        {
+            <= 1 => "tir",
+            2 => "dwtir",
+            3 => "trtir",
+            4 => "cztir",
+            _ => "pitir",
+        };
+
+        /// <summary>Głębokość zagnieżdżenia liczona po łańcuchu rodziców (tiret najwyższy = 1).</summary>
+        private int Depth()
+        {
+            var depth = 1;
+            for (var parent = Parent; parent is Tiret; parent = parent.Parent)
+                depth++;
+            return depth;
+        }
+
+        protected override string GetLocalIdSegment()
+        {
+            var prefix = PrefixForDepth(Depth());
+            return string.IsNullOrEmpty(Number?.Value) ? prefix : $"{prefix}_{Number.Value}";
         }
 
         public override string ToString()

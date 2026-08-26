@@ -50,6 +50,23 @@ ich wziąć.
 | **Brakujące prefiksy eId** | Model ma `art`/`ust`/`pkt`/`lit`/`tir` + systematyzacyjne. Brak: `par` (§ jako podjednostka artykułu w kodeksach), `zd` (zdanie), `ak` (akapit w prawie UE), `zal` (załącznik). |
 | **Atrybuty typograficzne pominięte** | Założenie „to warstwa prezentacji" **warte podważenia**: w tekstach jednolitych kursywa oznacza akty i przepisy, które utraciły moc oraz zlikwidowane organy (§ 108a–108b ZTP), a pogrubienie — brzmienia przyszłe (§ 106a ust. 4). To znaczenie normatywne, nie ozdoba. Adapter DOCX czyta już `IsBold`/`IsItalic` do `BlockLayoutInfo`, ale model wyjściowy tego nie przechowuje. |
 
+## 3a. Polskie liczebniki — świadomie odłożone
+
+Stan po uwspólnieniu w `Helpers/PolishNumerals.cs` ([ADR-0009](adr/0009-jedno-zrodlo-liczebnikow-polskich.md)).
+
+| Luka | Stan |
+|---|---|
+| **Sufit 1–99** | Setki i wyżej („po upływie stu dni") nie dostaną operandu. |
+
+## 3b. Wejście w życie — świadomie odłożone
+
+Stan po rozsyłaniu daty ogólnej po drzewie ([ADR-0011](adr/0011-data-ogolna-rozsylana-po-calym-drzewie.md)).
+
+| Luka | Stan |
+|---|---|
+| **`HeadingEffectiveDate` nieużywane** | Pole jest w `ISystematizingUnit` i we wszystkich sześciu jednostkach systematyzacyjnych, ale nikt go nie zapisuje ani nie czyta. Powód: parser nie rozpoznaje jeszcze poprawnie jednostek systematyzacyjnych, więc data nagłówka nie ma skąd pochodzić. |
+| **`RetroactiveFrom` nie schodzi na jednostki** | Moc wsteczna („z mocą od dnia …") jest rozpoznawana i zapisywana w `EntryIntoForceInfo`/`PartialEntryIntoForce`, ale nie ma odpowiednika po stronie jednostek. |
+
 ## 4. Testy, których plan przewidywał, a nie powstały
 
 - **Korpus ekwiwalencji plikowej** — zakładano ten sam akt w czterech wariantach

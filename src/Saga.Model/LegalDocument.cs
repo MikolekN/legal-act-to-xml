@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Saga.Model.EditorialUnits;
+using Saga.Model.EntryIntoForce;
 using Saga.Model.SystematizingUnits;
 
 #nullable enable
@@ -29,7 +30,7 @@ namespace Saga.Model
     ///           └─ Articles[]: artykuły w oddziale
     ///               └─ Subsections: ustępy
     /// </summary>
-    public class LegalDocument
+    public class LegalDocument: IEntersIntoForce
     {
         public LegalDocument()
         {
@@ -70,6 +71,21 @@ namespace Saga.Model
         /// Null gdy nierozpoznana (np. czysty tekst bez wiersza daty).
         /// </summary>
         public DateTime? ActDate { get; set; }
+
+        /// <summary>
+        /// Data ogłoszenia aktu w dzienniku urzędowym.
+        /// </summary>
+        public DateTime? AnnouncementDate { get; set; }
+
+        /// <summary>
+        /// Data wejścia w życie danej jednostki redakcyjnej.
+        /// </summary>
+        public DateTime EffectiveDate { get; set; }
+
+        /// <summary>
+        /// Klauzula wejścia w życie.
+        /// </summary>
+        public EntryIntoForceInfo? EntryIntoForce { get; set; }
 
         /// <summary>
         /// Informacja o źródle publikacji (Dziennik Ustaw, rok, numer pozycji).

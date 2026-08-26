@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 
 namespace Saga.Model.SystematizingUnits
 {
     /// <summary>
     /// Jednostka systematyzująca: rozdział
-    /// 
+    ///
     /// W modelu tworzona jest minimalna pełna hierarchia, dlatego rozdział zawsze istnieje.
     /// Jeśli nie występuje jawnie w tekście, jest oznaczony jako IsImplicit = true.
     /// </summary>
@@ -17,6 +18,11 @@ namespace Saga.Model.SystematizingUnits
         public string Heading { get; set; } = string.Empty;
 
         /// <summary>
+        /// Data wejścia w życie nagłówka rozdziału, niezależna od daty samego rozdziału.
+        /// </summary>
+        public DateTime HeadingEffectiveDate { get; set; }
+
+        /// <summary>
         /// Czy rozdział jest domyślny/ukryty (niejawny w dokumencie).
         /// </summary>
         public bool IsImplicit { get; set; } = true;
@@ -24,7 +30,7 @@ namespace Saga.Model.SystematizingUnits
         public Chapter()
         {
             UnitType = UnitType.Chapter;
-            EIdPrefix = "rozd";
+            EIdPrefix = "rozdz";
             DisplayLabel = "rozd.";
         }
 

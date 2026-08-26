@@ -62,7 +62,7 @@ namespace Saga.Core
 		public static LegalDocument Parse(WordprocessingDocument wordDocument)
 		{
 			var blocks = new DocxBlockReader().ReadBlocks(wordDocument);
-			return ParseBlocks(blocks);
+			return ParseBlocks(blocks, ParseOptions.Default);
 		}
 
 		private static ParseResult Parse(IReadOnlyList<DocumentBlock> blocks, ParseOptions options, SourceFormat format)
@@ -81,7 +81,7 @@ namespace Saga.Core
 			LegalDocument? document = null;
 			if (buildModel)
 			{
-				document = ParseBlocks(blocks);
+				document = ParseBlocks(blocks, options);
 				document.Classification = classification;
 			}
 
@@ -98,7 +98,7 @@ namespace Saga.Core
 		/// Rdzeń parsowania: buduje model z bloków reprezentacji pośredniej niezależnie od formatu
 		/// źródłowego (DOCX/TXT/PDF), bez klasyfikacji dokumentu i koperty wyniku.
 		/// </summary>
-		internal static LegalDocument ParseBlocks(IReadOnlyList<DocumentBlock> blocks)
+		internal static LegalDocument ParseBlocks(IReadOnlyList<DocumentBlock> blocks, ParseOptions? options = null)
 		{
 			var document = new LegalDocument();
 			var subchapter = GetDefaultSubchapter(document);

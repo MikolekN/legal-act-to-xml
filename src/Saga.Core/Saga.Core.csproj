@@ -9,6 +9,10 @@
 
   <ItemGroup>
     <InternalsVisibleTo Include="Saga.Core.Tests" />
+    <!-- Narzędzie diagnostyczne z tego repozytorium (tools/CorpusValidator, poza Saga.sln).
+         Woła EditorialUnitWalker, żeby liczyć daty tym samym obchodem, którym parser je rozsyła —
+         własny obchód w narzędziu mierzyłby co innego niż to, co produkcja odwiedza. -->
+    <InternalsVisibleTo Include="CorpusValidator" />
   </ItemGroup>
 
   <ItemGroup>

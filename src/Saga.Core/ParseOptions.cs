@@ -1,4 +1,3 @@
-#nullable enable
 using Saga.Core.Ingest;
 
 namespace Saga.Core

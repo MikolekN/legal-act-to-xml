@@ -1,6 +1,7 @@
 using DocumentFormat.OpenXml.Wordprocessing;
 using Saga.Core.Ingest;
 using Saga.Core.Services.Classify;
+using Saga.Core.Services.EntryIntoForce;
 
 namespace Saga.Core.Services.Parsing
 {
@@ -14,6 +15,7 @@ namespace Saga.Core.Services.Parsing
 		private readonly IParagraphClassifier    _classifier;
 		private readonly AmendmentStateManager   _amendmentManager    = new();
 		private readonly StructureProcessor      _structureProcessor  = new();
+		private readonly EntryIntoForceService   _entryIntoForce      = new();
 
 		/// <summary>
 		/// Konstruktor domyślny — używa ParagraphClassifier.
@@ -80,6 +82,10 @@ namespace Saga.Core.Services.Parsing
 
 			// Zapisz metadane aktu zebrane ze strefy tytułowej (rodzaj/data/przedmiot → Title/ActDate).
 			context.Metadata.ApplyTo(context.Document);
+
+			// Przebieg po gotowym drzewie: klauzula wejścia w życie.
+            // Wymaga kompletnego drzewa, wraz z nowelizacjami.
+			_entryIntoForce.Apply(context.Document);
 		}
 
 		// ============================================================

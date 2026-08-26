@@ -16,31 +16,12 @@ namespace Saga.Core.Services.Converters
 
             var pointElement = GetPointElement(isPathological);
 
-            // === Atrybuty ===
             pointElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, point.Id));
             pointElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, point.Guid.ToString()));
 
-            // Data wejścia w życie jednostki (opcjonalna)
-            if (point.EffectiveDate != default)
-                pointElement.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, point.EffectiveDate.ToString("yyyy-MM-dd")));
+            UnitLifecycleXml.Apply(pointElement, point);
 
-            // Status jednostki
-            // pointElement.Add(new XAttribute(XmlConverterConstants.Contents.UnitStatus, point.Status));
-
-            // Opinie
-            // pointElement.Add(new XAttribute(XmlConverterConstants.Contents.Opinions, point.Opinions));
-
-            // Marginesy
-            // pointElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginLeft, point.MarginLeft));
-            // pointElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginRight, point.MarginRight));
-
-            // === Elementy potomne ===
-
-            // Formatowanie (opcjonalne)
-            // pointElement.Add(Element(XmlConverterConstants.Contents.Formatting));
-
-            // Numer punktu
-            pointElement.Add(Element(XmlConverterConstants.Contents.Num, point.Number == null ? "UNKNOWN" : point.Number.Value));
+            pointElement.Add(Element(XmlConverterConstants.Contents.Num, point.Number?.Value ?? "UNKNOWN"));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(point.TextSegments, previousSentenceContext, textSectionElement);
@@ -50,6 +31,8 @@ namespace Saga.Core.Services.Converters
                 textSectionElement.Add(amendmentElements);
                 pointElement.Add(textSectionElement);
             }
+
+            EmbeddedContentXmlConverter.AppendEmbedded(pointElement, point);
 
             foreach (var letter in point.Letters)
                 pointElement.Add(LetterXmlConverter.ToXml(letter, isPathological, contextToPass));

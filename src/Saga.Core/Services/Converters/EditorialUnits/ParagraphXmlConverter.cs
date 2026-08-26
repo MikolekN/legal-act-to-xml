@@ -22,37 +22,17 @@ namespace Saga.Core.Services.Converters
                 && (paragraph.Amendment == null || paragraph.Amendment.Content == null))
                 return null;
 
-            var paragraphElement = GetParagraphElement(isImplicit, isPathological);
-
-            // === Atrybuty ===
+            var paragraphElement = GetParagraphElement(paragraph, isImplicit, isPathological);
 
             if (!isImplicit)
                 paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, paragraph.Id));
 
             paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, paragraph.Guid.ToString()));
 
-            // Data wejścia w życie jednostki (opcjonalna)
-            if (paragraph.EffectiveDate != default)
-                paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, paragraph.EffectiveDate.ToString("yyyy-MM-dd")));
+            UnitLifecycleXml.Apply(paragraphElement, paragraph);
 
-            // Status jednostki
-            // paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.UnitStatus, paragraph.Status));
-
-            // Opinie
-            // paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.Opinions, paragraph.Opinions));
-
-            // Marginesy
-            // paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginLeft, paragraph.MarginLeft));
-            // paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.MarginRight, paragraph.MarginRight));
-
-            // === Elementy potomne ===
-
-            // Formatowanie (opcjonalne)
-            // paragraphElement.Add(Element(XmlConverterConstants.Contents.Formatting));
-
-            // Numer ustępu (tylko dla ustępów jawnych)
             if (!isImplicit)
-                paragraphElement.Add(Element(XmlConverterConstants.Contents.Num, paragraph.Number == null ? "UNKNOWN" : paragraph.Number.Value));
+                paragraphElement.Add(Element(XmlConverterConstants.Contents.Num, paragraph.Number?.Value ?? "UNKNOWN"));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(paragraph.TextSegments, previousSentenceContext, textSectionElement);
@@ -63,6 +43,8 @@ namespace Saga.Core.Services.Converters
                 paragraphElement.Add(textSectionElement);
             }
 
+            EmbeddedContentXmlConverter.AppendEmbedded(paragraphElement, paragraph);
+
             foreach (var point in paragraph.Points)
                 paragraphElement.Add(PointXmlConverter.ToXml(point, isPathological, contextToPass));
 
@@ -71,14 +53,26 @@ namespace Saga.Core.Services.Converters
             return paragraphElement;
         }
 
-        private static XElement GetParagraphElement(bool isImplicit, bool isPathological)
+        private static XElement GetParagraphElement(Paragraph paragraph, bool isImplicit, bool isPathological)
         {
+            var isCodeParagraph = false;
+            // var isCodeParagraph = paragraph.Role == Paragraph.CodeParagraphRole;
+            // TODO: repair
+
             return (isImplicit, isPathological) switch
             {
-                (true, true)   => Element(XmlConverterConstants.Contents.PatoParagraphImplicit),
-                (true, false)  => Element(XmlConverterConstants.Contents.ParagraphImplicit),
-                (false, true)  => Element(XmlConverterConstants.Contents.PatoParagraph),
-                (false, false) => Element(XmlConverterConstants.Contents.Paragraph)
+                (true, true)   => Element(isCodeParagraph
+                    ? XmlConverterConstants.Contents.PatoCodeParagraphImplicit
+                    : XmlConverterConstants.Contents.PatoParagraphImplicit),
+                (true, false)  => Element(isCodeParagraph
+                    ? XmlConverterConstants.Contents.CodeParagraphImplicit
+                    : XmlConverterConstants.Contents.ParagraphImplicit),
+                (false, true)  => Element(isCodeParagraph
+                    ? XmlConverterConstants.Contents.PatoCodeParagraph
+                    : XmlConverterConstants.Contents.PatoParagraph),
+                (false, false) => Element(isCodeParagraph
+                    ? XmlConverterConstants.Contents.CodeParagraph
+                    : XmlConverterConstants.Contents.Paragraph)
             };
         }
 
