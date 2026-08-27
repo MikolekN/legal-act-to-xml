@@ -2,6 +2,7 @@ using System.Reflection;
 using System.Text;
 using DocumentFormat.OpenXml.Packaging;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.OpenApi;
 using Saga.Core;
 using Saga.Core.Exceptions;
@@ -59,6 +60,13 @@ builder.Services.Configure<FormOptions>(o => o.MultipartBodyLengthLimit = MaxUpl
 builder.WebHost.ConfigureKestrel(o => o.Limits.MaxRequestBodySize = MaxUploadBytes);
 
 var app = builder.Build();
+
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedProto,
+    KnownIPNetworks = { },
+    KnownProxies = { },
+});
 
 app.UseExceptionHandler();
 app.UseStatusCodePages();
