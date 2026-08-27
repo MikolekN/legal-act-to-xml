@@ -55,7 +55,8 @@ tools/CorpusValidator (poza sln)  ──► src/Saga.Core ──► src/Saga.Mod
 
 - `Saga.Model` — czyste DTO, bez logiki biznesowej
 - `Saga.Core` — cała logika silnika parsowania; zależy od `DocumentFormat.OpenXml`, `Serilog` i `PdfPig` 0.1.15 (adapter PDF: `src/Saga.Core/Ingest/Pdf/` — `PdfBlockReader`, `PdfLineExtractor`, `PageArtifactFilter`)
-- `Saga.Cli` — cienka nakładka CLI; plik wykonywalny nazywa się `saga`
+- `Saga.Cli` — konwerter wsadowy dokument→XML (`saga <plik|katalog> [--output] [--pattern]`);
+  plik wykonywalny nazywa się `saga`. Pomija dokumenty nierozpoznane jako akty prawne
 - `Saga.Web` — **web API** (ASP.NET 10) z niej powstaje obraz kontenera.
   Wystawia `POST /v1/convert` (eksport XML przez `LegalDocumentConverter`) i `GET /health` (sonda
   dla platformy, celowo poza wersjonowaniem). `POST /parse_xml` zostaje jako **przestarzały alias**

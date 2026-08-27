@@ -75,10 +75,14 @@ Silnik parsujący dokumenty DOCX/PDF (z warstwą tekstową)/TXT. Zależy od `Sag
 
 ### 2.3 `Saga.Cli` — Narzędzie konsolowe (CLI)
 
-Interfejs wiersza poleceń korzystający z uniwersalnego `LegalDocumentParser.Parse`. Domyślnie czyta
-plik **read-only**, bez kopii zapasowej. Kopia zapasowa z sygnaturą czasową jest tworzona wyłącznie
-w trybie wstecznej kompatybilności `--docx` (legacy), który parsuje zawsze (`ParsePolicy.AlwaysParse`)
-i wymusza format DOCX.
+Konwerter wsadowy: `saga <plik|katalog> [--output <katalog>] [--pattern <wzorzec>]`. Czyta wejście
+**read-only**, dla każdego dokumentu zapisuje XML z `LegalDocumentConverter` pod nazwą pliku
+źródłowego.
+
+Trzyma domyślną politykę `ParsePolicy.ParseWhenLegalAct`, więc dokument nierozpoznany jako akt
+prawny nie ma modelu i zostaje pominięty (z adnotacją i licznikiem w podsumowaniu). Kody wyjścia:
+`0` — wszystko przekonwertowane, `1` — błąd wywołania lub wejścia/wyjścia, `2` — przebieg zakończony,
+ale część plików pominięto lub nie udało się przetworzyć.
 
 ### 2.4 `Saga.Web` — Web API (aktywne)
 

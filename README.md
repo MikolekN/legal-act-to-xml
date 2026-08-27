@@ -14,7 +14,9 @@ Silnik parsowania. Przetwarza pliki DOCX (via OpenXml) na model obiektowy z `Sag
 Testy jednostkowe i integracyjne (xUnit). Pokrywa klasyfikację akapitów, klasyfikację dokumentu, wykrywanie formatu (DOCX/PDF/TXT), generowanie eId, parsowanie nowelizacji, numerowanie encji i konwersję do XML.
 
 ### Saga.Cli
-Cienka nakładka CLI; plik wykonywalny nazywa się `saga`. Przyjmuje ścieżkę do pliku DOCX/PDF/TXT (flaga `--format docx|pdf|txt` albo automatyczna detekcja przez sygnaturę pliku) i wywołuje `Saga.Core`. Bez flagi `--dump` CLI tylko drukuje model na konsolę; `--dump <plik.xml>` zapisuje kanoniczny model do XML.
+Konwerter wsadowy; plik wykonywalny nazywa się `saga`. Przyjmuje pojedynczy plik albo katalog
+i zapisuje XML aktu prawnego dla każdego rozpoznanego dokumentu. Dokumenty, których klasyfikator
+nie uzna za akt prawny, są pomijane i wykazane w podsumowaniu przebiegu.
 
 ### Saga.Web
 Interfejs webowy. Przyjmuje upload wieloformatowy DOCX/PDF/TXT (limit 64MB). Gdy dokument nie jest aktem prawnym — wyświetla widok raportu klasyfikacji z opcją „parsuj mimo wszystko"; gdy jest aktem — renderuje stronę HTML z nawigacją po strukturze aktu prawnego.
@@ -29,12 +31,12 @@ dotnet build src/Saga.Cli/Saga.Cli.csproj
 # Testy
 dotnet test tests/Saga.Core.Tests/Saga.Core.Tests.csproj
 
-# Uruchomienie CLI
-dotnet run --project src/Saga.Cli -- <ścieżka-do-pliku.docx>
+# Konwersja pojedynczego pliku do XML
+dotnet run --project src/Saga.Cli -- plik.docx --output wynik
 
-# Uruchomienie CLI z zapisem wyniku do XML
-dotnet run --project src/Saga.Cli -- plik.docx --dump wynik.xml
+# Konwersja wsadowa całego katalogu (domyślnie *.docx, bez rekursji)
+dotnet run --project src/Saga.Cli -- katalog-z-ustawami --output katalog-xml
 
-# Parsowanie plików innych niż DOCX (PDF/TXT)
-dotnet run --project src/Saga.Cli -- plik.pdf --format pdf
+# Inny wzorzec plików (np. PDF albo TXT)
+dotnet run --project src/Saga.Cli -- katalog --pattern "*.pdf" --output katalog-xml
 ```
