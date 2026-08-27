@@ -1,11 +1,11 @@
 using DocumentFormat.OpenXml.Packaging;
-using Saga.Model;
-using Saga.Model.EditorialUnits;
-using Serilog;
 using Saga.Core;
 using Saga.Core.Exceptions;
 using Saga.Core.Ingest;
 using Saga.Core.Services.Converters;
+using Saga.Model;
+using Saga.Model.EditorialUnits;
+using Serilog;
 
 namespace Saga.Cli
 {

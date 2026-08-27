@@ -3,13 +3,13 @@ using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters
 {
-	/// <summary>
-	/// Kontekst parsowania zdania przechowujacy numer i GUID aktualnie przetwarzanego
-	/// zdania oraz numer ostatnio napotkanego fragmentu zdania.
-	/// </summary>
-	internal sealed class SentenceContext
-	{
-		/// <summary>
+    /// <summary>
+    /// Kontekst parsowania zdania przechowujacy numer i GUID aktualnie przetwarzanego
+    /// zdania oraz numer ostatnio napotkanego fragmentu zdania.
+    /// </summary>
+    internal sealed class SentenceContext
+    {
+        /// <summary>
         /// Numer ostatnio przetworzonego fragmentu zdania
         /// </summary>
         internal int CurrentFragment { get; set; } = 1;
@@ -17,7 +17,7 @@ namespace Saga.Core.Services.Converters
         /// <summary>
         /// Numer przetwarzanego zdania
         /// </summary>
-        internal int ReferenceSentenceNumber { get; init;}
+        internal int ReferenceSentenceNumber { get; init; }
 
         /// <summary>
         /// GUID przetwarzanego zdania
@@ -27,13 +27,13 @@ namespace Saga.Core.Services.Converters
         internal SentenceContext(int currentFragment,
                                     int referenceSentenceNumber = 1,
                                     string? referenceSentenceGUID = null)
-		{
-			CurrentFragment = currentFragment;
-			ReferenceSentenceNumber = referenceSentenceNumber;
+        {
+            CurrentFragment = currentFragment;
+            ReferenceSentenceNumber = referenceSentenceNumber;
             if (referenceSentenceGUID is null)
                 referenceSentenceGUID = Guid.NewGuid().ToString();
-			ReferenceSentenceGUID = referenceSentenceGUID;
-		}
+            ReferenceSentenceGUID = referenceSentenceGUID;
+        }
 
         internal static XElement ToXml(SentenceContext context, string text, string? entry = null)
         {

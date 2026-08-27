@@ -50,7 +50,7 @@ namespace Saga.Core.Services.Converters
                 element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, Guid.NewGuid().ToString()));
 
             // if (amendment.RefNowGuid != Guid.Empty)
-                // element.Add(new XAttribute(XmlConverterConstants.QuotationRefGUIDAttribute, "UNKNOWN"));
+            // element.Add(new XAttribute(XmlConverterConstants.QuotationRefGUIDAttribute, "UNKNOWN"));
 
             var targets = amendment.Targets?.ToList() ?? new List<StructuralAmendmentReference>();
             var start_target = targets.FirstOrDefault()?.ToString() ?? string.Empty;
@@ -156,11 +156,11 @@ namespace Saga.Core.Services.Converters
         private static XElement? BuildContentElement(BaseEntity entity) =>
             entity switch
             {
-                Article article     => ArticleXmlConverter.ToXml(article),
+                Article article => ArticleXmlConverter.ToXml(article),
                 Paragraph paragraph => ParagraphXmlConverter.ToXml(paragraph),
-                Point point         => PointXmlConverter.ToXml(point),
-                Letter letter       => LetterXmlConverter.ToXml(letter),
-                Tiret tiret         => TiretXmlConverter.ToXml(tiret),
+                Point point => PointXmlConverter.ToXml(point),
+                Letter letter => LetterXmlConverter.ToXml(letter),
+                Tiret tiret => TiretXmlConverter.ToXml(tiret),
                 _ => throw new InvalidOperationException($"Unsupported entity type: {entity.GetType().Name}")
             };
 
@@ -169,11 +169,11 @@ namespace Saga.Core.Services.Converters
             if (content is null) return [];
 
             return Enumerable.Empty<BaseEntity>()
-                .Concat(content.Articles   ?? [])
+                .Concat(content.Articles ?? [])
                 .Concat(content.Paragraphs ?? [])
-                .Concat(content.Points     ?? [])
-                .Concat(content.Letters    ?? [])
-                .Concat(content.Tirets     ?? []);
+                .Concat(content.Points ?? [])
+                .Concat(content.Letters ?? [])
+                .Concat(content.Tirets ?? []);
         }
     }
 }

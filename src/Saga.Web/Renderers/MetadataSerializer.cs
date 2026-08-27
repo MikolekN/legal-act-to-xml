@@ -139,7 +139,7 @@ static class MetadataSerializer
             node["targets"] = targetsArray;
         }
 
-        node["effectiveDate"] = amendment.EffectiveDate == default ? null : $"{amendment.EffectiveDate:yyyy-MM-dd}";;
+        node["effectiveDate"] = amendment.EffectiveDate == default ? null : $"{amendment.EffectiveDate:yyyy-MM-dd}"; ;
 
         return node;
     }

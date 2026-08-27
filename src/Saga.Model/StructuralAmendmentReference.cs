@@ -72,11 +72,11 @@ namespace Saga.Model
         {
             var parts = new List<string>();
 
-            if (Article  != null) parts.Add($"art_{Article}");
+            if (Article != null) parts.Add($"art_{Article}");
             if (Paragraph != null) parts.Add($"ust_{Paragraph}");
-            if (Point    != null) parts.Add($"pkt_{Point}");
-            if (Letter   != null) parts.Add($"lit_{Letter}");
-            if (Tiret    != null) parts.AddRange(TiretSegments(Tiret));
+            if (Point != null) parts.Add($"pkt_{Point}");
+            if (Letter != null) parts.Add($"lit_{Letter}");
+            if (Tiret != null) parts.AddRange(TiretSegments(Tiret));
             if (Sentence != null) parts.Add($"zdn_{Sentence}");
 
             return string.Join("__", parts);

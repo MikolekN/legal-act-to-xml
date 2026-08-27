@@ -1,7 +1,7 @@
 using System.Xml.Linq;
 using Saga.Model.EditorialUnits;
-using static Saga.Core.XLinqWrappers;
 using static Saga.Core.Services.Converters.CommonPartXmlConverter;
+using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters
 {
@@ -10,7 +10,7 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class PointXmlConverter
     {
-        internal static XElement ToXml(Point point, bool isParentPathological=false, SentenceContext? previousSentenceContext = null)
+        internal static XElement ToXml(Point point, bool isParentPathological = false, SentenceContext? previousSentenceContext = null)
         {
             var isPathological = IsPathological(point, isParentPathological);
 

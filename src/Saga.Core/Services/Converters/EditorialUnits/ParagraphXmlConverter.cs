@@ -1,7 +1,7 @@
 using System.Xml.Linq;
 using Saga.Model.EditorialUnits;
-using static Saga.Core.XLinqWrappers;
 using static Saga.Core.Services.Converters.CommonPartXmlConverter;
+using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters
 {
@@ -16,7 +16,7 @@ namespace Saga.Core.Services.Converters
             var isPathological = IsPathological(paragraph);
 
             // Parsowane dokumenty potrafią zawierać puste ustępy
-            if(isImplicit
+            if (isImplicit
                 && paragraph.ContentText == string.Empty
                 && !paragraph.Points.Any()
                 && (paragraph.Amendment == null || paragraph.Amendment.Content == null))
@@ -61,13 +61,13 @@ namespace Saga.Core.Services.Converters
 
             return (isImplicit, isPathological) switch
             {
-                (true, true)   => Element(isCodeParagraph
+                (true, true) => Element(isCodeParagraph
                     ? XmlConverterConstants.Contents.PatoCodeParagraphImplicit
                     : XmlConverterConstants.Contents.PatoParagraphImplicit),
-                (true, false)  => Element(isCodeParagraph
+                (true, false) => Element(isCodeParagraph
                     ? XmlConverterConstants.Contents.CodeParagraphImplicit
                     : XmlConverterConstants.Contents.ParagraphImplicit),
-                (false, true)  => Element(isCodeParagraph
+                (false, true) => Element(isCodeParagraph
                     ? XmlConverterConstants.Contents.PatoCodeParagraph
                     : XmlConverterConstants.Contents.PatoParagraph),
                 (false, false) => Element(isCodeParagraph

@@ -1,8 +1,8 @@
 using System.Text;
 using System.Text.Encodings.Web;
-using Saga.Model;
 using Saga.Core;
 using Saga.Core.Ingest;
+using Saga.Model;
 
 namespace Saga.Web;
 

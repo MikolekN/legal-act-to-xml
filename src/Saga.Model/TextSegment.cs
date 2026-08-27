@@ -8,7 +8,7 @@ namespace Saga.Model
     /// Segment tekstu w jednostce redakcyjnej, np. pojedyncze zdanie.
     /// Umożliwia precyzyjne kotwiczenie nowelizacji na poziomie zdań.
     /// </summary>
-    public class TextSegment: IEntersIntoForce
+    public class TextSegment : IEntersIntoForce
     {
         /// <summary>
         /// Typ segmentu (np. Sentence).

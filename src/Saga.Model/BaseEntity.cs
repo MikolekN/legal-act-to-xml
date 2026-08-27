@@ -31,7 +31,7 @@ namespace Saga.Model
         Subchapter
     }
 
-    public abstract class BaseEntity: IEntersIntoForce
+    public abstract class BaseEntity : IEntersIntoForce
     {
         public Guid Guid { get; set; } = Guid.NewGuid();
 

@@ -30,7 +30,7 @@ namespace Saga.Model
     ///           └─ Articles[]: artykuły w oddziale
     ///               └─ Subsections: ustępy
     /// </summary>
-    public class LegalDocument: IEntersIntoForce
+    public class LegalDocument : IEntersIntoForce
     {
         public LegalDocument()
         {

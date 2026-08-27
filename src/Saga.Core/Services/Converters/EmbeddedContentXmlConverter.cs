@@ -1,6 +1,5 @@
 using System.Xml.Linq;
 using Saga.Model;
-using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters
 {

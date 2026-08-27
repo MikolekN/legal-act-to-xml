@@ -17,14 +17,30 @@ dotnet build src/Saga.Core/Saga.Core.csproj
 dotnet build src/Saga.Cli/Saga.Cli.csproj
 
 # Uruchomienie wszystkich testów
-dotnet test tests/Saga.Core.Tests/Saga.Core.Tests.csproj
+dotnet test --project tests/Saga.Core.Tests/Saga.Core.Tests.csproj
 
 # Uruchomienie pojedynczej klasy testowej
-dotnet test tests/Saga.Core.Tests/Saga.Core.Tests.csproj --filter "FullyQualifiedName~EIdTests"
+dotnet test --project tests/Saga.Core.Tests/Saga.Core.Tests.csproj --filter-class "*EIdTests"
 
-# Build wydania + Docker (obraz src/Saga.Web/Dockerfile, tag = skrócony hash commita gita + 'latest', push do rejestru; inkrementacja build.number jest ZAKOMENTOWANA i nieużywana)
-./build.sh
+# Lokalne odtworzenie bramek jakości z CI (te same polecenia co .gitlab-ci.yml)
+dotnet format style Saga.sln --verify-no-changes --severity warn   # lint-check
+dotnet format whitespace Saga.sln --verify-no-changes              # format-check (przejściowo allow_failure)
+dotnet build Saga.sln -c Release -warnaserror                      # type-check
+dotnet list Saga.sln package --vulnerable --include-transitive     # dependency-check
+
+# Obraz kontenera (Dockerfile w katalogu głównym; publikuje go pipeline)
+docker build --build-arg VERSION=1.0.0 --tag saga-web:local .
 ```
+
+## CI/CD i wydania
+
+- **Wersja**: jedynym źródłem jest `<Version>` w `Directory.Build.props`. Zadanie `version-check`
+  odczytuje ją przez `dotnet msbuild -getProperty:Version`, więc tag gita musi być dokładnie tą
+  wartością, bez prefiksu `v`.
+- **Publikacja obrazu**: push do gałęzi domyślnej → tag `latest`; tag `X.Y.Z` → tag `X.Y.Z`;
+  ręcznie uruchomione zadanie w MR → tag `X.Y.Z.dev<IID>`.
+- **Progi pokrycia**: `COV_FAIL_UNDER=70` dla całości i `DIFF_FAIL_UNDER=80` dla linii zmienionych
+  w MR.
 
 ## Architektura
 
@@ -123,11 +139,16 @@ Reguła decyzyjna: twardy wymóg dwóch zgodnych sygnałów dotyczy głównie ro
 ## Testy
 
 - Projekt testowy: `Saga.Core.Tests`
-- Framework: xUnit 2.9.3
+- Framework: **xUnit v3** (`xunit.v3` 4.0.0) na **Microsoft.Testing.Platform**. Opt-in dla
+  `dotnet test` siedzi w `global.json` (`test.runner`); bez niego .NET 10 SDK odmawia
+  uruchomienia testów przez nieobsługiwaną już ścieżkę VSTest. Pokrycie (`--coverage`)
+  i raport JUnit (`--report-xunit-junit`) są wbudowane w runner — bez dodatkowych pakietów.
 - Dokumenty referencyjne DOCX leżą w lokalnym `DocRepo/` (niewersjonowany); `tests/Saga.Core.Tests/Artifacts/` zawiera golden snapshoty oczekiwanych wyników (np. `doc001.snapshot.xml`) — oba katalogi niewersjonowane
 - Test sięgający po te dane oznaczaj `[DocRepoFact("plik.docx")]` (i `RequiredArtifact = "golden.xml"`, jeśli potrzebuje goldenu) zamiast `[Fact]`. Przy braku lokalnych plików test jest wtedy **pomijany z powodem**, a nie czerwony — na czystym klonie nie ma ani `DocRepo/`, ani `Artifacts/`. Pilnuje tego `DocRepoFactGuardTests`.
 - Klasy testowe: lista NIE jest tu utrzymywana (dryfowała — brakowało w niej kolejnych klas). Wygeneruj aktualną:
   `grep -rho -E '^\s*public class \w+' tests/Saga.Core.Tests/*.cs | sed -E 's/.*public class //' | sort`
 
-  Pułapka: `ParsingBuildersTests` to NAZWA PLIKU (`ParsingBuildersTests.cs`), nie klasa testowa — plik zawiera klasy `ArticleBuilderTests`, `ParagraphBuilderTests`, `PointBuilderTests`, `LetterBuilderTests`, `TiretBuilderTests` (filtr `--filter "FullyQualifiedName~ParsingBuildersTests"` zwraca 0 testów; filtruj po nazwie klasy, np. `ArticleBuilderTests`).
-- Uruchomienie testów konkretnej klasy: `--filter "FullyQualifiedName~NazwaKlasy"`
+  Pułapka: `ParsingBuildersTests` to NAZWA PLIKU (`ParsingBuildersTests.cs`), nie klasa testowa — plik zawiera klasy `ArticleBuilderTests`, `ParagraphBuilderTests`, `PointBuilderTests`, `LetterBuilderTests`, `TiretBuilderTests` (filtr `--filter-class "*ParsingBuildersTests"` zwraca 0 testów; filtruj po nazwie klasy, np. `--filter-class "*ArticleBuilderTests"`).
+- Uruchomienie testów konkretnej klasy: `--filter-class "*NazwaKlasy"`; pojedynczego testu:
+  `--filter-method "*NazwaTestu"`. Składnia `--filter "FullyQualifiedName~..."` była z VSTest
+  i już nie działa.

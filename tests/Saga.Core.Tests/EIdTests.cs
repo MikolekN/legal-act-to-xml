@@ -1,7 +1,6 @@
 using Saga.Model;
 using Saga.Model.EditorialUnits;
 using Saga.Model.SystematizingUnits;
-using Xunit;
 
 namespace Saga.Core.Tests
 {

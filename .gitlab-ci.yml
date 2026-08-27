@@ -1,44 +1,294 @@
 ---
-stages:
- - "image_builder"
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS && $CI_PIPELINE_SOURCE == "push"'
+      when: never
+    - when: always
 
-container-build:
-  image: "docker"
+default:
+  timeout: "15m"
+  retry:
+    max: 2
+    when:
+      - "runner_system_failure"
+      - "api_failure"
+      - "scheduler_failure"
+
+stages:
+  - "test"
+  - "quality"
+  - "build_check"
+  - "build_and_publish"
+
+variables:
+  DOTNET_IMAGE: "mcr.microsoft.com/dotnet/sdk:10.0.400"
+  SOLUTION: "Saga.sln"
+  WEB_PROJECT: "src/Saga.Web/Saga.Web.csproj"
+  TEST_PROJECT: "tests/Saga.Core.Tests/Saga.Core.Tests.csproj"
+  NUGET_PACKAGES: "${CI_PROJECT_DIR}/.nuget/packages"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+
+.dotnet:
+  image: "${DOTNET_IMAGE}"
+  cache:
+    key: "nuget"
+    paths:
+      - ".nuget/packages"
+
+.docker:
+  image: "docker:29-cli"
   services:
-    - name: "docker:dind"
+    - name: "docker:29-dind"
       command:
         - "--registry-mirror"
         - "https://proxy.containers.task.gda.pl"
   tags:
     - "docker"
     - "dind"
-  stage: "image_builder"
   variables:
     DOCKER_TLS_CERTDIR: ""
-    _TEMPLATE_DOCKERFILE_PATH_DEFAULT: "."
-    _TEMPLATE_CONTAINER_NAME_DEFAULT: "${CI_REGISTRY_IMAGE}"
+    BUILDKIT_PROGRESS: "plain"
+    CACHE_IMAGE: "${CI_REGISTRY_IMAGE}:build-cache"
   before_script:
-    - "docker login --username gitlab-ci-token --password ${CI_JOB_TOKEN} ${CI_REGISTRY}"
-    - "_TEMPLATE_CONTAINER_NAME=${CONTAINER_NAME:-${_TEMPLATE_CONTAINER_NAME_DEFAULT}}"
-    - "_TEMPLATE_CONTAINER_TAG=${CONTAINER_TAG:-${_TEMPLATE_CONTAINER_TAG_DEFAULT}}"
-    - "echo \"PACKAGE_REGISTRY_TOKEN=$PACKAGE_REGISTRY_TOKEN\" > .env"
-  script: |
-    docker pull "${_TEMPLATE_CONTAINER_NAME}:${_TEMPLATE_CONTAINER_TAG}" \
-    || docker pull "${_TEMPLATE_CONTAINER_NAME}:latest" \
-    || true
-    docker build \
-      --cache-from "${_TEMPLATE_CONTAINER_NAME}:${_TEMPLATE_CONTAINER_TAG}" \
-      --cache-from "${_TEMPLATE_CONTAINER_NAME}:latest" \
-      --tag ${_TEMPLATE_CONTAINER_NAME}:${_TEMPLATE_CONTAINER_TAG} \
-      ${DOCKERFILE_PATH:-${_TEMPLATE_DOCKERFILE_PATH_DEFAULT}}
-    docker push ${_TEMPLATE_CONTAINER_NAME}:${_TEMPLATE_CONTAINER_TAG}
+    - echo "$CI_JOB_TOKEN" | docker login --username gitlab-ci-token --password-stdin "$CI_REGISTRY"
+    - docker buildx create --driver docker-container --use
+
+unit-tests:
+  extends: ".dotnet"
+  stage: "test"
+  interruptible: true
+  coverage: '/Total coverage:\s*(\d+(?:\.\d+)?)%/'
   rules:
-    - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH"
-      when : manual
-      variables:
-        _TEMPLATE_CONTAINER_TAG_DEFAULT: "latest"
-    - if: '$CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "merge_request_event"'
-      when : manual
-      variables:
-        _TEMPLATE_CONTAINER_TAG_DEFAULT: "${CI_COMMIT_REF_NAME}"
-    - when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: '$CI_COMMIT_TAG'
+  variables:
+    COV_FAIL_UNDER: "70"
+    DIFF_FAIL_UNDER: "80"
+  before_script:
+    - dotnet restore "${SOLUTION}"
+  script:
+    - |
+      dotnet test --project "${TEST_PROJECT}" \
+        --configuration Release \
+        --no-restore \
+        --results-directory TestResults \
+        --coverage \
+        --coverage-output-format cobertura \
+        --coverage-output coverage.xml \
+        --report-xunit-junit \
+        --report-xunit-junit-filename junit.xml
+    - |
+      COVERAGE_REPORT="TestResults/coverage.xml"
+
+      if [ ! -s "${COVERAGE_REPORT}" ]; then
+        echo "ERROR: raport pokrycia nie powstal albo jest pusty: ${COVERAGE_REPORT}" >&2
+        ls -la TestResults >&2 || true
+        exit 1
+      fi
+
+      awk -v threshold="${COV_FAIL_UNDER}" '
+        found { next }
+        match($0, /line-rate="[0-9.]+"/) {
+          found = 1
+          percent = substr($0, RSTART + 11, RLENGTH - 12) * 100
+          printf "Total coverage: %.1f%%\n", percent
+          if (percent < threshold) {
+            printf "ERROR: pokrycie %.1f%% ponizej progu %s%%\n", percent, threshold > "/dev/stderr"
+            exit 1
+          }
+        }
+        END {
+          if (!found) {
+            print "ERROR: w raporcie pokrycia nie ma atrybutu line-rate — nieoczekiwany format." > "/dev/stderr"
+            exit 1
+          }
+        }
+      ' "${COVERAGE_REPORT}"
+    - |
+      if [ "$CI_PIPELINE_SOURCE" = "merge_request_event" ]; then
+        apt-get update
+        apt-get install --yes --no-install-recommends python3-pip
+        rm -rf /var/lib/apt/lists/*
+        pip3 install --break-system-packages --no-cache-dir "diff-cover==9.6.0"
+
+        git fetch --no-tags --depth=1 origin \
+          "${CI_MERGE_REQUEST_DIFF_BASE_SHA}"
+
+        diff-cover TestResults/coverage.xml \
+          --fail-under="${DIFF_FAIL_UNDER}" \
+          --compare-branch="${CI_MERGE_REQUEST_DIFF_BASE_SHA}"
+      fi
+  artifacts:
+    when: always
+    reports:
+      junit: "TestResults/junit.xml"
+      coverage_report:
+        coverage_format: cobertura
+        path: TestResults/coverage.xml
+
+.quality:
+  stage: "quality"
+  interruptible: true
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+
+.quality-dotnet:
+  extends:
+    - ".quality"
+    - ".dotnet"
+  before_script:
+    - dotnet restore "${SOLUTION}"
+
+lint-check:
+  extends: ".quality-dotnet"
+  script:
+    - dotnet format style "${SOLUTION}" --verify-no-changes --no-restore --severity warn
+
+format-check:
+  extends: ".quality-dotnet"
+  script:
+    - dotnet format whitespace "${SOLUTION}" --verify-no-changes --no-restore
+
+type-check:
+  extends: ".quality-dotnet"
+  script:
+    - dotnet build "${SOLUTION}" --configuration Release --no-restore -warnaserror
+
+dependency-check:
+  extends: ".quality-dotnet"
+  script:
+    - |
+      dotnet list "${SOLUTION}" package --vulnerable --include-transitive | tee vulnerable.txt
+
+      if grep -q "has the following vulnerable packages" vulnerable.txt; then
+        echo "ERROR: zaleznosci zawieraja pakiety z podatnosciami" >&2
+        exit 1
+      fi
+
+deprecation-check:
+  extends: ".quality-dotnet"
+  script:
+    - |
+      dotnet list "${SOLUTION}" package --deprecated | tee deprecated.txt
+
+      if grep -q "has the following deprecated packages" deprecated.txt; then
+        echo "ERROR: zaleznosci zawieraja pakiety wycofane" >&2
+        exit 1
+      fi
+
+container-build-check:
+  extends: ".docker"
+  stage: "build_check"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  variables:
+    SMOKE_IMAGE: "${CI_PROJECT_NAME}:mr-${CI_MERGE_REQUEST_IID}"
+    SMOKE_CONTAINER: "saga-smoke-${CI_PIPELINE_IID}"
+  script:
+    - |
+      docker buildx build \
+        --cache-from "type=registry,ref=${CACHE_IMAGE}" \
+        --build-arg "VERSION=0.0.0" \
+        --tag "${SMOKE_IMAGE}" \
+        --load .
+    - |
+      docker run --detach --name "${SMOKE_CONTAINER}" --publish 8080:8080 "${SMOKE_IMAGE}"
+
+      attempt=1
+      until wget -q -O - "http://docker:8080/health" >/dev/null 2>&1; do
+        attempt=$((attempt + 1))
+        if [ "$attempt" -gt 30 ]; then
+          echo "ERROR: kontener nie odpowiedzial na /health w ciagu 30 s" >&2
+          docker logs "${SMOKE_CONTAINER}" >&2
+          exit 1
+        fi
+        sleep 1
+      done
+
+      echo "GET /health -> $(wget -q -O - http://docker:8080/health)"
+
+      if ! wget -q -O /dev/null "http://docker:8080/"; then
+        echo "ERROR: strona glowna nie odpowiada" >&2
+        docker logs "${SMOKE_CONTAINER}" >&2
+        exit 1
+      fi
+
+      echo "smoke test OK"
+  after_script:
+    - docker rm --force "${SMOKE_CONTAINER}" >/dev/null 2>&1 || true
+
+version-check:
+  extends: ".dotnet"
+  stage: "build_check"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_TAG'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  script:
+    - |
+      if [ -n "${CI_COMMIT_TAG:-}" ] && ! printf '%s' "$CI_COMMIT_TAG" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+(\.dev[0-9]+)?$'; then
+        echo "ERROR: tag '${CI_COMMIT_TAG}' nie jest tagiem wydania." >&2
+        echo "       Oczekiwany format: X.Y.Z albo X.Y.Z.devN," >&2
+        echo "       Tag musi byc rowny <Version> z Directory.Build.props." >&2
+        exit 1
+      fi
+
+      PUBLISH_VERSION="$(dotnet msbuild "${WEB_PROJECT}" -getProperty:Version --nologo -v:q | tr -d '[:space:]')"
+
+      if [ -z "$PUBLISH_VERSION" ]; then
+        echo "ERROR: nie udalo sie odczytac wersji z Directory.Build.props" >&2
+        exit 1
+      fi
+
+      if [ -n "${CI_COMMIT_TAG:-}" ] && [ "$CI_COMMIT_TAG" != "$PUBLISH_VERSION" ]; then
+        echo "ERROR: Tag ${CI_COMMIT_TAG} nie zgadza sie z wersja projektu ${PUBLISH_VERSION}" >&2
+        exit 1
+      fi
+
+      if [ "$CI_PIPELINE_SOURCE" = "merge_request_event" ]; then
+        case "$PUBLISH_VERSION" in
+          *.dev*) ;;
+          *) PUBLISH_VERSION="${PUBLISH_VERSION}.dev${CI_PIPELINE_IID}" ;;
+        esac
+      fi
+
+      printf 'PUBLISH_VERSION=%s\n' "$PUBLISH_VERSION" > version.env
+  artifacts:
+    reports:
+      dotenv: version.env
+
+.publish:
+  stage: "build_and_publish"
+  dependencies:
+    - "version-check"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: manual
+      allow_failure: true
+    - if: '$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+(\.dev\d+)?$/' # Tag musi być równy <Version> z Directory.Build.props.
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+
+container-build-and-publish:
+  extends:
+    - ".publish"
+    - ".docker"
+  script:
+    - |
+      CONTAINER_TAG="$PUBLISH_VERSION"
+      if [ "$CI_COMMIT_BRANCH" = "$CI_DEFAULT_BRANCH" ]; then
+        CONTAINER_TAG="latest"
+      fi
+      IMAGE="${CI_REGISTRY_IMAGE}:${CONTAINER_TAG}"
+
+      docker buildx build \
+        --cache-from "type=registry,ref=${CACHE_IMAGE}" \
+        --cache-to "type=registry,ref=${CACHE_IMAGE},mode=max" \
+        --build-arg "VERSION=${PUBLISH_VERSION}" \
+        --tag "${IMAGE}" \
+        --push .

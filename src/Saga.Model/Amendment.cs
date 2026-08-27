@@ -10,7 +10,7 @@ namespace Saga.Model
     /// Model nowelizacji - pełna reprezentacja zmiany w akcie prawnym.
     /// Nowelizacja może dotyczyć uchylenia, dodania lub zmiany brzmienia jednostek redakcyjnych.
     /// </summary>
-    public class Amendment: IEntersIntoForce
+    public class Amendment : IEntersIntoForce
     {
         /// <summary>
         /// Unikalny identyfikator nowelizacji.

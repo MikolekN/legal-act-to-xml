@@ -5,12 +5,9 @@
 .vscode/
 
 # === Docker i budowanie obrazu ===
-Dockerfile
 build.sh
 build.number
 build.number.lock
-*.dockerignore
-Directory.Build.props
 
 # === Logi ===
 logs/
@@ -61,3 +58,12 @@ docs/internal/
 
 # Raporty narzędzia CorpusValidator (generowane do bieżącego katalogu)
 corpus-report.*
+
+# === Artefakty lokalnego uruchomienia bramek CI ===
+TestResults/
+coverage.xml
+junit.xml
+vulnerable.txt
+deprecated.txt
+version.env
+.nuget/

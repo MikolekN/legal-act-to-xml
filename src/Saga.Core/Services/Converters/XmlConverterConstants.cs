@@ -178,7 +178,8 @@ namespace Saga.Core.Services.Converters
         }
 
         /// <summary>Stałe odnoszące się do treści aktu.</summary>
-        internal static class Contents {
+        internal static class Contents
+        {
             internal static class Part
             {
                 internal const string Element = "czesc";

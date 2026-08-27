@@ -1,10 +1,10 @@
 using DocumentFormat.OpenXml.Packaging;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.Caching.Memory;
-using Serilog;
 using Saga.Core;
 using Saga.Core.Exceptions;
 using Saga.Web;
+using Serilog;
 
 // Limit rozmiaru przesyłanego dokumentu — akty prawne (DOCX/PDF/TXT) mieszczą się z dużym zapasem.
 const long MaxUploadBytes = 64L * 1024 * 1024;
@@ -30,6 +30,8 @@ app.Use(async (context, next) =>
 
 static IResult Html(string html) => Results.Content(html, "text/html; charset=utf-8");
 static string ForcedViewKey(string token) => $"forced-view:{token}";
+
+app.MapGet("/health", () => Results.Text("ok"));
 
 app.MapGet("/", () => Html(HtmlDocumentRenderer.RenderUploadForm(null)));
 
