@@ -52,6 +52,8 @@ builder.Services.AddOpenApi(options =>
             ]),
         };
 
+        document.Servers?.Clear();
+
         return Task.CompletedTask;
     });
 });

@@ -1,0 +1,1 @@
+curl -u mikolajnadzieja:glpat-fkcuEaWET4i0CSayEp37OW86MQp1OnN3CA.01.0y1lq2j2v -X POST "https://d2xconverter-temp.lex.nlp.caise.pl/v1/convert" -F "documentFile=@C:\Users\Mikolaj\Desktop\szczotki\ustawy\301399_2685961.docx" -o wynik.xml
