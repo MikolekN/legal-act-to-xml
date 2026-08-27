@@ -5,6 +5,72 @@ Wszystkie istotne zmiany w tym projekcie będą dokumentowane w tym pliku.
 Format oparty jest na Keep a Changelog,
 a wersjonowanie zgodne z Semantic Versioning.
 
+## [1.0.2] - 2026-08-27
+
+Zmiany od wydania 1.0.1, pogrupowane funkcjami.
+
+### Struktura projektu i wieloformatowe wejście
+#### Dodano
+- ujednolicony potok wejścia: adaptery DOCX, PDF i TXT sprowadzające dokument do wspólnej
+  reprezentacji bloków (`DocumentBlock`), z detekcją formatu po sygnaturze pliku.
+- odczyt PDF z warstwy tekstowej (PdfPig) wraz z filtrem artefaktów strony — nagłówków, stopek
+  i numeracji. Skan bez warstwy tekstowej jest odrzucany z komunikatem, nie przetwarzany na ślepo.
+- klasyfikację całego dokumentu (rodzaj aktu wg ZTP) wykonywaną przed budową modelu; wynik niesie
+  koperta `ParseResult`, a zachowaniem steruje `ParseOptions` z `ParsePolicy`.
+- katalog `docs/adr/` z decyzjami architektonicznymi wraz z ich uzasadnieniami.
+#### Zmieniono
+- projekty przemianowane z `WordParser*` i `ModelDto` na `Saga.Model`, `Saga.Core`, `Saga.Cli`
+  i `Saga.Web`, w układzie `src/` + `tests/`.
+
+### Wejście w życie aktu
+#### Dodano
+- rozpoznawanie przepisów o wejściu w życie: skanowanie klauzul, parsowanie formuł, rozwiązywanie
+  dat oraz wskazanych jednostek redakcyjnych, wraz z mapą wyjątków od daty ogólnej.
+- rozsyłanie daty wejścia w życie po całym drzewie jednostek redakcyjnych.
+- atrybut `wejscie-w-zycie` w eksporcie XML.
+- model: `EntryIntoForceInfo`, `EntryIntoForceFormula`, `PartialEntryIntoForce`,
+  `ScopedUnitReference` oraz interfejs `IEntersIntoForce`.
+- polskie liczebniki i daty jako jedno źródło prawdy (`PolishNumerals`, `PolishDates`).
+
+### CI/CD i konteneryzacja
+#### Dodano
+- pipeline `.gitlab-ci.yml` według standardu CAISE: etapy `test`, `quality`, `build_check`
+  i `build_and_publish`.
+- bramki jakości: pokrycie 70% całości oraz 80% linii zmienionych w merge requeście, kontrola stylu
+  i formatowania, kompilacja z `-warnaserror`, audyt podatności i pakietów wycofanych.
+- smoke test obrazu — kontener musi wstać i odpowiedzieć, samo zbudowanie obrazu nie wystarcza.
+- `version-check`: tag wydania musi być równy `<Version>` z `Directory.Build.props`; tag spoza
+  wzorca `X.Y.Z[.devN]` zatrzymuje pipeline z czytelnym komunikatem.
+- `Directory.Build.props` jako jedyne źródło wersji oraz `.editorconfig` dla całego repozytorium.
+#### Zmieniono
+- `Dockerfile` przepisany na aktualny układ projektów; poprzedni odwoływał się do nieistniejących
+  już projektów i nie budował się w ogóle. Obraz startuje jako użytkownik nieuprzywilejowany.
+- testy przeniesione z xUnit 2 na xUnit v3 na Microsoft.Testing.Platform — .NET 10 SDK nie wspiera
+  już dla nich ścieżki VSTest. Pokrycie i raport JUnit są teraz wbudowane w runner.
+- całe drzewo źródeł sformatowane jednorazowo według `.editorconfig` (zmiana wyłącznie białych znaków).
+
+### Web API
+#### Dodano
+- `POST /v1/convert` — konwersja przesłanego dokumentu DOCX, PDF lub TXT do XML aktu prawnego.
+- `GET /health` — sonda dla platformy wdrożeniowej, celowo poza wersjonowaniem ścieżki.
+- dokumentację OpenAPI wraz z interfejsem Scalar jako jedyny interfejs usługi; `GET /` przekierowuje
+  do dokumentacji, a sekcja `info` niesie wersję i commit wdrożonego builda oraz środowisko.
+- `ProblemDetails` z `traceId` dla każdej awarii, łącznie z przekroczeniem limitu rozmiaru pliku
+  i wyjątkami spoza obsługi endpointu.
+#### Zmieniono
+- `POST /parse_xml` działa dalej jako przestarzały alias ścieżki sprzed wersjonowania.
+#### Usunięto
+- interfejs HTML: renderery, szablony, `POST /parse` oraz widok wymuszonego parsowania.
+- planowany projekt `Saga.Api` z dokumentacji — `Saga.Web` jest web API tego repozytorium.
+
+### CLI
+#### Zmieniono
+- `saga` jest konwerterem wsadowym: `saga <plik|katalog> [--output <katalog>] [--pattern <wzorzec>]`.
+  Katalog przetwarza bez rekursji, domyślnie `*.docx`, a dokumenty nierozpoznane jako akty prawne
+  pomija i wykazuje w podsumowaniu przebiegu.
+#### Usunięto
+- drukowanie modelu na konsolę, raport klasyfikacji, tryb zgodności `--docx` oraz `--dump`.
+
 ## [1.0.1] - 2026-07-06
 ### Dodano
 - rozróżnianie paragrafów kodeksu od ustępów.
