@@ -4,6 +4,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0.400 AS build
 
 ARG VERSION=0.0.0
+ARG REVISION=""
 
 WORKDIR /src
 
@@ -22,7 +23,8 @@ RUN dotnet publish src/Saga.Web/Saga.Web.csproj \
         --no-restore \
         --output /app/publish \
         -p:UseAppHost=false \
-        -p:InformationalVersion="${VERSION}"
+        -p:InformationalVersion="${VERSION}" \
+        -p:SourceRevisionId="${REVISION}"
 
 
 # =========================

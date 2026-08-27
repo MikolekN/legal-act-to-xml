@@ -80,17 +80,20 @@ plik **read-only**, bez kopii zapasowej. Kopia zapasowa z sygnaturą czasową je
 w trybie wstecznej kompatybilności `--docx` (legacy), który parsuje zawsze (`ParsePolicy.AlwaysParse`)
 i wymusza format DOCX.
 
-### 2.4 `Saga.Web` — Aplikacja webowa (aktywna)
+### 2.4 `Saga.Web` — Web API (aktywne)
 
-ASP.NET 10 — renderowanie HTML dokumentów sparsowanych przez `Saga.Core`. Korzysta z uniwersalnego `LegalDocumentParser.Parse(Stream, ...)` (raport klasyfikacji dokumentu + tryb wymuszonego parsowania).
+ASP.NET 10 — usługa HTTP; web API repozytorium. Wystawia `POST /v1/convert` (dokument
+DOCX/PDF/TXT → XML aktu prawnego przez `LegalDocumentConverter`) oraz `GET /health` — sonda
+celowo **poza** wersjonowaniem, bo ma przeżyć każdą zmianę kontraktu. `POST /parse_xml` działa
+dalej jako przestarzały alias ścieżki sprzed wersjonowania.
 
-### 2.5 `Saga.Api` — Web API (nie istnieje w repozytorium)
+Parsuje ze strumienia przez `LegalDocumentParser.Parse(Stream, ...)` z `ParsePolicy.AlwaysParse` —
+klasyfikację niesie wynik, nie kod HTTP. Każda awaria wychodzi jako `ProblemDetails` z `traceId`
+(400/413/415/422 oraz 500 z `UseExceptionHandler`); ciało dla 413 dokłada `UseStatusCodePages`,
+bo Kestrel odrzuca zbyt duże żądanie przed wejściem do endpointu.
 
-Planowane ASP.NET Core Web API. Poprzednik (`WordParserApi`) był zawieszony, niewersjonowany
-i nie kompilował się, dlatego nie przeszedł migracji nazw i wypadł z solucji. Reanimacja oznacza
-nowy projekt `src/Saga.Api` dodany do `Saga.sln`. Do tego czasu interfejsami są CLI i `Saga.Web`.
 
-### 2.6 `Saga.Core.Tests` — Testy jednostkowe
+### 2.5 `Saga.Core.Tests` — Testy jednostkowe
 
 Testy xUnit pokrywające kluczowe scenariusze parsowania.
 
@@ -99,10 +102,9 @@ Testy xUnit pokrywające kluczowe scenariusze parsowania.
 ## 3. Diagram zależności między projektami
 
 ```
-SAGA (CLI)           ──►  Saga.Core  ──────►  Saga.Model
-Saga.Web (Web)        ──►  Saga.Core  ──────►  Saga.Model
-Saga.Core.Tests       ──►  Saga.Core  ──────►  Saga.Model
-Saga.Api (wstrzymany) ──►  Saga.Core  ──────►  Saga.Model
+SAGA (CLI)        ──►  Saga.Core  ──────►  Saga.Model
+Saga.Web (Web API) ──►  Saga.Core  ──────►  Saga.Model
+Saga.Core.Tests    ──►  Saga.Core  ──────►  Saga.Model
 ```
 
 Zależności zewnętrzne:

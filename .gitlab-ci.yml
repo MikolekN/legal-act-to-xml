@@ -191,6 +191,7 @@ container-build-check:
       docker buildx build \
         --cache-from "type=registry,ref=${CACHE_IMAGE}" \
         --build-arg "VERSION=0.0.0" \
+        --build-arg "REVISION=${CI_COMMIT_SHORT_SHA}" \
         --tag "${SMOKE_IMAGE}" \
         --load .
     - |
@@ -209,8 +210,8 @@ container-build-check:
 
       echo "GET /health -> $(wget -q -O - http://docker:8080/health)"
 
-      if ! wget -q -O /dev/null "http://docker:8080/"; then
-        echo "ERROR: strona glowna nie odpowiada" >&2
+      if ! wget -q -O /dev/null "http://docker:8080/openapi/v1.json"; then
+        echo "ERROR: dokumentacja OpenAPI nie odpowiada" >&2
         docker logs "${SMOKE_CONTAINER}" >&2
         exit 1
       fi
@@ -290,5 +291,6 @@ container-build-and-publish:
         --cache-from "type=registry,ref=${CACHE_IMAGE}" \
         --cache-to "type=registry,ref=${CACHE_IMAGE},mode=max" \
         --build-arg "VERSION=${PUBLISH_VERSION}" \
+        --build-arg "REVISION=${CI_COMMIT_SHORT_SHA}" \
         --tag "${IMAGE}" \
         --push .

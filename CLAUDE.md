@@ -48,7 +48,7 @@ docker build --build-arg VERSION=1.0.0 --tag saga-web:local .
 
 ```
 src/Saga.Cli   (CLI, exe: saga)  ──► src/Saga.Core ──► src/Saga.Model
-src/Saga.Web   (Web, ASP.NET 10) ──► src/Saga.Core ──► src/Saga.Model
+src/Saga.Web   (Web API, ASP.NET 10) ──► src/Saga.Core ──► src/Saga.Model
 tests/Saga.Core.Tests            ──► src/Saga.Core ──► src/Saga.Model
 tools/CorpusValidator (poza sln)  ──► src/Saga.Core ──► src/Saga.Model
 ```
@@ -56,8 +56,13 @@ tools/CorpusValidator (poza sln)  ──► src/Saga.Core ──► src/Saga.Mod
 - `Saga.Model` — czyste DTO, bez logiki biznesowej
 - `Saga.Core` — cała logika silnika parsowania; zależy od `DocumentFormat.OpenXml`, `Serilog` i `PdfPig` 0.1.15 (adapter PDF: `src/Saga.Core/Ingest/Pdf/` — `PdfBlockReader`, `PdfLineExtractor`, `PageArtifactFilter`)
 - `Saga.Cli` — cienka nakładka CLI; plik wykonywalny nazywa się `saga`
-- `Saga.Web` — aktywna aplikacja webowa ASP.NET 10 (renderowanie HTML dokumentów); z niej powstaje obraz `saga-gui`
-- `Saga.Api` — **nie istnieje w repozytorium**. Poprzednik (`WordParserApi`) był zawieszony, niewersjonowany i nie kompilował się, więc nie przeszedł migracji nazw; przy reanimacji API zakłada się nowy projekt `src/Saga.Api` i dodaje go do `Saga.sln`.
+- `Saga.Web` — **web API** (ASP.NET 10) z niej powstaje obraz kontenera.
+  Wystawia `POST /v1/convert` (eksport XML przez `LegalDocumentConverter`) i `GET /health` (sonda
+  dla platformy, celowo poza wersjonowaniem). `POST /parse_xml` zostaje jako **przestarzały alias**
+  ścieżki sprzed wersjonowania — do usunięcia po migracji konsumentów. Błędy zwraca jako
+  `ProblemDetails` (400/413/415/422) z `traceId`. Interfejsem jest dokumentacja
+  API: `/openapi/v1.json` i Scalar pod `/scalar`, a `GET /` przekierowuje właśnie tam —
+  wystawiane bezwarunkowo.
 
 ### Hierarchia modelu dokumentu
 

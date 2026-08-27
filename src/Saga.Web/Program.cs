@@ -1,125 +1,175 @@
+using System.Reflection;
+using System.Text;
 using DocumentFormat.OpenXml.Packaging;
 using Microsoft.AspNetCore.Http.Features;
-using Microsoft.Extensions.Caching.Memory;
+using Microsoft.OpenApi;
 using Saga.Core;
 using Saga.Core.Exceptions;
-using Saga.Web;
+using Saga.Core.Services;
+using Scalar.AspNetCore;
 using Serilog;
 
-// Limit rozmiaru przesyłanego dokumentu — akty prawne (DOCX/PDF/TXT) mieszczą się z dużym zapasem.
+// Limit rozmiaru przesyłanego dokumentu.
 const long MaxUploadBytes = 64L * 1024 * 1024;
+const int MaxUploadMegabytes = (int)(MaxUploadBytes / 1024 / 1024);
 
 var builder = WebApplication.CreateBuilder(args);
 
 LoggerConfig.ConfigureLogger();
 
-builder.Services.AddMemoryCache(o => o.SizeLimit = 256L * 1024 * 1024);
+string buildVersion = Assembly.GetExecutingAssembly()
+    .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion
+    ?? "nieznana";
+
+builder.Services.AddProblemDetails(options =>
+{
+    options.CustomizeProblemDetails = context =>
+    {
+        if (context.HttpContext.Response.StatusCode == StatusCodes.Status413PayloadTooLarge)
+        {
+            context.ProblemDetails.Title = "Dokument jest za duży";
+            context.ProblemDetails.Detail = $"Limit rozmiaru przesyłanego dokumentu to {MaxUploadMegabytes} MB.";
+        }
+    };
+});
+
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer((document, context, cancellationToken) =>
+    {
+        document.Info = new OpenApiInfo
+        {
+            Title = "SAGA — konwerter aktów prawnych do XML",
+            Version = buildVersion,
+            Description = string.Join('\n',
+            [
+                "Konwersja aktów prawnych DOCX do XML.",
+                "",
+                $"- Wersja (build): `{buildVersion}`",
+                $"- Środowisko: `{builder.Environment.EnvironmentName}`",
+                $"- Runtime: `.NET {Environment.Version}`, kontener nasłuchuje na porcie 8080",
+            ]),
+        };
+
+        return Task.CompletedTask;
+    });
+});
+
 builder.Services.Configure<FormOptions>(o => o.MultipartBodyLengthLimit = MaxUploadBytes);
 builder.WebHost.ConfigureKestrel(o => o.Limits.MaxRequestBodySize = MaxUploadBytes);
 
 var app = builder.Build();
 
-HtmlTemplateStore.Initialize(app.Environment.ContentRootPath);
+app.UseExceptionHandler();
+app.UseStatusCodePages();
 
-// Defense-in-depth: bez zgadywania typu treści przez przeglądarkę (wszystko serwujemy jako text/html).
 app.Use(async (context, next) =>
 {
     context.Response.Headers["X-Content-Type-Options"] = "nosniff";
     await next();
 });
 
-static IResult Html(string html) => Results.Content(html, "text/html; charset=utf-8");
-static string ForcedViewKey(string token) => $"forced-view:{token}";
+static IResult UploadError(string message, int statusCode) =>
+    Results.Problem(detail: message, statusCode: statusCode, title: "Nie udało się przetworzyć dokumentu");
 
-app.MapGet("/health", () => Results.Text("ok"));
+static string XmlFileName(string uploadedName)
+{
+    string stem = Path.GetFileNameWithoutExtension(uploadedName);
+    string safe = new(stem.Where(c => char.IsLetterOrDigit(c) || c is '-' or '_').ToArray());
 
-app.MapGet("/", () => Html(HtmlDocumentRenderer.RenderUploadForm(null)));
+    return string.IsNullOrEmpty(safe) ? "document.xml" : $"{safe}.xml";
+}
 
-app.MapPost("/parse", async (IFormFile? documentFile, IMemoryCache cache) =>
+async Task<IResult> ConvertToXmlAsync(IFormFile? documentFile)
 {
     if (documentFile == null || documentFile.Length == 0)
     {
-        return Html(HtmlDocumentRenderer.RenderUploadForm("Nie wybrano pliku (obsługiwane formaty: DOCX, PDF, TXT)."));
+        return UploadError("Nie wybrano pliku (obsługiwane formaty: DOCX, PDF, TXT).",
+            StatusCodes.Status400BadRequest);
     }
 
     try
     {
-        // Parsowanie ze strumienia w pamięci — bez pliku tymczasowego na dysku (decyzja planu).
-        // Pojemność z góry: bez podwajania bufora przy kopiowaniu (limit rozmiaru pilnuje Kestrel).
         using var buffer = new MemoryStream(capacity: (int)documentFile.Length);
         await documentFile.CopyToAsync(buffer);
         buffer.Position = 0;
 
-        // AlwaysParse: jedno przejście potoku obsługuje oba widoki — akt (dokument) oraz
-        // nie-akt (raport klasyfikacji + zbuforowany widok „Parsuj mimo wszystko" bez ponownego uploadu).
-        ParseResult result;
-        string? forcedParseError = null;
-        try
+        ParseResult result = LegalDocumentParser.Parse(buffer, documentFile.FileName,
+            new ParseOptions { Policy = ParsePolicy.AlwaysParse });
+
+        if (result.Document is null)
         {
-            result = LegalDocumentParser.Parse(buffer, documentFile.FileName,
-                new ParseOptions { Policy = ParsePolicy.AlwaysParse });
-        }
-        catch (ParsingException ex) when (ex is not ScannedPdfException and not UnsupportedDocumentFormatException)
-        {
-            // Budowa modelu (zwłaszcza nie-aktu) może się nie powieść — raport klasyfikacji nadal się należy.
-            buffer.Position = 0;
-            result = LegalDocumentParser.Parse(buffer, documentFile.FileName,
-                new ParseOptions { Policy = ParsePolicy.ClassifyOnly });
-            forcedParseError = ex.Message;
+            return UploadError("Nie udało się zbudować modelu dokumentu — nie ma czego wyeksportować.",
+                StatusCodes.Status422UnprocessableEntity);
         }
 
-        if (result.Classification.IsLegalAct && result.Document is not null)
-        {
-            return Html(HtmlDocumentRenderer.RenderDocument(result.Document, documentFile.FileName));
-        }
+        byte[] bytes = Encoding.UTF8.GetBytes(LegalDocumentConverter.Convert(result.Document).ToString());
 
-        string? forcedToken = null;
-        if (result.Document is not null)
-        {
-            forcedToken = Guid.NewGuid().ToString("N");
-            string forcedHtml = HtmlDocumentRenderer.RenderDocument(result.Document, documentFile.FileName);
-            cache.Set(ForcedViewKey(forcedToken), forcedHtml, new MemoryCacheEntryOptions
-            {
-                SlidingExpiration = TimeSpan.FromMinutes(15),
-                // SizeLimit cache jest w bajtach — string trzyma 2 bajty na znak.
-                Size = (long)forcedHtml.Length * sizeof(char),
-            });
-        }
-
-        return Html(HtmlDocumentRenderer.RenderClassificationReport(result, documentFile.FileName, forcedToken, forcedParseError));
+        return Results.File(bytes, "application/xml; charset=utf-8", XmlFileName(documentFile.FileName));
     }
     catch (ScannedPdfException ex)
     {
         Log.Warning(ex, "Odrzucono PDF bez uzytecznej warstwy tekstowej.");
-        return Html(HtmlDocumentRenderer.RenderUploadForm(ex.Message));
+        return UploadError(ex.Message, StatusCodes.Status422UnprocessableEntity);
     }
     catch (UnsupportedDocumentFormatException ex)
     {
         Log.Warning(ex, "Odrzucono dokument o nieobslugiwanym formacie.");
-        return Html(HtmlDocumentRenderer.RenderUploadForm(ex.Message));
+        return UploadError(ex.Message, StatusCodes.Status415UnsupportedMediaType);
     }
     catch (OpenXmlPackageException ex)
     {
         Log.Warning(ex, "Uszkodzony pakiet DOCX.");
-        return Html(HtmlDocumentRenderer.RenderUploadForm("Plik nie jest poprawnym dokumentem Word (DOCX)."));
+        return UploadError("Plik nie jest poprawnym dokumentem Word (DOCX).", StatusCodes.Status400BadRequest);
     }
     catch (ParsingException ex)
     {
-        // Domyka też ścieżkę retry: gdy ClassifyOnly ponowi wyjątek adaptera (np. pakiet OPC
-        // bez word/document.xml), użytkownik ma dostać komunikat, nie HTTP 500.
         Log.Warning(ex, "Nie udalo sie przetworzyc dokumentu.");
-        return Html(HtmlDocumentRenderer.RenderUploadForm($"Nie udało się przetworzyć dokumentu: {ex.Message}"));
+        return UploadError($"Nie udało się przetworzyć dokumentu: {ex.Message}",
+            StatusCodes.Status422UnprocessableEntity);
     }
     catch (IOException ioEx)
     {
         Log.Error(ioEx, "Blad wejscia/wyjscia podczas przetwarzania pliku.");
-        return Html(HtmlDocumentRenderer.RenderUploadForm("Nie udalo sie odczytac pliku. Sprobuj ponownie."));
+        return UploadError("Nie udalo sie odczytac pliku. Sprobuj ponownie.",
+            StatusCodes.Status500InternalServerError);
     }
-}).DisableAntiforgery();
+}
 
-app.MapGet("/parse/forced/{token}", (string token, IMemoryCache cache) =>
-    cache.TryGetValue(ForcedViewKey(token), out string? html) && html is not null
-        ? Html(html)
-        : Html(HtmlDocumentRenderer.RenderUploadForm("Widok wymuszonego parsowania wygasł — prześlij plik ponownie.")));
+app.MapOpenApi();
+app.MapScalarApiReference();
+app.MapGet("/", () => Results.Redirect("/scalar")).ExcludeFromDescription();
+
+app.MapGet("/health", () => Results.Text("ok"))
+    .WithName("GetHealth")
+    .WithTags("Operacje")
+    .WithSummary("Sonda zdrowia dla platformy wdrożeniowej.");
+
+app.MapPost("/v1/convert", ConvertToXmlAsync)
+    .DisableAntiforgery()
+    .WithName("ConvertDocumentToXml")
+    .WithTags("Konwersja")
+    .WithSummary("Konwertuje przesłany dokument (DOCX, PDF, TXT) do XML aktu prawnego.")
+    .WithDescription(
+        "Odpowiedź 200 to plik XML (`application/xml`) z nagłówkiem `Content-Disposition: attachment`. "
+        + $"Maksymalny rozmiar przesyłanego pliku to {MaxUploadMegabytes} MB.")
+    .Produces(StatusCodes.Status200OK, contentType: "application/xml")
+    .ProducesProblem(StatusCodes.Status400BadRequest)
+    .ProducesProblem(StatusCodes.Status413PayloadTooLarge)
+    .ProducesProblem(StatusCodes.Status415UnsupportedMediaType)
+    .ProducesProblem(StatusCodes.Status422UnprocessableEntity);
+
+app.MapPost("/parse_xml", ConvertToXmlAsync)
+    .DisableAntiforgery()
+    .WithName("ConvertDocumentToXmlLegacy")
+    .WithTags("Konwersja")
+    .WithSummary("PRZESTARZAŁE — używaj POST /v1/convert.")
+    .WithDescription("Zachowuje się identycznie jak `POST /v1/convert`.")
+    .Produces(StatusCodes.Status200OK, contentType: "application/xml")
+    .ProducesProblem(StatusCodes.Status400BadRequest)
+    .ProducesProblem(StatusCodes.Status413PayloadTooLarge)
+    .ProducesProblem(StatusCodes.Status415UnsupportedMediaType)
+    .ProducesProblem(StatusCodes.Status422UnprocessableEntity)
+    .WithMetadata(new ObsoleteAttribute("Uzywaj POST /v1/convert."));
 
 app.Run();
