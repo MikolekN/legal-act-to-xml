@@ -1,17 +1,18 @@
-# Architektura projektu WordParser
+# Architektura projektu SAGA
 
-> Dokument opisuje domenę projektową, moduły, role klas, przepływy danych, zależności między warstwami oraz konwencje stosowane w projekcie WordParser.
+> Dokument opisuje domenę projektową, moduły, role klas, przepływy danych, zależności między warstwami oraz konwencje stosowane w projekcie SAGA.
 
-> Aktualny na dzień: 2026-03-11
+> Aktualny na dzień: 2026-07-25
 
 ---
 
 ## 1. Przegląd domeny
 
-WordParser to toolkit .NET 10 służący do **parsowania polskich aktów prawnych** (dokumenty Word/DOCX) do modelu obiektowego (DTO), a następnie do formatów wyjściowych (XML/XLSX). Domena obejmuje:
+SAGA to toolkit .NET 10 służący do **parsowania polskich aktów prawnych** z dokumentów Word/DOCX, PDF (z warstwą tekstową) oraz TXT do modelu obiektowego (DTO), a następnie do formatów wyjściowych (XML/XLSX). Wejście jest uniwersalne: format źródłowy jest wykrywany sygnaturowo, a dokument jest klasyfikowany wg rodzaju aktu (ZTP) przed (opcjonalnym) zbudowaniem modelu. Domena obejmuje:
 
-- **Hierarchię jednostek redakcyjnych**: `Article → Paragraph → Point → Letter → Tiret → DoubleTiret`
+- **Hierarchię jednostek redakcyjnych**: `Article → Paragraph → Point → Letter → Tiret → Tiret (zagnieżdżony)` — „podwójny tiret" (2TIR/3TIR) to nie osobna klasa, tylko zagnieżdżona lista `Tiret.Tirets`
 - **Hierarchię jednostek systematyzujących**: `Part → Book → Title → Division → Chapter → Subchapter`
+- **Klasyfikację rodzaju dokumentu**: rozpoznanie, czy wejście jest aktem prawnym i jakiego rodzaju (ustawa, rozporządzenie, obwieszczenie TJ, uchwała, zarządzenie, akt prawa miejscowego…)
 - **Nowelizacje** (amendments): zmiany legislacyjne wewnątrz aktów prawnych
 - **Metadane publikatorów**: odniesienia do Dziennika Ustaw (Dz. U.)
 
@@ -19,7 +20,7 @@ WordParser to toolkit .NET 10 służący do **parsowania polskich aktów prawnyc
 
 ## 2. Moduły (projekty)
 
-### 2.1 `ModelDto` — Warstwa modelu danych
+### 2.1 `Saga.Model` — Warstwa modelu danych
 
 
 Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawnego.
@@ -29,7 +30,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `EditorialUnits/` | Jednostki redakcyjne: `Article`, `Paragraph`, `Point`, `Letter`, `Tiret`, `CommonPart` |
 | `SystematizingUnits/` | Jednostki systematyzujące: `Part`, `Book`, `Title`, `Division`, `Chapter`, `Subchapter` |
 | `BaseEntity.cs` | Abstrakcyjna klasa bazowa z wspólnymi właściwościami (Guid, Number, ContentText, Parent, eId) |
-| `LegalDocument.cs` | Korzeń modelu — wrapper całego aktu prawnego z metadanymi i hierarchią |
+| `LegalDocument.cs` | Korzeń modelu — wrapper całego aktu prawnego z metadanymi, hierarchią i `Classification` (`DocumentClassificationResult?`, ustawiane po budowie modelu) |
 | `EntityNumber.cs` | Model numeru encji z rozbiciem na: `NumericPart`, `LexicalPart`, `Superscript` |
 | `Amendment.cs` | Model nowelizacji (typ operacji, treść, cel, data wejścia w życie) |
 | `AmendmentContent.cs` | Treść nowelizacji — hierarchiczny fragment aktu (artykuły, ustępy, punkty...) |
@@ -38,7 +39,10 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `ValidationMessage.cs` | Komunikaty diagnostyczne (Info/Warning/Error/Critical) |
 | `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje) |
 | `CommonPartType.cs` | Enum: `Intro` / `WrapUp` |
-| `LegalActType.cs` | Enum: `Statute` / `Regulation` / `Code` |
+| `LegalActType.cs` | Enum rodzaju aktu: `Statute`, `Bill`, `Regulation`, `Code`, `Ordinance`, `RegulatoryImpactAssessment`, `AmendingStatute`, `Announcement`, `Resolution`, `ExecutiveOrder`, `LocalLegalAct` |
+| `DocumentClassificationResult.cs` | Wynik klasyfikacji dokumentu (rodzaj aktu, pewność, sygnały, uzasadnienie) |
+| `DocumentSignal.cs` / `DocumentSignalKind.cs` | Pojedynczy dowód klasyfikacji dokumentu (rodzaj sygnału, wynik, dopasowany fragment) |
+| `PublisherType.cs` | Enum typu publikatora (Dz. U. / Dz. Urz. Woj. itp.) |
 
 **Interfejsy kontraktowe:**
 
@@ -49,30 +53,51 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `IHasTextSegments` | Encja może być dzielona na segmenty tekstu (`List<TextSegment>`) |
 | `ISystematizingUnit` | Kontrakt jednostek systematyzujących (`Heading`, `IsImplicit`) |
 
-### 2.2 `WordParserCore` — Warstwa logiki parsowania
+### 2.2 `Saga.Core` — Warstwa logiki parsowania
 
-Silnik parsujący dokumenty DOCX. Zależy od `ModelDto` i `DocumentFormat.OpenXml`.
+Silnik parsujący dokumenty DOCX/PDF (z warstwą tekstową)/TXT. Zależy od `Saga.Model`,
+`DocumentFormat.OpenXml` (DOCX), `PdfPig` (PDF) i `Serilog`.
 
 | Ścieżka | Rola |
 |---|---|
-| `LegalDocumentParser.cs` | **Punkt wejścia** — statyczna metoda `Parse(filePath)` lub `Parse(WordprocessingDocument)` |
+| `LegalDocumentParser.cs` | **Punkt wejścia** — statyczna metoda `Parse(Stream, fileNameHint?, ParseOptions?)` / `Parse(filePath, ParseOptions?)` → `ParseResult`. `Parse(WordprocessingDocument)` jest `[Obsolete]` (pomija klasyfikację dokumentu i kopertę `ParseResult`) |
+| `ParseResult.cs` | Koperta wyniku: `Classification`, `Document` (nullable), `SourceFormat`, `BlockCount` |
+| `ParseOptions.cs` | Opcje: `Policy` (`ParsePolicy`), `ForcedFormat` (`SourceFormat?`) |
 | `LoggerConfig.cs` | Konfiguracja Serilog (konsola + plik `logs/log.txt`) |
-| `Exceptions/` | Wyjątki parsowania (`ParsingException`) |
+| `Exceptions/` | Wyjątki parsowania (`ParsingException`, `UnsupportedDocumentFormatException`) |
 | `Helpers/` | Metody rozszerzające, dekodery styli, helpery |
-| `Services/Classify/` | **Warstwa klasyfikacji** — klasyfikator akapitów, wzorce regex, system kar, rozwiązywanie konfliktów |
+| `Ingest/` | **Warstwa odczytu formatu** — detekcja formatu (`SourceFormatDetector`), adaptery DOCX/PDF/TXT do wspólnej reprezentacji pośredniej (`DocumentBlock`) |
+| `Services/Classify/` | **Warstwa klasyfikacji akapitów** — klasyfikator (`ParagraphClassifier`, jednoprzebiegowy), wzorce regex, system kar, rozwiązywanie konfliktów |
+| `Services/Classify/Document/` | **Warstwa klasyfikacji dokumentu** — `DocumentClassifier` rozpoznaje rodzaj aktu (ZTP) na podstawie bloków, przed budową modelu |
 | `Services/` | Serwisy domenowe (numeracja, referencje, publikatory) |
 | `Services/Parsing/` | **Pipeline parsowania** — orkiestrator, buildery, przetwarzanie struktury, zarządzanie nowelizacjami |
 | `Services/Converters/` | Konwertery do XML (w trakcie implementacji, nieaktywne) |
 
-### 2.3 `WordParser` — Narzędzie konsolowe (CLI)
+### 2.3 `Saga.Cli` — Narzędzie konsolowe (CLI)
 
-Interfejs wiersza poleceń korzystający z `WordParserCore`. Tworzy kopie zapasowe przed modyfikacją.
+Konwerter wsadowy: `saga <plik|katalog> [--output <katalog>] [--pattern <wzorzec>]`. Czyta wejście
+**read-only**, dla każdego dokumentu zapisuje XML z `LegalDocumentConverter` pod nazwą pliku
+źródłowego.
 
-### 2.4 `WordParserApi` — Web API (wstrzymany)
+Trzyma domyślną politykę `ParsePolicy.ParseWhenLegalAct`, więc dokument nierozpoznany jako akt
+prawny nie ma modelu i zostaje pominięty (z adnotacją i licznikiem w podsumowaniu). Kody wyjścia:
+`0` — wszystko przekonwertowane, `1` — błąd wywołania lub wejścia/wyjścia, `2` — przebieg zakończony,
+ale część plików pominięto lub nie udało się przetworzyć.
 
-ASP.NET Core Web API z Swagger/OpenAPI. Projekt wstrzymany — zalecane użycie CLI.
+### 2.4 `Saga.Web` — Web API (aktywne)
 
-### 2.5 `WordParserCore.Tests` — Testy jednostkowe
+ASP.NET 10 — usługa HTTP; web API repozytorium. Wystawia `POST /v1/convert` (dokument
+DOCX/PDF/TXT → XML aktu prawnego przez `LegalDocumentConverter`) oraz `GET /health` — sonda
+celowo **poza** wersjonowaniem, bo ma przeżyć każdą zmianę kontraktu. `POST /parse_xml` działa
+dalej jako przestarzały alias ścieżki sprzed wersjonowania.
+
+Parsuje ze strumienia przez `LegalDocumentParser.Parse(Stream, ...)` z `ParsePolicy.AlwaysParse` —
+klasyfikację niesie wynik, nie kod HTTP. Każda awaria wychodzi jako `ProblemDetails` z `traceId`
+(400/413/415/422 oraz 500 z `UseExceptionHandler`); ciało dla 413 dokłada `UseStatusCodePages`,
+bo Kestrel odrzuca zbyt duże żądanie przed wejściem do endpointu.
+
+
+### 2.5 `Saga.Core.Tests` — Testy jednostkowe
 
 Testy xUnit pokrywające kluczowe scenariusze parsowania.
 
@@ -81,15 +106,17 @@ Testy xUnit pokrywające kluczowe scenariusze parsowania.
 ## 3. Diagram zależności między projektami
 
 ```
-WordParser (CLI)  ──────►  WordParserCore  ──────►  ModelDto
-WordParserApi (API)  ───►  WordParserCore  ──────►  ModelDto
-WordParserCore.Tests ►  WordParserCore  ──────►  ModelDto
+SAGA (CLI)        ──►  Saga.Core  ──────►  Saga.Model
+Saga.Web (Web API) ──►  Saga.Core  ──────►  Saga.Model
+Saga.Core.Tests    ──►  Saga.Core  ──────►  Saga.Model
 ```
 
 Zależności zewnętrzne:
-- `DocumentFormat.OpenXml` — parsowanie dokumentów DOCX (tylko w `WordParserCore`)
-- `Serilog` — strukturalne logowanie (w `WordParserCore`)
-- `xUnit` — framework testowy (w `WordParserCore.Tests`)
+- `DocumentFormat.OpenXml` — parsowanie dokumentów DOCX (tylko w `Saga.Core`)
+- `PdfPig` — odczyt warstwy tekstowej PDF (tylko w `Saga.Core`; UWAGA: paczka NuGet
+  „UglyToad.PdfPig" to obcy fork — używana jest `PdfPig`)
+- `Serilog` — strukturalne logowanie (w `Saga.Core`)
+- `xUnit` — framework testowy (w `Saga.Core.Tests`)
 
 ---
 
@@ -152,47 +179,115 @@ Wspólne cechy wszystkich encji:
 
 ## 5. Pipeline parsowania — przepływ danych
 
-### 5.1 Punkt wejścia
+### 5.1 Punkt wejścia (uniwersalne wejście — DOCX/PDF/TXT)
 
 ```
-LegalDocumentParser.Parse(filePath)
+LegalDocumentParser.Parse(Stream, fileNameHint?, ParseOptions?)  →  ParseResult
     │
-    ├── Otwiera DOCX przez OpenXml SDK
+    ├── Strumień nieseekowalny → buforowany w pamięci (MemoryStream), read-only
+    ├── Detekcja formatu:
+    │     ├── options.ForcedFormat, jeśli podany i != Unknown
+    │     └── w przeciwnym razie SourceFormatDetector.Detect(stream, fileNameHint) — sniffing sygnatur
+    │         (ZIP/OOXML → Docx; nagłówek „%PDF-" → Pdf; heurystyka BOM/NUL → PlainText;
+    │          rozszerzenie pliku rozstrzyga wyłącznie przypadki niekonkluzywne)
+    ├── DocumentBlockReaderFactory.Create(format) → IDocumentBlockReader
+    │     (DocxBlockReader / PdfBlockReader / PlainTextBlockReader)
+    ├── reader.ReadBlocks(stream) → IReadOnlyList<DocumentBlock>
+    │     (format-agnostyczna reprezentacja pośrednia — patrz 5.1b)
+    └── Parse(blocks, options, format) — rdzeń:
+          ├── DocumentClassifier.Classify(blocks) → DocumentClassificationResult
+          │     (rodzaj aktu wg ZTP, IsLegalAct, pewność, sygnały — patrz 6.1c)
+          ├── Decyzja o budowie modelu wg options.Policy (ParsePolicy):
+          │     ├── AlwaysParse        → zawsze buduj
+          │     ├── ClassifyOnly       → nigdy nie buduj (Document = null)
+          │     └── ParseWhenLegalAct  → buduj tylko gdy classification.IsLegalAct (domyślna)
+          ├── jeśli budowa → ParseBlocks(blocks) (rdzeń niezależny od formatu, patrz 5.2)
+          │     i przypisanie document.Classification = classification
+          └── zwraca ParseResult { Classification, Document, SourceFormat, BlockCount }
+
+LegalDocumentParser.Parse(filePath, ParseOptions?)
+    → otwiera plik read-only (File.OpenRead) i deleguje do Parse(Stream, ...)
+
+[Obsolete] LegalDocumentParser.Parse(WordprocessingDocument)
+    → ścieżka wsteczna: czyta bloki przez DocxBlockReader i zwraca LegalDocument
+      BEZPOŚREDNIO, z pominięciem klasyfikacji dokumentu i koperty ParseResult
+```
+
+### 5.1b Warstwa odczytu formatu (`Ingest/`)
+
+Każdy adapter formatu (`IDocumentBlockReader`) zamienia dokument źródłowy na listę `DocumentBlock` —
+format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
+
+| Właściwość `DocumentBlock` | Opis |
+|---|---|
+| `Text` | Tekst bloku (kanał indeksu górnego `[x]`, tabulatory `\t`; **nie** trymowany/sanityzowany) |
+| `StyleId` | Identyfikator stylu Word — tylko DOCX; `null` dla PDF/TXT |
+| `Layout` | Opcjonalne metadane układu (`BlockLayoutInfo` — wcięcia, pogrubienie, kursywa) — z DOCX/PDF |
+| `Source` | Położenie w źródle (`BlockSourceLocation`) — diagnostyka |
+| `Role` | `BlockRole` (`Body`, `FootnoteText`, …) — bloki przypisów są filtrowane przez orkiestrator |
+| `IsEmpty` | `true` gdy `Text` jest pusty/białe znaki |
+
+`PdfBlockReader` (PdfPig) składa bloki z geometrii linii tekstu (`PdfLineExtractor`, `BlockAssembler`,
+`PageArtifactFilter`) — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
+warstwie syntaktycznej (regex) i układzie (wcięcia).
+
+### 5.2 Rdzeń budowy modelu (`LegalDocumentParser.ParseBlocks`, `internal`)
+
+Niezależny od formatu źródłowego — działa wyłącznie na `IReadOnlyList<DocumentBlock>`:
+
+```
+ParseBlocks(blocks)
+    │
     ├── Tworzy LegalDocument z domyślną hierarchią systematyzującą
     ├── Tworzy ParsingContext (stan parsowania)
-    ├── Iteruje po Paragraph[] z MainDocumentPart
-    │   └── ParserOrchestrator.ProcessParagraph(paragraph, context)
-    └── ParserOrchestrator.Finalize(context)  — flush bufora nowelizacji
+    ├── Tworzy ParserOrchestrator() — domyślny ParagraphClassifier
+    ├── Iteruje po blocks (pomijając elementy null)
+    │   └── ParserOrchestrator.ProcessBlock(block, context)
+    └── ParserOrchestrator.Finalize(context)
+          ├── flush bufora nowelizacji, jeśli dokument kończy się w jej trakcie
+          └── context.Metadata.ApplyTo(document) — zapis Title/ActDate ze strefy tytułowej
 ```
 
-### 5.2 Orkiestrator (`ParserOrchestrator`)
+`ParserOrchestrator.ProcessParagraph(Paragraph, context)` pozostaje jako cienki adapter
+OpenXml → `DocumentBlock` (wsteczna kompatybilność testów i dotychczasowych wywołujących);
+deleguje do `ProcessBlock`.
 
-Jednoprzebiegowy pipeline ze stanem. Dla każdego akapitu:
+### 5.3 Orkiestrator — `ParserOrchestrator.ProcessBlock`
+
+Jednoprzebiegowy pipeline ze stanem. Dla każdego bloku:
 
 ```
-1. Sanityzacja tekstu (StringExtensions.Sanitize)
-2. Pobranie StyleId (ParagraphExtensions.StyleId)
-3. Budowanie NumberingHint (oczekiwana numeracja na bieżącym poziomie)
-4. Klasyfikacja (ParagraphClassifier.Classify) → ClassificationResult (Kind, Confidence, Penalties)
-5. Zarządzanie stanem nowelizacji (AmendmentStateManager.UpdateState)
-   ├── Detekcja triggera: "otrzymuje brzmienie:", "dodaje się", "uchyla się"
-   └── Przejście do/z trybu nowelizacji
-6. Zbieranie treści nowelizacji (AmendmentStateManager.Collect) lub finalizacja (Flush)
-7. Jeśli poza nowelizacją → budowanie struktury (StructureProcessor.Process):
+1. Jeśli block.IsEmpty → pomiń
+2. Jeśli block.Role == FootnoteText → pomiń (przypisy nie są treścią jednostek redakcyjnych;
+   klasyfikator dokumentu czyta je osobno z pełnej listy bloków)
+3. Sanityzacja tekstu (block.Text.Sanitize().Trim()) i odczyt StyleId (block.StyleId)
+4. Budowanie NumberingHint (oczekiwana numeracja na bieżącym poziomie)
+5. Klasyfikacja (ParagraphClassifier.Classify) → ClassificationResult (Kind, Confidence,
+   IsAmendmentContent, StyleType, Penalties)
+6. HandleAmendmentFlow (metoda prywatna orkiestratora):
+   ├── AmendmentStateManager.UpdateState — aktualizuje InsideAmendment/trigger
+   ├── jeśli właśnie wyszliśmy z nowelizacji → Flush()
+   ├── ShouldExitForNewParentLawTrigger — wykrywa nowy trigger ustawy matki w trakcie
+   │   zbierania (z uwzględnieniem QuoteBalanceTracker dla nowelizacji bez stylów)
+   └── jeśli IsAmendmentContent lub InsideAmendment → Collect() i STOP (blok skonsumowany)
+7. W przeciwnym razie: StructureProcessor.Process(context, classification, text, styleId, layout)
+   ├── jednostki systematyzacyjne (Part/Book/Title/Division/Chapter/Subchapter) → SystematizingUnitBuilder
    ├── Article  → ArticleBuilder.Build()
+   ├── Unknown  → wnioskowanie z tekstu / zbieranie metadanych strefy tytułowej / diagnostyka
    ├── Paragraph → ParagraphBuilder.Build()
    ├── Point    → PointBuilder.Build()
    ├── Letter   → LetterBuilder.Build()
-   ├── Tiret    → TiretBuilder.Build()
-   └── WrapUp   → handleowanie CommonPart.WrapUp (dla CZ_WSP_*)
-8. Diagnostyka klasyfikacji (ValidationReporter.AddClassificationWarning)
-9. Aktualizacja kontekstu (CurrentArticle/Paragraph/Point/Letter/TiretStack)
-10. Aktualizacja referencji strukturalnej (LegalReferenceService)
-11. Parsowanie publikatorów (JournalReferenceService) — tylko dla artykułów
-12. ParserOrchestrator.Finalize() — flush ostatniej bufora nowelizacji (jeśli istnieje)
+   ├── Tiret    → TiretBuilder.Build() (głębokość ze stylu 2TIR/3TIR lub z wcięcia layoutu)
+   └── WrapUp   → AttachWrapUpCommonPart (dla CZ_WSP_*)
+8. Jeśli StructureProcessor zwrócił true → AmendmentStateManager.DetectTrigger (szuka
+   "otrzymuje brzmienie:", "dodaje się", "uchyla się")
 ```
 
-### 5.3 Kontekst parsowania (`ParsingContext`)
+Aktualizacja referencji strukturalnej (`LegalReferenceService`), wykrywanie celów nowelizacji
+i parsowanie publikatorów (`JournalReferenceService`, tylko dla artykułów) odbywają się
+wewnątrz `StructureProcessor.Process`, nie jako osobne kroki orkiestratora (patrz 6.1).
+
+### 5.4 Kontekst parsowania (`ParsingContext`)
 
 Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 
@@ -200,18 +295,22 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 |---|---|
 | `Document` | Aktualny `LegalDocument` (korzeń) |
 | `Subchapter` | Bieżący oddział (kontener artykułów) |
+| `CurrentPart/CurrentBook/CurrentTitle/CurrentDivision/CurrentChapter` | Bieżąca ścieżka jednostek systematyzujących, aktualizowana przez `SystematizingUnitBuilder` |
+| `PendingHeadingUnit` | Jednostka systematyzacyjna oczekująca na tytuł (drugi wiersz wzorca dwuwierszowego, § 60 ZTP) |
 | `CurrentArticle` | Ostatnio przetworzony artykuł |
 | `CurrentParagraph` | Bieżący ustęp |
 | `CurrentPoint` | Bieżący punkt |
 | `CurrentLetter` | Bieżąca litera |
 | `TiretStack` | Stos tiretów — `List<DtoTiret>` wspierający zagnieżdżone tirety (1TIR/2TIR/3TIR); `CurrentTiret` jako property `TiretStack[^1]` |
+| `OpenTiretIndents` | Lista równoległa do `TiretStack` — wcięcia lewe (twips) tiretów otwartych na stosie, zasila wnioskowanie głębokości z układu (§ 58 ZTP) gdy styl 2TIR/3TIR nie rozstrzyga |
+| `Metadata` | `DocumentMetadataCollector` — zbiera rodzaj/datę/przedmiot aktu ze strefy tytułowej (§ 16-19 ZTP) |
 | `InsideAmendment` | Flaga: czy jesteśmy wewnątrz treści nowelizacji |
 | `AmendmentTriggerDetected` | Flaga: czy wykryto zwrot "otrzymuje brzmienie:" |
-| `AmendmentCollector` | Bufor akapitów nowelizacji |
+| `AmendmentCollector` | Bufor akapitów nowelizacji (z wbudowanym `QuoteBalanceTracker` dla nowelizacji bez stylów) |
 | `AmendmentOwner` | Encja-właściciel bieżącej nowelizacji |
 | `ReferenceService` | Serwis referencji strukturalnych |
-| `CurrentStructuralReference` | Bieżąca pozycja (art/ust/pkt/lit/tir) — aktualizowana przez `LegalReferenceService` |
-| `DetectedAmendmentTargets` | Słownik: `Guid` → `StructuralAmendmentReference` — cele nowelizacji detektowane przez `LegalReferenceService` |
+| `CurrentStructuralReference` | Bieżąca pozycja (art/ust/pkt/lit/tir) — aktualizowana przez `StructureProcessor` |
+| `DetectedAmendmentTargets` | Słownik: `Guid` → `StructuralAmendmentReference` — cele nowelizacji detektowane przez `StructureProcessor` |
 
 ---
 
@@ -221,31 +320,54 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 
 | Klasa | Rola |
 |---|---|
-| **`ParserOrchestrator`** | Orkiestrator — jednoprzebiegowy pipeline sterujący całym procesem parsowania. Konstruktor: `(IParagraphClassifier? classifier = null)` z DI. Koordynuje klasyfikację, zarządzanie nowelizacjami i budowanie struktury. |
-| **`StructureProcessor`** | Przetwarzanie struktury — buduje encje na podstawie `ClassificationResult`. Obsługuje mapowanie `Kind` na typ buildera, tworzenie implicit encji, obsługę `WrapUp`. |
+| **`ParserOrchestrator`** | Orkiestrator — jednoprzebiegowy pipeline sterujący całym procesem parsowania. Konstruktor: `(IParagraphClassifier? classifier = null)` z DI. Metoda `ProcessBlock(DocumentBlock, ParsingContext)` (format-agnostyczna); `ProcessParagraph(Paragraph, context)` to cienki adapter OpenXml → `ProcessBlock`. Koordynuje klasyfikację, zarządzanie nowelizacjami i budowanie struktury. |
+| **`StructureProcessor`** (`internal sealed`) | Przetwarzanie struktury — buduje encje na podstawie `ClassificationResult`. Obsługuje mapowanie `Kind` na typ buildera (w tym jednostki systematyzacyjne przez `SystematizingUnitBuilder`), tworzenie implicit encji, obsługę `WrapUp`, wnioskowanie `Unknown` (tekst / metadane strefy tytułowej), aktualizację `CurrentStructuralReference` i wykrywanie celów nowelizacji (`DetectAmendmentTargets`). |
+| **`SystematizingUnitBuilder`** (w `Builders/`) | Buduje jednostki systematyzacyjne (Część→Księga→Tytuł→Dział→Rozdział→Oddział, § 60-62 ZTP) i utrzymuje bieżącą ścieżkę w `ParsingContext`. |
+| **`DocumentMetadataCollector`** | Zbiera metadane aktu (rodzaj, organ, data, przedmiot) ze strefy tytułowej (§ 16-19, § 102, § 120 ZTP); karmiony akapitami `Unknown` sprzed pierwszego artykułu; `ApplyTo(document)` zapisuje `Title`/`ActDate` przy finalizacji. |
 | **`AmendmentStateManager`** | Zarządzanie cyklem życia nowelizacji — `UpdateState()`, `Collect()`, `Flush()`, `DetectTrigger()`. Wyodrębniony z orkiestratora dla lepszej separacji concerns. |
-| **`ParsingContext`** | Stan parsowania — przechowuje bieżącą pozycję w drzewie i metadane nowelizacji. Mutowany przez orkiestrator. |
+| **`QuoteBalanceTracker`** | Bilans cudzysłowów dla nowelizacji bez stylów `Z/*` (§ 94 ZTP) — wyznacza koniec cytowanej treści przez parzystość cudzysłowów, gdy brak sygnału stylowego. |
+| **`AmendmentCommandParser`** | Rozpoznaje rodzaj komendy nowelizacyjnej z treści (`AmendmentCommandKind`: Change/Add/Repeal/ReplaceWords) — źródło niższego priorytetu niż mapa stylów. |
+| **`ParsingContext`** | Stan parsowania — przechowuje bieżącą pozycję w drzewie (w tym jednostki systematyzacyjne i metadane aktu). Mutowany przez orkiestrator/`StructureProcessor`. |
 | **`ParsingFactories`** | Fabryki statyczne — tworzenie encji, parsowanie numerów, usuwanie prefiksów numeracyjnych, podział tekstu na zdania (`SplitIntoSentences`). |
 | **`AmendmentCollector`** | Bufor nowelizacji — zbiera akapity treści nowelizacji od momentu wejścia (trigger) do momentu powrotu do stylu ustawy matki. |
 | **`AmendmentFinalizer`** | Finalizator nowelizacji — wykrywa typ operacji (Modification/Insertion/Repeal), tworzy obiekt `Amendment`, łączy z JournalInfo, przypisuje do encji-właściciela. |
 | **`ValidationReporter`** | Reporter diagnostyczny — statyczne metody do rejestrowania ostrzeżeń o konfliktach styl/treść i brakujących stylach na encjach DTO. |
 
-### 6.1b Warstwa klasyfikacji (`Services/Classify/`)
+### 6.1b Warstwa klasyfikacji akapitów (`Services/Classify/`)
 
 Wyodrębniona warstwa zajmująca się klasyfikacją akapitów i oceną pewności klasyfikacji.
+Klasyfikator jest **jednoprzebiegowy** (`ParagraphClassifier`, `sealed class`) — nie ma osobnych klas
+warstwowych ani katalogu `Classification/`; "warstwy" (styl/regex/numeracja/konflikt) to etapy
+jednej metody `Classify`, nie osobne obiekty.
 
 | Klasa | Rola |
 |---|---|
 | **`IParagraphClassifier`** | Interfejs klasyfikatora — `Classify(ClassificationInput) → ClassificationResult`. Umożliwia DI i testowanie. |
-| **`ParagraphClassifier`** | Główna implementacja klasyfikatora — łączy sygnały: styl OpenXml + regex + NumberingHint, obsługuje rozwiązywanie konfliktów. |
+| **`ParagraphClassifier`** | Jedyna implementacja klasyfikatora — łączy sygnały: styl OpenXml + regex + NumberingHint, obsługuje rozwiązywanie konfliktów. |
 | **`ClassificationInput`** | Record wejściowy klasyfikatora: `(Text: string, StyleId: string?, NumberingHint: NumberingHint?)`. |
-| **`ClassificationResult`** | Record wyniku klasyfikacji: `Kind` (enum), `Confidence` (1–100), `Penalties: IReadOnlyList<ClassificationPenalty>`, `StyleType: string?`, `IsAmendmentContent: bool`. |
-| **`ParagraphKind`** | Enum typów akapitów: `Article`, `Paragraph`, `Point`, `Letter`, `Tiret`, `WrapUp` (nowe — dla `CZ_WSP_*`), `Unknown`. |
+| **`ClassificationResult`** | Record wyniku klasyfikacji: `Kind` (enum), `Confidence` (1–100), `IsAmendmentContent: bool`, `StyleType: string?`, `Penalties: IReadOnlyList<ClassificationPenalty>`. |
+| **`ParagraphKind`** | Enum typów akapitów (14 wartości): jednostki redakcyjne — `Article`, `Paragraph`, `Point`, `Letter`, `Tiret`, `WrapUp`; jednostki systematyzacyjne (§ 60-62 ZTP) — `PartUnit`, `BookUnit`, `TitleUnit`, `DivisionUnit`, `ChapterUnit`, `SubchapterUnit`, `UnitHeading`; oraz `Unknown`. |
 | **`ClassificationPenalty`** | Model kary: `(Reason: string, Value: int)` — obniża Confidence. |
-| **`ConfidencePenaltyConfig`** | Statyczne konfiguracje kar: `StyleAbsentPenalty`, `SyntaxAbsentPenalty`, `StyleTextConflictPenalty`, `NumberingBreakPenalty`. |
-| **`NumberingHint`** | Model wskazówki numeracji — `(ExpectedKind, ExpectedNumber?, IsContinuous(), GetNextLetterValue())`. Przeniesiony z `NumberingContinuityValidator` — logika ciągłości numeracji. |
+| **`ConfidencePenaltyConfig`** | Statyczne konfiguracje kar: `StyleAbsentPenalty`, `SyntaxAbsentPenalty`, `StyleSyntaxConflictPenalty`, `NumberingBreakPenalty`. |
+| **`NumberingHint`** | Model wskazówki numeracji — `ExpectedKind`, `ExpectedNumber?`, `IsContinuous(actual)`, `GetNextLetterValue()`. Obliczany przez orkiestrator (`BuildNumberingHint`) przed klasyfikacją; kara `NumberingBreakPenalty` stosowana wewnątrz `ParagraphClassifier.BuildResult`, gdy rozpoznany `Kind == ExpectedKind`, ale numer nie jest ciągły. |
 | **`IConflictResolver`** | Interfejs rozwiązywania konfliktów styl↔treść. |
 | **`DefaultConflictResolver`** | Domyślna implementacja: syntaktyka (regex) wygrywa nad stylem. |
+
+### 6.1c Warstwa klasyfikacji dokumentu (`Services/Classify/Document/`)
+
+Rozpoznaje **rodzaj całego dokumentu** (nie akapitu) wg ZTP, zanim (opcjonalnie) zbudowany zostanie
+model strukturalny. Wywoływana przez `LegalDocumentParser.Parse(blocks, options, format)` — patrz 5.1.
+
+| Klasa | Rola |
+|---|---|
+| **`IDocumentClassifier`** | Interfejs — `Classify(IReadOnlyList<DocumentBlock>) → DocumentClassificationResult`. Nie ocenia normatywności ani nie decyduje o parsowaniu — wyłącznie raportuje. |
+| **`DocumentClassifier`** | Implementacja dwufazowa: (A) strefa tytułowa — pierwsze 25 niepustych bloków (nagłówek rodzaju aktu, organ, data, przedmiot); (B) statystyka korpusu (formuła kompetencyjna, dominacja jednostki podstawowej Art./§, wejście w życie, markery TJ, komendy nowelizacyjne). Punktacja rozdziela sygnały różnicujące typ od bonusu „aktowości"; wymaga silnego sygnału strukturalnego (`hasBackbone`) i wyniku ≥ progu (40), inaczej `IsLegalAct = false`. |
+| **`ZtpPatterns`** | Skompilowane wzorce regex sygnałów dokumentu (nagłówki rodzajów aktu, formuła TJ, formuła kompetencyjna, wejście w życie, komendy nowelizacyjne, publikator woj., markery TJ, organ JST…). |
+| **`DocumentClassificationResult`** (Saga.Model) | `ActType: LegalActType?`, `IsLegalAct`, `IsConsolidatedText`, `IsAmending`, `Confidence` (1–100), `Signals: IReadOnlyList<DocumentSignal>`, `Justification`. |
+| **`DocumentSignal`** / **`DocumentSignalKind`** (Saga.Model) | Pojedynczy dowód klasyfikacji: rodzaj sygnału, wynik, indeks bloku, dopasowany fragment, opis. |
+
+`ParseResult`/`ParseOptions`/`ParsePolicy` (w `Saga.Core`, poza `Services/`) spinają tę warstwę
+z rdzeniem budowy modelu — patrz 5.1.
 
 ---
 
@@ -262,6 +384,12 @@ Pattern: `IEntityBuilder<TInput, TResult>` — wspólny kontrakt.
 | `TiretBuilder` | `TiretBuildInput(...)` | `Tiret` | Tworzy tiret z indeksem sekwencyjnym |
 | `AmendmentBuilder` | `AmendmentCollector` | `AmendmentContent` | Buduje hierarchiczną treść nowelizacji z zebranych akapitów |
 
+Poza wzorcem `IEntityBuilder<TInput, TResult>` (jednostki redakcyjne) w tym samym katalogu żyje:
+
+| Builder | Rola |
+|---|---|
+| `SystematizingUnitBuilder` | Buduje jednostki systematyzacyjne (Część/Księga/Tytuł/Dział/Rozdział/Oddział) i utrzymuje bieżącą ścieżkę w `ParsingContext` (`Enter(ctx, kind, number)`) — patrz 6.1 |
+
 Kaskadowe tworzenie encji implicit:
 - Punkt wymaga ustępu → `ParagraphBuilder.EnsureForPoint()`
 - Litera wymaga punktu → `PointBuilder.EnsureForLetter()`
@@ -275,12 +403,36 @@ Kaskadowe tworzenie encji implicit:
 | **`LegalReferenceService`** | Parsowanie odwołań strukturalnych z tekstu ("art. 5", "ust. 2", "pkt 3a", "lit. b") do `StructuralReference`. |
 | **`JournalReferenceService`** | Parsowanie publikatorów (Dz. U.) z treści artykułów nowelizujących i uzupełnianie listy `JournalInfo`. |
 
+### 6.3b Wejście w życie (`Services/EntryIntoForce/`)
+
+Uruchamiany raz, po zbudowaniu modelu — wymaga kompletnego drzewa, wraz z nowelizacjami.
+Punktem odniesienia dla formuł względnych („po upływie 14 dni od dnia ogłoszenia") jest
+`LegalDocument.AnnouncementDate`. Parser nie odczytuje jej z dokumentu, więc te formuły
+pozostają nierozstrzygnięte — patrz [backlog § 3b](backlog.md).
+
+| Klasa | Rola |
+|---|---|
+| **`EntryIntoForceService`** | Orkiestracja: skan → reguła ogólna → wyjątki → mapa wyjątków → propagacja. |
+| **`EntryIntoForceClauseScanner`** | Znajduje kandydatów na klauzulę w kolejności dokumentu, z filtrami negatywnymi (klauzula w cytacie, w artykule nowelizującym, wystąpienie rzeczownikowe). |
+| **`EntryIntoForceFormulaParser`** + **`EntryIntoForcePatterns`** | Rozpoznanie brzmienia z zamkniętego katalogu § 45 ZTP; operand liczbowy albo słowny (przez `PolishNumerals`). |
+| **`EntryIntoForceDateResolver`** | Arytmetyka dat dla rozpoznanej formuły. |
+| **`UnitReferenceTokenizer`** | Rozbija powołanie na tokeny (słowo kluczowe, oznaczenie, przedział, separator, znacznik zakresu). Normalizuje też szyk „liczebnik przed słowem kluczowym": „tiret drugie pierwsze podwójne tiret" to jedna ścieżka `tir_2__dwtir_1`, a nie dwa tirety — rozstrzyga brak separatora między oznaczeniami. |
+| **`DesignationRange`** | Rozwija przedziały oznaczeń („85c–85j", „19-21", „a–c", „czwarte–szóste"). Przedział niejednoznaczny („5a"–„7b") zwraca null, żeby wywołujący go oflagował zamiast zgadywać. |
+| **`UnitEnumerationParser`** + **`UnitPathCursor`** | Rozkład powołania jednostek („art. 1 pkt 9 w zakresie art. 85a ust. 1") na ścieżki — patrz [ADR-0010](adr/0010-jeden-kursor-sciezki-jednostek.md). Granica zakresu: wewnątrz „w zakresie…" wolno zostać na poziomie albo zejść głębiej, ale powrót W GÓRĘ kończy zakres i wraca do wyliczenia głównego („…w zakresie uchylanego pkt 5 i art. 5"). |
+| **`EntryIntoForceTargetResolver`** | Odnajduje encję wskazaną ścieżką — w akcie i w przytoczonej treści nowelizacji. Rozstrzyga ścieżki, dat NIE zapisuje. |
+| **`EditorialUnitWalker`** | Jedyne miejsce, które wie, co jest czyim dzieckiem; treść cytatu odwiedzana tylko na żądanie. |
+| **`EntryIntoForceExceptionMap`** | Rozstrzygnięcia wyjątków przypięte do encji (klucz po tożsamości, bo eId nie jest w akcie unikalny). `null` = cel znany, data nie. |
+| **`EffectiveDatePropagator`** | Kolorowanie drzewa: data ogólna trafia na wszystkie jednostki i zdania, wyjątek nadpisuje ją w dół, a **brak daty znaczy nierozstrzygnięty wyjątek** — patrz [ADR-0011](adr/0011-data-ogolna-rozsylana-po-calym-drzewie.md). |
+
 ### 6.4 Helpery (`Helpers/`)
 
 | Klasa | Rola |
 |---|---|
 | **`ParagraphExtensions`** | Metody rozszerzające `Paragraph` (OpenXml) — bezpieczne pobieranie `StyleId` z null-checkiem na `ParagraphProperties`. |
-| **`StringExtensions`** | Metody rozszerzające `string` — `Sanitize()` (kolapsowanie białych znaków, zamiana en-dash), `ExtractOrdinal()`, `ExtractDate()`. |
+| **`StringExtensions`** | Metody rozszerzające `string` — `Sanitize()` (kolapsowanie białych znaków, zamiana en-dash) i `ExtractOrdinal()`. |
+| **`PolishDates`** | Nazwy miesięcy i parsowanie dat w formie długiej („1 stycznia 2025 r."). Metody `Try*` nie rzucają — data niemożliwa („31 lutego") zwraca `false`. Alternatywa miesięcy jest `const`, bo leksykon jest zamknięty. |
+| **`PolishNumerals`** | JEDYNE źródło prawdy o polskich liczebnikach: porządkowe (rdzeń + końcówki, wszystkie rodzaje), główne w dopełniaczu (formy dokładne), mnożne („podwójne"), składanie 1–99 z dwóch wyrazów. Wystawia też GENEROWANE ze słownika fragmenty regexa do wyszukiwania — patrz [ADR-0009](adr/0009-jedno-zrodlo-liczebnikow-polskich.md). |
+| **`RomanNumeralConverter`** | Wyłącznie cyfry rzymskie (`RomanToInt`/`ToRoman`) dla jednostek systematyzacyjnych; kanonizuje eId („KSIĘGA PIERWSZA" i „KSIĘGA I" → `ks_I`). Liczebniki słowne rozstrzyga `PolishNumerals`. |
 | **`StyleLibraryMapper`** | Statyczna mapa styli dokumentów prawnych — mapuje StyleId na czytelne nazwy. Zawiera `AmendmentStyleInfoMap` z metadanymi styli nowelizacyjnych. |
 | **`AmendmentStyleDecoder`** | Dekoder styli nowelizacyjnych — rozpoznaje instrument zmiany (`AmendmentInstrument`), typ celu (`AmendmentTargetKind`), kontekst nadrzędny. |
 | **`EnumExtensions`** | Metoda `ToDescription()` na enumach — odczyt atrybutu `[EnumDescription]`. |
@@ -317,9 +469,12 @@ Skompilowane wzorce regex w `ParagraphClassifier`:
 | `PointPattern` | Punkt | `1) tekst`, `3a) tekst` |
 | `LetterPattern` | Litera | `a) tekst`, `ab) tekst` |
 | `TiretPattern` | Tiret | `– tekst` (en-dash + spacja) |
-| `WrapUpPattern` | WrapUp | Akapity ze stylem `CZ_WSP_*` (parte wspólna po wyliczeniu) |
 
-Wzorce obsługują opcjonalny prefiks cytatu (`„`, `"`, `"`) dla treści nowelizacji.
+Wzorce obsługują opcjonalny prefiks cytatu (`„`, `"`, `"`) dla treści nowelizacji. Jednostki
+systematyzacyjne (§ 60-62 ZTP: Część/Księga/Tytuł/Dział/Rozdział/Oddział) mają własne wzorce
+(`PartUnitPattern`…`SubchapterUnitPattern`), sprawdzane przed powyższymi — patrz 6.1b/6.1c.
+WrapUp **nie** ma osobnego wzorca regex — rozpoznawany jest po stylu (`CZ_WSP_*`), a tekst
+(początek półpauzą/dywizem + spacja) jedynie potwierdza lub obniża pewność (`IsWrapUpByText`).
 
 #### Warstwa 2 — Style OpenXml
 
@@ -337,9 +492,11 @@ Mapowanie prefiksów StyleId:
 
 #### Warstwa 3 — Ciągłość numeracji
 
-`NumberingHint` weryfikuje spójność numeracji (przeprowadzane jako kara):
-- Oczekiwany typ (`ExpectedKind`): jeśli rozpoznany `Kind != ExpectedKind`, kara `NumberingBreakPenalty`
-- Oczekiwany numer (`ExpectedNumber`): jeśli numer nie jest kolejny, kara `NumberingBreakPenalty`
+`NumberingHint` weryfikuje spójność numeracji (przeprowadzane jako kara), **wyłącznie gdy
+rozpoznany `Kind` jest równy `hint.ExpectedKind`** (inaczej hint po prostu nie ma zastosowania —
+np. hint dla poziomu "punkt", a bieżący akapit rozpoznano jako "artykuł"):
+- Oczekiwany numer (`ExpectedNumber`): jeśli sparsowany numer nie jest oczekiwanym następnikiem
+  (`IsContinuous(actual)` zwraca `false`), kara `NumberingBreakPenalty`
 - Metody: `IsContinuous(actual)`, `GetNextLetterValue()` (inkrementacja liter w stylu arkusza)
 
 #### Warstwa 4 — Rozstrzyganie konfliktów
@@ -347,20 +504,21 @@ Mapowanie prefiksów StyleId:
 Gdy styl i treść się nie zgadzają:
 - Używa `IConflictResolver` (domyślnie `DefaultConflictResolver`)
 - **Reguła**: syntaktyka (regex) wygrywa nad stylem
-- Konflikt generuje `ClassificationPenalty` z `StyleTextConflictPenalty` i `ValidationMessage` na encji
+- Konflikt generuje `ClassificationPenalty` z `StyleSyntaxConflictPenalty` i `ValidationMessage` na encji
 
 ### System kar (Confidence Penalties)
 
 Każda kara obniża `Confidence`:
 
-| Kara | Wartość | Warunki |
+| Kara | Wartość domyślna | Warunki |
 |---|---|---|
-| `StyleAbsentPenalty` | konfigurowana | Brak StyleId — użyto fallback regex |
-| `SyntaxAbsentPenalty` | konfigurowana | Brak dopasowania regex |
-| `StyleTextConflictPenalty` | konfigurowana | Konflikt: styl mówi X, treść mówi Y |
-| `NumberingBreakPenalty` | konfigurowana | Numeracja nieciągła (zła sekwencja) |
+| `StyleAbsentPenalty` | 10 | Brak StyleId/stylu rozpoznanego — użyto fallback regex |
+| `SyntaxAbsentPenalty` | 15 | Brak dopasowania regex — typ ustalony wyłącznie ze stylu |
+| `StyleSyntaxConflictPenalty` | 25 | Konflikt: styl mówi X, treść mówi Y |
+| `NumberingBreakPenalty` | 10 | Numeracja nieciągła (zła sekwencja), tylko gdy `Kind == ExpectedKind` |
 
-**Wynik**: `Confidence = 100 - sum(penalties)`. Jeśli `Confidence <= 0` i brak żadnego sygnału, `Kind = Unknown`.
+**Wynik**: `Confidence = Math.Clamp(100 - sum(penalties), 1, 100)`. Gdy brak obu sygnałów (styl i
+regex), `Kind = Unknown` i `Confidence = 1` wprost (nie przez odjęcie kar).
 
 ### Diagnozy klasyfikacji
 
@@ -411,6 +569,20 @@ Każda kara obniża `Confidence`:
 - **Cel** (`AmendmentTargetKind`): co jest zmieniane (ART, UST, PKT, LIT, TIR, CommonPart, Fragment...)
 - **Kontekst** (`ParentContext`): np. `TIR_w_LIT` → tiret wewnątrz litery
 
+### 8.4 Nowelizacje bez stylów `Z/*` (dokumenty bezstylowe / PDF / TXT)
+
+Gdy dokument nie niesie stylów Word (np. wejście PDF/TXT), granica nowelizacji jest wyznaczana
+inaczej niż powrotem do stylu `ART/UST/PKT/LIT/TIR`:
+
+- **`QuoteBalanceTracker`** — bilansuje cudzysłowy cytowanej treści (§ 94 ZTP: nowe brzmienie
+  ujęte w „…"); uzbraja się, gdy pierwszy zbierany blok jest bezstylowy i zaczyna się cudzysłowem
+  otwierającym „; koniec cytatu (`ClosureReached`) kończy zbieranie nowelizacji zamiast zmiany stylu.
+  Trigger nowelizacyjny wykryty wewnątrz otwartego cytatu jest traktowany jako nowelizacja
+  zagnieżdżona (`ZZ`) — cytat trwa (`MarkNestedTrigger`).
+- **`AmendmentCommandParser`** — rozpoznaje rodzaj komendy nowelizacyjnej (`AmendmentCommandKind`:
+  `Change`/`Add`/`Repeal`/`ReplaceWords`) z samej treści triggera, gdy mapa stylów nie rozstrzyga.
+  Źródło niższego priorytetu niż styl — styl zawsze dominuje, gdy jest dostępny.
+
 ---
 
 ## 9. Walidacja i diagnostyka
@@ -430,7 +602,8 @@ Każda encja (`BaseEntity`) przechowuje listę komunikatów diagnostycznych:
 
 Walidacja numeracji odbywa się poprzez `NumberingHint` w warstwie klasyfikacji (z karą `NumberingBreakPenalty`):
 
-- Oczekiwany typ (`ExpectedKind`): klasyfikator porównuje rozpoznany `Kind` z oczekiwanym
+- Oczekiwany typ (`ExpectedKind`): kara stosowana wyłącznie gdy rozpoznany `Kind == ExpectedKind`
+  (hint dla innego poziomu hierarchii nie ma zastosowania)
 - Oczekiwany numer (`ExpectedNumber`): sprawdzany przez `IsContinuous(actual)`, sprawdza:
   - Ten sam `NumericPart` dozwolony (warianty: 2 → 2a)
   - Kolejny `NumericPart` (prev + 1) dozwolony
@@ -495,7 +668,7 @@ Centralnie obsługiwane przez `ParagraphExtensions.StyleId()`.
 
 ### 10.7 Testy
 
-- Framework: xUnit (`WordParserCore.Tests`)
+- Framework: xUnit (`Saga.Core.Tests`)
 - Konwencja nazewnictwa plików: `*Tests.cs` (np. `EIdTests.cs`, `ParagraphClassifierTests.cs`)
 - Każda zmiana w logice parsowania wymaga aktualizacji lub dodania testów
 - Artefakty testowe (pliki DOCX) w `Artifacts/`
@@ -509,14 +682,16 @@ Buildery encji stosują konwencję:
 
 ### 10.9 Kopie zapasowe
 
-CLI tworzy kopie z sygnaturą czasową: `nazwa-pliku_YYYYMMDD_HHmmss.ext`
+Domyślna ścieżka CLI czyta plik read-only, bez kopii. Tylko tryb legacy `--docx` tworzy kopię
+z sygnaturą czasową: `nazwa-pliku_YYYYMMDD_HHmmss.ext` (zachowane dla wstecznej kompatybilności —
+historycznie parser modyfikował dokument).
 
 ---
 
 ## 11. Mapa plików — szybki przegląd
 
 ```
-ModelDto/
+src/Saga.Model/
 ├── BaseEntity.cs                    # Klasa bazowa wszystkich encji
 ├── LegalDocument.cs                 # Korzeń modelu aktu prawnego
 ├── EntityNumber.cs                  # Model numeru encji
@@ -529,7 +704,11 @@ ModelDto/
 ├── TextSegmentType.cs               # Enum: Sentence/...
 ├── ValidationMessage.cs             # Komunikat diagnostyczny
 ├── JournalInfo.cs                   # Metadane publikatora (Dz.U.)
-├── LegalActType.cs                  # Enum: Statute/Regulation/Code
+├── PublisherType.cs                 # Enum typu publikatora
+├── LegalActType.cs                  # Enum rodzaju aktu (11 wartości, w tym AmendingStatute/Announcement/Resolution/ExecutiveOrder/LocalLegalAct)
+├── DocumentClassificationResult.cs  # Wynik klasyfikacji dokumentu (rodzaj aktu, pewność, sygnały)
+├── DocumentSignal.cs                # Pojedynczy dowód klasyfikacji dokumentu
+├── DocumentSignalKind.cs            # Enum rodzajów sygnałów klasyfikacji dokumentu
 ├── CommonPartType.cs                # Enum: Intro/WrapUp
 ├── IHasAmendments.cs                # Interfejs: encja z nowelizacją
 ├── IHasCommonParts.cs               # Interfejs: encja z częściami wspólnymi
@@ -550,11 +729,14 @@ ModelDto/
     ├── Chapter.cs                   # Rozdział
     └── Subchapter.cs                # Oddział (kontener artykułów)
 
-WordParserCore/
-├── LegalDocumentParser.cs           # PUNKT WEJŚCIA — Parse()
+src/Saga.Core/
+├── LegalDocumentParser.cs           # PUNKT WEJŚCIA — Parse(Stream/filePath) → ParseResult; Parse(WordprocessingDocument) [Obsolete]
+├── ParseResult.cs                   # Koperta wyniku: Classification, Document?, SourceFormat, BlockCount
+├── ParseOptions.cs                  # Opcje: Policy (ParsePolicy), ForcedFormat
 ├── LoggerConfig.cs                  # Konfiguracja Serilog
 ├── Exceptions/
-│   └── ParsingException.cs          # Wyjątek bazowy parsowania
+│   ├── ParsingException.cs          # Wyjątek bazowy parsowania
+│   └── UnsupportedDocumentFormatException.cs  # Nierozpoznany format wejścia
 ├── Helpers/
 │   ├── ParagraphExtensions.cs       # Bezpieczne StyleId() z null-check; GetFullText() z obsługą superscriptu
 │   ├── StringExtensions.cs          # Sanitize(), ExtractDate(), ExtractOrdinal()
@@ -562,25 +744,50 @@ WordParserCore/
 │   ├── AmendmentStyleDecoder.cs     # Dekoder styli nowelizacyjnych
 │   ├── EnumExtensions.cs            # ToDescription() dla enumów
 │   └── SpreadsheetHelper.cs         # Helper do tworzenia komórek XLSX
+├── Ingest/                          # WARSTWA ODCZYTU FORMATU (DOCX/PDF/TXT → DocumentBlock)
+│   ├── SourceFormat.cs              # Enum: Docx/Pdf/PlainText/Unknown
+│   ├── SourceFormatDetector.cs      # Detekcja formatu po sygnaturze (nie po rozszerzeniu)
+│   ├── DocumentBlockReaderFactory.cs  # Format → IDocumentBlockReader
+│   ├── IDocumentBlockReader.cs      # Kontrakt adaptera formatu
+│   ├── DocumentBlock.cs             # Format-agnostyczny odpowiednik akapitu (Text/StyleId/Layout/Source/Role)
+│   ├── BlockRole.cs                 # Enum: Body/FootnoteText/...
+│   ├── BlockLayoutInfo.cs           # Metadane układu (wcięcia, pogrubienie, kursywa)
+│   ├── BlockSourceLocation.cs       # Położenie bloku w źródle (diagnostyka)
+│   ├── BlockAlignment.cs / BlockAssembler.cs  # Składanie bloków z linii (PDF)
+│   ├── DocxBlockReader.cs           # Adapter DOCX (OpenXml Paragraph → DocumentBlock)
+│   ├── PlainTextBlockReader.cs      # Adapter TXT
+│   ├── TextLine.cs / TextNormalizer.cs  # Pomocnicze dla adaptera TXT
+│   └── Pdf/
+│       ├── PdfBlockReader.cs        # Adapter PDF (PdfPig) — warstwa tekstowa
+│       ├── PdfLineExtractor.cs      # Ekstrakcja linii z geometrii PDF
+│       ├── PdfTextLine.cs           # Linia tekstu PDF z pozycją
+│       └── PageArtifactFilter.cs    # Filtrowanie artefaktów strony (nagłówki/stopki/numery stron)
 └── Services/
     ├── EntityNumberService.cs       # Parsowanie/formatowanie numerów encji
     ├── LegalReferenceService.cs     # Parsowanie odwołań strukturalnych
     ├── JournalReferenceService.cs   # Parsowanie publikatorów (Dz.U.)
-    ├── Classify/                    # WARSTWA KLASYFIKACJI
+    ├── Classify/                    # WARSTWA KLASYFIKACJI AKAPITÓW (jednoprzebiegowa)
     │   ├── IParagraphClassifier.cs  # Interfejs klasyfikatora
-    │   ├── ParagraphClassifier.cs   # Główna implementacja klasyfikatora
+    │   ├── ParagraphClassifier.cs   # Jedyna implementacja klasyfikatora
     │   ├── ClassificationInput.cs   # Record wejściowy klasyfikatora
     │   ├── ClassificationResult.cs  # Record wyniku klasyfikacji
-    │   ├── ParagraphKind.cs         # Enum: Article/Paragraph/Point/Letter/Tiret/WrapUp/Unknown
+    │   ├── ParagraphKind.cs         # Enum (14 wartości): jednostki redakcyjne + systematyzacyjne + WrapUp/Unknown
     │   ├── ClassificationPenalty.cs # Model kary
-    │   ├── ConfidencePenaltyConfig.cs  # Konfiguracja kar: Style/Syntax/Conflict/NumberingBreak
-    │   ├── NumberingHint.cs         # Logika ciągłości numeracji (przeniesiona z NumberingContinuityValidator)
+    │   ├── ConfidencePenaltyConfig.cs  # Konfiguracja kar: Style/Syntax/StyleSyntaxConflict/NumberingBreak
+    │   ├── NumberingHint.cs         # Logika ciągłości numeracji
     │   ├── IConflictResolver.cs     # Interfejs rozwiązywania konfliktów
-    │   └── DefaultConflictResolver.cs  # Domyślna implementacja: syntaktyka wygrywa
+    │   ├── DefaultConflictResolver.cs  # Domyślna implementacja: syntaktyka wygrywa
+    │   └── Document/                # WARSTWA KLASYFIKACJI DOKUMENTU (rodzaj aktu wg ZTP)
+    │       ├── IDocumentClassifier.cs   # Interfejs klasyfikatora dokumentu
+    │       ├── DocumentClassifier.cs    # Implementacja (strefa tytułowa + statystyka korpusu)
+    │       └── ZtpPatterns.cs           # Wzorce regex sygnałów dokumentu
     ├── Parsing/
-    │   ├── ParserOrchestrator.cs    # Orkiestrator parsowania (pipeline) z DI konstruktorem
-    │   ├── StructureProcessor.cs    # Przetwarzanie struktury — budowanie encji z ClassificationResult
+    │   ├── ParserOrchestrator.cs    # Orkiestrator parsowania (pipeline) z DI konstruktorem; ProcessBlock/ProcessParagraph
+    │   ├── StructureProcessor.cs    # Przetwarzanie struktury — budowanie encji z ClassificationResult (internal sealed)
     │   ├── AmendmentStateManager.cs # Zarządzanie cyklem życia nowelizacji (UpdateState, Collect, Flush, DetectTrigger)
+    │   ├── QuoteBalanceTracker.cs   # Bilans cudzysłowów dla nowelizacji bez stylów (§ 94 ZTP)
+    │   ├── AmendmentCommandParser.cs  # Rozpoznanie rodzaju komendy nowelizacyjnej z treści
+    │   ├── DocumentMetadataCollector.cs  # Zbiera rodzaj/datę/przedmiot aktu ze strefy tytułowej
     │   ├── ParsingContext.cs        # Stan parsowania (mutowalny)
     │   ├── ParsingFactories.cs      # Fabryki: numery, prefiksy, zdania
     │   ├── AmendmentCollector.cs    # Bufor akapitów nowelizacji
@@ -593,7 +800,8 @@ WordParserCore/
     │       ├── PointBuilder.cs      # Builder punktu + EnsureForLetter()
     │       ├── LetterBuilder.cs     # Builder litery + EnsureForTiret()
     │       ├── TiretBuilder.cs      # Builder tiretu (z obsługą ParentTiret dla zagnieżdżenia)
-    │       └── AmendmentBuilder.cs  # Builder treści nowelizacji
+    │       ├── AmendmentBuilder.cs  # Builder treści nowelizacji
+    │       └── SystematizingUnitBuilder.cs  # Builder jednostek systematyzacyjnych (§ 60-62 ZTP)
     └── Converters/
         └── [nieaktywne — kod zakomentowany] Konwertery do XML/XLSX (przyszłościowo)
 ```
@@ -603,53 +811,97 @@ WordParserCore/
 ## 12. Podsumowanie przepływu danych
 
 ```
-  DOCX (plik Word)
+  Stream (DOCX / PDF z warstwą tekstową / TXT) + fileNameHint?
        │
        ▼
-  OpenXml SDK (DocumentFormat.OpenXml)
+  LegalDocumentParser.Parse(stream, fileNameHint, options)
+       ├── SourceFormatDetector.Detect() — sniffing sygnatur (lub options.ForcedFormat)
+       ├── DocumentBlockReaderFactory.Create(format) → IDocumentBlockReader
+       ├── reader.ReadBlocks(stream) → IReadOnlyList<DocumentBlock>
+       │
+       ├── DocumentClassifier.Classify(blocks) → DocumentClassificationResult
+       │     (rodzaj aktu wg ZTP: Statute/Regulation/Announcement/Resolution/
+       │      ExecutiveOrder/AmendingStatute/LocalLegalAct..., IsLegalAct, Confidence, Signals)
+       │
+       ├── options.Policy decyduje, czy budować model:
+       │     ParseWhenLegalAct (domyślna) → tylko gdy IsLegalAct
+       │     AlwaysParse                  → zawsze
+       │     ClassifyOnly                 → nigdy (Document = null)
+       │
+       ├── [jeśli budowa modelu] ParseBlocks(blocks):
+       │     │
+       │     ├── Iteracja po DocumentBlock[]
+       │     │     │
+       │     │     ▼
+       │     │   ParserOrchestrator.ProcessBlock(block, context)
+       │     │     ├── block.IsEmpty / block.Role == FootnoteText → pomiń
+       │     │     ├── StringExtensions.Sanitize() — normalizacja tekstu
+       │     │     ├── BuildNumberingHint() — oczekiwana numeracja na bieżącym poziomie
+       │     │     ├── ParagraphClassifier.Classify() → ClassificationResult
+       │     │     │   ├── styl (StyleId, gdy DOCX) → styleKind
+       │     │     │   ├── regex (syntaktyka, w tym jednostki systematyzacyjne) → syntacticKind
+       │     │     │   ├── IConflictResolver — rozwiązanie konfliktu styl↔regex
+       │     │     │   ├── NumberingHint — kara przy nieciągłości (gdy Kind == ExpectedKind)
+       │     │     │   └── Rezultat: Kind, Confidence, IsAmendmentContent, StyleType, Penalties[]
+       │     │     │
+       │     │     ├── HandleAmendmentFlow() — zarządzanie nowelizacją
+       │     │     │   ├── AmendmentStateManager.UpdateState() / Flush() przy wyjściu
+       │     │     │   ├── ShouldExitForNewParentLawTrigger() (+ QuoteBalanceTracker dla nowelizacji bez stylów)
+       │     │     │   └── Collect() i STOP, jeśli IsAmendmentContent / InsideAmendment
+       │     │     │
+       │     │     ├── StructureProcessor.Process() — budowanie struktury (jeśli nie STOP)
+       │     │     │   ├── jednostki systematyzacyjne → SystematizingUnitBuilder.Enter()
+       │     │     │   ├── *Builder.Build() → encja DTO (Article/Paragraph/Point/Letter/Tiret/WrapUp)
+       │     │     │   ├── Unknown → wnioskowanie z tekstu / DocumentMetadataCollector.Observe() / diagnostyka
+       │     │     │   ├── Kaskadowe tworzenie implicit encji
+       │     │     │   ├── Obsługa CommonPart (intro/wrapUp)
+       │     │     │   ├── UpdateStructuralReference() + DetectAmendmentTargets()
+       │     │     │   ├── ValidationReporter.AddClassificationWarning() — diagnostyka
+       │     │     │   └── JournalReferenceService.ParseJournalReferences() — publikatory (tylko Article)
+       │     │     │
+       │     │     └── AmendmentStateManager.DetectTrigger() — jeśli encja zbudowana
+       │     │
+       │     └── ParserOrchestrator.Finalize()
+       │           ├── flush ostatniego bufora nowelizacji (jeśli aktywny)
+       │           └── context.Metadata.ApplyTo(document) — Title/ActDate ze strefy tytułowej
        │
        ▼
-  LegalDocumentParser.Parse()
+  ParseResult { Classification, Document?, SourceFormat, BlockCount }
        │
-       ├── Iteracja po akapitach (Word.Paragraph)
-       │     │
-       │     ▼
-       │   ParserOrchestrator.ProcessParagraph(paragraph, context)
-       │     ├── StringExtensions.Sanitize() — normalizacja tekstu
-       │     ├── ParagraphExtensions.StyleId() — bezpieczne pobranie StyleId
-       │     ├── BuildNumberingHint() — oczekiwana numeracja na bieżącym poziomie
-       │     ├── ParagraphClassifier.Classify() → ClassificationResult
-       │     │   ├── Warstwa 1: regex matching (syntaktyka)
-       │     │   ├── Warstwa 2: StyleId mapping (style OpenXml)
-       │     │   ├── Warstwa 3: NumberingHint validation (ciągłość numeracji)
-       │     │   ├── Warstwa 4: IConflictResolver (rozwiązanie konfliktów)
-       │     │   └── Rezultat: Kind, Confidence, Penalties[], StyleType
-       │     │
-       │     ├── AmendmentStateManager.UpdateState() — zarządzanie nowelizacją
-       │     │   ├── DetectTrigger() — "otrzymuje brzmienie:", "dodaje się", etc.
-       │     │   ├── Collect() — zbieranie treści nowelizacji
-       │     │   └── Flush() — finalizacja nowelizacji
-       │     │
-       │     ├── StructureProcessor.Process() — budowanie struktury
-       │     │   ├── *Builder.Build() → encja DTO (Article/Paragraph/Point/Letter/Tiret/WrapUp)
-       │     │   ├── Kaskadowe tworzenie implicit encji
-       │     │   └── Obsługa CommonPart (intro/wrapUp)
-       │     │
-       │     ├── ValidationReporter.AddClassificationWarning() — diagnostyka
-       │     ├── LegalReferenceService.UpdateLegalReference() — pozycja strukturalna
-       │     └── JournalReferenceService.ParseJournalReferences() — publikatory (tylko Article)
-       │
-       ├── ParserOrchestrator.Finalize() — flush ostatniej bufora nowelizacji
-       │
-       ▼
-  LegalDocument (model DTO)
-       │
-       ├── Articles[] → Paragraphs[] → Points[] → Letters[] → Tirets[]
-       ├── CommonParts[] (intro/wrapUp)
-       ├── ValidationMessages (diagnostyka klasyfikacji)
-       ├── Journals (publikatory z Dz.U.)
-       └── Amendments (nowelizacje z operacjami)
-       │
-       ▼
-  [Przyszłościowo] Converters → XML / XLSX
+       └── Document (LegalDocument, gdy zbudowany)
+             ├── Classification — kopia DocumentClassificationResult
+             ├── Articles[] → Paragraphs[] → Points[] → Letters[] → Tirets[]
+             ├── CommonParts[] (intro/wrapUp)
+             ├── ValidationMessages (diagnostyka klasyfikacji)
+             ├── Journals (publikatory z Dz.U.)
+             └── Amendments (nowelizacje z operacjami)
+                   │
+                   ▼
+             [Przyszłościowo] Converters → XML / XLSX
 ```
+
+---
+
+## 13. Decyzje architektoniczne
+
+Uzasadnienia decyzji — wraz z odrzuconymi alternatywami i konsekwencjami — żyją w osobnych plikach
+w [docs/adr/](adr/README.md). Tutaj tylko skrót z odesłaniem; ta sekcja nie jest miejscem na „dlaczego".
+
+| ADR | Decyzja |
+|---|---|
+| [0001](adr/0001-jeden-ujednolicony-potok-wejscia.md) | Wszystkie formaty schodzą się do `DocumentBlock[]` — jeden potok, nie ścieżka per format. Stąd też: IR nie trafia do `Saga.Model`, wcięcia w twipach, `ProcessParagraph` utrzymywany jako adapter. |
+| [0002](adr/0002-adaptery-nie-udaja-styleid.md) | Adaptery PDF/TXT nie zgadują `styleId` — brak stylu zostaje brakiem i obniża pewność karą, zamiast udawać sygnał szablonu. |
+| [0003](adr/0003-backbone-warunkiem-uznania-za-akt.md) | Bez silnego sygnału strukturalnego (`hasBackbone`) dokument nie jest aktem, choćby przekroczył próg punktowy. |
+| [0004](adr/0004-pdfpig-zamiast-itext.md) | PdfPig (Apache-2.0) do odczytu PDF; iText odrzucony — AGPL rozciągnąłby wymóg udostępnienia źródeł na usługę sieciową. |
+| [0005](adr/0005-pdf-tylko-warstwa-tekstowa.md) | PDF wyłącznie z warstwą tekstową; skan odrzucany `ScannedPdfException`, OCR poza zakresem projektu. |
+| [0006](adr/0006-nie-akt-nie-jest-bledem.md) | Nie-akt to `ParseResult` z raportem klasyfikacji, nie wyjątek; decyzja „czy parsować" należy do wywołującego (`ParseOptions.Policy`). |
+| [0007](adr/0007-klasyfikacja-nie-mutuje-type.md) | Rozpoznany rodzaj aktu ląduje w `Classification`; `LegalDocument.Type` pozostaje pod kontrolą wywołującego. |
+
+### Rozstrzygnięcia bez osobnego ADR
+
+**Pierwszy nagłówek rodzaju aktu wygrywa.** Załącznik do obwieszczenia o tekście jednolitym zawiera
+własną linię „USTAWA", więc sygnały tytułowe liczone są tylko ze strefy tytułowej (pierwsze bloki),
+a kolejny nagłówek jest ignorowany z sygnałem informacyjnym `IgnoredSecondaryHeader`. Bez tego każdy
+tekst jednolity klasyfikowałby się jako ustawa.
+
+Znane luki i prace świadomie odroczone: [backlog.md](backlog.md).
