@@ -281,16 +281,16 @@ container-build-and-publish:
     - ".docker"
   script:
     - |
-      CONTAINER_TAG="$PUBLISH_VERSION"
+      set -- --tag "${CI_REGISTRY_IMAGE}:${PUBLISH_VERSION}"
+
       if [ "$CI_COMMIT_BRANCH" = "$CI_DEFAULT_BRANCH" ]; then
-        CONTAINER_TAG="latest"
+        set -- "$@" --tag "${CI_REGISTRY_IMAGE}:latest"
       fi
-      IMAGE="${CI_REGISTRY_IMAGE}:${CONTAINER_TAG}"
 
       docker buildx build \
         --cache-from "type=registry,ref=${CACHE_IMAGE}" \
         --cache-to "type=registry,ref=${CACHE_IMAGE},mode=max" \
         --build-arg "VERSION=${PUBLISH_VERSION}" \
         --build-arg "REVISION=${CI_COMMIT_SHORT_SHA}" \
-        --tag "${IMAGE}" \
+        "$@" \
         --push .

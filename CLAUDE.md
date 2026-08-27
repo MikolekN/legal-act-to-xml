@@ -37,8 +37,11 @@ docker build --build-arg VERSION=1.0.0 --tag saga-web:local .
 - **Wersja**: jedynym źródłem jest `<Version>` w `Directory.Build.props`. Zadanie `version-check`
   odczytuje ją przez `dotnet msbuild -getProperty:Version`, więc tag gita musi być dokładnie tą
   wartością, bez prefiksu `v`.
-- **Publikacja obrazu**: push do gałęzi domyślnej → tag `latest`; tag `X.Y.Z` → tag `X.Y.Z`;
-  ręcznie uruchomione zadanie w MR → tag `X.Y.Z.dev<IID>`.
+- **Publikacja obrazu**: obraz **zawsze** dostaje tag z wersją, bo manifest wdrożenia przypina
+  konkretny tag — sam `latest` nie pozwala ani wdrożyć powtarzalnie, ani wrócić do poprzedniego
+  wydania. Push do gałęzi domyślnej → `X.Y.Z` + ruchomy `latest`; tag `X.Y.Z` → `X.Y.Z`;
+  ręcznie uruchomione zadanie w MR → `X.Y.Z.dev<IID>`, więc build przedwydaniowy nigdy nie
+  nadpisze obrazu wydania. Pozostałe gałęzie (w tym `dev`) nie publikują niczego.
 - **Progi pokrycia**: `COV_FAIL_UNDER=70` dla całości i `DIFF_FAIL_UNDER=80` dla linii zmienionych
   w MR.
 

@@ -36,7 +36,4 @@ dotnet run --project src/Saga.Cli -- plik.docx --output wynik
 
 # Konwersja wsadowa całego katalogu (domyślnie *.docx, bez rekursji)
 dotnet run --project src/Saga.Cli -- katalog-z-ustawami --output katalog-xml
-
-# Inny wzorzec plików (np. PDF albo TXT)
-dotnet run --project src/Saga.Cli -- katalog --pattern "*.pdf" --output katalog-xml
 ```
