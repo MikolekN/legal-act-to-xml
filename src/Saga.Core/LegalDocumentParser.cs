@@ -101,6 +101,9 @@ namespace Saga.Core
 		internal static LegalDocument ParseBlocks(IReadOnlyList<DocumentBlock> blocks, ParseOptions? options = null)
 		{
 			var document = new LegalDocument();
+
+			JournalHeaderParser.Apply(blocks, document);
+
 			var subchapter = GetDefaultSubchapter(document);
 
 			var context = new ParsingContext(document, subchapter);

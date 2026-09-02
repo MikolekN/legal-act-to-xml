@@ -218,12 +218,21 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 | `StyleId` | Identyfikator stylu Word — tylko DOCX; `null` dla PDF/TXT |
 | `Layout` | Opcjonalne metadane układu (`BlockLayoutInfo` — wcięcia, pogrubienie, kursywa) — z DOCX/PDF |
 | `Source` | Położenie w źródle (`BlockSourceLocation`) — diagnostyka |
-| `Role` | `BlockRole` (`Body`, `FootnoteText`, …) — bloki przypisów są filtrowane przez orkiestrator |
+| `Role` | `BlockRole` (`Body`, `FootnoteText`, `JournalHeader`, …) — bloki spoza głównego biegu treści są filtrowane przez orkiestrator i klasyfikator |
 | `IsEmpty` | `true` gdy `Text` jest pusty/białe znaki |
 
 `PdfBlockReader` (PdfPig) składa bloki z geometrii linii tekstu (`PdfLineExtractor`, `BlockAssembler`,
 `PageArtifactFilter`) — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
 warstwie syntaktycznej (regex) i układzie (wcięcia).
+
+`DocxBlockReader` czyta — poza treścią — także nagłówki stron i emituje je jako bloki
+`BlockRole.JournalHeader` bez `BlockIndex`. Emituje **wszystkie** części kandydujące, w kolejności
+pierwszeństwa: najpierw podpięte jako `First` (Word zakłada osobny nagłówek pierwszej strony tylko
+przy włączonej „innej stronie tytułowej"), potem `Default`. Adapter nie rozstrzyga, która część
+„jest tą właściwą" — to należy do `JournalHeaderParser`, który bierze pierwsze dopasowanie każdej
+wartości; dzięki temu winieta wygrywa z żywą paginą, a część pusta po prostu nic nie wnosi.
+To jedyny kanał, którym metadane publikatora aktu ogłoszonego docierają do potoku; awaria odczytu
+jest łapana i sprowadzana do pustej listy — treść aktu czyta się dalej.
 
 ### 5.2 Rdzeń budowy modelu (`LegalDocumentParser.ParseBlocks`, `internal`)
 
@@ -233,6 +242,7 @@ Niezależny od formatu źródłowego — działa wyłącznie na `IReadOnlyList<D
 ParseBlocks(blocks)
     │
     ├── Tworzy LegalDocument z domyślną hierarchią systematyzującą
+    ├── JournalHeaderParser.Apply(blocks, document) — metadane publikatora z bloków JournalHeader
     ├── Tworzy ParsingContext (stan parsowania)
     ├── Tworzy ParserOrchestrator() — domyślny ParagraphClassifier
     ├── Iteruje po blocks (pomijając elementy null)
@@ -252,8 +262,9 @@ Jednoprzebiegowy pipeline ze stanem. Dla każdego bloku:
 
 ```
 1. Jeśli block.IsEmpty → pomiń
-2. Jeśli block.Role == FootnoteText → pomiń (przypisy nie są treścią jednostek redakcyjnych;
-   klasyfikator dokumentu czyta je osobno z pełnej listy bloków)
+2. Jeśli block.Role == FootnoteText albo JournalHeader → pomiń (przypisy ani nagłówek strony nie są
+   treścią jednostek redakcyjnych; czytają je osobni konsumenci z pełnej listy bloków —
+   klasyfikator dokumentu i JournalHeaderParser)
 3. Sanityzacja tekstu (block.Text.Sanitize().Trim()) i odczyt StyleId (block.StyleId)
 4. Budowanie NumberingHint (oczekiwana numeracja na bieżącym poziomie)
 5. Klasyfikacja (ParagraphClassifier.Classify) → ClassificationResult (Kind, Confidence,
@@ -318,6 +329,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`StructureProcessor`** (`internal sealed`) | Przetwarzanie struktury — buduje encje na podstawie `ClassificationResult`. Obsługuje mapowanie `Kind` na typ buildera (w tym jednostki systematyzacyjne przez `SystematizingUnitBuilder`), tworzenie implicit encji, obsługę `WrapUp`, wnioskowanie `Unknown` (tekst / metadane strefy tytułowej), aktualizację `CurrentStructuralReference` i wykrywanie celów nowelizacji (`DetectAmendmentTargets`). |
 | **`SystematizingUnitBuilder`** (w `Builders/`) | Buduje jednostki systematyzacyjne (Część→Księga→Tytuł→Dział→Rozdział→Oddział, § 60-62 ZTP) i utrzymuje bieżącą ścieżkę w `ParsingContext`. |
 | **`DocumentMetadataCollector`** | Zbiera metadane aktu (rodzaj, organ, data, przedmiot) ze strefy tytułowej (§ 16-19, § 102, § 120 ZTP); karmiony akapitami `Unknown` sprzed pierwszego artykułu; `ApplyTo(document)` zapisuje `Title`/`ActDate` przy finalizacji. |
+| **`JournalHeaderParser`** | Czyta metadane publikatora (dziennik, data ogłoszenia, pozycja) z bloków `BlockRole.JournalHeader`; przebieg wstępny w `ParseBlocks`, przed pętlą bloków. Wymaga rozpoznanego publikatora i co najmniej jednej z wartości data/pozycja — nierozpoznany nagłówek daje brak metadanych, nigdy wyjątek ([ADR-0012](adr/0012-naglowek-strony-jako-rola-bloku.md)). |
 | **`AmendmentStateManager`** | Zarządzanie cyklem życia nowelizacji — `UpdateState()`, `Collect()`, `Flush()`, `DetectTrigger()`. Wyodrębniony z orkiestratora dla lepszej separacji concerns. |
 | **`QuoteBalanceTracker`** | Bilans cudzysłowów dla nowelizacji bez stylów `Z/*` (§ 94 ZTP) — wyznacza koniec cytowanej treści przez parzystość cudzysłowów, gdy brak sygnału stylowego. |
 | **`AmendmentCommandParser`** | Rozpoznaje rodzaj komendy nowelizacyjnej z treści (`AmendmentCommandKind`: Change/Add/Repeal/ReplaceWords) — źródło niższego priorytetu niż mapa stylów. |
@@ -744,7 +756,7 @@ src/Saga.Core/
 │   ├── DocumentBlockReaderFactory.cs  # Format → IDocumentBlockReader
 │   ├── IDocumentBlockReader.cs      # Kontrakt adaptera formatu
 │   ├── DocumentBlock.cs             # Format-agnostyczny odpowiednik akapitu (Text/StyleId/Layout/Source/Role)
-│   ├── BlockRole.cs                 # Enum: Body/FootnoteText/...
+│   ├── BlockRole.cs                 # Enum: Body/FootnoteText/JournalHeader/…
 │   ├── BlockLayoutInfo.cs           # Metadane układu (wcięcia, pogrubienie, kursywa)
 │   ├── BlockSourceLocation.cs       # Położenie bloku w źródle (diagnostyka)
 │   ├── BlockAlignment.cs / BlockAssembler.cs  # Składanie bloków z linii (PDF)
@@ -782,6 +794,7 @@ src/Saga.Core/
     │   ├── QuoteBalanceTracker.cs   # Bilans cudzysłowów dla nowelizacji bez stylów (§ 94 ZTP)
     │   ├── AmendmentCommandParser.cs  # Rozpoznanie rodzaju komendy nowelizacyjnej z treści
     │   ├── DocumentMetadataCollector.cs  # Zbiera rodzaj/datę/przedmiot aktu ze strefy tytułowej
+    │   ├── JournalHeaderParser.cs    # Metadane publikatora z nagłówka strony (akty ogłoszone)
     │   ├── ParsingContext.cs        # Stan parsowania (mutowalny)
     │   ├── ParsingFactories.cs      # Fabryki: numery, prefiksy, zdania
     │   ├── AmendmentCollector.cs    # Bufor akapitów nowelizacji
@@ -824,11 +837,12 @@ src/Saga.Core/
        │
        ├── [jeśli budowa modelu] ParseBlocks(blocks):
        │     │
+       │     ├── JournalHeaderParser.Apply() — publikator i data ogłoszenia z bloków JournalHeader
        │     ├── Iteracja po DocumentBlock[]
        │     │     │
        │     │     ▼
        │     │   ParserOrchestrator.ProcessBlock(block, context)
-       │     │     ├── block.IsEmpty / block.Role == FootnoteText → pomiń
+       │     │     ├── block.IsEmpty / block.Role == FootnoteText | JournalHeader → pomiń
        │     │     ├── StringExtensions.Sanitize() — normalizacja tekstu
        │     │     ├── BuildNumberingHint() — oczekiwana numeracja na bieżącym poziomie
        │     │     ├── ParagraphClassifier.Classify() → ClassificationResult

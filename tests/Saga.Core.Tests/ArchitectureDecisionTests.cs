@@ -331,15 +331,21 @@ namespace Saga.Core.Tests
 			};
 
 			using var stream = new MemoryStream(new UTF8Encoding(false).GetBytes(string.Join("\n", lines)));
-			var parsed = LegalDocumentParser.Parse(stream, "ustawa.txt",
+
+			// Data ogłoszenia przychodzi nagłówkiem publikatora — bez niej formuła
+			// „po upływie 14 dni" nie dałaby żadnej daty i niezmiennik byłby pusty.
+			var blocks = new List<DocumentBlock>
+			{
+				new() { Text = "DZIENNIK USTAW", Role = BlockRole.JournalHeader },
+				new() { Text = "Warszawa, dnia 29 marca 2026 r.", Role = BlockRole.JournalHeader },
+			};
+			blocks.AddRange(new PlainTextBlockReader().ReadBlocks(stream));
+
+			var document = LegalDocumentParser.Parse(blocks,
 				new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document;
 
-			Assert.NotNull(parsed);
-
-			// TYMCZASOWE: parser nie odczytuje jeszcze daty ogłoszenia z dokumentu, a bez niej
-			// formuła „po upływie 14 dni" nie da żadnej daty i niezmiennik byłby pusty.
-			// Szczegóły i warunek usunięcia: AnnouncementDateScaffold.
-			var document = parsed!.AsAnnouncedOn(new DateTime(2026, 3, 29));
+			Assert.NotNull(document);
+			Assert.Equal(new DateTime(2026, 3, 29), document!.AnnouncementDate);
 			var info = document.EntryIntoForce!;
 
 			var allowed = new HashSet<DateTime> { default };
@@ -355,6 +361,75 @@ namespace Saga.Core.Tests
 				if (unit is IHasTextSegments holder)
 					Assert.All(holder.TextSegments, s => Assert.Contains(s.EffectiveDate, allowed));
 			}
+		}
+
+		// ============================================================
+		// ADR-0012 — nagłówek strony jedzie potokiem jako rola bloku IR
+		// ============================================================
+
+		[Fact]
+		public void Adr0012_PageHeaderText_NeverBecomesActContent()
+		{
+			// Nagłówek jedzie TĄ SAMĄ listą bloków co treść, więc jedyną zaporą przed wciągnięciem
+			// go do modelu jest filtr roli w ParserOrchestrator. Gdyby zniknął, tekst nagłówka
+			// zostałby sklasyfikowany tekstowo i dopisał do aktu jednostkę, której w nim nie ma.
+			var docx = DocxFixtures.WithFirstPageHeader(
+				new[] { "DZIENNIK USTAW", "Art. 999. Przepis z nagłówka.", "Poz. 26" },
+				"USTAWA",
+				"z dnia 5 marca 2025 r.",
+				"o rzeczach różnych",
+				"Art. 1. Przepis pierwszy.");
+
+			using var stream = new MemoryStream(docx);
+			var document = LegalDocumentParser.Parse(stream, "ustawa.docx",
+				new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document;
+
+			Assert.NotNull(document);
+			var article = Assert.Single(document!.Articles);
+			Assert.StartsWith("Art. 1.", article.ContentText);
+			Assert.StartsWith("USTAWA", document.Title);
+
+			// Rola „pomijany przez parser" nie znaczy „zignorowany": metadane publikatora
+			// z tego samego nagłówka SĄ odczytane — to cały sens wpuszczenia go do potoku.
+			Assert.Equal(new[] { 26 }, document.SourceJournal.Positions);
+		}
+
+		[Fact]
+		public void Adr0012_PageHeaderText_DoesNotInfluenceClassification()
+		{
+			// Wabik: „w sprawie ogłoszenia jednolitego tekstu" to definitywny sygnał TJ (§ 102).
+			// Umieszczony w NAGŁÓWKU nie może przestawić rozpoznania rodzaju aktu — inaczej
+			// strefa tytułowa klasyfikatora czytałaby metadane strony jak treść aktu.
+			string[] body =
+			{
+				"USTAWA",
+				"z dnia 5 marca 2025 r.",
+				"o rzeczach różnych",
+				"Art. 1. Przepis pierwszy.",
+				"Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.",
+			};
+
+			var plain = Classify(DocxFixtures.WithoutHeader(body));
+			var withHeader = Classify(DocxFixtures.WithFirstPageHeader(
+				new[] { "DZIENNIK USTAW", "w sprawie ogłoszenia jednolitego tekstu ustawy", "Poz. 26" },
+				body));
+
+			Assert.Equal(plain.ActType, withHeader.ActType);
+			Assert.Equal(plain.IsConsolidatedText, withHeader.IsConsolidatedText);
+			Assert.Equal(plain.Confidence, withHeader.Confidence);
+
+			// Także numeracja bloków w sygnałach: nagłówek nie przesuwa niczego, na czym
+			// opierają się goldeny i diagnostyka.
+			Assert.Equal(
+				plain.Signals.Select(s => (s.Kind, s.BlockIndex)),
+				withHeader.Signals.Select(s => (s.Kind, s.BlockIndex)));
+		}
+
+		private static DocumentClassificationResult Classify(byte[] docx)
+		{
+			using var stream = new MemoryStream(docx);
+			return LegalDocumentParser.Parse(stream, "ustawa.docx",
+				new ParseOptions { Policy = ParsePolicy.ClassifyOnly }).Classification;
 		}
 
 		/// <summary>

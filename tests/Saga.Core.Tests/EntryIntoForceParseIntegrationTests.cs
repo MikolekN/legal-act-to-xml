@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using Saga.Core;
+using Saga.Core.Ingest;
 using Saga.Model;
 using Saga.Model.EntryIntoForce;
 using Xunit;
@@ -10,26 +13,47 @@ using Xunit;
 namespace Saga.Core.Tests
 {
 	/// <summary>
-	/// Pełny przebieg: strumień TXT → parser → klauzula wejścia w życie zapisana w modelu.
-	/// Kanał TXT omija fixture'y DOCX, a mimo to przechodzi przez cały potok łącznie z
+	/// Pełny przebieg: bloki → parser → klauzula wejścia w życie zapisana w modelu.
+	/// Treść aktu wchodzi kanałem TXT (omija fixture'y DOCX), a data ogłoszenia — nagłówkiem
+	/// publikatora, czyli blokami <c>BlockRole.PageHeader</c>. Cały potok, łącznie z
 	/// <c>ParserOrchestrator.Finalize</c>, gdzie uruchamiany jest przebieg klauzuli.
 	/// </summary>
 	public class EntryIntoForceParseIntegrationTests
 	{
+		/// <summary>
+		/// Parsuje tekst aktu, opcjonalnie poprzedzony nagłówkiem publikatora niosącym datę
+		/// ogłoszenia. Nagłówek wchodzi tą samą drogą co w pliku DOCX — jako bloki
+		/// <see cref="BlockRole.JournalHeader"/> — więc data jest tu ODCZYTYWANA przez produkcyjny
+		/// <c>JournalHeaderParser</c>, a nie podstawiana obok potoku.
+		/// </summary>
 		private static LegalDocument Parse(string text, DateTime? announcementDate = null)
 		{
 			using var stream = new MemoryStream(new UTF8Encoding(false).GetBytes(text));
-			var result = LegalDocumentParser.Parse(stream, "ustawa.txt", new ParseOptions
+
+			var blocks = new List<DocumentBlock>();
+			if (announcementDate is { } announced)
+				blocks.AddRange(JournalHeader(announced));
+			blocks.AddRange(new PlainTextBlockReader().ReadBlocks(stream));
+
+			var result = LegalDocumentParser.Parse(blocks, new ParseOptions
 			{
 				Policy = ParsePolicy.AlwaysParse,
 			});
 
 			Assert.NotNull(result.Document);
+			return result.Document!;
+		}
 
-			// TYMCZASOWE: parser nie odczytuje jeszcze daty ogłoszenia z dokumentu, więc formuły
-			// względne nie mają punktu odniesienia. Szczegóły i warunek usunięcia:
-			// AnnouncementDateScaffold.
-			return result.Document!.AsAnnouncedOn(announcementDate);
+		/// <summary>Nagłówek Dz.U. w formie, w jakiej niesie go akt ogłoszony.</summary>
+		private static IEnumerable<DocumentBlock> JournalHeader(DateTime announcementDate)
+		{
+			// Nazwa miesiąca z kultury pl-PL (dopełniacz przy formacie z dniem) — żeby nie
+			// zakładać w teście drugiego słownika miesięcy obok PolishDates.
+			var date = announcementDate.ToString("d MMMM yyyy", CultureInfo.GetCultureInfo("pl-PL"));
+
+			yield return new DocumentBlock { Text = "DZIENNIK USTAW", Role = BlockRole.JournalHeader };
+			yield return new DocumentBlock { Text = $"Warszawa, dnia {date} r.", Role = BlockRole.JournalHeader };
+			yield return new DocumentBlock { Text = "Poz. 1", Role = BlockRole.JournalHeader };
 		}
 
 		private const string Header = """

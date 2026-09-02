@@ -46,11 +46,10 @@ namespace Saga.Core.Services.Parsing
 			if (block.IsEmpty)
 				return;
 
-			// Kontrakt adapterów (PdfBlockReader): bloki przypisów NIE są treścią jednostek
-			// redakcyjnych — bez tego filtra przypis „1) Niniejsza ustawa…" z dołu strony PDF
-			// zostałby sklasyfikowany tekstowo jako punkt 1) i przeinaczył treść aktu.
-			// Klasyfikator dokumentu czyta je osobno (sygnały TJ) — z pełnej listy bloków.
-			if (block.Role == BlockRole.FootnoteText)
+			// Kontrakt adapterów: bloki spoza głównego biegu treści NIE są treścią jednostek
+			// redakcyjnych. Czytają je osobni konsumenci, z pełnej listy bloków:
+            // klasyfikator dokumentu (sygnały TJ) oraz JournalHeaderParser (metadane publikatora).
+			if (block.Role is BlockRole.FootnoteText or BlockRole.JournalHeader)
 				return;
 
 			var text    = block.Text.Sanitize().Trim();

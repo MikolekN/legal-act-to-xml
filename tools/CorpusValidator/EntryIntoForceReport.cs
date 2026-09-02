@@ -9,8 +9,9 @@ namespace CorpusValidator;
 /// się rozpoznać. Służy PĘTLI ZWROTNEJ — każdy wiersz „brak klauzuli" albo z formułą
 /// <c>Unrecognized</c> jest kandydatem na nowy przypadek testowy, a nie sygnałem awarii.
 ///
-/// Data ogłoszenia nie jest znana dla szczotek RCL (to metadana Dz.U., powstająca po ich wytworzeniu),
-/// więc bez argumentu <paramref name="announcementDate"/> daty względne pozostają nierozstrzygnięte
+/// Data ogłoszenia jest odczytywana z nagłówka publikatora, ale szczotki RCL go nie mają (to metadana
+/// Dz.U., powstająca po ich wytworzeniu), więc bez argumentu <paramref name="announcementDate"/>
+/// daty względne pozostają dla nich nierozstrzygnięte
 /// i raport mierzy wyłącznie DETEKCJĘ i ROZPOZNANIE FORMUŁY. Data podana z wiersza poleceń jest
 /// SYNTETYCZNA — służy tylko temu, żeby formuły względne się rozstrzygnęły i dało się zmierzyć
 /// rozsyłanie dat po drzewie; nie twierdzi nic o rzeczywistej dacie ogłoszenia aktu.
@@ -65,9 +66,9 @@ internal static class EntryIntoForceReport
 					Policy = ParsePolicy.AlwaysParse,
 				});
 
-				// TYMCZASOWE OBEJŚCIE braku parsowania daty ogłoszenia — patrz AnnouncementDateScaffold.
+				// Uzupełnienie dla dokumentów bez nagłówka publikatora — patrz SyntheticAnnouncementDate.
 				if (result.Document is { } built)
-					AnnouncementDateScaffold.Reapply(built, announcementDate);
+					SyntheticAnnouncementDate.ApplyIfMissing(built, announcementDate);
 
 				var info = result.Document?.EntryIntoForce;
 				if (info is null)
@@ -159,7 +160,7 @@ internal static class EntryIntoForceReport
 
 		W("--- Rozsyłanie dat po drzewie ---");
 		W(announcementDate is { } given
-			? $"Data ogłoszenia (syntetyczna, z wiersza poleceń): {given:yyyy-MM-dd}"
+			? $"Data ogłoszenia (syntetyczna, z wiersza poleceń; tylko dla dokumentów bez nagłówka): {given:yyyy-MM-dd}"
 			: "Bez daty ogłoszenia — formuły względne nierozstrzygnięte, więc niskie liczby są POPRAWNE.");
 		W($"Jednostek ogółem:               {totals.Units,7}");
 		W($"  z datą:                       {totals.UnitsDated,7}   ({Percent(totals.UnitsDated, totals.Units)})");

@@ -7,6 +7,7 @@ using DocumentFormat.OpenXml.Packaging;
 using Word = DocumentFormat.OpenXml.Wordprocessing;
 using Saga.Core.Exceptions;
 using Saga.Core.Helpers;
+using Serilog;
 
 #nullable enable
 
@@ -89,6 +90,9 @@ namespace Saga.Core.Ingest
 				throw new ParsingException("MainDocumentPart dokumentu jest null - plik moze byc uszkodzony lub pusty.");
 
 			var blocks = new List<DocumentBlock>();
+
+			blocks.AddRange(ReadPageHeaderBlocks(mainPart));
+
 			var index = 0;
 			foreach (var paragraph in mainPart.Document.Descendants<Word.Paragraph>())
 			{
@@ -96,6 +100,68 @@ namespace Saga.Core.Ingest
 			}
 
 			return blocks;
+		}
+
+		/// <summary>
+		/// Bloki nagłówka strony tytułowej — nośnik metadanych publikatora aktu ogłoszonego
+		/// („DZIENNIK USTAW / Warszawa, dnia … / Poz. …").
+		/// </summary>
+		private static IReadOnlyList<DocumentBlock> ReadPageHeaderBlocks(MainDocumentPart mainPart)
+		{
+			try
+			{
+				return FindPageHeaderCandidates(mainPart)
+					.SelectMany(header => header.Descendants<Word.Paragraph>())
+					.Select(paragraph => ToBlock(paragraph, blockIndex: null) with { Role = BlockRole.JournalHeader })
+					.Where(block => !block.IsEmpty)
+					.ToList();
+			}
+			catch (Exception ex)
+			{
+				Log.Warning(ex, "Nie udało się odczytać nagłówka strony — metadane publikatora pominięte.");
+				return Array.Empty<DocumentBlock>();
+			}
+		}
+
+		/// <summary>Kandydujące nagłówki.</summary>
+		private static IEnumerable<Word.Header> FindPageHeaderCandidates(MainDocumentPart mainPart)
+		{
+			var body = mainPart.Document.Body;
+			if (body is null)
+				yield break;
+
+			var firstPage = new List<Word.Header>();
+			var fallback  = new List<Word.Header>();
+
+			foreach (var section in body.Descendants<Word.SectionProperties>())
+			{
+				foreach (var reference in section.Elements<Word.HeaderReference>())
+				{
+					var header = ResolveHeader(mainPart, reference);
+					if (header is null)
+						continue;
+
+					var type = reference.Type;
+					if (type is { HasValue: true } && type.Value == Word.HeaderFooterValues.First)
+						firstPage.Add(header);
+					else if (type is null || !type.HasValue || type.Value == Word.HeaderFooterValues.Default)
+						fallback.Add(header);
+				}
+			}
+
+			foreach (var header in firstPage) yield return header;
+			foreach (var header in fallback)  yield return header;
+		}
+
+		private static Word.Header? ResolveHeader(MainDocumentPart mainPart, Word.HeaderReference reference)
+		{
+			var id = reference.Id?.Value;
+			if (string.IsNullOrEmpty(id))
+				return null;
+
+			return mainPart.TryGetPartById(id, out var part) && part is HeaderPart headerPart
+				? headerPart.Header
+				: null;
 		}
 
 		/// <summary>

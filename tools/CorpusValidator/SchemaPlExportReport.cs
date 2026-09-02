@@ -61,8 +61,8 @@ internal static class SchemaPlExportReport
 					continue;
 				}
 
-				// TYMCZASOWE OBEJŚCIE braku parsowania daty ogłoszenia — patrz AnnouncementDateScaffold.
-				AnnouncementDateScaffold.Reapply(document, announcementDate);
+				// Uzupełnienie dla dokumentów bez nagłówka publikatora — patrz SyntheticAnnouncementDate.
+				SyntheticAnnouncementDate.ApplyIfMissing(document, announcementDate);
 
 				var xml = LegalDocumentConverter.Convert(document);
 				xml.Save(Path.Combine(outputDirectory, Path.ChangeExtension(name, ".xml")));
@@ -90,8 +90,8 @@ internal static class SchemaPlExportReport
 		Console.WriteLine("================================================================");
 		Console.WriteLine($"Korpus: {corpusRoot}   →   {outputDirectory}");
 		Console.WriteLine(announcementDate is { } given
-			? $"Data ogłoszenia (syntetyczna): {given:yyyy-MM-dd}"
-			: "Bez daty ogłoszenia — formuły względne nierozstrzygnięte (patrz docs/backlog.md § 3b).");
+			? $"Data ogłoszenia (syntetyczna; tylko dla dokumentów bez nagłówka): {given:yyyy-MM-dd}"
+			: "Bez daty ogłoszenia — dla dokumentów bez nagłówka publikatora formuły względne zostają nierozstrzygnięte.");
 		Console.WriteLine();
 		Console.WriteLine($"1. Konwersja udana:              {converted,6} / {files.Count}   błędów: {conversionErrors}");
 		Console.WriteLine($"2. Elementów z datą:             {datedTotal,6}");
