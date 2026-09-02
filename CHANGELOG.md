@@ -5,6 +5,10 @@ Wszystkie istotne zmiany w tym projekcie będą dokumentowane w tym pliku.
 Format oparty jest na Keep a Changelog,
 a wersjonowanie zgodne z Semantic Versioning.
 
+## [1.0.3] - 2026-09-02
+### Dodano
+- Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.
+
 ## [1.0.2] - 2026-08-27
 
 Zmiany od wydania 1.0.1, pogrupowane funkcjami.

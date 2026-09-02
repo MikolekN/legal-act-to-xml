@@ -1,4 +1,5 @@
 using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
 using Word = DocumentFormat.OpenXml.Wordprocessing;
 
 namespace Saga.Core.Tests
@@ -85,7 +86,7 @@ namespace Saga.Core.Tests
         private static byte[] Build(IReadOnlyList<HeaderSpec> headers, string[] bodyLines)
         {
             using var stream = new MemoryStream();
-            using (var document = DocumentFormat.OpenXml.Packaging.WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            using (var document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
                 var main = document.AddMainDocumentPart();
                 var body = new Word.Body(bodyLines.Select(TextParagraph).ToArray<OpenXmlElement>());
@@ -96,7 +97,7 @@ namespace Saga.Core.Tests
 
                     foreach (var spec in headers)
                     {
-                        var headerPart = main.AddNewPart<DocumentFormat.OpenXml.Packaging.HeaderPart>();
+                        var headerPart = main.AddNewPart<HeaderPart>();
                         headerPart.Header = new Word.Header(spec.Lines
                             .Select(line => spec.IsRawXml ? new Word.Paragraph(line) : TextParagraph(line))
                             .ToArray<OpenXmlElement>());
