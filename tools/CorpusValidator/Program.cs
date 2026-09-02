@@ -21,9 +21,9 @@ using Saga.Core.Services.Classify.Document;
 // (documents/ ma układ <root>/<rok>, nie <root>/<rok>/<KATEGORIA> jak walidacja klasyfikatora):
 //   dotnet run --project tools/CorpusValidator -- --entry-into-force <root> [<raport.txt>]
 // Zrzut kanonicznego modelu pojedynczego pliku — do oglądania, co parser faktycznie zbudował
-// (łącznie z treścią nowelizacji, której nie widać w raporcie korpusowym). Data ogłoszenia jest
-// opcjonalna, ale BEZ NIEJ formuły względne („po upływie 14 dni od dnia ogłoszenia") pozostają
-// nierozstrzygnięte i cały zrzut wychodzi bez dat:
+// (łącznie z treścią nowelizacji, której nie widać w raporcie korpusowym). Datę ogłoszenia parser
+// bierze z nagłówka publikatora; argument uzupełnia ją tylko dla dokumentów, które nagłówka nie
+// mają (szczotki RCL) — bez niej formuły względne zostają nierozstrzygnięte i zrzut wychodzi bez dat:
 //   dotnet run --project tools/CorpusValidator -- --dump <plik.docx> <wyjscie.xml> [<rrrr-MM-dd>]
 if (args.Length > 2 && args[0] == "--dump")
 {
@@ -36,8 +36,8 @@ if (args.Length > 2 && args[0] == "--dump")
         return 1;
     }
 
-    // TYMCZASOWE OBEJŚCIE braku parsowania daty ogłoszenia — patrz AnnouncementDateScaffold.
-    CorpusValidator.AnnouncementDateScaffold.Reapply(dumped.Document, ParseDate(args, 3));
+    // Awaryjna data dla dokumentów bez nagłówka publikatora — patrz SyntheticAnnouncementDate.
+    CorpusValidator.SyntheticAnnouncementDate.ApplyIfMissing(dumped.Document, ParseDate(args, 3));
 
     System.IO.File.WriteAllText(args[2],
         Saga.Core.Services.Converters.CanonicalDtoXmlSerializer.Serialize(dumped.Document));
@@ -60,8 +60,8 @@ if (args.Length > 2 && args[0] == "--xml")
         return 1;
     }
 
-    // TYMCZASOWE OBEJŚCIE braku parsowania daty ogłoszenia — patrz AnnouncementDateScaffold.
-    CorpusValidator.AnnouncementDateScaffold.Reapply(converted.Document, ParseDate(args, 3));
+    // Awaryjna data dla dokumentów bez nagłówka publikatora — patrz SyntheticAnnouncementDate.
+    CorpusValidator.SyntheticAnnouncementDate.ApplyIfMissing(converted.Document, ParseDate(args, 3));
 
     Saga.Core.Services.LegalDocumentConverter.Convert(converted.Document).Save(args[2]);
     Console.Error.WriteLine($"Eksport schemaPL: {args[2]}");

@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Saga.Core.Ingest;
@@ -317,6 +320,66 @@ namespace Saga.Core.Tests
 				@"<w:r><w:rPr><w:sz w:val=""-24""/></w:rPr><w:t>Treść.</w:t></w:r>");
 
 			Assert.Null(ToBlock(paragraph).Layout?.FontSizeHalfPoints);
+		}
+
+		// ============================================================
+		// Nagłówek strony — osobna część pakietu (metadane publikatora)
+		// ============================================================
+
+		private static IReadOnlyList<DocumentBlock> ReadPackage(byte[] docx)
+		{
+			using var stream = new MemoryStream(docx);
+			return new DocxBlockReader().ReadBlocks(stream);
+		}
+
+		[Fact]
+		public void ReadBlocks_FirstPageHeader_EmittedWithPageHeaderRole()
+		{
+			var blocks = ReadPackage(DocxFixtures.WithFirstPageHeader(
+				new[] { "DZIENNIK USTAW", "Poz. 26" }, "Art. 1. Treść."));
+
+			var header = blocks.Where(b => b.Role == BlockRole.JournalHeader).ToList();
+
+			Assert.Equal(new[] { "DZIENNIK USTAW", "Poz. 26" }, header.Select(b => b.Text));
+		}
+
+		[Fact]
+		public void ReadBlocks_HeaderPrecedesBody_ButBodyIndexingIsUnchanged()
+		{
+			var blocks = ReadPackage(DocxFixtures.WithFirstPageHeader(
+				new[] { "DZIENNIK USTAW" }, "Art. 1. Treść.", "Art. 2. Treść."));
+
+			// Nagłówek idzie przed treścią, bo tak leży na stronie…
+			Assert.Equal(BlockRole.JournalHeader, blocks[0].Role);
+			Assert.All(blocks.Where(b => b.Role == BlockRole.JournalHeader),
+				b => Assert.Null(b.Source.BlockIndex));
+
+			// …ale numeracja bloków treści zaczyna się od zera tak samo jak w dokumencie bez
+			// nagłówka. Bez tego każdy DocumentSignal.BlockIndex i każdy golden przesunąłby się
+			// o długość nagłówka.
+			var body = blocks.Where(b => b.Role == BlockRole.Body).ToList();
+			Assert.Equal(new int?[] { 0, 1 }, body.Select(b => b.Source.BlockIndex));
+		}
+
+		[Fact]
+		public void ReadBlocks_WithoutHeaderPart_ProducesOnlyBodyBlocks()
+		{
+			// Projekt ustawy / akt nieogłoszony — brak części nagłówkowej jest normalnym stanem.
+			var blocks = ReadPackage(DocxFixtures.WithoutHeader("Art. 1. Treść."));
+
+			Assert.All(blocks, b => Assert.Equal(BlockRole.Body, b.Role));
+			Assert.Equal(0, blocks[0].Source.BlockIndex);
+		}
+
+		[Fact]
+		public void ReadBlocks_EmptyHeaderParagraphs_Skipped()
+		{
+			var blocks = ReadPackage(DocxFixtures.WithFirstPageHeader(
+				new[] { "", "   ", "DZIENNIK USTAW" }, "Art. 1. Treść."));
+
+			var header = blocks.Where(b => b.Role == BlockRole.JournalHeader).ToList();
+
+			Assert.Equal("DZIENNIK USTAW", Assert.Single(header).Text);
 		}
 	}
 }

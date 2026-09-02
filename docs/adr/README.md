@@ -30,5 +30,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0009](0009-jedno-zrodlo-liczebnikow-polskich.md) | Słownik polskich liczebników. Generuje także fragment regexa do ich wyszukiwania | - | 2026-07-29 |
 | [0010](0010-jeden-kursor-sciezki-jednostek.md) | Kursor ścieżki jednostek | - | 2026-07-30 |
 | [0011](0011-data-ogolna-rozsylana-po-calym-drzewie.md) | Data reguły ogólnej wejścia w życie trafia na wszystkie jednostki. Brak daty znaczy nierozstrzygnięty wyjątek | - | 2026-07-31 |
+| [0012](0012-naglowek-strony-jako-rola-bloku.md) | Nagłówek aktu | - | 2026-08-28 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.
