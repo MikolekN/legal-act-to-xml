@@ -375,6 +375,9 @@ namespace Saga.Core.Services.Classify.Document
                 if (block is null || block.IsEmpty)
                     continue;
 
+                if (block.Role == BlockRole.JournalHeader)
+					continue;
+
                 var text = block.Text.Sanitize().Trim();
                 if (text.Length == 0)
                     continue;

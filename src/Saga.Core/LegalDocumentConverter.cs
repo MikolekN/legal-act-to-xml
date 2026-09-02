@@ -74,10 +74,10 @@ namespace Saga.Core.Services
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.PreviousTitlesElement, "xs:string"));
 
-            // if (document.AnnouncementDate == null)
-            //     metaElement.Add(Element(XmlConverterConstants.Metadata.AnnouncementDateElement, ""));
-            // else
-            //     metaElement.Add(Element(XmlConverterConstants.Metadata.AnnouncementDateElement, document.AnnouncementDate.Value.ToString("yyyy-MM-dd")));
+            if (document.AnnouncementDate == null)
+                metaElement.Add(Element(XmlConverterConstants.Metadata.AnnouncementDateElement, ""));
+            else
+                metaElement.Add(Element(XmlConverterConstants.Metadata.AnnouncementDateElement, document.AnnouncementDate.Value.ToString("yyyy-MM-dd")));
 
             var dateElement = Element(XmlConverterConstants.Metadata.Date.Element);
             // dateElement.Add(Element(XmlConverterConstants.Metadata.Date.Project, ""));

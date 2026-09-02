@@ -41,7 +41,7 @@ ich wziąć.
 
 | Luka | Stan |
 |---|---|
-| **Metadane aktu** | `LegalDocument` ma `Title`, `ActDate`, `SourceJournal`, `Classification`. Brak: **ELI URI**, **organu wydającego**, **sygnatury**, **daty ogłoszenia** (osobnej od daty aktu). |
+| **Metadane aktu** | `LegalDocument` ma `Title`, `ActDate`, `AnnouncementDate`, `SourceJournal` (dziennik/rok/pozycja — z nagłówka publikatora, [ADR-0012](adr/0012-naglowek-strony-jako-rola-bloku.md)), `Classification`. Brak: **ELI URI**, **organu wydającego**, **sygnatury**. |
 | **`ContentText` jako płaski string** | Tabele, grafiki i wzory matematyczne są spłaszczane do tekstu (TODO w `BaseEntity`). Dotyczy też `cytat-strukt` inline poza kontekstem nowelizacji — w samej nowelizacji strukturę trzyma `Amendment`/`AmendmentContent`. |
 | **Brak encji preambuły** | Ani `Preamble`, ani odpowiednika `preambula` — element obecny i w EAP, i w AKN. |
 | **Brak modelu odnośników (przypisów)** | Istnieje tylko sygnał klasyfikacyjny `FootnoteDensity`; same odnośniki (§ 106 pkt 2–5, § 163 ZTP) nie mają reprezentacji, choć w tekstach jednolitych niosą treść normatywną. |
