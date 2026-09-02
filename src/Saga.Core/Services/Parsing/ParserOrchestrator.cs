@@ -46,10 +46,10 @@ namespace Saga.Core.Services.Parsing
             if (block.IsEmpty)
                 return;
 
-           // Kontrakt adapterów: bloki spoza głównego biegu treści NIE są treścią jednostek
-			// redakcyjnych. Czytają je osobni konsumenci, z pełnej listy bloków:
+            // Kontrakt adapterów: bloki spoza głównego biegu treści NIE są treścią jednostek
+            // redakcyjnych. Czytają je osobni konsumenci, z pełnej listy bloków:
             // klasyfikator dokumentu (sygnały TJ) oraz JournalHeaderParser (metadane publikatora).
-			if (block.Role is BlockRole.FootnoteText or BlockRole.JournalHeader)
+            if (block.Role is BlockRole.FootnoteText or BlockRole.JournalHeader)
                 return;
 
             var text = block.Text.Sanitize().Trim();
