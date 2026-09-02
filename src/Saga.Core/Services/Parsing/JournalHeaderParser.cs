@@ -1,4 +1,8 @@
 using System.Text.RegularExpressions;
+using Saga.Core.Helpers;
+using Saga.Core.Ingest;
+using Saga.Model;
+using Serilog;
 
 namespace Saga.Core.Services.Parsing
 {
