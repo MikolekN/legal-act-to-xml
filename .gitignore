@@ -39,8 +39,10 @@ docs.*.md
 
 # === Repozytorium dokumentów roboczych ===
 DocRepo/
+documents/
 
 # === Lokalne lustro zewnętrznej schemy (tylko do odczytu) + narzędzie i metadane ===
+schema/
 schema-pg/
 schema/.upstream.txt
 tools/sync-schema-pg.sh
