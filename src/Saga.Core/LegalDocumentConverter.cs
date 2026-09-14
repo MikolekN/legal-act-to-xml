@@ -91,7 +91,11 @@ namespace Saga.Core.Services
                 metaElement.Add(Element(XmlConverterConstants.Metadata.EntryIntoForceElement,
                     document.EffectiveDate.ToString("yyyy-MM-dd")));
 
-            // metaElement.Add(Element(XmlConverterConstants.Metadata.ValidFromElement, "xs:date"));
+            if (document.RetroactiveFrom != default)
+                metaElement.Add(Element(XmlConverterConstants.Metadata.RetroactiveDatesElement,
+                    Element(XmlConverterConstants.Metadata.RetroactiveDateElement,
+                        Element(XmlConverterConstants.Metadata.PartialDate.Date,
+                            document.RetroactiveFrom.ToString("yyyy-MM-dd")))));
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.RepealDateElement, "xs:date"));
 

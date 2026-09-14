@@ -21,11 +21,11 @@ namespace Saga.Core.Services.Converters
                     if (context != null)
                     {
                         context.CurrentFragment += 1;
-                        textElement.Add(SentenceContext.ToXml(context, wrapUp.ContentText, entry: wrapUp.EffectiveDate == default ? null : wrapUp.EffectiveDate.ToString("yyyy-MM-dd")));
+                        textElement.Add(SentenceContext.ToXml(context, wrapUp.ContentText, entry: UnitLifecycleXml.EntryDate(wrapUp)));
                     }
                     else
                     {
-                        textElement.Add(SentenceContext.ToXml(text: wrapUp.ContentText, entry: wrapUp.EffectiveDate == default ? null : wrapUp.EffectiveDate.ToString("yyyy-MM-dd")));
+                        textElement.Add(SentenceContext.ToXml(text: wrapUp.ContentText, entry: UnitLifecycleXml.EntryDate(wrapUp)));
                     }
                     var commonPartElement = Element(GetCommonPartName(entity, nesting));
 

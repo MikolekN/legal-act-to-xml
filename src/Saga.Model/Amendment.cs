@@ -45,6 +45,11 @@ namespace Saga.Model
         /// </summary>
         public DateTime EffectiveDate { get; set; }
 
+        /// <summary>
+        /// Data mocy wstecznej nowelizacji.
+        /// </summary>
+        public DateTime RetroactiveFrom { get; set; }
+
         public override string ToString()
         {
             var targetStr = string.Join(", ", Targets.Select(t => t.ToString()));

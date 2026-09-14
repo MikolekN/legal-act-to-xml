@@ -47,6 +47,6 @@ namespace Saga.Model.EntryIntoForce
         public bool IsComplete =>
             ResolvedDate.HasValue &&
             UnresolvedFragments.Count == 0 &&
-            Partials.All(p => p.IsApplicable && p.ResolvedDate.HasValue);
+            Partials.All(p => p.IsApplicable && p.IsResolved);
     }
 }

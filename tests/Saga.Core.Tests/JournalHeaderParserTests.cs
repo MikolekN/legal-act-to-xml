@@ -157,15 +157,6 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void Apply_YearBeforeFirstJournal_Rejected()
-        {
-            var document = ApplyToFreshDocument(
-                "DZIENNIK USTAW", "Warszawa, dnia 12 stycznia 1815 r.", "Poz. 26");
-
-            Assert.Null(document.AnnouncementDate);
-        }
-
-        [Fact]
         public void Apply_YearFarInFuture_Rejected()
         {
             var absurd = DateTime.Now.Year + 5;

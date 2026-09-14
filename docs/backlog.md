@@ -60,12 +60,20 @@ Stan po uwspólnieniu w `Helpers/PolishNumerals.cs` ([ADR-0009](adr/0009-jedno-z
 
 ## 3b. Wejście w życie — świadomie odłożone
 
-Stan po rozsyłaniu daty ogólnej po drzewie ([ADR-0011](adr/0011-data-ogolna-rozsylana-po-calym-drzewie.md)).
+Stan po rozsyłaniu daty ogólnej po drzewie ([ADR-0011](adr/0011-data-ogolna-rozsylana-po-calym-drzewie.md))
+i po przysłanianiu jej mocą wsteczną na wyjściu
+([ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md)).
 
 | Luka | Stan |
 |---|---|
 | **`HeadingEffectiveDate` nieużywane** | Pole jest w `ISystematizingUnit` i we wszystkich sześciu jednostkach systematyzacyjnych, ale nikt go nie zapisuje ani nie czyta. Powód: parser nie rozpoznaje jeszcze poprawnie jednostek systematyzacyjnych, więc data nagłówka nie ma skąd pochodzić. |
-| **`RetroactiveFrom` nie schodzi na jednostki** | Moc wsteczna („z mocą od dnia …") jest rozpoznawana i zapisywana w `EntryIntoForceInfo`/`PartialEntryIntoForce`, ale nie ma odpowiednika po stronie jednostek. |
+| **Moc wsteczna tylko jako data jawna** | Wzorzec wymaga daty kalendarzowej, więc „z mocą od dnia ogłoszenia" nie jest rozpoznawane. Wymagałoby potraktowania mocy wstecznej jak formuły — z własnym rozstrzyganiem względem daty ogłoszenia. |
+| **Warianty leksykalne poza § 51** | „ze skutkiem od dnia …", „stosuje się od dnia …" — spoza katalogu ZTP, nierozpoznawane. Dopisanie do alternatywy jest tanie, ale każdy wariant trzeba wpierw zobaczyć w korpusie. |
+| **Człon „z tym że" mieszany** | „z tym że art. 5 wchodzi w życie z dniem X, a art. 6 z mocą od dnia Y" idzie ścieżką wyjątku daty i moc wsteczna Y doczepia się do art. 5. Kształt spoza katalogu § 51. |
+| **„z tym że" w pozycji listy wyjątków** | Forma z dwukropkiem rozbiera pozycje przez `BuildPartial`; człon „z tym że" wewnątrz pozycji nie jest osobno wydzielany. |
+| **Rozdzielenie dat wejścia w życie i mocy wstecznej na jednostce** | Docelowo poprawniejsze niż przysłanianie: jednostka niosłaby w XML obie daty osobno, tak jak niesie je model. Nie robimy tego, bo **odbiorca wymaga w wyniku jednej daty** — patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md). Po naszej stronie przełącznik jest jeden: `GoverningDate` (jedyny wywołujący to `UnitLifecycleXml.EntryDate`, przez które idą wszystkie zapisy — jednostki, zdania, części wspólne). Model i propagacja niosą obie daty osobno i **nie wymagają żadnej zmiany**. Do zrobienia przy przełączaniu: stała nowego atrybutu, drugi parametr w `SentenceContext.ToXml`, odwrócenie asercji w `EntryIntoForceXmlOutputTests`. |
+| **Moc wsteczna bywa późniejsza niż data wejścia w życie jednostki — i nie jest to usterka** | Zmierzone na korpusie (`354687_3139110`): akt ogłoszony 2025-12-23 wchodzi w życie po upływie 6 miesięcy (2026-06-24), ale art. 2, art. 4 i art. 5 „wchodzą w życie z dniem następującym po dniu ogłoszenia, z mocą od dnia 1 stycznia 2026 r." — moc wsteczna wypada PO ich własnej dacie wejścia w życie (2025-12-24), a przed datą ogólną aktu. Przysłanianie daje tu wynik poprawny: przepisy działają od 2026-01-01. Wniosek dla ewentualnej walidacji: warunek „moc wsteczna późniejsza niż data jednostki" zapaliłby fałszywy alarm na tym poprawnie zredagowanym akcie, więc punktem odniesienia musi być **data ogólna aktu**. W 241 dokumentach nie ma ani jednego przypadku mocy wstecznej późniejszej niż data ogólna, więc dziś nie ma czego zgłaszać i żaden `ValidationMessage` nie powstał. |
+| **Pusty fragment nierozłożony** | Klauzula złożona z samej mocy wstecznej („Ustawa wchodzi w życie z mocą od dnia …", bez formuły) dopisuje do `UnresolvedFragments` pusty string zamiast czytelnego powodu. |
 
 ## 4. Testy, których plan przewidywał, a nie powstały
 

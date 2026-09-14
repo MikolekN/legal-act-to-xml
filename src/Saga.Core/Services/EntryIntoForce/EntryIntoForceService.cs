@@ -57,8 +57,12 @@ namespace Saga.Core.Services.EntryIntoForce
             if (info.ResolvedDate is { } resolved)
                 document.EffectiveDate = resolved;
 
+            if (info.RetroactiveFrom is { } retroactive)
+                document.RetroactiveFrom = retroactive;
+
             var exceptions = BuildExceptionMap(document, info);
-            EffectiveDatePropagator.Propagate(document, info.ResolvedDate, exceptions);
+            EffectiveDatePropagator.Propagate(
+                document, new EntryDates(info.ResolvedDate, info.RetroactiveFrom), exceptions);
 
             foreach (var conflict in exceptions.Conflicts)
             {
@@ -76,7 +80,7 @@ namespace Saga.Core.Services.EntryIntoForce
         private static EntryIntoForceInfo BuildInfo(ClauseCandidate main, DateTime? announcementDate)
         {
             // Reguła ogólna kończy się w miejscu pierwszego wyjątku.
-            var generalPart = CutAtExceptions(main.Tail);
+            var generalPart = CutAtFirstMarker(main.Tail);
             var (withoutRetro, retroactive, retroRaw) = EntryIntoForceFormulaParser.SplitRetroactivity(generalPart);
 
             var formula = EntryIntoForceFormulaParser.Parse(withoutRetro);
@@ -120,6 +124,8 @@ namespace Saga.Core.Services.EntryIntoForce
             foreach (var (units, tail) in SplitInlineExceptions(main.Tail))
                 info.Partials.Add(BuildPartial(units, tail, announcementDate, main.Owner, info));
 
+            CollectProvisos(main, announcementDate, info);
+
             // Wyjątki jako osobne pozycje listy pod klauzulą kończącą się „z wyjątkiem:".
             if (!main.OpensExceptionList)
                 return;
@@ -158,8 +164,15 @@ namespace Saga.Core.Services.EntryIntoForce
                 var units = UnitsBefore(rest, relative.Index);
                 var formulaTail = relative.Groups["tail"].Value;
 
-                // Kolejny wyjątek w tym samym zdaniu — odetnij formułę na jego znaczniku.
+                var proviso = EntryIntoForcePatterns.ProvisoMarker.Match(formulaTail);
                 var next = EntryIntoForcePatterns.ExceptionMarker.Match(formulaTail);
+
+                if (proviso.Success && (!next.Success || proviso.Index < next.Index))
+                {
+                    yield return (units, formulaTail[..proviso.Index].Trim());
+                    yield break;
+                }
+
                 if (next.Success)
                 {
                     yield return (units, formulaTail[..next.Index].Trim());
@@ -169,6 +182,63 @@ namespace Saga.Core.Services.EntryIntoForce
 
                 yield return (units, formulaTail.Trim());
                 yield break;
+            }
+        }
+
+        /// <summary>
+        /// Zbiera człony „z tym że …". Człon niosący czasownik klauzuli („z tym że art. 5 wchodzi
+        /// w życie z dniem …") jest zwykłym wyjątkiem daty, tyle że zapisanym bez zaimka względnego.
+        /// </summary>
+        private static void CollectProvisos(
+            ClauseCandidate main, DateTime? announcementDate, EntryIntoForceInfo info)
+        {
+            foreach (var chunk in SplitProvisos(main.Tail))
+            {
+                if (chunk.Length == 0)
+                    continue;
+
+                if (EntryIntoForcePatterns.AnyClauseVerb.Match(chunk) is { Success: true } verb)
+                {
+                    info.Partials.Add(BuildPartial(
+                        UnitsBefore(chunk, verb.Index),
+                        chunk[(verb.Index + verb.Length)..].Trim(),
+                        announcementDate, main.Owner, info));
+                    continue;
+                }
+
+                var items = EntryIntoForceFormulaParser.SplitScopedRetroactivity(chunk).ToList();
+                if (items.Count == 0)
+                {
+                    info.UnresolvedFragments.Add(chunk);
+                    ValidationReporter.AddValidationMessage(main.Owner, ValidationLevel.Warning,
+                        $"Nierozpoznany człon klauzuli po „z tym że\": „{Preview(chunk)}\".");
+                    continue;
+                }
+
+                foreach (var (units, retroactive, rawText) in items)
+                    info.Partials.Add(BuildRetroactivityPartial(units, retroactive, rawText, main.Owner, info));
+            }
+        }
+
+        /// <summary>
+        /// Wycina człony stojące po „z tym że". Człon kończy się na kolejnym znaczniku — swoim
+        /// albo znaczniku wyjątku.
+        /// </summary>
+        private static IEnumerable<string> SplitProvisos(string tail)
+        {
+            var rest = tail;
+
+            while (EntryIntoForcePatterns.ProvisoMarker.Match(rest) is { Success: true } marker)
+            {
+                var chunk = rest[(marker.Index + marker.Length)..];
+                var end = NextMarkerIndex(chunk);
+
+                yield return (end is { } cut ? chunk[..cut] : chunk).Trim();
+
+                if (end is not { } next)
+                    yield break;
+
+                rest = chunk[next..];
             }
         }
 
@@ -234,6 +304,41 @@ namespace Saga.Core.Services.EntryIntoForce
             return partial;
         }
 
+        /// <summary>
+        /// Wyjątek nadający wskazanym jednostkom samą moc wsteczną.
+        /// </summary>
+        private static PartialEntryIntoForce BuildRetroactivityPartial(
+            string unitsText,
+            DateTime retroactive,
+            string rawText,
+            BaseEntity owner,
+            EntryIntoForceInfo info)
+        {
+            var enumeration = UnitEnumerationParser.Parse(unitsText);
+
+            var partial = new PartialEntryIntoForce
+            {
+                Kind = PartialEntryIntoForceKind.RetroactivityOnly,
+                Targets = enumeration.Targets.ToList(),
+                RetroactiveFrom = retroactive,
+                RawText = $"{unitsText} {rawText}".Trim(),
+            };
+
+            foreach (var fragment in enumeration.Unresolved)
+                info.UnresolvedFragments.Add(fragment);
+
+            if (partial.Targets.Count == 0)
+            {
+                partial.IsApplicable = false;
+                partial.UnresolvedReason = "nie rozpoznano jednostki, której nadano moc wsteczną";
+
+                ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
+                    $"Moc wsteczna nieprzypisana: {partial.UnresolvedReason}.");
+            }
+
+            return partial;
+        }
+
         // ============================================================
         // Propagacja na jednostki
         // ============================================================
@@ -251,7 +356,6 @@ namespace Saga.Core.Services.EntryIntoForce
                 if (targets.Count == 0)
                     continue;
 
-                var date = partial.ResolvedDate;
                 var missed = new List<string>();
 
                 foreach (var target in targets)
@@ -265,11 +369,11 @@ namespace Saga.Core.Services.EntryIntoForce
 
                     if (target.ScopeKind == ScopeKind.Structural && target.ScopeStructures.Count > 0)
                     {
-                        MarkScope(host, target, date, map, missed);
+                        MarkScope(host, target, partial, map, missed);
                         continue;
                     }
 
-                    Mark(map, host, target.Structure, date);
+                    Mark(map, host, target.Structure, partial);
                 }
 
                 if (missed.Count == 0)
@@ -286,7 +390,7 @@ namespace Saga.Core.Services.EntryIntoForce
 
         /// <summary>Oznacza jednostki wskazane zakresem, szukając ich w cytowanej treści.</summary>
         private static void MarkScope(
-            BaseEntity host, ScopedUnitReference target, DateTime? date,
+            BaseEntity host, ScopedUnitReference target, PartialEntryIntoForce partial,
             EntryIntoForceExceptionMap map, List<string> missed)
         {
             // Uchylenie nie cytuje treści — „w zakresie uchylanego pkt 20" wskazuje jednostkę aktu
@@ -308,20 +412,38 @@ namespace Saga.Core.Services.EntryIntoForce
                     continue;
                 }
 
-                Mark(map, scoped, scope, date);
+                Mark(map, scoped, scope, partial);
             }
         }
 
         private static void Mark(
-            EntryIntoForceExceptionMap map, BaseEntity unit, StructuralReference reference, DateTime? date)
+            EntryIntoForceExceptionMap map, BaseEntity unit, StructuralReference reference,
+            PartialEntryIntoForce partial)
         {
-            if (EntryIntoForceTargetResolver.ResolveSegment(unit, reference) is { } segment)
+            var segment = EntryIntoForceTargetResolver.ResolveSegment(unit, reference);
+
+            // Jednostka nie jest wyjęta z reguły ogólnej, więc nadpisujemy sam kanał
+            // mocy wstecznej i zostawiamy datę wejścia w życie.
+            if (partial.Kind == PartialEntryIntoForceKind.RetroactivityOnly)
             {
-                map.MarkSegment(segment, date);
+                if (segment is not null)
+                    map.MarkSegmentRetroactivity(segment, partial.RetroactiveFrom);
+                else
+                    map.MarkUnitRetroactivity(unit, partial.RetroactiveFrom);
+
                 return;
             }
 
-            map.MarkUnit(unit, date);
+            // Wyjątek daty wyłącza jednostkę z reguły ogólnej w całości.
+            var dates = new EntryDates(partial.ResolvedDate, partial.RetroactiveFrom);
+
+            if (segment is not null)
+            {
+                map.MarkSegment(segment, dates);
+                return;
+            }
+
+            map.MarkUnit(unit, dates);
         }
 
         // ============================================================
@@ -342,10 +464,25 @@ namespace Saga.Core.Services.EntryIntoForce
             }
         }
 
-        private static string CutAtExceptions(string tail)
+        /// <summary>
+        /// Ucina ogon klauzuli na pierwszym znaczniku zmieniającym adresata: wyjątku
+        /// („z wyjątkiem", „z zastrzeżeniem") albo członu „z tym że".
+        /// </summary>
+        private static string CutAtFirstMarker(string tail) =>
+            NextMarkerIndex(tail) is { } index ? tail[..index].Trim() : tail.Trim();
+
+        /// <summary>Pozycja najbliższego znacznika wyjątku.</summary>
+        private static int? NextMarkerIndex(string text)
         {
-            var marker = EntryIntoForcePatterns.ExceptionMarker.Match(tail);
-            return marker.Success ? tail[..marker.Index].Trim() : tail.Trim();
+            int? result = null;
+
+            if (EntryIntoForcePatterns.ExceptionMarker.Match(text) is { Success: true } exception)
+                result = exception.Index;
+
+            if (EntryIntoForcePatterns.ProvisoMarker.Match(text) is { Success: true } proviso)
+                result = result is { } current ? Math.Min(current, proviso.Index) : proviso.Index;
+
+            return result;
         }
 
         private static string Preview(string text) =>

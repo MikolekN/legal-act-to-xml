@@ -78,9 +78,14 @@ namespace Saga.Model
         public DateTime? AnnouncementDate { get; set; }
 
         /// <summary>
-        /// Data wejścia w życie danej jednostki redakcyjnej.
+        /// Data wejścia w życie aktu.
         /// </summary>
         public DateTime EffectiveDate { get; set; }
+
+        /// <summary>
+        /// Data mocy wstecznej aktu.
+        /// </summary>
+        public DateTime RetroactiveFrom { get; set; }
 
         /// <summary>
         /// Klauzula wejścia w życie.

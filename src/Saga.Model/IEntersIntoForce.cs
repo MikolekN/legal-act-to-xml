@@ -11,5 +11,11 @@ namespace Saga.Model
         /// Data wejścia w życie danej jednostki redakcyjnej.
         /// </summary>
         DateTime EffectiveDate { get; set; }
+
+        /// <summary>
+        /// Data mocy wstecznej danej jednostki redakcyjnej.
+        /// Wartość domyślna znaczy brak mocy wstecznej.
+        /// </summary>
+        DateTime RetroactiveFrom { get; set; }
     }
 }

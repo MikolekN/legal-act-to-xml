@@ -213,6 +213,8 @@ namespace Saga.Core.Services.Converters
                 new XAttribute("operation", amendment.OperationType.ToString()));
 
             el.Add(new XAttribute("effectiveDate", amendment.EffectiveDate.ToString("yyyy-MM-dd")));
+            if (amendment.RetroactiveFrom != default)
+                el.Add(new XAttribute("retroactiveFrom", amendment.RetroactiveFrom.ToString("yyyy-MM-dd")));
 
             AddJournalElement(el, "targetAct", amendment.TargetLegalAct);
 
@@ -286,6 +288,8 @@ namespace Saga.Core.Services.Converters
 
             if (entity.EffectiveDate != default)
                 el.Add(new XAttribute("effectiveDate", entity.EffectiveDate.ToString("yyyy-MM-dd")));
+            if (entity.RetroactiveFrom != default)
+                el.Add(new XAttribute("retroactiveFrom", entity.RetroactiveFrom.ToString("yyyy-MM-dd")));
         }
 
         private static void AddContentAndDiagnostics(XElement el, BaseEntity entity)
@@ -312,6 +316,8 @@ namespace Saga.Core.Services.Converters
                     segmentEl.Add(new XAttribute("role", segment.Role));
                 if (segment.EffectiveDate != default)
                     segmentEl.Add(new XAttribute("effectiveDate", segment.EffectiveDate.ToString("yyyy-MM-dd")));
+                if (segment.RetroactiveFrom != default)
+                    segmentEl.Add(new XAttribute("retroactiveFrom", segment.RetroactiveFrom.ToString("yyyy-MM-dd")));
                 segmentEl.Add(segment.Text);
                 el.Add(segmentEl);
             }

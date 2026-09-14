@@ -125,6 +125,168 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void Retroactivity_ReachesUnits_ButNotTheUnitTakenOutByAnException()
+        {
+            // Moc wsteczna reguły ogólnej schodzi na jednostki tą samą drogą co data wejścia w życie.
+            // Art. 2 jest z reguły ogólnej WYJĘTY, więc nie bierze z niej ani daty, ani mocy wstecznej.
+            var document = Parse(
+                Header +
+                "Art. 1. Wprowadza się zmiany porządkowe.\n" +
+                "Art. 2. Przepis przejściowy.\n" +
+                "Art. 3. Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z mocą od dnia 1 lipca 2025 r., " +
+                "z wyjątkiem art. 2, który wchodzi w życie z dniem 1 marca 2026 r.\n");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+            Assert.Equal(new DateTime(2025, 7, 1), info.RetroactiveFrom);
+            Assert.Equal(new DateTime(2025, 7, 1), document.RetroactiveFrom);
+
+            var article = document.Articles.ToDictionary(a => a.Id);
+
+            Assert.Equal(new DateTime(2026, 1, 1), article["art_1"].EffectiveDate);
+            Assert.Equal(new DateTime(2025, 7, 1), article["art_1"].RetroactiveFrom);
+
+            Assert.Equal(new DateTime(2026, 3, 1), article["art_2"].EffectiveDate);
+            Assert.Equal(default, article["art_2"].RetroactiveFrom);
+
+            // Zdania dziedziczą to samo co jednostka.
+            Assert.All(article["art_1"].Paragraphs.SelectMany(p => p.TextSegments),
+                s => Assert.Equal(new DateTime(2025, 7, 1), s.RetroactiveFrom));
+            Assert.All(article["art_2"].Paragraphs.SelectMany(p => p.TextSegments),
+                s => Assert.Equal(default, s.RetroactiveFrom));
+        }
+
+        [Fact]
+        public void ExceptionWithOwnRetroactivity_OverridesTheGeneralOne()
+        {
+            var document = Parse(
+                Header +
+                "Art. 1. Wprowadza się zmiany porządkowe.\n" +
+                "Art. 2. Przepis przejściowy.\n" +
+                "Art. 3. Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z mocą od dnia 1 lipca 2025 r., " +
+                "z wyjątkiem art. 2, który wchodzi w życie z dniem 1 marca 2026 r., " +
+                "z mocą od dnia 1 stycznia 2025 r.\n");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+            var partial = Assert.Single(info.Partials);
+            Assert.Equal(new DateTime(2025, 1, 1), partial.RetroactiveFrom);
+
+            var article = document.Articles.ToDictionary(a => a.Id);
+            Assert.Equal(new DateTime(2025, 7, 1), article["art_1"].RetroactiveFrom);
+            Assert.Equal(new DateTime(2025, 1, 1), article["art_2"].RetroactiveFrom);
+            Assert.Equal(new DateTime(2026, 3, 1), article["art_2"].EffectiveDate);
+        }
+
+        // ============================================================
+        // Moc wsteczna wskazana jednostkom — „z tym że" (§ 51 ust. 1 ZTP)
+        // ============================================================
+
+        /// <summary>Akt z trzema artykułami i podaną klauzulą w art. 3.</summary>
+        private LegalDocument WithClause(string clause) => Parse(
+            Header +
+            "Art. 1. Wprowadza się zmiany porządkowe.\n" +
+            "Art. 2. Przepis przejściowy.\n" +
+            "Art. 3. " + clause + "\n");
+
+        [Fact]
+        public void Proviso_GivesRetroactivityToTheNamedUnitOnly_NotToTheWholeAct()
+        {
+            var document = WithClause(
+                "Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., " +
+                "z tym że art. 2 z mocą od dnia 1 stycznia 2025 r.");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+            Assert.Null(info.RetroactiveFrom);
+            Assert.Equal(new DateTime(2026, 1, 1), info.ResolvedDate);
+
+            var partial = Assert.Single(info.Partials);
+            Assert.Equal(PartialEntryIntoForceKind.RetroactivityOnly, partial.Kind);
+            Assert.Equal(new DateTime(2025, 1, 1), partial.RetroactiveFrom);
+
+            Assert.True(info.IsComplete);
+
+            var article = document.Articles.ToDictionary(a => a.Id);
+            Assert.Equal(default, article["art_1"].RetroactiveFrom);
+            Assert.Equal(new DateTime(2025, 1, 1), article["art_2"].RetroactiveFrom);
+            Assert.Equal(new DateTime(2026, 1, 1), article["art_2"].EffectiveDate);
+        }
+
+        [Fact]
+        public void Proviso_OverridesTheGeneralRetroactivity_ForTheNamedUnit()
+        {
+            var document = WithClause(
+                "Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z mocą od dnia 1 lipca 2025 r., " +
+                "z tym że art. 2 z mocą od dnia 1 stycznia 2025 r.");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+            Assert.Equal(new DateTime(2025, 7, 1), info.RetroactiveFrom);
+
+            var article = document.Articles.ToDictionary(a => a.Id);
+            Assert.Equal(new DateTime(2025, 7, 1), article["art_1"].RetroactiveFrom);
+            Assert.Equal(new DateTime(2025, 1, 1), article["art_2"].RetroactiveFrom);
+        }
+
+        [Fact]
+        public void Proviso_SplitsSeveralUnitsWithDifferentRetroactivity()
+        {
+            var document = WithClause(
+                "Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z tym że art. 1 z mocą od dnia " +
+                "1 stycznia 2025 r., a art. 2 z mocą od dnia 1 marca 2025 r.");
+
+            var article = document.Articles.ToDictionary(a => a.Id);
+            Assert.Equal(new DateTime(2025, 1, 1), article["art_1"].RetroactiveFrom);
+            Assert.Equal(new DateTime(2025, 3, 1), article["art_2"].RetroactiveFrom);
+            Assert.Equal(default, article["art_3"].RetroactiveFrom);
+        }
+
+        [Fact]
+        public void Proviso_WithClauseVerb_IsAnOrdinaryEntryDateException()
+        {
+            var document = WithClause(
+                "Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., " +
+                "z tym że art. 2 wchodzi w życie z dniem 1 lipca 2026 r.");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+            var partial = Assert.Single(info.Partials);
+            Assert.Equal(PartialEntryIntoForceKind.EntryDate, partial.Kind);
+
+            var article = document.Articles.ToDictionary(a => a.Id);
+            Assert.Equal(new DateTime(2026, 7, 1), article["art_2"].EffectiveDate);
+            Assert.Equal(default, article["art_2"].RetroactiveFrom);
+        }
+
+        [Fact]
+        public void Proviso_AfterAnException_DoesNotBleedIntoIt()
+        {
+            var document = WithClause(
+                "Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z wyjątkiem art. 2, który wchodzi " +
+                "w życie z dniem 1 marca 2026 r., z tym że art. 1 z mocą od dnia 1 stycznia 2025 r.");
+
+            var article = document.Articles.ToDictionary(a => a.Id);
+
+            Assert.Equal(new DateTime(2026, 3, 1), article["art_2"].EffectiveDate);
+            Assert.Equal(default, article["art_2"].RetroactiveFrom);
+
+            Assert.Equal(new DateTime(2026, 1, 1), article["art_1"].EffectiveDate);
+            Assert.Equal(new DateTime(2025, 1, 1), article["art_1"].RetroactiveFrom);
+        }
+
+        [Fact]
+        public void Proviso_WrittenInProse_IsFlagged_AndGivesNobodyRetroactivity()
+        {
+            var document = WithClause(
+                "Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z tym że do spraw wszczętych " +
+                "i niezakończonych stosuje się przepisy dotychczasowe.");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+
+            Assert.Null(info.RetroactiveFrom);
+            Assert.Empty(info.Partials);
+            Assert.NotEmpty(info.UnresolvedFragments);
+            Assert.False(info.IsComplete);
+            Assert.All(document.Articles, a => Assert.Equal(default, a.RetroactiveFrom));
+        }
+
+        [Fact]
         public void InlineException_IsAppliedToTheNamedArticle()
         {
             var document = Parse(

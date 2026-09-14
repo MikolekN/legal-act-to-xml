@@ -6,12 +6,30 @@ using System.Linq;
 
 namespace Saga.Model.EntryIntoForce
 {
+    /// <summary>Rodzaj wyjątku od reguły ogólnej.</summary>
+    public enum PartialEntryIntoForceKind
+    {
+        /// <summary>
+        /// Jednostka dostaje własną datę wejścia w życie i jest wyłączona z reguły ogólnej.
+        /// </summary>
+        EntryDate,
+
+        /// <summary>
+        /// Jednostka dostaje tylko datę mocy wstecznej. Data wejścia w życie zostaje z
+        /// reguły ogólnej, a jednostka nie jest z niej wyłączona.
+        /// </summary>
+        RetroactivityOnly,
+    }
+
     /// <summary>
     /// Częściowa data wejścia w życie — wyjątek od reguły ogólnej:
     /// „z wyjątkiem art. 2, który wchodzi w życie z dniem 31 maja 2026 r.".
     /// </summary>
     public class PartialEntryIntoForce
     {
+        /// <summary>Który składnik dat wyjątek nadpisuje.</summary>
+        public PartialEntryIntoForceKind Kind { get; set; } = PartialEntryIntoForceKind.EntryDate;
+
         /// <summary>Jednostki objęte wyjątkiem.</summary>
         public List<ScopedUnitReference> Targets { get; set; } = new();
 
@@ -32,6 +50,14 @@ namespace Saga.Model.EntryIntoForce
 
         /// <summary>Powód, dla którego wyjątek nie został zastosowany.</summary>
         public string? UnresolvedReason { get; set; }
+
+        /// <summary>
+        /// Czy wyjątek doprowadził do wartości, którą da się zapisać na jednostce.
+        /// </summary>
+        public bool IsResolved =>
+            Kind == PartialEntryIntoForceKind.RetroactivityOnly
+                ? RetroactiveFrom.HasValue
+                : ResolvedDate.HasValue;
 
         /// <summary>Cele, które faktycznie nadają się do przypisania daty.</summary>
         public IEnumerable<ScopedUnitReference> ApplicableTargets =>

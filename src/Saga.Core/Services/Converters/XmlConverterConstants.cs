@@ -115,7 +115,8 @@ namespace Saga.Core.Services.Converters
                 internal const string UnitInScope = "Jednostka-w-zakresie";
                 internal const string EditorialNotes = "Uwagi-redakcyjne";
             }
-            internal const string ValidFromElement = "DataObowiazywaniaOd";
+            internal const string RetroactiveDatesElement = "DatyMocyWstecznej";
+            internal const string RetroactiveDateElement = "DataMocyWstecznej";
             internal const string RepealDateElement = "DataUchylenia";
             internal const string RepealDatePartialElement = "DataUchyleniaCzesciowa";
             internal const string ExpirationDateElement = "DataWygasniecia";
