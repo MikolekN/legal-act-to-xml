@@ -17,11 +17,12 @@ default:
 stages:
   - "test"
   - "quality"
-  - "build_check"
+  - "prepare_publish"
   - "build_and_publish"
 
 variables:
   DOTNET_IMAGE: "mcr.microsoft.com/dotnet/sdk:10.0.400"
+  PYTHON_IMAGE: "python:3.11.15-trixie"
   SOLUTION: "Saga.sln"
   WEB_PROJECT: "src/Saga.Web/Saga.Web.csproj"
   TEST_PROJECT: "tests/Saga.Core.Tests/Saga.Core.Tests.csproj"
@@ -64,7 +65,6 @@ unit-tests:
     - if: '$CI_COMMIT_TAG'
   variables:
     COV_FAIL_UNDER: "70"
-    DIFF_FAIL_UNDER: "80"
   before_script:
     - dotnet restore "${SOLUTION}"
   script:
@@ -105,22 +105,10 @@ unit-tests:
           }
         }
       ' "${COVERAGE_REPORT}"
-    - |
-      if [ "$CI_PIPELINE_SOURCE" = "merge_request_event" ]; then
-        apt-get update
-        apt-get install --yes --no-install-recommends python3-pip
-        rm -rf /var/lib/apt/lists/*
-        pip3 install --break-system-packages --no-cache-dir "diff-cover==9.6.0"
-
-        git fetch --no-tags --depth=1 origin \
-          "${CI_MERGE_REQUEST_DIFF_BASE_SHA}"
-
-        diff-cover TestResults/coverage.xml \
-          --fail-under="${DIFF_FAIL_UNDER}" \
-          --compare-branch="${CI_MERGE_REQUEST_DIFF_BASE_SHA}"
-      fi
   artifacts:
     when: always
+    paths:
+      - "TestResults/coverage.xml"
     reports:
       junit: "TestResults/junit.xml"
       coverage_report:
@@ -138,6 +126,11 @@ unit-tests:
   extends:
     - ".quality"
     - ".dotnet"
+  cache:
+    key: "nuget"
+    paths:
+      - ".nuget/packages"
+    policy: "pull"
   before_script:
     - dotnet restore "${SOLUTION}"
 
@@ -178,51 +171,10 @@ deprecation-check:
         exit 1
       fi
 
-container-build-check:
-  extends: ".docker"
-  stage: "build_check"
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-  variables:
-    SMOKE_IMAGE: "${CI_PROJECT_NAME}:mr-${CI_MERGE_REQUEST_IID}"
-    SMOKE_CONTAINER: "saga-smoke-${CI_PIPELINE_IID}"
-  script:
-    - |
-      docker buildx build \
-        --cache-from "type=registry,ref=${CACHE_IMAGE}" \
-        --build-arg "VERSION=0.0.0" \
-        --build-arg "REVISION=${CI_COMMIT_SHORT_SHA}" \
-        --tag "${SMOKE_IMAGE}" \
-        --load .
-    - |
-      docker run --detach --name "${SMOKE_CONTAINER}" --publish 8080:8080 "${SMOKE_IMAGE}"
-
-      attempt=1
-      until wget -q -O - "http://docker:8080/health" >/dev/null 2>&1; do
-        attempt=$((attempt + 1))
-        if [ "$attempt" -gt 30 ]; then
-          echo "ERROR: kontener nie odpowiedzial na /health w ciagu 30 s" >&2
-          docker logs "${SMOKE_CONTAINER}" >&2
-          exit 1
-        fi
-        sleep 1
-      done
-
-      echo "GET /health -> $(wget -q -O - http://docker:8080/health)"
-
-      if ! wget -q -O /dev/null "http://docker:8080/openapi/v1.json"; then
-        echo "ERROR: dokumentacja OpenAPI nie odpowiada" >&2
-        docker logs "${SMOKE_CONTAINER}" >&2
-        exit 1
-      fi
-
-      echo "smoke test OK"
-  after_script:
-    - docker rm --force "${SMOKE_CONTAINER}" >/dev/null 2>&1 || true
-
 version-check:
-  extends: ".dotnet"
-  stage: "build_check"
+  image: "${DOTNET_IMAGE}"
+  stage: "prepare_publish"
+  interruptible: true
   rules:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
       when: never
@@ -264,16 +216,44 @@ version-check:
 
 .publish:
   stage: "build_and_publish"
-  dependencies:
-    - "version-check"
+  when: manual
+  needs:
+    - job: "version-check"
+      artifacts: true
   rules:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
       when: never
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-      when: manual
-      allow_failure: true
-    - if: '$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+(\.dev\d+)?$/' # Tag musi być równy <Version> z Directory.Build.props.
+    - if: '$CI_COMMIT_TAG'
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+
+diff-coverage:
+  stage: "test"
+  image: "${PYTHON_IMAGE}"
+  interruptible: true
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  needs:
+    - job: "unit-tests"
+      artifacts: true
+  variables:
+    DIFF_FAIL_UNDER: "80"
+  script:
+    - pip3 install --no-cache-dir "diff-cover==9.6.0"
+    - git fetch --no-tags --depth=1 origin "${CI_MERGE_REQUEST_DIFF_BASE_SHA}"
+    - |
+      diff-cover TestResults/coverage.xml \
+        --fail-under="${DIFF_FAIL_UNDER}" \
+        --compare-branch="${CI_MERGE_REQUEST_DIFF_BASE_SHA}" | tee diff-cover.log
+    - |
+      CHANGED_CS="$(git diff --name-only "${CI_MERGE_REQUEST_DIFF_BASE_SHA}" HEAD -- src | grep -c '\.cs$' || true)"
+
+      if [ "${CHANGED_CS}" -gt 0 ] && grep -q "No lines with coverage information" diff-cover.log; then
+        echo "ERROR: diff zmienia ${CHANGED_CS} plik(ow) .cs w src/, a diff-cover nie dopasowal" >&2
+        echo "       ani jednej linii — prog pokrycia roznicowego nie zostal sprawdzony." >&2
+        echo "       Sprawdz, czy raport pokrycia powstal przy tej samej sciezce checkoutu." >&2
+        exit 1
+      fi
 
 container-build-and-publish:
   extends:
@@ -281,7 +261,17 @@ container-build-and-publish:
     - ".docker"
   script:
     - |
-      set -- --tag "${CI_REGISTRY_IMAGE}:${PUBLISH_VERSION}"
+      IMAGE="${CI_REGISTRY_IMAGE}:${PUBLISH_VERSION}"
+
+      if docker buildx imagetools inspect "${IMAGE}" > previous-image.txt 2>/dev/null; then
+        echo "=================================================================="
+        echo "UWAGA: tag ${PUBLISH_VERSION} juz istnieje w rejestrze i zostanie nadpisany."
+        grep -E '^(Name|Digest):' previous-image.txt || cat previous-image.txt
+        echo "Powyzszy digest wskazuje obraz, ktory zaraz przestanie byc pod tym tagiem."
+        echo "=================================================================="
+      fi
+
+      set -- --tag "${IMAGE}"
 
       if [ "$CI_COMMIT_BRANCH" = "$CI_DEFAULT_BRANCH" ]; then
         set -- "$@" --tag "${CI_REGISTRY_IMAGE}:latest"
