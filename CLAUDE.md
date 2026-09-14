@@ -24,7 +24,7 @@ dotnet test --project tests/Saga.Core.Tests/Saga.Core.Tests.csproj --filter-clas
 
 # Lokalne odtworzenie bramek jakości z CI (te same polecenia co .gitlab-ci.yml)
 dotnet format style Saga.sln --verify-no-changes --severity warn   # lint-check
-dotnet format whitespace Saga.sln --verify-no-changes              # format-check (przejściowo allow_failure)
+dotnet format whitespace Saga.sln --verify-no-changes              # format-check
 dotnet build Saga.sln -c Release -warnaserror                      # type-check
 dotnet list Saga.sln package --vulnerable --include-transitive     # dependency-check
 
@@ -37,11 +37,16 @@ docker build --build-arg VERSION=1.0.0 --tag saga-web:local .
 - **Wersja**: jedynym źródłem jest `<Version>` w `Directory.Build.props`. Zadanie `version-check`
   odczytuje ją przez `dotnet msbuild -getProperty:Version`, więc tag gita musi być dokładnie tą
   wartością, bez prefiksu `v`.
-- **Publikacja obrazu**: obraz **zawsze** dostaje tag z wersją, bo manifest wdrożenia przypina
-  konkretny tag — sam `latest` nie pozwala ani wdrożyć powtarzalnie, ani wrócić do poprzedniego
-  wydania. Push do gałęzi domyślnej → `X.Y.Z` + ruchomy `latest`; tag `X.Y.Z` → `X.Y.Z`;
-  ręcznie uruchomione zadanie w MR → `X.Y.Z.dev<IID>`, więc build przedwydaniowy nigdy nie
-  nadpisze obrazu wydania. Pozostałe gałęzie (w tym `dev`) nie publikują niczego.
+- **Publikacja obrazu jest ZAWSZE ręczna** (standard CAISE v3): nic nie trafia do rejestru bez
+  kliknięcia — ani z MR, ani z gałęzi domyślnej, ani z tagu. Obraz **zawsze** dostaje tag z wersją,
+  bo manifest wdrożenia przypina konkretny tag; sam `latest` nie pozwala ani wdrożyć powtarzalnie,
+  ani wrócić do poprzedniego wydania. Gałąź domyślna → `X.Y.Z` + ruchomy `latest`; tag `X.Y.Z` →
+  `X.Y.Z`; MR → `X.Y.Z.dev<IID>`, więc build przedwydaniowy nigdy nie nadpisze obrazu wydania.
+  Gałęzie boczne uruchamiają tylko etap `quality` i nie publikują niczego.
+- **Świadome odstępstwa od standardu v3** (do wskazania przy recenzji): `version-check` waliduje
+  format tagu i jego zgodność z `<Version>` — v3 nie sprawdza już ani jednego, ani drugiego;
+  na gałęzi domyślnej publikujemy `X.Y.Z` **oraz** `latest`, a nie tylko `latest`; nie ma etapu
+  `deployment_validation`, bo walidacja wdrożonej usługi działa spoza tego repozytorium.
 - **Progi pokrycia**: `COV_FAIL_UNDER=70` dla całości i `DIFF_FAIL_UNDER=80` dla linii zmienionych
   w MR.
 
