@@ -419,6 +419,49 @@ namespace Saga.Core.Tests
                 withHeader.Signals.Select(s => (s.Kind, s.BlockIndex)));
         }
 
+        // ============================================================
+        // ADR-0013 — moc wsteczna przysłania datę dopiero przy zapisie
+        // ============================================================
+
+        [Fact]
+        public void Adr0013_RetroactiveDate_MasksEntryDateOnlyInOutput()
+        {
+            string[] lines =
+            {
+                "USTAWA",
+                "z dnia 5 marca 2025 r.",
+                "o zmianie ustawy o rzeczach różnych",
+                "Art. 1. Wprowadza się zmiany porządkowe.",
+                "Art. 2. Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z mocą od dnia 1 lipca 2025 r.",
+            };
+
+            using var stream = new MemoryStream(new UTF8Encoding(false).GetBytes(string.Join("\n", lines)));
+            var document = LegalDocumentParser.Parse(stream, "ustawa.txt",
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document;
+
+            Assert.NotNull(document);
+            var article = document!.Articles.First();
+
+            Assert.Equal(new DateTime(2026, 1, 1), article.EffectiveDate);
+            Assert.Equal(new DateTime(2025, 7, 1), article.RetroactiveFrom);
+            Assert.NotEqual(article.EffectiveDate, article.RetroactiveFrom);
+
+            var xml = Saga.Core.Services.LegalDocumentConverter.Convert(document);
+
+            var unitDates = xml.Descendants()
+                .Select(e => e.Attribute("wejscie-w-zycie")?.Value)
+                .Where(value => value is not null)
+                .ToList();
+
+            Assert.NotEmpty(unitDates);
+            Assert.All(unitDates, value => Assert.Equal("2025-07-01", value));
+
+            var metadata = xml.Descendants()
+                .First(e => e.Name.LocalName == "DataWejsciaWZycie");
+
+            Assert.Equal("2026-01-01", metadata.Value);
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

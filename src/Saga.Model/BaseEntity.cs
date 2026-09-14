@@ -70,6 +70,11 @@ namespace Saga.Model
         public DateTime EffectiveDate { get; set; }
 
         /// <summary>
+        /// Data mocy wstecznej danej jednostki redakcyjnej.
+        /// </summary>
+        public DateTime RetroactiveFrom { get; set; }
+
+        /// <summary>
         /// Komunikaty walidacji/diagnostyki zestawiane podczas parsowania
         /// (błędy, ostrzeżenia, informacje o jakości dokumentu).
         /// </summary>

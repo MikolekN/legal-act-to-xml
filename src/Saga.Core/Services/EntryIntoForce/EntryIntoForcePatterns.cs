@@ -56,6 +56,18 @@ namespace Saga.Core.Services.EntryIntoForce
             @",?\s*z\s+(?:wyjątkiem|zastrzeżeniem)\s*(?<colon>:)?",
             Opts);
 
+        /// <summary>
+        /// Znacznik członu nadającego moc wsteczną wskazanym jednostkom: „…, z tym że art. … z mocą od dnia …".
+        /// </summary>
+        internal static readonly Regex ProvisoMarker = new(
+            @",?\s*z\s+tym,?\s+że\s+",
+            Opts);
+
+        /// <summary>Spójnik otwierający kolejną pozycję wyliczenia w członie („…, a art. 2 z mocą…").</summary>
+        internal static readonly Regex LeadingConjunction = new(
+            @"^[\s,;]*(?:a|i|oraz|zaś|natomiast)\s+",
+            Opts);
+
         /// <summary>Moc wsteczna: „z mocą od dnia" / „z mocą obowiązującą od dnia".</summary>
         internal static readonly Regex Retroactivity = new(
             @",?\s*z\s+mocą\s+(?:obowiązującą\s+)?od\s+dnia\s+(?<date>" + LongDate + @")\s*r?\.?",

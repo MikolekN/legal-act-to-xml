@@ -70,6 +70,34 @@ namespace Saga.Core.Services.EntryIntoForce
             return (remainder, retro, match.Value.Trim());
         }
 
+        /// <summary>
+        /// Rozbija człon „z tym że …" na pary (powołanie jednostek, moc wsteczna). Człon potrafi
+        /// nieść kilka par naraz: „art. 1 pkt 5 z mocą od dnia 1 stycznia 2025 r., a art. 2 z mocą
+        /// od dnia 1 marca 2025 r." — powołanie każdej pary to tekst od końca poprzedniej mocy
+        /// wstecznej do początku kolejnej.
+        /// </summary>
+        internal static IEnumerable<(string Units, DateTime RetroactiveFrom, string RawText)>
+            SplitScopedRetroactivity(string? chunk)
+        {
+            if (Trimmed(chunk) is not { } text)
+                yield break;
+
+            var cursor = 0;
+
+            foreach (Match match in EntryIntoForcePatterns.Retroactivity.Matches(text))
+            {
+                var units = EntryIntoForcePatterns.LeadingConjunction
+                    .Replace(text[cursor..match.Index], string.Empty)
+                    .Trim()
+                    .TrimEnd(',', ' ');
+
+                cursor = match.Index + match.Length;
+
+                if (units.Length > 0 && PolishDates.TryParseLongDate(match.Groups["date"].Value, out var date))
+                    yield return (units, date, match.Value.Trim());
+            }
+        }
+
         /// <summary>Data odniesienia jawnie podana („…od dnia 1 marca 2025 r.").</summary>
         private static DateTime? ReadReferenceDate(Match match) =>
             match.Groups["ref"].Success && PolishDates.TryParseLongDate(match.Groups["ref"].Value, out var parsed)

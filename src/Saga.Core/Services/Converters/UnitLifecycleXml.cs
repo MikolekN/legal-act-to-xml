@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using Saga.Core.Services.EntryIntoForce;
 using Saga.Model;
 
 namespace Saga.Core.Services.Converters
@@ -15,7 +16,6 @@ namespace Saga.Core.Services.Converters
                 element.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, entryDate));
         }
 
-        internal static string? EntryDate(IEntersIntoForce entity) =>
-            entity.EffectiveDate == default ? null : entity.EffectiveDate.ToString("yyyy-MM-dd");
+        internal static string? EntryDate(IEntersIntoForce entity) => GoverningDate.Text(entity);
     }
 }

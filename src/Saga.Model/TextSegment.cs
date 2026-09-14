@@ -31,8 +31,13 @@ namespace Saga.Model
         public string? Role { get; set; }
 
         /// <summary>
-        /// Data wejścia w życie danej jednostki redakcyjnej.
+        /// Data wejścia w życie segmentu.
         /// </summary>
         public DateTime EffectiveDate { get; set; }
+
+        /// <summary>
+        /// Data mocy wstecznej segmentu.
+        /// </summary>
+        public DateTime RetroactiveFrom { get; set; }
     }
 }

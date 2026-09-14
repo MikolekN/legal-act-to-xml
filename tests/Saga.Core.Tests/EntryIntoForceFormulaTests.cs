@@ -136,6 +136,44 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SplitScopedRetroactivity_ReadsUnitsAndDate()
+        {
+            var item = Assert.Single(
+                EntryIntoForceFormulaParser.SplitScopedRetroactivity("art. 2 z mocą od dnia 1 stycznia 2025 r."));
+
+            Assert.Equal("art. 2", item.Units);
+            Assert.Equal(new DateTime(2025, 1, 1), item.RetroactiveFrom);
+            Assert.Contains("z mocą", item.RawText);
+        }
+
+        [Fact]
+        public void SplitScopedRetroactivity_SplitsSeveralPairsInOneClause()
+        {
+            // Powołanie drugiej pary zaczyna się dopiero za mocą wsteczną pierwszej, a otwierający
+            // je spójnik („, a …") nie należy do powołania.
+            var items = EntryIntoForceFormulaParser.SplitScopedRetroactivity(
+                "art. 1 pkt 5 z mocą od dnia 1 stycznia 2025 r., a art. 2 z mocą od dnia 1 marca 2025 r.").ToList();
+
+            Assert.Equal(2, items.Count);
+            Assert.Equal("art. 1 pkt 5", items[0].Units);
+            Assert.Equal(new DateTime(2025, 1, 1), items[0].RetroactiveFrom);
+            Assert.Equal("art. 2", items[1].Units);
+            Assert.Equal(new DateTime(2025, 3, 1), items[1].RetroactiveFrom);
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        [InlineData("do spraw wszczętych stosuje się przepisy dotychczasowe")]
+        [InlineData("z mocą od dnia 1 stycznia 2025 r.")]
+        public void SplitScopedRetroactivity_WithoutBothParts_YieldsNothing(string? chunk)
+        {
+            // Ostatni przypadek jest istotny: moc wsteczna BEZ powołania jednostki nie jest
+            // wyjątkiem — to moc wsteczna reguły ogólnej i należy do innego przebiegu.
+            Assert.Empty(EntryIntoForceFormulaParser.SplitScopedRetroactivity(chunk));
+        }
+
+        [Fact]
         public void UnrecognizedTail_KeepsRawTextAndIsNotResolvable()
         {
             var formula = EntryIntoForceFormulaParser.Parse("kiedyś tam, gdy gwiazdy się ułożą");

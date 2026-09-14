@@ -182,9 +182,12 @@ internal static class EntryIntoForceComparison
 		// <amendment> w zrzucie nie jest jednostką — nie ma eId, więc wpadłby pod klucz jednostki
 		// goszczącej i podmienił jej datę. Nowelizacja wchodzi w życie razem z gospodarzem,
 		// więc jej data nie wnosi tu nic własnego.
+		// W schemaPL atrybut niesie już datę PRZYSŁONIĘTĄ mocą wsteczną, a w zrzucie DTO obie daty
+		// stoją osobno. Żeby porównywać to samo, po stronie zrzutu moc wsteczna ma pierwszeństwo —
+		// w schemaPL tego atrybutu nie ma, więc odczyt spada na właściwy.
 		var date = format == Format.CanonicalDto && name == "amendment"
 			? null
-			: element.Attribute(dateAttribute)?.Value;
+			: element.Attribute("retroactiveFrom")?.Value ?? element.Attribute(dateAttribute)?.Value;
 
 		if (keysOnly)
 		{

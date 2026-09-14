@@ -422,19 +422,25 @@ Punktem odniesienia dla formuł względnych („po upływie 14 dni od dnia ogło
 `LegalDocument.AnnouncementDate`. Parser nie odczytuje jej z dokumentu, więc te formuły
 pozostają nierozstrzygnięte — patrz [backlog § 3b](backlog.md).
 
+Jednostka niesie DWIE daty: datę wejścia w życie i moc wsteczną („z mocą od dnia …", § 51 ZTP).
+Rozsyłane są niezależnie, a przysłonięcie jednej drugą zachodzi dopiero przy zapisie —
+patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
+
 | Klasa | Rola |
 |---|---|
-| **`EntryIntoForceService`** | Orkiestracja: skan → reguła ogólna → wyjątki → mapa wyjątków → propagacja. |
+| **`EntryIntoForceService`** | Orkiestracja: skan → reguła ogólna → wyjątki → człony „z tym że" → mapa wyjątków → propagacja. Reguła ogólna kończy się na pierwszym znaczniku zmieniającym adresata — bez tego moc wsteczna nadana jednej jednostce zostaje odczytana jako moc wsteczna aktu. |
 | **`EntryIntoForceClauseScanner`** | Znajduje kandydatów na klauzulę w kolejności dokumentu, z filtrami negatywnymi (klauzula w cytacie, w artykule nowelizującym, wystąpienie rzeczownikowe). |
-| **`EntryIntoForceFormulaParser`** + **`EntryIntoForcePatterns`** | Rozpoznanie brzmienia z zamkniętego katalogu § 45 ZTP; operand liczbowy albo słowny (przez `PolishNumerals`). |
+| **`EntryIntoForceFormulaParser`** + **`EntryIntoForcePatterns`** | Rozpoznanie brzmienia z zamkniętego katalogu § 45 ZTP; operand liczbowy albo słowny (przez `PolishNumerals`). Odcina też moc wsteczną (`SplitRetroactivity`) i rozbija człon „z tym że" na pary (jednostki, moc wsteczna) — jeden człon niesie ich czasem kilka. |
 | **`EntryIntoForceDateResolver`** | Arytmetyka dat dla rozpoznanej formuły. |
 | **`UnitReferenceTokenizer`** | Rozbija powołanie na tokeny (słowo kluczowe, oznaczenie, przedział, separator, znacznik zakresu). Normalizuje też szyk „liczebnik przed słowem kluczowym": „tiret drugie pierwsze podwójne tiret" to jedna ścieżka `tir_2__dwtir_1`, a nie dwa tirety — rozstrzyga brak separatora między oznaczeniami. |
 | **`DesignationRange`** | Rozwija przedziały oznaczeń („85c–85j", „19-21", „a–c", „czwarte–szóste"). Przedział niejednoznaczny („5a"–„7b") zwraca null, żeby wywołujący go oflagował zamiast zgadywać. |
 | **`UnitEnumerationParser`** + **`UnitPathCursor`** | Rozkład powołania jednostek („art. 1 pkt 9 w zakresie art. 85a ust. 1") na ścieżki — patrz [ADR-0010](adr/0010-jeden-kursor-sciezki-jednostek.md). Granica zakresu: wewnątrz „w zakresie…" wolno zostać na poziomie albo zejść głębiej, ale powrót W GÓRĘ kończy zakres i wraca do wyliczenia głównego („…w zakresie uchylanego pkt 5 i art. 5"). |
 | **`EntryIntoForceTargetResolver`** | Odnajduje encję wskazaną ścieżką — w akcie i w przytoczonej treści nowelizacji. Rozstrzyga ścieżki, dat NIE zapisuje. |
 | **`EditorialUnitWalker`** | Jedyne miejsce, które wie, co jest czyim dzieckiem; treść cytatu odwiedzana tylko na żądanie. |
-| **`EntryIntoForceExceptionMap`** | Rozstrzygnięcia wyjątków przypięte do encji (klucz po tożsamości, bo eId nie jest w akcie unikalny). `null` = cel znany, data nie. |
-| **`EffectiveDatePropagator`** | Kolorowanie drzewa: data ogólna trafia na wszystkie jednostki i zdania, wyjątek nadpisuje ją w dół, a **brak daty znaczy nierozstrzygnięty wyjątek** — patrz [ADR-0011](adr/0011-data-ogolna-rozsylana-po-calym-drzewie.md). |
+| **`EntryDates`** | Para (data wejścia w życie, moc wsteczna) chodząca po propagacji razem — dwa gołe `DateTime?` w sygnaturze dałyby się zamienić miejscami. |
+| **`EntryIntoForceExceptionMap`** | Rozstrzygnięcia wyjątków przypięte do encji (klucz po tożsamości, bo eId nie jest w akcie unikalny). Dwa NIEZALEŻNE kanały — daty wejścia w życie i mocy wstecznej — bo wyjątek nie musi nadpisywać obu składników. W kanale daty `null` = cel znany, data nie; w kanale mocy wstecznej `null` = mocy wstecznej nie ma. |
+| **`EffectiveDatePropagator`** | Kolorowanie drzewa PARĄ dat: reguła ogólna trafia na wszystkie jednostki i zdania, wyjątek nadpisuje ją w dół, a **brak daty znaczy nierozstrzygnięty wyjątek** — patrz [ADR-0011](adr/0011-data-ogolna-rozsylana-po-calym-drzewie.md). Składniki dziedziczą się osobno: jednostka może wziąć datę z reguły ogólnej, a moc wsteczną z wyjątku wskazującego ją samą. |
+| **`GoverningDate`** | Która z dwóch dat trafia do atrybutu `wejscie-w-zycie`: moc wsteczna przysłania datę wejścia w życie. JEDYNE miejsce liczące tę wartość — patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md). |
 
 ### 6.4 Helpery (`Helpers/`)
 
