@@ -95,34 +95,13 @@ namespace Saga.Core.Services.Parsing
             int startIndex = 0;
             for (int i = 0; i < text.Length - 1; i++)
             {
-                if (text[i] == '.' && i + 1 < text.Length && text[i + 1] == ' ')
+                if (!IsSentenceBoundary(text, i, journalDesignations, out int nextStart))
                 {
-                    // Znaleziono potencjalny koniec zdania (kropka + spacja)
-                    // Sprawdź czy następuje wielka litera
-                    int nextCharIndex = i + 2;
-                    while (nextCharIndex < text.Length && char.IsWhiteSpace(text[nextCharIndex]))
-                    {
-                        nextCharIndex++;
-                    }
-
-                    if (nextCharIndex >= text.Length || !IsUpperCaseLetter(text[nextCharIndex]))
-                    {
-                        // Brak wielkiej litery - to nie koniec zdania
-                        continue;
-                    }
-
-                    // Jest wielka litera, ale sprawdź wyjątki
-                    if (IsRokException(text, i) || JournalDesignationRecognizer.Covers(journalDesignations, i))
-                    {
-                        // To jest wyjątek - nie dziel tutaj
-                        continue;
-                    }
-
-                    // To jest prawdziwy koniec zdania
-                    string sentence = text.Substring(startIndex, i - startIndex + 1);
-                    result.Add(sentence);
-                    startIndex = i + 2;
+                    continue;
                 }
+
+                result.Add(text.Substring(startIndex, i - startIndex + 1));
+                startIndex = nextStart;
             }
 
             // Dodaj pozostałą część tekstu jako ostatnie zdanie
@@ -132,6 +111,47 @@ namespace Saga.Core.Services.Parsing
             }
 
             return result;
+        }
+
+        /// <summary>Rozstrzyga, czy napotkana kropka kończy zdanie.</summary>
+        private static bool IsSentenceBoundary(
+            string text,
+            int dotIndex,
+            MatchCollection journalDesignations,
+            out int nextStart)
+        {
+            nextStart = dotIndex + 2;
+
+            // 1. Kształt granicy: kropka + spacja.
+            if (text[dotIndex] != '.' || text[dotIndex + 1] != ' ')
+            {
+                return false;
+            }
+
+            // 2. Prawy kontekst: pierwszy niebiały znak musi być wielką literą.
+            int nextCharIndex = dotIndex + 2;
+            while (nextCharIndex < text.Length && char.IsWhiteSpace(text[nextCharIndex]))
+            {
+                nextCharIndex++;
+            }
+
+            if (nextCharIndex >= text.Length || !char.IsUpper(text[nextCharIndex]))
+            {
+                return false;
+            }
+
+            // 3. Weta lewego kontekstu — kropka należy do skrótu, nie kończy zdania.
+            if (IsRokException(text, dotIndex))
+            {
+                return false;
+            }
+
+            if (JournalDesignationRecognizer.Covers(journalDesignations, dotIndex))
+            {
+                return false;
+            }
+
+            return true;
         }
 
         /// <summary>
@@ -159,14 +179,6 @@ namespace Saga.Core.Services.Parsing
 
             // Powinna być dokładnie 4 cyfry na rok
             return digitCount == 4;
-        }
-
-        /// <summary>
-        /// Sprawdza czy znak to wielka litera (w tym polskie)
-        /// </summary>
-        private static bool IsUpperCaseLetter(char c)
-        {
-            return char.IsUpper(c) || "ĄĆĘŁŃÓŚŹŻ".Contains(c);
         }
 
         /// <summary>
