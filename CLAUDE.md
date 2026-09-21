@@ -70,7 +70,11 @@ tools/CorpusValidator (poza sln)  ──► src/Saga.Core ──► src/Saga.Mod
   plik wykonywalny nazywa się `saga`. Pomija dokumenty nierozpoznane jako akty prawne
 - `Saga.Web` — **web API** (ASP.NET 10) z niej powstaje obraz kontenera.
   Wystawia `POST /v1/convert` (eksport XML przez `LegalDocumentConverter`) i `GET /health` (sonda
-  dla platformy, celowo poza wersjonowaniem). `POST /parse_xml` zostaje jako **przestarzały alias**
+  dla platformy, celowo poza wersjonowaniem). Sondy idą za konwencją CAISE: `GET /` to sonda
+  **życia** (proces odpowiada), a `GET /health` sonda **gotowości** — uruchamia kontrole
+  zarejestrowane przez `AddHealthChecks()` w `Program.cs` i zwraca ich stan. `Unhealthy` daje 503,
+  `Degraded` zostaje przy 200 (usługa nadal obsługuje żądania). Dziś nie ma zarejestrowanej żadnej
+  kontroli, bo usługa nie zależy od niczego zewnętrznego; nowa zależność = jedno `.AddCheck(...)`. `POST /parse_xml` zostaje jako **przestarzały alias**
   ścieżki sprzed wersjonowania — do usunięcia po migracji konsumentów. Błędy zwraca jako
   `ProblemDetails` (400/413/415/422) z `traceId`. Interfejsem są dwie strony, wystawiane
   bezwarunkowo: `GET /` — wizytówka usługi (szablon `src/Saga.Web/Pages/index.html`,
