@@ -13,6 +13,20 @@ default:
       - "runner_system_failure"
       - "api_failure"
       - "scheduler_failure"
+  hooks:
+    pre_get_sources_script:
+      - |
+        TMP_DIR="${CI_BUILDS_DIR}/${CI_PROJECT_PATH}.tmp"
+
+        if [ -d "${TMP_DIR}" ]; then
+          STALE="$(find "${TMP_DIR}" -maxdepth 1 -type f -name '*.lock')"
+
+          if [ -n "${STALE}" ]; then
+            echo "UWAGA: osierocone blokady gita w ${TMP_DIR} - usuwam:"
+            echo "${STALE}"
+            find "${TMP_DIR}" -maxdepth 1 -type f -name '*.lock' -exec rm -f {} \;
+          fi
+        fi
 
 stages:
   - "test"
