@@ -19,7 +19,11 @@ i zapisuje XML aktu prawnego dla każdego rozpoznanego dokumentu. Dokumenty, kt�
 nie uzna za akt prawny, są pomijane i wykazane w podsumowaniu przebiegu.
 
 ### Saga.Web
-Interfejs webowy. Przyjmuje upload wieloformatowy DOCX/PDF/TXT (limit 64MB). Gdy dokument nie jest aktem prawnym — wyświetla widok raportu klasyfikacji z opcją „parsuj mimo wszystko"; gdy jest aktem — renderuje stronę HTML z nawigacją po strukturze aktu prawnego.
+Web API (ASP.NET 10); z niego powstaje obraz kontenera. Przyjmuje upload DOCX (limit 64 MB)
+pod `POST /v1/convert` i odsyła XML aktu prawnego jako załącznik;
+`GET /health` jest sondą dla platformy wdrożeniowej. Błędy wracają jako `ProblemDetails`
+z `traceId`. Pod `/` stoi strona powitalna z odnośnikiem do dokumentacji API, którą serwuje
+Scalar pod `/scalar` (źródło: `/openapi/v1.json`).
 
 ## Szybki start
 
@@ -36,4 +40,7 @@ dotnet run --project src/Saga.Cli -- plik.docx --output wynik
 
 # Konwersja wsadowa całego katalogu (domyślnie *.docx, bez rekursji)
 dotnet run --project src/Saga.Cli -- katalog-z-ustawami --output katalog-xml
+
+# Web API lokalnie — strona powitalna pod / , dokumentacja pod /scalar
+dotnet run --project src/Saga.Web
 ```

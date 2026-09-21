@@ -92,9 +92,26 @@ celowo **poza** wersjonowaniem, bo ma przeżyć każdą zmianę kontraktu. `POST
 dalej jako przestarzały alias ścieżki sprzed wersjonowania.
 
 Parsuje ze strumienia przez `LegalDocumentParser.Parse(Stream, ...)` z `ParsePolicy.AlwaysParse` —
-klasyfikację niesie wynik, nie kod HTTP. Każda awaria wychodzi jako `ProblemDetails` z `traceId`
+klasyfikację niesie wynik, nie kod HTTP. Strumień bierze wprost z `IFormFile.OpenReadStream()`:
+dane formularza są już zbuforowane, więc strumień jest seekowalny i nie trzeba przepisywać
+dokumentu do pamięci. Każda awaria wychodzi jako `ProblemDetails` z `traceId`
 (400/413/415/422 oraz 500 z `UseExceptionHandler`); ciało dla 413 dokłada `UseStatusCodePages`,
 bo Kestrel odrzuca zbyt duże żądanie przed wejściem do endpointu.
+
+Interfejsem są dwie strony: `/` — wizytówka usługi z odnośnikiem do dokumentacji (szablon
+`Pages/index.html` wypełniany danymi wydania raz, przy starcie, przez `LandingPage`) oraz
+`/scalar` — dokumentacja API generowana ze `/openapi/v1.json`. Brak szablonu nie kładzie usługi:
+`/` wraca wtedy do przekierowania na `/scalar`.
+
+| Ścieżka | Rola |
+|---|---|
+| `Program.cs` | Kompozycja usługi: rejestracja serwisów, potok middleware, mapowanie endpointów |
+| `ConversionEndpoints.cs` | `POST /v1/convert` i jego przestarzały alias — wspólny handler i wspólny kontrakt odpowiedzi |
+| `OperationsEndpoints.cs` | `GET /health` |
+| `LandingPage.cs` | Strona powitalna pod `/` |
+| `OpenApiSetup.cs` | Nagłówek dokumentu OpenAPI, opisy grup i odpowiedzi, `traceId` w schemacie `ProblemDetails` |
+| `BuildInfo.cs` | Wersja i skrót commita odczytane z atrybutów zestawu |
+| `UploadLimits.cs` | Limit rozmiaru uploadu — jedno źródło dla Kestrela, treści błędu 413 i dokumentacji |
 
 
 ### 2.5 `Saga.Core.Tests` — Testy jednostkowe

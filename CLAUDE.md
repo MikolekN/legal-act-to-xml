@@ -48,7 +48,10 @@ docker build --build-arg VERSION=1.0.0 --tag saga-web:local .
   na gałęzi domyślnej publikujemy `X.Y.Z` **oraz** `latest`, a nie tylko `latest`; nie ma etapu
   `deployment_validation`, bo walidacja wdrożonej usługi działa spoza tego repozytorium.
 - **Progi pokrycia**: `COV_FAIL_UNDER=70` dla całości i `DIFF_FAIL_UNDER=80` dla linii zmienionych
-  w MR.
+  w MR. Próg różnicowy obejmuje wyłącznie projekty obecne w raporcie pokrycia (dziś `Saga.Core`
+  i `Saga.Model`) — strażnik w `diff-coverage` czyta listę z elementów `<package>` i pomija pliki
+  z projektów, których żaden test nie ładuje (`Saga.Cli`, `Saga.Web`), wypisując o tym ostrzeżenie.
+  Brak dopasowania jest błędem dopiero wtedy, gdy diff rusza projekt **objęty** raportem.
 
 ## Architektura
 
@@ -69,9 +72,10 @@ tools/CorpusValidator (poza sln)  ──► src/Saga.Core ──► src/Saga.Mod
   Wystawia `POST /v1/convert` (eksport XML przez `LegalDocumentConverter`) i `GET /health` (sonda
   dla platformy, celowo poza wersjonowaniem). `POST /parse_xml` zostaje jako **przestarzały alias**
   ścieżki sprzed wersjonowania — do usunięcia po migracji konsumentów. Błędy zwraca jako
-  `ProblemDetails` (400/413/415/422) z `traceId`. Interfejsem jest dokumentacja
-  API: `/openapi/v1.json` i Scalar pod `/scalar`, a `GET /` przekierowuje właśnie tam —
-  wystawiane bezwarunkowo.
+  `ProblemDetails` (400/413/415/422) z `traceId`. Interfejsem są dwie strony, wystawiane
+  bezwarunkowo: `GET /` — wizytówka usługi (szablon `src/Saga.Web/Pages/index.html`,
+  render w `LandingPage`) z przyciskiem do dokumentacji, oraz `/scalar` — dokumentacja API
+  generowana ze `/openapi/v1.json`. Gdy szablonu brakuje, `/` przekierowuje na `/scalar`.
 
 ### Hierarchia modelu dokumentu
 

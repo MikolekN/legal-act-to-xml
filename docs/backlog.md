@@ -84,6 +84,19 @@ i po przysłanianiu jej mocą wsteczną na wyjściu
   n→n+1, n→na→nb, wstawki § 89, w tym wieloliterowe Xa→Xaa→Xab) nie istnieją.
 - **Smoke-test na samym ZTP** — konwersja [ZTP-2026-300.md](ZTP-2026-300.md) → TXT z oczekiwaniem
   „rozporządzenie, wysoka pewność" i sparsowanymi jednostkami `§`.
+- **Testy `Saga.Web` i `Saga.Cli`** — żaden z tych projektów nie ma testu i **nie wchodzi do
+  raportu pokrycia**: `TEST_PROJECT` w `.gitlab-ci.yml` wskazuje wyłącznie `Saga.Core.Tests`,
+  które referencjonuje tylko `Saga.Core` i `Saga.Model`. Próg różnicowy ich więc nie obejmuje —
+  strażnik w `diff-coverage` liczy tylko pliki z projektów obecnych w raporcie (`<package>`)
+  i wypisuje ostrzeżenie o pominiętych; sam brak dopasowania przestał być błędem, bo dla projektu
+  bez testów nie ma czego dopasować. Konsekwencja: zmiany w `Saga.Web` i `Saga.Cli` przechodzą
+  bez żadnej bramki pokrycia. Żeby je objąć, trzeba dopisać testy — (a) `WebApplicationFactory`
+  w istniejącym `Saga.Core.Tests` (referencja do `Saga.Web` + `FrameworkReference
+  Microsoft.AspNetCore.App` + `public partial class Program`), kod Web wchodzi wtedy do wspólnego
+  raportu i CI nie wymaga zmian; albo (b) osobny `tests/Saga.Web.Tests`, czystsze, ale wymaga
+  przebudowy uruchamiania testów i scalania pokrycia z dwóch projektów.
+  Warte pokrycia w pierwszej kolejności: mapowanie wyjątków parsera na kody 400/415/422,
+  sanityzacja nazwy pliku w `Content-Disposition` i to, że `/` oraz `/health` odpowiadają.
 
 ## 5. Ryzyka do pilnowania przy zmianach
 
