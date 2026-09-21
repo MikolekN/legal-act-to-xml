@@ -120,25 +120,19 @@ namespace Saga.Core.Tests
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
-        [Fact]
-        public void SplitIntoSentences_OdstepNierozdzielajacy_NieJestGranica()
+        [Theory]
+        [InlineData("Zdanie pierwsze. Zdanie drugie.")]
+        [InlineData("Zdanie pierwsze.  Zdanie drugie.")]
+        [InlineData("Zdanie pierwsze. Zdanie drugie.")]
+        [InlineData("Zdanie pierwsze.\tZdanie drugie.")]
+        [InlineData("Zdanie pierwsze.\nZdanie drugie.")]
+        public void SplitIntoSentences_RodzajOdstepuNieZmieniaWyniku(string text)
         {
-            // UWAGA: to zachowanie wygląda na przeoczenie, a jest zabezpieczeniem — nie "naprawiać"
-            // przez potraktowanie U+00A0 jak zwykłej spacji.
-            //
-            // Polska typografia prawnicza wstawia odstęp nierozdzielający dokładnie tam, gdzie
-            // wiązanie jest nierozerwalne: "art.<NBSP>5", "Dz.<NBSP>U.", "„3a.<NBSP>Treść".
-            // Pomiar na pełnym korpusie (632 978 jednostek): z 23 283 miejsc "kropka + NBSP +
-            // wielka litera" tylko 65 to prawdziwe końce zdań, a 23 218 to skróty i oznaczenia
-            // jednostek. Zrównanie NBSP ze spacją dołożyłoby więc 357 fałszywych cięć na jedno
-            // odzyskane. Te 65 przypadków odzyskamy dopiero razem z wetem na oznaczenia i skróty.
-            //
-            // Szczegóły: docs/internal/wiedza-segmentacja-zdan.md §9.2
-            var text = "Przepis art. 5 Kodeksu stosuje się wprost.";
-
             var segments = ParsingFactories.SplitIntoSentences(text);
 
-            Assert.Single(segments);
+            Assert.Equal(2, segments.Count);
+            Assert.Equal("Zdanie pierwsze.", segments[0].Text);
+            Assert.Equal("Zdanie drugie.", segments[1].Text);
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
     }

@@ -123,7 +123,7 @@ namespace Saga.Core.Services.Parsing
             nextStart = dotIndex + 2;
 
             // 1. Kształt granicy: kropka + spacja.
-            if (text[dotIndex] != '.' || text[dotIndex + 1] != ' ')
+            if (text[dotIndex] != '.' || !char.IsWhiteSpace(text[dotIndex + 1]))
             {
                 return false;
             }
@@ -139,6 +139,9 @@ namespace Saga.Core.Services.Parsing
             {
                 return false;
             }
+
+            // Następne zdanie zaczyna się za całym ciągiem odstępu, nie za jednym znakiem.
+            nextStart = nextCharIndex;
 
             // 3. Weta lewego kontekstu — kropka należy do skrótu, nie kończy zdania.
             if (IsRokException(text, dotIndex))
