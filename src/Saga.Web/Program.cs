@@ -23,6 +23,8 @@ builder.Services.AddProblemDetails(options =>
 
 builder.Services.AddSagaOpenApi(builder.Environment);
 
+builder.Services.AddHealthChecks();
+
 builder.Services.Configure<FormOptions>(options => options.MultipartBodyLengthLimit = UploadLimits.MaxBytes);
 builder.WebHost.ConfigureKestrel(options => options.Limits.MaxRequestBodySize = UploadLimits.MaxBytes);
 

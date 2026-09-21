@@ -88,7 +88,17 @@ ale część plików pominięto lub nie udało się przetworzyć.
 
 ASP.NET 10 — usługa HTTP; web API repozytorium. Wystawia `POST /v1/convert` (dokument
 DOCX/PDF/TXT → XML aktu prawnego przez `LegalDocumentConverter`) oraz `GET /health` — sonda
-celowo **poza** wersjonowaniem, bo ma przeżyć każdą zmianę kontraktu. `POST /parse_xml` działa
+celowo **poza** wersjonowaniem, bo ma przeżyć każdą zmianę kontraktu.
+
+Sondy idą za konwencją CAISE, która rozdziela życie od gotowości: `GET /` odpowiada za życie
+(proces przyjmuje żądania), a `GET /health` za gotowość. Ta druga uruchamia kontrole
+zarejestrowane przez `AddHealthChecks()` i zwraca `HealthResponse` — stan zbiorczy plus mapę
+`dependencies` ze stanem każdej zależności z osobna. `Unhealthy` daje 503 (platforma ma wycofać
+instancję z ruchu), `Degraded` zostaje przy 200, bo usługa nadal obsługuje żądania. Rozdział jest
+istotny: awaria zależności nie może zgasić sondy życia, bo wtedy platforma ubija proces zamiast
+tylko odciąć go od ruchu. Lista kontroli jest dziś pusta — usługa nie zależy od niczego
+zewnętrznego. Odpowiedź nie niesie treści wyjątków, bo sonda jest nieuwierzytelniona; powód
+niesprawności podaje autor kontroli w `Description`. `POST /parse_xml` działa
 dalej jako przestarzały alias ścieżki sprzed wersjonowania.
 
 Parsuje ze strumienia przez `LegalDocumentParser.Parse(Stream, ...)` z `ParsePolicy.AlwaysParse` —
@@ -107,10 +117,12 @@ Interfejsem są dwie strony: `/` — wizytówka usługi z odnośnikiem do dokume
 |---|---|
 | `Program.cs` | Kompozycja usługi: rejestracja serwisów, potok middleware, mapowanie endpointów |
 | `ConversionEndpoints.cs` | `POST /v1/convert` i jego przestarzały alias — wspólny handler i wspólny kontrakt odpowiedzi |
-| `OperationsEndpoints.cs` | `GET /health` |
-| `LandingPage.cs` | Strona powitalna pod `/` |
+| `OperationsEndpoints.cs` | `GET /health` — sonda gotowości uruchamiająca kontrole zależności |
+| `HealthResponse.cs` | Treść odpowiedzi sondy: stan zbiorczy i mapa `dependencies` |
+| `LandingPage.cs` | Strona powitalna pod `/` (zarazem sonda życia) |
 | `OpenApiSetup.cs` | Nagłówek dokumentu OpenAPI, opisy grup i odpowiedzi, `traceId` w schemacie `ProblemDetails` |
 | `BuildInfo.cs` | Wersja i skrót commita odczytane z atrybutów zestawu |
+| `ServiceInfo.cs` | Nazwy, ścieżki i formaty używane w więcej niż jednym miejscu |
 | `UploadLimits.cs` | Limit rozmiaru uploadu — jedno źródło dla Kestrela, treści błędu 413 i dokumentacji |
 
 
