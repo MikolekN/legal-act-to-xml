@@ -96,11 +96,9 @@ namespace Saga.Core.Tests
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
-        [Fact(Skip = "Grupa E (weto warunkowe, 65 przeoczonych granic) — wymaga wcześniejszego domknięcia grup A i C.")]
+        [Fact(Skip = "Ograniczenie teoretyczne — pomiar nie znalazł ani jednego wystąpienia w korpusie.")]
         public void SplitIntoSentences_PublikatorNaKoncuZdania_JestGranica()
         {
-            // Weto na publikator jest dziś bezwarunkowe i patrzy wyłącznie w lewo, więc gubi
-            // prawdziwą granicę, gdy zdanie kończy się oznaczeniem dziennika.
             var text = "Zmiany ogłoszono w Dz. U. Przepis stosuje się od stycznia.";
 
             var segments = ParsingFactories.SplitIntoSentences(text);

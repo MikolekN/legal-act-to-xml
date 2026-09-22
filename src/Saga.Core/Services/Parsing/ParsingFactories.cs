@@ -95,7 +95,7 @@ namespace Saga.Core.Services.Parsing
             int startIndex = 0;
             for (int i = 0; i < text.Length - 1; i++)
             {
-                if (!IsSentenceBoundary(text, i, journalDesignations, out int sentenceEnd, out int nextStart))
+                if (!IsSentenceBoundary(text, i, startIndex, journalDesignations, out int sentenceEnd, out int nextStart))
                 {
                     continue;
                 }
@@ -117,6 +117,7 @@ namespace Saga.Core.Services.Parsing
         private static bool IsSentenceBoundary(
             string text,
             int dotIndex,
+            int sentenceStart,
             MatchCollection journalDesignations,
             out int sentenceEnd,
             out int nextStart)
@@ -159,7 +160,7 @@ namespace Saga.Core.Services.Parsing
             nextStart = nextCharIndex;
 
             // 3. Weta lewego kontekstu — kropka należy do skrótu, nie kończy zdania.
-            if (IsRokException(text, dotIndex))
+            if (IsRokException(text, dotIndex, sentenceStart))
             {
                 return false;
             }
@@ -183,13 +184,41 @@ namespace Saga.Core.Services.Parsing
         private static bool IsClosingQuote(char character)
             => character is '”' or '"' or '»';
 
+        private const string YearOrLongDate =
+            @"(?:\d{1,2}\s+(?:" + PolishDates.MonthAlternation + @")\s+)?\d{4}\s+r";
+
+        private static readonly Regex FrontedDatePattern = new(
+            @"^(?:W|Od|Do|Z|Za|Przez|Począwszy\s+od|Najpóźniej\s+do|Nie\s+później\s+niż)\s+"
+            + @"(?:terminie\s+do\s+|okresie\s+od\s+|roku\s+)?(?:dnia\s+)?"
+            + YearOrLongDate
+            // Daty: „W 2020 r. i 2021 r.", „Od dnia 1 marca 2023 r. do dnia 31 maja 2023 r."
+            + @"(?:\s*\.\s+(?:i|oraz|do|a\s+także)\s+(?:dnia\s+)?" + YearOrLongDate + @")*$",
+            RegexOptions.Compiled | RegexOptions.CultureInvariant);
+
         /// <summary>
-        /// Sprawdza czy kropka na pozycji `dotIndex` jest częścią wyrażenia "RRRR r."
+        /// Data w oznaczeniu aktu: „…ustawy z dnia 18 października 2006 r. o…",
+        /// „…decyzją Komisji Europejskiej z dnia 13 lipca 2012 r.".
         /// </summary>
-        private static bool IsRokException(string text, int dotIndex)
+        private static readonly Regex ActDesignationDatePattern = new(
+            @"(?<!\p{L})z\s+dnia\s+" + YearOrLongDate + "$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+        private static bool IsRokException(string text, int dotIndex, int sentenceStart)
         {
-            // Szukamy wzorca: cyfra cyfra cyfra cyfra spacja r .
-            // tj. "RRRR r."
+            if (!EndsWithYearAbbreviation(text, dotIndex))
+            {
+                return false;
+            }
+
+            var sentenceSoFar = text.AsSpan(sentenceStart, dotIndex - sentenceStart).Trim();
+
+            return FrontedDatePattern.IsMatch(sentenceSoFar)
+                || ActDesignationDatePattern.IsMatch(sentenceSoFar);
+        }
+
+        private static bool EndsWithYearAbbreviation(string text, int dotIndex)
+        {
+            // Szukamy wzorca: cyfra cyfra cyfra cyfra spacja r. tj. "RRRR r."
             if (dotIndex < 7) return false;
 
             // Sprawdź czy jest " r." przed dotIndex
