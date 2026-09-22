@@ -18,6 +18,7 @@ namespace Saga.Core.Tests
             Assert.Equal(2, segments.Count);
             Assert.Equal("To jest pierwsze zdanie.", segments[0].Text);
             Assert.Equal("To jest drugie zdanie.", segments[1].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
@@ -31,6 +32,7 @@ namespace Saga.Core.Tests
             // Powinno być jedno zdanie, które zawiera "Dz. U."
             Assert.Single(segments);
             Assert.Contains("Dz. U. z 2023 r.", segments[0].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
@@ -44,6 +46,7 @@ namespace Saga.Core.Tests
             // Powinno być jedno zdanie, które zawiera rok
             Assert.Single(segments);
             Assert.Contains("2024 r.", segments[0].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
@@ -56,6 +59,7 @@ namespace Saga.Core.Tests
             // Pierwsze zdanie zawiera dwa roki, drugie to osobne zdanie
             Assert.Equal(2, segments.Count);
             Assert.Contains("2020 r. i 2021 r.", segments[0].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
@@ -69,6 +73,7 @@ namespace Saga.Core.Tests
             Assert.Equal(2, segments.Count);
             Assert.Contains("Dz. U.", segments[0].Text);
             Assert.Contains("2024 r.", segments[1].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
@@ -77,6 +82,7 @@ namespace Saga.Core.Tests
             var segments = ParsingFactories.SplitIntoSentences(string.Empty);
 
             Assert.Empty(segments);
+            SentenceSegmentationInvariants.AssertHolds(string.Empty, segments);
         }
 
         [Fact]
@@ -88,6 +94,7 @@ namespace Saga.Core.Tests
 
             Assert.Single(segments);
             Assert.Equal(text, segments[0].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
@@ -97,38 +104,36 @@ namespace Saga.Core.Tests
 
             var segments = ParsingFactories.SplitIntoSentences(text);
 
-            // Powinny być 2 zdania, bo każde zaczyna się wielką literą (w tym polską)
             Assert.Equal(2, segments.Count);
-        }
-
-        [Fact]
-        public void SplitIntoSentences_DoctorTitle_SeparatesAfterTitle()
-        {
-            // "Dr." po którym następuje wielka litera jest traktowany jako koniec zdania
-            // Tak naprawdę jest to problem z prostą heurystyką - moglibyśmy dodać 
-            // wyjątek dla tytułów, ale na razie testujemy rzeczywiste zachowanie
-            var text = "Dr. Jan Kowalski jest lekarzem.";
-
-            var segments = ParsingFactories.SplitIntoSentences(text);
-
-            // Rzeczywistość: jest 2 segmenty (Dr. | Jan Kowalski...)
-            // To jest znane ograniczenie - mogłoby być naprawione dodając listę tytułów
-            Assert.Equal(2, segments.Count);
-            Assert.Equal("Dr.", segments[0].Text);
-            Assert.Equal("Jan Kowalski jest lekarzem.", segments[1].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
         public void SplitIntoSentences_DzUWithoutSpaceAfterDz_StillDetects()
         {
-            // Przypadek "Dz.U." bez spacji między Dz. i U.
             var text = "W ustawie z dnia (Dz.U. z 2023 r. poz. 227) wprowadza się zmiany.";
 
             var segments = ParsingFactories.SplitIntoSentences(text);
 
-            // Powinno być jedno zdanie
             Assert.Single(segments);
             Assert.Contains("Dz.U.", segments[0].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
+        }
+
+        [Theory]
+        [InlineData("Zdanie pierwsze. Zdanie drugie.")]
+        [InlineData("Zdanie pierwsze.  Zdanie drugie.")]
+        [InlineData("Zdanie pierwsze. Zdanie drugie.")]
+        [InlineData("Zdanie pierwsze.\tZdanie drugie.")]
+        [InlineData("Zdanie pierwsze.\nZdanie drugie.")]
+        public void SplitIntoSentences_RodzajOdstepuNieZmieniaWyniku(string text)
+        {
+            var segments = ParsingFactories.SplitIntoSentences(text);
+
+            Assert.Equal(2, segments.Count);
+            Assert.Equal("Zdanie pierwsze.", segments[0].Text);
+            Assert.Equal("Zdanie drugie.", segments[1].Text);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
     }
 }

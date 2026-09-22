@@ -95,34 +95,13 @@ namespace Saga.Core.Services.Parsing
             int startIndex = 0;
             for (int i = 0; i < text.Length - 1; i++)
             {
-                if (text[i] == '.' && i + 1 < text.Length && text[i + 1] == ' ')
+                if (!IsSentenceBoundary(text, i, startIndex, journalDesignations, out int sentenceEnd, out int nextStart))
                 {
-                    // Znaleziono potencjalny koniec zdania (kropka + spacja)
-                    // Sprawdź czy następuje wielka litera
-                    int nextCharIndex = i + 2;
-                    while (nextCharIndex < text.Length && char.IsWhiteSpace(text[nextCharIndex]))
-                    {
-                        nextCharIndex++;
-                    }
-
-                    if (nextCharIndex >= text.Length || !IsUpperCaseLetter(text[nextCharIndex]))
-                    {
-                        // Brak wielkiej litery - to nie koniec zdania
-                        continue;
-                    }
-
-                    // Jest wielka litera, ale sprawdź wyjątki
-                    if (IsRokException(text, i) || JournalDesignationRecognizer.Covers(journalDesignations, i))
-                    {
-                        // To jest wyjątek - nie dziel tutaj
-                        continue;
-                    }
-
-                    // To jest prawdziwy koniec zdania
-                    string sentence = text.Substring(startIndex, i - startIndex + 1);
-                    result.Add(sentence);
-                    startIndex = i + 2;
+                    continue;
                 }
+
+                result.Add(text.Substring(startIndex, sentenceEnd - startIndex + 1));
+                startIndex = nextStart;
             }
 
             // Dodaj pozostałą część tekstu jako ostatnie zdanie
@@ -135,16 +114,131 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Sprawdza czy kropka na pozycji `dotIndex` jest częścią wyrażenia "RRRR r."
+        /// Rozstrzyga, czy znak na pozycji <paramref name="terminatorIndex"/> kończy zdanie.
         /// </summary>
-        private static bool IsRokException(string text, int dotIndex)
+        private static bool IsSentenceBoundary(
+            string text,
+            int terminatorIndex,
+            int sentenceStart,
+            MatchCollection journalDesignations,
+            out int sentenceEnd,
+            out int nextStart)
         {
-            // Szukamy wzorca: cyfra cyfra cyfra cyfra spacja r .
-            // tj. "RRRR r."
+            int dotIndex = terminatorIndex;
+            sentenceEnd = dotIndex;
+            nextStart = dotIndex + 2;
+
+            if (!IsSentenceTerminator(text[dotIndex]))
+            {
+                return false;
+            }
+
+            // 1. Kształt granicy: znak kończący, ewentualny cudzysłów domykający cytat, odstęp.
+            int afterDot = dotIndex + 1;
+            while (afterDot < text.Length && IsClosingQuote(text[afterDot]))
+            {
+                afterDot++;
+            }
+
+            if (afterDot >= text.Length || !char.IsWhiteSpace(text[afterDot]))
+            {
+                return false;
+            }
+
+            sentenceEnd = afterDot - 1;
+
+            // 2. Prawy kontekst: pierwszy niebiały znak musi być wielką literą.
+            int nextCharIndex = afterDot;
+            while (nextCharIndex < text.Length && char.IsWhiteSpace(text[nextCharIndex]))
+            {
+                nextCharIndex++;
+            }
+
+            if (nextCharIndex >= text.Length || !char.IsUpper(text[nextCharIndex]))
+            {
+                return false;
+            }
+
+            // Następne zdanie zaczyna się za całym ciągiem odstępu, nie za jednym znakiem.
+            nextStart = nextCharIndex;
+
+            // 3. Weta lewego kontekstu — kropka należy do skrótu, nie kończy zdania.
+            if (text[dotIndex] != '.')
+            {
+                return true;
+            }
+
+            if (IsRokException(text, dotIndex, sentenceStart))
+            {
+                return false;
+            }
+
+            if (JournalDesignationRecognizer.Covers(journalDesignations, dotIndex))
+            {
+                return false;
+            }
+
+            if (AbbreviationRecognizer.EndsAbbreviation(text, dotIndex))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Znak kończący zdanie. Poza kropką także znak zapytania i wykrzyknik — występują
+        /// w ankietach i formularzach stanowiących załączniki do aktów („Czy posiada Pani
+        /// zaległości podatkowe? Proszę zakreślić właściwe pole.").
+        /// </summary>
+        private static bool IsSentenceTerminator(char character)
+            => character is '.' or '?' or '!';
+
+        /// <summary>
+        /// Cudzysłów domykający brzmienie. Kanał DOCX daje „…”, kanał TXT/PDF proste "…"
+        /// </summary>
+        private static bool IsClosingQuote(char character)
+            => character is '”' or '"' or '»';
+
+        private const string YearOrLongDate =
+            @"(?:\d{1,2}\s+(?:" + PolishDates.MonthAlternation + @")\s+)?\d{4}\s+r";
+
+        private static readonly Regex FrontedDatePattern = new(
+            @"^(?:W|Od|Do|Z|Za|Przez|Począwszy\s+od|Najpóźniej\s+do|Nie\s+później\s+niż)\s+"
+            + @"(?:terminie\s+do\s+|okresie\s+od\s+|roku\s+)?(?:dnia\s+)?"
+            + YearOrLongDate
+            // Daty: „W 2020 r. i 2021 r.", „Od dnia 1 marca 2023 r. do dnia 31 maja 2023 r."
+            + @"(?:\s*\.\s+(?:i|oraz|do|a\s+także)\s+(?:dnia\s+)?" + YearOrLongDate + @")*$",
+            RegexOptions.Compiled | RegexOptions.CultureInvariant);
+
+        /// <summary>
+        /// Data w oznaczeniu aktu: „…ustawy z dnia 18 października 2006 r. o…",
+        /// „…decyzją Komisji Europejskiej z dnia 13 lipca 2012 r.".
+        /// </summary>
+        private static readonly Regex ActDesignationDatePattern = new(
+            @"(?<!\p{L})z\s+dnia\s+" + YearOrLongDate + "$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+        private static bool IsRokException(string text, int dotIndex, int sentenceStart)
+        {
+            if (!EndsWithYearAbbreviation(text, dotIndex))
+            {
+                return false;
+            }
+
+            var sentenceSoFar = text.AsSpan(sentenceStart, dotIndex - sentenceStart).Trim();
+
+            return FrontedDatePattern.IsMatch(sentenceSoFar)
+                || ActDesignationDatePattern.IsMatch(sentenceSoFar);
+        }
+
+        private static bool EndsWithYearAbbreviation(string text, int dotIndex)
+        {
+            // Szukamy wzorca: cyfra cyfra cyfra cyfra spacja r. tj. "RRRR r."
             if (dotIndex < 7) return false;
 
             // Sprawdź czy jest " r." przed dotIndex
-            if (text[dotIndex - 1] != 'r' || text[dotIndex - 2] != ' ')
+            if ((text[dotIndex - 1] != 'r' && text[dotIndex - 1] != 'R') || !char.IsWhiteSpace(text[dotIndex - 2]))
                 return false;
 
             // Sprawdź czy poprzedzające to 4 cyfry (rok)
@@ -159,14 +253,6 @@ namespace Saga.Core.Services.Parsing
 
             // Powinna być dokładnie 4 cyfry na rok
             return digitCount == 4;
-        }
-
-        /// <summary>
-        /// Sprawdza czy znak to wielka litera (w tym polskie)
-        /// </summary>
-        private static bool IsUpperCaseLetter(char c)
-        {
-            return char.IsUpper(c) || "ĄĆĘŁŃÓŚŹŻ".Contains(c);
         }
 
         /// <summary>

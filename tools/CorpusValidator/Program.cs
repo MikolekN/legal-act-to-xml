@@ -78,6 +78,18 @@ if (args.Length > 2 && args[0] == "--xml-corpus")
 if (args.Length > 2 && args[0] == "--compare-eif")
     return CorpusValidator.EntryIntoForceComparison.Run(args[1], args[2], args.Length > 3 ? args[3] : null);
 
+// Raport podziału na zdania — klasyfikacja każdej granicy wyprodukowanej przez splitter.
+// Pętla zwrotna dla grup poprawek A–E (docs/internal/wiedza-segmentacja-zdan.md §13): przebieg
+// PRZED i PO zmianie reguły, potem diff dwóch CSV. Kryterium: własna kategoria spada do zera,
+// pozostałe nie drgną.
+//   dotnet run --project tools/CorpusValidator -- --sentence-split <root> [<raport.txt>]
+if (args.Length > 0 && args[0] == "--sentence-split")
+{
+    var splitRoot = args.Length > 1 ? args[1] : "documents";
+    var splitReport = args.Length > 2 ? args[2] : "raport-zdania.txt";
+    return CorpusValidator.SentenceSplitReport.Run(splitRoot, splitReport);
+}
+
 if (args.Length > 0 && args[0] == "--entry-into-force")
 {
     var eifRoot = args.Length > 1 ? args[1] : "documents";

@@ -92,31 +92,36 @@ namespace Saga.Core.Tests
         [Fact]
         public void SplitIntoSentences_SingleSentence_ReturnsSingleSegment()
         {
-            var segments = ParsingFactories.SplitIntoSentences("Przepis stosuje się odpowiednio.");
+            var text = "Przepis stosuje się odpowiednio.";
+            var segments = ParsingFactories.SplitIntoSentences(text);
             Assert.Single(segments);
             Assert.Equal("Przepis stosuje się odpowiednio.", segments[0].Text);
             Assert.Equal(1, segments[0].Order);
             Assert.Equal(TextSegmentType.Sentence, segments[0].Type);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
         public void SplitIntoSentences_TwoSentences_SplitsCorrectly()
         {
-            var segments = ParsingFactories.SplitIntoSentences(
-                "Przepis wchodzi w życie z dniem ogłoszenia. Minister właściwy wydaje rozporządzenie.");
+            var text = "Przepis wchodzi w życie z dniem ogłoszenia. Minister właściwy wydaje rozporządzenie.";
+            var segments = ParsingFactories.SplitIntoSentences(text);
             Assert.Equal(2, segments.Count);
             Assert.Equal("Przepis wchodzi w życie z dniem ogłoszenia.", segments[0].Text);
             Assert.Equal("Minister właściwy wydaje rozporządzenie.", segments[1].Text);
             Assert.Equal(1, segments[0].Order);
             Assert.Equal(2, segments[1].Order);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
         public void SplitIntoSentences_DotWithoutUppercase_DoesNotSplit()
         {
             // po "ust." jest spacja ale mała litera - nie jest to podział zdania
-            var segments = ParsingFactories.SplitIntoSentences("w ust. 2 pkt 3 dodaje się lit. b");
+            var text = "w ust. 2 pkt 3 dodaje się lit. b";
+            var segments = ParsingFactories.SplitIntoSentences(text);
             Assert.Single(segments);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         [Fact]
@@ -133,6 +138,7 @@ namespace Saga.Core.Tests
             var segments = ParsingFactories.SplitIntoSentences(text);
             Assert.Equal(3, segments.Count);
             Assert.Equal(3, segments[2].Order);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
         // --- BuilderIntegration: ContentText bez numeru + TextSegments ---
