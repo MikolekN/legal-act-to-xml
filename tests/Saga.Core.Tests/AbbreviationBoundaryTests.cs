@@ -25,6 +25,9 @@ namespace Saga.Core.Tests
         [InlineData("gen.", "Dowódcą jest gen. Anna Kowalska powołana przez Prezydenta.")]
         [InlineData("al.", "Siedziba mieści się przy al. Jerozolimskich 87 w Warszawie.")]
         [InlineData("pl.", "Zgromadzenie odbywa się na pl. Zamkowym w godzinach popołudniowych.")]
+        [InlineData("cz.", "Wysokość wynagrodzenia wskazano w cz. I pkt 18 załącznika.")]
+        [InlineData("dz.", "Ustawę ogłoszono w Dz. Urzędowym Ministra Zdrowia.")]
+        [InlineData("np.", "Kategorię zdrowia określono w innej służbie, np. W wojsku albo w Policji.")]
         public void SplitIntoSentences_Skrot_NieJestGranica(string skrot, string text)
         {
             Assert.NotNull(skrot);

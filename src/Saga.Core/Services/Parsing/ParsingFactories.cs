@@ -95,12 +95,12 @@ namespace Saga.Core.Services.Parsing
             int startIndex = 0;
             for (int i = 0; i < text.Length - 1; i++)
             {
-                if (!IsSentenceBoundary(text, i, journalDesignations, out int nextStart))
+                if (!IsSentenceBoundary(text, i, journalDesignations, out int sentenceEnd, out int nextStart))
                 {
                     continue;
                 }
 
-                result.Add(text.Substring(startIndex, i - startIndex + 1));
+                result.Add(text.Substring(startIndex, sentenceEnd - startIndex + 1));
                 startIndex = nextStart;
             }
 
@@ -118,18 +118,33 @@ namespace Saga.Core.Services.Parsing
             string text,
             int dotIndex,
             MatchCollection journalDesignations,
+            out int sentenceEnd,
             out int nextStart)
         {
+            sentenceEnd = dotIndex;
             nextStart = dotIndex + 2;
 
-            // 1. Kształt granicy: kropka + spacja.
-            if (text[dotIndex] != '.' || !char.IsWhiteSpace(text[dotIndex + 1]))
+            if (text[dotIndex] != '.')
             {
                 return false;
             }
 
+            // 1. Kształt granicy: kropka, ewentualny cudzysłów domykający cytat, odstęp.
+            int afterDot = dotIndex + 1;
+            while (afterDot < text.Length && IsClosingQuote(text[afterDot]))
+            {
+                afterDot++;
+            }
+
+            if (afterDot >= text.Length || !char.IsWhiteSpace(text[afterDot]))
+            {
+                return false;
+            }
+
+            sentenceEnd = afterDot - 1;
+
             // 2. Prawy kontekst: pierwszy niebiały znak musi być wielką literą.
-            int nextCharIndex = dotIndex + 2;
+            int nextCharIndex = afterDot;
             while (nextCharIndex < text.Length && char.IsWhiteSpace(text[nextCharIndex]))
             {
                 nextCharIndex++;
@@ -163,6 +178,12 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Cudzysłów domykający brzmienie. Kanał DOCX daje „…”, kanał TXT/PDF proste "…"
+        /// </summary>
+        private static bool IsClosingQuote(char character)
+            => character is '”' or '"' or '»';
+
+        /// <summary>
         /// Sprawdza czy kropka na pozycji `dotIndex` jest częścią wyrażenia "RRRR r."
         /// </summary>
         private static bool IsRokException(string text, int dotIndex)
@@ -172,7 +193,7 @@ namespace Saga.Core.Services.Parsing
             if (dotIndex < 7) return false;
 
             // Sprawdź czy jest " r." przed dotIndex
-            if (text[dotIndex - 1] != 'r' || text[dotIndex - 2] != ' ')
+            if ((text[dotIndex - 1] != 'r' && text[dotIndex - 1] != 'R') || !char.IsWhiteSpace(text[dotIndex - 2]))
                 return false;
 
             // Sprawdź czy poprzedzające to 4 cyfry (rok)

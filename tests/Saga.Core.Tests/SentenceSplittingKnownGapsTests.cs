@@ -70,7 +70,7 @@ namespace Saga.Core.Tests
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
-        [Fact(Skip = "Grupa D (wersaliki, 98 błędnych granic) — patrz §13 dokumentu wiedzy.")]
+        [Fact]
         public void SplitIntoSentences_NaglowekWersalikami_NieJestGranica()
         {
             // W tekście pisanym kapitalikami warunek "po kropce stoi wielka litera" jest spełniony
@@ -83,7 +83,7 @@ namespace Saga.Core.Tests
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
-        [Fact(Skip = "Grupa D (interpunkcja granicy, 5 przeoczonych granic) — patrz §13 dokumentu wiedzy.")]
+        [Fact]
         public void SplitIntoSentences_CudzyslowZamykajacy_JestGranica()
         {
             // Granica przeoczona: po kropce stoi cudzysłów zamykający, więc kształt "kropka + spacja"
