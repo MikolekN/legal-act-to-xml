@@ -154,6 +154,11 @@ namespace Saga.Core.Services.Parsing
                 return false;
             }
 
+            if (AbbreviationRecognizer.EndsAbbreviation(text, dotIndex))
+            {
+                return false;
+            }
+
             return true;
         }
 

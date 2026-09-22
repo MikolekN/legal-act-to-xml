@@ -59,23 +59,10 @@ namespace Saga.Core.Tests
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
-        [Fact(Skip = "Grupa B (inicjały i tytuły osobowe) — tytuł przed nazwiskiem.")]
+        [Fact]
         public void SplitIntoSentences_TytulPrzedNazwiskiem_NieJestGranica()
         {
             var text = "Dr. Jan Kowalski jest lekarzem.";
-
-            var segments = ParsingFactories.SplitIntoSentences(text);
-
-            Assert.Single(segments);
-            SentenceSegmentationInvariants.AssertHolds(text, segments);
-        }
-
-        [Fact(Skip = "Grupa C (skróty rzeczowe i adresowe, 799 błędnych granic) — patrz §13 dokumentu wiedzy.")]
-        public void SplitIntoSentences_SkrotNazwyWlasnej_NieJestGranica()
-        {
-            // Czołówkę skrótów w korpusie tworzą nazwy własne i adresy ("m.", "im.", "ul.", "ds."),
-            // a nie skróty prawnicze.
-            var text = "Instytut Medycyny Wsi im. Witolda Chodźki prowadzi badania naukowe.";
 
             var segments = ParsingFactories.SplitIntoSentences(text);
 
