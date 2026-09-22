@@ -50,6 +50,18 @@ namespace Saga.Model
         /// </summary>
         public DateTime RetroactiveFrom { get; set; }
 
+        /// <summary>
+        /// Interpunkcja następująca po cytacie w zdaniu nowelizującym
+        /// (np. ',' w 'pkt 5 otrzymuje brzmienie: „…”,').
+        /// </summary>
+        public string? TrailingPunctuation { get; set; }
+
+        /// <summary>Czy treść nowelizacji otwierał cudzysłów.</summary>
+        public bool HasOpeningQuote { get; set; }
+
+        /// <summary>Czy treść nowelizacji zamykał cudzysłów.</summary>
+        public bool HasClosingQuote { get; set; }
+
         public override string ToString()
         {
             var targetStr = string.Join(", ", Targets.Select(t => t.ToString()));

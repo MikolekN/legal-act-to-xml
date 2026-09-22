@@ -149,6 +149,8 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
+            var quotes = TrimQuoteBoundaries(collector);
+
             // Faza 2: budowanie treści nowelizacji
             var buildInput = new AmendmentBuildInput(
                 collector.Paragraphs,
@@ -160,11 +162,60 @@ namespace Saga.Core.Services.Parsing
             // Faza 3: finalizacja — detekcja operacji, linkowanie celów/JournalInfo,
             // przypisanie do właściciela, walidacja
             var finalizerInput = new AmendmentFinalizerInput(content, collector, context);
-            _amendmentFinalizer.Finalize(finalizerInput);
+            var amendment = _amendmentFinalizer.Finalize(finalizerInput);
+
+            if (amendment != null)
+            {
+                amendment.TrailingPunctuation = quotes.Punctuation;
+                amendment.HasOpeningQuote = quotes.HasOpening;
+                amendment.HasClosingQuote = quotes.HasClosing;
+            }
 
             collector.Reset();
             context.AmendmentOwner = null;
         }
+
+        /// <summary>
+        /// Elementy cytatu zdjęte z nowelizacji: obecność cudzysłowu otwierającego
+        /// i zamykającego oraz interpunkcja następująca po cytacie.
+        /// </summary>
+        internal readonly record struct QuoteBoundaries(bool HasOpening, bool HasClosing, string? Punctuation);
+
+        /// <summary>
+        /// Zdejmuje graniczne cudzysłowy cytatu.
+        /// Zwraca zdjętą interpunkcję (np. ',' z '…”,').
+        /// </summary>
+        internal static QuoteBoundaries TrimQuoteBoundaries(AmendmentCollector collector)
+        {
+            if (collector.Count == 0)
+                return default;
+
+            var first = collector.Paragraphs[0];
+            var trimmedText = OpeningQuotePattern.Replace(first.Text, "", 1);
+            var hasOpening = trimmedText.Length != first.Text.Length;
+            first.Text = trimmedText;
+
+            var last = collector.Paragraphs[^1];
+            var match = ClosingQuotePattern.Match(last.Text);
+            if (!match.Success)
+                return new QuoteBoundaries(hasOpening, false, null);
+
+            last.Text = last.Text[..match.Index].TrimEnd();
+            var punctuation = match.Groups["punct"].Value;
+            return new QuoteBoundaries(hasOpening, true, punctuation.Length > 0 ? punctuation : null);
+        }
+
+        /// <summary>Otwierający cudzysłów cytatu na początku pierwszego akapitu.</summary>
+        private static readonly System.Text.RegularExpressions.Regex OpeningQuotePattern = new(
+            @"^\s*[„""]",
+            System.Text.RegularExpressions.RegexOptions.Compiled);
+
+        /// <summary>
+        /// Zamykający cudzysłów cytatu na końcu ostatniego akapitu z opcjonalną interpunkcją.
+        /// </summary>
+        private static readonly System.Text.RegularExpressions.Regex ClosingQuotePattern = new(
+            @"[”""]\s*(?<punct>[,;.])?\s*$",
+            System.Text.RegularExpressions.RegexOptions.Compiled);
 
         /// <summary>
         /// Sprawdza czy przetworzony akapit zawiera zwrot rozpoczynający nowelizację.

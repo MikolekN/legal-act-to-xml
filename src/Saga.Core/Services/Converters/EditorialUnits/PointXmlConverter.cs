@@ -25,10 +25,9 @@ namespace Saga.Core.Services.Converters
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(point.TextSegments, previousSentenceContext, textSectionElement);
-            var amendmentElements = AmendmentXmlConverter.ToXml(point.Amendment, textSectionElement.LastNode);
-            if (!string.IsNullOrEmpty(point.ContentText) || (amendmentElements != null && amendmentElements.Any()))
+            AmendmentXmlConverter.ToXml(point.Amendment, textSectionElement.LastNode);
+            if (!string.IsNullOrEmpty(point.ContentText))
             {
-                textSectionElement.Add(amendmentElements);
                 pointElement.Add(textSectionElement);
             }
 

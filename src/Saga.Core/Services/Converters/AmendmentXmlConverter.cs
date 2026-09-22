@@ -10,27 +10,88 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class AmendmentXmlConverter
     {
-        internal static IEnumerable<XElement>? ToXml(Amendment? amendment, XNode? sentence = null)
+        internal static void ToXml(Amendment? amendment, XNode? sentence = null)
         {
             if (amendment is null)
-                return null;
+                return;
 
             if (amendment.OperationType == AmendmentOperationType.Repeal)
             {
                 AddRepealInstruction(amendment, sentence);
-                return null;
+                return;
             }
 
             if (amendment.Content is null)
-                return null;
+                return;
 
-            var citationElements = new List<XElement>();
+            var blocks = new List<XElement>();
 
-            AddPlainTextContent(amendment, sentence);
-            AddStructuredContentItems(amendment, sentence);
-            AddCommonParts(amendment, sentence);
+            AddPlainTextContent(amendment, sentence, blocks);
+            AddStructuredContentItems(amendment, sentence, blocks);
+            AddCommonParts(amendment, sentence, blocks);
 
-            return citationElements;
+            ApplyQuotationMarks(amendment, blocks, sentence);
+        }
+
+        /// <summary>
+        /// Rozdziela cudzysłowy cytatu pomiędzy jego bloki: otwierający trafia do pierwszego,
+        /// zamykający do ostatniego. Atrybut 'cudzyslowy' jest maską bitową
+        /// (1 = otwiera, 2 = zamyka, 3 = oba, 0 = blok środkowy).
+        /// </summary>
+        private static void ApplyQuotationMarks(Amendment amendment, List<XElement> blocks, XNode? sentence)
+        {
+            var punctuation = amendment.TrailingPunctuation;
+            var punctuationConsumed = false;
+
+            for (var i = 0; i < blocks.Count; i++)
+            {
+                var block = blocks[i];
+                var opens = i == 0 && amendment.HasOpeningQuote;
+                var closes = i == blocks.Count - 1 && amendment.HasClosingQuote;
+
+                if (IsTextCitation(block))
+                {
+                    // Cudzysłowy dosłownie w treści — atrybut ich nie powiela.
+                    var closingSuffix = closes ? ClosingQuote + punctuation : null;
+                    if (closes && punctuation is { Length: > 0 })
+                        punctuationConsumed = true;
+
+                    ApplyLiteralQuotes(block, opens ? OpeningQuote : null, closingSuffix);
+                    SetQuotationAttribute(block, 0);
+                    continue;
+                }
+
+                SetQuotationAttribute(block, (opens ? 1 : 0) + (closes ? 2 : 0));
+            }
+
+            if (!punctuationConsumed && punctuation is { Length: > 0 } trailing &&
+                sentence is XElement sentenceElement)
+            {
+                sentenceElement.Add(trailing);
+            }
+        }
+
+        private const string OpeningQuote = "„";
+        private const string ClosingQuote = "”";
+
+        private static bool IsTextCitation(XElement element) =>
+            element.Name.LocalName == XmlConverterConstants.Contents.Citation.Text.Element;
+
+        private static void SetQuotationAttribute(XElement element, int value) =>
+            element.SetAttributeValue(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute, value);
+
+        private static void ApplyLiteralQuotes(XElement citation, string? prefix, string? suffix)
+        {
+            XNamespace ns = XmlConverterConstants.Namespace;
+            var textElements = citation.Elements(ns + XmlConverterConstants.Contents.Citation.Text.Content).ToList();
+            if (textElements.Count == 0)
+                return;
+
+            if (prefix is { Length: > 0 })
+                textElements[0].Value = prefix + textElements[0].Value;
+
+            if (suffix is { Length: > 0 })
+                textElements[^1].Value += suffix;
         }
 
         private static string BuildActUri(Amendment amendment) =>
@@ -107,32 +168,33 @@ namespace Saga.Core.Services.Converters
             zdanie.Add(uchyl);
         }
 
-        private static void AddPlainTextContent(Amendment? amendment, XNode? sentence)
+        private static void AddPlainTextContent(Amendment? amendment, XNode? sentence, List<XElement> blocks)
         {
             var plainText = amendment?.Content?.PlainText;
             if (plainText == null) return;
-            AddTextCitation(amendment!, sentence, plainText);
+            AddTextCitation(amendment!, sentence, plainText, blocks);
         }
 
-        private static void AddCommonParts(Amendment? amendment, XNode? sentence)
+        private static void AddCommonParts(Amendment? amendment, XNode? sentence, List<XElement> blocks)
         {
             var commonParts = amendment?.Content?.CommonParts;
             if (commonParts == null) return;
 
             foreach (var commonPart in commonParts)
-                AddTextCitation(amendment!, sentence, commonPart.ContentText);
+                AddTextCitation(amendment!, sentence, commonPart.ContentText, blocks);
         }
 
-        private static void AddTextCitation(Amendment amendment, XNode? sentence, string text)
+        private static void AddTextCitation(Amendment amendment, XNode? sentence, string text, List<XElement> blocks)
         {
             var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element,
                 Element(XmlConverterConstants.Contents.Citation.Text.Content, text));
             ApplyAttributes(citation, amendment, isStructural: false);
             if (sentence is XElement zdanie)
                 zdanie.Add(citation);
+            blocks.Add(citation);
         }
 
-        private static void AddStructuredContentItems(Amendment? amendment, XNode? sentence)
+        private static void AddStructuredContentItems(Amendment? amendment, XNode? sentence, List<XElement> blocks)
         {
             var content = amendment?.Content;
             if (content == null) return;
@@ -150,6 +212,7 @@ namespace Saga.Core.Services.Converters
                 citation.Add(elements);
                 if (sentence is XElement zdanie)
                     zdanie.Add(citation);
+                blocks.Add(citation);
             }
         }
 

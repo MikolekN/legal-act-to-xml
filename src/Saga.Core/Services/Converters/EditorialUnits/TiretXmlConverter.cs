@@ -22,10 +22,9 @@ namespace Saga.Core.Services.Converters
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(tiret.TextSegments, previousSentenceContext, textSectionElement);
-            var amendmentElements = AmendmentXmlConverter.ToXml(tiret.Amendment, textSectionElement.LastNode);
-            if (!string.IsNullOrEmpty(tiret.ContentText) || (amendmentElements != null && amendmentElements.Any()))
+            AmendmentXmlConverter.ToXml(tiret.Amendment, textSectionElement.LastNode);
+            if (!string.IsNullOrEmpty(tiret.ContentText))
             {
-                textSectionElement.Add(amendmentElements);
                 tiretElement.Add(textSectionElement);
             }
 

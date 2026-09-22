@@ -10,7 +10,10 @@ namespace Saga.Core.Services.Parsing
     public sealed record CollectedAmendmentParagraph(
         string Text,
         string? StyleId,
-        AmendmentStyleInfo? StyleInfo);
+        AmendmentStyleInfo? StyleInfo)
+    {
+        public string Text { get; set; } = Text;
+    }
 
     /// <summary>
     /// Bufor akapitow nowelizacji. Zbiera akapity od momentu wejscia w tryb nowelizacji
