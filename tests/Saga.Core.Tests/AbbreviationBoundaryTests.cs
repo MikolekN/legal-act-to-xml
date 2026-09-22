@@ -28,6 +28,11 @@ namespace Saga.Core.Tests
         [InlineData("cz.", "Wysokość wynagrodzenia wskazano w cz. I pkt 18 załącznika.")]
         [InlineData("dz.", "Ustawę ogłoszono w Dz. Urzędowym Ministra Zdrowia.")]
         [InlineData("np.", "Kategorię zdrowia określono w innej służbie, np. W wojsku albo w Policji.")]
+        [InlineData("pn.", "Dofinansowanie otrzymał projekt pn. Rozwój infrastruktury drogowej w gminie.")]
+        [InlineData("tzw.", "Przepisy stosuje się do tzw. Małego ZUS-u plus na zasadach dotychczasowych.")]
+        [InlineData("tj.", "Organ nadzoru, tj. Komisja Nadzoru Finansowego, wydaje zezwolenie.")]
+        [InlineData("m.in.", "Rozporządzenie określa m.in. Wykaz substancji objętych ograniczeniem.")]
+        [InlineData("godz.", "Wniosek składa się do godz. Szesnastej w dniu poprzedzającym posiedzenie.")]
         public void SplitIntoSentences_Skrot_NieJestGranica(string skrot, string text)
         {
             Assert.NotNull(skrot);

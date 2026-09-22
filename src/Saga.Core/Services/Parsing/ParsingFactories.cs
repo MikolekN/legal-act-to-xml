@@ -113,24 +113,27 @@ namespace Saga.Core.Services.Parsing
             return result;
         }
 
-        /// <summary>Rozstrzyga, czy napotkana kropka kończy zdanie.</summary>
+        /// <summary>
+        /// Rozstrzyga, czy znak na pozycji <paramref name="terminatorIndex"/> kończy zdanie.
+        /// </summary>
         private static bool IsSentenceBoundary(
             string text,
-            int dotIndex,
+            int terminatorIndex,
             int sentenceStart,
             MatchCollection journalDesignations,
             out int sentenceEnd,
             out int nextStart)
         {
+            int dotIndex = terminatorIndex;
             sentenceEnd = dotIndex;
             nextStart = dotIndex + 2;
 
-            if (text[dotIndex] != '.')
+            if (!IsSentenceTerminator(text[dotIndex]))
             {
                 return false;
             }
 
-            // 1. Kształt granicy: kropka, ewentualny cudzysłów domykający cytat, odstęp.
+            // 1. Kształt granicy: znak kończący, ewentualny cudzysłów domykający cytat, odstęp.
             int afterDot = dotIndex + 1;
             while (afterDot < text.Length && IsClosingQuote(text[afterDot]))
             {
@@ -160,6 +163,11 @@ namespace Saga.Core.Services.Parsing
             nextStart = nextCharIndex;
 
             // 3. Weta lewego kontekstu — kropka należy do skrótu, nie kończy zdania.
+            if (text[dotIndex] != '.')
+            {
+                return true;
+            }
+
             if (IsRokException(text, dotIndex, sentenceStart))
             {
                 return false;
@@ -177,6 +185,14 @@ namespace Saga.Core.Services.Parsing
 
             return true;
         }
+
+        /// <summary>
+        /// Znak kończący zdanie. Poza kropką także znak zapytania i wykrzyknik — występują
+        /// w ankietach i formularzach stanowiących załączniki do aktów („Czy posiada Pani
+        /// zaległości podatkowe? Proszę zakreślić właściwe pole.").
+        /// </summary>
+        private static bool IsSentenceTerminator(char character)
+            => character is '.' or '?' or '!';
 
         /// <summary>
         /// Cudzysłów domykający brzmienie. Kanał DOCX daje „…”, kanał TXT/PDF proste "…"

@@ -44,5 +44,17 @@ namespace Saga.Core.Tests
             Assert.Single(segments);
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
+
+        [Theory]
+        [InlineData("Czy posiada Pani (Pan) zaległości podatkowe? Proszę zakreślić właściwe pole.")]
+        [InlineData("Uwaga! Wniosek niekompletny pozostawia się bez rozpoznania.")]
+        [InlineData("Czy dotyczy to art. 5 ust. 2? Przepis stosuje się odpowiednio.")]
+        public void SplitIntoSentences_ZnakZapytaniaIWykrzyknik_KonczaZdanie(string text)
+        {
+            var segments = ParsingFactories.SplitIntoSentences(text);
+
+            Assert.Equal(2, segments.Count);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
+        }
     }
 }
