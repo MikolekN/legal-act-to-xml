@@ -46,7 +46,7 @@ namespace Saga.Model
         public string DisplayLabel { get; set; } = string.Empty;
 
         /// <summary>
-        /// Prefiks używany przy generowaniu eId (np. "art"/"ust"/"pkt"/"lit"/"tir"/"cz"/"ks" ...).
+        /// Prefiks używany przy generowaniu eId (np. "art"/"ust"/"pkt"/"lit"/"tir"/"czesc"/"ksi" ...).
         /// Można go nadpisać w klasach pochodnych jeżeli konieczne.
         /// </summary>
         public string EIdPrefix { get; set; } = string.Empty;

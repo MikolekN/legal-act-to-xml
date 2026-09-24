@@ -26,11 +26,7 @@ namespace Saga.Core
 
         public ParsePolicy Policy { get; init; } = ParsePolicy.ParseWhenLegalAct;
 
-        /// <summary>
-        /// Wymuszony format źródłowy (np. przełącznik CLI --format); null oraz
-        /// <see cref="SourceFormat.Unknown"/> = automatyczna detekcja sygnaturowa
-        /// (<see cref="SourceFormatDetector"/>).
-        /// </summary>
+        /// <summary>Wymuszony format źródłowy.</summary>
         public SourceFormat? ForcedFormat { get; init; }
     }
 }

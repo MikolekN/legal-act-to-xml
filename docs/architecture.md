@@ -753,12 +753,6 @@ Buildery encji stosują konwencję:
 - `*BuildResult` — sealed class z wynikami (jeśli >1 wartość zwracana)
 - Interfejs `IEntityBuilder<TInput, TResult>`
 
-### 10.9 Kopie zapasowe
-
-Domyślna ścieżka CLI czyta plik read-only, bez kopii. Tylko tryb legacy `--docx` tworzy kopię
-z sygnaturą czasową: `nazwa-pliku_YYYYMMDD_HHmmss.ext` (zachowane dla wstecznej kompatybilności —
-historycznie parser modyfikował dokument).
-
 ---
 
 ## 11. Mapa plików — szybki przegląd

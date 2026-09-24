@@ -9,7 +9,8 @@ namespace Saga.Core.Services.Converters
 {
     /// <summary>
     /// Kanoniczna, deterministyczna serializacja LegalDocument do XML.
-    /// Przeznaczenie: testy snapshotowe (golden) i diagnostyczny zrzut CLI (--dump).
+    /// Przeznaczenie: testy snapshotowe (golden) i diagnostyczny zrzut modelu
+    /// (tools/CorpusValidator --dump).
     /// Celowo pomija pola niedeterministyczne (Guid, CreatedAt/UpdatedAt, znaczniki czasu
     /// komunikatów walidacji) — dwa przebiegi parsera na tym samym pliku muszą dawać
     /// identyczny bajt-w-bajt wynik.
