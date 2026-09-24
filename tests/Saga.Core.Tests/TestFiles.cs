@@ -9,6 +9,15 @@ namespace Saga.Core.Tests
     internal static class TestFiles
     {
         /// <summary>
+        /// Akt referencyjny testów na realnym dokumencie: ustawa z dnia 14 czerwca 2024 r.
+        /// o ochronie sygnalistów (Dz. U. poz. 928) — DOCX ze składu Dziennika Ustaw na szablonie RCL.
+        /// </summary>
+        public const string ReferenceActFileName = "sygnalisci.docx";
+
+        /// <summary>Golden kanonicznego zrzutu aktu referencyjnego w lokalnym Artifacts/.</summary>
+        public const string ReferenceActSnapshotFileName = "sygnalisci.snapshot.xml";
+
+        /// <summary>
         /// Korzeń projektu testowego (katalog z Saga.Core.Tests.csproj),
         /// odnajdywany od katalogu wyjściowego testów w górę.
         /// </summary>

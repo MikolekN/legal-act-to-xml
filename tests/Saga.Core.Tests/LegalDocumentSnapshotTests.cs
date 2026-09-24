@@ -3,19 +3,19 @@ using Saga.Core.Services.Converters;
 namespace Saga.Core.Tests
 {
     /// <summary>
-    /// Testy snapshotowe (golden) pełnego modelu dokumentu referencyjnego doc001.docx.
+    /// Testy snapshotowe (golden) pełnego modelu aktu referencyjnego.
     /// Siatka bezpieczeństwa dla przebudowy potoku: każda zmiana zachowania parsera
     /// na ścieżce DOCX+szablon musi być widoczna jako diff snapshotu.
     /// Dokument źródłowy (DocRepo/) i golden (Artifacts/) są lokalne, niewersjonowane.
     ///
     /// Regeneracja goldenu (po świadomej, udokumentowanej zmianie zachowania):
-    ///   UPDATE_SNAPSHOTS=1 dotnet test --filter "FullyQualifiedName~LegalDocumentSnapshotTests"
+    ///   UPDATE_SNAPSHOTS=1 dotnet test --project tests/Saga.Core.Tests/Saga.Core.Tests.csproj --filter-class "*LegalDocumentSnapshotTests"
     /// </summary>
     public class LegalDocumentSnapshotTests
     {
         private static string ParseReferenceActToCanonicalXml()
         {
-            var tempPath = TestFiles.CreateTemporaryCopy(TestFiles.GetReferenceDocPath("doc001.docx"));
+            var tempPath = TestFiles.CreateTemporaryCopy(TestFiles.GetReferenceDocPath(TestFiles.ReferenceActFileName));
             try
             {
                 // AlwaysParse: siatka regresyjna PARSERA ma być niezależna od progów klasyfikatora —
@@ -29,14 +29,15 @@ namespace Saga.Core.Tests
             }
         }
 
-        [DocRepoFact("doc001.docx", RequiredArtifact = "doc001.snapshot.xml")]
-        public void Doc001_CanonicalXml_MatchesSnapshot()
+        [DocRepoFact(TestFiles.ReferenceActFileName, RequiredArtifact = TestFiles.ReferenceActSnapshotFileName)]
+        public void ReferenceAct_CanonicalXml_MatchesSnapshot()
         {
             var actual = ParseReferenceActToCanonicalXml();
-            var snapshotPath = TestFiles.GetArtifactPath("doc001.snapshot.xml");
+            var snapshotPath = TestFiles.GetArtifactPath(TestFiles.ReferenceActSnapshotFileName);
 
             if (Environment.GetEnvironmentVariable("UPDATE_SNAPSHOTS") == "1")
             {
+                Directory.CreateDirectory(Path.GetDirectoryName(snapshotPath)!);
                 File.WriteAllText(snapshotPath, actual);
                 return;
             }
@@ -50,8 +51,8 @@ namespace Saga.Core.Tests
             Assert.Equal(expected, actual);
         }
 
-        [DocRepoFact("doc001.docx")]
-        public void Doc001_Parse_IsDeterministic()
+        [DocRepoFact(TestFiles.ReferenceActFileName)]
+        public void ReferenceAct_Parse_IsDeterministic()
         {
             var first = ParseReferenceActToCanonicalXml();
             var second = ParseReferenceActToCanonicalXml();

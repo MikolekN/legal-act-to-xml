@@ -744,7 +744,7 @@ Centralnie obsługiwane przez `ParagraphExtensions.StyleId()`.
 - Framework: xUnit (`Saga.Core.Tests`)
 - Konwencja nazewnictwa plików: `*Tests.cs` (np. `EIdTests.cs`, `ParagraphClassifierTests.cs`)
 - Każda zmiana w logice parsowania wymaga aktualizacji lub dodania testów
-- Artefakty testowe (pliki DOCX) w `Artifacts/`
+- Dokumenty referencyjne (DOCX) w lokalnym `DocRepo/`, golden snapshoty w `Saga.Core.Tests/Artifacts/` — oba niewersjonowane; testy na nich oznaczone `[DocRepoFact]` pomijają się, gdy danych brak
 
 ### 10.8 Buildery z wzorcem Input/Result
 

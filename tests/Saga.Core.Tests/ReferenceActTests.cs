@@ -9,19 +9,19 @@ namespace Saga.Core.Tests
         private static Saga.Model.LegalDocument ParseDocument(string tempPath)
             => LegalDocumentParser.Parse(tempPath, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
 
-        [DocRepoFact("doc001.docx")]
+        [DocRepoFact(TestFiles.ReferenceActFileName)]
         public void ReferenceAct_DefaultPolicy_IsRecognizedAsLegalAct()
         {
             // Strażnik fałszywego negatywu na REALNYM akcie: zmiana punktacji/progów klasyfikatora,
-            // która odrzuciłaby doc001 przy domyślnej polityce (Document=null, CLI exit 2),
+            // która odrzuciłaby akt referencyjny przy domyślnej polityce (Document=null, CLI exit 2),
             // musi być widoczna w siatce — testy syntetyczne tego nie łapią.
-            var tempPath = GetTemporaryCopyPath("doc001.docx");
+            var tempPath = GetTemporaryCopyPath(TestFiles.ReferenceActFileName);
             try
             {
                 var result = LegalDocumentParser.Parse(tempPath);
 
                 Assert.True(result.Classification.IsLegalAct,
-                    $"doc001 nierozpoznany jako akt: {result.Classification.Justification}");
+                    $"Akt referencyjny nierozpoznany jako akt: {result.Classification.Justification}");
                 Assert.NotNull(result.Document);
             }
             finally
@@ -30,10 +30,10 @@ namespace Saga.Core.Tests
             }
         }
 
-        [DocRepoFact("doc001.docx")]
+        [DocRepoFact(TestFiles.ReferenceActFileName)]
         public void ReferenceAct_ContainsAtLeastOneArticle()
         {
-            var tempPath = GetTemporaryCopyPath("doc001.docx");
+            var tempPath = GetTemporaryCopyPath(TestFiles.ReferenceActFileName);
             try
             {
                 var document = ParseDocument(tempPath);
@@ -46,37 +46,27 @@ namespace Saga.Core.Tests
             }
         }
 
-        [DocRepoFact("doc001.docx")]
-        public void ReferenceAct_Point8_ContainsLetterAndTiretNumbers()
+        [DocRepoFact(TestFiles.ReferenceActFileName)]
+        public void ReferenceAct_Article3_Paragraph1_Point8_IsNumbered()
         {
-            var tempPath = GetTemporaryCopyPath("doc001.docx");
+            var tempPath = GetTemporaryCopyPath(TestFiles.ReferenceActFileName);
             try
             {
                 var document = ParseDocument(tempPath);
 
-                var paragraph = document.Articles
-                    .SelectMany(a => a.Paragraphs)
-                    .FirstOrDefault(p => p.Points.Any(pt => pt.Number?.Value == "8"));
+                var article = document.Articles.FirstOrDefault(a => a.Number?.Value == "3");
+                Assert.NotNull(article);
 
-                Assert.NotNull(paragraph);
+                var paragraph = article!.Paragraphs.FirstOrDefault(p => p.Number?.Value == "1");
+                Assert.True(paragraph != null,
+                    $"Brak ust. 1 w art. 3. Treść artykułu: '{article.ContentText}'");
+                Assert.False(paragraph!.IsImplicit, "Art. 3 ma kilka ustępów — ust. 1 nie może być niejawny.");
 
-                var point = paragraph!.Points.First(p => p.Number?.Value == "8");
-                var letter = point.Letters.First(l => l.Tirets.Any());
-                var tiret = letter.Tirets.First();
-
-                var paragraphNumber = paragraph.Number?.Value;
-                var pointNumber = point.Number?.Value;
-                var letterNumber = letter.Number?.Value;
-                var tiretNumber = tiret.Number?.Value;
-
-                Assert.True(string.IsNullOrWhiteSpace(paragraphNumber) || paragraphNumber == "1",
-                    $"Unexpected paragraph number. Paragraph text: '{paragraph.ContentText}', Number: '{paragraphNumber}'");
-                Assert.True(!string.IsNullOrWhiteSpace(pointNumber),
-                    $"Missing point number. Point text: '{point.ContentText}'");
-                Assert.True(!string.IsNullOrWhiteSpace(letterNumber),
-                    $"Missing letter number. Letter text: '{letter.ContentText}'");
-                Assert.True(!string.IsNullOrWhiteSpace(tiretNumber),
-                    $"Missing tiret number. Tiret text: '{tiret.ContentText}'");
+                var point = paragraph.Points.FirstOrDefault(p => p.Number?.Value == "8");
+                Assert.True(point != null,
+                    $"Brak pkt 8 w art. 3 ust. 1. Treść ustępu: '{paragraph.ContentText}'");
+                Assert.False(string.IsNullOrWhiteSpace(point!.ContentText),
+                    "Pkt 8 w art. 3 ust. 1 nie ma treści.");
             }
             finally
             {

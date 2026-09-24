@@ -168,7 +168,7 @@ Reguła decyzyjna: twardy wymóg dwóch zgodnych sygnałów dotyczy głównie ro
   `dotnet test` siedzi w `global.json` (`test.runner`); bez niego .NET 10 SDK odmawia
   uruchomienia testów przez nieobsługiwaną już ścieżkę VSTest. Pokrycie (`--coverage`)
   i raport JUnit (`--report-xunit-junit`) są wbudowane w runner — bez dodatkowych pakietów.
-- Dokumenty referencyjne DOCX leżą w lokalnym `DocRepo/` (niewersjonowany); `tests/Saga.Core.Tests/Artifacts/` zawiera golden snapshoty oczekiwanych wyników (np. `doc001.snapshot.xml`) — oba katalogi niewersjonowane
+- Dokumenty referencyjne DOCX leżą w lokalnym `DocRepo/` (niewersjonowany); `tests/Saga.Core.Tests/Artifacts/` zawiera golden snapshoty oczekiwanych wyników — oba katalogi niewersjonowane
 - Test sięgający po te dane oznaczaj `[DocRepoFact("plik.docx")]` (i `RequiredArtifact = "golden.xml"`, jeśli potrzebuje goldenu) zamiast `[Fact]`. Przy braku lokalnych plików test jest wtedy **pomijany z powodem**, a nie czerwony — na czystym klonie nie ma ani `DocRepo/`, ani `Artifacts/`. Pilnuje tego `DocRepoFactGuardTests`.
 - Klasy testowe: lista NIE jest tu utrzymywana (dryfowała — brakowało w niej kolejnych klas). Wygeneruj aktualną:
   `grep -rho -E '^\s*public class \w+' tests/Saga.Core.Tests/*.cs | sed -E 's/.*public class //' | sort`
