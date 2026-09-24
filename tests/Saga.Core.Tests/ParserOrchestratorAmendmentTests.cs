@@ -251,7 +251,7 @@ namespace Saga.Core.Tests
             Assert.True(context.DetectedAmendmentTargets.ContainsKey(letterEntity!.Guid),
                 "Litera powinna mieć wykryty cel nowelizacji");
 
-            var target = context.DetectedAmendmentTargets[letterEntity.Guid];
+            var target = Assert.Single(context.DetectedAmendmentTargets[letterEntity.Guid]);
 
             Assert.Equal("1", target.Structure.Article);   // odziedziczone z pkt_1
             Assert.Equal("2", target.Structure.Paragraph); // z lit_a
@@ -285,7 +285,7 @@ namespace Saga.Core.Tests
             Assert.True(context.DetectedAmendmentTargets.ContainsKey(letterBEntity!.Guid),
                 "Litera B powinna mieć wykryty cel nowelizacji");
 
-            var targetB = context.DetectedAmendmentTargets[letterBEntity.Guid];
+            var targetB = Assert.Single(context.DetectedAmendmentTargets[letterBEntity.Guid]);
 
             Assert.Equal("1", targetB.Structure.Article);   // odziedziczone z pkt_1
             Assert.Equal("4", targetB.Structure.Paragraph); // z lit_b (nie "2" z lit_a!)
@@ -309,7 +309,7 @@ namespace Saga.Core.Tests
             Assert.True(context.DetectedAmendmentTargets.ContainsKey(paragraph.Guid),
                 "Ustep niejawny powinien miec wykryty cel nowelizacji z tresci ogona artykulu");
 
-            var target = context.DetectedAmendmentTargets[paragraph.Guid];
+            var target = Assert.Single(context.DetectedAmendmentTargets[paragraph.Guid]);
             Assert.Equal("3", target.Structure.Article);
             Assert.Equal("10", target.Structure.Point);
             Assert.Null(target.Structure.Paragraph);

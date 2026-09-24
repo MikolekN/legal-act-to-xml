@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using Saga.Core.Services.Parsing;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
 using static Saga.Core.XLinqWrappers;
@@ -10,27 +11,78 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class AmendmentXmlConverter
     {
+        private sealed record Command(StructuralAmendmentReference? Target, Guid Guid);
+
         internal static void ToXml(Amendment? amendment, XNode? sentence = null)
         {
             if (amendment is null)
                 return;
 
+            var commands = Commands(amendment);
+
             if (amendment.OperationType == AmendmentOperationType.Repeal)
             {
-                AddRepealInstruction(amendment, sentence);
+                foreach (var command in commands)
+                    AddRepealInstruction(amendment, command, sentence);
                 return;
             }
 
             if (amendment.Content is null)
                 return;
 
-            var blocks = new List<XElement>();
+            var units = AmendmentTargetPairing.ContentUnits(amendment.Content);
+            bool punctuationConsumed;
 
-            AddPlainTextContent(amendment, sentence, blocks);
-            AddStructuredContentItems(amendment, sentence, blocks);
-            AddCommonParts(amendment, sentence, blocks);
+            if (units.Count == 0 && commands.Count > 1)
+            {
+                punctuationConsumed = false;
+                foreach (var command in commands)
+                {
+                    var copy = new List<XElement>();
+                    AddPlainTextContent(amendment, command, sentence, copy);
+                    AddCommonParts(amendment, command, sentence, copy);
+                    punctuationConsumed |= ApplyQuotationMarks(amendment, copy);
+                }
+            }
+            else
+            {
+                var paired = commands.Count > 1 ? AmendmentTargetPairing.Pair(amendment.Targets, units) : null;
+                if (paired is null)
+                {
+                    commands = commands.Take(1).ToList();
+                    paired = [units];
+                }
 
-            ApplyQuotationMarks(amendment, blocks, sentence);
+                var blocks = new List<XElement>();
+                for (var i = 0; i < commands.Count; i++)
+                {
+                    if (i == 0)
+                        AddPlainTextContent(amendment, commands[i], sentence, blocks);
+                    AddStructuredContentItems(amendment, commands[i], paired[i], sentence, blocks);
+                    if (i == commands.Count - 1)
+                        AddCommonParts(amendment, commands[i], sentence, blocks);
+                }
+
+                punctuationConsumed = ApplyQuotationMarks(amendment, blocks);
+            }
+
+            if (!punctuationConsumed && amendment.TrailingPunctuation is { Length: > 0 } trailing &&
+                sentence is XElement sentenceElement)
+            {
+                sentenceElement.Add(trailing);
+            }
+        }
+
+        private static List<Command> Commands(Amendment amendment)
+        {
+            var first = amendment.Guid != Guid.Empty ? amendment.Guid : Guid.NewGuid();
+            var targets = amendment.Targets ?? [];
+            if (targets.Count == 0)
+                return [new Command(null, first)];
+
+            return targets
+                .Select((target, index) => new Command(target, index == 0 ? first : Guid.NewGuid()))
+                .ToList();
         }
 
         /// <summary>
@@ -38,7 +90,7 @@ namespace Saga.Core.Services.Converters
         /// zamykający do ostatniego. Atrybut 'cudzyslowy' jest maską bitową
         /// (1 = otwiera, 2 = zamyka, 3 = oba, 0 = blok środkowy).
         /// </summary>
-        private static void ApplyQuotationMarks(Amendment amendment, List<XElement> blocks, XNode? sentence)
+        private static bool ApplyQuotationMarks(Amendment amendment, List<XElement> blocks)
         {
             var punctuation = amendment.TrailingPunctuation;
             var punctuationConsumed = false;
@@ -64,11 +116,7 @@ namespace Saga.Core.Services.Converters
                 SetQuotationAttribute(block, (opens ? 1 : 0) + (closes ? 2 : 0));
             }
 
-            if (!punctuationConsumed && punctuation is { Length: > 0 } trailing &&
-                sentence is XElement sentenceElement)
-            {
-                sentenceElement.Add(trailing);
-            }
+            return punctuationConsumed;
         }
 
         private const string OpeningQuote = "„";
@@ -97,7 +145,7 @@ namespace Saga.Core.Services.Converters
         private static string BuildActUri(Amendment amendment) =>
             XmlConverterConstants.ELIUrl + "eli/" + (amendment.TargetLegalAct.GetELIStrings().FirstOrDefault() ?? string.Empty);
 
-        private static void ApplyAttributes(XElement element, Amendment amendment, bool isStructural)
+        private static void ApplyAttributes(XElement element, Amendment amendment, Command command, bool isStructural)
         {
             XNamespace now = XmlConverterConstants.AmendmentNamespace;
 
@@ -105,24 +153,12 @@ namespace Saga.Core.Services.Converters
 
             element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute, 3));
 
-            if (amendment.Guid != Guid.Empty)
-                element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, amendment.Guid.ToString()));
-            else
-                element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, Guid.NewGuid().ToString()));
+            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.Guid.ToString()));
 
             // if (amendment.RefNowGuid != Guid.Empty)
             // element.Add(new XAttribute(XmlConverterConstants.QuotationRefGUIDAttribute, "UNKNOWN"));
 
-            var targets = amendment.Targets?.ToList() ?? new List<StructuralAmendmentReference>();
-            var start_target = targets.FirstOrDefault()?.ToString() ?? string.Empty;
-            var end_target = targets.LastOrDefault()?.ToString() ?? string.Empty;
-            if (!string.IsNullOrWhiteSpace(start_target))
-                element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, start_target));
-            else
-                element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, "UNKNOWN"));
-
-            if (!string.IsNullOrWhiteSpace(end_target) && string.Compare(start_target, end_target) != 0)
-                element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementDoAttribute, end_target));
+            AddTargetAttributes(element, command.Target);
 
             element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.FunctionAttribute, GetFunctionType(amendment.OperationType, isStructural)));
 
@@ -144,7 +180,18 @@ namespace Saga.Core.Services.Converters
                 _ => XmlConverterConstants.Contents.Citation.Quotation.Function.NewText
             };
 
-        private static void AddRepealInstruction(Amendment amendment, XNode? sentence)
+        private static void AddTargetAttributes(XElement element, StructuralAmendmentReference? target)
+        {
+            var start = target?.Structure.ToString();
+            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute,
+                string.IsNullOrWhiteSpace(start) ? "UNKNOWN" : start));
+
+            var end = target?.RangeEnd?.ToString();
+            if (!string.IsNullOrWhiteSpace(end) && end != start)
+                element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementDoAttribute, end));
+        }
+
+        private static void AddRepealInstruction(Amendment amendment, Command command, XNode? sentence)
         {
             if (sentence is not XElement zdanie)
                 return;
@@ -153,53 +200,42 @@ namespace Saga.Core.Services.Converters
 
             var uchyl = new XElement(now + XmlConverterConstants.Contents.Instruction.Repeal);
             uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
-
-            var targets = amendment.Targets ?? new List<StructuralAmendmentReference>();
-            var startTarget = targets.FirstOrDefault()?.ToString();
-            var endTarget = targets.LastOrDefault()?.ToString();
-            uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute,
-                string.IsNullOrWhiteSpace(startTarget) ? "UNKNOWN" : startTarget));
-            if (!string.IsNullOrWhiteSpace(endTarget) && endTarget != startTarget)
-                uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementDoAttribute, endTarget));
-
-            uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute,
-                amendment.Guid != Guid.Empty ? amendment.Guid.ToString() : Guid.NewGuid().ToString()));
+            AddTargetAttributes(uchyl, command.Target);
+            uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.Guid.ToString()));
 
             zdanie.Add(uchyl);
         }
 
-        private static void AddPlainTextContent(Amendment? amendment, XNode? sentence, List<XElement> blocks)
+        private static void AddPlainTextContent(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks)
         {
-            var plainText = amendment?.Content?.PlainText;
+            var plainText = amendment.Content?.PlainText;
             if (plainText == null) return;
-            AddTextCitation(amendment!, sentence, plainText, blocks);
+            AddTextCitation(amendment, command, sentence, plainText, blocks);
         }
 
-        private static void AddCommonParts(Amendment? amendment, XNode? sentence, List<XElement> blocks)
+        private static void AddCommonParts(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks)
         {
-            var commonParts = amendment?.Content?.CommonParts;
+            var commonParts = amendment.Content?.CommonParts;
             if (commonParts == null) return;
 
             foreach (var commonPart in commonParts)
-                AddTextCitation(amendment!, sentence, commonPart.ContentText, blocks);
+                AddTextCitation(amendment, command, sentence, commonPart.ContentText, blocks);
         }
 
-        private static void AddTextCitation(Amendment amendment, XNode? sentence, string text, List<XElement> blocks)
+        private static void AddTextCitation(Amendment amendment, Command command, XNode? sentence, string text, List<XElement> blocks)
         {
             var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element,
                 Element(XmlConverterConstants.Contents.Citation.Text.Content, text));
-            ApplyAttributes(citation, amendment, isStructural: false);
+            ApplyAttributes(citation, amendment, command, isStructural: false);
             if (sentence is XElement zdanie)
                 zdanie.Add(citation);
             blocks.Add(citation);
         }
 
-        private static void AddStructuredContentItems(Amendment? amendment, XNode? sentence, List<XElement> blocks)
+        private static void AddStructuredContentItems(
+            Amendment amendment, Command command, IReadOnlyList<BaseEntity> units, XNode? sentence, List<XElement> blocks)
         {
-            var content = amendment?.Content;
-            if (content == null) return;
-
-            foreach (var group in EnumerateAmendmentContentItems(content).GroupBy(e => e.GetType()))
+            foreach (var group in units.GroupBy(e => e.GetType()))
             {
                 var elements = group
                     .Select(BuildContentElement)
@@ -208,7 +244,7 @@ namespace Saga.Core.Services.Converters
                     .ToList();
 
                 var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
-                ApplyAttributes(citation, amendment!, isStructural: true);
+                ApplyAttributes(citation, amendment, command, isStructural: true);
                 citation.Add(elements);
                 if (sentence is XElement zdanie)
                     zdanie.Add(citation);
@@ -226,17 +262,5 @@ namespace Saga.Core.Services.Converters
                 Tiret tiret => TiretXmlConverter.ToXml(tiret),
                 _ => throw new InvalidOperationException($"Unsupported entity type: {entity.GetType().Name}")
             };
-
-        private static IEnumerable<BaseEntity> EnumerateAmendmentContentItems(AmendmentContent? content)
-        {
-            if (content is null) return [];
-
-            return Enumerable.Empty<BaseEntity>()
-                .Concat(content.Articles ?? [])
-                .Concat(content.Paragraphs ?? [])
-                .Concat(content.Points ?? [])
-                .Concat(content.Letters ?? [])
-                .Concat(content.Tirets ?? []);
-        }
     }
 }

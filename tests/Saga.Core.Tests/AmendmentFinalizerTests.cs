@@ -66,7 +66,7 @@ namespace Saga.Core.Tests
         private static AmendmentCollector BeginCollector(BaseEntity owner, StructuralAmendmentReference? target = null)
         {
             var collector = new AmendmentCollector();
-            collector.Begin(owner, target);
+            collector.Begin(owner, target is null ? null : [target]);
             collector.AddParagraph("2. Treść nowelizacji", null);
             return collector;
         }
@@ -215,7 +215,7 @@ namespace Saga.Core.Tests
                 Structure = new StructuralReference { Article = "10", Point = "3" },
                 RawText = "pkt 3"
             };
-            context.DetectedAmendmentTargets[owner.Guid] = detectedTarget;
+            context.DetectedAmendmentTargets[owner.Guid] = [detectedTarget];
 
             var collector = BeginCollector(owner); // bez targetu
             var input = new AmendmentFinalizerInput(content, collector, context);

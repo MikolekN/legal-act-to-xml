@@ -126,8 +126,8 @@ namespace Saga.Core.Services.Parsing
                 var owner = context.AmendmentOwner ?? GetOwner(context);
                 if (owner != null)
                 {
-                    var target = context.DetectedAmendmentTargets.TryGetValue(owner.Guid, out var t) ? t : null;
-                    context.AmendmentCollector.Begin(owner, target);
+                    var targets = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid);
+                    context.AmendmentCollector.Begin(owner, targets);
                 }
             }
 
@@ -154,7 +154,7 @@ namespace Saga.Core.Services.Parsing
             // Faza 2: budowanie treści nowelizacji
             var buildInput = new AmendmentBuildInput(
                 collector.Paragraphs,
-                collector.Target,
+                collector.Targets.FirstOrDefault(),
                 AmendmentOperationType.Modification);
 
             var content = _amendmentBuilder.Build(buildInput);
@@ -296,8 +296,8 @@ namespace Saga.Core.Services.Parsing
                     Flush(context);
                 }
 
-                var target = context.DetectedAmendmentTargets.TryGetValue(owner.Guid, out var t) ? t : null;
-                collector.Begin(owner, target);
+                var targets = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid);
+                collector.Begin(owner, targets);
 
                 var content = new AmendmentContent { ObjectType = AmendmentObjectType.None };
                 var finalizerInput = new AmendmentFinalizerInput(content, collector, context);
@@ -341,8 +341,8 @@ namespace Saga.Core.Services.Parsing
                 Flush(context);
             }
 
-            var target = context.DetectedAmendmentTargets.TryGetValue(owner.Guid, out var t) ? t : null;
-            collector.Begin(owner, target);
+            var targets = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid);
+            collector.Begin(owner, targets);
 
             var content = new AmendmentContent
             {

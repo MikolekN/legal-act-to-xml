@@ -1,4 +1,5 @@
 using Saga.Core.Services.Parsing;
+using Saga.Core.Services.UnitReferences;
 using Saga.Model;
 using Saga.Model.EntryIntoForce;
 using Serilog;
@@ -120,11 +121,13 @@ namespace Saga.Core.Services.EntryIntoForce
             DateTime? announcementDate,
             EntryIntoForceInfo info)
         {
+            var sectionSignIsBasicUnit = SectionSignRole.IsBasicUnit(document.Classification);
+
             // Wyjątki w treści klauzuli głównej („…, z wyjątkiem art. 2, który wchodzi w życie …").
             foreach (var (units, tail) in SplitInlineExceptions(main.Tail))
-                info.Partials.Add(BuildPartial(units, tail, announcementDate, main.Owner, info));
+                info.Partials.Add(BuildPartial(units, tail, announcementDate, main.Owner, info, sectionSignIsBasicUnit));
 
-            CollectProvisos(main, announcementDate, info);
+            CollectProvisos(main, announcementDate, info, sectionSignIsBasicUnit);
 
             // Wyjątki jako osobne pozycje listy pod klauzulą kończącą się „z wyjątkiem:".
             if (!main.OpensExceptionList)
@@ -139,7 +142,7 @@ namespace Saga.Core.Services.EntryIntoForce
                     continue;
                 }
 
-                info.Partials.Add(BuildPartial(units, item.Tail, announcementDate, item.Owner, info));
+                info.Partials.Add(BuildPartial(units, item.Tail, announcementDate, item.Owner, info, sectionSignIsBasicUnit));
             }
         }
 
@@ -190,7 +193,7 @@ namespace Saga.Core.Services.EntryIntoForce
         /// w życie z dniem …") jest zwykłym wyjątkiem daty, tyle że zapisanym bez zaimka względnego.
         /// </summary>
         private static void CollectProvisos(
-            ClauseCandidate main, DateTime? announcementDate, EntryIntoForceInfo info)
+            ClauseCandidate main, DateTime? announcementDate, EntryIntoForceInfo info, bool sectionSignIsBasicUnit)
         {
             foreach (var chunk in SplitProvisos(main.Tail))
             {
@@ -202,7 +205,7 @@ namespace Saga.Core.Services.EntryIntoForce
                     info.Partials.Add(BuildPartial(
                         UnitsBefore(chunk, verb.Index),
                         chunk[(verb.Index + verb.Length)..].Trim(),
-                        announcementDate, main.Owner, info));
+                        announcementDate, main.Owner, info, sectionSignIsBasicUnit));
                     continue;
                 }
 
@@ -216,7 +219,7 @@ namespace Saga.Core.Services.EntryIntoForce
                 }
 
                 foreach (var (units, retroactive, rawText) in items)
-                    info.Partials.Add(BuildRetroactivityPartial(units, retroactive, rawText, main.Owner, info));
+                    info.Partials.Add(BuildRetroactivityPartial(units, retroactive, rawText, main.Owner, info, sectionSignIsBasicUnit));
             }
         }
 
@@ -261,11 +264,12 @@ namespace Saga.Core.Services.EntryIntoForce
             string formulaTail,
             DateTime? announcementDate,
             BaseEntity owner,
-            EntryIntoForceInfo info)
+            EntryIntoForceInfo info,
+            bool sectionSignIsBasicUnit)
         {
             var (withoutRetro, retroactive, _) = EntryIntoForceFormulaParser.SplitRetroactivity(formulaTail);
             var formula = EntryIntoForceFormulaParser.Parse(withoutRetro);
-            var enumeration = UnitEnumerationParser.Parse(unitsText);
+            var enumeration = UnitEnumerationParser.Parse(unitsText, sectionSignIsBasicUnit);
 
             var partial = new PartialEntryIntoForce
             {
@@ -312,9 +316,10 @@ namespace Saga.Core.Services.EntryIntoForce
             DateTime retroactive,
             string rawText,
             BaseEntity owner,
-            EntryIntoForceInfo info)
+            EntryIntoForceInfo info,
+            bool sectionSignIsBasicUnit)
         {
-            var enumeration = UnitEnumerationParser.Parse(unitsText);
+            var enumeration = UnitEnumerationParser.Parse(unitsText, sectionSignIsBasicUnit);
 
             var partial = new PartialEntryIntoForce
             {

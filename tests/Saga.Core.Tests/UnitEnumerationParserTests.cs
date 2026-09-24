@@ -410,6 +410,77 @@ namespace Saga.Core.Tests
             Assert.False(result.IsComplete);
         }
 
+        // ============================================================
+        // Paragraf kodeksu — „§" po artykule to „par", nie „ust" (ADR-0014)
+        // ============================================================
+
+        [Fact]
+        public void CodeParagraphInScope_UsesPar()
+        {
+            // Korpus: 311010_2798032 — zakres wskazuje paragraf kodeksu.
+            var result = UnitEnumerationParser.Parse(
+                "art. 140 pkt 4 w zakresie art. 14zq § 5 oraz art. 145 pkt 1-3, 5 i 6");
+
+            var scoped = result.Targets.First();
+            Assert.Equal("art_140__pkt_4", scoped.Structure.ToString());
+            Assert.Equal("art_14zq__par_5", Assert.Single(scoped.ScopeStructures).ToString());
+        }
+
+        [Fact]
+        public void LetterI_IsALetter_NotAConjunction()
+        {
+            // Korpus: 354656_3144435. „lit. i" czytane jako spójnik przenosiło datę wyjątku na cały pkt 13.
+            var paths = Paths(
+                "art. 1 pkt 12 lit. a i b, pkt 13 lit. i, pkt 14, pkt 15 lit. a w zakresie art. 23 ust. 1 pkt 1 lit. b, " +
+                "pkt 16 lit. a, c, d i e, pkt 17, 18, 20 i 25, art. 21, art. 26 oraz art. 28");
+
+            Assert.Contains("art_1__pkt_13__lit_i", paths);
+            Assert.DoesNotContain("art_1__pkt_13", paths);
+            Assert.Contains("art_1__pkt_12__lit_a", paths);
+            Assert.Contains("art_1__pkt_12__lit_b", paths);
+        }
+
+        [Fact]
+        public void BareSectionSign_InSectionBasedAct_IsTheMainUnit()
+        {
+            // Korpus: 316175_2967132 (rozporządzenie) — „§" jest tu jednostką główną.
+            Assert.Equal(new[] { "art_1__pkt_3", "art_1__pkt_4__lit_b" },
+                UnitEnumerationParser.Parse("§ 1 pkt 3 i pkt 4 lit. b", sectionSignIsBasicUnit: true)
+                    .Targets.Select(t => t.Structure.ToString()).ToArray());
+        }
+
+        [Fact]
+        public void BareSectionSign_InStatute_IsNotReadAsArticle()
+        {
+            // Ten sam fragment w ustawie: samodzielny „§" to paragraf kodeksu nieznanego artykułu,
+            // więc artykułu się nie zgaduje (wcześniej powstawało art_1).
+            var result = UnitEnumerationParser.Parse("§ 1 pkt 3 i pkt 4 lit. b");
+
+            Assert.DoesNotContain(result.Targets, t => t.Structure.Article is not null);
+            Assert.Contains("1", result.Unresolved);
+        }
+
+        [Fact]
+        public void ScopeInSectionBasedAct_LetterWAfterLit_IsALetter()
+        {
+            // Korpus: 326666_2941945 — zakres w obrębie rozporządzenia; „lit. w" to litera, nie przyimek.
+            var scoped = UnitEnumerationParser.Parse(
+                "§ 1 pkt 1 w zakresie § 17 pkt 2 lit. w oraz x", sectionSignIsBasicUnit: true).Targets.First();
+
+            Assert.Equal("art_1__pkt_1", scoped.Structure.ToString());
+            Assert.Equal("art_17__pkt_2__lit_w", scoped.ScopeStructures.First().ToString());
+        }
+
+        [Fact]
+        public void BareDesignationAfterCodeParagraph_StaysCodeParagraph()
+        {
+            // Korpus: 361298_3194530 — gołe „3" dziedziczy nie tylko poziom, ale i to, że jest paragrafem.
+            var paths = Paths("art. 586-591 i art. 592 § 2 i 3");
+
+            Assert.Equal(new[] { "art_592__par_2", "art_592__par_3" }, paths.TakeLast(2).ToArray());
+            Assert.DoesNotContain(paths, p => p.Contains("ust_", StringComparison.Ordinal));
+        }
+
         [Fact]
         public void SuperscriptInBrackets_IsPartOfTheDesignation()
         {

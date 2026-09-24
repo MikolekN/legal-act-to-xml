@@ -35,11 +35,14 @@ namespace Saga.Core.Services.Classify
         /// </summary>
         internal const string OptionalSuperscript = @"(?:\[\d+\])?";
 
+        /// <summary>Opcjonalny znak paragrafu kodeksu.</summary>
+        internal const string OptionalParagraphMark = @"(?:§\s*)?";
+
         internal static readonly Regex ArticlePattern = new(
             $@"^{OptionalQuotePrefix}Art\.?\s*\d+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         internal static readonly Regex ParagraphPattern = new(
-            $@"^{OptionalQuotePrefix}\d+[a-zA-Z]*{OptionalSuperscript}\.\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}\d+[a-zA-Z]*{OptionalSuperscript}\.\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         internal static readonly Regex PointPattern = new(
             $@"^{OptionalQuotePrefix}\d+[a-zA-Z]*{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -73,9 +76,9 @@ namespace Saga.Core.Services.Classify
         internal static readonly Regex ArticleTailCapture = new(
             $@"^{OptionalQuotePrefix}Art\.?\s*\d+[a-zA-Z]*{OptionalSuperscript}\.?\s*(.*)$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        /// <summary>Numer ustępu z grupą przechwytującą (do ParseParagraphNumber).</summary>
+        /// <summary>Numer ustępu/paragrafu kodeksu z grupą przechwytującą (do ParseParagraphNumber).</summary>
         internal static readonly Regex ParagraphNumberCapture = new(
-            $@"^{OptionalQuotePrefix}(\d+[a-zA-Z]*{OptionalSuperscript})\.\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}(\d+[a-zA-Z]*{OptionalSuperscript})\.\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>Numer punktu z grupą przechwytującą (do ParsePointNumber).</summary>
         internal static readonly Regex PointNumberCapture = new(

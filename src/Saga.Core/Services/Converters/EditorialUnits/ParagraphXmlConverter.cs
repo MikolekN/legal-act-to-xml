@@ -54,9 +54,7 @@ namespace Saga.Core.Services.Converters
 
         private static XElement GetParagraphElement(Paragraph paragraph, bool isImplicit, bool isPathological)
         {
-            var isCodeParagraph = false;
-            // var isCodeParagraph = paragraph.Role == Paragraph.CodeParagraphRole;
-            // TODO: repair
+            var isCodeParagraph = paragraph.Role == Paragraph.CodeParagraphRole;
 
             return (isImplicit, isPathological) switch
             {

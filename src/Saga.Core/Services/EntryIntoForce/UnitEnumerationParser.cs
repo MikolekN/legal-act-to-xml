@@ -1,4 +1,5 @@
 using System.Text;
+using Saga.Core.Services.UnitReferences;
 using Saga.Model;
 using Saga.Model.EntryIntoForce;
 
@@ -33,7 +34,7 @@ namespace Saga.Core.Services.EntryIntoForce
         private static bool IsScopeQualifier(UnitToken token) => MatchScopeQualifier(token.Text) is not null;
 
         /// <summary>Rozkłada powołanie jednostek na pojedyncze cele.</summary>
-        internal static UnitEnumerationResult Parse(string? unitsText)
+        internal static UnitEnumerationResult Parse(string? unitsText, bool sectionSignIsBasicUnit = false)
         {
             var targets = new List<ScopedUnitReference>();
             var unresolved = new List<string>();
@@ -46,7 +47,7 @@ namespace Saga.Core.Services.EntryIntoForce
                 return new UnitEnumerationResult(targets, unresolved);
             }
 
-            var state = new FoldState();
+            var state = new FoldState(sectionSignIsBasicUnit);
 
             for (var i = 0; i < tokens.Count; i++)
             {
@@ -228,7 +229,7 @@ namespace Saga.Core.Services.EntryIntoForce
 
             var hasForeignProse = scopeTokens.Any(t => t.Kind == UnitTokenKind.Prose && !IsScopeQualifier(t));
 
-            var structural = hasForeignProse ? null : BuildScopeStructures(scopeTokens);
+            var structural = hasForeignProse ? null : BuildScopeStructures(scopeTokens, state.Cursor.SectionSignIsBasicUnit);
 
             if (structural is null or { Count: 0 })
             {
@@ -255,10 +256,10 @@ namespace Saga.Core.Services.EntryIntoForce
             scopeLevel != UnitLevel.None && level != UnitLevel.None && level < scopeLevel;
 
         /// <summary>Rozkłada treść zakresu na wskazane jednostki.</summary>
-        private static List<StructuralReference>? BuildScopeStructures(IReadOnlyList<UnitToken> tokens)
+        private static List<StructuralReference>? BuildScopeStructures(IReadOnlyList<UnitToken> tokens, bool sectionSignIsBasicUnit)
         {
             var results = new List<StructuralReference>();
-            var cursor = new UnitPathCursor();
+            var cursor = new UnitPathCursor { SectionSignIsBasicUnit = sectionSignIsBasicUnit };
             StructuralReference? candidate = null;
 
             bool Take(in UnitStepContext context, string designation)
@@ -333,9 +334,9 @@ namespace Saga.Core.Services.EntryIntoForce
         // Stan foldu
         // ============================================================
 
-        private sealed class FoldState
+        private sealed class FoldState(bool sectionSignIsBasicUnit)
         {
-            internal UnitPathCursor Cursor { get; } = new();
+            internal UnitPathCursor Cursor { get; } = new() { SectionSignIsBasicUnit = sectionSignIsBasicUnit };
 
             /// <summary>Cel zbudowany, ale oczekujący.</summary>
             internal ScopedUnitReference? Pending { get; set; }

@@ -93,23 +93,48 @@ namespace Saga.Core.Services.Parsing.Builders
         /// (priorytet) lub wzorców tekstowych (fallback).
         /// </summary>
         internal static AmendmentEntityKind ClassifyAmendmentParagraph(CollectedAmendmentParagraph para)
+            => ClassifyWithStyleOverride(para).Kind;
+
+        /// <summary>Klasyfikacja akapitu nowelizacji wraz z rodzajem odczytanym ze stylu.</summary>
+        private static (AmendmentEntityKind Kind, AmendmentEntityKind? OverriddenStyleKind) ClassifyWithStyleOverride(
+            CollectedAmendmentParagraph para)
         {
+            var byText = ClassifyByText(para.Text);
+
             // Priorytet 1: dekodowanie z metadanych stylu
             if (para.StyleInfo != null)
             {
-                return MapTargetKindToEntityKind(para.StyleInfo.TargetKind);
+                var byStyle = MapTargetKindToEntityKind(para.StyleInfo.TargetKind);
+
+                if (IsStructural(byStyle) && IsStructural(byText) && byText != byStyle)
+                    return (byText, byStyle);
+
+                return (byStyle, null);
             }
 
             // Priorytet 2: klasyfikacja tekstowa (te same regexy co ParagraphClassifier)
-            if (ParagraphClassifier.IsArticleByText(para.Text))
+            return (byText, null);
+        }
+
+        private static bool IsStructural(AmendmentEntityKind kind) =>
+            kind is AmendmentEntityKind.Article
+                 or AmendmentEntityKind.Paragraph
+                 or AmendmentEntityKind.Point
+                 or AmendmentEntityKind.Letter
+                 or AmendmentEntityKind.Tiret;
+
+        /// <summary>Klasyfikacja akapitu wyłącznie na podstawie wzorców tekstowych (regex).</summary>
+        private static AmendmentEntityKind ClassifyByText(string text)
+        {
+            if (ParagraphClassifier.IsArticleByText(text))
                 return AmendmentEntityKind.Article;
-            if (ParagraphClassifier.IsParagraphByText(para.Text))
+            if (ParagraphClassifier.IsParagraphByText(text))
                 return AmendmentEntityKind.Paragraph;
-            if (ParagraphClassifier.IsPointByText(para.Text))
+            if (ParagraphClassifier.IsPointByText(text))
                 return AmendmentEntityKind.Point;
-            if (ParagraphClassifier.IsLetterByText(para.Text))
+            if (ParagraphClassifier.IsLetterByText(text))
                 return AmendmentEntityKind.Letter;
-            if (ParagraphClassifier.IsTiretByText(para.Text))
+            if (ParagraphClassifier.IsTiretByText(text))
                 return AmendmentEntityKind.Tiret;
 
             return AmendmentEntityKind.Unknown;
@@ -168,8 +193,46 @@ namespace Saga.Core.Services.Parsing.Builders
 
         private void ProcessAmendmentParagraph(CollectedAmendmentParagraph para, AmendmentContent content)
         {
-            var entityKind = ClassifyAmendmentParagraph(para);
+            var (entityKind, overriddenStyleKind) = ClassifyWithStyleOverride(para);
 
+            BuildByKind(entityKind, para, content);
+
+            if (overriddenStyleKind is { } styleKind)
+                ReportStyleOverride(LastBuiltEntity(entityKind, content), styleKind, entityKind, para.StyleId);
+        }
+
+        /// <summary>
+        /// Encja zbudowana przez ostatnie wywołanie <see cref="BuildByKind"/> dla danego rodzaju.
+        /// </summary>
+        private BaseEntity? LastBuiltEntity(AmendmentEntityKind kind, AmendmentContent content) => kind switch
+        {
+            AmendmentEntityKind.Article => _currentArticle,
+            AmendmentEntityKind.Paragraph => _currentParagraph,
+            AmendmentEntityKind.Point => _currentPoint,
+            AmendmentEntityKind.Letter => _currentLetter,
+            AmendmentEntityKind.Tiret => (_currentLetter?.Tirets ?? content.Tirets).LastOrDefault(),
+            _ => null,
+        };
+
+        /// <summary>
+        /// Rejestruje rozstrzygnięcie konfliktu styl/treść na zbudowanej encji. Brzmienie jak w ścieżce
+        /// ustawy matki (<see cref="ParagraphClassifier"/>), bo to ta sama decyzja naprawcza.
+        /// </summary>
+        private static void ReportStyleOverride(
+            BaseEntity? entity, AmendmentEntityKind byStyle, AmendmentEntityKind byText, string? styleId)
+        {
+            Log.Debug("AmendmentBuilder: konflikt styl={StyleKind} ({StyleId}), treść={TextKind} — przyjęto treść",
+                byStyle, styleId, byText);
+
+            if (entity != null)
+            {
+                ValidationReporter.AddValidationMessage(entity, ValidationLevel.Warning,
+                    $"Nowelizacja: Konflikt: styl={byStyle}, regex={byText}; rozstrzygnięto: {byText}");
+            }
+        }
+
+        private void BuildByKind(AmendmentEntityKind entityKind, CollectedAmendmentParagraph para, AmendmentContent content)
+        {
             switch (entityKind)
             {
                 case AmendmentEntityKind.Article:
@@ -243,6 +306,7 @@ namespace Saga.Core.Services.Parsing.Builders
                 {
                     first.Number = number;
                     first.IsImplicit = false;
+                    ParsingFactories.ApplyCodeParagraphRole(first, text);
                     ParsingFactories.SetContentAndSegments(first, contentText);
                     _currentParagraph = first;
                 }
@@ -255,6 +319,7 @@ namespace Saga.Core.Services.Parsing.Builders
                         Number = number,
                         IsImplicit = false
                     };
+                    ParsingFactories.ApplyCodeParagraphRole(paragraph, text);
                     ParsingFactories.SetContentAndSegments(paragraph, contentText);
                     _currentArticle.Paragraphs.Add(paragraph);
                     _currentParagraph = paragraph;
@@ -268,6 +333,7 @@ namespace Saga.Core.Services.Parsing.Builders
                     Number = number,
                     IsImplicit = false
                 };
+                ParsingFactories.ApplyCodeParagraphRole(paragraph, text);
                 ParsingFactories.SetContentAndSegments(paragraph, contentText);
                 content.Paragraphs.Add(paragraph);
                 _currentParagraph = paragraph;

@@ -31,6 +31,7 @@ namespace Saga.Core.Services.Parsing.Builders
             {
                 currentParagraph.Number = ParsingFactories.ParseParagraphNumber(text);
                 currentParagraph.IsImplicit = false;
+                ParsingFactories.ApplyCodeParagraphRole(currentParagraph, text);
                 ParsingFactories.SetContentAndSegments(currentParagraph, contentText);
                 return currentParagraph;
             }
@@ -42,6 +43,7 @@ namespace Saga.Core.Services.Parsing.Builders
                 Number = ParsingFactories.ParseParagraphNumber(text),
                 IsImplicit = false
             };
+            ParsingFactories.ApplyCodeParagraphRole(paragraph, text);
             ParsingFactories.SetContentAndSegments(paragraph, contentText);
             article.Paragraphs.Add(paragraph);
             return paragraph;

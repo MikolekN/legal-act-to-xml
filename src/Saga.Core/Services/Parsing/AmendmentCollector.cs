@@ -44,7 +44,7 @@ namespace Saga.Core.Services.Parsing
         /// <summary>
         /// Wykryty cel nowelizacji (referencja strukturalna z tresci triggera).
         /// </summary>
-        public StructuralAmendmentReference? Target { get; private set; }
+        public IReadOnlyList<StructuralAmendmentReference> Targets { get; private set; } = [];
 
         /// <summary>
         /// Bilans cudzysłowów zbieranej treści (granice nowelizacji bez stylów Z/*, § 94 ZTP).
@@ -68,8 +68,8 @@ namespace Saga.Core.Services.Parsing
         /// Wywolywane gdy orkiestrator wykryje trigger nowelizacji.
         /// </summary>
         /// <param name="owner">Encja zawierajaca zwrot nowelizacyjny</param>
-        /// <param name="target">Opcjonalny cel wykryty z referencji strukturalnej</param>
-        public void Begin(BaseEntity owner, StructuralAmendmentReference? target = null)
+        /// <param name="targets">Opcjonalne cele wykryte z referencji strukturalnej</param>
+        public void Begin(BaseEntity owner, IReadOnlyList<StructuralAmendmentReference>? targets = null)
         {
             if (IsCollecting)
             {
@@ -81,7 +81,7 @@ namespace Saga.Core.Services.Parsing
             }
 
             Owner = owner ?? throw new ArgumentNullException(nameof(owner));
-            Target = target;
+            Targets = targets ?? [];
 
             Log.Debug("AmendmentCollector: rozpoczeto zbieranie nowelizacji dla {OwnerType} [{OwnerId}]",
                 owner.UnitType, owner.Id);
@@ -122,7 +122,7 @@ namespace Saga.Core.Services.Parsing
 
             _paragraphs.Clear();
             Owner = null;
-            Target = null;
+            Targets = [];
             QuoteTracker.Reset();
 
             if (count > 0)

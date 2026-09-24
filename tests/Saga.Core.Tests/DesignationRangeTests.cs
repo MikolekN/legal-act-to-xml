@@ -1,4 +1,4 @@
-using Saga.Core.Services.EntryIntoForce;
+using Saga.Core.Services.UnitReferences;
 
 namespace Saga.Core.Tests
 {
