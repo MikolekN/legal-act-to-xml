@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
 using Saga.Core.Helpers;
 
-namespace Saga.Core.Services.EntryIntoForce
+namespace Saga.Core.Services.UnitReferences
 {
     /// <summary>Poziom jednostki redakcyjnej w powołaniu.</summary>
     internal enum UnitLevel
@@ -73,18 +73,40 @@ namespace Saga.Core.Services.EntryIntoForce
         /// </summary>
         private static readonly string OrdinalWord = PolishNumerals.OrdinalAlternation;
 
+        /// <summary>Słowo kluczowe jednostki: „art.", „§", „ust.", „pkt", „lit.", „(podwójne) tiret", „zdanie".</summary>
+        internal static readonly string UnitKeywordPattern =
+            @"art\.|§|ust\.|pkt|lit\.|(?:" + PolishNumerals.MultiplicityAlternation +
+            @")\s+tiret\p{L}*|tiret\p{L}*|zdani\p{L}+";
+
+        /// <summary>Przedział oznaczeń: „85c–85j", „a–c", „czwarte–szóste".</summary>
+        internal static readonly string RangePattern =
+            @"\d+[a-zA-Z]*\s*[-–]\s*\d+[a-zA-Z]*" +
+            @"|\b[a-z]{1,2}\s*[-–]\s*[a-z]{1,2}\b" +
+            @"|" + OrdinalWord + @"\s*[-–]\s*" + OrdinalWord;
+
+        /// <summary>Oznaczenie jednostki: numer (z indeksem górnym „125[1]"), liczebnik porządkowy albo litera.</summary>
+        internal static readonly string DesignationPattern =
+            @"\d+[a-zA-Z]*(?:\s*\[\s*\d+[a-zA-Z]*\s*\])?|" + OrdinalWord + @"|\b[a-z]{1,2}\b";
+
         private static readonly Regex TokenPattern = new(
             @"(?<prosescope>w\s+zakresie\s*,\s*w\s+jakim.*|w\s+jakim\s+dotycz\p{L}*.*)" +
             @"|(?<scope>w\s+zakresie|w\s+odniesieniu\s+do|w\s+stosunku\s+do)" +
             @"|(?<dash>\s[-–]\s)" +
-            @"|(?<unit>art\.|§|ust\.|pkt|lit\.|(?:" + PolishNumerals.MultiplicityAlternation +
-                @")\s+tiret\p{L}*|tiret\p{L}*|zdani\p{L}+)" +
-            @"|(?<range>\d+[a-zA-Z]*\s*[-–]\s*\d+[a-zA-Z]*" +
-            @"|\b[a-z]{1,2}\s*[-–]\s*[a-z]{1,2}\b" +
-            @"|" + OrdinalWord + @"\s*[-–]\s*" + OrdinalWord + ")" +
+            @"|(?<unit>" + UnitKeywordPattern + ")" +
+            @"|(?<range>" + RangePattern + ")" +
             @"|(?<separator>,|;|:|\bi\b|\boraz\b|\blub\b|\balbo\b)" +
-            @"|(?<designation>\d+[a-zA-Z]*(?:\s*\[\s*\d+[a-zA-Z]*\s*\])?|" + OrdinalWord + @"|\b[a-z]{1,2}\b)",
+            @"|(?<designation>" + DesignationPattern + ")",
             Opts);
+
+        /// <summary>
+        /// Przyimki wprowadzające jednostkę („w art. 5", „po pkt 3"; § 89 ust. 2 ZTP: „przed oznaczeniem
+        /// każdej kolejnej jednostki redakcyjnej pisze się przyimek „w”"). Pasują do wzorca oznaczenia
+        /// litery, więc bez tej listy „w art. 5 w ust. 2" dałoby literę „w".
+        /// </summary>
+        private static readonly HashSet<string> Prepositions = new(StringComparer.OrdinalIgnoreCase)
+        {
+            "w", "we", "po", "do", "od", "z", "ze", "na", "o",
+        };
 
         /// <summary>Rozbija tekst na tokeny.</summary>
         internal static IReadOnlyList<UnitToken> Tokenize(string? text)
@@ -109,7 +131,54 @@ namespace Saga.Core.Services.EntryIntoForce
                 AddProse(tokens, input[cursor..]);
 
             NormalizeLeadingMultiplicityOrdinal(tokens);
+            DemotePrepositions(tokens);
+            PromoteLetterI(tokens);
             return tokens;
+        }
+
+        /// <summary>Czy słowo to przyimek wprowadzający jednostkę („w", „po", „do" …).</summary>
+        internal static bool IsPreposition(string word) => Prepositions.Contains(word);
+
+        /// <summary>
+        /// Poziom jednostki dla słowa kluczowego bez kontekstu ścieżki. „§" daje jednostkę główną —
+        /// na paragraf kodeksu przestawia go dopiero <see cref="UnitPathCursor"/>, gdy w ścieżce jest artykuł.
+        /// </summary>
+        internal static UnitLevel LevelOf(string keyword) => MapLevel(keyword);
+
+        /// <summary>
+        /// „i" tuż po „lit." to litera i (§ 57 ust. 4 ZTP), nie spójnik: „w lit. i kropkę zastępuje się …".
+        /// </summary>
+        private static void PromoteLetterI(List<UnitToken> tokens)
+        {
+            for (var i = 1; i < tokens.Count; i++)
+            {
+                if (tokens[i] is { Kind: UnitTokenKind.Separator } candidate &&
+                    candidate.Text.Equals("i", StringComparison.OrdinalIgnoreCase) &&
+                    tokens[i - 1] is { Kind: UnitTokenKind.UnitKeyword, Level: UnitLevel.Letter })
+                {
+                    tokens[i] = new UnitToken(UnitTokenKind.Designation, candidate.Text);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Przyimek tuż przed słowem kluczowym („w art. 5 w ust. 2") to proza, nie oznaczenie. Wyjątek:
+        /// miejsce oznaczenia zaraz po „lit." — „lit. w tiret pierwsze" to litera „w".
+        /// </summary>
+        private static void DemotePrepositions(List<UnitToken> tokens)
+        {
+            for (var i = 0; i + 1 < tokens.Count; i++)
+            {
+                if (tokens[i] is not { Kind: UnitTokenKind.Designation } candidate ||
+                    !Prepositions.Contains(candidate.Text) ||
+                    tokens[i + 1].Kind != UnitTokenKind.UnitKeyword)
+                    continue;
+
+                if (i > 0 && tokens[i - 1] is { Kind: UnitTokenKind.UnitKeyword, Level: UnitLevel.Letter })
+                    continue;
+
+                tokens[i] = new UnitToken(UnitTokenKind.Prose, candidate.Text);
+            }
         }
 
         /// <summary>

@@ -1,6 +1,6 @@
 using Saga.Core.Helpers;
 
-namespace Saga.Core.Services.EntryIntoForce
+namespace Saga.Core.Services.UnitReferences
 {
     /// <summary>
     /// Rozwija przedziały oznaczeń jednostek („art. 85c–85j", „pkt 19-21", „lit. a–c").

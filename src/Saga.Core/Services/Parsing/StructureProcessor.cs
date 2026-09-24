@@ -2,8 +2,10 @@ using Saga.Core.Helpers;
 using Saga.Core.Ingest;
 using Saga.Core.Services.Classify;
 using Saga.Core.Services.Parsing.Builders;
+using Saga.Core.Services.UnitReferences;
 using Saga.Model;
 using Serilog;
+using DtoParagraph = Saga.Model.EditorialUnits.Paragraph;
 
 namespace Saga.Core.Services.Parsing
 {
@@ -148,6 +150,8 @@ namespace Saga.Core.Services.Parsing
 
             if (context.CurrentArticle == null)
             {
+                context.Metadata.Seal();
+
                 Log.Warning("Akapit {Kind} poza kontekstem artykułu (metadane lub pre-art.) — pominięty. Styl: {StyleId}",
                     classification.Kind, sourceStyleId);
                 return false;
@@ -409,7 +413,9 @@ namespace Saga.Core.Services.Parsing
             context.CurrentStructuralReference = entity.UnitType switch
             {
                 UnitType.Article => context.CurrentStructuralReference.WithArticle(numberValue),
-                UnitType.Paragraph => context.CurrentStructuralReference.WithParagraph(numberValue),
+                UnitType.Paragraph => entity is DtoParagraph { Role: DtoParagraph.CodeParagraphRole }
+                    ? context.CurrentStructuralReference.WithCodeParagraph(numberValue)
+                    : context.CurrentStructuralReference.WithParagraph(numberValue),
                 UnitType.Point => context.CurrentStructuralReference.WithPoint(numberValue),
                 UnitType.Letter => context.CurrentStructuralReference.WithLetter(numberValue),
                 UnitType.Tiret => context.CurrentStructuralReference.WithTiret(numberValue),
@@ -419,7 +425,7 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Wykrywa cele nowelizacji w treści encji implementującej IHasAmendments.
-        /// Parsuje wzorce takie jak "w art. 5", "po ust. 2" itp.
+        /// Parsuje wzorce takie jak "w art. 5", "po ust. 2", "ust. 2 i 4" itp.
         /// Kontekst jest dziedziczony z encji nadrzędnych (kumulacja referencji rozproszonych po poziomach).
         /// </summary>
         private static void DetectAmendmentTargets(ParsingContext context, BaseEntity entity)
@@ -431,40 +437,43 @@ namespace Saga.Core.Services.Parsing
                 return;
 
             // Zacznij od kontekstu rodzica (jeśli istnieje wykryty cel w encji nadrzędnej)
-            var parentRef = FindParentAmendmentTargetReference(context, entity);
-            var targetRef = parentRef?.Clone() ?? new StructuralReference();
-            context.ReferenceService.UpdateLegalReference(targetRef, entity.ContentText);
+            var parentTargets = FindParentAmendmentTargets(context, entity);
+            var targets = context.ReferenceService.ReadAmendmentTargets(
+                parentTargets?[0].Structure, entity.ContentText,
+                SectionSignRole.IsBasicUnit(context.Document.Classification));
 
-            // Sprawdź czy wykryto jakikolwiek cel nowelizacji
-            if (targetRef.Article == null && targetRef.Paragraph == null &&
-                targetRef.Point == null && targetRef.Letter == null && targetRef.Tiret == null)
+            if (targets.Count == 0 && parentTargets is not null)
             {
-                return;
+                targets = parentTargets
+                    .Select(parent => new StructuralAmendmentReference
+                    {
+                        Structure = parent.Structure.Clone(),
+                        RangeEnd = parent.RangeEnd?.Clone(),
+                        RawText = entity.ContentText,
+                    })
+                    .ToList();
             }
 
-            var amendmentRef = new StructuralAmendmentReference
-            {
-                Structure = targetRef,
-                RawText = entity.ContentText
-            };
+            if (targets.Count == 0)
+                return;
 
-            context.DetectedAmendmentTargets[entity.Guid] = amendmentRef;
+            context.DetectedAmendmentTargets[entity.Guid] = targets;
 
-            Log.Debug("Wykryto cel nowelizacji w {UnitType} [{EntityId}]: {AmendmentTarget}",
-                entity.UnitType, entity.Id, amendmentRef);
+            Log.Debug("Wykryto cele nowelizacji w {UnitType} [{EntityId}]: {AmendmentTargets}",
+                entity.UnitType, entity.Id, string.Join(", ", targets));
         }
 
         /// <summary>
         /// Przeszukuje encje nadrzędne w hierarchii (Parent), szukając wcześniej
-        /// wykrytego celu nowelizacji, którego kontekst może być odziedziczony.
+        /// wykrytych celów nowelizacji, których kontekst może być odziedziczony.
         /// </summary>
-        private static StructuralReference? FindParentAmendmentTargetReference(ParsingContext context, BaseEntity entity)
+        private static IReadOnlyList<StructuralAmendmentReference>? FindParentAmendmentTargets(ParsingContext context, BaseEntity entity)
         {
             var current = entity.Parent;
             while (current != null)
             {
-                if (context.DetectedAmendmentTargets.TryGetValue(current.Guid, out var parentTarget))
-                    return parentTarget.Structure;
+                if (context.DetectedAmendmentTargets.TryGetValue(current.Guid, out var parentTargets))
+                    return parentTargets;
                 current = current.Parent;
             }
             return null;

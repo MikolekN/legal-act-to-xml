@@ -10,81 +10,169 @@ namespace Saga.Core.Tests
     {
         private readonly LegalReferenceService _service = new();
 
+        /// <summary>Jedyny cel wskazany w treści.</summary>
+        private StructuralAmendmentReference SingleTarget(
+            string text, StructuralReference? context = null, bool sectionSignIsBasicUnit = false) =>
+            Assert.Single(_service.ReadAmendmentTargets(context, text, sectionSignIsBasicUnit));
+
+        private string[] Targets(string text, StructuralReference? context = null) =>
+            _service.ReadAmendmentTargets(context, text).Select(t => t.ToString()).ToArray();
+
         [Fact]
-        public void UpdateLegalReference_DetectsArticle()
+        public void ReadAmendmentTargets_DetectsArticle()
         {
-            var reference = new StructuralReference();
-
-            _service.UpdateLegalReference(reference, "w art. 5 dodaje się pkt 3");
-
-            Assert.Equal("5", reference.Article);
+            Assert.Equal("5", SingleTarget("w art. 5 dodaje się pkt 3").Structure.Article);
         }
 
         [Fact]
-        public void UpdateLegalReference_DetectsParagraph()
+        public void ReadAmendmentTargets_DetectsParagraph()
         {
-            var reference = new StructuralReference();
+            Assert.Equal("2", SingleTarget("w ust. 2 pkt 1 otrzymuje brzmienie").Structure.Paragraph);
+        }
 
-            _service.UpdateLegalReference(reference, "w ust. 2 pkt 1 otrzymuje brzmienie");
+        // ============================================================
+        // Paragraf kodeksu — segment „par", nie „ust" (ADR-0014)
+        // ============================================================
 
-            Assert.Equal("2", reference.Paragraph);
+        [Fact]
+        public void ReadAmendmentTargets_CodeParagraphAfterArticle_UsesPar()
+        {
+            // Korpus: 306701_2736647.
+            Assert.Equal("art_53__par_30c", SingleTarget("w art. 53 § 30c otrzymuje brzmienie:").ToString());
         }
 
         [Fact]
-        public void UpdateLegalReference_DetectsPoint()
+        public void ReadAmendmentTargets_CodeParagraphUnderInheritedArticle_UsesPar()
         {
-            var reference = new StructuralReference();
+            // Artykuł przychodzi z kontekstu rodzica, „§" z komendy — wciąż paragraf kodeksu.
+            var target = SingleTarget(
+                "w § 2b wyrazy „art. 14a” zastępuje się wyrazami „art. 14a § 1”;", new StructuralReference { Article = "12" });
 
-            _service.UpdateLegalReference(reference, "po pkt 3a dodaje się pkt 3b");
-
-            Assert.Equal("3a", reference.Point);
+            Assert.Equal("art_12__par_2b", target.ToString());
         }
 
         [Fact]
-        public void UpdateLegalReference_DetectsLetter()
+        public void ReadAmendmentTargets_SectionSignOnlyInQuote_IsNotATarget()
         {
-            var reference = new StructuralReference();
+            // Korpus: 361298_3194530 — „§" występuje wyłącznie w cytowanym brzmieniu,
+            // więc celem jest cały artykuł, a nie jego paragraf.
+            var target = SingleTarget(
+                "w art. 593 wyrazy „art. 586-592” zastępuje się wyrazami „art. 586-591 i art. 592 § 2 i 3”;");
 
-            _service.UpdateLegalReference(reference, "w lit. b tiret drugie");
-
-            Assert.Equal("b", reference.Letter);
+            Assert.Equal("art_593", target.ToString());
         }
 
         [Fact]
-        public void UpdateLegalReference_DetectsMultipleLevels()
+        public void ReadAmendmentTargets_SectionSignWithoutArticle_InSectionBasedAct_IsTheMainUnit()
         {
-            var reference = new StructuralReference();
+            // W akcie opartym na paragrafach (rozporządzenie) samodzielny „§" to jednostka główna.
+            var target = SingleTarget("w § 5 ust. 2 otrzymuje brzmienie:", sectionSignIsBasicUnit: true);
 
-            _service.UpdateLegalReference(reference, "w art. 10 w ust. 3 pkt 2 otrzymuje brzmienie");
-
-            Assert.Equal("10", reference.Article);
-            Assert.Equal("3", reference.Paragraph);
-            Assert.Equal("2", reference.Point);
+            Assert.Equal("art_5__ust_2", target.ToString());
+            Assert.False(target.Structure.ParagraphIsCodeParagraph);
         }
 
         [Fact]
-        public void UpdateLegalReference_DoesNotOverrideExistingValues()
+        public void ReadAmendmentTargets_SectionSignWithoutArticle_InStatute_IsNotGuessed()
         {
-            var reference = new StructuralReference();
-            reference.Article = "7";
+            // Korpus: 311010_2798032. W ustawie „§" to paragraf kodeksu, a bez artykułu adres jest niepełny —
+            // artykułu się nie zgaduje (wcześniej „w § 2" dawało fałszywy cel art_2).
+            var targets = _service.ReadAmendmentTargets(null,
+                "Jeżeli wniosek o zabezpieczenie w formie określonej w § 2 złożono po ustanowieniu zabezpieczenia " +
+                "w trybie przepisów o postępowaniu egzekucyjnym w administracji");
 
-            _service.UpdateLegalReference(reference, "w art. 5 ust. 2 dodaje się pkt 3");
-
-            Assert.Equal("7", reference.Article); // nie nadpisane
-            Assert.Equal("2", reference.Paragraph); // wykryte z tekstu
+            Assert.Empty(targets);
         }
 
         [Fact]
-        public void UpdateLegalReference_NoMatchReturnsEmptyReference()
+        public void ReadAmendmentTargets_OrdinaryParagraph_StaysUst()
         {
-            var reference = new StructuralReference();
+            Assert.Equal("art_5__ust_2__pkt_1", SingleTarget("w art. 5 ust. 2 pkt 1 otrzymuje brzmienie:").ToString());
+        }
 
-            _service.UpdateLegalReference(reference, "Przepis stosuje się odpowiednio.");
+        [Fact]
+        public void ReadAmendmentTargets_DetectsPoint()
+        {
+            Assert.Equal("3a", SingleTarget("po pkt 3a dodaje się pkt 3b").Structure.Point);
+        }
 
-            Assert.Null(reference.Article);
-            Assert.Null(reference.Paragraph);
-            Assert.Null(reference.Point);
-            Assert.Null(reference.Letter);
+        [Fact]
+        public void ReadAmendmentTargets_DetectsLetter()
+        {
+            Assert.Equal("b", SingleTarget("w lit. b tiret drugie").Structure.Letter);
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_DetectsMultipleLevels()
+        {
+            var target = SingleTarget("w art. 10 w ust. 3 pkt 2 otrzymuje brzmienie").Structure;
+
+            Assert.Equal("10", target.Article);
+            Assert.Equal("3", target.Paragraph);
+            Assert.Equal("2", target.Point);
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_ExplicitArticleInCommand_OverridesContext()
+        {
+            // Kontekst (artykuł z komendy nadrzędnej) uzupełnia tylko to, czego komenda nie mówi —
+            // jawne „w art. 5" w adresie komendy wskazuje cel wprost (§ 89 ust. 2 ZTP).
+            var target = SingleTarget("w art. 5 ust. 2 dodaje się pkt 3", new StructuralReference { Article = "7" });
+
+            Assert.Equal("art_5__ust_2__pkt_3", target.ToString());
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_CrossReferenceAfterAddress_DoesNotOverrideContext()
+        {
+            // „o którym mowa w art. 5" to odesłanie w prozie, nie kolejny cel: artykuł dołącza proza,
+            // nie separator wyliczenia, więc adres kończy się na ustępie, a artykuł z kontekstu zostaje.
+            var target = SingleTarget(
+                "w ust. 2, o którym mowa w art. 5, dodaje się pkt 3", new StructuralReference { Article = "7" });
+
+            Assert.Equal("art_7__ust_2", target.ToString());
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_NoMatch_ReadsNothing()
+        {
+            Assert.Empty(_service.ReadAmendmentTargets(null, "Przepis stosuje się odpowiednio."));
+        }
+
+        // ============================================================
+        // Wyliczenie i przedział celów (ADR-0016)
+        // ============================================================
+
+        [Fact]
+        public void ReadAmendmentTargets_Enumeration_GivesATargetPerUnit()
+        {
+            // Korpus: „w art. 27 uchyla się pkt 2, 4 i 5;".
+            Assert.Equal(
+                new[] { "art_27__pkt_2", "art_27__pkt_4", "art_27__pkt_5" },
+                Targets("w art. 27 uchyla się pkt 2, 4 i 5;"));
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_Range_IsOneTargetWithAnEnd()
+        {
+            // Korpus: „ust. 8-10 otrzymują brzmienie:" pod art. 23 z komendy nadrzędnej.
+            var target = SingleTarget("ust. 8-10 otrzymują brzmienie:", new StructuralReference { Article = "23" });
+
+            Assert.Equal("art_23__ust_8", target.Structure.ToString());
+            Assert.Equal("art_23__ust_10", target.RangeEnd?.ToString());
+            Assert.Equal("art_23__ust_8–art_23__ust_10", target.ToString());
+        }
+
+        [Theory]
+        [InlineData("w art. 5 w ust. 2 zdanie drugie i trzecie otrzymują brzmienie:")]
+        [InlineData("w art. 5 w ust. 2 zdania drugie–czwarte otrzymują brzmienie:")]
+        public void ReadAmendmentTargets_Sentences_CollapseIntoTheirUnit(string text)
+        {
+            // Cel nowelizacji to jednostka redakcyjna, bez zdania — zdania jednego ustępu to jeden cel.
+            var target = SingleTarget(text);
+
+            Assert.Equal("art_5__ust_2", target.ToString());
+            Assert.Null(target.RangeEnd);
         }
 
         [Fact]
@@ -183,7 +271,7 @@ namespace Saga.Core.Tests
             Assert.NotNull(context.CurrentParagraph);
             Assert.True(context.DetectedAmendmentTargets.ContainsKey(context.CurrentParagraph.Guid));
 
-            var target = context.DetectedAmendmentTargets[context.CurrentParagraph.Guid];
+            var target = Assert.Single(context.DetectedAmendmentTargets[context.CurrentParagraph.Guid]);
             Assert.Equal("10", target.Structure.Article);
             Assert.Equal("3", target.Structure.Paragraph);
         }

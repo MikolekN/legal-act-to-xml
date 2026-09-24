@@ -220,7 +220,9 @@ namespace Saga.Core.Services.Converters
 
             foreach (var target in amendment.Targets)
             {
-                var targetEl = new XElement("target", target.ToString());
+                var targetEl = new XElement("target", target.Structure.ToString());
+                if (target.RangeEnd is not null)
+                    targetEl.Add(new XAttribute("rangeEnd", target.RangeEnd.ToString()));
                 if (!string.IsNullOrEmpty(target.RawText))
                     targetEl.Add(new XAttribute("raw", target.RawText));
                 el.Add(targetEl);

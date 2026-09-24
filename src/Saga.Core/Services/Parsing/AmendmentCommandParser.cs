@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using Saga.Core.Helpers;
+using Saga.Core.Services.UnitReferences;
 
 namespace Saga.Core.Services.Parsing
 {
@@ -55,18 +56,14 @@ namespace Saga.Core.Services.Parsing
     /// mechanizmy stylowe TYLKO tam, gdzie stylów nie ma — wynik jest źródłem o niższym priorytecie
     /// niż mapa stylów (<see cref="StyleLibraryMapper.AmendmentStyleInfoMap"/>).
     ///
-    /// Kontekst nadrzędny („w art. 5 w ust. 2 …") pozostaje domeną LegalReferenceService
-    /// (DetectedAmendmentTargets); ten parser dokłada wyłącznie to, czego tam brakuje
-    /// (m.in. jednostkę „tiret", której LegalReferenceService nie zna).
     /// </summary>
     public static class AmendmentCommandParser
     {
-        // Token jednostki redakcyjnej + opcjonalne oznaczenie: cyfrowe („7a", „5a-5g"), literowe („b", „za")
-        // lub słowne — liczebnik porządkowy („zdanie drugie", „tiret trzecie" — forma kanoniczna § 57 ust. 6 ZTP).
-        // Formy mnogie („tirety", „zdania") w alternatywie jednostki, by sufiks nie wpadał do oznaczenia.
+        // Token jednostki redakcyjnej + opcjonalne oznaczenie (przedział „5a-5g", numer „7a", litera „b",
+        // liczebnik porządkowy „zdanie drugie") — słownik i kształt oznaczeń ze wspólnego źródła powołań.
         private static readonly string UnitToken =
-            @"(?<unit>art\.|§|ust\.|pkt|lit\.|tirety|tiret|zdani[ea])\s*(?<no>\d+[a-zA-Z]*(?:[-–]\d+[a-zA-Z]*)?|[a-z]{1,2}\b|"
-            + PolishNumerals.OrdinalAlternation + @")?";
+            @"(?<unit>" + UnitReferenceTokenizer.UnitKeywordPattern + @")\s*(?<no>" +
+            UnitReferenceTokenizer.RangePattern + "|" + UnitReferenceTokenizer.DesignationPattern + ")?";
 
         private static readonly Regex UnitTokenPattern = new(UnitToken, RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
@@ -181,15 +178,19 @@ namespace Saga.Core.Services.Parsing
                 last.Groups["no"].Success && last.Groups["no"].Value.Length > 0 ? last.Groups["no"].Value : null);
         }
 
+        /// <summary>
+        /// Rodzaj jednostki dla słowa kluczowego — poziom ze wspólnego źródła, bez kontekstu ścieżki
+        /// (samodzielny „§" to jednostka główna; paragraf kodeksu rozstrzyga dopiero adres celu).
+        /// </summary>
         private static AmendmentTargetKind MapUnit(string unit) =>
-            unit.ToLowerInvariant().TrimEnd('.') switch
+            UnitReferenceTokenizer.LevelOf(unit) switch
             {
-                "art" or "§" => AmendmentTargetKind.Article,
-                "ust" => AmendmentTargetKind.Paragraph,
-                "pkt" => AmendmentTargetKind.Point,
-                "lit" => AmendmentTargetKind.Letter,
-                "tiret" or "tirety" => AmendmentTargetKind.Tiret,
-                "zdanie" or "zdania" => AmendmentTargetKind.Fragment,
+                UnitLevel.Article => AmendmentTargetKind.Article,
+                UnitLevel.Paragraph => AmendmentTargetKind.Paragraph,
+                UnitLevel.Point => AmendmentTargetKind.Point,
+                UnitLevel.Letter => AmendmentTargetKind.Letter,
+                UnitLevel.Tiret => AmendmentTargetKind.Tiret,
+                UnitLevel.Sentence => AmendmentTargetKind.Fragment,
                 _ => AmendmentTargetKind.Unknown,
             };
     }

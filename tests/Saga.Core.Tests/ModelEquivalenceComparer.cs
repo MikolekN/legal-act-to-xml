@@ -18,7 +18,7 @@ namespace Saga.Core.Tests
             var sb = new StringBuilder();
             foreach (var article in document.Articles)
             {
-                // eId (a nie sam numer) — koduje ścieżkę jednostek systematyzacyjnych (rozd_1__art_5),
+                // eId (a nie sam numer) — koduje ścieżkę jednostek systematyzacyjnych (rozdz_1__art_5),
                 // więc rozjazd umiejscowienia artykułu między ścieżkami jest widoczny dla ekwiwalencji.
                 sb.AppendLine($"art {Num(article.Number)} eId={article.Id} | {article.ContentText}");
                 DescribeParagraphs(sb, article.Paragraphs, depth: 1);

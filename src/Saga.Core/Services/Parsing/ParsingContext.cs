@@ -109,10 +109,10 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Wykryte cele nowelizacji w tresci jednostek redakcyjnych.
-        /// Klucz: Guid encji, Wartosc: wykryty cel (referencja strukturalna z RawText).
+        /// Klucz: Guid encji, Wartosc: wykryte cele (referencje strukturalne z RawText).
         /// Wypelniane przez orkiestrator podczas parsowania encji IHasAmendments.
         /// </summary>
-        public Dictionary<Guid, StructuralAmendmentReference> DetectedAmendmentTargets { get; } = new();
+        public Dictionary<Guid, IReadOnlyList<StructuralAmendmentReference>> DetectedAmendmentTargets { get; } = new();
 
         /// <summary>
         /// Czy aktualnie przetwarza akapity bedace trescia nowelizacji.

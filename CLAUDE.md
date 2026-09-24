@@ -124,6 +124,7 @@ Reguła decyzyjna: twardy wymóg dwóch zgodnych sygnałów dotyczy głównie ro
 - Style akapitów nowelizacji używają prefiksów `Z/*`, `ZZ*`, `Z_*` (dekodowane przez `AmendmentStyleDecoder`)
 - Typy (`src/Saga.Model/AmendmentOperationType.cs`): Modification, Insertion, Repeal — dotyczą udanej klasyfikacji; czwarta wartość Error oznacza błąd przetwarzania
 - Wieloetapowy cykl życia: Wykrycie → Zbieranie (`AmendmentCollector`) → Finalizacja (`AmendmentFinalizer`)
+- Cele komendy (ADR-0016): jeden → `element-eId`; przedział („art. 1–3") → `element-eId` + `element-do-eId`; wyliczenie („art. 1, 2 i 3") → osobna komenda na każdy cel. `element-do-eId` nigdy nie znaczy „ostatni cel listy"
 
 ## Kluczowe pliki
 
@@ -141,6 +142,7 @@ Reguła decyzyjna: twardy wymóg dwóch zgodnych sygnałów dotyczy głównie ro
 | `src/Saga.Core/Services/Classify/ParagraphClassifier.cs` | Logika klasyfikacji (3-warstwowa) |
 | `src/Saga.Core/Services/Classify/NumberingHint.cs` | Walidacja ciągłości numeracji |
 | `src/Saga.Core/Helpers/ParagraphExtensions.cs` | Bezpieczne helpery OpenXml (używaj rozszerzenia `.StyleId()`) |
+| `src/Saga.Core/Services/UnitReferences/` | Jedno źródło powołań jednostek („art. 5 § 2 pkt 3"): słownik, reguły ścieżki, rozstrzygnięcie „§" — dla wejścia w życie i celów nowelizacji (ADR-0015) |
 | `src/Saga.Core/Helpers/AmendmentStyleDecoder.cs` | Dekoduje style nowelizacji (`Z/*`, `ZZ*`, `Z_*`) |
 | `src/Saga.Model/BaseEntity.cs` | Abstrakcyjna baza dla wszystkich encji domenowych |
 | `src/Saga.Model/EntityNumber.cs` | Model numeru encji (NumericPart, LexicalPart, Superscript) |
@@ -151,6 +153,7 @@ Reguła decyzyjna: twardy wymóg dwóch zgodnych sygnałów dotyczy głównie ro
 - **Język**: kod (zmienne, metody, klasy) po **angielsku**; komentarze, teksty UI i komunikaty logów po **polsku**. Jest to celowe.
 - **Bezpieczeństwo null w OpenXml**: zawsze sprawdzaj null dla `paragraph.ParagraphProperties` przed dostępem do stylów. Używaj metod rozszerzających z `ParagraphExtensions`: `.StyleId()` (bez argumentu) zwraca `string?` z identyfikatorem stylu, a `.StyleId("PREFIKS")` zwraca `bool?` informujące, czy styl zaczyna się od podanego prefiksu.
 - **Wzorce regex**: deklaruj jako `private static readonly Regex`, prekompilowane. Wzorce muszą obsługiwać opcjonalny prefiks cudzysłowu dla treści nowelizacji.
+- **Powołania jednostek** („w art. 5 § 2 pkt 3 lit. a") czytaj wyłącznie przez `Services/UnitReferences` (`UnitEnumerationParser`, `UnitAddressReader`) — nie dopisuj własnych wzorców `art.`/`ust.`/`lit.`. Pilnuje tego strażnik ADR-0015.
 - **Logowanie**: używaj Serilog (konfigurowanego przez `LoggerConfig.ConfigureLogger()`); minimalny poziom Warning. Logi trafiają do `logs/log.txt` i na konsolę.
 - **Komunikaty commitów**: proponuj nazwy commitów po **angielsku** po każdej zmianie (zarówno małej jak i architektonicznej).
 - **Dokumentacja i plany**: wersjonowany katalog `docs/` trzyma wyłącznie dokumenty opisujące **stan i uzasadnienia** — `architecture.md` (jak działa dziś), `adr/` (dlaczego tak — patrz niżej), `backlog.md` (znane luki i prace świadomie odroczone), `ztp-struktura-aktow.md` (kondensat ZTP). Plany przebudowy, analizy i raporty robocze powstają w `docs/internal/` (gitignorowane), nigdy w wersjonowanym `docs/`. Po wykonaniu planu wygaś go trójpodziałem: „dlaczego" i zasady twarde → ADR, niezrealizowane/odroczone → `backlog.md`, etapowanie i definicje ukończenia → usuń (historia jest w `git log`). Każde twierdzenie przepisywane z planu **zweryfikuj w kodzie** — plany opisują stan z dnia ich napisania i po drodze dryfują.

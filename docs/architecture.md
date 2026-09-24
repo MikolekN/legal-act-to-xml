@@ -34,7 +34,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `EntityNumber.cs` | Model numeru encji z rozbiciem na: `NumericPart`, `LexicalPart`, `Superscript` |
 | `Amendment.cs` | Model nowelizacji (typ operacji, treść, cel, data wejścia w życie) |
 | `AmendmentContent.cs` | Treść nowelizacji — hierarchiczny fragment aktu (artykuły, ustępy, punkty...) |
-| `StructuralAmendmentReference.cs` | Cel nowelizacji — ścieżka strukturalna do zmienianej jednostki |
+| `StructuralAmendmentReference.cs` | Cel nowelizacji — ścieżka strukturalna do zmienianej jednostki, dla przedziału także jego koniec (`RangeEnd`) |
 | `TextSegment.cs` / `TextSegmentType.cs` | Segmenty tekstu (zdania) wewnątrz jednostek redakcyjnych |
 | `ValidationMessage.cs` | Komunikaty diagnostyczne (Info/Warning/Error/Critical) |
 | `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje) |
@@ -169,7 +169,7 @@ Każdy dokument ma **pełną minimalną hierarchię** — jednostki nieobecne w 
 
 ```
 Article (art.)           — kontener; zawsze ≥1 Paragraph
- └── Paragraph (ust.)   — może być implicit (jedyny ustęp w artykule)
+ └── Paragraph (ust.)   — może być implicit (jedyny ustęp w artykule); w kodeksie „§" (Role = "par")
       ├── CommonPart     — intro (przed listą) lub wrapUp (po liście)
       └── Point (pkt)
            ├── CommonPart
@@ -183,9 +183,12 @@ Article (art.)           — kontener; zawsze ≥1 Paragraph
 
 Format: `art_5__ust_2__pkt_3__lit_a__tir_1`
 
+- Skróty jednostek (levelType) — wyłącznie z tabeli [ADR-0014](adr/0014-skroty-jednostek-w-eid.md)
 - Separator segmentów: `__` (double underscore)
 - Separator prefiks-numer: `_` (single underscore)
 - Jednostki implicit (`IsImplicit = true`) są **pomijane** w eId
+- Paragraf kodeksu (§ 55 ust. 3 ZTP) to `Paragraph` z prefiksem `par` zamiast `ust` (`art_2__par_1`),
+  eksportowany jako `paragraf-kodeksu`; rolę nadaje `ParsingFactories.ApplyCodeParagraphRole` po znaku „§".
 - Logika w `BaseEntity.Id` (getter) — buduje od bieżącej encji do korzenia, odwraca kolejność
 
 ### 4.4 Klasa bazowa `BaseEntity`
@@ -197,7 +200,7 @@ Wspólne cechy wszystkich encji:
 | `Guid` | `Guid` | Unikalny identyfikator |
 | `UnitType` | `UnitType` | Typ semantyczny (Article, Paragraph, Point...) |
 | `DisplayLabel` | `string` | Etykieta wyświetlana ("art.", "ust.", "pkt"...) |
-| `EIdPrefix` | `string` | Prefiks eId ("art", "ust", "pkt", "lit", "tir") |
+| `EIdPrefix` | `string` | Prefiks eId ("art", "ust", "par", "pkt", "lit", "tir") |
 | `Number` | `EntityNumber?` | Numer encji z rozbiciem na komponenty |
 | `ContentText` | `string` | Pełny tekst jednostki |
 | `Parent` | `BaseEntity?` | Referencja do rodzica |
@@ -350,7 +353,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | `AmendmentOwner` | Encja-właściciel bieżącej nowelizacji |
 | `ReferenceService` | Serwis referencji strukturalnych |
 | `CurrentStructuralReference` | Bieżąca pozycja (art/ust/pkt/lit/tir) — aktualizowana przez `StructureProcessor` |
-| `DetectedAmendmentTargets` | Słownik: `Guid` → `StructuralAmendmentReference` — cele nowelizacji detektowane przez `StructureProcessor` |
+| `DetectedAmendmentTargets` | Słownik: `Guid` → lista `StructuralAmendmentReference` — cele nowelizacji detektowane przez `StructureProcessor` (wyliczenie to kilka celów, przedział jeden — [ADR-0016](adr/0016-wyliczenie-celow-to-osobne-komendy.md)) |
 
 ---
 
@@ -371,7 +374,8 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`ParsingContext`** | Stan parsowania — przechowuje bieżącą pozycję w drzewie (w tym jednostki systematyzacyjne i metadane aktu). Mutowany przez orkiestrator/`StructureProcessor`. |
 | **`ParsingFactories`** | Fabryki statyczne — tworzenie encji, parsowanie numerów, usuwanie prefiksów numeracyjnych, podział tekstu na zdania (`SplitIntoSentences`). |
 | **`AmendmentCollector`** | Bufor nowelizacji — zbiera akapity treści nowelizacji od momentu wejścia (trigger) do momentu powrotu do stylu ustawy matki. |
-| **`AmendmentFinalizer`** | Finalizator nowelizacji — wykrywa typ operacji (Modification/Insertion/Repeal), tworzy obiekt `Amendment`, łączy z JournalInfo, przypisuje do encji-właściciela. |
+| **`AmendmentFinalizer`** | Finalizator nowelizacji — wykrywa typ operacji (Modification/Insertion/Repeal), tworzy obiekt `Amendment`, łączy z JournalInfo, przypisuje do encji-właściciela. Ostrzega, gdy jednostek treści nie da się przypisać wyliczonym celom. |
+| **`AmendmentTargetPairing`** | Przypisuje jednostki treści nowelizacji jej celom — po oznaczeniu, a przy rozjeździe oznaczeń i równej liczbie po kolejności. Korzystają z niego eksport (komenda na cel) i walidacja finalizatora. |
 | **`ValidationReporter`** | Reporter diagnostyczny — statyczne metody do rejestrowania ostrzeżeń o konfliktach styl/treść i brakujących stylach na encjach DTO. |
 
 ### 6.1b Warstwa klasyfikacji akapitów (`Services/Classify/`)
@@ -441,8 +445,22 @@ Kaskadowe tworzenie encji implicit:
 | Serwis | Rola |
 |---|---|
 | **`EntityNumberService`** | Parsowanie numerów encji z tekstu na `EntityNumber` (rozbicie na `NumericPart` / `LexicalPart` / `Superscript`) i formatowanie zwrotne. |
-| **`LegalReferenceService`** | Parsowanie odwołań strukturalnych z tekstu ("art. 5", "ust. 2", "pkt 3a", "lit. b") do `StructuralReference`. |
+| **`LegalReferenceService`** | Cele nowelizacji z treści encji („w art. 5 § 2 pkt 3") jako lista `StructuralAmendmentReference`, bez zdania; kontekstem jest cel komendy nadrzędnej. Sam nie rozbiera powołań — deleguje do `UnitAddressReader` (6.3a). |
 | **`JournalReferenceService`** | Parsowanie publikatorów (Dz. U.) z treści artykułów nowelizujących i uzupełnianie listy `JournalInfo`. |
+
+### 6.3a Powołania jednostek (`Services/UnitReferences/`)
+
+Jedno źródło wiedzy o powołaniach jednostek dla wejścia w życie i celów nowelizacji —
+[ADR-0015](adr/0015-jedno-zrodlo-powolan-jednostek.md). Nowe miejsce czytające powołania korzysta
+z tych klas i nie definiuje własnych wzorców `art.`/`ust.`/`lit.`.
+
+| Klasa | Rola |
+|---|---|
+| **`UnitReferenceTokenizer`** | Jedyna definicja słownika: słowa kluczowe jednostek, kształt oznaczeń i przedziałów (wystawione jako wzorce dla parsera komend). Przyimek przed słowem kluczowym („w art. 5 w ust. 2") to proza, „i" zaraz po „lit." to litera. Normalizuje też szyk „liczebnik przed słowem kluczowym": „tiret drugie pierwsze podwójne tiret" to jedna ścieżka `tir_2__dwtir_1`. |
+| **`DesignationRange`** | Rozwija przedziały oznaczeń („85c–85j", „19-21", „a–c", „czwarte–szóste"). Przedział niejednoznaczny („5a"–„7b") zwraca null, żeby wywołujący go oflagował zamiast zgadywać. |
+| **`UnitPathCursor`** | Reguły ścieżki: dziedziczenie poziomu przez gołe oznaczenie, kształt oznaczenia na poziomie (§ 57 ZTP) i rozstrzygnięcie „§": po artykule — paragraf kodeksu; samodzielny — według `SectionSignRole`. Może startować od znanej ścieżki (kontekst komendy nadrzędnej). |
+| **`SectionSignRole`** | Czy samodzielny „§" jest w dokumencie jednostką główną — według rodzaju aktu z klasyfikatora dokumentu (dla obwieszczenia: ogłaszany akt wg sygnału przewagi jednostki podstawowej). W ustawie nie jest: to paragraf kodeksu nieznanego artykułu, którego się nie zgaduje. |
+| **`UnitAddressReader`** | Adres z tekstu komendy: fragmenty w cudzysłowie nie wskazują jednostek, oznaczenie liczy się tylko w ciągu rozpoczętym słowem kluczowym. Zwraca wszystkie cele: jednostkę, przedział albo wyliczenie — to ostatnie trwa, dopóki kolejną jednostkę dołącza separator wyliczenia ([ADR-0016](adr/0016-wyliczenie-celow-to-osobne-komendy.md)). |
 
 ### 6.3b Wejście w życie (`Services/EntryIntoForce/`)
 
@@ -461,9 +479,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | **`EntryIntoForceClauseScanner`** | Znajduje kandydatów na klauzulę w kolejności dokumentu, z filtrami negatywnymi (klauzula w cytacie, w artykule nowelizującym, wystąpienie rzeczownikowe). |
 | **`EntryIntoForceFormulaParser`** + **`EntryIntoForcePatterns`** | Rozpoznanie brzmienia z zamkniętego katalogu § 45 ZTP; operand liczbowy albo słowny (przez `PolishNumerals`). Odcina też moc wsteczną (`SplitRetroactivity`) i rozbija człon „z tym że" na pary (jednostki, moc wsteczna) — jeden człon niesie ich czasem kilka. |
 | **`EntryIntoForceDateResolver`** | Arytmetyka dat dla rozpoznanej formuły. |
-| **`UnitReferenceTokenizer`** | Rozbija powołanie na tokeny (słowo kluczowe, oznaczenie, przedział, separator, znacznik zakresu). Normalizuje też szyk „liczebnik przed słowem kluczowym": „tiret drugie pierwsze podwójne tiret" to jedna ścieżka `tir_2__dwtir_1`, a nie dwa tirety — rozstrzyga brak separatora między oznaczeniami. |
-| **`DesignationRange`** | Rozwija przedziały oznaczeń („85c–85j", „19-21", „a–c", „czwarte–szóste"). Przedział niejednoznaczny („5a"–„7b") zwraca null, żeby wywołujący go oflagował zamiast zgadywać. |
-| **`UnitEnumerationParser`** + **`UnitPathCursor`** | Rozkład powołania jednostek („art. 1 pkt 9 w zakresie art. 85a ust. 1") na ścieżki — patrz [ADR-0010](adr/0010-jeden-kursor-sciezki-jednostek.md). Granica zakresu: wewnątrz „w zakresie…" wolno zostać na poziomie albo zejść głębiej, ale powrót W GÓRĘ kończy zakres i wraca do wyliczenia głównego („…w zakresie uchylanego pkt 5 i art. 5"). |
+| **`UnitEnumerationParser`** | Rozkład powołania jednostek („art. 1 pkt 9 w zakresie art. 85a ust. 1") na ścieżki na wspólnym źródle powołań (6.3a) — patrz [ADR-0010](adr/0010-jeden-kursor-sciezki-jednostek.md). Granica zakresu: wewnątrz „w zakresie…" wolno zostać na poziomie albo zejść głębiej, ale powrót W GÓRĘ kończy zakres i wraca do wyliczenia głównego („…w zakresie uchylanego pkt 5 i art. 5"). |
 | **`EntryIntoForceTargetResolver`** | Odnajduje encję wskazaną ścieżką — w akcie i w przytoczonej treści nowelizacji. Rozstrzyga ścieżki, dat NIE zapisuje. |
 | **`EditorialUnitWalker`** | Jedyne miejsce, które wie, co jest czyim dzieckiem; treść cytatu odwiedzana tylko na żądanie. |
 | **`EntryDates`** | Para (data wejścia w życie, moc wsteczna) chodząca po propagacji razem — dwa gołe `DateTime?` w sygnaturze dałyby się zamienić miejscami. |
@@ -584,11 +600,14 @@ regex), `Kind = Unknown` i `Confidence = 1` wprost (nie przez odjęcie kar).
    → AmendmentTriggerDetected = true, AmendmentOwner = bieżąca encja
 3. Następne akapity ze stylem Z/* lub bezstylowe
    → InsideAmendment = true
-   → AmendmentCollector.Begin(owner, target)
+   → AmendmentCollector.Begin(owner, targets)
    → AmendmentCollector.AddParagraph(text, styleId)
 4. Powrót do stylu ustawy matki (ART/UST/PKT/LIT/TIR)
    → InsideAmendment = false
-   → FlushAmendmentCollector():
+   → AmendmentStateManager.Flush():
+       0) TrimQuoteBoundaries zdejmuje graniczne „ ” cytatu (§ 94 ZTP) z pierwszego i ostatniego
+          akapitu; ich obecność i interpunkcję po cytacie niesie Amendment, a konwerter oddaje je
+          w atrybucie `cudzyslowy`
        a) AmendmentBuilder buduje AmendmentContent (hierarchiczna treść)
        b) AmendmentFinalizer tworzy Amendment, wykrywa typ operacji,
           łączy z JournalInfo, przypisuje do właściciela (IHasAmendments)
@@ -615,6 +634,11 @@ regex), `Kind = Unknown` i `Confidence = 1` wprost (nie przez odjęcie kar).
   - `ZZ/` → zmiana zmiany (zagnieżdżona)
 - **Cel** (`AmendmentTargetKind`): co jest zmieniane (ART, UST, PKT, LIT, TIR, CommonPart, Fragment...)
 - **Kontekst** (`ParentContext`): np. `TIR_w_LIT` → tiret wewnątrz litery
+
+`AmendmentBuilder.ClassifyAmendmentParagraph` stawia cel ze stylu przed regexem, z jednym wyjątkiem:
+gdy styl i treść wskazują **różne jednostki redakcyjne**, wygrywa treść (ta sama zasada co
+`DefaultConflictResolver`), a decyzja trafia jako `ValidationMessage` na zbudowaną encję. Cele
+nieredakcyjne ze stylu (`Fragment`, `CommonPart`, …) wygrywają zawsze — regex ich nie rozpozna.
 
 ### 8.4 Nowelizacje bez stylów `Z/*` (dokumenty bezstylowe / PDF / TXT)
 
@@ -661,7 +685,7 @@ Walidacja numeracji odbywa się poprzez `NumberingHint` w warstwie klasyfikacji 
 
 Rejestruje ostrzeżenia klasyfikacyjne:
 - Brak stylu — użyto reguły tekstowej
-- Konflikt styl↔treść — użyto treści
+- Konflikt styl↔treść — użyto treści (także w treści nowelizacji, przez `AmendmentBuilder`)
 
 ---
 
@@ -811,7 +835,7 @@ src/Saga.Core/
 │       └── PageArtifactFilter.cs    # Filtrowanie artefaktów strony (nagłówki/stopki/numery stron)
 └── Services/
     ├── EntityNumberService.cs       # Parsowanie/formatowanie numerów encji
-    ├── LegalReferenceService.cs     # Parsowanie odwołań strukturalnych
+    ├── LegalReferenceService.cs     # Adres celu nowelizacji (przez UnitAddressReader)
     ├── JournalReferenceService.cs   # Parsowanie publikatorów (Dz.U.)
     ├── Classify/                    # WARSTWA KLASYFIKACJI AKAPITÓW (jednoprzebiegowa)
     │   ├── IParagraphClassifier.cs  # Interfejs klasyfikatora
@@ -840,6 +864,7 @@ src/Saga.Core/
     │   ├── ParsingFactories.cs      # Fabryki: numery, prefiksy, zdania
     │   ├── AmendmentCollector.cs    # Bufor akapitów nowelizacji
     │   ├── AmendmentFinalizer.cs    # Finalizator: typ operacji, Assignment
+    │   ├── AmendmentTargetPairing.cs  # Przypisanie jednostek treści do celów nowelizacji
     │   ├── ValidationReporter.cs    # Reporter diagnostyczny (statyczne metody)
     │   └── Builders/
     │       ├── IEntityBuilder.cs    # Kontrakt buildera
@@ -850,6 +875,12 @@ src/Saga.Core/
     │       ├── TiretBuilder.cs      # Builder tiretu (z obsługą ParentTiret dla zagnieżdżenia)
     │       ├── AmendmentBuilder.cs  # Builder treści nowelizacji
     │       └── SystematizingUnitBuilder.cs  # Builder jednostek systematyzacyjnych (§ 60-62 ZTP)
+    ├── UnitReferences/              # POWOŁANIA JEDNOSTEK — jedno źródło (ADR-0015)
+    │   ├── UnitReferenceTokenizer.cs  # Słownik: słowa kluczowe, kształt oznaczeń, przedziały
+    │   ├── DesignationRange.cs      # Rozwijanie przedziałów oznaczeń
+    │   ├── UnitPathCursor.cs        # Reguły ścieżki i rozstrzygnięcie „§"
+    │   ├── SectionSignRole.cs       # Samodzielny „§": jednostka główna czy paragraf kodeksu (rodzaj aktu)
+    │   └── UnitAddressReader.cs     # Adres z tekstu komendy (cele nowelizacji)
     └── Converters/
         └── [nieaktywne — kod zakomentowany] Konwertery do XML/XLSX (przyszłościowo)
 ```

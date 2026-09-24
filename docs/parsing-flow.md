@@ -158,7 +158,8 @@ Sygnał 2 — Syntaktyka (MatchRegex, static readonly compiled)
     Część/Księga/Tytuł/Dział wymagają numeru rzymskiego/słownego, Rozdział/Oddział — arabskiego;
     walidacja numeru rozstrzyga, więc np. „Część majątku…" nie jest brana za jednostkę
   - ArticlePattern:   ^"?Art\.?\s*\d+  (IgnoreCase)
-  - ParagraphPattern: ^"?\d+[a-zA-Z]*\.\s+  (IgnoreCase)
+  - ParagraphPattern: ^"?(§\s*)?\d+[a-zA-Z]*\.\s+  (IgnoreCase) — opcjonalny „§" to paragraf
+    kodeksu (§ 55 ust. 3 ZTP; OptionalParagraphMark), ta sama jednostka co ustęp
   - PointPattern:     ^"?\d+[a-zA-Z]*\)\s*  (IgnoreCase)
   - LetterPattern:    ^"?[a-z]{1,2}\)\s*  — UWAGA: TYLKO małe litery, max 2 znaki
     (§ 56 ZTP), bez IgnoreCase — to wzorzec ROZPOZNAJĄCY. Wersalik „A)" lub token 3+
@@ -260,7 +261,12 @@ Unknown    → HandleUnknown(context, text, sourceStyleId, layout):
                  ValidationMessage do najgłębszej aktywnej encji
 
 Paragraph  → ParagraphBuilder.Build()
+              „§ N." → ParsingFactories.ApplyCodeParagraphRole (Role/prefiks eId "par")
               Czyści CurrentPoint, CurrentLetter, TiretStack
+
+Pozostałe jednostki redakcyjne przy CurrentArticle == null (np. „§ 1." rozporządzenia):
+              context.Metadata.Seal() — treść już się zaczęła, więc strefa tytułowa
+              jest zamknięta; akapit pominięty z ostrzeżeniem w logu
 
 Point      → ParagraphBuilder.EnsureForPoint() + PointBuilder.Build()
               Przed dodaniem pierwszego Point → AttachIntroCommonPart(Paragraph)
@@ -293,9 +299,10 @@ Po zbudowaniu każdej encji `IHasAmendments`:
 - `UpdateStructuralReference(context, entity)` — aktualizuje
   `CurrentStructuralReference` (kaskadowe zerowanie podrzędnych poziomów)
 - `DetectAmendmentTargets(context, entity)` — parsuje treść w
-  poszukiwaniu odwołań ("w art. 5", "po ust. 2") i zapisuje do
-  `context.DetectedAmendmentTargets[entity.Guid]`. Kontekst dziedziczony
-  z encji nadrzędnej przez `FindParentAmendmentTargetReference`.
+  poszukiwaniu odwołań ("w art. 5", "po ust. 2", "ust. 2 i 4") i zapisuje
+  listę celów do `context.DetectedAmendmentTargets[entity.Guid]`. Kontekst
+  dziedziczony z encji nadrzędnej przez `FindParentAmendmentTargets`;
+  encja bez własnego adresu przejmuje cele encji nadrzędnej.
 
 Encje są też anotowane diagnostycznie przez
 `ValidationReporter.AddClassificationWarning(entity, classification, prefix)`.
@@ -586,7 +593,8 @@ Parse(Stream, fileNameHint?, ParseOptions?)
 | `AmendmentFinalizer` | `Services/Parsing/AmendmentFinalizer.cs` | Materializuje Amendment i przypisuje do owner'a |
 | `ValidationReporter` | `Services/Parsing/ValidationReporter.cs` | Diagnostyka klasyfikacji |
 | `ParsingFactories` | `Services/Parsing/ParsingFactories.cs` | Parsowanie numerów, AttachIntro/WrapUp CommonPart |
-| `LegalReferenceService` | `Services/LegalReferenceService.cs` | Wykrywanie celów nowelizacji |
+| `LegalReferenceService` | `Services/LegalReferenceService.cs` | Wykrywanie celów nowelizacji (przez `UnitAddressReader`) |
+| `UnitAddressReader` + `UnitPathCursor` | `Services/UnitReferences/` | Wspólne źródło powołań jednostek — wejście w życie i cele nowelizacji (ADR-0015) |
 | `JournalReferenceService` | `Services/JournalReferenceService.cs` | Parsowanie publikatorów (Dz.U.) |
 | `BaseEntity` | `src/Saga.Model/BaseEntity.cs` | Baza wszystkich encji domenowych |
 | `EntityNumber` | `src/Saga.Model/EntityNumber.cs` | Model numeru encji |

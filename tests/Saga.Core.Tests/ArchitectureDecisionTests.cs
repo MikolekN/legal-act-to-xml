@@ -1,7 +1,10 @@
 using System.Text;
 using Saga.Core.Ingest;
 using Saga.Core.Ingest.Pdf;
+using Saga.Core.Services;
 using Saga.Core.Services.EntryIntoForce;
+using Saga.Core.Services.Parsing;
+using Saga.Core.Services.UnitReferences;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
 using Saga.Model.EntryIntoForce;
@@ -460,6 +463,183 @@ namespace Saga.Core.Tests
                 .First(e => e.Name.LocalName == "DataWejsciaWZycie");
 
             Assert.Equal("2026-01-01", metadata.Value);
+        }
+
+        // ============================================================
+        // ADR-0014 — skróty jednostek w eId (levelType) z jednej zamkniętej tabeli
+        // ============================================================
+
+        /// <summary>Tabela z ADR-0014 (bez `zal` — model nie ma encji załącznika).</summary>
+        private static readonly SortedDictionary<string, string> LevelTypeTable = new(StringComparer.Ordinal)
+        {
+            ["część"] = "czesc",
+            ["księga"] = "ksi",
+            ["tytuł"] = "tyt",
+            ["dział"] = "dzial",
+            ["rozdział"] = "rozdz",
+            ["oddział"] = "oddz",
+            ["artykuł"] = "art",
+            ["ustęp"] = "ust",
+            ["paragraf"] = "par",
+            ["punkt"] = "pkt",
+            ["litera"] = "lit",
+            ["tiret"] = "tir",
+            ["podwójny tiret"] = "dwtir",
+            ["potrójny tiret"] = "trtir",
+            ["poczwórny tiret"] = "cztir",
+            ["pięciokrotny tiret"] = "pitir",
+        };
+
+        [Fact]
+        public void Adr0014_UnitEIdPrefixes_FollowTheLevelTypeTable()
+        {
+            var codeParagraph = new Paragraph();
+            ParsingFactories.ApplyCodeParagraphRole(codeParagraph, "§ 1. Treść.");
+
+            var actual = new SortedDictionary<string, string>(StringComparer.Ordinal)
+            {
+                ["część"] = new Part().EIdPrefix,
+                ["księga"] = new Book().EIdPrefix,
+                ["tytuł"] = new Title().EIdPrefix,
+                ["dział"] = new Division().EIdPrefix,
+                ["rozdział"] = new Chapter().EIdPrefix,
+                ["oddział"] = new Subchapter().EIdPrefix,
+                ["artykuł"] = new Article().EIdPrefix,
+                ["ustęp"] = new Paragraph().EIdPrefix,
+                ["paragraf"] = codeParagraph.EIdPrefix,
+                ["punkt"] = new Point().EIdPrefix,
+                ["litera"] = new Letter().EIdPrefix,
+                ["tiret"] = Tiret.PrefixForDepth(1),
+                ["podwójny tiret"] = Tiret.PrefixForDepth(2),
+                ["potrójny tiret"] = Tiret.PrefixForDepth(3),
+                ["poczwórny tiret"] = Tiret.PrefixForDepth(4),
+                ["pięciokrotny tiret"] = Tiret.PrefixForDepth(5),
+            };
+
+            Assert.Equal(LevelTypeTable, actual);
+        }
+
+        [Fact]
+        public void Adr0014_ReferenceEId_UsesTheSameVocabulary()
+        {
+            // Adres jednostki wskazywanej (element-eId, cel wejścia w życie) — ten sam słownik co eId.
+            var reference = new StructuralReference()
+                .WithArticle("5").WithParagraph("2").WithPoint("3").WithLetter("a")
+                .WithTiret("1.2").WithSentence("1");
+
+            Assert.Equal("art_5__ust_2__pkt_3__lit_a__tir_1__dwtir_2__zdn_1", reference.ToString());
+        }
+
+        [Fact]
+        public void Adr0014_CodeParagraphLevel_SurvivesDescentAndClone()
+        {
+            // Każda metoda With* poniżej poziomu ustępu (i Clone) musi przenieść to, że był to paragraf.
+            var reference = new StructuralReference()
+                .WithArticle("5").WithCodeParagraph("2").WithPoint("3").WithLetter("a")
+                .WithTiret("1.2").WithSentence("1");
+
+            const string expected = "art_5__par_2__pkt_3__lit_a__tir_1__dwtir_2__zdn_1";
+            Assert.Equal(expected, reference.ToString());
+            Assert.Equal(expected, reference.Clone().ToString());
+
+            // …a nowy artykuł albo zwykły ustęp ją zerują.
+            Assert.Equal("art_6", reference.WithArticle("6").ToString());
+            Assert.Equal("art_5__ust_4", reference.WithParagraph("4").ToString());
+        }
+
+        [Fact]
+        public void Adr0014_CodeParagraphReference_UsesPar()
+        {
+            // „§" po artykule to paragraf kodeksu także w adresie jednostki wskazywanej.
+            var target = UnitEnumerationParser.Parse("art. 5 § 2").Targets.Single();
+
+            Assert.Equal("art_5__par_2", target.Structure.ToString());
+        }
+
+        // ============================================================
+        // ADR-0015 — powołania jednostek rozbiera jedno źródło
+        // ============================================================
+
+        [Fact]
+        public void Adr0015_UnitKeywordVocabulary_IsDefinedInExactlyOnePlace()
+        {
+            // „lit\." w kodzie (nie w komentarzu) to odcisk palca własnego słownika powołań: litera
+            // występuje wyłącznie w powołaniu jednostki, więc taki wzorzec poza tokenizerem to jego kopia.
+            var sourceRoot = Path.Combine(TestFiles.GetRepositoryRoot(), "src");
+            var owner = Path.Combine("UnitReferences", "UnitReferenceTokenizer.cs");
+
+            var offenders = Directory.EnumerateFiles(sourceRoot, "*.cs", SearchOption.AllDirectories)
+                .Where(file => !file.Contains($"{Path.DirectorySeparatorChar}obj{Path.DirectorySeparatorChar}") &&
+                               !file.Contains($"{Path.DirectorySeparatorChar}bin{Path.DirectorySeparatorChar}") &&
+                               !file.EndsWith(owner, StringComparison.Ordinal))
+                .Where(file => File.ReadLines(file)
+                    .Select(line => line.TrimStart())
+                    .Where(line => !line.StartsWith("//", StringComparison.Ordinal))
+                    .Any(line => line.Contains(@"lit\.", StringComparison.Ordinal)))
+                .Select(Path.GetFileName)
+                .ToList();
+
+            Assert.True(offenders.Count == 0,
+                "Słownik powołań jednostek musi mieszkać wyłącznie w UnitReferences/UnitReferenceTokenizer.cs " +
+                "(ADR-0015). Pliki z własnymi wzorcami: " + string.Join(", ", offenders));
+        }
+
+        [Fact]
+        public void Adr0015_AmendmentTargetAndEntryIntoForce_ReadTheSameAddress()
+        {
+            // Ten sam adres — paragraf kodeksu, indeks górny, litera „i", tiret — czytany przez wejście
+            // w życie i przez cel nowelizacji. Dopóki oba idą jednym źródłem, ścieżki są równe.
+            const string address = "art. 328[11] § 2 pkt 3 lit. i tiret drugie";
+
+            var entryIntoForce = UnitEnumerationParser.Parse(address).Targets.Single().Structure.ToString();
+            var amendmentTarget = new LegalReferenceService()
+                .ReadAmendmentTargets(null, $"w {address} otrzymuje brzmienie:").Single();
+
+            Assert.Equal("art_328[11]__par_2__pkt_3__lit_i__tir_2", entryIntoForce);
+            Assert.Equal(entryIntoForce, amendmentTarget.ToString());
+        }
+
+        [Fact]
+        public void Adr0015_BareSectionSign_IsDecidedByActType()
+        {
+            // W rozporządzeniu samodzielny „§" to jednostka główna; w ustawie — paragraf kodeksu
+            // nieznanego artykułu, więc artykułu się nie zgaduje.
+            string[] Read(LegalActType actType) =>
+                UnitEnumerationParser.Parse("§ 1 pkt 3",
+                        SectionSignRole.IsBasicUnit(new DocumentClassificationResult { ActType = actType }))
+                    .Targets.Select(t => t.Structure.ToString()).ToArray();
+
+            Assert.Equal(new[] { "art_1__pkt_3" }, Read(LegalActType.Regulation));
+            Assert.DoesNotContain(Read(LegalActType.AmendingStatute), path => path.StartsWith("art_", StringComparison.Ordinal));
+        }
+
+        // ============================================================
+        // ADR-0016: wyliczenie celów to osobne komendy, element-do-eId — tylko przedział
+        // ============================================================
+
+        [Fact]
+        public void Adr0016_EnumerationIsACommandPerTarget_RangeIsOneCommand()
+        {
+            // Korpus: „uchyla się pkt 31, 32 i 34-36;" — trzy cele, z czego jeden to przedział. Para
+            // element-eId/element-do-eId nie może wrócić do znaczenia „pierwszy i ostatni cel listy".
+            var amendment = new Amendment
+            {
+                OperationType = AmendmentOperationType.Repeal,
+                Targets = new LegalReferenceService()
+                    .ReadAmendmentTargets(new StructuralReference { Article = "2", Paragraph = "1" }, "uchyla się pkt 31, 32 i 34-36;")
+                    .ToList(),
+            };
+            var sentence = new System.Xml.Linq.XElement("zdanie");
+
+            Saga.Core.Services.Converters.AmendmentXmlConverter.ToXml(amendment, sentence);
+
+            var instructions = sentence.Elements().ToList();
+            Assert.Equal(
+                new[] { "art_2__ust_1__pkt_31", "art_2__ust_1__pkt_32", "art_2__ust_1__pkt_34" },
+                instructions.Select(i => i.Attribute("element-eId")?.Value));
+            Assert.Equal(
+                new string?[] { null, null, "art_2__ust_1__pkt_36" },
+                instructions.Select(i => i.Attribute("element-do-eId")?.Value));
         }
 
         private static DocumentClassificationResult Classify(byte[] docx)

@@ -86,7 +86,7 @@ namespace Saga.Core.Services.Parsing
             LinkTargets(amendment, collector, context);
 
             // 3a. Uzupełnij cel z komendy tekstowej — źródło o niższym priorytecie niż mapa stylów;
-            //     dokłada wyłącznie to, czego LegalReferenceService nie zna (jednostka „tiret", fragment).
+            //     dokłada tylko to, czego adres celu nie wskazał (tiret), i ostrzega o fragmencie zdania.
             EnrichTargetsFromCommand(amendment, collector);
 
             // 4. Połącz z JournalInfo (TargetLegalAct)
@@ -166,28 +166,28 @@ namespace Saga.Core.Services.Parsing
         /// <summary>
         /// Łączy nowelizację z wykrytymi celami (StructuralAmendmentReference).
         /// Źródła (w kolejności priorytetu):
-        /// 1. Target z kolektora (bezpośrednio z Begin())
+        /// 1. Targets z kolektora (bezpośrednio z Begin())
         /// 2. DetectedAmendmentTargets z kontekstu (po Guid właściciela)
         /// </summary>
         private static void LinkTargets(Amendment amendment, AmendmentCollector collector, ParsingContext context)
         {
-            // Priorytet 1: cel z kolektora
-            if (collector.Target != null)
+            // Priorytet 1: cele z kolektora
+            if (collector.Targets.Count > 0)
             {
-                amendment.Targets.Add(collector.Target);
+                amendment.Targets.AddRange(collector.Targets);
                 return;
             }
 
-            // Priorytet 2: cel z mapy DetectedAmendmentTargets
+            // Priorytet 2: cele z mapy DetectedAmendmentTargets
             if (collector.Owner != null &&
-                context.DetectedAmendmentTargets.TryGetValue(collector.Owner.Guid, out var detectedTarget))
+                context.DetectedAmendmentTargets.TryGetValue(collector.Owner.Guid, out var detectedTargets))
             {
-                amendment.Targets.Add(detectedTarget);
+                amendment.Targets.AddRange(detectedTargets);
             }
         }
 
         /// <summary>
-        /// Uzupełnia referencje celów o jednostki, których LegalReferenceService nie rozpoznaje,
+        /// Uzupełnia referencje celów o to, czego adres celu (LegalReferenceService) nie wskazał,
         /// na podstawie komendy tekstowej z treści właściciela (niższy priorytet niż mapa stylów):
         /// - „tiret 2" / „tiret drugie" → Structure.Tiret (liczebnik porządkowy to forma KANONICZNA
         ///   powołania tiretu — § 57 ust. 6 ZTP — mapowany na wartość liczbową),
@@ -356,6 +356,15 @@ namespace Saga.Core.Services.Parsing
             {
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
                     "Nowelizacja bez wykrytego celu strukturalnego (brak referencji art./ust./pkt/lit.).");
+            }
+
+            if (amendment.Targets.Count > 1 &&
+                AmendmentTargetPairing.ContentUnits(amendment.Content) is { Count: > 0 } units &&
+                AmendmentTargetPairing.Pair(amendment.Targets, units) is null)
+            {
+                ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
+                    $"Treści nowelizacji nie da się rozdzielić między wskazane cele ({string.Join(", ", amendment.Targets)}) " +
+                    "— eksport wskazuje tylko pierwszy cel.");
             }
 
             // Repeal nie powinien mieć treści

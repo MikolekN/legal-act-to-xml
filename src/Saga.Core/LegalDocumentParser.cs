@@ -77,10 +77,7 @@ namespace Saga.Core
 
             LegalDocument? document = null;
             if (buildModel)
-            {
-                document = ParseBlocks(blocks, options);
-                document.Classification = classification;
-            }
+                document = ParseBlocks(blocks, options, classification);
 
             return new ParseResult
             {
@@ -95,9 +92,12 @@ namespace Saga.Core
         /// Rdzeń parsowania: buduje model z bloków reprezentacji pośredniej niezależnie od formatu
         /// źródłowego (DOCX/TXT/PDF), bez klasyfikacji dokumentu i koperty wyniku.
         /// </summary>
-        internal static LegalDocument ParseBlocks(IReadOnlyList<DocumentBlock> blocks, ParseOptions? options = null)
+        internal static LegalDocument ParseBlocks(
+            IReadOnlyList<DocumentBlock> blocks,
+            ParseOptions? options = null,
+            DocumentClassificationResult? classification = null)
         {
-            var document = new LegalDocument();
+            var document = new LegalDocument { Classification = classification };
 
             JournalHeaderParser.Apply(blocks, document);
 

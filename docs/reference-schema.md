@@ -303,21 +303,21 @@ Dla odesłań korzystających ze skrótów wprowadzonych w danym akcie.
 | `point` | Punkt | `1)` | `pkt 1` | `pkt` |
 | `letter` | Litera | `a)` | `lit. a` | `lit` |
 | `tiret` | Tiret | `–` | `tiret pierwsze` | `tir` |
-| `doubleTiret` | Podwójne tiret | `– –` | `podwójne tiret pierwsze` | `tir` |
-| `tripleTiret` | Potrójne tiret | `– – –` | `potrójne tiret pierwsze` | `tir` |
-| `quadrupleTiret` | Poczwórne tiret | `– – – –` | `poczwórne tiret pierwsze` | `tir` |
-| `sentence` | Zdanie | (brak osobnego oznaczenia) | `zdanie pierwsze` | `zd` |
-| `akapit` | Akapit (prawo UE) | (nowy wiersz) | `akapit pierwszy` | `ak` |
+| `doubleTiret` | Podwójne tiret | `– –` | `podwójne tiret pierwsze` | `dwtir` |
+| `tripleTiret` | Potrójne tiret | `– – –` | `potrójne tiret pierwsze` | `trtir` |
+| `quadrupleTiret` | Poczwórne tiret | `– – – –` | `poczwórne tiret pierwsze` | `cztir` |
+| `sentence` | Zdanie | (brak osobnego oznaczenia) | `zdanie pierwsze` | `zdn` |
+| `akapit` | Akapit (prawo UE) | (nowy wiersz) | `akapit pierwszy` | — (brak w ADR-0014) |
 
 #### Jednostki systematyzacyjne
 
 | Wartość | Opis | eId prefix |
 |---------|------|------------|
-| `part` | Część | `cz` |
-| `book` | Księga | `ks` |
+| `part` | Część | `czesc` |
+| `book` | Księga | `ksi` |
 | `title` | Tytuł | `tyt` |
-| `division` | Dział | `dz` |
-| `chapter` | Rozdział | `rozd` |
+| `division` | Dział | `dzial` |
+| `chapter` | Rozdział | `rozdz` |
 | `subchapter` | Oddział | `oddz` |
 | `attachment` | Załącznik | `zal` |
 
@@ -993,25 +993,26 @@ Gdy narzędzie operuje na surowym tekście bez uprzedniego parsowania:
 
 ## Mapowanie unitType → eId prefix
 
-Tabela konwersji dla przyszłej integracji z systemem eId WordParsera:
+Tabela konwersji dla przyszłej integracji z systemem eId WordParsera. Prefiksy eId wyznacza
+[ADR-0014](adr/0014-skroty-jednostek-w-eid.md) — ta tabela jest jego odwzorowaniem na `unitType`:
 
 | unitType | eId prefix | Istniejący w BaseEntity |
 |----------|------------|------------------------|
 | `article` | `art` | tak (`Article.EIdPrefix`) |
 | `paragraph` | `ust` | tak (`Paragraph.EIdPrefix`) |
-| `paragraphSection` | `par` | nie (nowy) |
+| `paragraphSection` | `par` | tak (`Paragraph` z `Role = "par"`) |
 | `point` | `pkt` | tak (`Point.EIdPrefix`) |
 | `letter` | `lit` | tak (`Letter.EIdPrefix`) |
 | `tiret` | `tir` | tak (`Tiret.EIdPrefix`) |
-| `doubleTiret` | `tir` | tak (zagnieżdżony `Tiret`) |
-| `tripleTiret` | `tir` | tak (zagnieżdżony `Tiret`) |
-| `quadrupleTiret` | `tir` | tak (zagnieżdżony `Tiret`) |
-| `sentence` | `zd` | nie (nowy) |
-| `akapit` | `ak` | nie (nowy) |
-| `part` | `cz` | tak (`Part.EIdPrefix`) |
-| `book` | `ks` | tak (`Book.EIdPrefix`) |
+| `doubleTiret` | `dwtir` | tak (zagnieżdżony `Tiret`, `Tiret.PrefixForDepth`) |
+| `tripleTiret` | `trtir` | tak (zagnieżdżony `Tiret`, `Tiret.PrefixForDepth`) |
+| `quadrupleTiret` | `cztir` | tak (zagnieżdżony `Tiret`, `Tiret.PrefixForDepth`) |
+| `sentence` | `zdn` | nie (tylko w adresach — `StructuralReference.Sentence`) |
+| `akapit` | — (brak w ADR-0014) | nie |
+| `part` | `czesc` | tak (`Part.EIdPrefix`) |
+| `book` | `ksi` | tak (`Book.EIdPrefix`) |
 | `title` | `tyt` | tak (`Title.EIdPrefix`) |
-| `division` | `dz` | tak (`Division.EIdPrefix`) |
-| `chapter` | `rozd` | tak (`Chapter.EIdPrefix`) |
+| `division` | `dzial` | tak (`Division.EIdPrefix`) |
+| `chapter` | `rozdz` | tak (`Chapter.EIdPrefix`) |
 | `subchapter` | `oddz` | tak (`Subchapter.EIdPrefix`) |
 | `attachment` | `zal` | nie (nowy) |

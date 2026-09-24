@@ -18,12 +18,18 @@ namespace Saga.Model
         public StructuralReference Structure { get; set; } = new();
 
         /// <summary>
+        /// Ostatnia jednostka przedziału („art. 1–3" → art. 3); null, gdy cel to jedna jednostka.
+        /// </summary>
+        public StructuralReference? RangeEnd { get; set; }
+
+        /// <summary>
         /// Surowy tekst źródłowy powołania, przydatny dla walidacji
         /// lub celów diagnostycznych parsera.
         /// </summary>
         public string? RawText { get; set; }
 
-        public override string ToString() => Structure.ToString();
+        public override string ToString() =>
+            RangeEnd is null ? Structure.ToString() : $"{Structure}–{RangeEnd}";
     }
 
     /// <summary>
@@ -36,6 +42,9 @@ namespace Saga.Model
     {
         public string? Article { get; set; }
         public string? Paragraph { get; set; }
+
+        public bool ParagraphIsCodeParagraph { get; set; }
+
         public string? Point { get; set; }
         public string? Letter { get; set; }
         public string? Tiret { get; set; }
@@ -49,31 +58,36 @@ namespace Saga.Model
         public StructuralReference WithParagraph(string value) =>
             new() { Article = Article, Paragraph = value };
 
+        /// <summary>Ustawia paragraf kodeksu i zeruje wszystkie poziomy podrzędne.</summary>
+        public StructuralReference WithCodeParagraph(string value) =>
+            new() { Article = Article, Paragraph = value, ParagraphIsCodeParagraph = true };
+
         /// <summary>Ustawia punkt i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithPoint(string value) =>
-            new() { Article = Article, Paragraph = Paragraph, Point = value };
+            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = value };
 
         /// <summary>Ustawia literę i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithLetter(string value) =>
-            new() { Article = Article, Paragraph = Paragraph, Point = Point, Letter = value };
+            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = value };
 
         /// <summary>Ustawia tiret i zeruje zdanie.</summary>
         public StructuralReference WithTiret(string value) =>
-            new() { Article = Article, Paragraph = Paragraph, Point = Point, Letter = Letter, Tiret = value };
+            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = value };
 
         /// <summary>Ustawia zdanie, zachowując wszystkie poziomy nadrzędne.</summary>
         public StructuralReference WithSentence(string value) =>
-            new() { Article = Article, Paragraph = Paragraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = value };
+            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = value };
 
         public StructuralReference Clone() =>
-            new() { Article = Article, Paragraph = Paragraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence };
+            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence };
 
         public override string ToString()
         {
             var parts = new List<string>();
 
             if (Article != null) parts.Add($"art_{Article}");
-            if (Paragraph != null) parts.Add($"ust_{Paragraph}");
+            if (Paragraph != null)
+                parts.Add($"{(ParagraphIsCodeParagraph ? EditorialUnits.Paragraph.CodeParagraphRole : "ust")}_{Paragraph}");
             if (Point != null) parts.Add($"pkt_{Point}");
             if (Letter != null) parts.Add($"lit_{Letter}");
             if (Tiret != null) parts.AddRange(TiretSegments(Tiret));

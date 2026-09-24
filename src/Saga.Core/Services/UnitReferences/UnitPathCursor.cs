@@ -1,7 +1,7 @@
 using Saga.Core.Helpers;
 using Saga.Model;
 
-namespace Saga.Core.Services.EntryIntoForce
+namespace Saga.Core.Services.UnitReferences
 {
     /// <summary>Skutek kroku kursora.</summary>
     internal enum UnitStepStatus
@@ -28,7 +28,7 @@ namespace Saga.Core.Services.EntryIntoForce
     /// oznaczeń z jednym słowem kluczowym, więc kontekst ustala się raz i podaje do każdego
     /// oznaczenia osobno.
     /// </summary>
-    internal readonly record struct UnitStepContext(UnitLevel Level, bool ExplicitKeyword, int TiretDepth);
+    internal readonly record struct UnitStepContext(UnitLevel Level, bool ExplicitKeyword, int TiretDepth, bool CodeParagraph);
 
     /// <summary>Wynik kroku: czy się udał i co zrobić z poprzednim kandydatem.</summary>
     internal readonly record struct UnitStep(UnitStepStatus Status, PendingDisposition Previous)
@@ -42,18 +42,38 @@ namespace Saga.Core.Services.EntryIntoForce
         private readonly List<string> _tiretPath = new();
         private UnitLevel _pendingLevel = UnitLevel.None;
         private int _pendingTiretDepth = 1;
+        private bool _pendingCodeParagraph;
         internal StructuralReference Path { get; private set; } = new();
 
         /// <summary>Poziom ostatnio zastosowanego oznaczenia.</summary>
         internal UnitLevel Level { get; private set; } = UnitLevel.None;
 
+        /// <summary>
+        /// Czy samodzielny „§" (bez artykułu w ścieżce) jest jednostką główną — rozstrzyga rodzaj aktu.
+        /// </summary>
+        internal bool SectionSignIsBasicUnit { get; init; }
+
+        /// <summary>
+        /// Kursor ustawiony na znanej ścieżce — np. artykule z komendy nadrzędnej („W art. 5 wprowadza się
+        /// następujące zmiany: 1) w § 2 …"). Dzięki temu „§" pod odziedziczonym artykułem to paragraf kodeksu,
+        /// a „podwójne tiret" schodzi pod odziedziczony tiret. Poziomu kontekst nie ustala: pierwsze
+        /// oznaczenie potrzebuje słowa kluczowego, więc gołe „4" z daty nie staje się jednostką kontekstu.
+        /// </summary>
+        internal static UnitPathCursor StartingAt(StructuralReference context, bool sectionSignIsBasicUnit = false)
+        {
+            var cursor = new UnitPathCursor { Path = context.Clone(), SectionSignIsBasicUnit = sectionSignIsBasicUnit };
+            if (context.Tiret is { } tiret)
+                cursor._tiretPath.AddRange(tiret.Split('.', StringSplitOptions.RemoveEmptyEntries));
+            return cursor;
+        }
+
         /// <summary>Słowo kluczowe zapowiada poziom kolejnego oznaczenia.</summary>
         internal void Announce(UnitToken keyword)
         {
-            // „§" po artykule to paragraf kodeksu — podjednostka, nie jednostka główna.
-            _pendingLevel = keyword.IsSectionSign && Path.Article is not null
-                ? UnitLevel.Paragraph
-                : keyword.Level;
+            // „§" po artykule to zawsze paragraf kodeksu — podjednostka, nie jednostka główna;
+            // samodzielny „§" jest jednostką główną tylko w akcie opartym na paragrafach.
+            _pendingCodeParagraph = keyword.IsSectionSign && (Path.Article is not null || !SectionSignIsBasicUnit);
+            _pendingLevel = _pendingCodeParagraph ? UnitLevel.Paragraph : keyword.Level;
             _pendingTiretDepth = keyword.TiretDepth;
         }
 
@@ -64,9 +84,13 @@ namespace Saga.Core.Services.EntryIntoForce
             if (level == UnitLevel.None)
                 return null;
 
-            var context = new UnitStepContext(level, _pendingLevel != UnitLevel.None, _pendingTiretDepth);
+            var explicitKeyword = _pendingLevel != UnitLevel.None;
+            var codeParagraph = explicitKeyword ? _pendingCodeParagraph : Path.ParagraphIsCodeParagraph;
+
+            var context = new UnitStepContext(level, explicitKeyword, _pendingTiretDepth, codeParagraph);
             _pendingLevel = UnitLevel.None;
             _pendingTiretDepth = 1;
+            _pendingCodeParagraph = false;
             return context;
         }
 
@@ -96,11 +120,19 @@ namespace Saga.Core.Services.EntryIntoForce
             }
             else
             {
+                if (!FitsLevel(context.Level, designation))
+                    return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
+
+                if (context.Level == UnitLevel.Paragraph && context.CodeParagraph && Path.Article is null)
+                    return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
+
                 _tiretPath.Clear();
                 Path = context.Level switch
                 {
                     UnitLevel.Article => Path.WithArticle(designation),
-                    UnitLevel.Paragraph => Path.WithParagraph(designation),
+                    UnitLevel.Paragraph => context.CodeParagraph
+                        ? Path.WithCodeParagraph(designation)
+                        : Path.WithParagraph(designation),
                     UnitLevel.Point => Path.WithPoint(designation),
                     UnitLevel.Letter => Path.WithLetter(designation),
                     _ => Path,
@@ -113,6 +145,14 @@ namespace Saga.Core.Services.EntryIntoForce
 
         /// <summary>Niezależna kopia bieżącej ścieżki.</summary>
         internal StructuralReference Snapshot() => Path.Clone();
+
+        internal static bool FitsLevel(UnitLevel level, string designation) => level switch
+        {
+            UnitLevel.Article or UnitLevel.Paragraph or UnitLevel.Point =>
+                designation.Length > 0 && char.IsDigit(designation[0]),
+            UnitLevel.Letter => designation.Length is 1 or 2 && designation.All(c => c is >= 'a' and <= 'z'),
+            _ => true,
+        };
 
         /// <summary>
         /// Tiret: głębokość 1 zaczyna nową ścieżkę, głębokość > 1 dokłada kolejny segment

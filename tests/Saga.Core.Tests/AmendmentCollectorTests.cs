@@ -18,7 +18,7 @@ namespace Saga.Core.Tests
             Assert.False(collector.IsCollecting);
             Assert.Equal(0, collector.Count);
             Assert.Null(collector.Owner);
-            Assert.Null(collector.Target);
+            Assert.Empty(collector.Targets);
         }
 
         // ============================================================
@@ -36,11 +36,11 @@ namespace Saga.Core.Tests
                 RawText = "w art. 5 ust. 2"
             };
 
-            collector.Begin(owner, target);
+            collector.Begin(owner, [target]);
 
             Assert.True(collector.IsCollecting);
             Assert.Same(owner, collector.Owner);
-            Assert.Same(target, collector.Target);
+            Assert.Same(target, Assert.Single(collector.Targets));
             Assert.Equal(0, collector.Count);
         }
 
@@ -54,7 +54,7 @@ namespace Saga.Core.Tests
 
             Assert.True(collector.IsCollecting);
             Assert.Same(owner, collector.Owner);
-            Assert.Null(collector.Target);
+            Assert.Empty(collector.Targets);
         }
 
         [Fact]
@@ -160,11 +160,11 @@ namespace Saga.Core.Tests
         public void Reset_ClearsEverything()
         {
             var collector = new AmendmentCollector();
-            collector.Begin(CreateParagraph("1"), new StructuralAmendmentReference
+            collector.Begin(CreateParagraph("1"), [new StructuralAmendmentReference
             {
                 Structure = new StructuralReference(),
                 RawText = "cel"
-            });
+            }]);
             collector.AddParagraph("a", "s1");
             collector.AddParagraph("b", "s2");
 
@@ -173,7 +173,7 @@ namespace Saga.Core.Tests
             Assert.False(collector.IsCollecting);
             Assert.Equal(0, collector.Count);
             Assert.Null(collector.Owner);
-            Assert.Null(collector.Target);
+            Assert.Empty(collector.Targets);
             Assert.Empty(collector.Paragraphs);
         }
 

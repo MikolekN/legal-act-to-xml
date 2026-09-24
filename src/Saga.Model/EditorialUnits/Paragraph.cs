@@ -35,7 +35,12 @@ namespace Saga.Model.EditorialUnits
         public Amendment? Amendment { get; set; }
 
         /// <summary>
-        /// Role moze okreslac specjalne mapowania/nazewnictwo (np. "prg" dla paragrafu w kodeksie).
+        /// Rola paragrafu kodeksu (§) — jednostka mapowana na element paragraf-kodeksu
+        /// </summary>
+        public const string CodeParagraphRole = "par";
+
+        /// <summary>
+        /// Role moze okreslac specjalne mapowania/nazewnictwo (np. "par" dla paragrafu w kodeksie).
         /// </summary>
         public string? Role { get; set; }
 
