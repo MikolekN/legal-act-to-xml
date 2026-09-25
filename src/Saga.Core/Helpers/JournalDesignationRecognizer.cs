@@ -64,6 +64,31 @@ namespace Saga.Core.Helpers
         /// <summary>Wyszukuje wszystkie oznaczenia dzienników w tekście.</summary>
         public static MatchCollection FindAll(string text) => Pattern.Matches(text);
 
+        /// <summary>
+        /// Wyraz rozpoczynający zdanie: wielka litera, dalej małe, bez kropki skrótu za nim.
+        /// Kontynuacje oznaczenia nie spełniają tego kształtu — „UE", „L", „C" (wersaliki), skróty
+        /// zakończone kropką — z wyjątkiem „Nr", wykluczonego wprost.
+        /// </summary>
+        private static readonly Regex SentenceStartWord = new(
+            @"^(?!Nr\b)\p{Lu}\p{Ll}+(?![\p{L}.])", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Sprawdza, czy kropka na pozycji `index` domyka oznaczenie dziennika, za którym zaczyna się
+        /// nowe zdanie („…ogłoszono w Dz. U. Przepis stosuje się…"). Wtedy kropka pełni podwójną rolę
+        /// — kończy skrót i zdanie (jak kropka po skrócie na końcu zdania) — i nie jest objęta wetem.
+        /// </summary>
+        public static bool EndsDesignationBeforeSentence(
+            MatchCollection designations, int index, string text, int nextWordIndex)
+        {
+            foreach (Match designation in designations)
+            {
+                if (designation.Index + designation.Length - 1 == index)
+                    return SentenceStartWord.IsMatch(text.AsSpan(nextWordIndex));
+            }
+
+            return false;
+        }
+
         /// <summary>Sprawdza czy pozycja `index` leży wewnątrz któregoś z oznaczeń.</summary>
         public static bool Covers(MatchCollection designations, int index)
         {

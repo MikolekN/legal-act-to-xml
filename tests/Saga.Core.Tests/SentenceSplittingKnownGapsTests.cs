@@ -3,29 +3,23 @@ using Saga.Core.Services.Parsing;
 namespace Saga.Core.Tests
 {
     /// <summary>
-    /// Znane braki reguły podziału na zdania — po jednym teście na grupę poprawek
-    /// z docs/internal/wiedza-segmentacja-zdan.md §13.
     ///
-    /// Każdy test asercjami opisuje ZAMIAR (jak ma być), a nie stan faktyczny, i jest pominięty
-    /// z powodem wskazującym grupę. Dzięki temu:
-    /// - backlog jest widoczny wprost w raporcie z testów, a nie tylko w dokumencie,
-    /// - domknięcie grupy polega na zdjęciu atrybutu Skip, bez dotykania asercji,
-    /// - naprawa reguły nie wygląda w CI jak regresja.
+    /// Każdy test asercjami opisuje ZAMIAR (jak ma być), a nie stan faktyczny. Luka, która
+    /// jeszcze nie jest domknięta, dostaje [Fact(Skip = "…")] z powodem samowystarczalnym
+    /// (bez odsyłania do niewersjonowanych dokumentów) — domknięcie polega na zdjęciu Skip,
+    /// bez dotykania asercji. Test utrwalający BŁĄD asercją zaświeciłby się na czerwono
+    /// dokładnie wtedy, gdy regułę naprawiono.
     ///
-    /// Poprzednio część tej wiedzy siedziała w teście, który asercją utrwalał BŁĄD
-    /// ("Rzeczywistość: jest 2 segmenty") — taki test zaświeciłby się na czerwono dokładnie
-    /// wtedy, gdy reguła zostanie naprawiona.
-    ///
-    /// Liczby przy grupach to zmierzona liczba błędnych granic na pełnym korpusie
-    /// (2 320 dokumentów, 36 506 granic — z czego 5 962 błędnych).
+    /// Kontrprzykłady są aktywne zawsze: pominięty nie strzegłby niczego właśnie wtedy,
+    /// gdy powstaje weto.
     /// </summary>
     public class SentenceSplittingKnownGapsTests
     {
-        [Fact(Skip = "Grupa A (samodzielne oznaczenie jednostki, 2 884 błędnych granic) — patrz §13 dokumentu wiedzy.")]
+        [Fact]
         public void SplitIntoSentences_SamodzielneOznaczenieJednostki_NieJestGranica()
         {
-            // „Art. 59a. 1." to oznaczenie, nie zdanie. Dziś powstają z tego trzy segmenty,
-            // z których dwa pierwsze są bezwartościowe i przesuwają Order reszty jednostki.
+            // „Art. 59a. 1." w treści cytowanej nowelizacji to oznaczenie, nie zdanie — należy
+            // do zdania, które po nim następuje.
             var text = "„Art. 59a. 1. W roku 2024 niewykorzystane środki przechodzą na rok następny.";
 
             var segments = ParsingFactories.SplitIntoSentences(text);
@@ -34,11 +28,11 @@ namespace Saga.Core.Tests
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
-        [Fact(Skip = "Grupa A (samodzielne oznaczenie jednostki) — wariant z odesłaniem, musi POZOSTAĆ podzielony.")]
+        [Fact]
         public void SplitIntoSentences_OznaczenieNaKoncuZdania_PozostajeGranica()
         {
-            // Kontrprzykład chroniący przed zbyt szerokim wetem: tu "art. 4a." kończy zdanie
-            // treści, więc podział jest POPRAWNY i grupa A nie może go skasować.
+            // Kontrprzykład chroniący przed zbyt szerokim wetem grupy A: tu "art. 4a." kończy zdanie
+            // treści, więc podział jest POPRAWNY i żadne weto nie może go skasować.
             var text = "Wnioskodawca składa korektę wniosku, o którym mowa w art. 4a. Minister właściwy do spraw energii przekazuje dane.";
 
             var segments = ParsingFactories.SplitIntoSentences(text);
@@ -47,15 +41,56 @@ namespace Saga.Core.Tests
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
-        [Fact(Skip = "Grupa B (inicjały i tytuły osobowe, 2 279 błędnych granic) — patrz §13 dokumentu wiedzy.")]
+        [Fact]
+        public void SplitIntoSentences_OznaczenieBezCudzyslowu_PozostajeGranica()
+        {
+            // Weto grupy A obejmuje wyłącznie treść cytowaną. Samotny numer na początku treści
+            // jednostki BEZ cudzysłowu to w korpusie zawsze defekt wyżej w potoku (niezdjęty
+            // prefiks ustępu, nierozpoznany numer punktu „5.6.") — granica ma go uwidaczniać
+            // w pomiarze, a nie maskować.
+            var text = "5.6. Przekroczenie tygodniowego wymiaru czasu pracy podlega karze.";
+
+            var segments = ParsingFactories.SplitIntoSentences(text);
+
+            Assert.Equal(2, segments.Count);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
+        }
+
+        [Fact]
         public void SplitIntoSentences_InicjalImienia_NieJestGranica()
         {
-            // Formuła podpisu zamyka praktycznie każdy akt — dziś tniemy w środku imienia i nazwiska.
+            // Formuła podpisu: inicjał po dwukropku, przed nazwiskiem.
             var text = "Prezydent Rzeczypospolitej Polskiej: A. Duda";
 
             var segments = ParsingFactories.SplitIntoSentences(text);
 
             Assert.Single(segments);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
+        }
+
+        [Theory]
+        [InlineData("Szpital Kliniczny im. J. Babińskiego prowadzi rejestr pacjentów.")]
+        [InlineData("Opinię sporządził prof. A. Nowak z zespołem biegłych.")]
+        [InlineData("Marszałek Sejmu: J. K. Nowak")]
+        public void SplitIntoSentences_InicjalPoTytuleLubInicjale_NieJestGranica(string text)
+        {
+            var segments = ParsingFactories.SplitIntoSentences(text);
+
+            Assert.Single(segments);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
+        }
+
+        [Theory]
+        [InlineData("Stawki określa tabela A. Opłatę pobiera się z góry.")]
+        [InlineData("Rejestr prowadzi Krajowy Depozyt Papierów Wartościowych S.A. Przepis ust. 2 stosuje się odpowiednio.")]
+        public void SplitIntoSentences_WielkaLiteraBezKontekstuOsoby_PozostajeGranica(string text)
+        {
+            // Kontrprzykład dla grupy B: sam kształt „wielka litera + kropka + wyraz kapitalizowany"
+            // nie wystarcza — „A." zamyka zdanie o tabeli, „S.A." nazwę spółki (z korpusu), żadne
+            // nie jest inicjałem.
+            var segments = ParsingFactories.SplitIntoSentences(text);
+
+            Assert.Equal(2, segments.Count);
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
@@ -96,14 +131,28 @@ namespace Saga.Core.Tests
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
 
-        [Fact(Skip = "Ograniczenie teoretyczne — pomiar nie znalazł ani jednego wystąpienia w korpusie.")]
+        [Fact]
         public void SplitIntoSentences_PublikatorNaKoncuZdania_JestGranica()
         {
+            // Kropka po „Dz. U." kończy jednocześnie skrót i zdanie, gdy dalej stoi zwykły wyraz.
             var text = "Zmiany ogłoszono w Dz. U. Przepis stosuje się od stycznia.";
 
             var segments = ParsingFactories.SplitIntoSentences(text);
 
             Assert.Equal(2, segments.Count);
+            SentenceSegmentationInvariants.AssertHolds(text, segments);
+        }
+
+        [Theory]
+        [InlineData("Ustawa została ogłoszona w Dz. U. Nr 12, poz. 136 i obowiązuje od stycznia.")]
+        [InlineData("Dyrektywę ogłoszono w Dz. U. UE L 119 i wdrożono ją w terminie.")]
+        public void SplitIntoSentences_PublikatorZKontynuacja_NieJestGranica(string text)
+        {
+            // Kontrprzykład: po „Dz. U." stoi dalszy ciąg oznaczenia („Nr", „UE L"),
+            // a nie nowe zdanie.
+            var segments = ParsingFactories.SplitIntoSentences(text);
+
+            Assert.Single(segments);
             SentenceSegmentationInvariants.AssertHolds(text, segments);
         }
     }

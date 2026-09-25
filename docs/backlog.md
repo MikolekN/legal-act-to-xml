@@ -14,16 +14,30 @@ stylach szablonu i nie mają odpowiednika w rozpoznawaniu z samej treści.
 
 | Luka | Stan faktyczny | Dlaczego odłożone |
 |---|---|---|
-| **Część wspólna (WrapUp) bez stylu** | Wykrywana wyłącznie przez styl `CZ_WSP_*` (gałąź `styleType == "WRAPUP"` w [`ParagraphClassifier.Classify`](../src/Saga.Core/Services/Classify/ParagraphClassifier.cs)); `IsWrapUpByText` tylko potwierdza lub obniża pewność. W gałęzi bezstylowej „– tekst" nadal klasyfikuje się jako Tiret. | Nie da się rozstrzygnąć samym tekstem: prawdziwe tirety bywają pisane półpauzą, więc treść nie różnicuje tiretu od części wspólnej. Potrzebny sygnał układu (wcięcie na wysokości wprowadzenia do wyliczenia, § 58 ZTP) albo kontekst otwartych list — a `ClassificationInput` to dziś rekord `(Text, StyleId)` i layout do klasyfikatora nie dochodzi (trafia osobnym parametrem tylko do `StructureProcessor.GetTiretDepth`). |
+| **Część wspólna tiretów bez stylu** | Ze stylem `CZ_WSP_*` część wspólna jest rozpoznawana zawsze (gałąź `styleType == "WRAPUP"` w [`ParagraphClassifier.Classify`](../src/Saga.Core/Services/Classify/ParagraphClassifier.cs)). Bez stylu — z kontekstu, ale tylko po punkcie albo literze: „– tekst" tuż po jednostce bez żadnego znaku końcowego to część wspólna (ostatni element przed nią nie ma interpunkcji — § 57 ust. 3 ZTP; wyliczenie tiretów otwiera zaś dwukropek — § 56), więc `StructureProcessor.TryHandleStylelessWrapUp` dołącza go jako część wspólną punktów/liter. Po elemencie zakończonym `,`/`;`/`.` myślnik zostaje tiretem — w korpusie to zwykle legenda wzoru albo pozycja tabeli, ale gubimy tak nieliczne sankcje po niechlujnym „;". Po tirecie „– tekst" nadal staje się kolejnym tiretem, także gdy to część wspólna tiretów. | Po tirecie kontekst nie rozstrzyga: kolejny tiret i część wspólna tiretów zaczynają się tym samym myślnikiem. Pewny sygnał to układ (wcięcie na wysokości wprowadzenia do wyliczenia, § 58 ZTP), a `ClassificationInput` to dziś rekord `(Text, StyleId)` i layout do klasyfikatora nie dochodzi (trafia osobnym parametrem tylko do `StructureProcessor.GetTiretDepth`). Kierunek do zbadania: ta sama reguła „bez znaku końcowego" dla tiretu (§ 57 ust. 6). |
 | **Głębokość tiretu bez sygnału** | Dwa poziomy priorytetu: styl (`2TIR`/`3TIR`/`TIR`) → wcięcie z `ParsingContext.OpenTiretIndents` (tolerancja ±120 twips, cap 3). Brak obu (czysty TXT) → zawsze poziom 1. | TXT nie niesie wcięć w sposób wiarygodny. Świadomie wybrano deterministyczne „poziom 1" zamiast heurystyki na interpunkcji. |
 | **Nowelizacje zagnieżdżone (`ZZ/`)** | Trigger wykryty wewnątrz otwartego cytatu jest tylko flagowany (`QuoteBalanceTracker.MarkNestedTrigger`) — zagnieżdżony obiekt `Amendment` nie jest budowany. | Wymaga rekurencyjnego zbierania w cytacie; bez stylów nie ma sygnału zamknięcia wewnętrznego poziomu. |
 | **`CommonPartOf` w nowelizacji** | Dostępne wyłącznie z mapy stylów (właściwość `AmendmentStyleInfo.CommonPartOf` w [`AmendmentStyleDecoder`](../src/Saga.Core/Helpers/AmendmentStyleDecoder.cs), ~240 wpisów `StyleLibraryMapper`). Bez stylu — nierozpoznawane. | Informacja „część wspólna czego" jest w szablonie zakodowana w nazwie stylu i nie ma odpowiednika w treści. |
 
-Miejsca oznaczone w kodzie: `[Fact(Skip = "Etap 6 …")]` na
+Część domkniętą (część wspólna punktów i liter, jednostki systematyzacyjne bez stylu) pilnuje
 `ParserEquivalenceTests.ActWithWrapUpAndSystematizingUnits_DocxAndTxt_AreEquivalent`
-([plik](../tests/Saga.Core.Tests/ParserEquivalenceTests.cs)) oraz testy
-charakteryzujące w `ParagraphClassifierStylelessTests` (utrwalają obecne, częściowo błędne wyniki —
-zmiana któregokolwiek wymaga jawnej aktualizacji z uzasadnieniem ZTP).
+([plik](../tests/Saga.Core.Tests/ParserEquivalenceTests.cs)) — ten sam akt jako bloki DOCX ze stylami
+i jako TXT, łącznie z kontrolą, że prawdziwe tirety po dwukropku zostają tiretami. Testy
+charakteryzujące w `ParagraphClassifierStylelessTests` utrwalają obecne, częściowo błędne wyniki
+klasyfikatora — zmiana któregokolwiek wymaga jawnej aktualizacji z uzasadnieniem ZTP.
+
+## 1a. Podział na zdania — ślady defektów wyżej w potoku
+
+Splitter (`ParsingFactories.SplitIntoSentences`) nie ma znanych luk własnych — reguły i ich
+kontrprzykłady są w `SentenceSplittingKnownGapsTests`. Pomiar na korpusie
+(`dotnet run --project tools/CorpusValidator -- --sentence-split <korpus>`) nadal zgłasza jednak
+błędne granice kategorii „samo oznaczenie jednostki" (311 w lokalnym korpusie, 2026-09-24). Wszystkie
+leżą **poza** splitterem:
+
+| Luka | Stan faktyczny | Dlaczego odłożone |
+|---|---|---|
+| **Numeracja hierarchiczna punktów** | Pozycje numerowane „5.6.", „18.8.1.", „I.1." (tabele kar, wykazy opłat, załączniki) są budowane jako punkty bez rozpoznanego numeru — eId kończy się samym `…__pkt`, a numer zostaje w treści i splitter tnie za nim. | Model numeru (`EntityNumber`) nie zna numeru wieloczłonowego, a ZTP nie przewiduje takiej jednostki redakcyjnej — trzeba najpierw zdecydować, czym te pozycje są w modelu. |
+| **Weto na samotne oznaczenie tylko w cudzysłowie** | Oznaczenie stojące samodzielnie na początku zdania („„Art. 59a. 1.") nie kończy zdania wyłącznie w treści cytowanej. Poza cudzysłowem granica zostaje (`SplitIntoSentences_OznaczenieBezCudzyslowu_PozostajeGranica`). | Świadomie: samotny numer bez cudzysłowu to w korpusie zawsze niezdjęty prefiks albo nierozpoznany numer — weto ukryłoby taki defekt w pomiarze, zostawiając zepsuty eId i treść. |
 
 ## 2. Klasyfikacja dokumentu
 

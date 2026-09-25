@@ -90,6 +90,58 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Część wspólna bez stylu CZ_WSP_*: „– …" sklasyfikowane z samego tekstu jako tiret.
+        /// Wyliczenie tiretów otwiera zawsze wprowadzenie zakończone dwukropkiem (§ 56 ZTP), a ostatni
+        /// element przed częścią wspólną nie ma żadnego znaku końcowego (§ 57 ust. 3). Myślnik tuż po
+        /// punkcie albo literze BEZ znaku końcowego zamyka więc wyliczenie jako część wspólna.
+        ///
+        /// Warunek „bez znaku", a nie tylko „bez dwukropka", jest celowy: po elemencie zakończonym
+        /// przecinkiem lub średnikiem myślnik bywa w korpusie legendą wzoru albo pozycją tabeli, nie
+        /// częścią wspólną — tam zostaje dotychczasowe zachowanie. Myślnik po tirecie zostaje tiretem:
+        /// kontekst nie rozstrzyga (potrzebne wcięcie).
+        /// </summary>
+        private static bool TryHandleStylelessWrapUp(
+            ParsingContext context, ClassificationResult classification, string text, string? styleId)
+        {
+            if (classification.IsAmendmentContent
+                || ParagraphClassifier.GetStyleType(styleId) == "TIR"
+                || !IsWrapUpByText(text))
+                return false;
+
+            // Lista liter (część wspólna w punkcie) albo punktów (część wspólna w ustępie).
+            BaseEntity? lastItem;
+            BaseEntity? parent;
+            if (context.CurrentLetter != null)
+            {
+                if (context.CurrentLetter.Tirets.Count > 0)
+                    return false;
+                lastItem = context.CurrentLetter;
+                parent = context.CurrentPoint;
+            }
+            else if (context.CurrentPoint != null && context.CurrentPoint.Letters.Count == 0)
+            {
+                lastItem = context.CurrentPoint;
+                parent = context.CurrentParagraph;
+            }
+            else
+            {
+                return false;
+            }
+
+            var lastItemText = lastItem.ContentText.TrimEnd();
+            if (parent == null || lastItemText.Length == 0 || lastItemText[^1] is ':' or ';' or ',' or '.')
+                return false;
+
+            if (!ParsingFactories.AttachWrapUpCommonPart(parent, text))
+                return false;
+
+            Log.Warning("Myślnik bez stylu uznany za część wspólną (poprzednia jednostka bez znaku końcowego): {Text}", text);
+            ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
+                "Część wspólna rozpoznana bez stylu: ostatni element wyliczenia nie ma znaku końcowego (§ 57 ust. 3 ZTP).");
+            return true;
+        }
+
+        /// <summary>
         /// Przetwarza akapit: buduje encję domenową na podstawie klasyfikacji,
         /// aktualizuje pozycję strukturalną i wykrywa cele nowelizacji.
         /// Zwraca true jeśli encja została zbudowana (wykrywanie triggera powinno nastąpić po powrocie).
@@ -212,6 +264,9 @@ namespace Saga.Core.Services.Parsing
                     return true;
 
                 case ParagraphKind.Tiret:
+                    if (TryHandleStylelessWrapUp(context, classification, text, sourceStyleId))
+                        return true;
+
                     var ensuredPointForTiret = _pointBuilder.EnsureForLetter(context.CurrentParagraph, context.CurrentArticle, context.CurrentPoint);
                     context.CurrentPoint = ensuredPointForTiret.Point;
                     if (ensuredPointForTiret.CreatedImplicit)

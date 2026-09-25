@@ -9,8 +9,9 @@ namespace Saga.Core.Tests
     /// i jako TXT (bez stylów, ścieżka regex-only) musi dać RÓWNOWAŻNY model
     /// (struktura + numery + treść). Dowodzi ujednoliconego potoku — styl jest jednym z sygnałów.
     ///
-    /// Luki gałęzi bezstylowej (WrapUp, jednostki systematyzacyjne, nowelizacje) są jawnym
-    /// backlogiem — testy oznaczone Skip z numerem etapu, w którym mają zostać domknięte.
+    /// Luki gałęzi bezstylowej, których rama jeszcze nie obejmuje (m.in. część wspólna tiretów),
+    /// opisuje docs/backlog.md §1. Test luki dostaje Skip z powodem samowystarczalnym — bez
+    /// odsyłania do planów, które po wykonaniu znikają.
     /// </summary>
     public class ParserEquivalenceTests
     {
@@ -86,14 +87,53 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
-        // Backlog luk bezstylowych — jawnie oznaczony (Skip z numerem etapu)
+        // Dawne luki bezstylowe: część wspólna punktów i liter, jednostki systematyzacyjne
         // ============================================================
 
-        [Fact(Skip = "Etap 6 — WrapUp (część wspólna) i jednostki systematyzacyjne bez stylu")]
+        [Fact]
         public void ActWithWrapUpAndSystematizingUnits_DocxAndTxt_AreEquivalent()
         {
-            // Do domknięcia w Etapie 6: bez stylu część wspólna („– …") jest dziś mylona z tiretem,
-            // a jednostki systematyzacyjne (Rozdział/Oddział) są nierozpoznane.
+            // Części wspólne punktów i liter („– …" po wyliczeniu, § 58 ZTP) w rozdziale z oddziałem.
+            // Kontrola: po literze zakończonej dwukropkiem „– …" to prawdziwe tirety i tak ma zostać.
+            var lines = new (string Text, string Style)[]
+            {
+                ("Rozdział 1", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Przepisy ogólne", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 1. Ustawa reguluje:", "ART"),
+                ("1) sprawy pierwsze,", "PKT"),
+                ("2) sprawy drugie", "PKT"),
+                ("– w zakresie nieuregulowanym w innych ustawach.", "CZWSPPKTczwsplnapunktw"),
+                ("Rozdział 2", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Przepisy szczegółowe", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Oddział 1", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Zasady", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 2. 1. Minister może:", "ART"),
+                ("1) wydać decyzję, jeżeli:", "PKT"),
+                ("a) wniosek jest kompletny,", "LIT"),
+                ("b) opłata została uiszczona", "LIT"),
+                ("– w terminie 14 dni od dnia złożenia wniosku;", "CZWSPLITczwsplnaliter"),
+                ("2) odmówić wydania decyzji, gdy:", "PKT"),
+                ("a) wnioskodawca:", "LIT"),
+                ("– nie złożył wymaganych dokumentów,", "TIR"),
+                ("– nie uiścił opłaty,", "TIR"),
+                ("b) upłynął termin.", "LIT"),
+                ("2. Decyzja jest ostateczna.", "UST"),
+            };
+
+            var docxBlocks = lines.Select((l, i) => Styled(l.Text, l.Style, i)).ToList();
+            var docxModel = LegalDocumentParser.ParseBlocks(docxBlocks);
+
+            var txt = string.Join("\n", lines.Select(l => l.Text));
+            var txtModel = LegalDocumentParser.ParseBlocks(ReadTxt(txt));
+
+            var docxDescription = ModelEquivalenceComparer.Describe(docxModel);
+            Assert.Equal(docxDescription, ModelEquivalenceComparer.Describe(txtModel));
+
+            // Strażnik pustej równoważności — ścieżka stylowa naprawdę zbudowała to, co porównujemy.
+            Assert.Contains("eId=rozdz_2__oddz_1__art_2", docxDescription);
+            Assert.Contains("czwsp WrapUp | w zakresie nieuregulowanym w innych ustawach.", docxDescription);
+            Assert.Contains("czwsp WrapUp | w terminie 14 dni od dnia złożenia wniosku;", docxDescription);
+            Assert.Contains("tir 2 | nie uiścił opłaty,", docxDescription);
         }
 
         [Fact]

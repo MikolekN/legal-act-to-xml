@@ -188,7 +188,8 @@ namespace Saga.Core.Services.Parsing
                 return false;
             }
 
-            if (JournalDesignationRecognizer.Covers(journalDesignations, dotIndex))
+            if (JournalDesignationRecognizer.Covers(journalDesignations, dotIndex)
+                && !JournalDesignationRecognizer.EndsDesignationBeforeSentence(journalDesignations, dotIndex, text, nextCharIndex))
             {
                 return false;
             }
@@ -198,7 +199,91 @@ namespace Saga.Core.Services.Parsing
                 return false;
             }
 
+            if (EndsPersonInitial(text, dotIndex, nextCharIndex))
+            {
+                return false;
+            }
+
+            if (IsStandaloneUnitDesignation(text, sentenceStart, dotIndex))
+            {
+                return false;
+            }
+
             return true;
+        }
+
+        /// <summary>
+        /// Oznaczenie jednostki otwierające treść cytowaną nowelizacji — „„Art. 59a. 1.", „„§ 2." —
+        /// stojące SAMODZIELNIE na początku zdania. Kropka kończąca oznaczenie nie kończy zdania:
+        /// oznaczenie należy do zdania, które po nim następuje. Tylko CAŁE zdanie dotąd złożone
+        /// z oznaczenia — „…o którym mowa w art. 4a. Minister…" pozostaje granicą.
+        ///
+        /// Cudzysłów otwierający jest warunkiem celowo: samotne oznaczenie BEZ niego na początku
+        /// treści jednostki („1. Zajęcia…", „5.6. Przekroczenie…") to ślad defektu wyżej w potoku —
+        /// niezdjęty prefiks albo nierozpoznany numer (eId bez numeru). Weto zamaskowałoby go
+        /// w pomiarze podziału na zdania, zostawiając zepsuty eId i treść.
+        /// </summary>
+        private static readonly Regex StandaloneUnitDesignation = new(
+            @"^\s*[„""]\s*(?:Art\.\s*\d+[a-z]*\.\s*)?(?:§\s*\d+[a-z]*\.\s*)?(?:\d+[a-z]*\.\s*)*"
+            + @"(?:[IVXLC]{1,6}(?:\.\d+[a-z]*)*\.)?$",
+            RegexOptions.Compiled | RegexOptions.CultureInvariant);
+
+        private static readonly Regex ContainsDesignationNumber = new(@"[0-9IVXLC]", RegexOptions.Compiled);
+
+        private static bool IsStandaloneUnitDesignation(string text, int sentenceStart, int dotIndex)
+        {
+            var sentenceSoFar = text.AsSpan(sentenceStart, dotIndex - sentenceStart + 1);
+            return StandaloneUnitDesignation.IsMatch(sentenceSoFar)
+                && ContainsDesignationNumber.IsMatch(sentenceSoFar);
+        }
+
+        /// <summary>
+        /// Tytuły stojące przed imieniem (inicjałem) — „im. J. Babińskiego", „prof. A. Nowak".
+        /// </summary>
+        private static readonly Regex PersonTitleBeforeInitial = new(
+            @"(?<!\p{L})(?:im|dr|prof|ks|gen|mgr|inż|św|płk|hab)\.\s*$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+        /// <summary>Poprzedni inicjał łańcucha „J. K. Nowak".</summary>
+        private static readonly Regex PrecedingInitial = new(
+            @"(?<!\p{L})\p{Lu}\.$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
+
+        /// <summary>Po inicjale: nazwisko (wielka litera, dalej małe) albo kolejny inicjał.</summary>
+        private static readonly Regex SurnameOrInitial = new(
+            @"^\p{Lu}(?:\p{Ll}|\.)", RegexOptions.Compiled | RegexOptions.CultureInvariant);
+
+        /// <summary>
+        /// Inicjał imienia — pojedyncza wielka litera z kropką przed nazwiskiem („A. Duda").
+        /// Sam kształt nie wystarcza: „…określa tabela A. Opłatę pobiera się…" kończy zdanie.
+        /// Inicjał uznajemy więc tylko w kontekście osoby: po dwukropku formuły podpisu
+        /// („Prezydent Rzeczypospolitej Polskiej: A. Duda"), po tytule („im. J. Babińskiego")
+        /// albo na końcu łańcucha inicjałów, przed którym stoi jedno z nich („Marszałek Sejmu: J. K. Nowak").
+        /// Łańcuch wymaga odstępów między inicjałami — „…Papierów Wartościowych S.A. Przepis…" kończy zdanie.
+        /// </summary>
+        private static bool EndsPersonInitial(string text, int dotIndex, int nextCharIndex)
+        {
+            if (dotIndex < 1 || !char.IsUpper(text[dotIndex - 1]))
+                return false;
+
+            if (dotIndex >= 2 && char.IsLetter(text[dotIndex - 2]))
+                return false;
+
+            if (!SurnameOrInitial.IsMatch(text.AsSpan(nextCharIndex)))
+                return false;
+
+            var initialStart = dotIndex - 1;
+            while (true)
+            {
+                var before = text.AsSpan(0, initialStart);
+                var trimmed = before.TrimEnd();
+                if ((trimmed.Length > 0 && trimmed[^1] == ':') || PersonTitleBeforeInitial.IsMatch(trimmed))
+                    return true;
+
+                if (trimmed.Length == before.Length || !PrecedingInitial.IsMatch(trimmed))
+                    return false;
+
+                initialStart = trimmed.Length - 2;
+            }
         }
 
         /// <summary>

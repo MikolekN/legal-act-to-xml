@@ -61,5 +61,43 @@ namespace Saga.Core.Tests
             var wrapUpPart = paragraph.CommonParts.Single(cp => cp.Type == CommonPartType.WrapUp);
             Assert.Equal("zachowuja dopuszczenie do uzytku szkolnego.", wrapUpPart.ContentText);
         }
+
+        [Fact]
+        public void ProcessParagraph_StylelessDashAfterUnpunctuatedPoint_IsWrapUp()
+        {
+            // Bez stylu CZ_WSP_*: ostatni punkt bez znaku końcowego zapowiada część wspólną (§ 57 ust. 3 ZTP)
+            // — w korpusie typowo sankcja „– podlega karze…" zamykająca wyliczenie czynów.
+            var orchestrator = new ParserOrchestrator();
+            var context = CreateContext();
+
+            orchestrator.ProcessParagraph(CreateParagraph("Art. 1. Kto:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("1) narusza obowiązek zgłoszenia,"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("2) utrudnia przeprowadzenie kontroli"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("– podlega karze grzywny."), context);
+
+            var paragraph = context.CurrentParagraph;
+            Assert.NotNull(paragraph);
+
+            var wrapUpPart = paragraph.CommonParts.Single(cp => cp.Type == CommonPartType.WrapUp);
+            Assert.Equal("podlega karze grzywny.", wrapUpPart.ContentText);
+            Assert.All(paragraph.Points, point => Assert.Empty(point.Letters));
+        }
+
+        [Fact]
+        public void ProcessParagraph_StylelessDashAfterPunctuatedPoint_IsNotWrapUp()
+        {
+            // Po elemencie zakończonym przecinkiem myślnik bywa w korpusie legendą wzoru („…wynosi 1,"
+            // → „– wskaźnik…"), nie częścią wspólną — reguła kontekstowa go nie przejmuje.
+            var orchestrator = new ParserOrchestrator();
+            var context = CreateContext();
+
+            orchestrator.ProcessParagraph(CreateParagraph("Art. 1. Kwotę oblicza się według wzoru, w którym:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("1) wskaźnik przyjmuje się w wysokości 1,"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("– wartość nominalna przekazanych papierów,"), context);
+
+            var paragraph = context.CurrentParagraph;
+            Assert.NotNull(paragraph);
+            Assert.DoesNotContain(paragraph.CommonParts, cp => cp.Type == CommonPartType.WrapUp);
+        }
     }
 }
