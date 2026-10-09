@@ -164,39 +164,18 @@ namespace Saga.Model
             return builder.ToString();
         }
 
-        private static IEnumerable<Article> EnumerateArticlesFromUnit(ISystematizingUnit unit)
+        private static IEnumerable<Article> EnumerateArticlesFromUnit(BaseEntity unit)
         {
-            switch (unit)
+            foreach (var child in SystematizingHierarchy.Children(unit))
             {
-                case Part part:
-                    foreach (var book in part.Books)
-                        foreach (var article in EnumerateArticlesFromUnit(book))
-                            yield return article;
-                    break;
-                case Book book:
-                    foreach (var title in book.Titles)
-                        foreach (var article in EnumerateArticlesFromUnit(title))
-                            yield return article;
-                    break;
-                case Title title:
-                    foreach (var division in title.Divisions)
-                        foreach (var article in EnumerateArticlesFromUnit(division))
-                            yield return article;
-                    break;
-                case Division division:
-                    foreach (var chapter in division.Chapters)
-                        foreach (var article in EnumerateArticlesFromUnit(chapter))
-                            yield return article;
-                    break;
-                case Chapter chapter:
-                    foreach (var subchapter in chapter.Subchapters)
-                        foreach (var article in EnumerateArticlesFromUnit(subchapter))
-                            yield return article;
-                    break;
-                case Subchapter subchapter:
-                    foreach (var article in subchapter.Articles)
-                        yield return article;
-                    break;
+                if (child is Article article)
+                {
+                    yield return article;
+                    continue;
+                }
+
+                foreach (var nested in EnumerateArticlesFromUnit(child))
+                    yield return nested;
             }
         }
     }

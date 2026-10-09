@@ -26,7 +26,7 @@ namespace Saga.Model.SystematizingUnits
         public Title()
         {
             UnitType = UnitType.Title;
-            EIdPrefix = "tyt";
+            EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Title);
             DisplayLabel = "tyt.";
         }
 

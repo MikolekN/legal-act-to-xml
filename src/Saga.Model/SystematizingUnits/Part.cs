@@ -26,7 +26,7 @@ namespace Saga.Model.SystematizingUnits
         public Part()
         {
             UnitType = UnitType.Part;
-            EIdPrefix = "czesc";
+            EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Part);
             DisplayLabel = "cz.";
         }
 

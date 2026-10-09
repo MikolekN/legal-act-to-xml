@@ -27,7 +27,7 @@ namespace Saga.Model.SystematizingUnits
         public Subchapter()
         {
             UnitType = UnitType.Subchapter;
-            EIdPrefix = "oddz";
+            EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Subchapter);
             DisplayLabel = "oddz.";
         }
 

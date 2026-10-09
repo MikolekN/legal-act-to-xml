@@ -87,7 +87,8 @@ namespace Saga.Core.Services.Parsing
             if (unit is ISystematizingUnit)
                 return EIdSegment.Join((target.Systematizing ?? string.Empty)
                     .Split(EIdSegment.Separator, StringSplitOptions.RemoveEmptyEntries)
-                    .Where(segment => Rank(segment.Split('_')[0]) < Rank(unit.EIdPrefix)));
+                    .Where(segment => SystematizingHierarchy.LevelOfPrefix(segment.Split('_')[0]) is { } level
+                        && SystematizingHierarchy.Rank(level) < SystematizingHierarchy.Rank(unit)));
 
             var level = unit switch
             {
@@ -109,10 +110,6 @@ namespace Saga.Core.Services.Parsing
                 Letter = level > 3 ? target.Letter : null,
             }.ToString();
         }
-
-        private static int Rank(string prefix) => Array.IndexOf(SystematizingPrefixes, prefix);
-
-        private static readonly string[] SystematizingPrefixes = ["czesc", "ksi", "tyt", "dzial", "rozdz", "oddz"];
 
         private static string? NumberOf(BaseEntity unit) => unit.Number?.Value;
 

@@ -170,33 +170,20 @@ namespace Saga.Core.Services.UnitReferences
         /// <summary>Segment eId jednostki systematyzacyjnej z oznaczenia („VIa" w dziale → „dzial_6a", ADR-0018).</summary>
         private static string? SystematizingSegment(UnitLevel level, string designation)
         {
-            var (kind, keyword, unit) = level switch
-            {
-                UnitLevel.Part => (ParagraphKind.PartUnit, "Część", (BaseEntity)new Part()),
-                UnitLevel.Book => (ParagraphKind.BookUnit, "Księga", new Book()),
-                UnitLevel.Title => (ParagraphKind.TitleUnit, "Tytuł", new Title()),
-                UnitLevel.Division => (ParagraphKind.DivisionUnit, "Dział", new Division()),
-                UnitLevel.Chapter => (ParagraphKind.ChapterUnit, "Rozdział", new Chapter()),
-                _ => (ParagraphKind.SubchapterUnit, "Oddział", new Subchapter()),
-            };
-
-            if (ParagraphClassifier.ParseSystematizingNumber(kind, $"{keyword} {designation}") is not { } number
+            var type = TypeOf(level);
+            if (ParagraphClassifier.ParseSystematizingDesignation(type, designation) is not { } number
                 || number.Value.StartsWith(ParagraphClassifier.NamedUnitValue, StringComparison.Ordinal))
                 return null;
 
-            unit.Number = number;
-            return EIdSegment.Of(unit.EIdPrefix, number.Designation);
+            return EIdSegment.Of(SystematizingHierarchy.EIdPrefix(type), number.Designation);
         }
 
-        private static UnitLevel LevelOfSegment(string segment) => segment.Split('_')[0] switch
-        {
-            "czesc" => UnitLevel.Part,
-            "ksi" => UnitLevel.Book,
-            "tyt" => UnitLevel.Title,
-            "dzial" => UnitLevel.Division,
-            "rozdz" => UnitLevel.Chapter,
-            _ => UnitLevel.Subchapter,
-        };
+        // Poziomy systematyzacyjne UnitLevel stoją w kolejności SystematizingHierarchy.Levels.
+        private static UnitType TypeOf(UnitLevel level) => SystematizingHierarchy.Levels[level - UnitLevel.Part];
+
+        private static UnitLevel LevelOfSegment(string segment) =>
+            UnitLevel.Part + SystematizingHierarchy.Rank(SystematizingHierarchy.LevelOfPrefix(segment.Split('_')[0])
+                ?? throw new ArgumentException($"Segment spoza jednostek systematyzacyjnych: {segment}", nameof(segment)));
 
         /// <summary>Niezależna kopia bieżącej ścieżki.</summary>
         internal StructuralReference Snapshot() => Path.Clone();

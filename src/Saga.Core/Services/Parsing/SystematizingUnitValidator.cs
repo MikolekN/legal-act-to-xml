@@ -71,14 +71,7 @@ namespace Saga.Core.Services.Parsing
         private static bool IsNamed(BaseEntity unit) =>
             unit.Number?.Value.StartsWith(ParagraphClassifier.NamedUnitValue, StringComparison.Ordinal) == true;
 
-        private static IEnumerable<BaseEntity> Children(BaseEntity unit) => unit switch
-        {
-            Part part => part.Books,
-            Book book => book.Titles,
-            Title title => title.Divisions,
-            Division division => division.Chapters,
-            Chapter chapter => chapter.Subchapters,
-            _ => [],
-        };
+        private static IEnumerable<BaseEntity> Children(BaseEntity unit) =>
+            SystematizingHierarchy.Children(unit).Where(child => child is ISystematizingUnit);
     }
 }

@@ -40,12 +40,7 @@ namespace Saga.Core.Services.EntryIntoForce
 
         private static IEnumerable<BaseEntity> StructuralChildren(BaseEntity unit) => unit switch
         {
-            Part part => part.Books,
-            Book book => book.Titles,
-            Title title => title.Divisions,
-            Division division => division.Chapters,
-            Chapter chapter => chapter.Subchapters,
-            Subchapter subchapter => subchapter.Articles,
+            ISystematizingUnit => SystematizingHierarchy.Children(unit),
             Article article => article.Paragraphs,
 
             Paragraph paragraph => Concat(paragraph.CommonParts, paragraph.Points),

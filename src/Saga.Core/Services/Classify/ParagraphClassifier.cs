@@ -416,6 +416,36 @@ namespace Saga.Core.Services.Classify
             return null;
         }
 
+        /// <summary>Poziom hierarchii jednostki systematyzacyjnej; null dla innych rodzajów akapitu.</summary>
+        internal static UnitType? LevelOf(ParagraphKind kind) => kind switch
+        {
+            ParagraphKind.PartUnit => UnitType.Part,
+            ParagraphKind.BookUnit => UnitType.Book,
+            ParagraphKind.TitleUnit => UnitType.Title,
+            ParagraphKind.DivisionUnit => UnitType.Division,
+            ParagraphKind.ChapterUnit => UnitType.Chapter,
+            ParagraphKind.SubchapterUnit => UnitType.Subchapter,
+            _ => null,
+        };
+
+        /// <summary>
+        /// Oznaczenie z powołania („VIa" w „po dziale VIa") czytane tak jak oznaczenie w akcie — ta sama
+        /// postać w eId (ADR-0018).
+        /// </summary>
+        internal static EntityNumber? ParseSystematizingDesignation(UnitType level, string designation)
+        {
+            var (kind, keyword) = level switch
+            {
+                UnitType.Part => (ParagraphKind.PartUnit, "Część"),
+                UnitType.Book => (ParagraphKind.BookUnit, "Księga"),
+                UnitType.Title => (ParagraphKind.TitleUnit, "Tytuł"),
+                UnitType.Division => (ParagraphKind.DivisionUnit, "Dział"),
+                UnitType.Chapter => (ParagraphKind.ChapterUnit, "Rozdział"),
+                _ => (ParagraphKind.SubchapterUnit, "Oddział"),
+            };
+            return ParseSystematizingNumber(kind, $"{keyword} {designation}");
+        }
+
         private static Regex? PatternFor(ParagraphKind kind) => kind switch
         {
             ParagraphKind.PartUnit => PartUnitPattern,

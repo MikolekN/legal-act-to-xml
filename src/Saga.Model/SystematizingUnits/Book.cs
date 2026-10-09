@@ -26,7 +26,7 @@ namespace Saga.Model.SystematizingUnits
         public Book()
         {
             UnitType = UnitType.Book;
-            EIdPrefix = "ksi";
+            EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Book);
             DisplayLabel = "ks.";
         }
 

@@ -52,6 +52,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `IHasCommonParts` | Encja może posiadać części wspólne (`List<CommonPart>`) |
 | `IHasTextSegments` | Encja może być dzielona na segmenty tekstu (`List<TextSegment>`) |
 | `ISystematizingUnit` | Kontrakt jednostek systematyzujących (`Heading`, `IsImplicit`) |
+| `SystematizingHierarchy` | Jedyne źródło kształtu hierarchii jednostek systematyzacyjnych: kolejność poziomów, prefiks eId, tworzenie jednostki, jej dzieci i dołączanie dziecka |
 
 ### 2.2 `Saga.Core` — Warstwa logiki parsowania
 

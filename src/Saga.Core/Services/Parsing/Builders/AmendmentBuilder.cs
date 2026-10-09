@@ -519,11 +519,11 @@ namespace Saga.Core.Services.Parsing.Builders
                 || ParagraphClassifier.ParseSystematizingNumber(kind, designation) is not { } number)
                 return false;
 
-            var unit = NewUnit(Rank(kind));
+            var unit = SystematizingHierarchy.Create(ParagraphClassifier.LevelOf(kind)!.Value);
             unit.Number = number;
             ((ISystematizingUnit)unit).IsImplicit = false;
 
-            while (_openUnits.Count > 0 && Rank(_openUnits[^1]) >= Rank(unit))
+            while (_openUnits.Count > 0 && SystematizingHierarchy.Rank(_openUnits[^1]) >= SystematizingHierarchy.Rank(unit))
                 _openUnits.RemoveAt(_openUnits.Count - 1);
 
             if (_openUnits.Count == 0)
@@ -549,14 +549,14 @@ namespace Saga.Core.Services.Parsing.Builders
             var current = _openUnits[^1];
             while (current is not Subchapter)
             {
-                if (LastChild(current) is { } last && ((ISystematizingUnit)last).IsImplicit)
+                if (SystematizingHierarchy.Children(current) is [.., ISystematizingUnit { IsImplicit: true } last])
                 {
-                    current = last;
+                    current = (BaseEntity)last;
                     continue;
                 }
 
-                var created = NewUnit(Rank(current) + 1);
-                AddChild(current, created);
+                var created = Below(current);
+                SystematizingHierarchy.AddChild(current, created);
                 current = created;
             }
             return (Subchapter)current;
@@ -565,67 +565,18 @@ namespace Saga.Core.Services.Parsing.Builders
         private static void Attach(BaseEntity parent, BaseEntity child)
         {
             var current = parent;
-            while (Rank(current) + 1 < Rank(child))
+            while (SystematizingHierarchy.Rank(current) + 1 < SystematizingHierarchy.Rank(child))
             {
-                var implicitUnit = NewUnit(Rank(current) + 1);
-                AddChild(current, implicitUnit);
+                var implicitUnit = Below(current);
+                SystematizingHierarchy.AddChild(current, implicitUnit);
                 current = implicitUnit;
             }
-            AddChild(current, child);
+            SystematizingHierarchy.AddChild(current, child);
         }
 
-        private static void AddChild(BaseEntity parent, BaseEntity child)
-        {
-            child.Parent = parent;
-            switch (parent)
-            {
-                case Part part: part.Books.Add((Book)child); break;
-                case Book book: book.Titles.Add((Title)child); break;
-                case Title title: title.Divisions.Add((Division)child); break;
-                case Division division: division.Chapters.Add((Chapter)child); break;
-                case Chapter chapter: chapter.Subchapters.Add((Subchapter)child); break;
-            }
-        }
-
-        private static BaseEntity? LastChild(BaseEntity unit) => unit switch
-        {
-            Part part => part.Books.LastOrDefault(),
-            Book book => book.Titles.LastOrDefault(),
-            Title title => title.Divisions.LastOrDefault(),
-            Division division => division.Chapters.LastOrDefault(),
-            Chapter chapter => chapter.Subchapters.LastOrDefault(),
-            _ => null,
-        };
-
-        private static int Rank(ParagraphKind kind) => kind switch
-        {
-            ParagraphKind.PartUnit => 0,
-            ParagraphKind.BookUnit => 1,
-            ParagraphKind.TitleUnit => 2,
-            ParagraphKind.DivisionUnit => 3,
-            ParagraphKind.ChapterUnit => 4,
-            _ => 5,
-        };
-
-        private static int Rank(BaseEntity unit) => unit switch
-        {
-            Part => 0,
-            Book => 1,
-            Title => 2,
-            Division => 3,
-            Chapter => 4,
-            _ => 5,
-        };
-
-        private static BaseEntity NewUnit(int rank) => rank switch
-        {
-            0 => new Part(),
-            1 => new Book(),
-            2 => new Title(),
-            3 => new Division(),
-            4 => new Chapter(),
-            _ => new Subchapter(),
-        };
+        /// <summary>Nowa jednostka niejawna poziomu tuż pod daną.</summary>
+        private static BaseEntity Below(BaseEntity unit) =>
+            SystematizingHierarchy.Create(SystematizingHierarchy.Levels[SystematizingHierarchy.Rank(unit) + 1]);
 
         // ============================================================
         // Helpers

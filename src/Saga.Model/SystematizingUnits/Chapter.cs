@@ -30,7 +30,7 @@ namespace Saga.Model.SystematizingUnits
         public Chapter()
         {
             UnitType = UnitType.Chapter;
-            EIdPrefix = "rozdz";
+            EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Chapter);
             DisplayLabel = "rozd.";
         }
 

@@ -17,15 +17,7 @@ namespace Saga.Core.Tests
             {
                 if (unit is ISystematizingUnit { IsImplicit: false })
                     units.Add(unit);
-                IEnumerable<BaseEntity> children = unit switch
-                {
-                    Part part => part.Books,
-                    Book book => book.Titles,
-                    Title title => title.Divisions,
-                    Division division => division.Chapters,
-                    Chapter chapter => chapter.Subchapters,
-                    _ => [],
-                };
+                var children = SystematizingHierarchy.Children(unit).Where(child => child is ISystematizingUnit);
                 foreach (var child in children)
                     Walk(child);
             }

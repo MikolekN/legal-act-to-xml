@@ -26,7 +26,7 @@ namespace Saga.Model.SystematizingUnits
         public Division()
         {
             UnitType = UnitType.Division;
-            EIdPrefix = "dzial";
+            EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Division);
             DisplayLabel = "dz.";
         }
 

@@ -82,16 +82,7 @@ namespace Saga.Core.Services.Converters
             return header;
         }
 
-        private static IEnumerable<BaseEntity> Children(BaseEntity unit) => unit switch
-        {
-            Part part => part.Books,
-            Book book => book.Titles,
-            Title title => title.Divisions,
-            Division division => division.Chapters,
-            Chapter chapter => chapter.Subchapters,
-            Subchapter subchapter => subchapter.Articles,
-            _ => [],
-        };
+        private static IEnumerable<BaseEntity> Children(BaseEntity unit) => SystematizingHierarchy.Children(unit);
 
         private static Names NamesOf(BaseEntity unit, bool actLevel) => unit switch
         {
