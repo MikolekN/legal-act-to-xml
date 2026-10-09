@@ -13,7 +13,8 @@ namespace Saga.Core.Services
         public static XElement Convert(LegalDocument document)
         {
             var rootElement = Element(XmlConverterConstants.RootElement,
-                new XAttribute(XNamespace.Xmlns + "now", XmlConverterConstants.AmendmentNamespace));
+                new XAttribute(XNamespace.Xmlns + "now", XmlConverterConstants.AmendmentNamespace),
+                new XAttribute(XNamespace.Xmlns + "gd", XmlConverterConstants.GuidNamespace.NamespaceName));
 
             var actElement = Element(XmlConverterConstants.Act);
             rootElement.Add(actElement);

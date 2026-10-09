@@ -1,3 +1,5 @@
+using System.Xml.Linq;
+
 namespace Saga.Core.Services.Converters
 {
     /// <summary>Stałe nazwy elementów i atrybutów XML używane w konwerterach.</summary>
@@ -6,6 +8,9 @@ namespace Saga.Core.Services.Converters
         internal const string RootElement = "akt-prawny";
         internal const string Namespace = "https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0";
         internal const string AmendmentNamespace = "https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now";
+
+        /// <summary>Przestrzeń atrybutów GUID schematu (GUIDs.xsd) — prefiks „gd".</summary>
+        internal static readonly XNamespace GuidNamespace = "https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0";
         internal const string MathMLNamespace = "http://www.w3.org/1998/Math/MathML";
         internal const string ELIUrl = "https://eli.gov.pl/";
         internal const string Act = "ustawa";
@@ -131,7 +136,7 @@ namespace Saga.Core.Services.Converters
                 {
                     internal const string Element = "Organ";
                     internal const string Name = "Nazwa";
-                    internal const string GUID = "GUID";
+                    internal static readonly XName GUID = GuidNamespace + "GUID";
                     internal const string Role = "rola";
                     internal const string URI = "eliURI";
                     internal const string SigningAuthority = "OrganPodpisujacy";
@@ -246,10 +251,10 @@ namespace Saga.Core.Services.Converters
                 internal const string ReferenceElement = "zdanie-ref";
                 internal const string Number = "nr";
                 internal const string ReferenceNumber = "ref-nr";
-                internal const string GUID = "zdGUID";
+                internal static readonly XName GUID = GuidNamespace + "zdGUID";
                 internal const string ReferenceGUID = "ref-zdGUID";
                 internal const string Fragment = "fragment";
-                internal const string FragmentGUID = "fragmentGUID";
+                internal static readonly XName FragmentGUID = GuidNamespace + "fragmentGUID";
             }
             internal static class CommonPart
             {
@@ -281,7 +286,7 @@ namespace Saga.Core.Services.Converters
                     internal const string QuotationClosing = "zamykajacy";
                     internal const string QuotationBoth = "oba";
                     internal const string ActAttribute = "akt";
-                    internal const string GUIDAttribute = "nowGUID";
+                    internal static readonly XName GUIDAttribute = GuidNamespace + "nowGUID";
                     internal const string RefGUIDAttribute = "ref-nowGUID";
                     internal const string ElementAttribute = "element-eId";
                     internal const string ElementDoAttribute = "element-do-eId";
@@ -327,7 +332,7 @@ namespace Saga.Core.Services.Converters
             internal const string Label = "label";
             internal const string TextSection = "p";
             internal const string eId = "eId";
-            internal const string GUID = "GUID";
+            internal static readonly XName GUID = GuidNamespace + "GUID";
             internal const string MissingEId = "brak-eid";
             internal const string UnmarkedUnit = "jednostka-nieoznaczona";
 

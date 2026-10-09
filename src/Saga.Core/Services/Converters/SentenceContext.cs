@@ -39,7 +39,7 @@ namespace Saga.Core.Services.Converters
         {
             var sentence = Element(XmlConverterConstants.Contents.Sentence.Element,
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Number, context.ReferenceSentenceNumber),
-                new XAttribute(XmlConverterConstants.Contents.GUID, context.ReferenceSentenceGUID is null ? Guid.NewGuid().ToString() : context.ReferenceSentenceGUID),
+                new XAttribute(XmlConverterConstants.Contents.Sentence.GUID, context.ReferenceSentenceGUID is null ? Guid.NewGuid().ToString() : context.ReferenceSentenceGUID),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Fragment, context.CurrentFragment),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.FragmentGUID, Guid.NewGuid().ToString()),
                 text);
@@ -52,7 +52,7 @@ namespace Saga.Core.Services.Converters
         {
             var sentence = Element(XmlConverterConstants.Contents.Sentence.Element,
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Number, number),
-                new XAttribute(XmlConverterConstants.Contents.GUID, guid is null ? Guid.NewGuid().ToString() : guid),
+                new XAttribute(XmlConverterConstants.Contents.Sentence.GUID, guid is null ? Guid.NewGuid().ToString() : guid),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Fragment, fragment),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.FragmentGUID, Guid.NewGuid().ToString()),
                 text);

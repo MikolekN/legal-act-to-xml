@@ -34,7 +34,9 @@ namespace Saga.Core.Tests
                .Where(e => e.Name.LocalName is "cytat-strukt" or "cytat-w-tekscie" or "uchyl")
                .ToList();
 
-        private static string? Attr(XElement element, string name) => element.Attribute(name)?.Value;
+        // Po nazwie lokalnej — atrybuty GUID stoją w przestrzeni „gd".
+        private static string? Attr(XElement element, string name) =>
+            element.Attributes().FirstOrDefault(attribute => attribute.Name.LocalName == name)?.Value;
 
         private static string[] UnitIds(XElement citation) =>
             citation.Elements().Select(unit => Attr(unit, "eId") ?? string.Empty).ToArray();

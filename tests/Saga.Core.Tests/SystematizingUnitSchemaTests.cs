@@ -10,23 +10,13 @@ namespace Saga.Core.Tests
     /// </summary>
     public class SystematizingUnitSchemaTests
     {
-        // Odchylenia całego eksportu, nie jednostek systematyzacyjnych: atrybut GUID bez przestrzeni
-        // nazw gd: (backlog — nagłówek i metadane aktu zgodne z XSD).
-        private static readonly string[] KnownGlobalDeviations =
-        {
-            "The 'GUID' attribute is not declared.",
-            "The 'fragmentGUID' attribute is not declared.",
-        };
-
-        private static List<string> Problems(params string[] lines)
+        private static IReadOnlyList<string> Problems(params string[] lines)
         {
             var xml = LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(
                 lines.Select(text => new DocumentBlock { Text = text }).ToList()));
             var act = xml.Descendants().First(e => e.Name.LocalName == "ustawa");
 
-            return SchemaPl.Validator.ValidateActBody(act)
-                .Where(problem => !KnownGlobalDeviations.Any(problem.EndsWith))
-                .ToList();
+            return SchemaPl.Validator.ValidateActBody(act);
         }
 
         [SchemaPlFact]
