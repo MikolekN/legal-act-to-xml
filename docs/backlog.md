@@ -110,7 +110,7 @@ Miarą jest `CorpusValidator --systematizing`; zgodność z przykładami autoró
 | **TJ: przytoczenia w obwieszczeniu** | Przepisy przytoczone przed tekstem jednolitym budują się jak artykuły aktu — główne źródło zduplikowanych eId artykułów w TJ (`CorpusValidator --systematizing`, sekcja duplikatów poza cytatami). |
 | **TJ składany w całości stylami zmian** | Gdy całe rozdziały i artykuły tekstu jednolitego mają style `Z…` (np. `305231_2733472`, `349921_3119995`), zbierają się jako treść nowelizacji. Reguła „jednostka w stylu Z bez komendy" obejmuje dziś tylko oznaczenie i tytuł jednostki, nie artykuły. |
 | **Nienumerowane podtytuły** | „Przepis wstępny", „A. Plany naprawy" w stylu tytułu jednostki — ZTP ich nie przewiduje, model nie ma miejsca na grupę artykułów bez oznaczenia; przy dołączaniu tytułu traktowane jak osobne bloki. |
-| **Pełna walidacja XSD korpusu** | Walidacja całego dokumentu pada na nagłówku aktu (`metadane`, `rodzaj-aktu`, `data`, `tytul`), atrybucie `GUID` bez przestrzeni `gd:` i masce `cudzyslowy` (0–3), gdzie schemat chce `brak`/`otwierajacy`/`zamykajacy`/`oba`. Jednostki sprawdza dziś walidacja częściowa (`SchemaPlFact`). |
+| **Pełna walidacja XSD korpusu** | Walidacja całego dokumentu pada na nagłówku aktu (`metadane`, `rodzaj-aktu`, `data`, `tytul`), atrybucie `GUID` bez przestrzeni `gd:`. Treść aktu sprawdza walidacja częściowa (`SchemaPlValidator.ValidateActBody`, raport `--xml-corpus`). |
 
 ## 4. Testy, których plan przewidywał, a nie powstały
 

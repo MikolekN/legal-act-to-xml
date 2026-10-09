@@ -10,8 +10,8 @@ namespace Saga.Core.Tests
     /// Graniczne cudzysłowy cytatu nowelizacyjnego (§ 94 ZTP): znak otwierający „ z początku
     /// pierwszego akapitu i zamykający ” z końca ostatniego NIE należą do treści zmienianej
     /// jednostki — opisują cytat. Parser je zdejmuje (<c>AmendmentStateManager.TrimQuoteBoundaries</c>),
-    /// a konwerter odtwarza jako maskę bitową atrybutu <c>cudzyslowy</c> (1 = otwiera, 2 = zamyka,
-    /// 3 = oba, 0 = blok środkowy albo cytat tekstowy niosący znaki dosłownie).
+    /// a konwerter odtwarza w atrybucie <c>cudzyslowy</c> (otwierajacy, zamykajacy, oba,
+    /// brak — blok środkowy).
     ///
     /// Rozróżnienie kluczowe dla poprawności: cudzysłów WEWNĘTRZNY („zwany dalej „PCOC””) jest
     /// częścią treści i musi przetrwać; zdejmowana jest wyłącznie granica.
@@ -204,7 +204,7 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
-        // Eksport: maska bitowa 'cudzyslowy'
+        // Eksport: atrybut 'cudzyslowy'
         // ============================================================
 
         private static XDocument ConvertSingleAmendment(params string[] quotedLines)
@@ -233,8 +233,8 @@ namespace Saga.Core.Tests
             var doc = ConvertSingleAmendment("„Art. 5. Nowe brzmienie artykułu.”;");
 
             var citation = Assert.Single(Citations(doc));
-            // 3 = blok otwiera i zamyka cytat.
-            Assert.Equal("3", citation.Attribute("cudzyslowy")?.Value);
+            // Blok otwiera i zamyka cytat.
+            Assert.Equal("oba", citation.Attribute("cudzyslowy")?.Value);
         }
 
         [Fact]
@@ -256,8 +256,8 @@ namespace Saga.Core.Tests
             var doc = ConvertSingleAmendment("„Art. 5. Brzmienie bez domknięcia.");
 
             var citation = Assert.Single(Citations(doc));
-            // 1 = otwiera, nie zamyka — granica pozostaje niepewna i XML tego nie ukrywa.
-            Assert.Equal("1", citation.Attribute("cudzyslowy")?.Value);
+            // Otwiera, nie zamyka — granica pozostaje niepewna i XML tego nie ukrywa.
+            Assert.Equal("otwierajacy", citation.Attribute("cudzyslowy")?.Value);
         }
     }
 }

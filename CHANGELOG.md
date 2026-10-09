@@ -34,6 +34,9 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Załącznik aktu nie jest już częścią ostatniego artykułu**: treść za nagłówkiem „Załącznik do
   ustawy z dnia…" nie trafia do struktury aktu (wcześniej jej punkty i rozdziały wchodziły do
   ostatniego artykułu albo stawały się jednostkami aktu).
+- **Atrybut `cudzyslowy` z wartościami schematu**: `brak`/`otwierajacy`/`zamykajacy`/`oba` zamiast maski
+  0–3. Cytat tekstowy nie niesie już cudzysłowów w treści (tylko w atrybucie, jak w przykładach autorów
+  schematu), a interpunkcja po cytacie stoi w zdaniu za nim.
 - **Indeks górny w eId** w notacji `[n]`, zgodnie z aktualnym schematem i przykładami jego autorów:
   `art_4[1]` w eId jednostki i `element-eId` celu — [ADR-0019](docs/adr/0019-indeks-gorny-w-eid.md).
 

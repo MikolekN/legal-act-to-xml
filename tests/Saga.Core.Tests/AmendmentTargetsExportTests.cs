@@ -58,7 +58,7 @@ namespace Saga.Core.Tests
             Assert.NotEqual(Attr(commands[0], "nowGUID"), Attr(commands[1], "nowGUID"));
 
             // Cytat nadal jeden: pierwsza komenda go otwiera, ostatnia zamyka, a średnik stoi raz — po nim.
-            Assert.Equal(new[] { "1", "2" }, commands.Select(c => Attr(c, "cudzyslowy")));
+            Assert.Equal(new[] { "otwierajacy", "zamykajacy" }, commands.Select(c => Attr(c, "cudzyslowy")));
             Assert.Null(commands[0].NextNode as XText);
             Assert.Equal(";", (commands[1].NextNode as XText)?.Value);
         }
@@ -78,7 +78,7 @@ namespace Saga.Core.Tests
             Assert.Equal("art_23__ust_8", Attr(citation, "element-eId"));
             Assert.Equal("art_23__ust_10", Attr(citation, "element-do-eId"));
             Assert.Equal(new[] { "art_23__ust_8", "art_23__ust_9", "art_23__ust_10" }, UnitIds(citation));
-            Assert.Equal("3", Attr(citation, "cudzyslowy"));
+            Assert.Equal("oba", Attr(citation, "cudzyslowy"));
         }
 
         [Fact]
@@ -178,10 +178,22 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ReplacedWords_AreQuotedOnBothEnds_ByTheAttribute()
+        {
+            // Jak w przykładach autorów schematu: cudzysłowy w atrybucie („oba"), nie w treści cytatu.
+            var (xml, _) = Convert("1) w art. 5 wyrazy „organ właściwy” zastępuje się wyrazami „organ nadzoru”;");
+
+            var citation = Assert.Single(Commands(xml));
+            Assert.Equal("cytat-w-tekscie", citation.Name.LocalName);
+            Assert.Equal("oba", Attr(citation, "cudzyslowy"));
+            Assert.Equal("organ nadzoru", citation.Value);
+        }
+
+        [Fact]
         public void TextCommandsForSeveralTargets_LeaveNoStrayPunctuationInTheSentence()
         {
-            // Treść bez jednostek powtarza się w każdej komendzie. Interpunkcję po domkniętym cytacie
-            // tekstowym wchłania sam cytat, więc do zdania nie trafia — ani raz na komendę, ani raz w ogóle.
+            // Treść bez jednostek powtarza się w każdej komendzie; cudzysłowy niesie atrybut, a interpunkcja
+            // po cytacie trafia do zdania raz — nie raz na komendę.
             var amendment = new Amendment
             {
                 OperationType = AmendmentOperationType.Modification,
@@ -195,8 +207,10 @@ namespace Saga.Core.Tests
 
             AmendmentXmlConverter.ToXml(amendment, sentence);
 
-            Assert.Equal(new[] { "„Organ właściwy:”;", "„Organ właściwy:”;" }, sentence.Elements().Select(c => c.Value));
-            Assert.Single(sentence.Nodes().OfType<XText>());
+            Assert.Equal(new[] { "Organ właściwy:", "Organ właściwy:" }, sentence.Elements().Select(c => c.Value));
+            Assert.All(sentence.Elements(), c => Assert.Equal("oba", Attr(c, "cudzyslowy")));
+            Assert.Equal(";", (sentence.LastNode as XText)?.Value);
+            Assert.Equal(2, sentence.Nodes().OfType<XText>().Count());
         }
 
         // ============================================================

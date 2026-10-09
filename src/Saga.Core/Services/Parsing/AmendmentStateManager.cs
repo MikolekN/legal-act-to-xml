@@ -349,8 +349,15 @@ namespace Saga.Core.Services.Parsing
                 ObjectType = AmendmentObjectType.None,
                 PlainText = command.NewWording,
             };
-            _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(content, collector, context,
+            var amendment = _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(content, collector, context,
                 AmendmentOperationType.Modification));
+
+            // Nowe wyrazy stoją w komendzie w cudzysłowie („…” zastępuje się wyrazami „…”).
+            if (amendment != null)
+            {
+                amendment.HasOpeningQuote = true;
+                amendment.HasClosingQuote = true;
+            }
 
             collector.Reset();
         }

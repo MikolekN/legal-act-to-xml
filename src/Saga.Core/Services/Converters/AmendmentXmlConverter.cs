@@ -32,17 +32,15 @@ namespace Saga.Core.Services.Converters
                 return;
 
             var units = AmendmentTargetPairing.ContentUnits(amendment.Content);
-            bool punctuationConsumed;
 
             if (units.Count == 0 && commands.Count > 1)
             {
-                punctuationConsumed = false;
                 foreach (var command in commands)
                 {
                     var copy = new List<XElement>();
                     AddPlainTextContent(amendment, command, sentence, copy);
                     AddCommonParts(amendment, command, sentence, copy);
-                    punctuationConsumed |= ApplyQuotationMarks(amendment, copy);
+                    ApplyQuotationMarks(amendment, copy);
                 }
             }
             else
@@ -64,11 +62,11 @@ namespace Saga.Core.Services.Converters
                         AddCommonParts(amendment, commands[i], sentence, blocks);
                 }
 
-                punctuationConsumed = ApplyQuotationMarks(amendment, blocks);
+                ApplyQuotationMarks(amendment, blocks);
             }
 
-            if (!punctuationConsumed && amendment.TrailingPunctuation is { Length: > 0 } trailing &&
-                sentence is XElement sentenceElement)
+            // Interpunkcja po cytacie należy do zdania nowelizującego, nie do cytowanej treści.
+            if (amendment.TrailingPunctuation is { Length: > 0 } trailing && sentence is XElement sentenceElement)
             {
                 sentenceElement.Add(trailing);
             }
@@ -87,61 +85,27 @@ namespace Saga.Core.Services.Converters
         }
 
         /// <summary>
-        /// Rozdziela cudzysłowy cytatu pomiędzy jego bloki: otwierający trafia do pierwszego,
-        /// zamykający do ostatniego. Atrybut 'cudzyslowy' jest maską bitową
-        /// (1 = otwiera, 2 = zamyka, 3 = oba, 0 = blok środkowy).
+        /// Rozdziela cudzysłowy cytatu pomiędzy jego bloki: otwierający trafia do pierwszego, zamykający
+        /// do ostatniego, środkowe nie mają żadnego. Cudzysłowy niesie wyłącznie atrybut — treść cytatu,
+        /// także tekstowego, jest bez nich (jak w przykładach autorów schematu).
         /// </summary>
-        private static bool ApplyQuotationMarks(Amendment amendment, List<XElement> blocks)
+        private static void ApplyQuotationMarks(Amendment amendment, List<XElement> blocks)
         {
-            var punctuation = amendment.TrailingPunctuation;
-            var punctuationConsumed = false;
-
             for (var i = 0; i < blocks.Count; i++)
             {
-                var block = blocks[i];
                 var opens = i == 0 && amendment.HasOpeningQuote;
                 var closes = i == blocks.Count - 1 && amendment.HasClosingQuote;
-
-                if (IsTextCitation(block))
-                {
-                    // Cudzysłowy dosłownie w treści — atrybut ich nie powiela.
-                    var closingSuffix = closes ? ClosingQuote + punctuation : null;
-                    if (closes && punctuation is { Length: > 0 })
-                        punctuationConsumed = true;
-
-                    ApplyLiteralQuotes(block, opens ? OpeningQuote : null, closingSuffix);
-                    SetQuotationAttribute(block, 0);
-                    continue;
-                }
-
-                SetQuotationAttribute(block, (opens ? 1 : 0) + (closes ? 2 : 0));
+                blocks[i].SetAttributeValue(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute, QuotationMarks(opens, closes));
             }
-
-            return punctuationConsumed;
         }
 
-        private const string OpeningQuote = "„";
-        private const string ClosingQuote = "”";
-
-        private static bool IsTextCitation(XElement element) =>
-            element.Name.LocalName == XmlConverterConstants.Contents.Citation.Text.Element;
-
-        private static void SetQuotationAttribute(XElement element, int value) =>
-            element.SetAttributeValue(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute, value);
-
-        private static void ApplyLiteralQuotes(XElement citation, string? prefix, string? suffix)
+        private static string QuotationMarks(bool opens, bool closes) => (opens, closes) switch
         {
-            XNamespace ns = XmlConverterConstants.Namespace;
-            var textElements = citation.Elements(ns + XmlConverterConstants.Contents.Citation.Text.Content).ToList();
-            if (textElements.Count == 0)
-                return;
-
-            if (prefix is { Length: > 0 })
-                textElements[0].Value = prefix + textElements[0].Value;
-
-            if (suffix is { Length: > 0 })
-                textElements[^1].Value += suffix;
-        }
+            (true, true) => XmlConverterConstants.Contents.Citation.Quotation.QuotationBoth,
+            (true, false) => XmlConverterConstants.Contents.Citation.Quotation.QuotationOpening,
+            (false, true) => XmlConverterConstants.Contents.Citation.Quotation.QuotationClosing,
+            _ => XmlConverterConstants.Contents.Citation.Quotation.QuotationNone,
+        };
 
         private static string BuildActUri(Amendment amendment) =>
             XmlConverterConstants.ELIUrl + "eli/" + (amendment.TargetLegalAct.GetELIStrings().FirstOrDefault() ?? string.Empty);
@@ -152,7 +116,8 @@ namespace Saga.Core.Services.Converters
 
             element.Add(new XAttribute(now + XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
 
-            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute, 3));
+            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute,
+                XmlConverterConstants.Contents.Citation.Quotation.QuotationBoth));
 
             element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.Guid.ToString()));
 

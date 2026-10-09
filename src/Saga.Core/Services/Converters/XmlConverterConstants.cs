@@ -276,6 +276,10 @@ namespace Saga.Core.Services.Converters
                 internal static class Quotation
                 {
                     internal const string QuotationAttribute = "cudzyslowy";
+                    internal const string QuotationNone = "brak";
+                    internal const string QuotationOpening = "otwierajacy";
+                    internal const string QuotationClosing = "zamykajacy";
+                    internal const string QuotationBoth = "oba";
                     internal const string ActAttribute = "akt";
                     internal const string GUIDAttribute = "nowGUID";
                     internal const string RefGUIDAttribute = "ref-nowGUID";
