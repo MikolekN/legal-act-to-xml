@@ -19,6 +19,7 @@ namespace Saga.Core.Services.EntryIntoForce
             if (unit is not IHasAmendments { Amendment.Content: { } content })
                 yield break;
 
+            foreach (var systematizing in content.SystematizingUnits) yield return systematizing;
             foreach (var article in content.Articles) yield return article;
             foreach (var paragraph in content.Paragraphs) yield return paragraph;
             foreach (var point in content.Points) yield return point;

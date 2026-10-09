@@ -342,5 +342,26 @@ namespace Saga.Core.Tests
             // tu styl MUSI wygrać, inaczej fragment zostałby wzięty za ustęp.
             Assert.Equal(AmendmentEntityKind.PlainText, Classify("2. Fragment zdania.", FragmentStyleId));
         }
+
+        [Fact]
+        public void SuperscriptedArticleAndCodeParagraph_KeepTheSuperscriptInEIdAndNr()
+        {
+            // Jak w przykładzie autorów schematu: artykul eId="…art_477[9]__par_2[1]", nr="2[1]".
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                new DocumentBlock { Text = "Art. 477[9]. § 1. Treść paragrafu pierwszego." },
+                new DocumentBlock { Text = "§ 2[1]. Treść paragrafu dodanego." },
+            });
+
+            var xml = LegalDocumentConverter.Convert(document);
+            var ns = xml.Name.Namespace;
+            var article = xml.Descendants(ns + "artykul").Single();
+            var added = article.Elements(ns + "paragraf-kodeksu").Last();
+
+            Assert.Equal("art_477[9]", article.Attribute("eId")?.Value);
+            Assert.Equal("477[9]", article.Element(ns + "nr")?.Value);
+            Assert.Equal("art_477[9]__par_2[1]", added.Attribute("eId")?.Value);
+            Assert.Equal("2[1]", added.Element(ns + "nr")?.Value);
+        }
     }
 }

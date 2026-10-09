@@ -81,8 +81,12 @@ namespace Saga.Core
             if (rp == null)
                 return false;
 
+            // Szablon ma cztery style indeksu górnego (IG, IGP — pogrubiony, IGK — kursywa, IGPK);
+            // oznaczenia jednostek są pogrubione, więc ich indeks idzie stylem IGP.
             var styleVal = rp.RunStyle?.Val?.Value;
-            if (styleVal is "IGindeksgrny" or "Odwoanieprzypisudolnego")
+            if (styleVal is "Odwoanieprzypisudolnego"
+                || (styleVal != null && styleVal.StartsWith("IG", StringComparison.Ordinal)
+                    && styleVal.Contains("indeksgrny", StringComparison.Ordinal)))
                 return true;
 
             if (rp.VerticalTextAlignment?.Val?.Value == VerticalPositionValues.Superscript)

@@ -111,23 +111,24 @@ namespace Saga.Core.Tests
 
         [Theory]
         // Rzeczowniki ŻEŃSKIE — działały, bo słownik miał tylko formy żeńskie.
-        [InlineData("CZĘŚĆ PIERWSZA", ParagraphKind.PartUnit, "I")]
-        [InlineData("KSIĘGA DRUGA", ParagraphKind.BookUnit, "II")]
+        [InlineData("CZĘŚĆ PIERWSZA", ParagraphKind.PartUnit, "1")]
+        [InlineData("KSIĘGA DRUGA", ParagraphKind.BookUnit, "2")]
         // Rzeczowniki MĘSKIE — cicha porażka: nagłówek lądował jako Unknown.
-        [InlineData("TYTUŁ PIERWSZY", ParagraphKind.TitleUnit, "I")]
-        [InlineData("DZIAŁ PIERWSZY", ParagraphKind.DivisionUnit, "I")]
-        [InlineData("DZIAŁ TRZECI", ParagraphKind.DivisionUnit, "III")]
+        [InlineData("TYTUŁ PIERWSZY", ParagraphKind.TitleUnit, "1")]
+        [InlineData("DZIAŁ PIERWSZY", ParagraphKind.DivisionUnit, "1")]
+        [InlineData("DZIAŁ TRZECI", ParagraphKind.DivisionUnit, "3")]
         public void WordOrdinalHeading_IsRecognized_RegardlessOfGrammaticalGender(
-            string text, ParagraphKind expectedKind, string expectedRoman)
+            string text, ParagraphKind expectedKind, string expectedValue)
         {
             var classification = new ParagraphClassifier().Classify(new ClassificationInput(text, null));
             Assert.Equal(expectedKind, classification.Kind);
 
-            // eId musi być identyczny jak dla zapisu cyfrą rzymską — „nie przeinaczyć" dotyczy
-            // oznaczenia w Value, ale kanonizacja idzie przez cyfrę rzymską.
+            // eId musi być identyczny jak dla zapisu cyfrą rzymską: oba dają liczbę arabską (ADR-0018),
+            // a oznaczenie z aktu zostaje w RawValue.
             var number = ParagraphClassifier.ParseSystematizingNumber(expectedKind, text);
             Assert.NotNull(number);
-            Assert.Equal(expectedRoman, number!.Value);
+            Assert.Equal(expectedValue, number!.Value);
+            Assert.Equal(text[(text.IndexOf(' ') + 1)..], number.RawValue);
         }
 
         [Fact]
@@ -138,15 +139,16 @@ namespace Saga.Core.Tests
                 new ClassificationInput("DZIAŁ PIĘTNASTY", null));
 
             Assert.Equal(ParagraphKind.DivisionUnit, classification.Kind);
-            Assert.Equal("XV", ParagraphClassifier.ParseSystematizingNumber(ParagraphKind.DivisionUnit, "DZIAŁ PIĘTNASTY")!.Value);
+            Assert.Equal("15", ParagraphClassifier.ParseSystematizingNumber(ParagraphKind.DivisionUnit, "DZIAŁ PIĘTNASTY")!.Value);
         }
 
         [Fact]
         public void NonNumeralHeadingWord_IsStillRejected()
         {
             // Poszerzenie wzorca jest bezpieczne wyłącznie dlatego, że walidacja po dopasowaniu
-            // jest twarda: „CZĘŚĆ OGÓLNA" przechodzi regex, ale nie jest numerem jednostki.
-            var classification = new ParagraphClassifier().Classify(new ClassificationInput("CZĘŚĆ OGÓLNA", null));
+            // jest twarda: „CZĘŚĆ BUDŻETOWA" przechodzi regex, ale nie jest ani numerem, ani nazwą
+            // z zamkniętej listy jednostek nazwanych („CZĘŚĆ OGÓLNA").
+            var classification = new ParagraphClassifier().Classify(new ClassificationInput("CZĘŚĆ BUDŻETOWA", null));
             Assert.NotEqual(ParagraphKind.PartUnit, classification.Kind);
         }
     }

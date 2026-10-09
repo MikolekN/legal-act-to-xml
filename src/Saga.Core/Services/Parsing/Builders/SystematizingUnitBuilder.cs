@@ -1,7 +1,6 @@
 using Saga.Core.Services.Classify;
 using Saga.Model;
 using Saga.Model.SystematizingUnits;
-using Serilog;
 
 namespace Saga.Core.Services.Parsing.Builders
 {
@@ -11,9 +10,7 @@ namespace Saga.Core.Services.Parsing.Builders
     /// nie zawiera jeszcze artykułów) przejmuje istniejący węzeł niejawny (IsImplicit=false); kolejna tworzy
     /// jednostkę-rodzeństwo z własnym świeżym łańcuchem niejawnym w dół do oddziału. Artykuły dołączane są do
     /// bieżącego oddziału (ctx.Subchapter), więc aktualizacja ścieżki przekierowuje kolejne artykuły.
-    ///
-    /// Ograniczenie modelu: RootPart jest pojedynczy — wiele Części (np. „CZĘŚĆ OGÓLNA/SZCZEGÓLNA") nie jest
-    /// reprezentowalnych, druga „CZĘŚĆ" nadpisuje numer części głównej (z ostrzeżeniem).
+    /// Kolejna część trafia do LegalDocument.Parts jako rodzeństwo pierwszej.
     /// </summary>
     internal sealed class SystematizingUnitBuilder
     {
@@ -43,20 +40,23 @@ namespace Saga.Core.Services.Parsing.Builders
             ctx.ClearTiretStack();
         }
 
-        private static ISystematizingUnit? EnterPart(ParsingContext ctx, EntityNumber number)
+        private static ISystematizingUnit EnterPart(ParsingContext ctx, EntityNumber number)
         {
-            // Model ma pojedynczy RootPart — części-rodzeństwa nie są reprezentowalne. Przejmujemy węzeł
-            // tylko gdy niejawny i bez artykułów pod nim (inaczej ujawnienie zmieniłoby eId wcześniejszych
-            // artykułów). W przeciwnym razie CZĘŚĆ jest pomijana z ostrzeżeniem.
-            if (!CanClaim(ctx.CurrentPart))
+            if (CanClaim(ctx.CurrentPart))
             {
-                Log.Warning("CZĘŚĆ ({Number}) pominięta — RootPart zajęty lub zawiera już artykuły " +
-                    "(pojedyncza część w modelu).", number.Value);
-                return null;
+                Claim(ctx.CurrentPart, number);
+                return ctx.CurrentPart;
             }
 
-            Claim(ctx.CurrentPart, number);
-            return ctx.CurrentPart;
+            var part = new Part { IsImplicit = false, Number = number };
+            ctx.Document.Parts.Add(part);
+            ctx.CurrentPart = part;
+            ctx.CurrentBook = AddImplicit(new Book(), part, part.Books);
+            ctx.CurrentTitle = AddImplicit(new Title(), ctx.CurrentBook, ctx.CurrentBook.Titles);
+            ctx.CurrentDivision = AddImplicit(new Division(), ctx.CurrentTitle, ctx.CurrentTitle.Divisions);
+            ctx.CurrentChapter = AddImplicit(new Chapter(), ctx.CurrentDivision, ctx.CurrentDivision.Chapters);
+            ctx.Subchapter = AddImplicit(new Subchapter(), ctx.CurrentChapter, ctx.CurrentChapter.Subchapters);
+            return part;
         }
 
         private static ISystematizingUnit EnterBook(ParsingContext ctx, EntityNumber number)
@@ -140,7 +140,9 @@ namespace Saga.Core.Services.Parsing.Builders
         }
 
         /// <summary>Można przejąć węzeł niejawny tylko gdy jego poddrzewo nie zawiera jeszcze artykułów
-        /// (inaczej uczynienie go jawnym reparentowałoby wcześniejsze artykuły i zmieniałoby ich eId).</summary>
+        /// (inaczej uczynienie go jawnym przeniosłoby do tej jednostki artykuły stojące w akcie przed nią).
+        /// eId artykułów nie zależy od jednostek systematyzacyjnych (ADR-0017) — chodzi o miejsce w drzewie
+        /// i w eksporcie.</summary>
         private static bool CanClaim(ISystematizingUnit unit) => unit.IsImplicit && !HasArticles(unit);
 
         private static void Claim(ISystematizingUnit unit, EntityNumber number)

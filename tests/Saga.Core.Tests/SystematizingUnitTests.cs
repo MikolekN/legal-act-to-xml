@@ -37,6 +37,13 @@ namespace Saga.Core.Tests
                 orch.ProcessParagraph(P(line), ctx);
         }
 
+        /// <summary>
+        /// Ścieżka jednostek systematyzacyjnych, w których stoi artykuł — eId jego oddziału (oddział
+        /// niejawny oddaje ścieżkę najbliższych jawnych przodków). eId artykułu jej nie zawiera
+        /// (ADR-0017), więc umiejscowienie sprawdza się tutaj, a nie w eId artykułu.
+        /// </summary>
+        private static string UnitPath(BaseEntity article) => article.Parent!.Id;
+
         // ============================================================
         // RomanNumeralConverter
         // ============================================================
@@ -100,14 +107,12 @@ namespace Saga.Core.Tests
             Assert.Equal("2", division.Chapters[1].Number?.Value);
             Assert.Equal("Odpowiedzialność", division.Chapters[1].Heading);
 
-            var ids = ctx.Document.Articles.Select(a => a.Id).ToList();
-            Assert.Contains("rozdz_1__art_1", ids);
-            Assert.Contains("rozdz_1__art_2", ids);
-            Assert.Contains("rozdz_2__art_3", ids);
+            var placed = ctx.Document.Articles.Select(a => $"{UnitPath(a)} {a.Id}").ToList();
+            Assert.Equal(new[] { "rozdz_1 art_1", "rozdz_1 art_2", "rozdz_2 art_3" }, placed);
         }
 
         [Fact]
-        public void Division_Roman_TakesOverImplicit_AndKeepsRomanInEId()
+        public void Division_Roman_TakesOverImplicit_WithArabicEId()
         {
             var orch = new ParserOrchestrator();
             var ctx = ConnectedContext();
@@ -116,11 +121,13 @@ namespace Saga.Core.Tests
 
             var division = ctx.Document.RootPart.Books[0].Titles[0].Divisions[0];
             Assert.False(division.IsImplicit);
-            Assert.Equal("II", division.Number?.Value);
+            Assert.Equal("2", division.Number?.Value);
+            Assert.Equal("II", division.Number?.RawValue);
             Assert.Equal(2, division.Number?.NumericPart);
 
             var article = ctx.Document.Articles.Single();
-            Assert.Equal("dzial_II__art_5", article.Id);
+            Assert.Equal("dzial_2", UnitPath(article));
+            Assert.Equal("art_5", article.Id);
         }
 
         [Fact]
@@ -132,23 +139,22 @@ namespace Saga.Core.Tests
             Feed(orch, ctx, "Rozdział 1", "Oddział 1", "Art. 7. Tresc.");
 
             var article = ctx.Document.Articles.Single();
-            Assert.Equal("rozdz_1__oddz_1__art_7", article.Id);
+            Assert.Equal("rozdz_1__oddz_1", UnitPath(article));
+            Assert.Equal("art_7", article.Id);
         }
 
         [Fact]
         public void ArticleBeforeFirstChapter_IsNotReparented()
         {
             // Strażnik: przejęcie węzła niejawnego tylko gdy nie ma jeszcze artykułów pod nim —
-            // artykuł sprzed pierwszego Rozdziału nie może zyskać prefiksu rozdziału.
+            // artykuł sprzed pierwszego Rozdziału nie może trafić do tego rozdziału.
             var orch = new ParserOrchestrator();
             var ctx = ConnectedContext();
 
             Feed(orch, ctx, "Art. 1. Przed rozdzialem.", "Rozdział 1", "Art. 2. W rozdziale.");
 
-            var ids = ctx.Document.Articles.Select(a => a.Id).ToList();
-            Assert.Contains("art_1", ids);
-            Assert.Contains("rozdz_1__art_2", ids);
-            Assert.DoesNotContain("rozdz_1__art_1", ids);
+            var placed = ctx.Document.Articles.Select(a => $"[{UnitPath(a)}] {a.Id}").ToList();
+            Assert.Equal(new[] { "[] art_1", "[rozdz_1] art_2" }, placed);
         }
 
         [Fact]
@@ -200,7 +206,7 @@ namespace Saga.Core.Tests
             var ctx = ConnectedContext();
             Feed(orch, ctx, "ROZDZIAŁ 1A", "Art. 1. Tresc.");
 
-            Assert.Equal("rozdz_1A__art_1", ctx.Document.Articles.Single().Id);
+            Assert.Equal("rozdz_1A", UnitPath(ctx.Document.Articles.Single()));
         }
 
         [Fact]
@@ -211,37 +217,202 @@ namespace Saga.Core.Tests
             Feed(orch, ctx, "DZIAŁ IVa", "Art. 5. Tresc.");
 
             var division = ctx.Document.RootPart.Books[0].Titles[0].Divisions[0];
-            Assert.Equal("IVa", division.Number?.Value);
+            Assert.Equal("4a", division.Number?.Value);
+            Assert.Equal("IVa", division.Number?.RawValue);
             Assert.Equal(4, division.Number?.NumericPart);
-            Assert.Equal("dzial_IVa__art_5", ctx.Document.Articles.Single().Id);
+            Assert.Equal("dzial_4a", UnitPath(ctx.Document.Articles.Single()));
         }
 
         [Fact]
-        public void BookWithWordOrdinal_HasCanonicalRomanEId()
+        public void BookWithWordOrdinal_HasArabicEId()
         {
-            // „KSIĘGA PIERWSZA" i „KSIĘGA I" muszą dać ten sam eId (ks_I) — normalizacja do rzymskiej.
+            // „KSIĘGA PIERWSZA" i „KSIĘGA I" muszą dać ten sam eId (ksi_1) — liczba arabska (ADR-0018).
             var orch = new ParserOrchestrator();
             var ctx = ConnectedContext();
             Feed(orch, ctx, "KSIĘGA PIERWSZA", "Art. 1. Tresc.");
 
             var book = ctx.Document.RootPart.Books[0];
             Assert.False(book.IsImplicit);
-            Assert.Equal("I", book.Number?.Value);
-            Assert.Equal("ksi_I__art_1", ctx.Document.Articles.Single().Id);
+            Assert.Equal("1", book.Number?.Value);
+            Assert.Equal("PIERWSZA", book.Number?.RawValue);
+            Assert.Equal("ksi_1", UnitPath(ctx.Document.Articles.Single()));
         }
 
         [Fact]
-        public void PartAfterArticle_IsIgnored_ArticleNotReparented()
+        public void StyledChapterAfterAmendmentStyledBlock_ClosesTheAmendment()
         {
-            // Strażnik EnterPart: artykuł sprzed pierwszej CZĘŚCI nie może zyskać prefiksu części (eId).
+            // TJ 330983_2964483: pominięte przepisy zmieniające stoją w stylu nowelizacji, a zaraz po nich
+            // rozdział w stylu szablonu. Styl jednostki systematyzacyjnej to styl ustawy matki — zamyka
+            // nowelizację, zamiast zostać wciągnięty do jej treści.
+            var document = LegalDocumentParser.ParseBlocks(new (string Text, string Style)[]
+            {
+                ("DZIAŁ XIII", "TYTDZOZNoznaczenietytuulubdziau"),
+                ("Zmiany w przepisach, przepisy przejściowe, dostosowujące i końcowe", "TYTDZPRZEDMprzedmiotregulacjitytuulubdziau"),
+                ("Rozdział 1", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Zmiany w przepisach", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 480–524. (pominięte)", "ZPKTzmpktartykuempunktem"),
+                ("Rozdział 2", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Przepisy przejściowe, dostosowujące i końcowe", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 525. Z dniem wejścia w życie ustawy znosi się Prezesa Krajowego Zarządu Gospodarki Wodnej.", "ARTartustawynprozporzdzenia"),
+            }.Select(line => new Ingest.DocumentBlock { Text = line.Text, StyleId = line.Style }).ToList());
+
+            var article = document.Articles.Single(a => a.Number?.Value == "525");
+            Assert.Equal("dzial_13__rozdz_2", UnitPath(article));
+            Assert.Equal("Przepisy przejściowe, dostosowujące i końcowe",
+                ((Saga.Model.SystematizingUnits.ISystematizingUnit)article.Parent!.Parent!).Heading);
+        }
+
+        [Fact]
+        public void TableCellsInDesignationStyle_StayInTheAmendmentContent()
+        {
+            // Ustawa 315576_2810842: dodawana część tabeli ma komórki w stylach oznaczeń i tytułów jednostek.
+            // Bez oznaczenia potwierdzonego treścią to nie jest styl ustawy matki — nowelizacja trwa.
+            var description = ModelEquivalenceComparer.Describe(ParseStyled(
+                ("Art. 3. W załączniku do ustawy w tabeli nr 3 dodaje się część VII w brzmieniu:", "ARTartustawynprozporzdzenia"),
+                ("Część VII", "TYTDZPRZEDMprzedmiotregulacjitytuulubdziau"),
+                ("Sprawowanie bieżącego nadzoru nad operatorami systemów bezzałogowych statków powietrznych", "TYTDZPRZEDMprzedmiotregulacjitytuulubdziau"),
+                ("Rodzaj czynności urzędowej", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Wysokość stawki w zł", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("1", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Art. 4. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", "ARTartustawynprozporzdzenia")));
+
+            Assert.Contains("Rodzaj czynności urzędowej", description);
+            Assert.Contains("Wysokość stawki w zł", description);
+            Assert.Contains("art 4 ", description);
+        }
+
+        [Fact]
+        public void ChapterInAmendmentStyle_WithoutAmendmentCommand_KeepsItsHeading()
+        {
+            // TJ 300755_2688666: „Rozdział 5a" w stylu nowelizacji bez komendy nowelizacyjnej przed nim —
+            // rozdział samego aktu; jego tytuł w zwykłym stylu tytułu jednostki nie ginie.
+            var document = ParseStyled(
+                ("Art. 41. Obsługę administracyjnobiurową Rady zapewnia Kancelaria Prezesa Rady Ministrów.", "ARTartustawynprozporzdzenia"),
+                ("Rozdział 5a", "ZROZDZODDZOZNzmoznrozdzoddzartykuempunktem"),
+                ("Rada Dialogu z Młodym Pokoleniem", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 42. 1. Rada Dialogu z Młodym Pokoleniem jest organem opiniodawczo-doradczym.", "ARTartustawynprozporzdzenia"));
+
+            var chapter = Assert.IsType<Saga.Model.SystematizingUnits.Chapter>(document.Articles.Single(a => a.Number?.Value == "42").Parent!.Parent);
+            Assert.Equal("rozdz_5a", chapter.Id);
+            Assert.Equal("Rada Dialogu z Młodym Pokoleniem", chapter.Heading);
+            Assert.All(document.Articles.Single(a => a.Number?.Value == "41").Paragraphs, p => Assert.Null(p.Amendment));
+        }
+
+        [Fact]
+        public void BookTitleInPartOrBookStyle_IsAssigned_EvenWhenLong()
+        {
+            // KPC (TJ 302049_2704309): tytuł księgi w tym samym stylu CZĘŚĆ(KSIĘGA) co jej oznaczenie,
+            // 157 znaków — heurystyka tytułu bez stylu by go odrzuciła.
+            const string heading = "Uznanie i wykonanie niektórych orzeczeń sądów państw członkowskich Unii " +
+                "Europejskiej oraz pochodzących z tych państw ugód, dokumentów urzędowych i porozumień";
+
+            var document = ParseStyled(
+                ("KSIĘGA CZWARTA", "CZKSIGAoznaczenieiprzedmiotczcilubksigi"),
+                (heading, "CZKSIGAoznaczenieiprzedmiotczcilubksigi"),
+                ("Art. 1153[1]. Treść.", "ARTartustawynprozporzdzenia"));
+
+            Assert.Equal(heading, document.RootPart.Books[0].Heading);
+        }
+
+        [Fact]
+        public void BookDesignationRightAfterPart_IsABook_NotThePartTitle()
+        {
+            var document = ParseStyled(
+                ("CZĘŚĆ PIERWSZA", "CZKSIGAoznaczenieiprzedmiotczcilubksigi"),
+                ("KSIĘGA PIERWSZA", "CZKSIGAoznaczenieiprzedmiotczcilubksigi"),
+                ("PROCES", "CZKSIGAoznaczenieiprzedmiotczcilubksigi"),
+                ("Art. 1. Treść.", "ARTartustawynprozporzdzenia"));
+
+            Assert.Equal(string.Empty, document.RootPart.Heading);
+            Assert.False(document.RootPart.Books[0].IsImplicit);
+            Assert.Equal("PROCES", document.RootPart.Books[0].Heading);
+        }
+
+        [Theory]
+        // KPC (TJ 302049_2704309) i prawo bankowe (TJ 300754_2723313): po tytule jednostki stoi
+        // nienumerowany podtytuł w tym samym stylu — osobny nagłówek, nie ciąg dalszy tytułu.
+        [InlineData("DZIAŁ I", "TYTDZOZNoznaczenietytuulubdziau", "Właściwość sądu", "Przepis wstępny", "TYTDZPRZEDMprzedmiotregulacjitytuulubdziau")]
+        [InlineData("Rozdział 12", "ROZDZODDZOZNoznaczenierozdziauluboddziau", "Plany naprawy oraz wczesna interwencja, likwidacja i upadłość banku", "A. Plany naprawy", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau")]
+        public void SubheadingStartingWithCapital_IsNotJoinedToTheTitle(
+            string designation, string designationStyle, string title, string subheading, string headingStyle)
+        {
+            var document = ParseStyled(
+                (designation, designationStyle),
+                (title, headingStyle),
+                (subheading, headingStyle),
+                ("Art. 1. Treść.", "ARTartustawynprozporzdzenia"));
+
+            var unit = (Saga.Model.SystematizingUnits.ISystematizingUnit)ExplicitUnit(document);
+            Assert.Equal(title, unit.Heading);
+        }
+
+        private static BaseEntity ExplicitUnit(LegalDocument document)
+        {
+            BaseEntity unit = document.Articles.Single().Parent!;
+            while (((Saga.Model.SystematizingUnits.ISystematizingUnit)unit).IsImplicit)
+                unit = unit.Parent!;
+            return unit;
+        }
+
+        [Fact]
+        public void StrayHeadingStyledBlockLater_IsNotAppendedToAnEarlierTitle()
+        {
+            var document = ParseStyled(
+                ("Rozdział 1", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Przepisy ogólne", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 1. Treść.", "ARTartustawynprozporzdzenia"),
+                ("Zasady", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 2. Treść.", "ARTartustawynprozporzdzenia"));
+
+            Assert.Equal("Przepisy ogólne",
+                document.RootPart.Books[0].Titles[0].Divisions[0].Chapters[0].Heading);
+        }
+
+        [Fact]
+        public void ToleratedDesignation_LeavesAnInfoMessageOnTheUnit()
+        {
+            // Kodeks karny (TJ 318682_2849299): rozdział rzymski wbrew § 62 ust. 1 ZTP.
+            var document = ParseStyled(
+                ("Rozdział IV", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Kary", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 32. Karami są: grzywna, ograniczenie wolności, pozbawienie wolności.", "ARTartustawynprozporzdzenia"));
+
+            var chapter = ExplicitUnit(document);
+            Assert.Equal("rozdz_4", chapter.Id);
+            Assert.Contains(chapter.ValidationMessages,
+                m => m.Level == ValidationLevel.Info && m.Message.Contains("cyframi rzymskimi"));
+        }
+
+        [Theory]
+        // Wersalikowy sufiks dopuszczony tylko dla tytułu i działu — „Część A" i „Część IA" to oznaczenia
+        // części załącznika, nie jednostki aktu.
+        [InlineData("Część A")]
+        [InlineData("Część IA")]
+        [InlineData("KSIĘGA IA")]
+        public void UppercaseSuffixOnPartOrBook_IsNotAUnit(string text)
+        {
+            var result = new ParagraphClassifier().Classify(new ClassificationInput(text, null));
+
+            Assert.False(IsSystematizing(result.Kind), $"'{text}' nie powinno być jednostką, jest {result.Kind}");
+        }
+
+        private static LegalDocument ParseStyled(params (string Text, string Style)[] lines) =>
+            LegalDocumentParser.ParseBlocks(lines
+                .Select(line => new Ingest.DocumentBlock { Text = line.Text, StyleId = line.Style }).ToList());
+
+        [Fact]
+        public void PartAfterArticle_BecomesASiblingPart_ArticleNotReparented()
+        {
+            // Strażnik EnterPart: artykuł sprzed pierwszej CZĘŚCI zostaje w części niejawnej, a CZĘŚĆ I
+            // staje obok niej jako kolejna część aktu.
             var orch = new ParserOrchestrator();
             var ctx = ConnectedContext();
             Feed(orch, ctx, "Art. 1. Przed czescia.", "CZĘŚĆ I", "Art. 2. W czesci.");
 
-            var ids = ctx.Document.Articles.Select(a => a.Id).ToList();
-            Assert.Contains("art_1", ids);
-            Assert.DoesNotContain("cz_I__art_1", ids);
+            var placed = ctx.Document.Articles.Select(a => $"[{UnitPath(a)}] {a.Id}").ToList();
+            Assert.Equal(new[] { "[] art_1", "[czesc_1] art_2" }, placed);
             Assert.True(ctx.Document.RootPart.IsImplicit);
+            Assert.Equal(2, ctx.Document.Parts.Count);
         }
 
         [Fact]

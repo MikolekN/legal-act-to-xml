@@ -35,5 +35,10 @@ namespace Saga.Model
         /// Indeks górny - część alfanumeryczna (np. "1" w "5a¹").
         /// </summary>
         public string Superscript { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Oznaczenie z indeksem górnym w notacji § 89 ust. 6 ZTP („5a[1]") — postać w eId i w &lt;nr&gt;.
+        /// </summary>
+        public string Designation => string.IsNullOrEmpty(Superscript) ? Value : $"{Value}[{Superscript}]";
     }
 }

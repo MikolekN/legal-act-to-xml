@@ -30,7 +30,8 @@ namespace Saga.Core.Services.Converters
 
             AddJournalElement(root, "sourceJournal", document.SourceJournal);
 
-            root.Add(SerializePart(document.RootPart));
+            foreach (var part in document.Parts)
+                root.Add(SerializePart(part));
 
             return ToCanonicalString(root);
         }
@@ -243,6 +244,17 @@ namespace Saga.Core.Services.Converters
             if (!string.IsNullOrEmpty(content.PlainText))
                 el.Add(new XElement("plainText", content.PlainText));
 
+            foreach (var unit in content.SystematizingUnits)
+                el.Add(unit switch
+                {
+                    Part part => SerializePart(part),
+                    Book book => SerializeBook(book),
+                    Title title => SerializeTitle(title),
+                    Division division => SerializeDivision(division),
+                    Chapter chapter => SerializeChapter(chapter),
+                    Subchapter subchapter => SerializeSubchapter(subchapter),
+                    _ => throw new InvalidOperationException($"Nie jest jednostką systematyzacyjną: {unit.GetType().Name}"),
+                });
             foreach (var article in content.Articles)
                 el.Add(SerializeArticle(article));
             foreach (var paragraph in content.Paragraphs)

@@ -2,6 +2,7 @@ using System.Xml.Linq;
 using Saga.Core.Services.Parsing;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
+using Saga.Model.SystematizingUnits;
 using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters
@@ -260,6 +261,8 @@ namespace Saga.Core.Services.Converters
                 Point point => PointXmlConverter.ToXml(point),
                 Letter letter => LetterXmlConverter.ToXml(letter),
                 Tiret tiret => TiretXmlConverter.ToXml(tiret),
+                // Cytat strukturalny przyjmuje te same jednostki co akt, więc i ich nazwy z poziomu aktu.
+                ISystematizingUnit => SystematizingUnitXmlConverter.ToXml(entity, actLevel: true),
                 _ => throw new InvalidOperationException($"Unsupported entity type: {entity.GetType().Name}")
             };
     }

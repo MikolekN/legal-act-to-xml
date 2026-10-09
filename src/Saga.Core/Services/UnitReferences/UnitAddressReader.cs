@@ -45,7 +45,7 @@ namespace Saga.Core.Services.UnitReferences
             var join = EnumerationJoin.None;
             var commandVerb = false;
 
-            foreach (var token in UnitReferenceTokenizer.Tokenize(WithoutQuotedText(text)))
+            foreach (var token in UnitReferenceTokenizer.Tokenize(WithoutQuotedText(text), systematizing: true))
             {
                 switch (token.Kind)
                 {

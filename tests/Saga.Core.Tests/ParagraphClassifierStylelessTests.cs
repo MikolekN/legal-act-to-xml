@@ -99,13 +99,12 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void Classify_NamedPartWithoutNumber_StaysUnknown()
+        public void Classify_NamedPartWithoutNumber_IsAPart_OnlyFromTheClosedList()
         {
-            // Ograniczenie: część nazwana bez numeru („CZĘŚĆ OGÓLNA") nie jest rozpoznawana jako jednostka —
-            // brak numeru rzymskiego/słownego. (Wielo-częściowe akry i części nazwane — poza zakresem 6b.)
-            var result = Classify("CZĘŚĆ OGÓLNA");
-
-            Assert.Equal(ParagraphKind.Unknown, result.Kind);
+            // Części nazwane bez numeru (KK, KW, KKW: „CZĘŚĆ OGÓLNA/SZCZEGÓLNA/WOJSKOWA") są jednostkami
+            // aktu — zamknięta lista z korpusu. Inny wyraz („CZĘŚĆ BUDŻETOWA") zostaje prozą.
+            Assert.Equal(ParagraphKind.PartUnit, Classify("CZĘŚĆ OGÓLNA").Kind);
+            Assert.Equal(ParagraphKind.Unknown, Classify("CZĘŚĆ BUDŻETOWA").Kind);
         }
 
         [Theory]

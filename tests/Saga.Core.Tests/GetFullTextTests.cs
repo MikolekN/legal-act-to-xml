@@ -89,6 +89,23 @@ namespace Saga.Core.Tests
             Assert.Equal("przypis[1)] kontynuacja.", result);
         }
 
+        [Theory]
+        // Cztery style indeksu górnego szablonu; oznaczenie jednostki jest pogrubione, więc jego indeks
+        // idzie stylem IGP (KPC, TJ 302049_2704309: „Art. 216¹." dawało „Art. 2161.").
+        [InlineData("IGindeksgrny")]
+        [InlineData("IGPindeksgrnyipogrubienie")]
+        [InlineData("IGKindeksgrnyikursywa")]
+        [InlineData("IGPKindeksgrnyipogrubieniekursywa")]
+        public void GetFullText_TemplateSuperscriptStyles_WrappedInBrackets(string style)
+        {
+            var paragraph = new Paragraph(
+                new Run(new Text("Art. 216")),
+                new Run(new RunProperties(new RunStyle { Val = style }), new Text("1")),
+                new Run(new Text(". Treść.")));
+
+            Assert.Equal("Art. 216[1]. Treść.", paragraph.GetFullText());
+        }
+
         [Fact]
         public void GetFullText_TabChar_EmitsTab()
         {

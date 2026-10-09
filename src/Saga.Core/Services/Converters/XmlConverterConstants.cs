@@ -197,6 +197,8 @@ namespace Saga.Core.Services.Converters
             {
                 internal const string Element = "tytul";
                 internal const string ElementImplicit = "tytul-n";
+                internal const string ActLevelElement = "tytul-jednostka";
+                internal const string ActLevelElementImplicit = "tytul-n-jednostka";
                 internal const string Header = "naglowek-tytulu";
             }
             internal static class Division
@@ -322,6 +324,8 @@ namespace Saga.Core.Services.Converters
             internal const string TextSection = "p";
             internal const string eId = "eId";
             internal const string GUID = "GUID";
+            internal const string MissingEId = "brak-eid";
+            internal const string UnmarkedUnit = "jednostka-nieoznaczona";
 
             internal const string EntryIntoForce = "wejscie-w-zycie";
             internal const string UnitStatus = "status-jednostki";

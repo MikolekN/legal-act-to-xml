@@ -44,7 +44,7 @@ namespace Saga.Core.Services.Parsing
             }
 
             // 2. Rozpoznany styl ustawy matki
-            if (classification.StyleType != null)
+            if (classification.HasParentLawStyle)
             {
                 // 2a. Aktywny trigger + akapit BEZ własnego zwrotu nowelizacyjnego
                 //     → akapit jest treścią nowelizacji (np. "1) nowe brzmienie pkt 1" z stylem PKT).
@@ -102,7 +102,7 @@ namespace Saga.Core.Services.Parsing
             if (!context.InsideAmendment)
                 return false;
 
-            if (classification.IsAmendmentContent || classification.StyleType != null)
+            if (classification.IsAmendmentContent || classification.HasParentLawStyle)
                 return false;
 
             if (classification.Kind == ParagraphKind.Unknown)

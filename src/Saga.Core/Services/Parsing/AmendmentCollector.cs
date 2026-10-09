@@ -99,8 +99,10 @@ namespace Saga.Core.Services.Parsing
             // Bilans cudzysłowów — tylko dla zbierania bezstylowego. Rozbraja wyłącznie styl ZNACZĄCY
             // (nowelizacyjny Z/* lub rozpoznany styl ustawy matki) — domyślny styl edytora
             // („Normalny"/„Standard") nie niesie semantyki i nie może wyłączać granic cudzysłowowych.
+            // Styl jednostki systematyzacyjnej w cytowanej treści (tytuł, komórka tabeli) nie jest stylem ustawy matki.
             var hasMeaningfulStyle = styleInfo != null
-                || Services.Classify.ParagraphClassifier.GetStyleType(styleId) != null;
+                || (Services.Classify.ParagraphClassifier.GetStyleType(styleId) is { } styleType
+                    && !Services.Classify.ParagraphClassifier.IsSystematizingStyle(styleType));
             QuoteTracker.Observe(text, hasStyle: hasMeaningfulStyle);
 
             Log.Debug(

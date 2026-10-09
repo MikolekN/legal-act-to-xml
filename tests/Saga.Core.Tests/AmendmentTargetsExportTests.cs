@@ -52,8 +52,9 @@ namespace Saga.Core.Tests
 
             Assert.Equal(new[] { "art_99__ust_2", "art_99__ust_3" }, commands.Select(c => Attr(c, "element-eId")));
             Assert.All(commands, c => Assert.Null(Attr(c, "element-do-eId")));
-            Assert.Equal(new[] { "ust_2" }, UnitIds(commands[0]));
-            Assert.Equal(new[] { "ust_3" }, UnitIds(commands[1]));
+            // eId jednostki cytatu zaczyna się od adresu celu w akcie zmienianym.
+            Assert.Equal(new[] { "art_99__ust_2" }, UnitIds(commands[0]));
+            Assert.Equal(new[] { "art_99__ust_3" }, UnitIds(commands[1]));
             Assert.NotEqual(Attr(commands[0], "nowGUID"), Attr(commands[1], "nowGUID"));
 
             // Cytat nadal jeden: pierwsza komenda go otwiera, ostatnia zamyka, a średnik stoi raz — po nim.
@@ -76,7 +77,7 @@ namespace Saga.Core.Tests
 
             Assert.Equal("art_23__ust_8", Attr(citation, "element-eId"));
             Assert.Equal("art_23__ust_10", Attr(citation, "element-do-eId"));
-            Assert.Equal(new[] { "ust_8", "ust_9", "ust_10" }, UnitIds(citation));
+            Assert.Equal(new[] { "art_23__ust_8", "art_23__ust_9", "art_23__ust_10" }, UnitIds(citation));
             Assert.Equal("3", Attr(citation, "cudzyslowy"));
         }
 

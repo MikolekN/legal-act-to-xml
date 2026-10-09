@@ -1,3 +1,4 @@
+using Saga.Core.Services.Classify;
 using Saga.Model;
 using Saga.Model.SystematizingUnits;
 using DtoArticle = Saga.Model.EditorialUnits.Article;
@@ -43,6 +44,15 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Jednostka systematyzacyjna oczekująca na tytuł (drugi wiersz wzorca dwuwierszowego, § 60).</summary>
         public ISystematizingUnit? PendingHeadingUnit { get; set; }
+
+        /// <summary>Jednostka, której tytuł ze stylu właśnie przypisano — kolejny blok w stylu tytułu go dokleja.</summary>
+        public ISystematizingUnit? HeadingContinuationUnit { get; set; }
+
+        /// <summary>Za nagłówkiem załącznika aktu — dalsze bloki nie należą do struktury aktu.</summary>
+        public bool InAnnex { get; set; }
+
+        /// <summary>Liczba jednostek nazwanych bez numeru danego rodzaju — źródło tymczasowego eId (TMP1, TMP2…).</summary>
+        public Dictionary<ParagraphKind, int> NamedUnitCounts { get; } = new();
 
         public DtoArticle? CurrentArticle { get; set; }
         public DtoParagraph? CurrentParagraph { get; set; }

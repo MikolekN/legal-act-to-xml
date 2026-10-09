@@ -91,11 +91,17 @@ namespace Saga.Core
         /// <summary>
         /// Rdzeń parsowania: buduje model z bloków reprezentacji pośredniej niezależnie od formatu
         /// źródłowego (DOCX/TXT/PDF), bez klasyfikacji dokumentu i koperty wyniku.
+        ///
+        /// Opcjonalny obserwator dostaje każdy blok razem z kontekstem PO jego przetworzeniu —
+        /// wyłącznie dla narzędzi diagnostycznych (CorpusValidator), które muszą przypisać wynik
+        /// budowy konkretnemu blokowi. Nie wpływa na wynik; dzięki niemu narzędzie mierzy ten sam
+        /// potok, a nie jego kopię.
         /// </summary>
         internal static LegalDocument ParseBlocks(
             IReadOnlyList<DocumentBlock> blocks,
             ParseOptions? options = null,
-            DocumentClassificationResult? classification = null)
+            DocumentClassificationResult? classification = null,
+            Action<DocumentBlock, ParsingContext>? observeBlock = null)
         {
             var document = new LegalDocument { Classification = classification };
 
@@ -114,6 +120,7 @@ namespace Saga.Core
                     continue;
 
                 orchestrator.ProcessBlock(block, context);
+                observeBlock?.Invoke(block, context);
             }
 
             // Finalizacja — wypróżnienie bufora nowelizacji jeśli dokument

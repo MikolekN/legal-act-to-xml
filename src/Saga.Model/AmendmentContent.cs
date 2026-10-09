@@ -18,6 +18,12 @@ namespace Saga.Model
         public AmendmentObjectType ObjectType { get; set; }
 
         /// <summary>
+        /// Jednostki systematyzacyjne najwyższego poziomu w treści nowelizacji („dodaje się rozdział 9a
+        /// w brzmieniu:") — wraz z artykułami w ich wnętrzu.
+        /// </summary>
+        public List<BaseEntity> SystematizingUnits { get; set; } = new();
+
+        /// <summary>
         /// Artykuły będące treścią nowelizacji (w przypadku dodania/zmiany pełnych artykułów).
         /// </summary>
         public List<Article> Articles { get; set; } = new();
@@ -59,6 +65,7 @@ namespace Saga.Model
                 return PlainText;
 
             var counts = new List<string>();
+            if (SystematizingUnits.Any()) counts.Add($"{SystematizingUnits.Count} jedn. syst.");
             if (Articles.Any()) counts.Add($"{Articles.Count} art.");
             if (Paragraphs.Any()) counts.Add($"{Paragraphs.Count} ust.");
             if (Points.Any()) counts.Add($"{Points.Count} pkt.");

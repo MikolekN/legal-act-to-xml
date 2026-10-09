@@ -47,7 +47,7 @@ namespace Saga.Model
             book.Titles.Add(title);
             part.Books.Add(book);
 
-            RootPart = part;
+            Parts.Add(part);
         }
         /// <summary>
         /// Unikalny identyfikator dokumentu.
@@ -106,11 +106,13 @@ namespace Saga.Model
         public DocumentClassificationResult? Classification { get; set; }
 
         /// <summary>
-        /// Pierwsza (najwyższa) jednostka systematyzująca w akcie (Część).
-        /// Zawsze zawiera minimalną pełną hierarchię od Części do Oddziału.
-        /// Parser oznacza jednostki obecne w tekście jako IsImplicit = false.
+        /// Części aktu w kolejności (kodeksy mają ich kilka). Pierwsza zawsze istnieje i zawiera minimalną
+        /// pełną hierarchię od Części do Oddziału; jednostki obecne w tekście mają IsImplicit = false.
         /// </summary>
-        public Part RootPart { get; set; } = new();
+        public List<Part> Parts { get; } = new();
+
+        /// <summary>Pierwsza część — początek drzewa (część niejawna, gdy akt nie ma części).</summary>
+        public Part RootPart => Parts[0];
 
         /// <summary>
         /// Skrót do wszystkich artykułów w dokumencie (niezależnie od hierarchii).
@@ -120,10 +122,9 @@ namespace Saga.Model
         {
             get
             {
-                foreach (var article in EnumerateArticlesFromUnit(RootPart))
-                {
-                    yield return article;
-                }
+                foreach (var part in Parts)
+                    foreach (var article in EnumerateArticlesFromUnit(part))
+                        yield return article;
             }
         }
 

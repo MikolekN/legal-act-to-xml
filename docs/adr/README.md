@@ -35,5 +35,10 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0014](0014-skroty-jednostek-w-eid.md) | Skróty jednostek w eId (levelType) wyznacza jedna zamknięta tabela — także w adresach wskazywanych | Accepted | 2026-09-23 |
 | [0015](0015-jedno-zrodlo-powolan-jednostek.md) | Powołania jednostek rozbiera jedno źródło (słownik, ścieżka, „§”) — wejście w życie i cele nowelizacji; samodzielny „§” rozstrzyga rodzaj aktu | Accepted | 2026-09-23 |
 | [0016](0016-wyliczenie-celow-to-osobne-komendy.md) | Wyliczenie celów nowelizacji to osobne komendy; `element-do-eId` znaczy wyłącznie koniec przedziału | Accepted | 2026-09-23 |
+| [0017](0017-eid-jednostki-redakcyjnej-bez-sciezki-systematyzacyjnej.md) | eId jednostki redakcyjnej bez ścieżki jednostek systematyzacyjnych (`art_5`, nie `rozdz_1__art_5`); jednostka systematyzacyjna niesie ścieżkę jawnych przodków | Accepted | 2026-09-25 |
+| [0018](0018-postac-oznaczenia-w-eid.md) | Oznaczenie w eId: liczba arabska (także z rzymskiej i słownej), sufiks jak w tekście, bez indeksu górnego | Accepted — w części zastąpiony przez 0019 | 2026-09-25 |
+| [0019](0019-indeks-gorny-w-eid.md) | Indeks górny zostaje w eId w notacji „[n]" (`art_53[1]`) — zgodnie ze schematem i przykładami jego autorów | Accepted | 2026-10-09 |
+| [0020](0020-eksport-jednostek-systematyzacyjnych.md) | Jednostki systematyzacyjne w eksporcie zagnieżdżone wg schemaPL; niejawny łańcuch nad pierwszą jawną jednostką znika, pod nią niejawne poziomy to `-n` | Accepted | 2026-10-09 |
+| [0021](0021-eid-jednostki-cytowanej-od-adresu-celu.md) | eId jednostki cytowanej w nowelizacji zaczyna się od adresu celu w akcie zmienianym (`art_68__ust_1__pkt_5`, nie `pkt_5`) | Accepted | 2026-10-09 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

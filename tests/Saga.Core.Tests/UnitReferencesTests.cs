@@ -170,6 +170,37 @@ namespace Saga.Core.Tests
             Assert.Empty(Read(text, new StructuralReference { Article = "5" }));
         }
 
+        [Theory]
+        // Korpus ustaw zmieniających (akn4pl DU/2026/252, DU/2026/26 i in.).
+        [InlineData("po rozdziale 9 dodaje się rozdział 9a w brzmieniu:", "rozdz_9")]
+        [InlineData("po rozdziale 10 dodaje się rozdziały 10a–10c w brzmieniu:", "rozdz_10")]
+        [InlineData("w dziale II po rozdziale 9 dodaje się rozdział 9a w brzmieniu:", "dzial_2__rozdz_9")]
+        [InlineData("po dziale VI dodaje się dział VIa w brzmieniu:", "dzial_6")]
+        [InlineData("uchyla się rozdziały 4 i 5;", "rozdz_4", "rozdz_5")]
+        [InlineData("w dziale V tytuł rozdziału 4 otrzymuje brzmienie:", "dzial_5__rozdz_4")]
+        [InlineData("w tytule I w dziale I w tytule rozdziału 3 po wyrazie „sąd” dodaje się wyrazy", "tyt_1__dzial_1__rozdz_3")]
+        // Jednostka redakcyjna w rozdziale — eId bez ścieżki systematyzacyjnej (ADR-0017).
+        [InlineData("w rozdziale 3 po art. 5 dodaje się art. 5a w brzmieniu:", "art_5")]
+        // „tytuł" jako nagłówek i odmiany spoza słownika („działalności") nie są jednostkami.
+        [InlineData("po tytule ustawy dodaje się oznaczenie i tytuł rozdziału w brzmieniu:")]
+        [InlineData("w art. 5 w ust. 2 wyrazy dotyczące działalności i części zastępuje się", "art_5__ust_2")]
+        public void Reader_SystematizingUnits_InAmendmentCommands(string text, params string[] expected)
+        {
+            Assert.Equal(expected, Read(text));
+        }
+
+        [Fact]
+        public void Reader_SystematizingContext_FromTheParentCommand_IsKept()
+        {
+            // „W dziale II wprowadza się następujące zmiany: 1) po rozdziale 9 …"
+            var context = Read("w dziale II wprowadza się następujące zmiany:").Single();
+            Assert.Equal("dzial_2", context);
+
+            var targets = UnitAddressReader.Read("po rozdziale 9 dodaje się rozdział 9a w brzmieniu:",
+                new StructuralReference { Systematizing = context });
+            Assert.Equal("dzial_2__rozdz_9", targets.Single().Start.ToString());
+        }
+
         [Fact]
         public void Reader_QuotedActTitle_DoesNotHideTheAddressAfterIt()
         {
@@ -245,8 +276,11 @@ namespace Saga.Core.Tests
         [Fact]
         public void Reader_KeepsSuperscriptDesignations()
         {
-            // Korpus: indeks górny należy do oznaczenia (art. 328¹¹).
-            Assert.Equal(new[] { "art_328[11]__par_3" }, Read("w art. 328[11 ]dodaje się § 3 w brzmieniu:"));
+            // Korpus: indeks górny należy do oznaczenia (art. 328¹¹) — w odczycie i w eId (ADR-0019).
+            var address = UnitAddressReader.Read("w art. 328[11 ]dodaje się § 3 w brzmieniu:", null).Single();
+
+            Assert.Equal("328[11]", address.Start.Article);
+            Assert.Equal("art_328[11]__par_3", address.Start.ToString());
         }
 
         // ============================================================

@@ -1,17 +1,20 @@
 using Saga.Model;
+using Saga.Model.EditorialUnits;
+using Saga.Model.SystematizingUnits;
 
 namespace Saga.Core.Services.Parsing
 {
     /// <summary>Przypisuje jednostki treści nowelizacji jej celom.</summary>
     internal static class AmendmentTargetPairing
     {
-        /// <summary>Jednostki redakcyjne najwyższego poziomu w treści nowelizacji, w kolejności eksportu.</summary>
+        /// <summary>Jednostki najwyższego poziomu w treści nowelizacji, w kolejności eksportu.</summary>
         internal static IReadOnlyList<BaseEntity> ContentUnits(AmendmentContent? content)
         {
             if (content is null)
                 return [];
 
             return Enumerable.Empty<BaseEntity>()
+                .Concat(content.SystematizingUnits ?? [])
                 .Concat(content.Articles ?? [])
                 .Concat(content.Paragraphs ?? [])
                 .Concat(content.Points ?? [])
@@ -59,6 +62,57 @@ namespace Saga.Core.Services.Parsing
 
             return next == units.Count ? paired : null;
         }
+
+        /// <summary>
+        /// Zakotwicza jednostki cytatu w akcie zmienianym: punkt dodawany „w art. 68 ust. 1" ma eId
+        /// art_68__ust_1__pkt_5 — adres celu powyżej poziomu jednostki i jej własna ścieżka. Jednostki dzieli
+        /// między cele tak jak eksport; bez rozstrzygnięcia — wszystkie pod pierwszym celem.
+        /// </summary>
+        internal static void AnchorContentUnits(Amendment amendment)
+        {
+            var units = ContentUnits(amendment.Content);
+            var targets = amendment.Targets ?? [];
+            if (units.Count == 0 || targets.Count == 0)
+                return;
+
+            var paired = Pair(targets, units) ?? [units];
+            for (var i = 0; i < paired.Count; i++)
+                foreach (var unit in paired[i])
+                    unit.AddressAnchor = AnchorFor(targets[i].Structure, unit);
+        }
+
+        private static string AnchorFor(StructuralReference target, BaseEntity unit)
+        {
+            // Rozdział dodawany „w dziale II" → dzial_2__rozdz_9a: ścieżka celu powyżej rangi jednostki.
+            if (unit is ISystematizingUnit)
+                return EIdSegment.Join((target.Systematizing ?? string.Empty)
+                    .Split(EIdSegment.Separator, StringSplitOptions.RemoveEmptyEntries)
+                    .Where(segment => Rank(segment.Split('_')[0]) < Rank(unit.EIdPrefix)));
+
+            var level = unit switch
+            {
+                Paragraph => 1,
+                Point => 2,
+                Letter => 3,
+                Tiret => 4,
+                _ => 0,
+            };
+            if (level == 0)
+                return string.Empty;
+
+            return new StructuralReference
+            {
+                Article = target.Article,
+                Paragraph = level > 1 ? target.Paragraph : null,
+                ParagraphIsCodeParagraph = level > 1 && target.ParagraphIsCodeParagraph,
+                Point = level > 2 ? target.Point : null,
+                Letter = level > 3 ? target.Letter : null,
+            }.ToString();
+        }
+
+        private static int Rank(string prefix) => Array.IndexOf(SystematizingPrefixes, prefix);
+
+        private static readonly string[] SystematizingPrefixes = ["czesc", "ksi", "tyt", "dzial", "rozdz", "oddz"];
 
         private static string? NumberOf(BaseEntity unit) => unit.Number?.Value;
 

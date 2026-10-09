@@ -21,7 +21,7 @@ namespace Saga.Core.Services.Converters
 
             UnitLifecycleXml.Apply(letterElement, letter);
 
-            letterElement.Add(Element(XmlConverterConstants.Contents.Num, letter.Number == null ? "UNKNOWN" : letter.Number.Value));
+            letterElement.Add(Element(XmlConverterConstants.Contents.Num, letter.Number == null ? "UNKNOWN" : letter.Number.Designation));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(letter.TextSegments, previousSentenceContext, textSectionElement);

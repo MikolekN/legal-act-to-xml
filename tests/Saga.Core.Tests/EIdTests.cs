@@ -1,3 +1,5 @@
+using Saga.Core.Services;
+using Saga.Core.Services.Parsing;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
 using Saga.Model.SystematizingUnits;
@@ -70,6 +72,45 @@ namespace Saga.Core.Tests
             var doubleTiret = new Tiret { Parent = tiret, Number = new EntityNumber { Value = "2" } };
 
             Assert.Equal(doubleTiret.Id, reference.ToString());
+        }
+
+        [Fact]
+        public void AddressReadFromCitation_IsTheEIdOfTheCitedUnit_AtEveryLevel()
+        {
+            // Oba adresy składa EIdSegment: eId jednostki (z jej numeru) i adres odczytany z powołania
+            // (cel nowelizacji). Dla tego samego oznaczenia muszą dać ten sam napis na każdym poziomie —
+            // także z literą w oznaczeniu („5a", „3b", „za") i dla paragrafu kodeksu.
+            static EntityNumber N(string value) => new() { Value = value };
+
+            var article = new Article { Number = N("5a") };
+            var paragraph = new Paragraph { Parent = article, Article = article, Number = N("2") };
+            var codeParagraph = new Paragraph { Parent = article, Article = article, Number = N("2") };
+            ParsingFactories.ApplyCodeParagraphRole(codeParagraph, "§ 2. Treść.");
+            var point = new Point { Parent = paragraph, Number = N("3b") };
+            var letter = new Letter { Parent = point, Number = N("za") };
+            var tiret = new Tiret { Parent = letter, Number = N("2") };
+            var doubleTiret = new Tiret { Parent = tiret, Number = N("1") };
+            var superscripted = new Article { Number = ParsingFactories.ParseArticleNumber("Art. 216[1]. Treść.") };
+
+            var cases = new (BaseEntity Unit, string Citation)[]
+            {
+                (article, "w art. 5a"),
+                (superscripted, "w art. 216[1]"),
+                (paragraph, "w art. 5a ust. 2"),
+                (codeParagraph, "w art. 5a § 2"),
+                (point, "w art. 5a ust. 2 pkt 3b"),
+                (letter, "w art. 5a ust. 2 pkt 3b lit. za"),
+                (tiret, "w art. 5a ust. 2 pkt 3b lit. za tiret drugie"),
+                (doubleTiret, "w art. 5a ust. 2 pkt 3b lit. za tiret drugie podwójne tiret pierwsze"),
+            };
+
+            var service = new LegalReferenceService();
+            foreach (var (unit, citation) in cases)
+            {
+                var address = service.ReadAmendmentTargets(null, $"{citation} otrzymuje brzmienie:").Single();
+                Assert.True(unit.Id == address.Structure.ToString(),
+                    $"„{citation}\": eId jednostki {unit.Id}, adres z powołania {address.Structure}");
+            }
         }
     }
 }

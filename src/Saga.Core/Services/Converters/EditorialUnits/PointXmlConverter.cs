@@ -21,7 +21,7 @@ namespace Saga.Core.Services.Converters
 
             UnitLifecycleXml.Apply(pointElement, point);
 
-            pointElement.Add(Element(XmlConverterConstants.Contents.Num, point.Number?.Value ?? "UNKNOWN"));
+            pointElement.Add(Element(XmlConverterConstants.Contents.Num, point.Number?.Designation ?? "UNKNOWN"));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(point.TextSegments, previousSentenceContext, textSectionElement);

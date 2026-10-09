@@ -88,6 +88,7 @@ namespace Saga.Core.Services.Parsing
             // 3a. Uzupełnij cel z komendy tekstowej — źródło o niższym priorytecie niż mapa stylów;
             //     dokłada tylko to, czego adres celu nie wskazał (tiret), i ostrzega o fragmencie zdania.
             EnrichTargetsFromCommand(amendment, collector);
+            AmendmentTargetPairing.AnchorContentUnits(amendment);
 
             // 4. Połącz z JournalInfo (TargetLegalAct)
             var journal = ResolveTargetJournal(collector.Owner, context);
@@ -401,7 +402,8 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         private static bool IsContentEmpty(AmendmentContent content)
         {
-            return content.Articles.Count == 0
+            return content.SystematizingUnits.Count == 0
+                && content.Articles.Count == 0
                 && content.Paragraphs.Count == 0
                 && content.Points.Count == 0
                 && content.Letters.Count == 0

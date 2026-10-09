@@ -1,9 +1,11 @@
+using System.Text.RegularExpressions;
 using Saga.Core.Helpers;
 using Saga.Core.Ingest;
 using Saga.Core.Services.Classify;
 using Saga.Core.Services.Parsing.Builders;
 using Saga.Core.Services.UnitReferences;
 using Saga.Model;
+using Saga.Model.SystematizingUnits;
 using Serilog;
 using DtoParagraph = Saga.Model.EditorialUnits.Paragraph;
 
@@ -149,14 +151,29 @@ namespace Saga.Core.Services.Parsing
         public bool Process(ParsingContext context, ClassificationResult classification, string text,
             string? sourceStyleId = null, BlockLayoutInfo? layout = null)
         {
-            // Tytuł jednostki systematyzacyjnej (drugi wiersz wzorca dwuwierszowego, § 60):
-            // pierwszy akapit po nagłówku jednostki, jeśli sam nie jest jednostką, opisuje ją.
+            // Tytuł złamany na kilka bloków w stylu tytułu — dalszy ciąg dokleja się do przypisanego.
+            // Tytuł zaczyna się wielką literą (§ 62 ust. 2 ZTP), więc blok od wielkiej litery to osobny
+            // nagłówek (np. nienumerowany „Przepis wstępny"), nie ciąg dalszy.
+            if (classification.Kind == ParagraphKind.UnitHeading && context.HeadingContinuationUnit is { } titled
+                && text.TrimStart() is [var first, ..] && char.IsLower(first))
+            {
+                titled.Heading = $"{titled.Heading} {text.Trim()}";
+                return true;
+            }
+            context.HeadingContinuationUnit = null;
+
+            // Tytuł jednostki systematyzacyjnej (drugi wiersz wzorca dwuwierszowego, § 62 ust. 2):
+            // pierwszy akapit po oznaczeniu, jeśli sam nie jest jednostką. Ze stylu tytułu — bez
+            // heurystyki; bez stylu — gdy wygląda na tytuł.
             if (context.PendingHeadingUnit is { } pendingUnit)
             {
                 context.PendingHeadingUnit = null;
-                if (classification.Kind == ParagraphKind.Unknown && IsHeadingCandidate(text))
+                if (IsStyledHeading(classification, pendingUnit, text)
+                    || (IsUnknownOrHeading(classification.Kind) && (IsHeadingCandidate(text) || RepealedUnitMarker.IsMatch(text))))
                 {
                     pendingUnit.Heading = text.Trim();
+                    if (classification.Kind == ParagraphKind.UnitHeading)
+                        context.HeadingContinuationUnit = pendingUnit;
                     return true;
                 }
                 // brak tytułu — kontynuuj normalną obsługę bieżącego akapitu
@@ -193,8 +210,9 @@ namespace Saga.Core.Services.Parsing
                 return true;
             }
 
-            // Nierozpoznany — inference-first, potem diagnostyka
-            if (classification.Kind == ParagraphKind.Unknown)
+            // Nierozpoznany — inference-first, potem diagnostyka. Tytuł jednostki bez oczekującej
+            // jednostki idzie tą samą drogą.
+            if (IsUnknownOrHeading(classification.Kind))
             {
                 HandleUnknown(context, text, sourceStyleId, layout);
                 return true; // zawsze "skonsumowany"
@@ -419,7 +437,32 @@ namespace Saga.Core.Services.Parsing
         // Jednostki systematyzacyjne (§ 60-62 ZTP)
         // ============================================================
 
-        private static bool IsSystematizing(ParagraphKind kind) => kind is
+        private static bool IsUnknownOrHeading(ParagraphKind kind) =>
+            kind is ParagraphKind.Unknown or ParagraphKind.UnitHeading;
+
+        /// <summary>Tytuł bez stylu dłuższy niż 99% tytułów w korpusie tekstów jednolitych (p99 = 183 znaki).</summary>
+        private const int MaxUnstyledHeadingLength = 200;
+
+        /// <summary>„(uchylony)" w miejscu tytułu jednostki uchylonej w tekście jednolitym (§ 106 ZTP).</summary>
+        private static readonly Regex RepealedUnitMarker = new(
+            @"^\(\s*(?:uchylon[yae]|pominięt[yae])\s*\)(?:\[[^\]]*\])?\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Tytuł ze stylu szablonu: styl tytułu jednostki albo — dla części i księgi — ten sam styl
+        /// CZĘŚĆ(KSIĘGA), którym zapisano oznaczenie, bez oznaczenia w treści.
+        /// </summary>
+        private static bool IsStyledHeading(ClassificationResult classification, ISystematizingUnit pendingUnit, string text) =>
+            classification.Kind == ParagraphKind.UnitHeading
+            || (classification.Kind == ParagraphKind.Unknown
+                && classification.StyleType == ParagraphClassifier.PartOrBookStyle
+                && pendingUnit is Part or Book)
+            // Część nazwana zaraz po oznaczeniu niższej jednostki to jej tytuł: „KSIĘGA PIERWSZA" /
+            // „CZĘŚĆ OGÓLNA" (KC), „DZIAŁ I" / „Część ogólna" (KKS).
+            || (classification.Kind == ParagraphKind.PartUnit && pendingUnit is not Part
+                && ParagraphClassifier.ParseSystematizingNumber(ParagraphKind.PartUnit, text)?.Value
+                    == ParagraphClassifier.NamedUnitValue);
+
+        internal static bool IsSystematizing(ParagraphKind kind) => kind is
             ParagraphKind.PartUnit or ParagraphKind.BookUnit or ParagraphKind.TitleUnit or
             ParagraphKind.DivisionUnit or ParagraphKind.ChapterUnit or ParagraphKind.SubchapterUnit;
 
@@ -435,8 +478,27 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
+            if (number.Value == ParagraphClassifier.NamedUnitValue)
+            {
+                var ordinal = context.NamedUnitCounts.GetValueOrDefault(classification.Kind) + 1;
+                context.NamedUnitCounts[classification.Kind] = ordinal;
+                number.Value = $"{ParagraphClassifier.NamedUnitValue}{ordinal}";
+            }
+
             _systematizingUnitBuilder.Enter(context, classification.Kind, number);
             Log.Debug("Wejście w jednostkę systematyzacyjną {Kind} {Number}", classification.Kind, number.Value);
+
+            if (context.PendingHeadingUnit is BaseEntity named
+                && number.Value.StartsWith(ParagraphClassifier.NamedUnitValue, StringComparison.Ordinal))
+                ValidationReporter.AddValidationMessage(named, ValidationLevel.Warning,
+                    $"Jednostka nazwana bez numeru („{number.RawValue}”) — eId tymczasowy {named.Id}.");
+
+            if (context.PendingHeadingUnit is BaseEntity entered
+                && ParagraphClassifier.ToleratedDesignationReason(classification.Kind, text, number) is { } reason)
+            {
+                ValidationReporter.AddValidationMessage(entered, ValidationLevel.Info, $"Odczyt tolerancyjny: {reason}");
+                Log.Information("Odczyt tolerancyjny oznaczenia „{Text}\": {Reason}", text, reason);
+            }
         }
 
         /// <summary>
@@ -447,7 +509,7 @@ namespace Saga.Core.Services.Parsing
         private static bool IsHeadingCandidate(string text)
         {
             var t = text.Trim();
-            if (t.Length == 0 || t.Length > 120)
+            if (t.Length == 0 || t.Length > MaxUnstyledHeadingLength)
                 return false;
             if (!char.IsLetter(t[0]) || !char.IsUpper(t[0]))
                 return false;

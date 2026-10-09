@@ -1,5 +1,7 @@
 using Saga.Core.Helpers;
+using Saga.Core.Services.Classify;
 using Saga.Model;
+using Saga.Model.SystematizingUnits;
 
 namespace Saga.Core.Services.UnitReferences
 {
@@ -40,6 +42,7 @@ namespace Saga.Core.Services.UnitReferences
     internal sealed class UnitPathCursor
     {
         private readonly List<string> _tiretPath = new();
+        private readonly List<(UnitLevel Level, string Segment)> _systematizingPath = new();
         private UnitLevel _pendingLevel = UnitLevel.None;
         private int _pendingTiretDepth = 1;
         private bool _pendingCodeParagraph;
@@ -64,6 +67,9 @@ namespace Saga.Core.Services.UnitReferences
             var cursor = new UnitPathCursor { Path = context.Clone(), SectionSignIsBasicUnit = sectionSignIsBasicUnit };
             if (context.Tiret is { } tiret)
                 cursor._tiretPath.AddRange(tiret.Split('.', StringSplitOptions.RemoveEmptyEntries));
+            if (context.Systematizing is { } systematizing)
+                foreach (var segment in systematizing.Split(EIdSegment.Separator, StringSplitOptions.RemoveEmptyEntries))
+                    cursor._systematizingPath.Add((LevelOfSegment(segment), segment));
             return cursor;
         }
 
@@ -110,6 +116,20 @@ namespace Saga.Core.Services.UnitReferences
                 if (!TryApplyTiret(designation, context.ExplicitKeyword, context.TiretDepth))
                     return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
             }
+            else if (IsSystematizing(context.Level))
+            {
+                if (SystematizingSegment(context.Level, designation) is not { } segment)
+                    return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
+
+                var level = context.Level;
+                _tiretPath.Clear();
+                _systematizingPath.RemoveAll(entry => entry.Level >= level);
+                _systematizingPath.Add((level, segment));
+                Path = new StructuralReference
+                {
+                    Systematizing = EIdSegment.Join(_systematizingPath.Select(entry => entry.Segment)),
+                };
+            }
             else if (context.Level == UnitLevel.Sentence)
             {
                 if (NormalizeOrdinal(designation) is not { } sentenceNumber)
@@ -127,6 +147,8 @@ namespace Saga.Core.Services.UnitReferences
                     return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
 
                 _tiretPath.Clear();
+                if (context.Level == UnitLevel.Article)
+                    _systematizingPath.Clear();
                 Path = context.Level switch
                 {
                     UnitLevel.Article => Path.WithArticle(designation),
@@ -142,6 +164,39 @@ namespace Saga.Core.Services.UnitReferences
             Level = context.Level;
             return new UnitStep(UnitStepStatus.Applied, previous);
         }
+
+        private static bool IsSystematizing(UnitLevel level) => level is >= UnitLevel.Part and <= UnitLevel.Subchapter;
+
+        /// <summary>Segment eId jednostki systematyzacyjnej z oznaczenia („VIa" w dziale → „dzial_6a", ADR-0018).</summary>
+        private static string? SystematizingSegment(UnitLevel level, string designation)
+        {
+            var (kind, keyword, unit) = level switch
+            {
+                UnitLevel.Part => (ParagraphKind.PartUnit, "Część", (BaseEntity)new Part()),
+                UnitLevel.Book => (ParagraphKind.BookUnit, "Księga", new Book()),
+                UnitLevel.Title => (ParagraphKind.TitleUnit, "Tytuł", new Title()),
+                UnitLevel.Division => (ParagraphKind.DivisionUnit, "Dział", new Division()),
+                UnitLevel.Chapter => (ParagraphKind.ChapterUnit, "Rozdział", new Chapter()),
+                _ => (ParagraphKind.SubchapterUnit, "Oddział", new Subchapter()),
+            };
+
+            if (ParagraphClassifier.ParseSystematizingNumber(kind, $"{keyword} {designation}") is not { } number
+                || number.Value.StartsWith(ParagraphClassifier.NamedUnitValue, StringComparison.Ordinal))
+                return null;
+
+            unit.Number = number;
+            return EIdSegment.Of(unit.EIdPrefix, number.Designation);
+        }
+
+        private static UnitLevel LevelOfSegment(string segment) => segment.Split('_')[0] switch
+        {
+            "czesc" => UnitLevel.Part,
+            "ksi" => UnitLevel.Book,
+            "tyt" => UnitLevel.Title,
+            "dzial" => UnitLevel.Division,
+            "rozdz" => UnitLevel.Chapter,
+            _ => UnitLevel.Subchapter,
+        };
 
         /// <summary>Niezależna kopia bieżącej ścieżki.</summary>
         internal StructuralReference Snapshot() => Path.Clone();

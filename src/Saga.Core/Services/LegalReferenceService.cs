@@ -21,16 +21,22 @@ namespace Saga.Core.Services
             {
                 var start = WithoutSentence(address.Start);
                 var end = address.End is { } last ? WithoutSentence(last) : null;
-                if (end is not null && end.ToString() == start.ToString())
+                if (end is not null && Identity(end) == Identity(start))
                     end = null;
 
                 var target = new StructuralAmendmentReference { Structure = start, RangeEnd = end, RawText = contentText };
-                if (seen.Add(target.ToString()))
+                if (seen.Add($"{Identity(start)}–{(end is null ? "" : Identity(end))}"))
                     targets.Add(target);
             }
 
             return targets;
         }
+
+        // Tożsamość celu po oznaczeniach z tekstu, nie po napisie eId — postać eId może się zmieniać
+        // (ADR-0018, ADR-0019), a „art. 5 i 5[1]" to zawsze dwa cele.
+        private static string Identity(StructuralReference reference) =>
+            string.Join('|', reference.Systematizing, reference.Article, reference.Paragraph, reference.ParagraphIsCodeParagraph,
+                reference.Point, reference.Letter, reference.Tiret);
 
         private static StructuralReference WithoutSentence(StructuralReference reference)
         {

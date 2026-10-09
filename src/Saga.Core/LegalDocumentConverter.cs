@@ -23,8 +23,8 @@ namespace Saga.Core.Services
             // PrepareDate(document, actElement);
             // PrepareTitle(document, actElement);
 
-            foreach (var article in document.Articles)
-                actElement.Add(ArticleXmlConverter.ToXml(article));
+            foreach (var part in document.Parts)
+                actElement.Add(SystematizingUnitXmlConverter.ActLevel(part));
 
             if (ContainsMathML(rootElement))
                 rootElement.Add(new XAttribute(XNamespace.Xmlns + "mml", XmlConverterConstants.MathMLNamespace));

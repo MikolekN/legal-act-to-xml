@@ -40,6 +40,12 @@ namespace Saga.Model
     /// </summary>
     public class StructuralReference
     {
+        /// <summary>
+        /// Ścieżka jednostek systematyzacyjnych w postaci eId („dzial_2__rozdz_9") — tylko w adresie bez
+        /// artykułu; artykuł ją zeruje, bo eId jednostki redakcyjnej jej nie niesie (ADR-0017).
+        /// </summary>
+        public string? Systematizing { get; set; }
+
         public string? Article { get; set; }
         public string? Paragraph { get; set; }
 
@@ -79,28 +85,29 @@ namespace Saga.Model
             new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = value };
 
         public StructuralReference Clone() =>
-            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence };
+            new() { Systematizing = Systematizing, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence };
 
         public override string ToString()
         {
             var parts = new List<string>();
 
-            if (Article != null) parts.Add($"art_{Article}");
+            if (Systematizing != null) parts.Add(Systematizing);
+            if (Article != null) parts.Add(EIdSegment.Of("art", Article));
             if (Paragraph != null)
-                parts.Add($"{(ParagraphIsCodeParagraph ? EditorialUnits.Paragraph.CodeParagraphRole : "ust")}_{Paragraph}");
-            if (Point != null) parts.Add($"pkt_{Point}");
-            if (Letter != null) parts.Add($"lit_{Letter}");
+                parts.Add(EIdSegment.Of(ParagraphIsCodeParagraph ? EditorialUnits.Paragraph.CodeParagraphRole : "ust", Paragraph));
+            if (Point != null) parts.Add(EIdSegment.Of("pkt", Point));
+            if (Letter != null) parts.Add(EIdSegment.Of("lit", Letter));
             if (Tiret != null) parts.AddRange(TiretSegments(Tiret));
-            if (Sentence != null) parts.Add($"zdn_{Sentence}");
+            if (Sentence != null) parts.Add(EIdSegment.Of("zdn", Sentence));
 
-            return string.Join("__", parts);
+            return EIdSegment.Join(parts);
         }
 
         private static IEnumerable<string> TiretSegments(string dottedPath)
         {
             var segments = dottedPath.Split('.', StringSplitOptions.RemoveEmptyEntries);
             for (var i = 0; i < segments.Length; i++)
-                yield return $"{EditorialUnits.Tiret.PrefixForDepth(i + 1)}_{segments[i]}";
+                yield return EIdSegment.Of(EditorialUnits.Tiret.PrefixForDepth(i + 1), segments[i]);
         }
     }
 }

@@ -71,7 +71,7 @@ Silnik parsujący dokumenty DOCX/PDF (z warstwą tekstową)/TXT. Zależy od `Sag
 | `Services/Classify/Document/` | **Warstwa klasyfikacji dokumentu** — `DocumentClassifier` rozpoznaje rodzaj aktu (ZTP) na podstawie bloków, przed budową modelu |
 | `Services/` | Serwisy domenowe (numeracja, referencje, publikatory) |
 | `Services/Parsing/` | **Pipeline parsowania** — orkiestrator, buildery, przetwarzanie struktury, zarządzanie nowelizacjami |
-| `Services/Converters/` | Konwertery do XML (w trakcie implementacji, nieaktywne) |
+| `Services/Converters/` | Konwertery modelu do XML schemaPL (`LegalDocumentConverter` składa akt) |
 
 ### 2.3 `Saga.Cli` — Narzędzie konsolowe (CLI)
 
@@ -167,6 +167,26 @@ Part (Część)
 
 Każdy dokument ma **pełną minimalną hierarchię** — jednostki nieobecne w tekście mają `IsImplicit = true` i są pomijane w generowaniu eId.
 
+Rozpoznanie i budowa:
+
+- **Oznaczenie** („Rozdział 3", „DZIAŁ II", „KSIĘGA PIERWSZA") rozpoznaje `ParagraphClassifier` z treści,
+  a style szablonu (`ROZDZ(ODDZ)_OZN`, `TYT(DZ)_OZN`, `CZ(KSIĘGA)`) wskazują rodzinę dwóch jednostek.
+  Sam styl bez oznaczenia w treści nie tworzy jednostki (tabele, załączniki). Odczyt spoza § 62 ZTP
+  (rozdział rzymski, sufiks wersalikiem, dział arabski, „IvA") jest tolerowany z komunikatem `Info`.
+- **Tytuł** to pierwszy akapit po oznaczeniu: ze stylu `*_PRZEDM` bez limitu długości, bez stylu —
+  krótki akapit od wielkiej litery bez kropki; „(uchylony)" też. Tytuł złamany na kilka bloków
+  dokleja się tylko, gdy kolejny blok zaczyna się małą literą.
+- **Części nazwane** („CZĘŚĆ OGÓLNA", „TYTUŁ WSTĘPNY") z zamkniętej listy dostają eId tymczasowy
+  `czesc_TMP1`. Taka część zaraz po oznaczeniu niższej jednostki jest jej tytułem (KC, KKS).
+- **Wiele części**: `LegalDocument.Parts`; część, której nie da się przejąć, staje obok jako
+  rodzeństwo z własnym łańcuchem niejawnym (`SystematizingUnitBuilder.EnterPart`).
+- **Tekst jednolity**: oznaczenie i tytuł w stylu zmian (`Z…`) bez komendy nowelizacyjnej przed nimi
+  to jednostka aktu (`ParserOrchestrator`).
+- **Załącznik**: nagłówek „Załącznik do ustawy z dnia…" po pierwszym artykule kończy strukturę aktu.
+- **Walidacja** na gotowym drzewie (`SystematizingUnitValidator`): powtórzone oznaczenie, luka,
+  malejąca numeracja, oddział poza rozdziałem, brak tytułu — tylko komunikaty, bez napraw.
+- **W treści nowelizacji** jednostki budują się w `AmendmentContent.SystematizingUnits` (patrz 8.1).
+
 ### 4.2 Jednostki redakcyjne (treściowe)
 
 ```
@@ -189,6 +209,12 @@ Format: `art_5__ust_2__pkt_3__lit_a__tir_1`
 - Separator segmentów: `__` (double underscore)
 - Separator prefiks-numer: `_` (single underscore)
 - Jednostki implicit (`IsImplicit = true`) są **pomijane** w eId
+- eId jednostki redakcyjnej nie zawiera ścieżki jednostek systematyzacyjnych (`art_5`, nie
+  `rozdz_1__art_5`); jednostka systematyzacyjna niesie ścieżkę jawnych przodków (`rozdz_3__oddz_1`)
+  — [ADR-0017](adr/0017-eid-jednostki-redakcyjnej-bez-sciezki-systematyzacyjnej.md)
+- Oznaczenie w eId: liczba arabska (także z rzymskiej i słownej — `ksi_1`, `dzial_2`), sufiks jak
+  w tekście ([ADR-0018](adr/0018-postac-oznaczenia-w-eid.md)), indeks górny w notacji `[n]`
+  (`art_53[1]`, [ADR-0019](adr/0019-indeks-gorny-w-eid.md)); segmenty składa `EIdSegment`
 - Paragraf kodeksu (§ 55 ust. 3 ZTP) to `Paragraph` z prefiksem `par` zamiast `ust` (`art_2__par_1`),
   eksportowany jako `paragraf-kodeksu`; rolę nadaje `ParsingFactories.ApplyCodeParagraphRole` po znaku „§".
 - Logika w `BaseEntity.Id` (getter) — buduje od bieżącej encji do korzenia, odwraca kolejność
@@ -462,7 +488,7 @@ z tych klas i nie definiuje własnych wzorców `art.`/`ust.`/`lit.`.
 | **`DesignationRange`** | Rozwija przedziały oznaczeń („85c–85j", „19-21", „a–c", „czwarte–szóste"). Przedział niejednoznaczny („5a"–„7b") zwraca null, żeby wywołujący go oflagował zamiast zgadywać. |
 | **`UnitPathCursor`** | Reguły ścieżki: dziedziczenie poziomu przez gołe oznaczenie, kształt oznaczenia na poziomie (§ 57 ZTP) i rozstrzygnięcie „§": po artykule — paragraf kodeksu; samodzielny — według `SectionSignRole`. Może startować od znanej ścieżki (kontekst komendy nadrzędnej). |
 | **`SectionSignRole`** | Czy samodzielny „§" jest w dokumencie jednostką główną — według rodzaju aktu z klasyfikatora dokumentu (dla obwieszczenia: ogłaszany akt wg sygnału przewagi jednostki podstawowej). W ustawie nie jest: to paragraf kodeksu nieznanego artykułu, którego się nie zgaduje. |
-| **`UnitAddressReader`** | Adres z tekstu komendy: fragmenty w cudzysłowie nie wskazują jednostek, oznaczenie liczy się tylko w ciągu rozpoczętym słowem kluczowym. Zwraca wszystkie cele: jednostkę, przedział albo wyliczenie — to ostatnie trwa, dopóki kolejną jednostkę dołącza separator wyliczenia ([ADR-0016](adr/0016-wyliczenie-celow-to-osobne-komendy.md)). |
+| **`UnitAddressReader`** | Czyta także jednostki systematyzacyjne („po rozdziale 9", „w dziale II", „uchyla się rozdziały 4 i 5") jako `StructuralReference.Systematizing` (`dzial_2__rozdz_9`), wyłącznie dla celów nowelizacji. Artykuł zeruje tę ścieżkę (ADR-0017). Adres z tekstu komendy: fragmenty w cudzysłowie nie wskazują jednostek, oznaczenie liczy się tylko w ciągu rozpoczętym słowem kluczowym. Zwraca wszystkie cele: jednostkę, przedział albo wyliczenie — to ostatnie trwa, dopóki kolejną jednostkę dołącza separator wyliczenia ([ADR-0016](adr/0016-wyliczenie-celow-to-osobne-komendy.md)). |
 
 ### 6.3b Wejście w życie (`Services/EntryIntoForce/`)
 
@@ -497,7 +523,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | **`StringExtensions`** | Metody rozszerzające `string` — `Sanitize()` (kolapsowanie białych znaków, zamiana en-dash) i `ExtractOrdinal()`. |
 | **`PolishDates`** | Nazwy miesięcy i parsowanie dat w formie długiej („1 stycznia 2025 r."). Metody `Try*` nie rzucają — data niemożliwa („31 lutego") zwraca `false`. Alternatywa miesięcy jest `const`, bo leksykon jest zamknięty. |
 | **`PolishNumerals`** | JEDYNE źródło prawdy o polskich liczebnikach: porządkowe (rdzeń + końcówki, wszystkie rodzaje), główne w dopełniaczu (formy dokładne), mnożne („podwójne"), składanie 1–99 z dwóch wyrazów. Wystawia też GENEROWANE ze słownika fragmenty regexa do wyszukiwania — patrz [ADR-0009](adr/0009-jedno-zrodlo-liczebnikow-polskich.md). |
-| **`RomanNumeralConverter`** | Wyłącznie cyfry rzymskie (`RomanToInt`/`ToRoman`) dla jednostek systematyzacyjnych; kanonizuje eId („KSIĘGA PIERWSZA" i „KSIĘGA I" → `ks_I`). Liczebniki słowne rozstrzyga `PolishNumerals`. |
+| **`RomanNumeralConverter`** | Wyłącznie cyfry rzymskie (`RomanToInt`/`ToRoman`) dla jednostek systematyzacyjnych; oznaczenie rzymskie i słowne trafia do eId jako liczba arabska („KSIĘGA PIERWSZA" i „KSIĘGA I" → `ksi_1`, [ADR-0018](adr/0018-postac-oznaczenia-w-eid.md)). Liczebniki słowne rozstrzyga `PolishNumerals`. |
 | **`StyleLibraryMapper`** | Statyczna mapa styli dokumentów prawnych — mapuje StyleId na czytelne nazwy. Zawiera `AmendmentStyleInfoMap` z metadanymi styli nowelizacyjnych. |
 | **`AmendmentStyleDecoder`** | Dekoder styli nowelizacyjnych — rozpoznaje instrument zmiany (`AmendmentInstrument`), typ celu (`AmendmentTargetKind`), kontekst nadrzędny. |
 | **`EnumExtensions`** | Metoda `ToDescription()` na enumach — odczyt atrybutu `[EnumDescription]`. |
@@ -505,15 +531,12 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 
 ### 6.5 Konwertery XML (`Services/Converters/`)
 
-| Konwerter | Status |
+| Konwerter | Rola |
 |---|---|
-| `ArticleXmlConverter` | W trakcie implementacji (kod zakomentowany) |
-| `ParagraphXmlConverter` | W trakcie implementacji |
-| `PointXmlConverter` | W trakcie implementacji |
-| `LetterXmlConverter` | W trakcie implementacji |
-| `TiretXmlConverter` | W trakcie implementacji |
-
-Docelowo transformują drzewo DTO do formatu XML (AKN/ELI).
+| `SystematizingUnitXmlConverter` | Jednostki systematyzacyjne zagnieżdżone wg schemaPL; niejawny łańcuch bez jawnego przodka znika (artykuły wprost w akcie), pod jawną jednostką niejawne poziomy wychodzą jako `-n` z `brak-eid` — [ADR-0020](adr/0020-eksport-jednostek-systematyzacyjnych.md) |
+| `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym |
+| `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
+| `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń, tabele i treść osadzona |
 
 ---
 
@@ -554,6 +577,8 @@ Mapowanie prefiksów StyleId:
 | `TIR*` | Tiret |
 | `CZ_WSP_*` | WrapUp (część wspólna) |
 | `Z/*`, `ZZ*`, `Z_*` | Treść nowelizacji |
+| `ROZDZODDZOZN*`, `TYTDZOZN*`, `CZKSIGA*` | Oznaczenie jednostki systematyzacyjnej (rodzina dwóch jednostek; którą — rozstrzyga treść) |
+| `ROZDZODDZPRZEDM*`, `TYTDZPRZEDM*` | Tytuł jednostki systematyzacyjnej (`UnitHeading`) |
 
 #### Warstwa 3 — Ciągłość numeracji
 
@@ -610,9 +635,13 @@ regex), `Kind = Unknown` i `Confidence = 1` wprost (nie przez odjęcie kar).
        0) TrimQuoteBoundaries zdejmuje graniczne „ ” cytatu (§ 94 ZTP) z pierwszego i ostatniego
           akapitu; ich obecność i interpunkcję po cytacie niesie Amendment, a konwerter oddaje je
           w atrybucie `cudzyslowy`
-       a) AmendmentBuilder buduje AmendmentContent (hierarchiczna treść)
+       a) AmendmentBuilder buduje AmendmentContent (hierarchiczna treść; oznaczenie „Rozdział 9a"
+          otwiera jednostkę systematyzacyjną w `SystematizingUnits`, następny akapit to jej tytuł,
+          a artykuły trafiają do niej przez niejawne poziomy pośrednie)
        b) AmendmentFinalizer tworzy Amendment, wykrywa typ operacji,
-          łączy z JournalInfo, przypisuje do właściciela (IHasAmendments)
+          łączy z JournalInfo, przypisuje do właściciela (IHasAmendments) i kotwiczy jednostki cytatu
+          w akcie zmienianym: punkt dodawany „w art. 68 ust. 1" ma eId `art_68__ust_1__pkt_5`
+          ([ADR-0021](adr/0021-eid-jednostki-cytowanej-od-adresu-celu.md))
        c) AmendmentCollector.Reset()
 ```
 
@@ -682,6 +711,9 @@ Walidacja numeracji odbywa się poprzez `NumberingHint` w warstwie klasyfikacji 
   - Kolejny `NumericPart` (prev + 1) dozwolony
   - Litery: ciągłość `LexicalPart` (a → b → c), inkrementacja przez `GetNextLetterValue()`
 - Reset hierarchiczny: nowy artykuł → zerowanie oczekiwanego numeru dla podrzędnych poziomów
+
+Numerację jednostek systematyzacyjnych sprawdza osobno `SystematizingUnitValidator` po zbudowaniu
+drzewa (rodzeństwo pod jednym rodzicem: ten sam numer z innym sufiksem albo następny).
 
 ### 9.3 `ValidationReporter`
 

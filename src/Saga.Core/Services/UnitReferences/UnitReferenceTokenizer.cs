@@ -7,12 +7,18 @@ namespace Saga.Core.Services.UnitReferences
     internal enum UnitLevel
     {
         None = 0,
-        Article = 1,
-        Paragraph = 2,
-        Point = 3,
-        Letter = 4,
-        Tiret = 5,
-        Sentence = 6,
+        Part = 1,
+        Book = 2,
+        Title = 3,
+        Division = 4,
+        Chapter = 5,
+        Subchapter = 6,
+        Article = 7,
+        Paragraph = 8,
+        Point = 9,
+        Letter = 10,
+        Tiret = 11,
+        Sentence = 12,
     }
 
     /// <summary>Rodzaj tokenu w powołaniu jednostek.</summary>
@@ -78,6 +84,17 @@ namespace Saga.Core.Services.UnitReferences
             @"art\.|§|ust\.|pkt|lit\.|(?:" + PolishNumerals.MultiplicityAlternation +
             @")\s+tiret\p{L}*|tiret\p{L}*|zdani\p{L}+";
 
+        /// <summary>
+        /// Słowo kluczowe jednostki systematyzacyjnej w każdej odmianie, w której pojawia się w komendzie
+        /// („po rozdziale 9", „w dziale II", „uchyla się rozdziały 4 i 5") — bez „działalności" i „częściowo".
+        /// </summary>
+        internal static readonly string SystematizingKeywordPattern =
+            @"\b(?:roz|od)?dzia(?:łu|łem|łów|łach|łami|ły|ł|le)\b|\btytu(?:łu|łem|łów|łach|ły|ł|le)\b" +
+            @"|\bczęś(?:ciach|ciami|ci|ć)\b|\bksię(?:gach|gami|ga|gi|dze|gę|gą)\b";
+
+        /// <summary>Oznaczenie rzymskie jednostki wyższej („dział VIa", „tytuł XIII") — wersaliki.</summary>
+        private const string RomanDesignationPattern = @"(?-i:[IVXLC]+[a-z]?)\b";
+
         /// <summary>Przedział oznaczeń: „85c–85j", „a–c", „czwarte–szóste".</summary>
         internal static readonly string RangePattern =
             @"\d+[a-zA-Z]*\s*[-–]\s*\d+[a-zA-Z]*" +
@@ -88,14 +105,24 @@ namespace Saga.Core.Services.UnitReferences
         internal static readonly string DesignationPattern =
             @"\d+[a-zA-Z]*(?:\s*\[\s*\d+[a-zA-Z]*\s*\])?|" + OrdinalWord + @"|\b[a-z]{1,2}\b";
 
-        private static readonly Regex TokenPattern = new(
+        private static readonly Regex TokenPattern = BuildTokenPattern(UnitKeywordPattern, DesignationPattern);
+
+        /// <summary>
+        /// Wariant z jednostkami systematyzacyjnymi — dla celów nowelizacji („po rozdziale 9 dodaje się …").
+        /// Wejście w życie ich jeszcze nie czyta, więc tam „rozdział 3" zostaje prozą.
+        /// </summary>
+        private static readonly Regex SystematizingTokenPattern = BuildTokenPattern(
+            SystematizingKeywordPattern + "|" + UnitKeywordPattern,
+            @"\d+[a-zA-Z]*(?:\s*\[\s*\d+[a-zA-Z]*\s*\])?|" + OrdinalWord + "|" + RomanDesignationPattern + @"|\b[a-z]{1,2}\b");
+
+        private static Regex BuildTokenPattern(string unitKeyword, string designation) => new(
             @"(?<prosescope>w\s+zakresie\s*,\s*w\s+jakim.*|w\s+jakim\s+dotycz\p{L}*.*)" +
             @"|(?<scope>w\s+zakresie|w\s+odniesieniu\s+do|w\s+stosunku\s+do)" +
             @"|(?<dash>\s[-–]\s)" +
-            @"|(?<unit>" + UnitKeywordPattern + ")" +
+            @"|(?<unit>" + unitKeyword + ")" +
             @"|(?<range>" + RangePattern + ")" +
             @"|(?<separator>,|;|:|\bi\b|\boraz\b|\blub\b|\balbo\b)" +
-            @"|(?<designation>" + DesignationPattern + ")",
+            @"|(?<designation>" + designation + ")",
             Opts);
 
         /// <summary>
@@ -108,8 +135,8 @@ namespace Saga.Core.Services.UnitReferences
             "w", "we", "po", "do", "od", "z", "ze", "na", "o",
         };
 
-        /// <summary>Rozbija tekst na tokeny.</summary>
-        internal static IReadOnlyList<UnitToken> Tokenize(string? text)
+        /// <summary>Rozbija tekst na tokeny; <paramref name="systematizing"/> — także jednostki systematyzacyjne.</summary>
+        internal static IReadOnlyList<UnitToken> Tokenize(string? text, bool systematizing = false)
         {
             var tokens = new List<UnitToken>();
             if (string.IsNullOrWhiteSpace(text))
@@ -118,7 +145,7 @@ namespace Saga.Core.Services.UnitReferences
             var input = text.Trim();
             var cursor = 0;
 
-            foreach (Match match in TokenPattern.Matches(input))
+            foreach (Match match in (systematizing ? SystematizingTokenPattern : TokenPattern).Matches(input))
             {
                 if (match.Index > cursor)
                     AddProse(tokens, input[cursor..match.Index]);
@@ -133,6 +160,7 @@ namespace Saga.Core.Services.UnitReferences
             NormalizeLeadingMultiplicityOrdinal(tokens);
             DemotePrepositions(tokens);
             PromoteLetterI(tokens);
+            PromoteRomanI(tokens);
             return tokens;
         }
 
@@ -155,6 +183,21 @@ namespace Saga.Core.Services.UnitReferences
                 if (tokens[i] is { Kind: UnitTokenKind.Separator } candidate &&
                     candidate.Text.Equals("i", StringComparison.OrdinalIgnoreCase) &&
                     tokens[i - 1] is { Kind: UnitTokenKind.UnitKeyword, Level: UnitLevel.Letter })
+                {
+                    tokens[i] = new UnitToken(UnitTokenKind.Designation, candidate.Text);
+                }
+            }
+        }
+
+        /// <summary>
+        /// „I" wersalikiem tuż po jednostce systematyzacyjnej to oznaczenie rzymskie („w dziale I"), nie spójnik.
+        /// </summary>
+        private static void PromoteRomanI(List<UnitToken> tokens)
+        {
+            for (var i = 1; i < tokens.Count; i++)
+            {
+                if (tokens[i] is { Kind: UnitTokenKind.Separator, Text: "I" } candidate &&
+                    tokens[i - 1] is { Kind: UnitTokenKind.UnitKeyword, Level: >= UnitLevel.Part and <= UnitLevel.Subchapter })
                 {
                     tokens[i] = new UnitToken(UnitTokenKind.Designation, candidate.Text);
                 }
@@ -259,6 +302,18 @@ namespace Saga.Core.Services.UnitReferences
         private static UnitLevel MapLevel(string keyword)
         {
             var k = keyword.ToLowerInvariant();
+            if (k.StartsWith("rozdzia", StringComparison.Ordinal))
+                return UnitLevel.Chapter;
+            if (k.StartsWith("oddzia", StringComparison.Ordinal))
+                return UnitLevel.Subchapter;
+            if (k.StartsWith("dzia", StringComparison.Ordinal))
+                return UnitLevel.Division;
+            if (k.StartsWith("tytu", StringComparison.Ordinal))
+                return UnitLevel.Title;
+            if (k.StartsWith("częś", StringComparison.Ordinal))
+                return UnitLevel.Part;
+            if (k.StartsWith("księ", StringComparison.Ordinal))
+                return UnitLevel.Book;
             if (k.StartsWith("art.", StringComparison.Ordinal) || k.StartsWith("§", StringComparison.Ordinal))
                 return UnitLevel.Article;
             if (k.StartsWith("ust.", StringComparison.Ordinal))

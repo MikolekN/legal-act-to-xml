@@ -5,6 +5,38 @@ Wszystkie istotne zmiany w tym projekcie będą dokumentowane w tym pliku.
 Format oparty jest na Keep a Changelog,
 a wersjonowanie zgodne z Semantic Versioning.
 
+## [Unreleased]
+### Dodano
+- **Jednostki systematyzacyjne w eksporcie XML**: część, księga, tytuł, dział, rozdział i oddział
+  wychodzą jako zagnieżdżone elementy schemaPL z `eId` i nagłówkiem (`nr`, `p`). Pod jawną jednostką
+  brakujące poziomy są elementami `-n` z `brak-eid="jednostka-nieoznaczona"`. Akty bez jawnych
+  jednostek mają XML bez zmian — [ADR-0020](docs/adr/0020-eksport-jednostek-systematyzacyjnych.md).
+- **Jednostki systematyzacyjne w treści nowelizacji**: „dodaje się rozdział 9a w brzmieniu:" daje
+  w `cytat-strukt` rozdział z nagłówkiem i artykułami w `oddzial-n`, zamiast oznaczenia i tytułu jako
+  cytatu tekstowego obok artykułów.
+- **Cele nowelizacji wskazane jednostką systematyzacyjną**: „po rozdziale 9 dodaje się…", „w dziale II
+  po rozdziale 9…", „uchyla się rozdziały 4 i 5" dają `element-eId` `rozdz_9`, `dzial_2__rozdz_9`,
+  `rozdz_4`/`rozdz_5` zamiast `UNKNOWN`. Wejście w życie takich powołań jeszcze nie czyta.
+- **Walidacja numeracji jednostek systematyzacyjnych**: powtórzone oznaczenie, luka, malejąca
+  numeracja, oddział poza rozdziałem i jednostka bez tytułu dostają komunikat walidacji.
+
+### Zmieniono
+- **eId jednostek redakcyjnych nie zawiera już ścieżki jednostek systematyzacyjnych**: artykuł
+  w rozdziale 1 ma `eId="art_5"` zamiast `rozdz_1__art_5` (tak samo ustępy, punkty, litery
+  i tirety). Adres jednostki jest teraz tym samym napisem co `element-eId` odsyłającej do niej
+  nowelizacji. Zmienia wyjście XML każdego aktu z rozdziałami, działami lub innymi jawnymi
+  jednostkami systematyzacyjnymi — [ADR-0017](docs/adr/0017-eid-jednostki-redakcyjnej-bez-sciezki-systematyzacyjnej.md).
+- **Oznaczenie w eId**: jednostki numerowane cyframi rzymskimi albo słownie dostają liczbę arabską
+  (`KSIĘGA PIERWSZA` → `ksi_1`, `DZIAŁ II` → `dzial_2`) — [ADR-0018](docs/adr/0018-postac-oznaczenia-w-eid.md).
+- **eId jednostek cytowanych w nowelizacji zaczyna się od adresu celu** w akcie zmienianym:
+  punkt dodawany „w art. 68 ust. 1" ma `eId="art_68__ust_1__pkt_5"` zamiast `pkt_5` —
+  [ADR-0021](docs/adr/0021-eid-jednostki-cytowanej-od-adresu-celu.md).
+- **Załącznik aktu nie jest już częścią ostatniego artykułu**: treść za nagłówkiem „Załącznik do
+  ustawy z dnia…" nie trafia do struktury aktu (wcześniej jej punkty i rozdziały wchodziły do
+  ostatniego artykułu albo stawały się jednostkami aktu).
+- **Indeks górny w eId** w notacji `[n]`, zgodnie z aktualnym schematem i przykładami jego autorów:
+  `art_4[1]` w eId jednostki i `element-eId` celu — [ADR-0019](docs/adr/0019-indeks-gorny-w-eid.md).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

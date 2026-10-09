@@ -1,4 +1,5 @@
 using System.Text;
+using System.Xml.Linq;
 using Saga.Core.Ingest;
 using Saga.Core.Ingest.Pdf;
 using Saga.Core.Services;
@@ -352,7 +353,7 @@ namespace Saga.Core.Tests
 
             Assert.Equal(2, allowed.Count - 1);   // reguła ogólna + jeden wyjątek, żadnej daty więcej
 
-            foreach (var unit in Walk(document.RootPart))
+            foreach (var unit in document.Parts.SelectMany(Walk))
             {
                 Assert.Contains(unit.EffectiveDate, allowed);
                 if (unit is IHasTextSegments holder)
@@ -591,12 +592,15 @@ namespace Saga.Core.Tests
             // w życie i przez cel nowelizacji. Dopóki oba idą jednym źródłem, ścieżki są równe.
             const string address = "art. 328[11] § 2 pkt 3 lit. i tiret drugie";
 
-            var entryIntoForce = UnitEnumerationParser.Parse(address).Targets.Single().Structure.ToString();
+            var entryIntoForce = UnitEnumerationParser.Parse(address).Targets.Single().Structure;
             var amendmentTarget = new LegalReferenceService()
                 .ReadAmendmentTargets(null, $"w {address} otrzymuje brzmienie:").Single();
 
-            Assert.Equal("art_328[11]__par_2__pkt_3__lit_i__tir_2", entryIntoForce);
-            Assert.Equal(entryIntoForce, amendmentTarget.ToString());
+            // Oznaczenie odczytane wiernie, z indeksem górnym — także w eId (ADR-0019).
+            Assert.Equal("328[11]", entryIntoForce.Article);
+            Assert.Equal(entryIntoForce.Article, amendmentTarget.Structure.Article);
+            Assert.Equal("art_328[11]__par_2__pkt_3__lit_i__tir_2", entryIntoForce.ToString());
+            Assert.Equal(entryIntoForce.ToString(), amendmentTarget.ToString());
         }
 
         [Fact]
@@ -640,6 +644,128 @@ namespace Saga.Core.Tests
             Assert.Equal(
                 new string?[] { null, null, "art_2__ust_1__pkt_36" },
                 instructions.Select(i => i.Attribute("element-do-eId")?.Value));
+        }
+
+        // ============================================================
+        // ADR-0017: eId jednostki redakcyjnej bez ścieżki jednostek systematyzacyjnych
+        // ============================================================
+
+        [Fact]
+        public void Adr0017_EditorialEId_IgnoresSystematizingPath_AndMatchesTheReferenceAddress()
+        {
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Rozdział 3", "Przepisy szczegółowe", "Oddział 1", "Zasady",
+                "Art. 5. 1. Organ prowadzi rejestr.", "2. Organ wydaje:", "1) decyzję,", "2) postanowienie.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var article = document.Articles.Single();
+            var point = article.Paragraphs[1].Points[0];
+
+            // Artykuł stoi w oddziale 1 rozdziału 3 — ta ścieżka należy do jednostek systematyzacyjnych,
+            // nie do adresu artykułu.
+            Assert.Equal("rozdz_3__oddz_1", article.Parent!.Id);
+            Assert.Equal("art_5", article.Id);
+            Assert.Equal("art_5__ust_2__pkt_1", point.Id);
+
+            // Powołanie nie wymienia rozdziału — adres odczytany z „w art. 5 ust. 2 pkt 1" musi być
+            // dokładnie eId wskazanej jednostki, inaczej element-eId nowelizacji nie trafi w cel.
+            var reference = new LegalReferenceService()
+                .ReadAmendmentTargets(null, "w art. 5 ust. 2 pkt 1 otrzymuje brzmienie:")
+                .Single();
+            Assert.Equal(point.Id, reference.Structure.ToString());
+        }
+
+        // ============================================================
+        // ADR-0018: postać oznaczenia w eId
+        // ============================================================
+
+        [Theory]
+        [InlineData("KSIĘGA I", "ksi_1", "I")]
+        [InlineData("KSIĘGA PIERWSZA", "ksi_1", "PIERWSZA")]
+        [InlineData("TYTUŁ XVII", "tyt_17", "XVII")]
+        [InlineData("DZIAŁ IVa", "dzial_4a", "IVa")]
+        [InlineData("Rozdział 2a", "rozdz_2a", "2a")]
+        public void Adr0018_SystematizingDesignation_IsArabicInEId_AsWrittenInRawValue(
+            string designation, string eId, string rawValue)
+        {
+            var document = LegalDocumentParser.ParseBlocks(new[] { designation, "Art. 1. Treść." }
+                .Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var unit = document.Articles.Single().Parent!;
+            while (((ISystematizingUnit)unit).IsImplicit)
+                unit = unit.Parent!;
+
+            Assert.Equal(eId, unit.Id);
+            Assert.Equal(rawValue, unit.Number?.RawValue);
+        }
+
+        // ============================================================
+        // ADR-0019: indeks górny w eId w notacji „[n]"
+        // ============================================================
+
+        [Fact]
+        public void Adr0019_Superscript_IsInTheEId_InBracketNotation()
+        {
+            var article = ParsingFactories.ParseArticleNumber("Art. 5[1]. Treść.");
+            Assert.Equal("art_5[1]", new Article { Number = article }.Id);
+
+            // „art. 5 i 5[1]" — dwie jednostki, dwa cele, dwa różne adresy.
+            var targets = new LegalReferenceService().ReadAmendmentTargets(null, "uchyla się art. 5 i 5[1];");
+            Assert.Equal(new[] { "art_5", "art_5[1]" }, targets.Select(t => t.ToString()));
+        }
+
+        // ============================================================
+        // ADR-0020: eksport jednostek systematyzacyjnych
+        // ============================================================
+
+        [Fact]
+        public void Adr0020_Export_ElidesTheImplicitChainAboveTheFirstExplicitUnit()
+        {
+            static XElement Act(params string[] lines) => LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(
+                    lines.Select(text => new DocumentBlock { Text = text }).ToList()))
+                .Descendants().First(e => e.Name.LocalName == "ustawa");
+
+            // Akt bez jawnych jednostek: artykuły wprost w akcie, żadnych pustych „-n".
+            var flat = Act("Art. 1. Treść.");
+            Assert.Single(flat.Elements(), e => e.Name.LocalName == "artykul");
+            Assert.DoesNotContain(flat.Descendants(), e => e.Name.LocalName is "czesc-n" or "ksiega-n" or "tytul-n-jednostka"
+                or "dzial-n" or "rozdzial-n" or "oddzial-n");
+
+            // Pod jawnym rozdziałem niejawny oddział wychodzi jako „-n" bez eId — rozdział nie trzyma artykułów.
+            var chapter = Act("Rozdział 1", "Przepisy ogólne", "Art. 1. Treść.")
+                .Elements().Single(e => e.Name.LocalName == "rozdzial");
+            var subchapter = chapter.Elements().Single(e => e.Name.LocalName == "oddzial-n");
+            Assert.Null(subchapter.Attribute("eId"));
+            Assert.Equal("jednostka-nieoznaczona", subchapter.Attribute("brak-eid")?.Value);
+            Assert.Equal("artykul", subchapter.Elements().Single().Name.LocalName);
+        }
+
+        // ============================================================
+        // ADR-0021: eId jednostki cytowanej od adresu celu w akcie zmienianym
+        // ============================================================
+
+        [Fact]
+        public void Adr0021_QuotedUnitEId_StartsWithTheTargetAddress()
+        {
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Art. 1. W ustawie z dnia 13 października 1998 r. o systemie (Dz. U. z 2025 r. poz. 350) wprowadza się następujące zmiany:",
+                "1) w art. 68 ust. 1 pkt 5 otrzymuje brzmienie:",
+                "„5) orzekanie o niezdolności do pracy;”;",
+                "2) w art. 2 po pkt 4 dodaje się pkt 4a w brzmieniu:",
+                "„4a) nowy punkt;”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var points = document.Articles.First().Paragraphs[0].Points;
+            var modified = points[0].Amendment!;
+            var inserted = points[1].Amendment!;
+
+            // Zmiana brzmienia: eId jednostki cytowanej to dokładnie element-eId komendy.
+            Assert.Equal("art_68__ust_1__pkt_5", modified.Content!.Points.Single().Id);
+            Assert.Equal(modified.Targets.Single().Structure.ToString(), modified.Content.Points.Single().Id);
+            Assert.Equal("art_2__pkt_4a", inserted.Content!.Points.Single().Id);
         }
 
         private static DocumentClassificationResult Classify(byte[] docx)

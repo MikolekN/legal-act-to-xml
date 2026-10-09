@@ -51,6 +51,14 @@ namespace Saga.Core.Ingest.Pdf
         private static readonly Regex ConditionalMarkerPattern = new(
             @"^(?:\d{1,3}[a-zA-Z]*[\.\)]\s|„)", RegexOptions.Compiled);
 
+        /// <summary>
+        /// Wiersz, który sam jest pełnym oznaczeniem jednostki systematyzacyjnej („Rozdział 1", „DZIAŁ II").
+        /// Tytuł jednostki stoi w następnym wierszu (§ 62 ust. 2 ZTP) — po takim wierszu zaczyna się nowy blok.
+        /// </summary>
+        private static readonly Regex DesignationLinePattern = new(
+            @"^(?:CZĘŚĆ|Część|KSIĘGA|Księga|TYTUŁ|Tytuł|DZIAŁ|Dział|ROZDZIAŁ|Rozdział|ODDZIAŁ|Oddział)\s+\S+\s*$",
+            RegexOptions.Compiled);
+
         /// <summary>Poprzedni wiersz domknięty: kończy się interpunkcją, ale nie skrótem referencyjnym.</summary>
         private static readonly Regex ClosedLineEndPattern = new(
             @"[;:,.]$", RegexOptions.Compiled);
@@ -282,6 +290,7 @@ namespace Saga.Core.Ingest.Pdf
             {
                 bool boundary = prev == null
                     || (forceBoundary?.Invoke(line) ?? IsMarkerBoundary(line, prev))
+                    || DesignationLinePattern.IsMatch(prev.Text)
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap);
 

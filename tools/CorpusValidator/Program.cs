@@ -90,6 +90,20 @@ if (args.Length > 0 && args[0] == "--sentence-split")
     return CorpusValidator.SentenceSplitReport.Run(splitRoot, splitReport);
 }
 
+// Raport jednostek systematyzacyjnych (część … oddział): styl szablonu vs klasyfikator vs zbudowany
+// model vs eksport XML — miara planu docs/internal/plan-jednostki-systematyzacyjne.md (tabela 1.4).
+// Przebieg PRZED i PO zmianie, potem diff systematizing-docs.tsv (kolumna xmlHash pilnuje, że akty
+// bez jawnych jednostek eksportują się bez zmian).
+//   dotnet run --project tools/CorpusValidator -- --systematizing <root> <katalog-wyjsciowy>
+if (args.Length > 2 && args[0] == "--systematizing")
+    return CorpusValidator.SystematizingUnitsReport.Run(args[1], args[2]);
+
+// Struktura jednostek z naszego eksportu zestawiona z plikiem referencyjnym autorów schematu
+// (akn4pl/przyklady/<akt>/schemaPL_no_ref.xml + źródłowy DOCX obok):
+//   dotnet run --project tools/CorpusValidator -- --compare-reference <plik.docx> <referencja.xml> <katalog-wyjsciowy>
+if (args.Length > 3 && args[0] == "--compare-reference")
+    return CorpusValidator.ReferenceStructureComparison.Run(args[1], args[2], args[3]);
+
 if (args.Length > 0 && args[0] == "--entry-into-force")
 {
     var eifRoot = args.Length > 1 ? args[1] : "documents";

@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Saga.Core.Ingest;
 using Saga.Core.Services.Classify;
@@ -16,6 +17,11 @@ namespace Saga.Core.Services.Parsing
         private readonly AmendmentStateManager _amendmentManager = new();
         private readonly StructureProcessor _structureProcessor = new();
         private readonly EntryIntoForceService _entryIntoForce = new();
+
+        // „Załącznik do ustawy z dnia…", „Załączniki do ustawy…", „Załącznik nr 2 do ustawy…" — nie
+        // „Załącznik do obwieszczenia", który w tekście jednolitym otwiera sam akt.
+        private static readonly Regex AnnexHeader = new(
+            @"^Załącznik(?:i)?(?:\s+nr\s+\S+)?\s+do\s+(?:ustawy|rozporządzenia)\s+z\s+dnia\b", RegexOptions.Compiled);
 
         /// <summary>
         /// Konstruktor domyślny — używa ParagraphClassifier.
@@ -61,11 +67,48 @@ namespace Saga.Core.Services.Parsing
                 NumberingHint = hint,
             });
 
+            // Załącznik stoi za ostatnim artykułem i ma własną treść (tabele, wykazy, nawet „Rozdział 1") —
+            // nie jest częścią struktury aktu.
+            if (context.InAnnex) return;
+            if (IsAnnexHeader(context, classification, text))
+            {
+                context.InAnnex = true;
+                return;
+            }
+
+            if (IsMisstyledActUnit(context, classification, text))
+                classification = AsActContent(classification);
+
             if (HandleAmendmentFlow(context, classification, text, styleId)) return;
 
             if (_structureProcessor.Process(context, classification, text, styleId, block.Layout))
                 _amendmentManager.DetectTrigger(context, text);
         }
+
+        /// <summary>
+        /// Tekst jednolity składa jednostki dodane nowelizacją stylami zmian (Z…): oznaczenie i tytuł
+        /// jednostki w stylu Z bez komendy nowelizacyjnej przed nimi i bez cudzysłowu to jednostka aktu.
+        /// </summary>
+        private static bool IsMisstyledActUnit(ParsingContext context, ClassificationResult classification, string text) =>
+            classification.IsAmendmentContent
+            && !context.InsideAmendment && !context.AmendmentTriggerDetected && !context.AmendmentCollector.IsCollecting
+            && text is not ['„' or '"', ..]
+            && (StructureProcessor.IsSystematizing(classification.Kind)
+                || (context.PendingHeadingUnit != null && classification.Kind is ParagraphKind.Unknown or ParagraphKind.UnitHeading));
+
+        private static ClassificationResult AsActContent(ClassificationResult classification) => new()
+        {
+            Kind = classification.Kind,
+            Confidence = classification.Confidence,
+            StyleType = classification.StyleType,
+            Penalties = classification.Penalties,
+        };
+
+        private static bool IsAnnexHeader(ParsingContext context, ClassificationResult classification, string text) =>
+            context.CurrentArticle != null
+            && !classification.IsAmendmentContent
+            && !context.InsideAmendment && !context.AmendmentCollector.IsCollecting
+            && AnnexHeader.IsMatch(text);
 
         /// <summary>
         /// Finalizuje przetwarzanie — wypróżnia bufor nowelizacji jeśli dokument
@@ -81,6 +124,8 @@ namespace Saga.Core.Services.Parsing
 
             // Zapisz metadane aktu zebrane ze strefy tytułowej (rodzaj/data/przedmiot → Title/ActDate).
             context.Metadata.ApplyTo(context.Document);
+
+            SystematizingUnitValidator.Validate(context.Document);
 
             // Przebieg po gotowym drzewie: klauzula wejścia w życie.
             // Wymaga kompletnego drzewa, wraz z nowelizacjami.

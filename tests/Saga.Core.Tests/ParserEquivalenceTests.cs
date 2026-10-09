@@ -130,10 +130,39 @@ namespace Saga.Core.Tests
             Assert.Equal(docxDescription, ModelEquivalenceComparer.Describe(txtModel));
 
             // Strażnik pustej równoważności — ścieżka stylowa naprawdę zbudowała to, co porównujemy.
-            Assert.Contains("eId=rozdz_2__oddz_1__art_2", docxDescription);
+            Assert.Contains("eId=art_2 in=rozdz_2__oddz_1", docxDescription);
             Assert.Contains("czwsp WrapUp | w zakresie nieuregulowanym w innych ustawach.", docxDescription);
             Assert.Contains("czwsp WrapUp | w terminie 14 dni od dnia złożenia wniosku;", docxDescription);
             Assert.Contains("tir 2 | nie uiścił opłaty,", docxDescription);
+        }
+
+        [Fact]
+        public void ActWithCenteredChapterHeadings_PdfAndTxt_AreEquivalent()
+        {
+            // W PDF oznaczenie i tytuł jednostki to dwa wyśrodkowane wiersze tuż pod sobą (§ 62 ust. 2 ZTP).
+            // Sklejone w jeden blok nie przeszłyby ani jako oznaczenie, ani jako tytuł.
+            var lines = new (string Text, double X)[]
+            {
+                ("Rozdział 1", 270), ("Przepisy ogólne", 255),
+                ("Art. 1. Ustawa określa zasady prowadzenia rejestru.", 57),
+                ("Rozdział 2", 270), ("Rejestr", 278),
+                ("Art. 2. Rejestr prowadzi minister właściwy do spraw gospodarki.", 57),
+            };
+
+            var pdfBuilder = new TestPdfBuilder().AddPage();
+            for (int i = 0; i < lines.Length; i++)
+                pdfBuilder.AddText(lines[i].Text, lines[i].X, 700 - i * 14);
+
+            using var pdfStream = new MemoryStream(pdfBuilder.Build());
+            var pdfModel = LegalDocumentParser.ParseBlocks(new PdfBlockReader().ReadBlocks(pdfStream));
+            var txtModel = LegalDocumentParser.ParseBlocks(ReadTxt(string.Join("\n", lines.Select(l => l.Text))));
+
+            var pdfDescription = ModelEquivalenceComparer.Describe(pdfModel);
+            Assert.Equal(ModelEquivalenceComparer.Describe(txtModel), pdfDescription);
+            Assert.Contains("eId=art_2 in=rozdz_2", pdfDescription);
+
+            var chapters = pdfModel.RootPart.Books[0].Titles[0].Divisions[0].Chapters;
+            Assert.Equal(new[] { "Przepisy ogólne", "Rejestr" }, chapters.Select(c => c.Heading));
         }
 
         [Fact]

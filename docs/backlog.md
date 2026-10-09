@@ -83,7 +83,7 @@ i po przysłanianiu jej mocą wsteczną na wyjściu
 
 | Luka | Stan |
 |---|---|
-| **`HeadingEffectiveDate` nieużywane** | Pole jest w `ISystematizingUnit` i we wszystkich sześciu jednostkach systematyzacyjnych, ale nikt go nie zapisuje ani nie czyta. Powód: parser nie rozpoznaje jeszcze poprawnie jednostek systematyzacyjnych, więc data nagłówka nie ma skąd pochodzić. |
+| **`HeadingEffectiveDate` nieużywane** | Pole jest w `ISystematizingUnit` i we wszystkich sześciu jednostkach systematyzacyjnych, ale nikt go nie zapisuje ani nie czyta. Jednostki są już rozpoznawane, ale w korpusie nie ma przypadku tytułu jednostki z własną datą wejścia w życie — nie ma czego zapisać. |
 | **Moc wsteczna tylko jako data jawna** | Wzorzec wymaga daty kalendarzowej, więc „z mocą od dnia ogłoszenia" nie jest rozpoznawane. Wymagałoby potraktowania mocy wstecznej jak formuły — z własnym rozstrzyganiem względem daty ogłoszenia. |
 | **Warianty leksykalne poza § 51** | „ze skutkiem od dnia …", „stosuje się od dnia …" — spoza katalogu ZTP, nierozpoznawane. Dopisanie do alternatywy jest tanie, ale każdy wariant trzeba wpierw zobaczyć w korpusie. |
 | **Człon „z tym że" mieszany** | „z tym że art. 5 wchodzi w życie z dniem X, a art. 6 z mocą od dnia Y" idzie ścieżką wyjątku daty i moc wsteczna Y doczepia się do art. 5. Kształt spoza katalogu § 51. |
@@ -91,6 +91,26 @@ i po przysłanianiu jej mocą wsteczną na wyjściu
 | **Rozdzielenie dat wejścia w życie i mocy wstecznej na jednostce** | Docelowo poprawniejsze niż przysłanianie: jednostka niosłaby w XML obie daty osobno, tak jak niesie je model. Nie robimy tego, bo **odbiorca wymaga w wyniku jednej daty** — patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md). Po naszej stronie przełącznik jest jeden: `GoverningDate` (jedyny wywołujący to `UnitLifecycleXml.EntryDate`, przez które idą wszystkie zapisy — jednostki, zdania, części wspólne). Model i propagacja niosą obie daty osobno i **nie wymagają żadnej zmiany**. Do zrobienia przy przełączaniu: stała nowego atrybutu, drugi parametr w `SentenceContext.ToXml`, odwrócenie asercji w `EntryIntoForceXmlOutputTests`. |
 | **Moc wsteczna bywa późniejsza niż data wejścia w życie jednostki — i nie jest to usterka** | Zmierzone na korpusie (`354687_3139110`): akt ogłoszony 2025-12-23 wchodzi w życie po upływie 6 miesięcy (2026-06-24), ale art. 2, art. 4 i art. 5 „wchodzą w życie z dniem następującym po dniu ogłoszenia, z mocą od dnia 1 stycznia 2026 r." — moc wsteczna wypada PO ich własnej dacie wejścia w życie (2025-12-24), a przed datą ogólną aktu. Przysłanianie daje tu wynik poprawny: przepisy działają od 2026-01-01. Wniosek dla ewentualnej walidacji: warunek „moc wsteczna późniejsza niż data jednostki" zapaliłby fałszywy alarm na tym poprawnie zredagowanym akcie, więc punktem odniesienia musi być **data ogólna aktu**. W 241 dokumentach nie ma ani jednego przypadku mocy wstecznej późniejszej niż data ogólna, więc dziś nie ma czego zgłaszać i żaden `ValidationMessage` nie powstał. |
 | **Pusty fragment nierozłożony** | Klauzula złożona z samej mocy wstecznej („Ustawa wchodzi w życie z mocą od dnia …", bez formuły) dopisuje do `UnresolvedFragments` pusty string zamiast czytelnego powodu. |
+
+## 3c. Jednostki systematyzacyjne — świadomie odłożone
+
+Stan po pełnym rozpoznaniu i eksporcie jednostek systematyzacyjnych
+([ADR-0017](adr/0017-eid-jednostki-redakcyjnej-bez-sciezki-systematyzacyjnej.md)–[ADR-0021](adr/0021-eid-jednostki-cytowanej-od-adresu-celu.md)).
+Miarą jest `CorpusValidator --systematizing`; zgodność z przykładami autorów schematu —
+`CorpusValidator --compare-reference`.
+
+| Luka | Stan |
+|---|---|
+| **Prefiks aktu w eId** | Przykłady autorów schematu zapisują `DU/2024/928__art_1`, a w cytacie — prefiks aktu zmienianego. Osobna funkcja; dziś duplikaty eId między aktem a cytatem (np. `rozdz_1` aktu i cytowany `rozdz_1` aktu zmienianego) są poprawne, ale nierozróżnialne. |
+| **Rozporządzenia: § jako jednostka podstawowa** | Korzeń `rozporzadzenie`, typ `paragraf`; rozdziały w rozporządzeniach (§ 124a ZTP) czekają na budowę struktury aktów opartych na paragrafach — patrz wiersz „Segment jednostki głównej „§"" w sekcji 3. |
+| **Powołania jednostek systematyzacyjnych w wejściu w życie** | „przepisy rozdziału 2 wchodzą w życie…" — `UnitReferenceTokenizer` czyta słownik jednostek systematyzacyjnych tylko dla celów nowelizacji (`systematizing: true`). Wejście w życie potrzebuje rozwinięcia jednostki na jej artykuły i własnych testów na korpusie. |
+| **eId tymczasowy jednostek nazwanych** | „CZĘŚĆ OGÓLNA" → `czesc_TMP1`. Postać docelowa czeka na autorów schematu. |
+| **Załącznik bez eksportu** | Treść za „Załącznik do ustawy z dnia…" jest pomijana (wcześniej przeciekała do ostatniego artykułu). Schemat ma `zalacznik` (`zal_1`, `ust_I`…); przykład DU/2026/252 ma w załączniku 41 jednostek redakcyjnych, których nie budujemy. |
+| **TJ: „(uchylony)" jako tytuł** | Jednostka uchylona w tekście jednolitym dostaje tytuł „(uchylony)"; schemat przewiduje dla niej `uchylenie-OTJ`. |
+| **TJ: przytoczenia w obwieszczeniu** | Przepisy przytoczone przed tekstem jednolitym budują się jak artykuły aktu — główne źródło zduplikowanych eId artykułów w TJ (`CorpusValidator --systematizing`, sekcja duplikatów poza cytatami). |
+| **TJ składany w całości stylami zmian** | Gdy całe rozdziały i artykuły tekstu jednolitego mają style `Z…` (np. `305231_2733472`, `349921_3119995`), zbierają się jako treść nowelizacji. Reguła „jednostka w stylu Z bez komendy" obejmuje dziś tylko oznaczenie i tytuł jednostki, nie artykuły. |
+| **Nienumerowane podtytuły** | „Przepis wstępny", „A. Plany naprawy" w stylu tytułu jednostki — ZTP ich nie przewiduje, model nie ma miejsca na grupę artykułów bez oznaczenia; przy dołączaniu tytułu traktowane jak osobne bloki. |
+| **Pełna walidacja XSD korpusu** | Walidacja całego dokumentu pada na nagłówku aktu (`metadane`, `rodzaj-aktu`, `data`, `tytul`), atrybucie `GUID` bez przestrzeni `gd:` i masce `cudzyslowy` (0–3), gdzie schemat chce `brak`/`otwierajacy`/`zamykajacy`/`oba`. Jednostki sprawdza dziś walidacja częściowa (`SchemaPlFact`). |
 
 ## 4. Testy, których plan przewidywał, a nie powstały
 

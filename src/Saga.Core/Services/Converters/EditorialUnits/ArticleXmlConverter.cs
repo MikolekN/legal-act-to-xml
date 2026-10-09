@@ -18,7 +18,7 @@ namespace Saga.Core.Services.Converters
 
             UnitLifecycleXml.Apply(articleElement, article);
 
-            articleElement.Add(Element(XmlConverterConstants.Contents.Num, article.Number == null ? "UNKNOWN" : article.Number.Value));
+            articleElement.Add(Element(XmlConverterConstants.Contents.Num, article.Number == null ? "UNKNOWN" : article.Number.Designation));
 
             foreach (var paragraph in article.Paragraphs)
                 articleElement.Add(ParagraphXmlConverter.ToXml(paragraph));

@@ -15,8 +15,9 @@ namespace Saga.Core.Services.EntryIntoForce
         internal static void Propagate(
             LegalDocument document, EntryDates general, EntryIntoForceExceptionMap exceptions)
         {
-            Paint(document.RootPart, general, exceptions,
-                new HashSet<BaseEntity>(ReferenceEqualityComparer.Instance));
+            var visited = new HashSet<BaseEntity>(ReferenceEqualityComparer.Instance);
+            foreach (var part in document.Parts)
+                Paint(part, general, exceptions, visited);
         }
 
         private static void Paint(

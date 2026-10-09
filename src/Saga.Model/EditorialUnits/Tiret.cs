@@ -54,11 +54,7 @@ namespace Saga.Model.EditorialUnits
             return depth;
         }
 
-        protected override string GetLocalIdSegment()
-        {
-            var prefix = PrefixForDepth(Depth());
-            return string.IsNullOrEmpty(Number?.Value) ? prefix : $"{prefix}_{Number.Value}";
-        }
+        protected override string GetLocalIdSegment() => EIdSegment.Of(PrefixForDepth(Depth()), Number?.Designation);
 
         public override string ToString()
         {

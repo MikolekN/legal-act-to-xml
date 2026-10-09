@@ -133,7 +133,7 @@ internal static class SentenceSplitReport
         KindStatistics stats,
         Dictionary<BoundaryCategory, List<string>> samples)
     {
-        foreach (var unit in EditorialUnitWalker.SelfAndDescendants(document.RootPart, includeAmendmentContent: true))
+        foreach (var unit in document.Parts.SelectMany(part => EditorialUnitWalker.SelfAndDescendants(part, includeAmendmentContent: true)))
         {
             if (unit is not IHasTextSegments holder)
                 continue;

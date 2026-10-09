@@ -2,6 +2,7 @@ using Saga.Core.Helpers;
 using Saga.Core.Services.Classify;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
+using Saga.Model.SystematizingUnits;
 using Serilog;
 
 namespace Saga.Core.Services.Parsing.Builders
@@ -52,6 +53,10 @@ namespace Saga.Core.Services.Parsing.Builders
         private Point? _currentPoint;
         private Letter? _currentLetter;
         private int _currentTiretIndex;
+
+        // Otwarte jednostki systematyzacyjne cytatu, od najwyższej — artykuł trafia do najgłębszej.
+        private readonly List<BaseEntity> _openUnits = new();
+        private ISystematizingUnit? _pendingHeading;
 
         /// <summary>
         /// Buduje AmendmentContent z listy zebranych akapitów nowelizacji.
@@ -193,7 +198,21 @@ namespace Saga.Core.Services.Parsing.Builders
 
         private void ProcessAmendmentParagraph(CollectedAmendmentParagraph para, AmendmentContent content)
         {
+            if (TryEnterSystematizingUnit(para.Text, content))
+                return;
+
             var (entityKind, overriddenStyleKind) = ClassifyWithStyleOverride(para);
+
+            // Tytuł jednostki (§ 62 ust. 2 ZTP): pierwszy akapit po oznaczeniu, jeśli nie jest jednostką redakcyjną.
+            if (_pendingHeading is { } titled)
+            {
+                _pendingHeading = null;
+                if (!IsStructural(entityKind) && entityKind != AmendmentEntityKind.CommonPart)
+                {
+                    titled.Heading = para.Text.Trim();
+                    return;
+                }
+            }
 
             BuildByKind(entityKind, para, content);
 
@@ -277,7 +296,16 @@ namespace Saga.Core.Services.Parsing.Builders
             var paragraph = ParsingFactories.CreateParagraphFromArticleTail(article, articleTail);
             article.Paragraphs.Add(paragraph);
 
-            content.Articles.Add(article);
+            if (_openUnits.Count > 0)
+            {
+                var subchapter = OpenSubchapter();
+                article.Parent = subchapter;
+                subchapter.Articles.Add(article);
+            }
+            else
+            {
+                content.Articles.Add(article);
+            }
 
             _currentArticle = article;
             _currentParagraph = paragraph;
@@ -477,6 +505,129 @@ namespace Saga.Core.Services.Parsing.Builders
         }
 
         // ============================================================
+        // Jednostki systematyzacyjne w cytacie
+        // ============================================================
+
+        /// <summary>
+        /// Oznaczenie jednostki („Rozdział 9a”) otwiera ją w cytacie: najwyższa trafia do treści nowelizacji,
+        /// niższa — pod otwartą jednostkę wyższą, z poziomami niejawnymi pomiędzy.
+        /// </summary>
+        private bool TryEnterSystematizingUnit(string text, AmendmentContent content)
+        {
+            var designation = text.Trim();
+            if (ParagraphClassifier.MatchSystematizingRegex(designation) is not { } kind
+                || ParagraphClassifier.ParseSystematizingNumber(kind, designation) is not { } number)
+                return false;
+
+            var unit = NewUnit(Rank(kind));
+            unit.Number = number;
+            ((ISystematizingUnit)unit).IsImplicit = false;
+
+            while (_openUnits.Count > 0 && Rank(_openUnits[^1]) >= Rank(unit))
+                _openUnits.RemoveAt(_openUnits.Count - 1);
+
+            if (_openUnits.Count == 0)
+                content.SystematizingUnits.Add(unit);
+            else
+                Attach(_openUnits[^1], unit);
+
+            _openUnits.Add(unit);
+            _pendingHeading = (ISystematizingUnit)unit;
+            _currentArticle = null;
+            _currentParagraph = null;
+            _currentPoint = null;
+            _currentLetter = null;
+            _currentTiretIndex = 0;
+
+            Log.Debug("AmendmentBuilder: jednostka systematyzacyjna {Kind} {Number}", kind, number.Value);
+            return true;
+        }
+
+        /// <summary>Oddział, do którego trafia artykuł — pod najgłębszą otwartą jednostką, w razie potrzeby niejawny.</summary>
+        private Subchapter OpenSubchapter()
+        {
+            var current = _openUnits[^1];
+            while (current is not Subchapter)
+            {
+                if (LastChild(current) is { } last && ((ISystematizingUnit)last).IsImplicit)
+                {
+                    current = last;
+                    continue;
+                }
+
+                var created = NewUnit(Rank(current) + 1);
+                AddChild(current, created);
+                current = created;
+            }
+            return (Subchapter)current;
+        }
+
+        private static void Attach(BaseEntity parent, BaseEntity child)
+        {
+            var current = parent;
+            while (Rank(current) + 1 < Rank(child))
+            {
+                var implicitUnit = NewUnit(Rank(current) + 1);
+                AddChild(current, implicitUnit);
+                current = implicitUnit;
+            }
+            AddChild(current, child);
+        }
+
+        private static void AddChild(BaseEntity parent, BaseEntity child)
+        {
+            child.Parent = parent;
+            switch (parent)
+            {
+                case Part part: part.Books.Add((Book)child); break;
+                case Book book: book.Titles.Add((Title)child); break;
+                case Title title: title.Divisions.Add((Division)child); break;
+                case Division division: division.Chapters.Add((Chapter)child); break;
+                case Chapter chapter: chapter.Subchapters.Add((Subchapter)child); break;
+            }
+        }
+
+        private static BaseEntity? LastChild(BaseEntity unit) => unit switch
+        {
+            Part part => part.Books.LastOrDefault(),
+            Book book => book.Titles.LastOrDefault(),
+            Title title => title.Divisions.LastOrDefault(),
+            Division division => division.Chapters.LastOrDefault(),
+            Chapter chapter => chapter.Subchapters.LastOrDefault(),
+            _ => null,
+        };
+
+        private static int Rank(ParagraphKind kind) => kind switch
+        {
+            ParagraphKind.PartUnit => 0,
+            ParagraphKind.BookUnit => 1,
+            ParagraphKind.TitleUnit => 2,
+            ParagraphKind.DivisionUnit => 3,
+            ParagraphKind.ChapterUnit => 4,
+            _ => 5,
+        };
+
+        private static int Rank(BaseEntity unit) => unit switch
+        {
+            Part => 0,
+            Book => 1,
+            Title => 2,
+            Division => 3,
+            Chapter => 4,
+            _ => 5,
+        };
+
+        private static BaseEntity NewUnit(int rank) => rank switch
+        {
+            0 => new Part(),
+            1 => new Book(),
+            2 => new Title(),
+            3 => new Division(),
+            4 => new Chapter(),
+            _ => new Subchapter(),
+        };
+
+        // ============================================================
         // Helpers
         // ============================================================
 
@@ -494,6 +645,8 @@ namespace Saga.Core.Services.Parsing.Builders
             _currentPoint = null;
             _currentLetter = null;
             _currentTiretIndex = 0;
+            _openUnits.Clear();
+            _pendingHeading = null;
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Saga.Core.Services.Converters
             UnitLifecycleXml.Apply(paragraphElement, paragraph);
 
             if (!isImplicit)
-                paragraphElement.Add(Element(XmlConverterConstants.Contents.Num, paragraph.Number?.Value ?? "UNKNOWN"));
+                paragraphElement.Add(Element(XmlConverterConstants.Contents.Num, paragraph.Number?.Designation ?? "UNKNOWN"));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(paragraph.TextSegments, previousSentenceContext, textSectionElement);

@@ -26,8 +26,11 @@ namespace Saga.Core.Services.EntryIntoForce
             if (host is not IHasAmendments owner || owner.Amendment?.Content is not { } content)
                 return null;
 
+            // Artykuły cytowanego rozdziału („dodaje się rozdział 9a") stoją w jego wnętrzu.
+            var articles = content.Articles.Concat(content.SystematizingUnits
+                .SelectMany(unit => EditorialUnitWalker.SelfAndDescendants(unit, includeAmendmentContent: false).OfType<Article>()));
             if (scope.Article is not null &&
-                content.Articles.FirstOrDefault(a => Matches(a.Number?.Value, scope.Article)) is { } article)
+                articles.FirstOrDefault(a => Matches(a.Number?.Value, scope.Article)) is { } article)
                 return DescendFromArticle(article, scope);
 
             if (scope.Paragraph is not null &&

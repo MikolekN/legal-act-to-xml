@@ -80,6 +80,12 @@ namespace Saga.Model
         /// </summary>
         public List<ValidationMessage> ValidationMessages { get; set; } = new();
 
+        /// <summary>
+        /// Adres w akcie zmienianym, pod którym stoi jednostka cytowana w nowelizacji — początek jej eId
+        /// („art_68__ust_1" dla punktu dodawanego w art. 68 ust. 1). Pusty poza treścią nowelizacji.
+        /// </summary>
+        public string AddressAnchor { get; set; } = string.Empty;
+
         // Referencje do encji nadrzędnych (ułatwiają nawigację w modelu)
         public BaseEntity? Parent { get; set; }
         public Article? Article { get; set; }
@@ -92,52 +98,47 @@ namespace Saga.Model
         /// Lokalny segment identyfikatora (np. "art_10" albo "lit_a").
         /// Można nadpisać w klasach pochodnych, gdy format różni się.
         /// </summary>
-        protected virtual string GetLocalIdSegment()
-        {
-            if (string.IsNullOrEmpty(EIdPrefix)) return string.Empty;
-
-            // prefer specjalne pola
-            if (this is Letter l)
-            {
-                return string.IsNullOrEmpty(l.Number?.Value) ? EIdPrefix : $"{EIdPrefix}_{l.Number.Value}";
-            }
-
-            if (this is Tiret t)
-            {
-                return string.IsNullOrEmpty(t.Number?.Value) ? EIdPrefix : $"{EIdPrefix}_{t.Number.Value}";
-            }
-
-            if (!string.IsNullOrEmpty(Number?.Value))
-            {
-                return $"{EIdPrefix}_{Number.Value}";
-            }
-
-            return EIdPrefix;
-        }
+        protected virtual string GetLocalIdSegment() =>
+            string.IsNullOrEmpty(EIdPrefix) ? string.Empty : EIdSegment.Of(EIdPrefix, Number?.Designation);
 
         /// <summary>
         /// Hierarchiczne, stabilne i parsowalne Id (eId) budowane od korzenia w dół,
         /// używa separatora "__" zgodnie z założeniem (np. "art_10__ust_2__pkt_3").
+        /// eId jednostki redakcyjnej kończy się na artykule — ścieżka jednostek systematyzacyjnych
+        /// do niego nie wchodzi (ADR-0017); jednostka systematyzacyjna niesie ścieżkę swoich
+        /// jawnych przodków systematyzacyjnych. Jednostka cytowana w nowelizacji zaczyna się od adresu
+        /// celu w akcie zmienianym (<see cref="AddressAnchor"/> korzenia cytatu).
         /// </summary>
         public virtual string Id
         {
             get
             {
                 var parts = new List<string>();
+                var isEditorial = this is not ISystematizingUnit;
                 BaseEntity? current = this;
+                BaseEntity root = this;
                 while (current != null)
                 {
-                    if (current is ISystematizingUnit systematizingUnit && systematizingUnit.IsImplicit)
+                    root = current;
+                    if (current is ISystematizingUnit systematizingUnit)
                     {
-                        current = current.Parent;
-                        continue;
+                        if (isEditorial)
+                            break;
+
+                        if (systematizingUnit.IsImplicit)
+                        {
+                            current = current.Parent;
+                            continue;
+                        }
                     }
                     var seg = current.GetLocalIdSegment();
                     if (!string.IsNullOrEmpty(seg)) parts.Add(seg);
                     current = current.Parent;
                 }
+                if (current == null && root.AddressAnchor.Length > 0)
+                    parts.Add(root.AddressAnchor);
                 parts.Reverse();
-                return string.Join("__", parts);
+                return EIdSegment.Join(parts);
             }
         }
     }

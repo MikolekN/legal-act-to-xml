@@ -32,7 +32,7 @@ namespace Saga.Core.Helpers
             return total > 0 && ToRoman(total) == s ? total : null;
         }
 
-        /// <summary>Zamienia liczbę na kanoniczną cyfrę rzymską (do normalizacji eId jednostek wyższych).</summary>
+        /// <summary>Zamienia liczbę na kanoniczną cyfrę rzymską (RomanToInt odrzuca zapis niekanoniczny, np. „IIII").</summary>
         internal static string ToRoman(int number)
         {
             if (number <= 0 || number >= 4000)

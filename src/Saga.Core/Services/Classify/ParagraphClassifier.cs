@@ -100,21 +100,36 @@ namespace Saga.Core.Services.Classify
         // Wzorce ZAKOTWICZONE na całej linii ($): marker jednostki stoi w osobnym wierszu (§ 60), więc
         // proza „Rozdział 5 stosuje się…"/„Tytuł V wprowadza się…" NIE jest brana za nagłówek. Dozwolona
         // końcowa kropka/przecinek. Wersaliki to sygnał ZTP; dopuszczamy też kapitalizację tytułową
-        // (nie IgnoreCase — słowo małą literą to proza). Numer wyższych jednostek: cyfra rzymska
-        // (opcjonalny sufiks litery jednostki wtrąconej, „IVa") lub liczebnik słowny; rozstrzyga walidacja,
-        // więc „Część majątku…" nie zostanie uznane za jednostkę. Rozdział/Oddział: cyfra arabska + sufiks.
+        // (nie IgnoreCase — słowo małą literą to proza; uznaje je tylko styl oznaczenia). Numer wyższych
+        // jednostek: cyfra rzymska (opcjonalny sufiks litery jednostki wtrąconej, „IVa") lub liczebnik
+        // słowny; rozstrzyga walidacja, więc „Część majątku…" nie zostanie uznane za jednostkę.
+        // Rozdział/Oddział: cyfra arabska + sufiks. Odczyt tolerancyjny (spoza § 62 ZTP, z korpusu):
+        // rozdział i oddział rzymski (KK, KW, KP), tytuł i dział z sufiksem wersalikiem („IIIA") albo cyfrą
+        // arabską. Za numerem: indeks górny „[1]" (część oznaczenia) i znacznik odnośnika „[5)]" (pomijany);
+        // sąsiadujące w DOCX indeks i odnośnik zlewają się w jeden nawias „[1 15)]".
+        private const string DesignationEnd = @"(?:\[(?<sup>\d+[a-z]*)(?:\s+[^\]]*\))?\])?(?:\[[^\]]*\)\])?\s*[.,]?\s*$";
+        private const string PartOrBookNumber = @"(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)";
+        private const string TitleOrDivisionNumber = @"(?<n>[IVXLCDM]+[A-Za-z]?|\d+[a-z]?|\p{L}+(?:\s+\p{L}+)?)";
+        private const string ChapterOrSubchapterNumber = @"(?<n>\d+[a-zA-Z]{0,3}|[IVXLCDM]+[a-z]?)";
+
         internal static readonly Regex PartUnitPattern = new(
-            @"^(?:CZĘŚĆ|Część)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)\s*[.,]?\s*$", RegexOptions.Compiled);
+            @"^(?:CZĘŚĆ|Część)\s+" + PartOrBookNumber + DesignationEnd, RegexOptions.Compiled);
         internal static readonly Regex BookUnitPattern = new(
-            @"^(?:KSIĘGA|Księga)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)\s*[.,]?\s*$", RegexOptions.Compiled);
+            @"^(?:KSIĘGA|Księga)\s+" + PartOrBookNumber + DesignationEnd, RegexOptions.Compiled);
         internal static readonly Regex TitleUnitPattern = new(
-            @"^(?:TYTUŁ|Tytuł)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)\s*[.,]?\s*$", RegexOptions.Compiled);
+            @"^(?:TYTUŁ|Tytuł)\s+" + TitleOrDivisionNumber + DesignationEnd, RegexOptions.Compiled);
         internal static readonly Regex DivisionUnitPattern = new(
-            @"^(?:DZIAŁ|Dział)\s+(?<n>[IVXLCDM]+[a-z]?|\p{L}+(?:\s+\p{L}+)?)\s*[.,]?\s*$", RegexOptions.Compiled);
+            @"^(?:DZIAŁ|Dział)\s+" + TitleOrDivisionNumber + DesignationEnd, RegexOptions.Compiled);
         internal static readonly Regex ChapterUnitPattern = new(
-            @"^(?:ROZDZIAŁ|Rozdział)\s+(?<n>\d+[a-zA-Z]{0,3})\s*[.,]?\s*$", RegexOptions.Compiled);
+            @"^(?:ROZDZIAŁ|Rozdział)\s+" + ChapterOrSubchapterNumber + DesignationEnd, RegexOptions.Compiled);
         internal static readonly Regex SubchapterUnitPattern = new(
-            @"^(?:ODDZIAŁ|Oddział)\s+(?<n>\d+[a-zA-Z]{0,3})\s*[.,]?\s*$", RegexOptions.Compiled);
+            @"^(?:ODDZIAŁ|Oddział)\s+" + ChapterOrSubchapterNumber + DesignationEnd, RegexOptions.Compiled);
+
+        // Typy stylów szablonu dla jednostek systematyzacyjnych (wartości ClassificationResult.StyleType).
+        internal const string ChapterOrSubchapterStyle = "ROZDZ_ODDZ";
+        internal const string TitleOrDivisionStyle = "TYT_DZ";
+        internal const string PartOrBookStyle = "CZ_KS";
+        internal const string UnitHeadingStyle = "PRZEDM";
 
         // ============================================================
         // Implementacja IParagraphClassifier
@@ -139,7 +154,9 @@ namespace Saga.Core.Services.Classify
             ParagraphKind? styleKind = isAmend ? null : MapStyleToKind(styleType);
 
             // Sygnał syntaktyczny (regex)
-            ParagraphKind? syntacticKind = MatchRegex(text);
+            // Słowo kluczowe małą literą („dział II") to oznaczenie tylko przy stylu oznaczenia.
+            ParagraphKind? syntacticKind = MatchRegex(text)
+                ?? (IsDesignationStyle(styleType) ? MatchSystematizingRegex(CapitalizeFirst(text)) : null);
 
             return BuildResult(input, styleType, isAmend, styleKind, syntacticKind);
         }
@@ -169,6 +186,14 @@ namespace Saga.Core.Services.Classify
                 styleId.StartsWith("ZZ", StringComparison.OrdinalIgnoreCase) ||
                 styleId.StartsWith("Z_", StringComparison.OrdinalIgnoreCase))
                 return "AMENDMENT";
+
+            // Jednostki systematyzacyjne: styl oznaczenia wskazuje rodzinę dwóch jednostek (konkretną
+            // rozstrzyga treść), styl CZĘŚĆ(KSIĘGA) służy też tytułowi części i księgi.
+            if (styleId.StartsWith("ROZDZODDZOZN", StringComparison.OrdinalIgnoreCase)) return ChapterOrSubchapterStyle;
+            if (styleId.StartsWith("TYTDZOZN", StringComparison.OrdinalIgnoreCase)) return TitleOrDivisionStyle;
+            if (styleId.StartsWith("CZKSIGA", StringComparison.OrdinalIgnoreCase)) return PartOrBookStyle;
+            if (styleId.StartsWith("ROZDZODDZPRZEDM", StringComparison.OrdinalIgnoreCase) ||
+                styleId.StartsWith("TYTDZPRZEDM", StringComparison.OrdinalIgnoreCase)) return UnitHeadingStyle;
 
             if (styleId.StartsWith("ART", StringComparison.OrdinalIgnoreCase)) return "ART";
             if (styleId.StartsWith("UST", StringComparison.OrdinalIgnoreCase)) return "UST";
@@ -259,7 +284,7 @@ namespace Saga.Core.Services.Classify
             }
             else if (styleKind != null && syntacticKind != null)
             {
-                if (styleKind == syntacticKind)
+                if (styleKind == syntacticKind || InStyleFamily(styleType, syntacticKind.Value))
                 {
                     // Oba sygnały zgodne
                     kind = syntacticKind.Value;
@@ -289,8 +314,8 @@ namespace Saga.Core.Services.Classify
             }
             else
             {
-                // Tylko styl — artykuł wymaga sygnatury tekstowej
-                if (styleKind == ParagraphKind.Article)
+                // Tylko styl — artykuł i oznaczenie jednostki systematyzacyjnej wymagają sygnatury tekstowej
+                if (styleKind == ParagraphKind.Article || IsDesignationStyle(styleType))
                 {
                     kind = ParagraphKind.Unknown;
                     confidence = 1;
@@ -340,8 +365,27 @@ namespace Saga.Core.Services.Classify
                 "PKT" => ParagraphKind.Point,
                 "LIT" => ParagraphKind.Letter,
                 "TIR" => ParagraphKind.Tiret,
+                ChapterOrSubchapterStyle => ParagraphKind.ChapterUnit,
+                TitleOrDivisionStyle => ParagraphKind.DivisionUnit,
+                PartOrBookStyle => ParagraphKind.PartUnit,
+                UnitHeadingStyle => ParagraphKind.UnitHeading,
                 _ => null,
             };
+
+        private static bool IsDesignationStyle(string? styleType) =>
+            styleType is ChapterOrSubchapterStyle or TitleOrDivisionStyle or PartOrBookStyle;
+
+        internal static bool IsSystematizingStyle(string? styleType) =>
+            IsDesignationStyle(styleType) || styleType == UnitHeadingStyle;
+
+        /// <summary>Styl oznaczenia wskazuje rodzinę dwóch jednostek — którą z nich, rozstrzyga treść.</summary>
+        private static bool InStyleFamily(string? styleType, ParagraphKind kind) => styleType switch
+        {
+            ChapterOrSubchapterStyle => kind is ParagraphKind.ChapterUnit or ParagraphKind.SubchapterUnit,
+            TitleOrDivisionStyle => kind is ParagraphKind.TitleUnit or ParagraphKind.DivisionUnit,
+            PartOrBookStyle => kind is ParagraphKind.PartUnit or ParagraphKind.BookUnit,
+            _ => false,
+        };
 
         private static ParagraphKind? MatchRegex(string text)
         {
@@ -361,39 +405,60 @@ namespace Saga.Core.Services.Classify
         /// Rozpoznaje jednostkę systematyzacyjną. Dla jednostek wyższych (Część/Księga/Tytuł/Dział)
         /// wymaga poprawnego numeru rzymskiego lub liczebnika słownego; Rozdział/Oddział — arabskiego.
         /// </summary>
-        private static ParagraphKind? MatchSystematizingRegex(string text)
+        internal static ParagraphKind? MatchSystematizingRegex(string text)
         {
-            if (MatchesHigherUnit(PartUnitPattern, text)) return ParagraphKind.PartUnit;
-            if (MatchesHigherUnit(BookUnitPattern, text)) return ParagraphKind.BookUnit;
-            if (MatchesHigherUnit(TitleUnitPattern, text)) return ParagraphKind.TitleUnit;
-            if (MatchesHigherUnit(DivisionUnitPattern, text)) return ParagraphKind.DivisionUnit;
-            if (ChapterUnitPattern.IsMatch(text)) return ParagraphKind.ChapterUnit;
-            if (SubchapterUnitPattern.IsMatch(text)) return ParagraphKind.SubchapterUnit;
+            foreach (var kind in new[] { ParagraphKind.PartUnit, ParagraphKind.BookUnit, ParagraphKind.TitleUnit,
+                         ParagraphKind.DivisionUnit, ParagraphKind.ChapterUnit, ParagraphKind.SubchapterUnit })
+            {
+                if (ParseSystematizingNumber(kind, text, capitalize: false) != null)
+                    return kind;
+            }
             return null;
         }
 
-        private static bool MatchesHigherUnit(Regex pattern, string text)
+        private static Regex? PatternFor(ParagraphKind kind) => kind switch
         {
-            var m = pattern.Match(text);
-            return m.Success && ParseHigherUnitToken(m.Groups["n"].Value) != null;
-        }
+            ParagraphKind.PartUnit => PartUnitPattern,
+            ParagraphKind.BookUnit => BookUnitPattern,
+            ParagraphKind.TitleUnit => TitleUnitPattern,
+            ParagraphKind.DivisionUnit => DivisionUnitPattern,
+            ParagraphKind.ChapterUnit => ChapterUnitPattern,
+            ParagraphKind.SubchapterUnit => SubchapterUnitPattern,
+            _ => null,
+        };
+
+        private static string CapitalizeFirst(string text) =>
+            text.Length > 0 && char.IsLower(text[0]) ? char.ToUpperInvariant(text[0]) + text[1..] : text;
 
         /// <summary>
-        /// Parsuje numer jednostki wyższej: cyfra rzymska lub liczebnik słowny, z opcjonalnym sufiksem
-        /// litery jednostki wtrąconej nowelizacją („IVa"). Zwraca wartość liczbową i sufiks; null gdy nie-numer.
+        /// Parsuje numer jednostki: cyfry arabskie z sufiksem, cyfra rzymska (opcjonalnie z sufiksem litery
+        /// jednostki wtrąconej — „IVa", tolerancyjnie „IIIA") albo liczebnik słowny. Zwraca wartość liczbową
+        /// i sufiks jak w tekście; null gdy to nie numer.
         /// </summary>
-        private static (int numeric, string suffix)? ParseHigherUnitToken(string token)
+        private static (int numeric, string suffix)? ParseDesignationToken(string token, bool allowUppercaseSuffix)
         {
+            int digits = 0;
+            while (digits < token.Length && char.IsDigit(token[digits])) digits++;
+            if (digits > 0)
+                return int.TryParse(token[..digits], out var arabic) ? (arabic, token[digits..]) : null;
+
             var n = RomanNumeralConverter.RomanToInt(token);
             if (n != null) return (n.Value, string.Empty);
 
             if (PolishNumerals.TryParseOrdinal(token, out var wordValue))
                 return (wordValue, string.Empty);
 
+            // Sufiks: małe litery, a dla tytułu i działu także wersalik spoza cyfr rzymskich („IIIA" = III + A).
             int b = token.Length;
-            while (b > 0 && char.IsLower(token[b - 1])) b--;
+            while (b > 0 && (char.IsLower(token[b - 1])
+                             || (allowUppercaseSuffix && char.IsUpper(token[b - 1]) && !"IVXLCDM".Contains(token[b - 1]))))
+                b--;
             if (b > 0 && b < token.Length)
             {
+                // Sufiks mieszany („IvA" = I + vA) to literówka w liczbie rzymskiej: IVA = IV + A.
+                if (token[b..].Any(char.IsLower) && token[b..].Any(char.IsUpper))
+                    return token.Any(char.IsLower) ? ParseDesignationToken(token.ToUpperInvariant(), allowUppercaseSuffix) : null;
+
                 var baseNum = RomanNumeralConverter.RomanToInt(token[..b]);
                 if (baseNum != null) return (baseNum.Value, token[b..]);
             }
@@ -401,52 +466,72 @@ namespace Saga.Core.Services.Classify
         }
 
         /// <summary>
-        /// Wyodrębnia numer jednostki systematyzacyjnej jako EntityNumber. Dla jednostek wyższych
-        /// Value pozostaje oryginalnym oznaczeniem (rzymskim/słownym) — zasada „nie przeinaczyć" —
-        /// a NumericPart niesie wartość liczbową do kontroli ciągłości. Rozdział/Oddział: numer arabski.
+        /// Wyodrębnia numer jednostki systematyzacyjnej jako EntityNumber. Value (źródło eId) to liczba
+        /// arabska z sufiksem jak w tekście — także dla oznaczenia rzymskiego i słownego (ADR-0018);
+        /// RawValue zostaje oznaczeniem z aktu, Superscript — indeksem górnym (ADR-0019).
         /// </summary>
-        public static EntityNumber? ParseSystematizingNumber(ParagraphKind kind, string text)
-        {
-            switch (kind)
-            {
-                case ParagraphKind.ChapterUnit:
-                case ParagraphKind.SubchapterUnit:
-                    var pattern = kind == ParagraphKind.ChapterUnit ? ChapterUnitPattern : SubchapterUnitPattern;
-                    var am = pattern.Match(text);
-                    if (!am.Success) return null;
-                    var token = am.Groups["n"].Value;
-                    int di = 0;
-                    while (di < token.Length && char.IsDigit(token[di])) di++;
-                    var digits = token[..di];
-                    return new EntityNumber
-                    {
-                        Value = token, RawValue = token, LexicalPart = token[di..],
-                        NumericPart = int.TryParse(digits, out var n) ? n : 0,
-                    };
+        public static EntityNumber? ParseSystematizingNumber(ParagraphKind kind, string text) =>
+            ParseSystematizingNumber(kind, text, capitalize: true);
 
-                default:
-                    var higher = kind switch
-                    {
-                        ParagraphKind.PartUnit => PartUnitPattern,
-                        ParagraphKind.BookUnit => BookUnitPattern,
-                        ParagraphKind.TitleUnit => TitleUnitPattern,
-                        ParagraphKind.DivisionUnit => DivisionUnitPattern,
-                        _ => null,
-                    };
-                    if (higher == null) return null;
-                    var hm = higher.Match(text);
-                    if (!hm.Success) return null;
-                    var parsed = ParseHigherUnitToken(hm.Groups["n"].Value);
-                    if (parsed == null) return null;
-                    // Value = kanoniczna cyfra rzymska (znormalizowana z liczebnika/wielkości liter) + sufiks,
-                    // by eId był spójny („KSIĘGA PIERWSZA" i „KSIĘGA I" → ks_I).
-                    var canonical = RomanNumeralConverter.ToRoman(parsed.Value.numeric) + parsed.Value.suffix;
-                    return new EntityNumber
-                    {
-                        Value = canonical, RawValue = hm.Groups["n"].Value,
-                        NumericPart = parsed.Value.numeric, LexicalPart = parsed.Value.suffix,
-                    };
-            }
+        private static EntityNumber? ParseSystematizingNumber(ParagraphKind kind, string text, bool capitalize)
+        {
+            var m = PatternFor(kind)?.Match(capitalize ? CapitalizeFirst(text.Trim()) : text);
+            if (m is not { Success: true }) return null;
+
+            var token = m.Groups["n"].Value;
+            if (IsNamedDesignation(kind, token))
+                return new EntityNumber { Value = NamedUnitValue, RawValue = token };
+
+            var parsed = ParseDesignationToken(token,
+                allowUppercaseSuffix: kind is ParagraphKind.TitleUnit or ParagraphKind.DivisionUnit);
+            if (parsed == null) return null;
+
+            // „KSIĘGA PIERWSZA" i „KSIĘGA I" → Value "1" → ten sam eId ksi_1.
+            return new EntityNumber
+            {
+                Value = $"{parsed.Value.numeric}{parsed.Value.suffix}", RawValue = token,
+                NumericPart = parsed.Value.numeric, LexicalPart = parsed.Value.suffix,
+                Superscript = m.Groups["sup"].Success ? m.Groups["sup"].Value : string.Empty,
+            };
+        }
+
+        /// <summary>
+        /// Value jednostki nazwanej bez numeru („CZĘŚĆ OGÓLNA") przed nadaniem kolejnego numeru tymczasowego
+        /// (TMP1, TMP2… — eId tymczasowy z decyzji właściciela, do czasu ustaleń z autorami schematu).
+        /// </summary>
+        public const string NamedUnitValue = "TMP";
+
+        /// <summary>
+        /// Jednostki nazwane bez numeru — zamknięta lista z korpusu: części KK, KW i KKW, tytuł wstępny KPC.
+        /// Dowolny wyraz („Część budżetowa") pozostaje prozą.
+        /// </summary>
+        private static bool IsNamedDesignation(ParagraphKind kind, string token) => kind switch
+        {
+            ParagraphKind.PartUnit => token.ToUpperInvariant() is "OGÓLNA" or "SZCZEGÓLNA" or "WOJSKOWA",
+            ParagraphKind.TitleUnit => token.ToUpperInvariant() is "WSTĘPNY",
+            _ => false,
+        };
+
+        /// <summary>
+        /// Odczyt tolerancyjny oznaczenia (spoza § 62 ZTP) — powód dla komunikatu na jednostce albo null.
+        /// </summary>
+        public static string? ToleratedDesignationReason(ParagraphKind kind, string text, EntityNumber number)
+        {
+            var raw = number.RawValue ?? string.Empty;
+            var arabic = raw.Length > 0 && char.IsDigit(raw[0]);
+            var lowerUnits = kind is ParagraphKind.ChapterUnit or ParagraphKind.SubchapterUnit;
+
+            if (text.TrimStart() is [var first, ..] && char.IsLower(first))
+                return "Słowo kluczowe jednostki małą literą — oznaczenie uznane dzięki stylowi oznaczenia.";
+            if (lowerUnits && !arabic)
+                return $"Rozdział/oddział oznaczony cyframi rzymskimi („{raw}\"); § 62 ust. 1 ZTP wymaga arabskich.";
+            if (!lowerUnits && arabic)
+                return $"Jednostka wyższa oznaczona cyframi arabskimi („{raw}\"); § 62 ust. 1 ZTP wymaga rzymskich.";
+            if (!lowerUnits && !arabic && number.LexicalPart.Any(char.IsUpper) && raw.Any(char.IsLower))
+                return $"Mała litera w liczbie rzymskiej („{raw}\") — odczytane jako {raw.ToUpperInvariant()}.";
+            if (!lowerUnits && number.LexicalPart.Any(char.IsUpper))
+                return $"Sufiks oznaczenia wersalikiem („{raw}\").";
+            return null;
         }
 
         private static EntityNumber? ParseNumberForKind(ParagraphKind kind, string text) =>
