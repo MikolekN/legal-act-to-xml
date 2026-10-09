@@ -24,9 +24,22 @@ namespace Saga.Core.Tests
                 lines.Select(text => new DocumentBlock { Text = text }).ToList()));
             var act = xml.Descendants().First(e => e.Name.LocalName == "ustawa");
 
-            return SchemaPl.ValidateActBody(act)
+            return SchemaPl.Validator.ValidateActBody(act)
                 .Where(problem => !KnownGlobalDeviations.Any(problem.EndsWith))
                 .ToList();
+        }
+
+        [SchemaPlFact]
+        public void ActBodyValidation_ReportsAnArticleStandingDirectlyInAChapter()
+        {
+            // Walidacja częściowa nie może przechodzić „z pustego": rozdział nie trzyma artykułów.
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(
+                new[] { "Rozdział 1", "Przepisy ogólne", "Art. 1. Treść." }.Select(text => new DocumentBlock { Text = text }).ToList()));
+            var act = xml.Elements().First();
+            var subchapter = act.Descendants().Single(e => e.Name.LocalName == "oddzial-n");
+            subchapter.ReplaceWith(subchapter.Elements());
+
+            Assert.Contains(SchemaPl.Validator.ValidateActBody(act), problem => problem.Contains("'artykul'"));
         }
 
         [SchemaPlFact]

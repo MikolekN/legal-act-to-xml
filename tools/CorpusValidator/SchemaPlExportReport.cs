@@ -1,6 +1,7 @@
 using System.Xml.Linq;
 using Saga.Core;
 using Saga.Core.Services;
+using Saga.Core.Services.Converters;
 using Saga.Model;
 
 namespace CorpusValidator;
@@ -41,12 +42,13 @@ internal static class SchemaPlExportReport
 
 		Directory.CreateDirectory(outputDirectory);
 
-		var validator = SchemaValidator.TryLoad(out var schemaSkipReason);
+		var validator = SchemaPlValidator.TryLoad(Directory.GetCurrentDirectory(), out var schemaSkipReason);
 
 		var files = EntryIntoForceReport.EnumerateDistinct(corpusRoot).ToList();
 		int converted = 0, conversionErrors = 0, undated = 0, datedTotal = 0, foreignDates = 0;
-		int schemaValid = 0, schemaInvalid = 0;
+		int schemaValid = 0, schemaInvalid = 0, bodyValid = 0, bodyInvalid = 0;
 		var schemaProblems = new Dictionary<string, (int Hits, HashSet<string> Files, string Sample)>();
+		var bodyProblems = new Dictionary<string, (int Hits, HashSet<string> Files, string Sample)>();
 		var failures = new List<string>();
 		var withUndated = new List<string>();
 		var withForeign = new List<string>();
@@ -76,8 +78,14 @@ internal static class SchemaPlExportReport
 				converted++;
 
 				if (validator is not null)
+				{
 					CollectSchemaProblems(validator.Validate(xml), name,
 						ref schemaValid, ref schemaInvalid, schemaProblems);
+					// Pełna walidacja staje na nagłówku aktu — treść sprawdza się osobno.
+					if (xml.Elements().First() is var act && SchemaPlValidator.HasBody(act))
+						CollectSchemaProblems(validator.ValidateActBody(act), name,
+							ref bodyValid, ref bodyInvalid, bodyProblems);
+				}
 
 				var allowed = AllowedDates(document);
 				var (missing, dated, foreign) = Inspect(xml, allowed);
@@ -118,6 +126,7 @@ internal static class SchemaPlExportReport
 			Console.WriteLine($"4. Zgodnych ze schematem:        {schemaValid,6} / {converted}   niezgodnych: {schemaInvalid}");
 			Console.WriteLine($"   Schemat: {validator.SchemaPath}");
 			Console.WriteLine("   (informacyjnie — bramką twardą stanie się, gdy eksport przestanie łamać schemat)");
+			Console.WriteLine($"5. Treść aktu zgodna (bez nagł.): {bodyValid,6} / {bodyValid + bodyInvalid}   niezgodnych: {bodyInvalid}   (dokumenty z treścią)");
 		}
 
 		Console.WriteLine();
@@ -125,7 +134,8 @@ internal static class SchemaPlExportReport
 		Dump("BŁĘDY KONWERSJI", failures, 40);
 		Dump("PLIKI Z ELEMENTAMI BEZ DATY", withUndated, 40);
 		Dump("PLIKI Z DATĄ SPOZA KLAUZULI", withForeign, 40);
-		DumpSchemaProblems(schemaProblems);
+		DumpSchemaProblems("RODZAJE NIEZGODNOŚCI ZE SCHEMATEM", schemaProblems);
+		DumpSchemaProblems("RODZAJE NIEZGODNOŚCI TREŚCI AKTU (BEZ NAGŁÓWKA)", bodyProblems);
 
 		return conversionErrors == 0 && foreignDates == 0 ? 0 : 2;
 	}
@@ -151,7 +161,7 @@ internal static class SchemaPlExportReport
 
 		foreach (var problem in problems)
 		{
-			var shape = SchemaValidator.Shape(problem);
+			var shape = SchemaPlValidator.Shape(problem);
 			if (!kinds.TryGetValue(shape, out var entry))
 				entry = (0, new HashSet<string>(), problem);
 
@@ -163,13 +173,13 @@ internal static class SchemaPlExportReport
 	private static string Shorten(string text, int limit) =>
 		text.Length > limit ? text[..limit] + "…" : text;
 
-	private static void DumpSchemaProblems(
+	private static void DumpSchemaProblems(string heading,
 		Dictionary<string, (int Hits, HashSet<string> Files, string Sample)> kinds)
 	{
 		if (kinds.Count == 0)
 			return;
 
-		Console.WriteLine($"--- RODZAJE NIEZGODNOŚCI ZE SCHEMATEM ({kinds.Count}) ---");
+		Console.WriteLine($"--- {heading} ({kinds.Count}) ---");
 
 		foreach (var (_, data) in kinds.OrderByDescending(k => k.Value.Files.Count))
 			Console.WriteLine($"  [{data.Files.Count} plików, {data.Hits} wystąpień] {Shorten(data.Sample, 220)}");
