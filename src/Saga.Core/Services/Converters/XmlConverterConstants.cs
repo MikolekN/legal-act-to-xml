@@ -213,7 +213,12 @@ namespace Saga.Core.Services.Converters
         {
             internal const string Element = "podpisy";
             internal const string IssuingAuthority = "organ-wydajacy";
-            internal const string SigningAuthority = "organ-podpisujący";
+            internal const string SigningAuthority = "organ-podpisujacy";
+            internal const string Person = "osoba";
+            internal const string GivenName = "imie";
+            internal const string Surname = "nazwisko";
+            internal const string Signing = "podpisujacy";
+            internal static readonly XName PersonGUID = GuidNamespace + "osobaGUID";
             internal const string TextInAgreement = "tekst-w-porozumieniu";
             internal const string AuthorityInAgreement = "organ-w-porozumieniu";
         }

@@ -25,6 +25,9 @@ namespace Saga.Core.Services
             foreach (var part in document.Parts)
                 actElement.Add(SystematizingUnitXmlConverter.ActLevel(part));
 
+            if (document.Signature is { } signature)
+                actElement.Add(SignatureXmlConverter.ToXml(signature));
+
             TemporalDataXmlConverter.AssignPeriods(actElement, document);
 
             if (ContainsMathML(rootElement))
@@ -133,6 +136,9 @@ namespace Saga.Core.Services
             var nazwa = Element(XmlConverterConstants.Metadata.Authorities.Authority.Name, "UNKNOWN");
             organ.Add(nazwa);
             organy.Add(organ);
+
+            if (document.Signature is { } signature)
+                organy.Add(SignatureXmlConverter.ToAuthority(signature));
 
             metaElement.Add(organy);
 

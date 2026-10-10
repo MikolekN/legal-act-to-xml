@@ -38,6 +38,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `TextSegment.cs` / `TextSegmentType.cs` | Segmenty tekstu (zdania) wewnątrz jednostek redakcyjnych |
 | `ValidationMessage.cs` | Komunikaty diagnostyczne (Info/Warning/Error/Critical) |
 | `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje) |
+| `ActSignature.cs` | Formuła podpisu zamykająca akt: organ i osoba, jak stoją w akcie (`LegalDocument.Signature`) |
 | `CommonPartType.cs` | Enum: `Intro` / `WrapUp` |
 | `LegalActType.cs` | Enum rodzaju aktu: `Statute`, `Bill`, `Regulation`, `Code`, `Ordinance`, `RegulatoryImpactAssessment`, `AmendingStatute`, `Announcement`, `Resolution`, `ExecutiveOrder`, `LocalLegalAct` |
 | `DocumentClassificationResult.cs` | Wynik klasyfikacji dokumentu (rodzaj aktu, pewność, sygnały, uzasadnienie) |
@@ -408,6 +409,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`AmendmentFinalizer`** | Finalizator nowelizacji — wykrywa typ operacji (Modification/Insertion/Repeal), tworzy obiekt `Amendment`, łączy z JournalInfo, przypisuje do encji-właściciela. Ostrzega, gdy jednostek treści nie da się przypisać wyliczonym celom. |
 | **`AmendmentTargetPairing`** | Przypisuje jednostki treści nowelizacji jej celom — po oznaczeniu, a przy rozjeździe oznaczeń i równej liczbie po kolejności. Korzystają z niego eksport (komenda na cel) i walidacja finalizatora. |
 | **`CommonPartPlacement`** | Rozstrzyga część wspólną, po której przychodzi kolejna pozycja tego samego wyliczenia: zamyka niższe wyliczenie albo przerywa bieżące (`CommonPart.InterruptsAfter`). Wołany przez `StructureProcessor` i `AmendmentBuilder`. |
+| **`ActSignatureParser`** | Rozpoznaje formułę podpisu za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda") — organ, inicjały, nazwisko. Formuła, po której stoi kolejny artykuł, podpisem aktu nie jest. |
 | **`ValidationReporter`** | Reporter diagnostyczny — statyczne metody do rejestrowania ostrzeżeń o konfliktach styl/treść i brakujących stylach na encjach DTO. |
 
 ### 6.1b Warstwa klasyfikacji akapitów (`Services/Classify/`)
@@ -544,6 +546,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
 | `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń (eId gospodarza z segmentem `czw` — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)), tabele i treść osadzona |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
+| `SignatureXmlConverter` | Podpis aktu: `organ-podpisujacy` z `osoba` (`imie`, `nazwisko`) za ostatnią jednostką i organ o roli `podpisujacy` w `Organy` |
 | `UnitAddressXml` | Jedyne miejsce piszące adres jednostki redakcyjnej: `eId` albo `brak-eid` z powodem, oraz `nr` (pusty, gdy oznaczenia nie odczytano) — [ADR-0024](adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md) |
 | `UnitLifecycleXml` | Jedyne miejsce piszące `wejscie-w-zycie`; zostawia przy elemencie obie daty jednostki (`UnitDates`), z których powstaje `okres` |
 | `SchemaPlValidator` | Walidacja eksportu wobec lokalnego `schema/schemaPL.xsd` (narzędzia i testy `[SchemaPlFact]`): cały dokument albo treść aktu bez nagłówka, element po elemencie wobec deklaracji w typie aktu |
@@ -829,6 +832,7 @@ src/Saga.Model/
 ├── TextSegmentType.cs               # Enum: Sentence/...
 ├── ValidationMessage.cs             # Komunikat diagnostyczny
 ├── JournalInfo.cs                   # Metadane publikatora (Dz.U.)
+├── ActSignature.cs                  # Formuła podpisu aktu (organ, osoba)
 ├── PublisherType.cs                 # Enum typu publikatora
 ├── LegalActType.cs                  # Enum rodzaju aktu (11 wartości, w tym AmendingStatute/Announcement/Resolution/ExecutiveOrder/LocalLegalAct)
 ├── DocumentClassificationResult.cs  # Wynik klasyfikacji dokumentu (rodzaj aktu, pewność, sygnały)
@@ -914,6 +918,7 @@ src/Saga.Core/
     │   ├── QuoteBalanceTracker.cs   # Bilans cudzysłowów dla nowelizacji bez stylów (§ 94 ZTP)
     │   ├── AmendmentCommandParser.cs  # Rozpoznanie rodzaju komendy nowelizacyjnej z treści
     │   ├── DocumentMetadataCollector.cs  # Zbiera rodzaj/datę/przedmiot aktu ze strefy tytułowej
+    │   ├── ActSignatureParser.cs      # Formuła podpisu za ostatnim przepisem
     │   ├── JournalHeaderParser.cs    # Metadane publikatora z nagłówka strony (akty ogłoszone)
     │   ├── ParsingContext.cs        # Stan parsowania (mutowalny)
     │   ├── ParsingFactories.cs      # Fabryki: numery, prefiksy, zdania

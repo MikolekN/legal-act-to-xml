@@ -27,6 +27,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   rozporządzenie …" trafiają do tytułu aktu i elementu `tytul`; wcześniej tytuł kończył się na dacie.
 - **Walidacja numeracji jednostek systematyzacyjnych**: powtórzone oznaczenie, luka, malejąca
   numeracja, oddział poza rozdziałem i jednostka bez tytułu dostają komunikat walidacji.
+- **Podpis aktu**: formuła za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda") trafia do modelu
+  (`LegalDocument.Signature`) i eksportu — `organ-podpisujacy` z `osoba` (`imie`, `nazwisko`) na końcu aktu oraz organ
+  o roli `podpisujacy` w metadanych. Wcześniej ginęła jako „pominięty akapit nierozpoznany" ostatniego artykułu.
 
 ### Zmieniono
 - **eId jednostek redakcyjnych nie zawiera już ścieżki jednostek systematyzacyjnych**: artykuł

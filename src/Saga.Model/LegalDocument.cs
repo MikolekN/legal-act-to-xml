@@ -115,6 +115,11 @@ namespace Saga.Model
         public DocumentClassificationResult? Classification { get; set; }
 
         /// <summary>
+        /// Formuła podpisu zamykająca akt („Prezydent Rzeczypospolitej Polskiej: A. Duda"); null, gdy jej nie ma.
+        /// </summary>
+        public ActSignature? Signature { get; set; }
+
+        /// <summary>
         /// Części aktu w kolejności (kodeksy mają ich kilka). Pierwsza zawsze istnieje i zawiera minimalną
         /// pełną hierarchię od Części do Oddziału; jednostki obecne w tekście mają IsImplicit = false.
         /// </summary>

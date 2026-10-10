@@ -33,6 +33,12 @@ namespace Saga.Core.Services.Converters
             foreach (var part in document.Parts)
                 root.Add(SerializePart(part));
 
+            if (document.Signature is { } signature)
+                root.Add(new XElement("signature",
+                    new XAttribute("authority", signature.Authority),
+                    new XAttribute("givenName", signature.GivenName),
+                    new XAttribute("surname", signature.Surname)));
+
             return ToCanonicalString(root);
         }
 

@@ -200,6 +200,10 @@ namespace Saga.Core.Services.Parsing
                 // Pierwszy artykuł zamyka strefę tytułową — metadane dalej nie są zbierane.
                 context.Metadata.Seal();
 
+                // Podpis zamyka akt: formuła, po której stoi kolejny artykuł, nim nie jest
+                // (podpis pod obwieszczeniem przed tekstem jednolitym).
+                context.Document.Signature = null;
+
                 var result = _articleBuilder.Build(new ArticleBuildInput(context.Subchapter, text));
                 ValidationReporter.AddClassificationWarning(result.Article, classification, "ART");
                 context.CurrentArticle = result.Article;
@@ -419,6 +423,13 @@ namespace Saga.Core.Services.Parsing
                 Log.Warning("Akapit Unknown przed pierwszym artykułem (metadane) — pominięty. " +
                     "Styl: {StyleId}, Tekst: {Text}",
                     sourceStyleId, text.Length > 80 ? text[..80] + "…" : text);
+                return;
+            }
+
+            // Formuła podpisu za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda").
+            if (ActSignatureParser.TryParse(text) is { } signature)
+            {
+                context.Document.Signature = signature;
                 return;
             }
 
