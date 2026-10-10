@@ -285,7 +285,7 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 
 | Właściwość `DocumentBlock` | Opis |
 |---|---|
-| `Text` | Tekst bloku (kanał indeksu górnego `[x]`, tabulatory `\t`; **nie** trymowany/sanityzowany) |
+| `Text` | Tekst bloku (kanał indeksu górnego `[x]`, tabulatory `\t`, łącznik nierozdzielający jako dywiz, przejście wiersza jako odstęp; **nie** trymowany/sanityzowany) |
 | `StyleId` | Identyfikator stylu Word — tylko DOCX; `null` dla PDF/TXT |
 | `Layout` | Opcjonalne metadane układu (`BlockLayoutInfo` — wcięcia, pogrubienie, kursywa) — z DOCX/PDF |
 | `Source` | Położenie w źródle (`BlockSourceLocation`) — diagnostyka |
@@ -337,7 +337,7 @@ Jednoprzebiegowy pipeline ze stanem. Dla każdego bloku:
 2. Jeśli block.Role == FootnoteText albo JournalHeader → pomiń (przypisy ani nagłówek strony nie są
    treścią jednostek redakcyjnych; czytają je osobni konsumenci z pełnej listy bloków —
    klasyfikator dokumentu i JournalHeaderParser)
-3. Sanityzacja tekstu (block.Text.Sanitize().Trim()) i odczyt StyleId (block.StyleId)
+3. Zwinięcie odstępów (block.Text.CollapseWhitespace().Trim(), znaki jak w akcie) i odczyt StyleId (block.StyleId)
 4. Budowanie NumberingHint (oczekiwana numeracja na bieżącym poziomie)
 5. Klasyfikacja (ParagraphClassifier.Classify) → ClassificationResult (Kind, Confidence,
    IsAmendmentContent, StyleType, Penalties)
@@ -531,7 +531,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | Klasa | Rola |
 |---|---|
 | **`ParagraphExtensions`** | Metody rozszerzające `Paragraph` (OpenXml) — bezpieczne pobieranie `StyleId` z null-checkiem na `ParagraphProperties`. |
-| **`StringExtensions`** | Metody rozszerzające `string` — `Sanitize()` (kolapsowanie białych znaków, zamiana en-dash) i `ExtractOrdinal()`. |
+| **`StringExtensions`** | Metody rozszerzające `string` — `CollapseWhitespace()` dla treści jednostek (odstępy zwinięte, półpauza zostaje) i `Sanitize()` dla rozpoznawania rodzaju aktu i nagłówka publikatora (dodatkowo półpauza → dywiz). |
 | **`PolishDates`** | Nazwy miesięcy i parsowanie dat w formie długiej („1 stycznia 2025 r."). Metody `Try*` nie rzucają — data niemożliwa („31 lutego") zwraca `false`. Alternatywa miesięcy jest `const`, bo leksykon jest zamknięty. |
 | **`PolishNumerals`** | JEDYNE źródło prawdy o polskich liczebnikach: porządkowe (rdzeń + końcówki, wszystkie rodzaje), główne w dopełniaczu (formy dokładne), mnożne („podwójne"), składanie 1–99 z dwóch wyrazów. Wystawia też GENEROWANE ze słownika fragmenty regexa do wyszukiwania — patrz [ADR-0009](adr/0009-jedno-zrodlo-liczebnikow-polskich.md). |
 | **`RomanNumeralConverter`** | Wyłącznie cyfry rzymskie (`RomanToInt`/`ToRoman`) dla jednostek systematyzacyjnych; oznaczenie rzymskie i słowne trafia do eId jako liczba arabska („KSIĘGA PIERWSZA" i „KSIĘGA I" → `ksi_1`, [ADR-0018](adr/0018-postac-oznaczenia-w-eid.md)). Liczebniki słowne rozstrzyga `PolishNumerals`. |
@@ -549,6 +549,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
 | `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń (eId gospodarza z segmentem `czw` — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)), tabele i treść osadzona |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
+| `InlineTextXml` | Elementy wewnątrz tekstu powstają w eksporcie, przebiegiem po zbudowanej treści: wskazuje węzły tekstowe, które je przyjmują (`zdanie`, `tytul`, `tekst`), i zamienia indeks górny z kanału tekstowego („477[9]") na `sup` |
 | `FootnoteXmlConverter` | Przebieg po zbudowaniu treści: znacznik odnośnika w `zdanie`/`tytul`/`tekst` → `odnosnik` z treścią, kolejne odwołanie → `odsylacz-do-odnosnika` ([ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md)) |
 | `SignatureXmlConverter` | Podpis aktu: `organ-podpisujacy` z `osoba` (`imie`, `nazwisko`) za ostatnią jednostką i organ o roli `podpisujacy` w `Organy` |
 | `UnitAddressXml` | Jedyne miejsce piszące adres jednostki redakcyjnej: `eId` albo `brak-eid` z powodem, oraz `nr` (pusty, gdy oznaczenia nie odczytano) — [ADR-0024](adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md) |
@@ -873,7 +874,7 @@ src/Saga.Core/
 │   └── UnsupportedDocumentFormatException.cs  # Nierozpoznany format wejścia
 ├── Helpers/
 │   ├── ParagraphExtensions.cs       # Bezpieczne StyleId() z null-check; GetFullText() z obsługą superscriptu
-│   ├── StringExtensions.cs          # Sanitize(), ExtractDate(), ExtractOrdinal()
+│   ├── StringExtensions.cs          # CollapseWhitespace(), Sanitize()
 │   ├── StyleLibraryMapper.cs        # Mapa styli dokumentów prawnych
 │   ├── AmendmentStyleDecoder.cs     # Dekoder styli nowelizacyjnych
 │   ├── EnumExtensions.cs            # ToDescription() dla enumów
@@ -983,7 +984,7 @@ src/Saga.Core/
        │     │     ▼
        │     │   ParserOrchestrator.ProcessBlock(block, context)
        │     │     ├── block.IsEmpty / block.Role == FootnoteText | JournalHeader → pomiń
-       │     │     ├── StringExtensions.Sanitize() — normalizacja tekstu
+       │     │     ├── StringExtensions.CollapseWhitespace() — zwinięcie odstępów
        │     │     ├── BuildNumberingHint() — oczekiwana numeracja na bieżącym poziomie
        │     │     ├── ParagraphClassifier.Classify() → ClassificationResult
        │     │     │   ├── styl (StyleId, gdy DOCX) → styleKind

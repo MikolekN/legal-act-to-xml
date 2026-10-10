@@ -113,6 +113,15 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Odnośnik przy powołaniu nie jest oznaczeniem jednostki**: w „…, z wyjątkiem art. 217[22)] oraz art. 227…"
   znacznik odnośnika czytał się jako kolejny artykuł i dostawał datę wyjątku. Powołania pomijają znaczniki
   odnośników, zachowując indeks górny oznaczenia („art. 4[1]").
+- **Łącznik nierozdzielający i przejście do nowego wiersza w treści**: Word zapisuje je osobnymi elementami,
+  które kanał tekstowy pomijał — „Służby Celno-Skarbowej" wychodziło jako „CelnoSkarbowej", a wyrazy rozdzielone
+  wymuszonym przejściem wiersza zlewały się. Łącznik jest teraz dywizem, przejście wiersza odstępem.
+- **Półpauza zostaje półpauzą**: treść jednostek zachowuje „–" z aktu (wcześniej każda półpauza stawała się
+  dywizem „-"). Rozpoznawanie rodzaju aktu i nagłówka publikatora nadal sprowadza ją do dywizu.
+- **Myślnik w treści części wspólnej**: `czesc-wspolna-*` zaczyna się myślnikiem jak w akcie („– chyba że …"),
+  tak jak w przykładach autorów schematu; w tirecie myślnik pozostaje oznaczeniem i do treści nie wchodzi.
+- **Indeks górny w treści zdania jako `sup`**: „art. 477[9] § 3[1]" wychodzi jako tekst z elementami `sup`
+  (także jednostki miary — „m[2]"). W `nr` i w eId zostaje notacja z nawiasem.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

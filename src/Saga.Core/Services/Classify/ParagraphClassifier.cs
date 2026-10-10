@@ -77,7 +77,7 @@ namespace Saga.Core.Services.Classify
         internal static readonly Regex LetterStripPattern = new(
             $@"^{OptionalQuotePrefix}{DesignationAlphabet.Letter}{{1,5}}{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        // Półpauza – dopuszczona dla tekstu niesanityzowanego (Sanitize normalizuje ją do dywizu)
+        // Tiret zaczyna półpauza; dywiz dopuszczony dla tekstu po Sanitize i aktów pisanych dywizem
         internal static readonly Regex TiretPattern = new(
             $@"^{OptionalQuotePrefix}[-–]+\s+", RegexOptions.Compiled);
 

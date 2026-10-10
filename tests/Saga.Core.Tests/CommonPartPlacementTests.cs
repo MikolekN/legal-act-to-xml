@@ -39,7 +39,7 @@ namespace Saga.Core.Tests
             Assert.Equal(3, paragraph.Points.Count);
             var part = Assert.Single(paragraph.CommonParts, p => p.Type == CommonPartType.WrapUp);
             Assert.Equal(2, part.InterruptsAfter);
-            Assert.Equal("zwane dalej „szkołami”;", part.ContentText);
+            Assert.Equal("– zwane dalej „szkołami”;", part.ContentText);
         }
 
         [Fact]

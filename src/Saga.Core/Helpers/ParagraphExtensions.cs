@@ -22,6 +22,7 @@ namespace Saga.Core
         /// - FootnoteReference (w:footnoteReference) → numer przypisu jak w akcie (<paramref name="footnoteNumbers"/>);
         ///   bez tej mapy zostaje identyfikator w:id, który bywa przesunięty względem numeru
         /// - TabChar (w:tab) → tabulator
+        /// - NoBreakHyphen (w:noBreakHyphen) → łącznik; Break / CarriageReturn (w:br, w:cr) → odstęp
         /// - Tekst w indeksie gornym (styl IGindeksgrny, Odwoanieprzypisudolnego
         ///   lub VerticalAlignment=Superscript) jest ujmowany w nawiasy [ ].
         /// </summary>
@@ -80,6 +81,17 @@ namespace Saga.Core
 
                     case TabChar:
                         sb.Append('\t');
+                        break;
+
+                    // Łącznik nierozdzielający jest w pliku osobnym elementem, nie znakiem — bez niego
+                    // „Celno-Skarbowej" zlewa się w „CelnoSkarbowej", a „pkt 1-3" w „pkt 13".
+                    case NoBreakHyphen:
+                        sb.Append('-');
+                        break;
+
+                    // Wymuszone przejście do nowego wiersza rozdziela wyrazy tak jak odstęp.
+                    case Break or CarriageReturn:
+                        sb.Append(' ');
                         break;
                 }
             }

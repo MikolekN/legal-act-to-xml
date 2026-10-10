@@ -426,6 +426,27 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SuperscriptInSentenceText_IsASupElement()
+        {
+            // Przykłady autorów schematu: „w art. 477<sup>9</sup> § 3<sup>1</sup> ustawy…", a w nr i eId „477[9]".
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(new[]
+            {
+                new DocumentBlock { Text = "Art. 1. W przypadku określonym w art. 477[9] § 3[1] ustawy sąd odrzuca odwołanie." },
+                new DocumentBlock { Text = "Art. 2. Powierzchnia użytkowa nie przekracza 25 m[2], a odnośnik [1)] zostaje tekstem." },
+            }));
+
+            var sentences = xml.Descendants().Where(e => e.Name.LocalName == "zdanie").ToList();
+
+            Assert.Equal(new[] { "9", "1" }, sentences[0].Elements().Select(e => e.Value));
+            Assert.All(sentences[0].Elements(), e => Assert.Equal("sup", e.Name.LocalName));
+            Assert.Equal("W przypadku określonym w art. 4779 § 31 ustawy sąd odrzuca odwołanie.", sentences[0].Value);
+
+            // Jednostka miary też ma indeks górny; znacznik odnośnika spoza rejestru nim nie jest.
+            Assert.Equal("2", Assert.Single(sentences[1].Elements()).Value);
+            Assert.Contains("odnośnik [1)] zostaje tekstem", sentences[1].Value);
+        }
+
+        [Fact]
         public void SuperscriptedArticleAndCodeParagraph_KeepTheSuperscriptInEIdAndNr()
         {
             // Jak w przykładzie autorów schematu: artykul eId="…art_477[9]__par_2[1]", nr="2[1]".

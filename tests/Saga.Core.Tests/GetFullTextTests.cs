@@ -72,6 +72,37 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void GetFullText_NonBreakingHyphen_IsAHyphen()
+        {
+            // Ustawa o ochronie sygnalistów: „Służby Celno<w:noBreakHyphen/>Skarbowej".
+            var paragraph = new Paragraph(
+                new Run(new Text("Służby Celno")),
+                new Run(new NoBreakHyphen(), new Text("Skarbowej, o której mowa w pkt 1")),
+                new Run(new NoBreakHyphen(), new Text("3")));
+
+            Assert.Equal("Służby Celno-Skarbowej, o której mowa w pkt 1-3", paragraph.GetFullText());
+        }
+
+        [Fact]
+        public void GetFullText_LineBreakInsideAParagraph_SeparatesWords()
+        {
+            var paragraph = new Paragraph(
+                new Run(new Text("o zmianie ustawy o usuwaniu skutków powodzi")),
+                new Run(new Break(), new Text("oraz niektórych innych ustaw")));
+
+            Assert.Equal("o zmianie ustawy o usuwaniu skutków powodzi oraz niektórych innych ustaw", paragraph.GetFullText());
+        }
+
+        [Fact]
+        public void GetFullText_SoftHyphen_LeavesTheWordWhole()
+        {
+            // Łącznik opcjonalny to tylko miejsce możliwego przeniesienia wyrazu.
+            var paragraph = new Paragraph(new Run(new Text("admini"), new SoftHyphen(), new Text("stracja")));
+
+            Assert.Equal("administracja", paragraph.GetFullText());
+        }
+
+        [Fact]
         public void GetFullText_FootnoteWithSuperscript_WrappedInBrackets()
         {
             // Symulacja: <w:footnoteReference w:id="36"/> + <w:rStyle val="IGindeksgrny"/><w:t>)</w:t>

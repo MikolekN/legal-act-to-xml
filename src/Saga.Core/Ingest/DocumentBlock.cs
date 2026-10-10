@@ -9,7 +9,7 @@ namespace Saga.Core.Ingest
     /// Text zawiera kanał indeksu górnego w nawiasach kwadratowych [x]
     /// (spójnie z ParagraphExtensions.GetFullText i notacją x[y] z § 89 ust. 6 ZTP)
     /// oraz tabulatory jako \t. Text NIE jest trimowany ani sanityzowany —
-    /// Trim i Sanitize wykonuje orkiestrator (parytet z dotychczasową ścieżką DOCX).
+    /// Trim i zwinięcie odstępów wykonuje orkiestrator (parytet z dotychczasową ścieżką DOCX).
     /// </summary>
     public sealed record DocumentBlock
     {

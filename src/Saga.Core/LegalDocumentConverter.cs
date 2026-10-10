@@ -29,6 +29,7 @@ namespace Saga.Core.Services
                 actElement.Add(SignatureXmlConverter.ToXml(signature));
 
             FootnoteXmlConverter.Embed(actElement, document);
+            InlineTextXml.EmbedSuperscripts(actElement);
 
             TemporalDataXmlConverter.AssignPeriods(actElement, document);
 

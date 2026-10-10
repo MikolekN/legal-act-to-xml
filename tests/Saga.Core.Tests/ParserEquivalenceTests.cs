@@ -131,8 +131,8 @@ namespace Saga.Core.Tests
 
             // Strażnik pustej równoważności — ścieżka stylowa naprawdę zbudowała to, co porównujemy.
             Assert.Contains("eId=art_2 in=rozdz_2__oddz_1", docxDescription);
-            Assert.Contains("czwsp WrapUp | w zakresie nieuregulowanym w innych ustawach.", docxDescription);
-            Assert.Contains("czwsp WrapUp | w terminie 14 dni od dnia złożenia wniosku;", docxDescription);
+            Assert.Contains("czwsp WrapUp | – w zakresie nieuregulowanym w innych ustawach.", docxDescription);
+            Assert.Contains("czwsp WrapUp | – w terminie 14 dni od dnia złożenia wniosku;", docxDescription);
             Assert.Contains("tir 2 | nie uiścił opłaty,", docxDescription);
         }
 

@@ -59,7 +59,7 @@ namespace Saga.Core.Tests
             Assert.NotNull(paragraph);
 
             var wrapUpPart = paragraph.CommonParts.Single(cp => cp.Type == CommonPartType.WrapUp);
-            Assert.Equal("zachowuja dopuszczenie do uzytku szkolnego.", wrapUpPart.ContentText);
+            Assert.Equal("- zachowuja dopuszczenie do uzytku szkolnego.", wrapUpPart.ContentText);
         }
 
         [Fact]
@@ -79,7 +79,7 @@ namespace Saga.Core.Tests
             Assert.NotNull(paragraph);
 
             var wrapUpPart = paragraph.CommonParts.Single(cp => cp.Type == CommonPartType.WrapUp);
-            Assert.Equal("podlega karze grzywny.", wrapUpPart.ContentText);
+            Assert.Equal("– podlega karze grzywny.", wrapUpPart.ContentText);
             Assert.All(paragraph.Points, point => Assert.Empty(point.Letters));
         }
 

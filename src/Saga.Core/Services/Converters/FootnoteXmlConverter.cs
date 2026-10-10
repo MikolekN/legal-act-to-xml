@@ -18,14 +18,6 @@ namespace Saga.Core.Services.Converters
         private static readonly Regex Number = new(@"(?<number>\d+)\)", RegexOptions.Compiled);
         private static readonly Regex MarkerWithLeadingSpace = new(@"(?:\s*\[[^\[\]]*\d+\)[^\[\]]*\])+", RegexOptions.Compiled);
 
-        /// <summary>Elementy, których treść tekstowa przyjmuje <c>odnosnik</c>.</summary>
-        private static readonly HashSet<string> Hosts =
-        [
-            XmlConverterConstants.Contents.Sentence.Element,
-            XmlConverterConstants.ActHeading.Subject,
-            XmlConverterConstants.Contents.Citation.Text.Content,
-        ];
-
         private static readonly HashSet<string> Citations =
         [
             XmlConverterConstants.Contents.Citation.StructElement,
@@ -68,13 +60,7 @@ namespace Saga.Core.Services.Converters
                 return;
 
             var registry = new Registry(document.Footnotes);
-            var texts = actElement.DescendantNodes().OfType<XText>()
-                .Where(text => text.Parent is { } parent
-                    && Hosts.Contains(parent.Name.LocalName)
-                    && !parent.Ancestors().Any(a => a.Name.LocalName == XmlConverterConstants.Metadata.Element))
-                .ToList();
-
-            foreach (var text in texts)
+            foreach (var text in InlineTextXml.Texts(actElement))
             {
                 if (!Marker.IsMatch(text.Value))
                     continue;

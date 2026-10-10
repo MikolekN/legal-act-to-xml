@@ -560,8 +560,9 @@ namespace Saga.Core.Services.Parsing
             if (hasCommonParts.CommonParts.Any(CommonPartPlacement.IsClosing))
                 return false;
 
-            var contentText = StripWrapUpPrefix(text);
-            if (string.IsNullOrWhiteSpace(contentText))
+            // Myślnik zostaje w treści części wspólnej — inaczej niż w tirecie, gdzie jest oznaczeniem.
+            var contentText = text.Trim();
+            if (string.IsNullOrWhiteSpace(StripWrapUpPrefix(contentText)))
                 return false;
 
             var commonPart = new CommonPart(

@@ -135,7 +135,7 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void AttachWrapUp_StripsTiretPrefixAndAddsCommonPart()
+        public void AttachWrapUp_KeepsTheDashAndAddsCommonPart()
         {
             // Arrange: ustep z rodzicem dla poprawnego eId
             var article = new Article { Number = new EntityNumber { Value = "293" } };
@@ -154,7 +154,8 @@ namespace Saga.Core.Tests
             Assert.Single(paragraph.CommonParts);
             var wrapUp = paragraph.CommonParts[0];
             Assert.Equal(CommonPartType.WrapUp, wrapUp.Type);
-            Assert.Equal("zachowuja dopuszczenie.", wrapUp.ContentText);
+            // Myślnik należy do treści części wspólnej — tak zapisują ją przykłady autorów schematu.
+            Assert.Equal("- zachowuja dopuszczenie.", wrapUp.ContentText);
             Assert.Equal("art_293__ust_1__czw", wrapUp.Id);
         }
     }

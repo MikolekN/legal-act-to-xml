@@ -58,7 +58,7 @@ namespace Saga.Core.Services.Parsing
             if (block.Role is BlockRole.FootnoteText or BlockRole.JournalHeader)
                 return;
 
-            var text = block.Text.Sanitize().Trim();
+            var text = block.Text.CollapseWhitespace().Trim();
             var styleId = block.StyleId;
 
             var hint = BuildNumberingHint(context);
