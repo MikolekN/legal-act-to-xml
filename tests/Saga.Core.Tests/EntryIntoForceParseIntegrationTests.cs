@@ -125,6 +125,87 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ExceptionForAChapter_DatesTheChapterAndEverythingInIt_NotAPointWithTheSameNumber()
+        {
+            // Przykład autorów schematu (DU/2024/928): „…, z wyjątkiem art. 1 ust. 1 pkt 3 i rozdziału 2, które…".
+            // Bez rozpoznania rozdziału gołe „2" czytało się jako punkt 2.
+            var document = Parse(
+                Header +
+                "Rozdział 1\nPrzepisy ogólne\n" +
+                "Art. 1. 1. Ustawa określa:\n1) zakres,\n2) zasady,\n3) tryb.\n" +
+                "Rozdział 2\nPrzepisy szczególne\n" +
+                "Art. 2. Przepis szczególny.\n" +
+                "Art. 3. Drugi przepis szczególny.\n" +
+                "Rozdział 3\nPrzepisy końcowe\n" +
+                "Art. 4. Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z wyjątkiem art. 1 ust. 1 pkt 3 " +
+                "i rozdziału 2, które wchodzą w życie z dniem 1 marca 2026 r.\n");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+            Assert.True(info.IsComplete, string.Join(" | ", info.UnresolvedFragments));
+            Assert.Equal(new[] { "art_1__ust_1__pkt_3", "rozdz_2" },
+                info.Partials.Single().Targets.Select(t => t.Structure.ToString()));
+
+            var general = new DateTime(2026, 1, 1);
+            var exception = new DateTime(2026, 3, 1);
+            var article = document.Articles.ToDictionary(a => a.Id);
+            var points = article["art_1"].Paragraphs.Single().Points;
+
+            Assert.Equal(general, points.Single(p => p.Number?.Value == "2").EffectiveDate);
+            Assert.Equal(exception, points.Single(p => p.Number?.Value == "3").EffectiveDate);
+
+            Assert.Equal(exception, article["art_2"].EffectiveDate);
+            Assert.Equal(exception, article["art_3"].EffectiveDate);
+            Assert.Equal(exception, article["art_2"].Parent!.Parent!.EffectiveDate);   // sam rozdział 2
+            Assert.Equal(general, article["art_4"].EffectiveDate);
+            Assert.Equal(general, article["art_4"].Parent!.Parent!.EffectiveDate);     // rozdział 3
+        }
+
+        [Fact]
+        public void ExceptionForAChapterNumberedTwiceInTheAct_IsLeftUnresolved_NotGuessed()
+        {
+            var document = Parse(
+                Header +
+                "DZIAŁ I\nPrzepisy ogólne\nRozdział 1\nZakres\nArt. 1. Przepis.\n" +
+                "DZIAŁ II\nPrzepisy szczególne\nRozdział 1\nZasady\nArt. 2. Przepis.\n" +
+                "Art. 3. Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z wyjątkiem rozdziału 1, " +
+                "który wchodzi w życie z dniem 1 marca 2026 r.\n");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+
+            Assert.False(info.IsComplete);
+            Assert.Contains(info.UnresolvedFragments, fragment => fragment.Contains("rozdz_1"));
+            Assert.DoesNotContain(document.Articles, a => a.EffectiveDate == new DateTime(2026, 3, 1));
+        }
+
+        [Fact]
+        public void ScopeNamingAQuotedChapter_DatesThatChapter_AndItsArticles()
+        {
+            var document = Parse(
+                Header +
+                "Art. 1. W ustawie z dnia 13 października 1998 r. o systemie (Dz. U. z 2025 r. poz. 350) wprowadza się następujące zmiany:\n" +
+                "1) po rozdziale 9 dodaje się rozdział 9a w brzmieniu:\n" +
+                "„Rozdział 9a\n" +
+                "Orzekanie dla celów świadczeń\n" +
+                "Art. 85a. Zadania realizuje Zakład.”;\n" +
+                "2) uchyla się art. 86.\n" +
+                "Art. 2. Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z wyjątkiem art. 1 pkt 1 " +
+                "w zakresie rozdziału 9a, który wchodzi w życie z dniem 1 stycznia 2027 r.\n");
+
+            var info = Assert.IsType<EntryIntoForceInfo>(document.EntryIntoForce);
+            Assert.True(info.IsComplete, string.Join(" | ", info.UnresolvedFragments));
+
+            var point = document.Articles.First().Paragraphs[0].Points[0];
+            var chapter = Assert.Single(point.Amendment!.Content!.SystematizingUnits);
+            var quotedArticle = Saga.Model.SystematizingUnits.SystematizingHierarchy.Children(
+                Saga.Model.SystematizingUnits.SystematizingHierarchy.Children(chapter).Single()).Single();
+
+            // Komenda wchodzi w życie z aktem; cytowany rozdział i jego artykuł — z wyjątkiem.
+            Assert.Equal(new DateTime(2026, 1, 1), point.EffectiveDate);
+            Assert.Equal(new DateTime(2027, 1, 1), chapter.EffectiveDate);
+            Assert.Equal(new DateTime(2027, 1, 1), quotedArticle.EffectiveDate);
+        }
+
+        [Fact]
         public void Retroactivity_ReachesUnits_ButNotTheUnitTakenOutByAnException()
         {
             // Moc wsteczna reguły ogólnej schodzi na jednostki tą samą drogą co data wejścia w życie.

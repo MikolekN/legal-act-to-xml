@@ -213,6 +213,20 @@ namespace Saga.Core.Tests
             Assert.False(result.IsComplete);
         }
 
+        [Theory]
+        // Przykład autorów schematu (DU/2024/928, art. 64): gołe „4" po „rozdziału" to rozdział, nie punkt.
+        [InlineData("art. 5 ust. 4, art. 25 ust. 1 pkt 8 i rozdziału 4", "art_5__ust_4", "art_25__ust_1__pkt_8", "rozdz_4")]
+        [InlineData("rozdziału 3 i 4", "rozdz_3", "rozdz_4")]
+        [InlineData("działu II rozdziału 3 oraz art. 7", "dzial_2__rozdz_3", "art_7")]
+        public void SystematizingUnit_IsATarget(string units, params string[] expected)
+        {
+            var result = UnitEnumerationParser.Parse(units);
+
+            Assert.Equal(expected, result.Targets.Select(t => t.Structure.ToString()));
+            Assert.All(result.Targets, t => Assert.True(t.IsApplicable));
+            Assert.True(result.IsComplete);
+        }
+
         [Fact]
         public void SystematizingUnitScope_IsProse_AndFlagged()
         {

@@ -108,8 +108,9 @@ namespace Saga.Core.Services.UnitReferences
         private static readonly Regex TokenPattern = BuildTokenPattern(UnitKeywordPattern, DesignationPattern);
 
         /// <summary>
-        /// Wariant z jednostkami systematyzacyjnymi — dla celów nowelizacji („po rozdziale 9 dodaje się …").
-        /// Wejście w życie ich jeszcze nie czyta, więc tam „rozdział 3" zostaje prozą.
+        /// Wariant z jednostkami systematyzacyjnymi — dla celów nowelizacji („po rozdziale 9 dodaje się …")
+        /// i wyjątków wejścia w życie („…, z wyjątkiem rozdziału 4, który…"). Parser komend zostaje przy
+        /// samych jednostkach redakcyjnych.
         /// </summary>
         private static readonly Regex SystematizingTokenPattern = BuildTokenPattern(
             SystematizingKeywordPattern + "|" + UnitKeywordPattern,

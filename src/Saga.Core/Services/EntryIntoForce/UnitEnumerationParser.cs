@@ -39,7 +39,8 @@ namespace Saga.Core.Services.EntryIntoForce
             var targets = new List<ScopedUnitReference>();
             var unresolved = new List<string>();
 
-            var tokens = UnitReferenceTokenizer.Tokenize(unitsText);
+            // Wyjątek bywa całą jednostką systematyzacyjną („…, art. 25 ust. 1 pkt 8 i rozdziału 4, które…").
+            var tokens = UnitReferenceTokenizer.Tokenize(unitsText, systematizing: true);
             if (tokens.Count == 0)
             {
                 if (!string.IsNullOrWhiteSpace(unitsText))
@@ -148,7 +149,11 @@ namespace Saga.Core.Services.EntryIntoForce
 
             if (state.Pending is not null)
             {
-                if (step.Previous == PendingDisposition.Drop)
+                // W wyliczeniu jednostka systematyzacyjna jest osobnym celem, nie prefiksem artykułu
+                // („rozdziału 3 oraz art. 7") — inaczej niż w adresie komendy („w rozdziale 3 po art. 5").
+                var wholeUnit = state.Pending.Structure.Systematizing is not null && context.Level >= UnitLevel.Article;
+
+                if (step.Previous == PendingDisposition.Drop && !wholeUnit)
                     state.DropPending();
                 else
                     state.FlushPending(targets);

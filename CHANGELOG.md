@@ -16,7 +16,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   cytatu tekstowego obok artykułów.
 - **Cele nowelizacji wskazane jednostką systematyzacyjną**: „po rozdziale 9 dodaje się…", „w dziale II
   po rozdziale 9…", „uchyla się rozdziały 4 i 5" dają `element-eId` `rozdz_9`, `dzial_2__rozdz_9`,
-  `rozdz_4`/`rozdz_5` zamiast `UNKNOWN`. Wejście w życie takich powołań jeszcze nie czyta.
+  `rozdz_4`/`rozdz_5` zamiast `UNKNOWN`.
+- **Wyjątek wejścia w życie wskazujący jednostkę systematyzacyjną**: „…, z wyjątkiem art. 25 ust. 1 pkt 8
+  i rozdziału 4, które wchodzą w życie…" datuje rozdział 4 i wszystko w nim. Wcześniej gołe „4" czytało się
+  jako kolejny punkt — rozdział zostawał z datą ogólną, a punkt 4 dostawał datę wyjątku.
 - **Strefa tytułowa aktu w eksporcie**: po `metadane` stoją `rodzaj-aktu`, `data` i `tytul` z wierszy aktu
   („USTAWA", „z dnia 14 czerwca 2024 r.", „o ochronie sygnalistów"); model trzyma je osobno
   (`LegalDocument.KindLine`, `DateLine`, `Subject`).

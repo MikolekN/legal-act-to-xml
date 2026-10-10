@@ -1,5 +1,6 @@
 using Saga.Model;
 using Saga.Model.EditorialUnits;
+using Saga.Model.SystematizingUnits;
 
 namespace Saga.Core.Services.EntryIntoForce
 {
@@ -12,7 +13,7 @@ namespace Saga.Core.Services.EntryIntoForce
         internal static BaseEntity? Resolve(LegalDocument document, StructuralReference reference)
         {
             if (reference.Article is null)
-                return null;
+                return reference.Systematizing is { } path ? ResolveSystematizing(document, path) : null;
 
             var article = document.Articles.FirstOrDefault(a => Matches(a.Number?.Value, reference.Article));
             return article is null ? null : DescendFromArticle(article, reference);
@@ -25,6 +26,12 @@ namespace Saga.Core.Services.EntryIntoForce
         {
             if (host is not IHasAmendments owner || owner.Amendment?.Content is not { } content)
                 return null;
+
+            // „w zakresie rozdziału 9a" — cały cytowany rozdział.
+            if (scope.Article is null && scope.Systematizing is { } path)
+                return content.SystematizingUnits
+                    .SelectMany(unit => EditorialUnitWalker.SelfAndDescendants(unit, includeAmendmentContent: false))
+                    .FirstOrDefault(unit => unit is ISystematizingUnit { IsImplicit: false } && EndsWithPath(unit.Id, path));
 
             // Artykuły cytowanego rozdziału („dodaje się rozdział 9a") stoją w jego wnętrzu.
             var articles = content.Articles.Concat(content.SystematizingUnits
@@ -50,6 +57,25 @@ namespace Saga.Core.Services.EntryIntoForce
 
             return null;
         }
+
+        /// <summary>
+        /// Jednostka systematyzacyjna wskazana ścieżką z powołania („rozdz_4", „dzial_2__rozdz_4").
+        /// Powołanie pomija zwykle jednostki nadrzędne, więc pasuje koniec eId jednostki; gdy pasuje
+        /// kilka (rozdział 4 w różnych działach), powołanie jest niejednoznaczne i nie wskazuje żadnej.
+        /// </summary>
+        private static BaseEntity? ResolveSystematizing(LegalDocument document, string path)
+        {
+            var matches = document.Parts
+                .SelectMany(part => EditorialUnitWalker.SelfAndDescendants(part, includeAmendmentContent: false))
+                .Where(unit => unit is ISystematizingUnit { IsImplicit: false } && EndsWithPath(unit.Id, path))
+                .Take(2)
+                .ToList();
+
+            return matches.Count == 1 ? matches[0] : null;
+        }
+
+        private static bool EndsWithPath(string eId, string path) =>
+            eId == path || eId.EndsWith(EIdSegment.Separator + path, StringComparison.Ordinal);
 
         private static BaseEntity? DescendFromArticle(Article article, StructuralReference reference)
         {
