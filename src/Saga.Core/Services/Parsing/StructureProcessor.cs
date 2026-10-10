@@ -143,6 +143,53 @@ namespace Saga.Core.Services.Parsing
             return true;
         }
 
+        /// <summary>Początek sankcji karnej: „podlega karze…", także po myślniku.</summary>
+        private static readonly Regex SanctionStart = new(
+            @"^(?:[–-]\s*)?podlega\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        private const string SanctionStyleName = "S_KARN";
+
+        /// <summary>
+        /// Sankcja karna zapisana w osobnym akapicie (styl S_KARN): „Kto …, || podlega grzywnie." Jest dalszym
+        /// ciągiem zdania przepisu, a po wyliczeniu — jego częścią wspólną. Rozpoznają ją dwa zgodne sygnały
+        /// z trzech: styl sankcji, początek „podlega" i niedokończone zdanie przepisu przed nią.
+        /// </summary>
+        private static bool TryHandleSanction(ParsingContext context, string text, string? styleId)
+        {
+            // W wyliczeniu tiretów „– podlega …" jest kolejnym tiretem.
+            if (context.CurrentTiret != null || context.CurrentParagraph is not { } paragraph)
+                return false;
+
+            var deepest = (BaseEntity?)context.CurrentLetter ?? (BaseEntity?)context.CurrentPoint ?? paragraph;
+            var closing = paragraph.CommonParts.LastOrDefault(CommonPartPlacement.IsClosing);
+            var before = (closing?.ContentText ?? deepest.ContentText).TrimEnd();
+
+            var styled = StyleLibraryMapper.TryGetStyleInfo(styleId, out var info)
+                && info!.DisplayName.StartsWith(SanctionStyleName, StringComparison.Ordinal);
+            var worded = SanctionStart.IsMatch(text);
+            var unfinished = before.Length > 0 && before[^1] is not ('.' or ';' or ':');
+            if ((styled ? 1 : 0) + (worded ? 1 : 0) + (unfinished ? 1 : 0) < 2)
+                return false;
+
+            var sanction = text.Trim();
+            if (closing is not null)
+            {
+                // Sankcja za częścią wspólną wyliczenia ciągnie jej zdanie.
+                closing.ContentText = $"{closing.ContentText.TrimEnd()} {sanction}";
+            }
+            else if (context.CurrentPoint is not null)
+            {
+                // Po wyliczeniu sankcja jest jego częścią wspólną — odnosi się do wszystkich punktów.
+                ParsingFactories.AttachWrapUpCommonPart(paragraph, sanction);
+            }
+            else
+            {
+                ParsingFactories.SetContentAndSegments(paragraph, $"{paragraph.ContentText.TrimEnd()} {sanction}");
+            }
+
+            return true;
+        }
+
         /// <summary>
         /// Jednostka, której treść otwiera wyliczenie: punkt i litera wstawione za pominięty poziom nie mają
         /// treści, więc wprowadzeniem jest zdanie najbliższej jednostki nad nimi (litery wprost w ustępie).
@@ -222,6 +269,10 @@ namespace Saga.Core.Services.Parsing
                 _journalReferenceService.ParseJournalReferences(result.Article);
                 return true;
             }
+
+            // Sankcja karna w osobnym akapicie („podlega grzywnie…") domyka zdanie przepisu.
+            if (context.CurrentArticle != null && TryHandleSanction(context, text, sourceStyleId))
+                return true;
 
             // Nierozpoznany — inference-first, potem diagnostyka. Tytuł jednostki bez oczekującej
             // jednostki idzie tą samą drogą.

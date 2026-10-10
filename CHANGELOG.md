@@ -122,6 +122,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   tak jak w przykładach autorów schematu; w tirecie myślnik pozostaje oznaczeniem i do treści nie wchodzi.
 - **Indeks górny w treści zdania jako `sup`**: „art. 477[9] § 3[1]" wychodzi jako tekst z elementami `sup`
   (także jednostki miary — „m[2]"). W `nr` i w eId zostaje notacja z nawiasem.
+- **Sankcja karna w osobnym akapicie** („Kto …, || podlega grzywnie.") jest dalszym ciągiem zdania przepisu,
+  a po wyliczeniu — jego częścią wspólną; tak samo w treści nowelizacji. Wcześniej akapit w stylu sankcji
+  ginął jako „pominięty akapit nierozpoznany" (przepis karny zostawał bez kary), a sankcja po myślniku stawała
+  się tiretem. W korpusie to 1199 akapitów w 105 dokumentach.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

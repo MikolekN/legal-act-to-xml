@@ -781,6 +781,9 @@ Encje implicit:
   (`CommonPartPlacement`, w treści aktu i nowelizacji): jeśli tuż przed nią stało niższe wyliczenie bez zamknięcia,
   zamyka je (styl wskazał o poziom za wysoko); inaczej przerywa wyliczenie (`CommonPart.InterruptsAfter`) i wychodzi
   w tym miejscu jako `nie-ztp-czesc-wspolna-*` z `brak-eid="nie-ztp-wielokrotna-czesc-wspolna"`
+- Sankcja karna w osobnym akapicie (styl `S_KARN`, „podlega …") domyka zdanie przepisu, a po wyliczeniu jest jego częścią
+  wspólną (`StructureProcessor.TryHandleSanction`; w cytacie `AmendmentBuilder`) — rozpoznają ją dwa zgodne sygnały z trzech:
+  styl, początek „podlega" i niedokończone zdanie przed nią
 - Część wspólna jako jedyna treść nowelizacji („dodaje się część wspólną w brzmieniu:") to cytat strukturalny
   z `czesc-wspolna-*` pod adresem celu (`art_18zg__ust_2__czw`), funkcja `dodaj-w`
 

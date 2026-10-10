@@ -273,6 +273,9 @@ namespace Saga.Core.Services.Parsing.Builders
                     BuildAmendmentCommonPart(para, content);
                     break;
                 default:
+                    if (para.StyleInfo?.TargetKind == AmendmentTargetKind.PenalSanction && TryContinueWithSanction(para.Text))
+                        break;
+
                     AppendPlainText(content, para.Text);
                     Log.Debug("AmendmentBuilder: akapit niesklasyfikowany, dodano jako tekst: {Text}",
                         para.Text.Length > 60 ? para.Text[..60] + "..." : para.Text);
@@ -469,6 +472,33 @@ namespace Saga.Core.Services.Parsing.Builders
             }
 
             Log.Debug("AmendmentBuilder: tiret {Number}", tiret.Number?.Value ?? "?");
+        }
+
+        /// <summary>
+        /// Sankcja karna cytowanego przepisu („Kto …, || podlega karze…") domyka jego zdanie, a po wyliczeniu
+        /// jest jego częścią wspólną — tak samo jak w treści aktu. Bez otwartego przepisu („sankcja otrzymuje
+        /// brzmienie:") zostaje tekstem cytatu.
+        /// </summary>
+        private bool TryContinueWithSanction(string text)
+        {
+            if (_currentParagraph is not { } paragraph)
+                return false;
+
+            var sanction = text.Trim();
+            if (_currentPoint is not null)
+            {
+                paragraph.CommonParts.Add(new CommonPart(CommonPartType.WrapUp, paragraph.Id, sanction)
+                {
+                    Parent = paragraph,
+                    ListItemType = UnitType.Point,
+                });
+            }
+            else
+            {
+                ParsingFactories.SetContentAndSegments(paragraph, $"{paragraph.ContentText.TrimEnd()} {sanction}");
+            }
+
+            return true;
         }
 
         private void BuildAmendmentCommonPart(CollectedAmendmentParagraph para, AmendmentContent content)
