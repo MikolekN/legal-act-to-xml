@@ -114,7 +114,7 @@ namespace Saga.Core.Services.Parsing
         private static bool IsMisstyledActUnit(ParsingContext context, ClassificationResult classification, string text) =>
             classification.IsAmendmentContent
             && !context.InsideAmendment && !context.AmendmentTriggerDetected && !context.AmendmentCollector.IsCollecting
-            && text is not ['„' or '"', ..]
+            && text is not [QuotationMarks.Opening or QuotationMarks.Straight, ..]
             && (StructureProcessor.IsSystematizing(classification.Kind)
                 || (context.PendingHeadingUnit != null && classification.Kind is ParagraphKind.Unknown or ParagraphKind.UnitHeading));
 

@@ -27,7 +27,7 @@ namespace Saga.Core.Services.Classify
         // ============================================================
 
         /// <summary>Opcjonalny prefiks cytatu otwierającego („ " ") w tekście akapitu.</summary>
-        internal const string OptionalQuotePrefix = "(?:[\"\\u201E\\u201C\\u201D]\\s*)?";
+        internal const string OptionalQuotePrefix = $"(?:[{QuotationMarks.Any}]\\s*)?";
 
         /// <summary>
         /// Opcjonalny indeks górny numeru jednostki w notacji [x] (§ 89 ust. 6 ZTP; kanał GetFullText):

@@ -13,7 +13,7 @@ namespace Saga.Core.Services.Parsing
     ///   trwale rozbrojony — obowiązuje dotychczasowe zachowanie (wyjście na stylu ustawy matki /
     ///   kolejnym triggerze / końcu dokumentu).
     /// - KAŻDY blok ze stylem rozbraja trwale — cyklem nowelizacji stylowej rządzą style (doc001 bez zmian).
-    /// - BILANS: „ (U+201E) otwiera; " (U+201D) i " (U+201C, niedomyślny wariant edytorów) zamykają
+    /// - BILANS: „ (U+201E) otwiera; zamykają znaki z <see cref="QuotationMarks.Closing"/>
     ///   (głębokość nie schodzi poniżej zera). Cytaty zagnieżdżone „…„…"…" utrzymują Depth &gt; 0.
     ///   Prosty cudzysłów " (U+0022) jest DWUZNACZNY (otwiera i zamyka): pary wewnątrz bloku
     ///   („nazwa "programu"") są neutralne; dopiero NIEPARZYSTA liczba prostych cudzysłowów w bloku
@@ -37,7 +37,7 @@ namespace Saga.Core.Services.Parsing
         /// i interpunkcją kończącą (; .) po nim. Celowo BEZ przecinka — „…", kontynuuje komendę mnogą.
         /// </summary>
         private static readonly Regex ClosingQuoteAtEnd = new(
-            @"[""”“]\s*\)?\s*[;.]?$", RegexOptions.Compiled);
+            $@"[{QuotationMarks.ClosingOrStraight}]\s*\)?\s*[;.]?$", RegexOptions.Compiled);
 
         /// <summary>Prosty cudzysłów " na końcu bloku (z opcjonalnym nawiasem/interpunkcją) — kandydat zamknięcia konwencji mieszanej.</summary>
         private static readonly Regex StraightQuoteAtEnd = new(
@@ -45,13 +45,14 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Cudzysłów zamykający z przecinkiem na końcu bloku — zamknięcie zależne od następnego bloku.</summary>
         private static readonly Regex ClosingQuoteWithComma = new(
-            @"[""”“]\s*\)?\s*,$", RegexOptions.Compiled);
+            $@"[{QuotationMarks.ClosingOrStraight}]\s*\)?\s*,$", RegexOptions.Compiled);
 
         /// <summary>
         /// Cudzysłów otwierający na początku bloku; nawias kwadratowy przed nim to indeks górny w kanale
         /// tekstu (znak odnośnika sformatowany razem z cudzysłowem).
         /// </summary>
-        private static readonly Regex OpeningQuoteAtStart = new(@"^\s*\[?„", RegexOptions.Compiled);
+        private static readonly Regex OpeningQuoteAtStart = new(
+            $@"^\s*\[?{QuotationMarks.Opening}", RegexOptions.Compiled);
 
         /// <summary>Czy blok zaczyna się od cudzysłowu otwierającego — początek treści cytowanej.</summary>
         public static bool OpensQuote(string text) => OpeningQuoteAtStart.IsMatch(text);
@@ -121,11 +122,11 @@ namespace Saga.Core.Services.Parsing
             int straightQuotes = 0;
             foreach (var c in text)
             {
-                if (c == '„')
+                if (c == QuotationMarks.Opening)
                     Depth++;
-                else if (c is '”' or '“')
+                else if (QuotationMarks.IsClosing(c))
                     Depth = System.Math.Max(0, Depth - 1);
-                else if (c == '"')
+                else if (c == QuotationMarks.Straight)
                     straightQuotes++;
             }
 

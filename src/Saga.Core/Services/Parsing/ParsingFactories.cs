@@ -224,7 +224,7 @@ namespace Saga.Core.Services.Parsing
         /// w pomiarze podziału na zdania, zostawiając zepsuty eId i treść.
         /// </summary>
         private static readonly Regex StandaloneUnitDesignation = new(
-            @"^\s*[„""]\s*(?:Art\.\s*\d+[a-z]*\.\s*)?(?:§\s*\d+[a-z]*\.\s*)?(?:\d+[a-z]*\.\s*)*"
+            $@"^\s*[{QuotationMarks.OpeningOrStraight}]\s*(?:Art\.\s*\d+[a-z]*\.\s*)?(?:§\s*\d+[a-z]*\.\s*)?(?:\d+[a-z]*\.\s*)*"
             + @"(?:[IVXLC]{1,6}(?:\.\d+[a-z]*)*\.)?$",
             RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
@@ -298,7 +298,7 @@ namespace Saga.Core.Services.Parsing
         /// Cudzysłów domykający brzmienie. Kanał DOCX daje „…”, kanał TXT/PDF proste "…"
         /// </summary>
         private static bool IsClosingQuote(char character)
-            => character is '”' or '"' or '»';
+            => QuotationMarks.IsClosing(character) || character is QuotationMarks.Straight or '»';
 
         private const string YearOrLongDate =
             @"(?:\d{1,2}\s+(?:" + PolishDates.MonthAlternation + @")\s+)?\d{4}\s+r";

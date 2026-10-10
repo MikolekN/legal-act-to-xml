@@ -1067,6 +1067,54 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "nr,p,fragment", "nr,p,tabela" }, exported);
         }
 
+        // ============================================================
+        // ADR-0030: warianty cudzysłowu rozpoznaje jedno źródło
+        // ============================================================
+
+        [Fact]
+        public void Adr0030_QuotationMarkCharacters_AreDefinedInExactlyOnePlace()
+        {
+            // Cudzysłów typograficzny jako literał znakowy, w klasie znaków wzorca albo jako \uXXXX to własny
+            // zestaw wariantów — kolejny wariant (jak U+02EE) trzeba by wtedy dopisywać w każdym z osobna.
+            var ownSet = new System.Text.RegularExpressions.Regex(
+                @"'[„”“ˮ]'|\[[^\]]*[„”“ˮ][^\]]*\]|\\u(?:201[CDEcde]|02[Ee][Ee])");
+            var servicesRoot = Path.Combine(TestFiles.GetRepositoryRoot(), "src", "Saga.Core", "Services");
+
+            var offenders = Directory.EnumerateFiles(servicesRoot, "*.cs", SearchOption.AllDirectories)
+                .Where(file => Path.GetFileName(file) != "QuotationMarks.cs")
+                .Where(file => File.ReadLines(file)
+                    .Select(line => line.TrimStart())
+                    .Where(line => !line.StartsWith("//", StringComparison.Ordinal))
+                    .Any(line => ownSet.IsMatch(line)))
+                .Select(Path.GetFileName)
+                .ToList();
+
+            Assert.True(offenders.Count == 0,
+                "Warianty cudzysłowu muszą pochodzić z Services/QuotationMarks.cs (ADR-0030). " +
+                "Pliki z własnymi zestawami: " + string.Join(", ", offenders));
+        }
+
+        [Fact]
+        public void Adr0030_EveryClosingVariant_ClosesTheQuotationAndIsTakenOffItsEdge()
+        {
+            // Tekstu się nie normalizuje, więc każdy wariant musi działać sam: zamknąć bilans cudzysłowów
+            // i zejść z granicy cytatu razem z interpunkcją.
+            foreach (var closing in QuotationMarks.Closing)
+            {
+                var tracker = new QuoteBalanceTracker();
+                tracker.Observe($"„1. Nowe brzmienie ustępu.{closing};", hasStyle: false);
+                Assert.True(tracker.ClosureReached, $"U+{(int)closing:X4} nie zamyka bilansu");
+
+                var collector = new AmendmentCollector();
+                collector.AddParagraph($"„1. Nowe brzmienie ustępu.{closing},", null);
+                var quotes = AmendmentStateManager.TrimQuoteBoundaries(collector);
+
+                Assert.True(quotes.HasClosing, $"U+{(int)closing:X4} zostaje w treści");
+                Assert.Equal(",", quotes.Punctuation);
+                Assert.Equal("1. Nowe brzmienie ustępu.", collector.Paragraphs[0].Text);
+            }
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

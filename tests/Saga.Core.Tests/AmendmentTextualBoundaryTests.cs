@@ -386,6 +386,29 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void QuoteClosedWithTheModifierLetter_EndsTheAmendment()
+        {
+            // 347969_3084519: cytat zamknięty znakiem U+02EE zamiast U+201D — bez stylów nic innego go nie kończy.
+            var (orch, ctx) = NewPipeline();
+
+            Feed(orch, ctx,
+                "Art. 1. W ustawie wprowadza się następujące zmiany:",
+                "1) w art. 19a:",
+                "a) w ust. 2 pkt 1 otrzymuje brzmienie:",
+                "„1) świadczeniobiorcy zgłaszającemu się po raz pierwszy;\u02EE,",
+                "b) w ust. 4 uchyla się pkt 3;",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.");
+            orch.Finalize(ctx);
+
+            var letters = ctx.Document.Articles.First().Paragraphs[0].Points.Single().Letters;
+            Assert.Equal(new[] { "a", "b" }, letters.Select(l => l.Number?.Value));
+
+            var amendment = letters[0].Amendment!;
+            Assert.True(amendment.HasClosingQuote);
+            Assert.Equal("świadczeniobiorcy zgłaszającemu się po raz pierwszy;", Assert.Single(amendment.Content!.Points).ContentText);
+        }
+
+        [Fact]
         public void DefaultEditorStyle_DoesNotDisarmQuoteTracking()
         {
             // Styl „Normalny" (domyślny styl edytora, bez semantyki) nie może wyłączyć granic

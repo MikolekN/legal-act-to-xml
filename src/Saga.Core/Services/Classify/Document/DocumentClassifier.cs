@@ -496,7 +496,7 @@ namespace Saga.Core.Services.Classify.Document
 
         /// <summary>Czy blok zaczyna się cudzysłowem otwierającym (treść cytowana, np. przytoczony wzór/nowelizacja).</summary>
         private static bool StartsWithOpeningQuote(string text) =>
-            text.Length > 0 && text[0] is '„' or '“' or '«' or '"';
+            text.Length > 0 && (QuotationMarks.Any.Contains(text[0]) || text[0] == '«');
 
         private static IReadOnlyList<DocumentSignal> SortSignals(List<DocumentSignal> signals) =>
             signals.OrderByDescending(s => s.Score).ToList();

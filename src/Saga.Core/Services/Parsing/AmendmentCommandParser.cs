@@ -90,7 +90,8 @@ namespace Saga.Core.Services.Parsing
         /// oraz proste cudzysłowy "…" jako ogranicznik brzmień (kanał TXT/PDF; Sanitize nie normalizuje cudzysłowów).
         /// </summary>
         internal static readonly Regex ReplaceWordsPattern = new(
-            @"wyraz(?:y|ów|em)?\s+[„""](?<old>[^„”“""]*)[”“""]\s+zastępuje\s+się\s+(?:[^„”“""]{0,80}?)wyraz(?:ami|em|y)?\s+[„""](?<new>[^„”“""]*)[”“""]",
+            $@"wyraz(?:y|ów|em)?\s+[{QuotationMarks.OpeningOrStraight}](?<old>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]\s+zastępuje\s+się\s+"
+            + $@"(?:[^{QuotationMarks.Any}]{{0,80}}?)wyraz(?:ami|em|y)?\s+[{QuotationMarks.OpeningOrStraight}](?<new>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>

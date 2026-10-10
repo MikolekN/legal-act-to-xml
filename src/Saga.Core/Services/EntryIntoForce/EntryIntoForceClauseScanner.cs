@@ -113,8 +113,8 @@ namespace Saga.Core.Services.EntryIntoForce
             var depth = 0;
             for (var i = 0; i < index && i < text.Length; i++)
             {
-                if (text[i] == '„') depth++;
-                else if (text[i] == '”' && depth > 0) depth--;
+                if (text[i] == QuotationMarks.Opening) depth++;
+                else if (QuotationMarks.IsClosing(text[i]) && depth > 0) depth--;
             }
             return depth > 0;
         }

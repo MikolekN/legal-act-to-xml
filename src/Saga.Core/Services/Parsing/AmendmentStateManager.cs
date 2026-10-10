@@ -256,14 +256,14 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Otwierający cudzysłów cytatu na początku pierwszego akapitu.</summary>
         private static readonly System.Text.RegularExpressions.Regex OpeningQuotePattern = new(
-            @"^\s*[„""]",
+            $@"^\s*[{QuotationMarks.OpeningOrStraight}]",
             System.Text.RegularExpressions.RegexOptions.Compiled);
 
         /// <summary>
         /// Zamykający cudzysłów cytatu na końcu ostatniego akapitu z opcjonalną interpunkcją.
         /// </summary>
         private static readonly System.Text.RegularExpressions.Regex ClosingQuotePattern = new(
-            @"[”""]\s*(?<punct>[,;.])?\s*$",
+            $@"[{QuotationMarks.ClosingOrStraight}]\s*(?<punct>[,;.])?\s*$",
             System.Text.RegularExpressions.RegexOptions.Compiled);
 
         /// <summary>

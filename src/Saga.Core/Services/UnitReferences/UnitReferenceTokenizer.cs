@@ -263,9 +263,12 @@ namespace Saga.Core.Services.UnitReferences
         private static bool IsDesignation(UnitToken token) =>
             token.Kind is UnitTokenKind.Designation or UnitTokenKind.Range;
 
+        /// <summary>Znaki zdejmowane z brzegów prozy między oznaczeniami: odstępy, kropka i cudzysłowy.</summary>
+        private static readonly char[] ProseEdge = [' ', '\t', '.', .. QuotationMarks.Any];
+
         private static void AddProse(List<UnitToken> tokens, string fragment)
         {
-            var trimmed = fragment.Trim(' ', '\t', '.', '„', '”', '"');
+            var trimmed = fragment.Trim(ProseEdge);
             if (trimmed.Length > 0)
                 tokens.Add(new UnitToken(UnitTokenKind.Prose, trimmed));
         }

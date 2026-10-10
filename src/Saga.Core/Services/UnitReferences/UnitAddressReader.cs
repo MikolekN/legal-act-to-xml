@@ -15,10 +15,12 @@ namespace Saga.Core.Services.UnitReferences
     {
         /// <summary>Domknięty fragment w cudzysłowie — najgłębszy, bez cudzysłowów w środku.</summary>
         private static readonly Regex InnermostQuoted = new(
-            "„[^„”“\"]*[”“\"]|\"[^„”“\"]*\"", RegexOptions.Compiled);
+            $"{QuotationMarks.Opening}[^{QuotationMarks.Any}]*[{QuotationMarks.ClosingOrStraight}]|\"[^{QuotationMarks.Any}]*\"",
+            RegexOptions.Compiled);
 
         /// <summary>Cytat niedomknięty do końca tekstu („otrzymuje brzmienie: „Art. 5 …").</summary>
-        private static readonly Regex UnclosedQuote = new("[„\"].*$", RegexOptions.Compiled | RegexOptions.Singleline);
+        private static readonly Regex UnclosedQuote = new(
+            $"[{QuotationMarks.OpeningOrStraight}].*$", RegexOptions.Compiled | RegexOptions.Singleline);
 
         /// <summary>
         /// Czasownik komendy. Jednostka za nim to przedmiot komendy („po pkt 6 dodaje się przecinek i pkt 7"),

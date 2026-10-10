@@ -239,6 +239,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   (`podw-tiret` zamiast kolejnego `tiret`; 25 jednostek w 4 dokumentach). Zgodność struktury bez stylów:
   ustawy ogłoszone 98,37 % → 98,72 % jednostek (197 z 242 dokumentów w pełni zgodnych), teksty jednolite 327 z 460.
 
+- **Warianty cudzysłowu z jednego źródła** (ADR-0030): zestawy znaków cudzysłowu, dotąd różne w dziesięciu
+  miejscach, trzyma `QuotationMarks`. Doszedł wariant `ˮ` (U+02EE), którym bywa zapisany cudzysłów zamykający:
+  cytat zamknięty tym znakiem kończy się teraz także bez stylów, a ze stylami znak schodzi z treści cytowanej
+  jednostki jak każdy cudzysłów graniczny (2 dokumenty, 3 zdań). Tekstu się nie normalizuje.
+  Zgodność struktury bez stylów: ustawy ogłoszone 98,72 % → 99,41 % jednostek (199 z 242 dokumentów w pełni
+  zgodnych), teksty jednolite 327 z 460.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.
