@@ -486,7 +486,7 @@ Kaskadowe tworzenie encji implicit:
 | **`DesignationAlphabet`** | Litery w oznaczeniach jednostek — łacińskie i polskie („art. 48ł", „lit. ł") — jako jedno źródło dla wzorców klasyfikatora, powołań (`UnitReferenceTokenizer`) i ciągłości numeracji (`NumberingHint`: l → ł → m). |
 | **`FootnoteMarkers`** | Znacznik odnośnika w kanale tekstowym (`[9)]`): wzorzec dla klasyfikatora i wygaszanie znaczników przed czytaniem powołań, żeby numer odnośnika nie stał się oznaczeniem jednostki. |
 | **`LegalReferenceService`** | Cele nowelizacji z treści encji („w art. 5 § 2 pkt 3") jako lista `StructuralAmendmentReference`, bez zdania; kontekstem jest cel komendy nadrzędnej. Sam nie rozbiera powołań — deleguje do `UnitAddressReader` (6.3a). |
-| **`JournalReferenceService`** | Parsowanie publikatorów (Dz. U.) z treści artykułów nowelizujących i uzupełnianie listy `JournalInfo`. |
+| **`JournalReferenceService`** | Parsowanie publikatorów (Dz. U.) z treści artykułów nowelizujących i uzupełnianie listy `JournalInfo`. Rocznik pominięty w publikatorze to rok z daty aktu, którego tytuł go poprzedza (§ 158 ust. 7 ZTP); bez tej daty publikator jest pomijany. |
 
 ### 6.3a Powołania jednostek (`Services/UnitReferences/`)
 

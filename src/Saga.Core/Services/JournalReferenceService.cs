@@ -17,6 +17,12 @@ namespace Saga.Core.Services
             RegexOptions.Compiled | RegexOptions.IgnoreCase
         );
 
+        // Data aktu w jego tytule („ustawie z dnia 18 stycznia 2024 r.") — rok, w którym akt wydano.
+        private static readonly Regex ActDateRegex = new Regex(
+            @"\bz\s+dnia\s+\d{1,2}\s+\p{L}+\s+(?<year>\d{4})\s*r\.",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase
+        );
+
         /// <summary>
         /// Parsuje publikatory (Dz. U.) z treści artykułu i uzupełnia listę Journals.
         /// Grupuje pozycje po roku – jeśli ten sam rok wystąpi wielokrotnie,
@@ -30,18 +36,19 @@ namespace Saga.Core.Services
             if (!StartsWithAmendingFormula(article.ContentText))
                 return;
 
-            // Fallback roku: EffectiveDate artykułu, a jeśli nie ustawione — bieżący rok
-            var fallbackYear = article.EffectiveDate.Year > 1
-                ? article.EffectiveDate.Year
-                : DateTime.Now.Year;
-
             var journalsByYear = new Dictionary<int, JournalInfo>();
 
             foreach (Match m in JournalRegex.Matches(article.ContentText))
             {
                 var sourceMatch = m.Groups["source"].Value;
-                var yearStr = m.Groups["year"].Success ? m.Groups["year"].Value : null;
-                var year = string.IsNullOrEmpty(yearStr) ? fallbackYear : int.Parse(yearStr);
+                // § 158 ust. 7 ZTP: rocznik pomija się, gdy akt ogłoszono w roku wymienionym w jego dacie —
+                // brakujący rok to rok z daty aktu, którego tytuł poprzedza publikator.
+                int? written = m.Groups["year"].Success ? int.Parse(m.Groups["year"].Value) : null;
+                if ((written ?? YearOfActDateBefore(article.ContentText, m.Index)) is not { } year)
+                {
+                    Log.Warning("Publikator bez rocznika i bez daty aktu przed nim — pominięty: {Source}", sourceMatch);
+                    continue;
+                }
 
                 var positionsStr = m.Groups["positions"].Success ? m.Groups["positions"].Value : "";
 
@@ -85,6 +92,10 @@ namespace Saga.Core.Services
                     string.Join("; ", article.Journals.Select(j => j.ToStringLong())));
             }
         }
+
+        /// <summary>Rok z ostatniej daty aktu stojącej przed wskazanym miejscem tekstu; null, gdy daty nie ma.</summary>
+        private static int? YearOfActDateBefore(string text, int index) =>
+            ActDateRegex.Matches(text[..index]).LastOrDefault() is { } date ? int.Parse(date.Groups["year"].Value) : null;
 
         private static readonly Regex ArticlePrefixStrip = new(
             @"^(Art\.|\u00a7)\s*[\w\d]+\.?\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);

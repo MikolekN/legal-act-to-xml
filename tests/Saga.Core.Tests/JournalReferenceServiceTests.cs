@@ -8,19 +8,49 @@ namespace Saga.Core.Tests
         private readonly JournalReferenceService _service = new();
 
         [Fact]
-        public void ParseJournalReferences_UsesEffectiveDateWhenYearMissing()
+        public void MissingYear_IsTheYearInTheDateOfTheCitedAct()
         {
+            // § 158 ust. 7 ZTP: rocznik pomija się, gdy akt ogłoszono w roku wymienionym w jego dacie.
             var article = new Article
             {
-                EffectiveDate = new DateTime(2022, 1, 1),
+                ContentText = "Art. 1. W ustawie z dnia 7 lipca 2023 r. o zmianie ustawy o planowaniu (Dz. U. poz. 1688 " +
+                              "oraz z 2024 r. poz. 1907) wprowadza się następujące zmiany:"
+            };
+
+            _service.ParseJournalReferences(article);
+
+            var journal = Assert.Single(article.Journals);
+            Assert.Equal(2023, journal.Year);
+            Assert.Equal(new[] { 1688 }, journal.Positions);
+        }
+
+        [Fact]
+        public void MissingYear_DoesNotComeFromTheAmendingActOrTheCalendar()
+        {
+            // Data wejścia w życie przepisu zmieniającego nie mówi nic o roczniku aktu zmienianego.
+            var article = new Article
+            {
+                EffectiveDate = new DateTime(2026, 4, 13),
                 ContentText = "Art. 1. W ustawie z dnia 1 stycznia 2022 r. (Dz. U. poz. 5)"
             };
 
             _service.ParseJournalReferences(article);
 
-            Assert.Single(article.Journals);
-            Assert.Equal(2022, article.Journals[0].Year);
-            Assert.Equal(new[] { 5 }, article.Journals[0].Positions);
+            Assert.Equal(2022, Assert.Single(article.Journals).Year);
+        }
+
+        [Fact]
+        public void MissingYear_WithoutAnActDate_LeavesTheJournalOut()
+        {
+            // Rocznika się nie zgaduje: publikator bez roku i bez daty aktu nie daje identyfikatora ELI.
+            var article = new Article
+            {
+                ContentText = "Art. 1. W ustawie z dnia … r. o planowaniu (Dz. U. poz. 5) wprowadza się następujące zmiany:"
+            };
+
+            _service.ParseJournalReferences(article);
+
+            Assert.Empty(article.Journals);
         }
 
         [Fact]

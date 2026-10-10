@@ -292,5 +292,23 @@ namespace Saga.Core.Tests
             Assert.Equal("https://eli.gov.pl/eli/DU/2025/350",
                 citation.Attributes().Single(a => a.Name.LocalName == "akt").Value);
         }
+
+        [Fact]
+        public void AmendedAct_PublishedInTheYearOfItsDate_GetsThatYearInItsEli()
+        {
+            // „(Dz. U. poz. 1688)" bez rocznika: akt ogłoszono w roku z jego daty (§ 158 ust. 7 ZTP).
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Art. 1. W ustawie z dnia 7 lipca 2023 r. o zmianie ustawy o planowaniu (Dz. U. poz. 1688) art. 5 otrzymuje brzmienie:",
+                "„Art. 5. Plan ogólny uchwala rada gminy.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var citation = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "cytat-strukt");
+
+            Assert.Equal("https://eli.gov.pl/eli/DU/2023/1688",
+                citation.Attributes().Single(a => a.Name.LocalName == "akt").Value);
+            Assert.Equal("DU/2023/1688__art_5", citation.Attribute("element-eId")?.Value);
+        }
     }
 }

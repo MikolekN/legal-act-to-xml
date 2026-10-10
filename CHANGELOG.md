@@ -150,6 +150,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   je zapisuje (`art. 43 pkt 2`, `DU/2026/26__art_43__pkt_2`), a nie całą klauzulę. Reguła ogólna i zdarzenie
   zapisane w kilku pozycjach nadal wskazują klauzulę. `DaneCzasowe` trzech przykładów autorów schematu
   zgadzają się w całości; `CorpusValidator --compare-reference` porównuje je osobną sekcją.
+- **Rocznik publikatora bez roku**: „(Dz. U. poz. 1688)" przy ustawie „z dnia 7 lipca 2023 r." daje
+  `DU/2023/1688` — rok z daty aktu zmienianego (§ 158 ust. 7 ZTP). Wcześniej brakujący rocznik zastępował
+  bieżący rok kalendarzowy, więc identyfikator ELI aktu zmienianego zależał od dnia konwersji (w korpusie
+  107 aktów zmienianych w 67 dokumentach). Publikator bez roku i bez daty aktu nie daje identyfikatora.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
