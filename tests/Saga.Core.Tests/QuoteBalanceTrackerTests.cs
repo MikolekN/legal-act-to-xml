@@ -157,6 +157,39 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TrailingComma_ClosesBeforeABlockThatOpensNoQuote()
+        {
+            var t = new QuoteBalanceTracker();
+            t.Observe("„1. Brzmienie pierwsze.”,", hasStyle: false);
+
+            Assert.True(t.CommaClosurePending);
+            Assert.False(t.ClosesBefore("„2. Brzmienie drugie.”;"));
+            Assert.True(t.ClosesBefore("b) ust. 2 otrzymuje brzmienie:"));
+        }
+
+        [Fact]
+        public void TrailingComma_InsideAnOpenQuote_IsNotAClosure()
+        {
+            var t = new QuoteBalanceTracker();
+            t.Observe("„1. Przepis stosuje się do:", hasStyle: false);
+            t.Observe("1) spółki „Alfa”,", hasStyle: false);
+
+            Assert.False(t.CommaClosurePending);
+            Assert.False(t.ClosesBefore("2) spółki „Beta”.”;"));
+        }
+
+        [Fact]
+        public void OpeningQuoteInsideASuperscript_ArmsTheTracker()
+        {
+            // Cytowany odnośnik: cudzysłów sformatowany razem ze znakiem odnośnika (DU/2026/252, art. 1 pkt 2).
+            var t = new QuoteBalanceTracker();
+            t.Observe("[„2)] Niniejsza ustawa służy stosowaniu rozporządzenia.”;", hasStyle: false);
+
+            Assert.True(t.IsArmed);
+            Assert.True(t.ClosureReached);
+        }
+
+        [Fact]
         public void LeftDoubleQuotationMark_U201C_ClosesQuote()
         {
             // Niedomyślny wariant edytora: „…“ (U+201C jako zamykający) — bilans musi się domknąć,

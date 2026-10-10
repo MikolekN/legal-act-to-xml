@@ -713,7 +713,16 @@ inaczej niż powrotem do stylu `ART/UST/PKT/LIT/TIR`:
   ujęte w „…"); uzbraja się, gdy pierwszy zbierany blok jest bezstylowy i zaczyna się cudzysłowem
   otwierającym „; koniec cytatu (`ClosureReached`) kończy zbieranie nowelizacji zamiast zmiany stylu.
   Trigger nowelizacyjny wykryty wewnątrz otwartego cytatu jest traktowany jako nowelizacja
-  zagnieżdżona (`ZZ`) — cytat trwa (`MarkNestedTrigger`).
+  zagnieżdżona (`ZZ`) — cytat trwa (`MarkNestedTrigger`). Cytat zamknięty przecinkiem („…",) rozstrzyga
+  początek następnego bloku (`ClosesBefore`): kolejny cudzysłów otwierający ciągnie komendę mnogą, cokolwiek
+  innego jest już jednostką aktu. Cudzysłów otwierający liczy się także w indeksie górnym („[„2)] …").
+- **`AmendmentStateManager.UpdateState`** — blok w cudzysłowie otwierającym po komendzie bez dwukropka
+  („ust. 1 otrzymuje brzmienie", `AmendmentFinalizer.ModificationWithoutColonPattern`) jest treścią cytowaną:
+  przepis aktu nie zaczyna się od cudzysłowu, więc „„1. …" nie staje się ustępem artykułu zmieniającego.
+  Sam cudzysłów nie wystarcza — obwieszczenie tekstu jednolitego przytacza artykuły („…, które stanowią:").
+- **`AmendmentBuilder.TryBuildStylelessCommonPart`** — myślnik po punkcie albo literze bez znaku końcowego
+  jest częścią wspólną także w treści cytowanej; regułę dzieli z treścią aktu
+  (`CommonPartPlacement.LeavesEnumerationOpen`).
 - **`AmendmentCommandParser`** — rozpoznaje rodzaj komendy nowelizacyjnej (`AmendmentCommandKind`:
   `Change`/`Add`/`Repeal`/`ReplaceWords`) z samej treści triggera, gdy mapa stylów nie rozstrzyga.
   Źródło niższego priorytetu niż styl — styl zawsze dominuje, gdy jest dostępny.

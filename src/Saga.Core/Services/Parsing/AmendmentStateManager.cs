@@ -32,6 +32,7 @@ namespace Saga.Core.Services.Parsing
         ///   CHYBA ŻE aktywny trigger + akapit nie zawiera własnego triggera → treść nowelizacji
         /// - Brak stylu + trigger → wejście w nowelizację
         /// - Brak stylu + już w nowelizacji → pozostaje w nowelizacji
+        /// - Brak stylu + cudzysłów otwierający po komendzie bez dwukropka → wejście w nowelizację
         /// </summary>
         public void UpdateState(ParsingContext context, ClassificationResult classification, string text)
         {
@@ -87,7 +88,24 @@ namespace Saga.Core.Services.Parsing
             }
 
             // 4. Brak stylu + już w nowelizacji → pozostaje w nowelizacji
-            // 5. Brak stylu + normalny tryb → przetwarzane normalnie (z fallback warning)
+
+            // 5. Komenda bez dwukropka („ust. 1 otrzymuje brzmienie") i blok w cudzysłowie otwierającym:
+            //    to treść cytowana, a nie jednostka aktu — przepis aktu nie zaczyna się od „. Bez tej reguły
+            //    „„1. …" stawało się ustępem artykułu zmieniającego. Sam cudzysłów nie wystarcza: obwieszczenie
+            //    tekstu jednolitego przytacza całe artykuły („…, które stanowią:") i nie jest to nowelizacja.
+            if (!context.InsideAmendment
+                && QuoteBalanceTracker.OpensQuote(text)
+                && GetOwner(context) is { } owner
+                && AmendmentFinalizer.ModificationWithoutColonPattern.IsMatch(owner.ContentText))
+            {
+                context.InsideAmendment = true;
+                Log.Warning("Komenda nowelizacyjna bez dwukropka — blok w cudzysłowie przyjęty jako treść cytowana: {Text}", text);
+                ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
+                    "Komenda nowelizacyjna bez dwukropka — treść w cudzysłowie przyjęta jako cytowana.");
+                return;
+            }
+
+            // 6. Brak stylu + normalny tryb → przetwarzane normalnie (z fallback warning)
         }
 
         /// <summary>

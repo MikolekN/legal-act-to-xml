@@ -131,8 +131,7 @@ namespace Saga.Core.Services.Parsing
                 return false;
             }
 
-            var lastItemText = lastItem.ContentText.TrimEnd();
-            if (parent == null || lastItemText.Length == 0 || lastItemText[^1] is ':' or ';' or ',' or '.')
+            if (parent == null || !CommonPartPlacement.LeavesEnumerationOpen(lastItem.ContentText))
                 return false;
 
             if (!ParsingFactories.AttachWrapUpCommonPart(parent, text))

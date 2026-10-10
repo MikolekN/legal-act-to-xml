@@ -84,6 +84,22 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ProcessParagraph_StylelessDashAfterPointEndingWithYearAbbreviation_IsWrapUp()
+        {
+            // Kropka w „2026 r." należy do skrótu — punkt nie ma znaku końcowego (338414_3001786, art. 8).
+            var orchestrator = new ParserOrchestrator();
+            var context = CreateContext();
+
+            orchestrator.ProcessParagraph(CreateParagraph("Art. 1. Do umów zawartych:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("1) przed dniem 1 stycznia 2026 r.,"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("2) w następstwie postępowań wszczętych przed dniem 1 stycznia 2026 r."), context);
+            orchestrator.ProcessParagraph(CreateParagraph("– stosuje się przepisy dotychczasowe."), context);
+
+            var wrapUpPart = context.CurrentParagraph!.CommonParts.Single(cp => cp.Type == CommonPartType.WrapUp);
+            Assert.Equal("– stosuje się przepisy dotychczasowe.", wrapUpPart.ContentText);
+        }
+
+        [Fact]
         public void ProcessParagraph_StylelessDashAfterPunctuatedPoint_IsNotWrapUp()
         {
             // Po elemencie zakończonym przecinkiem myślnik bywa w korpusie legendą wzoru („…wynosi 1,"

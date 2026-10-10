@@ -287,7 +287,8 @@ namespace Saga.Core.Services.Parsing.Builders
                     BuildAmendmentLetter(para.Text, content);
                     break;
                 case AmendmentEntityKind.Tiret:
-                    BuildAmendmentTiret(para.Text, content);
+                    if (!TryBuildStylelessCommonPart(para, content))
+                        BuildAmendmentTiret(para.Text, content);
                     break;
                 case AmendmentEntityKind.CommonPart:
                     BuildAmendmentCommonPart(para, content);
@@ -518,6 +519,55 @@ namespace Saga.Core.Services.Parsing.Builders
                 ParsingFactories.SetContentAndSegments(paragraph, $"{paragraph.ContentText.TrimEnd()} {sanction}");
             }
 
+            return true;
+        }
+
+        /// <summary>
+        /// Część wspólna w treści cytowanej bez stylu — ta sama reguła co w treści aktu
+        /// (<c>StructureProcessor.TryHandleStylelessWrapUp</c>): myślnik tuż po punkcie albo literze, które nie
+        /// mają żadnego znaku końcowego, zamyka wyliczenie (§ 57 ust. 3 ZTP). Po tirecie i po elemencie
+        /// zakończonym znakiem myślnik zostaje tiretem.
+        /// </summary>
+        private bool TryBuildStylelessCommonPart(CollectedAmendmentParagraph para, AmendmentContent content)
+        {
+            if (para.StyleInfo != null || ParagraphClassifier.GetStyleType(para.StyleId) == "TIR")
+                return false;
+
+            BaseEntity lastItem;
+            BaseEntity? parent;
+            UnitType itemType;
+            if (_currentLetter != null)
+            {
+                if (_currentLetter.Tirets.Count > 0)
+                    return false;
+                (lastItem, parent, itemType) = (_currentLetter, _currentPoint, UnitType.Letter);
+            }
+            else if (_currentPoint != null && _currentPoint.Letters.Count == 0)
+            {
+                (lastItem, parent, itemType) = (_currentPoint, _currentParagraph, UnitType.Point);
+            }
+            else
+            {
+                return false;
+            }
+
+            if (!CommonPartPlacement.LeavesEnumerationOpen(lastItem.ContentText))
+                return false;
+
+            var commonPart = new CommonPart(CommonPartType.WrapUp, parent?.Id ?? string.Empty, para.Text)
+            {
+                Parent = parent,
+                ListItemType = itemType,
+            };
+
+            if (parent is IHasCommonParts host)
+                host.CommonParts.Add(commonPart);
+            else
+                content.CommonParts.Add(commonPart);
+
+            if (parent != null)
+                ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
+                    "Część wspólna rozpoznana bez stylu: ostatni element wyliczenia nie ma znaku końcowego (§ 57 ust. 3 ZTP).");
             return true;
         }
 

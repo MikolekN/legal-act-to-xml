@@ -317,6 +317,75 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void QuoteClosedWithAComma_EndsBeforeTheNextUnitOfTheAct()
+        {
+            // Wyliczenie zmian: „a) … otrzymuje brzmienie: „…", b) …" — po przecinku stoi następna litera
+            // aktu zmieniającego, a nie dalszy ciąg cytatu.
+            var (orch, ctx) = NewPipeline();
+
+            Feed(orch, ctx,
+                "Art. 1. W ustawie wprowadza się następujące zmiany:",
+                "1) w art. 5:",
+                "a) ust. 1 otrzymuje brzmienie:",
+                "„1. Brzmienie pierwsze.”,",
+                "b) ust. 2 otrzymuje brzmienie:",
+                "„2. Brzmienie drugie.”;",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.");
+            orch.Finalize(ctx);
+
+            var letters = ctx.Document.Articles.First().Paragraphs[0].Points.Single().Letters;
+            Assert.Equal(new[] { "a", "b" }, letters.Select(l => l.Number?.Value));
+            Assert.All(letters, letter => Assert.Single(letter.Amendment!.Content!.Paragraphs));
+            Assert.Equal("1", letters[0].Amendment!.Content!.Paragraphs[0].Number?.Value);
+            Assert.Equal("2", letters[1].Amendment!.Content!.Paragraphs[0].Number?.Value);
+        }
+
+        [Fact]
+        public void QuotedUnitAfterACommandWithoutAColon_IsQuotedContent_NotAUnitOfTheAct()
+        {
+            // DU/2026/252, art. 1 pkt 47 lit. a: „ust. 1 otrzymuje brzmienie" bez dwukropka. Przepis aktu
+            // nie zaczyna się od cudzysłowu — „1. …" to treść cytowana, a nie ustęp artykułu zmieniającego.
+            var (orch, ctx) = NewPipeline();
+
+            Feed(orch, ctx,
+                "Art. 1. W ustawie wprowadza się następujące zmiany:",
+                "1) w art. 43:",
+                "a) ust. 1 otrzymuje brzmienie",
+                "„1. Organ może wydać ostrzeżenie.”,",
+                "b) uchyla się ust. 2–5,",
+                "c) ust. 6 otrzymuje brzmienie:",
+                "„6. Ostrzeżenie podaje się do wiadomości.”;",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.");
+            orch.Finalize(ctx);
+
+            var article = ctx.Document.Articles.First();
+            var paragraph = Assert.Single(article.Paragraphs);
+            var letters = paragraph.Points.Single().Letters;
+
+            Assert.Equal(new[] { "a", "b", "c" }, letters.Select(l => l.Number?.Value));
+            Assert.Equal("1", Assert.Single(letters[0].Amendment!.Content!.Paragraphs).Number?.Value);
+            Assert.Contains(letters[0].ValidationMessages, m => m.Message.Contains("Komenda nowelizacyjna bez dwukropka"));
+        }
+
+        [Fact]
+        public void QuotedArticleAfterAnAnnouncementClause_IsNotAnAmendment()
+        {
+            // Obwieszczenie tekstu jednolitego przytacza artykuły („…, które stanowią:") — to nie komenda;
+            // sam cudzysłów otwierający nie rozpoczyna nowelizacji.
+            var (orch, ctx) = NewPipeline();
+
+            Feed(orch, ctx,
+                "Art. 1. Tekst jednolity nie obejmuje:",
+                "1) art. 57 ustawy z dnia 1 października 2024 r., który stanowi:",
+                "„Art. 57. Przepisy stosuje się również do odbudowy.”",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.");
+            orch.Finalize(ctx);
+
+            var point = ctx.Document.Articles.First().Paragraphs[0].Points.Single();
+            Assert.Null(point.Amendment);
+        }
+
+        [Fact]
         public void DefaultEditorStyle_DoesNotDisarmQuoteTracking()
         {
             // Styl „Normalny" (domyślny styl edytora, bez semantyki) nie może wyłączyć granic

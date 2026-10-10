@@ -213,6 +213,23 @@ a wersjonowanie zgodne z Semantic Versioning.
   z samej treści, gdy wejściem jest DOCX bez szablonu, PDF albo TXT. Stan wyjściowy: ustawy 93,8 % jednostek
   (136 z 242 dokumentów w pełni zgodnych), teksty jednolite 99,5 %.
 
+- **Treść cytowana bez stylów**: granice cytatu i części wspólne rozpoznawane z samej treści, gdy dokument nie
+  niesie stylów szablonu (DOCX bez szablonu, PDF, TXT).
+  - Cytat zamknięty przecinkiem („…”,) kończy się przed następną jednostką aktu; trwa tylko wtedy, gdy kolejny blok
+    otwiera następny cytat (komenda mnoga „art. 5 i 6 otrzymują brzmienie:"). Wcześniej następna litera wyliczenia
+    zmian była wchłaniana do cytatu.
+  - Myślnik po punkcie albo literze bez znaku końcowego jest w treści cytowanej częścią wspólną — tak jak w treści
+    aktu (§ 57 ust. 3 ZTP). Reguła „pozycja bez znaku końcowego" ma jedno źródło
+    (`CommonPartPlacement.LeavesEnumerationOpen`) i nie bierze kropki skrótu roku („… 2026 r.") za znak końcowy.
+  - Komenda bez dwukropka („ust. 1 otrzymuje brzmienie") i blok w cudzysłowie otwierającym po niej to treść
+    cytowana, a nie ustęp artykułu zmieniającego — przepis aktu nie zaczyna się od cudzysłowu. Decyzja trafia jako
+    ostrzeżenie na jednostkę z komendą.
+  - Cudzysłów otwierający w indeksie górnym („[„2)] …", cytowany odnośnik) otwiera cytat.
+
+  Zgodność struktury bez stylów (`--styleless-parity`): ustawy ogłoszone 93,8 % → 98,37 % jednostek, w pełni
+  zgodnych 136 → 191 z 242 dokumentów; teksty jednolite 313 → 322 z 460. W eksporcie dokumentów ze
+  stylami zmienił się 1 dokument: część wspólna bez stylu w treści cytowanej (wcześniej tiret w osobnym cytacie).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

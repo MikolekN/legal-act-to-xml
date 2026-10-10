@@ -251,6 +251,14 @@ namespace Saga.Core.Services.Parsing
             string text,
             string? styleId)
         {
+            // Cytat zamknięty przecinkiem („…",): komenda mnoga ciągnie go kolejnym cytatem, a w wyliczeniu
+            // zmian po przecinku stoi już następna jednostka aktu — rozstrzyga początek tego bloku.
+            if (context.InsideAmendment && context.AmendmentCollector.QuoteTracker.ClosesBefore(text))
+            {
+                _amendmentManager.Flush(context);
+                context.InsideAmendment = false;
+            }
+
             bool wasInsideAmendment = context.InsideAmendment;
             _amendmentManager.UpdateState(context, classification, text);
 

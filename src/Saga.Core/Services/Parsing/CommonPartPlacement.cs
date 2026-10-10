@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
 using Serilog;
@@ -45,6 +46,28 @@ namespace Saga.Core.Services.Parsing
             closing.InterruptsAfter = items.Count;
             ValidationReporter.AddValidationMessage(host, ValidationLevel.Warning,
                 "Część wspólna przerywa wyliczenie — po niej stoją kolejne pozycje (§ 57 ZTP).");
+        }
+
+        /// <summary>Skrót roku na końcu pozycji („… 2026 r.") — kropka skrótu, nie znak końca pozycji.</summary>
+        private static readonly Regex YearAbbreviationAtEnd = new(@"\b\d{4}\s+r\.$", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Czy pozycja wyliczenia nie ma znaku końcowego — wtedy myślnik tuż za nią jest częścią wspólną
+        /// (§ 57 ust. 3 ZTP), a nie tiretem (wyliczenie tiretów otwiera dwukropek, § 56). Jedna reguła dla
+        /// treści aktu i treści cytowanej bez stylów.
+        /// </summary>
+        internal static bool LeavesEnumerationOpen(string itemText)
+        {
+            var text = itemText.TrimEnd();
+            if (text.Length == 0)
+                return false;
+
+            return text[^1] switch
+            {
+                ':' or ';' or ',' => false,
+                '.' => YearAbbreviationAtEnd.IsMatch(text),
+                _ => true,
+            };
         }
 
         /// <summary>Część wspólna zamykająca wyliczenie — nie wprowadzenie i nie część przerywająca.</summary>

@@ -1,6 +1,7 @@
 using System.Xml.Linq;
 using Saga.Core.Ingest;
 using Saga.Core.Services;
+using Saga.Core.Services.Parsing;
 using Saga.Model;
 
 namespace Saga.Core.Tests
@@ -123,6 +124,67 @@ namespace Saga.Core.Tests
 
             Assert.Equal("czesc-wspolna-litera", part.Name.LocalName);
             Assert.Equal("DU/2025/350__art_68b__ust_1__pkt_1__czw", part.Attribute("eId")?.Value);
+        }
+
+        // ============================================================
+        // Część wspólna w treści cytowanej bez stylów
+        // ============================================================
+
+        // Ten sam przepis co wyżej (DU/2026/26), ale bez stylów szablonu — jak z PDF albo DOCX bez szablonu.
+        private static LegalDocument QuotedWithoutStyles(string lastLetter) => Parse(
+            ("Art. 1. W ustawie z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350) w art. 68b ust. 1 otrzymuje brzmienie:", null),
+            ("„1. Certyfikat wydaje się:", null),
+            ("1) pracownikom medycznym oraz osobom wykonującym:", null),
+            ("a) zawód medyczny,", null),
+            (lastLetter, null),
+            ("– upoważnionym do wystawiania zaświadczeń;", null),
+            ("2) lekarzom konsultantom.”.", null),
+            ("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", null));
+
+        [Fact]
+        public void QuotedDashAfterAnUnfinishedLetter_IsACommonPart_WithoutStyles()
+        {
+            // § 57 ust. 3 ZTP: ostatni element przed częścią wspólną nie ma znaku końcowego.
+            var document = QuotedWithoutStyles("b) czynności pomocnicze");
+
+            var quoted = document.Articles.First().Paragraphs.Single().Amendment!.Content!.Paragraphs.Single();
+            var point = quoted.Points[0];
+
+            Assert.Equal(new[] { "1", "2" }, quoted.Points.Select(p => p.Number!.Value));
+            Assert.All(point.Letters, letter => Assert.Empty(letter.Tirets));
+            var part = Assert.Single(point.CommonParts, p => p.Type == CommonPartType.WrapUp);
+            Assert.Equal("– upoważnionym do wystawiania zaświadczeń;", part.ContentText);
+
+            var xml = LegalDocumentConverter.Convert(document);
+            Assert.Equal("czesc-wspolna-litera",
+                xml.Descendants().Single(e => e.Name.LocalName.StartsWith("czesc-wspolna")).Name.LocalName);
+        }
+
+        [Theory]
+        [InlineData("2) utrudnia kontrolę", true)]
+        [InlineData("2) wszczętych przed dniem 1 stycznia 2026 r.", true)]
+        [InlineData("2) wszczętych przed dniem 1 stycznia 2026\u00A0r.", true)]
+        [InlineData("2) utrudnia kontrolę,", false)]
+        [InlineData("2) utrudnia kontrolę;", false)]
+        [InlineData("2) utrudnia kontrolę.", false)]
+        [InlineData("2) o której mowa w ust. 3 pkt 2.", false)]
+        [InlineData("2) wykonuje:", false)]
+        [InlineData("", false)]
+        public void EnumerationItem_LeavesTheEnumerationOpen_OnlyWithoutATerminalMark(string item, bool expected)
+        {
+            Assert.Equal(expected, CommonPartPlacement.LeavesEnumerationOpen(item));
+        }
+
+        [Fact]
+        public void QuotedDashAfterAFinishedLetter_StaysATiret_WithoutStyles()
+        {
+            // Po literze zakończonej przecinkiem myślnik bywa tiretem albo legendą — kontekst nie rozstrzyga.
+            var document = QuotedWithoutStyles("b) czynności pomocnicze,");
+
+            var point = document.Articles.First().Paragraphs.Single().Amendment!.Content!.Paragraphs.Single().Points[0];
+
+            Assert.DoesNotContain(point.CommonParts, p => p.Type == CommonPartType.WrapUp);
+            Assert.Single(point.Letters.Last().Tirets);
         }
 
         // ============================================================

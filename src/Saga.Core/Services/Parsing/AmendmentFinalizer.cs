@@ -50,6 +50,14 @@ namespace Saga.Core.Services.Parsing
             @"(?:otrzymuje\s+brzmienie:|otrzymują\s+brzmienie:|w\s+brzmieniu:|zastępuje\s+się:)",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        /// <summary>
+        /// Zwrot zmiany brzmienia na końcu przepisu, ale bez dwukropka („ust. 1 otrzymuje brzmienie") —
+        /// usterka zapisu; komendą czyni go dopiero cudzysłów otwierający następnego bloku.
+        /// </summary>
+        internal static readonly Regex ModificationWithoutColonPattern = new(
+            @"(?:otrzymuj[eą]\s+brzmienie|w\s+brzmieniu)\s*$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         // ============================================================
         // Główna metoda finalizacji
         // ============================================================
