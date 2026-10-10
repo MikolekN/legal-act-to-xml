@@ -208,6 +208,10 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Porównanie dwóch eksportów** (`CorpusValidator --compare-exports <przed> <po>`): dla dwóch przebiegów
   `--xml-corpus` podaje zmienione pliki, zmianę liczby wystąpień każdego elementu i próbkę zmienionych wierszy,
   z pominięciem losowych identyfikatorów GUID — miara „co ta zmiana zrobiła z wyjściem".
+- **Miara zgodności bez stylów** (`CorpusValidator --styleless-parity`): każdy dokument jest parsowany ze stylami,
+  bez stylów i z samego tekstu, a struktura jednostek z eksportu jest zestawiana z wynikiem ze stylami — ile zostaje
+  z samej treści, gdy wejściem jest DOCX bez szablonu, PDF albo TXT. Stan wyjściowy: ustawy 93,8 % jednostek
+  (136 z 242 dokumentów w pełni zgodnych), teksty jednolite 99,5 %.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

@@ -109,6 +109,11 @@ if (args.Length > 3 && args[0] == "--compare-reference")
 if (args.Length > 2 && args[0] == "--compare-exports")
     return CorpusValidator.ExportComparison.Run(args[1], args[2], args.Length > 3 ? args[3] : null);
 
+// Zgodność bez stylów: ta sama struktura jednostek z bloków pozbawionych stylu Word (DOCX bez szablonu, PDF, TXT)?
+//   dotnet run --project tools/CorpusValidator -- --styleless-parity <root> <katalog-wyjsciowy>
+if (args.Length > 2 && args[0] == "--styleless-parity")
+    return CorpusValidator.StylelessParityReport.Run(args[1], args[2]);
+
 // Pokrycie tekstu: czy tekst każdego akapitu źródła doszedł do eksportu — miara akapitów pominiętych przez potok.
 //   dotnet run --project tools/CorpusValidator -- --text-coverage <root> <katalog-wyjsciowy>
 if (args.Length > 2 && args[0] == "--text-coverage")

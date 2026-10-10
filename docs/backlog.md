@@ -12,6 +12,13 @@ Reguły ZTP stojące za tymi punktami: [ztp-struktura-aktow.md](ztp-struktura-ak
 Styl Word pozostaje najsilniejszym sygnałem; poniższe zachowania są dostępne **wyłącznie** przy
 stylach szablonu i nie mają odpowiednika w rozpoznawaniu z samej treści.
 
+Miarą jest `CorpusValidator --styleless-parity`: ta sama struktura jednostek z bloków pozbawionych stylu.
+Stan 2026-10-10: ustawy ogłoszone 93,8 % jednostek zgodnych (2081 ginie, 1313 nadmiarowych; 136 z 242
+dokumentów w pełni zgodnych), teksty jednolite 99,5 % (313 z 460). Bez układu i tabel („sam tekst") wynik
+jest prawie ten sam — rozstrzyga treść. Najczęściej giną punkty, litery i ustępy treści cytowanej
+(granica nowelizacji bez stylów `Z…`) oraz części wspólne cytatów, które bez stylu stają się tiretami;
+lista w `styleless-parity-units.tsv`.
+
 | Luka | Stan faktyczny | Dlaczego odłożone |
 |---|---|---|
 | **Część wspólna tiretów bez stylu** | Ze stylem `CZ_WSP_*` część wspólna jest rozpoznawana zawsze (gałąź `styleType == "WRAPUP"` w [`ParagraphClassifier.Classify`](../src/Saga.Core/Services/Classify/ParagraphClassifier.cs)). Bez stylu — z kontekstu, ale tylko po punkcie albo literze: „– tekst" tuż po jednostce bez żadnego znaku końcowego to część wspólna (ostatni element przed nią nie ma interpunkcji — § 57 ust. 3 ZTP; wyliczenie tiretów otwiera zaś dwukropek — § 56), więc `StructureProcessor.TryHandleStylelessWrapUp` dołącza go jako część wspólną punktów/liter. Po elemencie zakończonym `,`/`;`/`.` myślnik zostaje tiretem — w korpusie to zwykle legenda wzoru albo pozycja tabeli, ale gubimy tak nieliczne sankcje po niechlujnym „;". Po tirecie „– tekst" nadal staje się kolejnym tiretem, także gdy to część wspólna tiretów. | Po tirecie kontekst nie rozstrzyga: kolejny tiret i część wspólna tiretów zaczynają się tym samym myślnikiem. Pewny sygnał to układ (wcięcie na wysokości wprowadzenia do wyliczenia, § 58 ZTP), a `ClassificationInput` to dziś rekord `(Text, StyleId)` i layout do klasyfikatora nie dochodzi (trafia osobnym parametrem tylko do `StructureProcessor.GetTiretDepth`). Kierunek do zbadania: ta sama reguła „bez znaku końcowego" dla tiretu (§ 57 ust. 6). |
