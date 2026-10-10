@@ -155,7 +155,7 @@ namespace Saga.Core.Tests
             var wrapUp = paragraph.CommonParts[0];
             Assert.Equal(CommonPartType.WrapUp, wrapUp.Type);
             Assert.Equal("zachowuja dopuszczenie.", wrapUp.ContentText);
-            Assert.Equal("art_293__ust_1__wrapUp", wrapUp.Id);
+            Assert.Equal("art_293__ust_1__czw", wrapUp.Id);
         }
     }
 }

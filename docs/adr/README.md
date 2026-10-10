@@ -43,5 +43,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0022](0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md) | Daty aktu w metadanych jako zdarzenia cyklu życia (`DaneCzasowe`): jedno na każdą datę wejścia w życie i mocy wstecznej, wyjątek wymienia swoje jednostki; jednostki wskazują grupę czasową atrybutem `okres` | Accepted | 2026-10-10 |
 | [0023](0023-poziom-pominiety-jako-jednostka-niejawna.md) | Poziom pominięty w akcie (litery wprost w ustępie) to jednostka niejawna: bez segmentu w eId (`art_5__ust_1__lit_a`) i bez elementu w eksporcie — jej dzieci stają w najbliższej jednostce jawnej jako `nie-ztp-*` | Accepted | 2026-10-10 |
 | [0024](0024-jednostka-bez-oznaczenia-nie-ma-eid.md) | Jednostka bez odczytanego oznaczenia nie ma eId: niesie `brak-eid="jednostka-nieoznaczona"`, pusty `nr`, wychodzi jako `nie-ztp-*` i nie wnosi segmentu do eId jednostek pod sobą (`art_16f__pkt_1`, nie `art_16f__ust__pkt_1`) | Accepted | 2026-10-10 |
+| [0025](0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md) | Część wspólna zamykająca wyliczenie ma eId: adres gospodarza i segment `czw` (`art_51__ust_1__czw`), jak w przykładach autorów schematu | Accepted | 2026-10-10 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

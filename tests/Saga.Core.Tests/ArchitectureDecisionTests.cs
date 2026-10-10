@@ -873,6 +873,34 @@ namespace Saga.Core.Tests
             Assert.Equal(string.Empty, exported.Elements().First(e => e.Name.LocalName == "nr").Value);
         }
 
+        // ============================================================
+        // ADR-0025: część wspólna zamykająca wyliczenie ma eId gospodarza z segmentem „czw"
+        // ============================================================
+
+        [Fact]
+        public void Adr0025_ClosingCommonPart_IsAddressedByItsHostAndCzw()
+        {
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Art. 1. 1. Sygnalistą jest osoba, która:",
+                "1) zgłasza naruszenie prawa,",
+                "2) ujawnia naruszenie prawa",
+                "– w kontekście związanym z pracą.",
+                "2. Przepis stosuje się odpowiednio.",
+                "Art. 2. Organem właściwym jest:",
+                "1) minister,",
+                "2) wojewoda",
+                "– zwany dalej organem.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var closing = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "czesc-wspolna-punkt")
+                .Select(e => e.Attribute("eId")?.Value);
+
+            // W artykule z jednym ustępem gospodarzem w adresie jest artykuł — ustęp nie ma oznaczenia.
+            Assert.Equal(new[] { "art_1__ust_1__czw", "art_2__czw" }, closing);
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

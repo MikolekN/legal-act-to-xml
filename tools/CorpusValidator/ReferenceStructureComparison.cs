@@ -36,6 +36,7 @@ internal static class ReferenceStructureComparison
     [
         "artykul", "artykul-kodeksu", "ustep", "ustep-n", "paragraf-kodeksu", "paragraf-kodeksu-n", "punkt", "litera",
         "tiret", "podw-tiret", "potr-tiret", "poczw-tiret", "piec-tiret",
+        "czesc-wspolna-punkt", "czesc-wspolna-litera", "czesc-wspolna-tiret",
     ];
 
     private static readonly Regex ActPrefix = new(@"^[A-Z]{2}/\d{4}/\d+__", RegexOptions.Compiled);

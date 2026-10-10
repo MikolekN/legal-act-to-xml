@@ -89,6 +89,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   [ADR-0024](docs/adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md).
 - **`brak-eid` na jedynym ustępie artykułu**: `ustep-n` i `paragraf-kodeksu-n` nazywają powód braku eId
   (`jednostka-nieoznaczona`), jak jednostki systematyzacyjne `-n` i przykłady autorów schematu.
+- **eId części wspólnej**: `czesc-wspolna-punkt`, `-litera` i `-tiret` dostają adres gospodarza z segmentem
+  `czw` (`art_51__ust_1__czw`, w artykule z jednym ustępem `art_16__czw`), jak w przykładach autorów schematu —
+  [ADR-0025](docs/adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

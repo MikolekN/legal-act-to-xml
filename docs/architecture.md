@@ -541,7 +541,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `SystematizingUnitXmlConverter` | Jednostki systematyzacyjne zagnieżdżone wg schemaPL; niejawny łańcuch bez jawnego przodka znika (artykuły wprost w akcie), pod jawną jednostką niejawne poziomy wychodzą jako `-n` z `brak-eid` — [ADR-0020](adr/0020-eksport-jednostek-systematyzacyjnych.md) |
 | `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym. Artykuł z paragrafami („§") stojący w oddziale to `artykul-kodeksu`, poza oddziałem `artykul`. Jednostka odbiegająca od ZTP (jedna pozycja wyliczenia, poziom pominięty) wychodzi jako `nie-ztp-*`, a punkt i litera niejawne nie mają elementu ([ADR-0023](adr/0023-poziom-pominiety-jako-jednostka-niejawna.md)) |
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
-| `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń, tabele i treść osadzona |
+| `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń (eId gospodarza z segmentem `czw` — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)), tabele i treść osadzona |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
 | `UnitAddressXml` | Jedyne miejsce piszące adres jednostki redakcyjnej: `eId` albo `brak-eid` z powodem, oraz `nr` (pusty, gdy oznaczenia nie odczytano) — [ADR-0024](adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md) |
 | `UnitLifecycleXml` | Jedyne miejsce piszące `wejscie-w-zycie`; zostawia przy elemencie obie daty jednostki (`UnitDates`), z których powstaje `okres` |
@@ -765,7 +765,9 @@ Encje implicit:
 `CommonPart` to wirtualna jednostka redakcyjna reprezentująca tekst przed (`Intro`) lub po (`WrapUp`) liście elementów wyliczeniowych:
 - Tworzone automatycznie przez `ParsingFactories.AttachIntroCommonPart()` przed dodaniem pierwszego elementu do listy
 - Są rodzeństwem elementów wyliczeniowych (nie ich dziećmi)
-- Nie pojawiają się jawnie w XML — ich zawartość trafia do `<intro>` / `<wrapUp>`
+- W eksporcie: wprowadzenie zostaje zdaniem gospodarza (pozycje wyliczenia są jego dalszymi fragmentami), a część
+  wspólna po wyliczeniu to element `czesc-wspolna-punkt` / `-litera` / `-tiret` z eId gospodarza i segmentem `czw`
+  — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)
 
 ### 10.4 Null safety w OpenXml
 

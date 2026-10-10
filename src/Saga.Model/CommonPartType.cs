@@ -34,12 +34,16 @@ namespace Saga.Model
             };
         }
 
+        /// <summary>
+        /// Segment eId: część wspólna zamykająca wyliczenie ma „czw" po adresie gospodarza (ADR-0025).
+        /// Wprowadzenie do wyliczenia nie jest elementem eksportu — jego segment zostaje wewnętrzny.
+        /// </summary>
         public static string ToEIdSegment(this CommonPartType type)
         {
             return type switch
             {
                 CommonPartType.Intro => "intro",
-                CommonPartType.WrapUp => "wrapUp",
+                CommonPartType.WrapUp => "czw",
                 _ => ""
             };
         }

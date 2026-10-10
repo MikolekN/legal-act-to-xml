@@ -29,6 +29,7 @@ namespace Saga.Core.Services.Converters
                     }
                     var commonPartElement = Element(GetCommonPartName(entity, nesting));
 
+                    commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, wrapUp.Id));
                     commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, wrapUp.Guid.ToString()));
 
                     UnitLifecycleXml.Apply(commonPartElement, wrapUp);

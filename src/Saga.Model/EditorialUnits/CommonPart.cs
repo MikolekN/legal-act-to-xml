@@ -31,9 +31,9 @@ namespace Saga.Model.EditorialUnits
     ///         │   ├─ Letter (art_5__ust_1__pkt_1__lit_a)
     ///         │   │   ├─ CommonPart Intro (art_5__ust_1__pkt_1__lit_a__intro)
     ///         │   │   ├─ Tiret (art_5__ust_1__pkt_1__lit_a__tir_1)
-    ///         │   │   └─ CommonPart WrapUp (art_5__ust_1__pkt_1__lit_a__wrapUp)
-    ///         │   └─ CommonPart WrapUp (art_5__ust_1__pkt_1__wrapUp)
-    ///         └─ CommonPart WrapUp (art_5__ust_1__wrapUp)
+    ///         │   │   └─ CommonPart WrapUp (art_5__ust_1__pkt_1__lit_a__czw)
+    ///         │   └─ CommonPart WrapUp (art_5__ust_1__pkt_1__czw)
+    ///         └─ CommonPart WrapUp (art_5__ust_1__czw)
     /// </summary>
     public class CommonPart : BaseEntity
     {
@@ -73,7 +73,7 @@ namespace Saga.Model.EditorialUnits
         }
 
         /// <summary>
-        /// Zwraca segment ID dla czesci wspolnej (np. "intro" lub "wrapUp").
+        /// Zwraca segment ID dla czesci wspolnej ("intro" albo "czw").
         /// Nie dodaje przedrostka numerycznego - CommonPart nie ma numeru.
         /// </summary>
         protected override string GetLocalIdSegment()
