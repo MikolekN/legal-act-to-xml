@@ -87,34 +87,14 @@ namespace Saga.Core.Ingest
 
             var blocks = new List<DocumentBlock>();
             blocks.AddRange(ReadPageHeaderBlocks(mainPart));
-            var footnoteNumbers = NumberFootnotes(mainPart.Document);
+            var footnotes = DocxFootnotes.Read(mainPart);
             var index = 0;
             foreach (var paragraph in mainPart.Document.Descendants<Word.Paragraph>())
             {
-                blocks.Add(ToBlock(paragraph, index++, footnoteNumbers));
+                blocks.Add(ToBlock(paragraph, index++, footnotes));
             }
 
             return blocks;
-        }
-
-        /// <summary>
-        /// Numery przypisów, pod którymi stoją w akcie: kolejne odwołania w treści dostają 1, 2, 3…
-        /// Identyfikator <c>w:id</c> numerem nie jest — Word zaczyna go zwykle od 2 (wcześniejsze zajmują
-        /// separatory), więc pierwszy odnośnik aktu ma id 2.
-        /// </summary>
-        private static Dictionary<long, int> NumberFootnotes(Word.Document document)
-        {
-            var numbers = new Dictionary<long, int>();
-            foreach (var reference in document.Descendants<Word.FootnoteReference>())
-            {
-                // Odwołanie z własnym znakiem (gwiazdka) nie bierze numeru z licznika.
-                if (reference.CustomMarkFollows?.Value == true || reference.Id?.Value is not { } id)
-                    continue;
-
-                numbers.TryAdd(id, numbers.Count + 1);
-            }
-
-            return numbers;
         }
 
         /// <summary>
@@ -183,11 +163,11 @@ namespace Saga.Core.Ingest
         /// Konwersja pojedynczego akapitu OpenXml na blok IR.
         /// Tekst surowy (bez Trim/Sanitize) — normalizację wykonuje orkiestrator.
         /// </summary>
-        internal static DocumentBlock ToBlock(
-            Word.Paragraph paragraph, int? blockIndex, IReadOnlyDictionary<long, int>? footnoteNumbers = null)
+        internal static DocumentBlock ToBlock(Word.Paragraph paragraph, int? blockIndex, DocxFootnotes? footnotes = null)
             => new()
             {
-                Text = paragraph.GetFullText(footnoteNumbers),
+                Text = paragraph.GetFullText(footnotes?.Numbers),
+                Footnotes = footnotes?.ReferencedBy(paragraph) ?? [],
                 StyleId = paragraph.StyleId(),
                 Layout = ExtractLayout(paragraph),
                 Source = new BlockSourceLocation { BlockIndex = blockIndex },

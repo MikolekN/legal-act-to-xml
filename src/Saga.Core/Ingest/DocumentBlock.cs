@@ -26,6 +26,16 @@ namespace Saga.Core.Ingest
 
         public BlockRole Role { get; init; } = BlockRole.Body;
 
+        /// <summary>
+        /// Przypisy, do których odwołuje się blok (znaczniki „[N)]" w <see cref="Text"/>), w kolejności odwołań.
+        /// Tylko DOCX — tam treść przypisu leży poza treścią aktu; PDF oddaje przypisy osobnymi blokami
+        /// <see cref="BlockRole.FootnoteText"/>.
+        /// </summary>
+        public IReadOnlyList<BlockFootnote> Footnotes { get; init; } = [];
+
         public bool IsEmpty => string.IsNullOrWhiteSpace(Text);
     }
+
+    /// <summary>Przypis w reprezentacji pośredniej: numer, pod którym stoi w akcie, i akapity jego treści.</summary>
+    public sealed record BlockFootnote(string Symbol, IReadOnlyList<string> Paragraphs);
 }

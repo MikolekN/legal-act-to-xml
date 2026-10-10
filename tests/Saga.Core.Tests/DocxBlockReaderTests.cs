@@ -400,5 +400,31 @@ namespace Saga.Core.Tests
             Assert.Equal("o ochronie sygnalistów[1), 2)]", blocks[0].Text);
             Assert.Equal("Art. 1. Ustawa (Dz. U. poz. 1, z późn. zm.[3)]) określa zasady.", blocks[1].Text);
         }
+
+        [Fact]
+        public void Block_CarriesTheFootnotesItRefersTo()
+        {
+            var blocks = Read(DocxFixtures.WithFootnotes(
+                ["Niniejsza ustawa wdraża dyrektywę.", "Niniejszą ustawą zmienia się ustawy.", "Zmiany zostały ogłoszone."],
+                "o ochronie sygnalistów{1}{, }{2}",
+                "Art. 1. Ustawa określa zasady.",
+                "Art. 2. Ustawa (Dz. U. poz. 1, z późn. zm.{3}) wchodzi w życie po upływie 14 dni od dnia ogłoszenia."));
+
+            // Treść przypisu bez własnego znacznika („1)" na początku) — numer niesie Symbol.
+            Assert.Equal(new[] { "1", "2" }, blocks[0].Footnotes.Select(f => f.Symbol));
+            Assert.Equal("Niniejsza ustawa wdraża dyrektywę.", Assert.Single(blocks[0].Footnotes[0].Paragraphs));
+            Assert.Equal("Niniejszą ustawą zmienia się ustawy.", Assert.Single(blocks[0].Footnotes[1].Paragraphs));
+
+            Assert.Empty(blocks[1].Footnotes);
+            Assert.Equal("Zmiany zostały ogłoszone.", Assert.Single(Assert.Single(blocks[2].Footnotes).Paragraphs));
+        }
+
+        [Fact]
+        public void DocumentWithoutFootnotes_HasNoneOnItsBlocks()
+        {
+            var blocks = Read(DocxFixtures.WithoutHeader("Art. 1. Ustawa określa zasady."));
+
+            Assert.All(blocks, block => Assert.Empty(block.Footnotes));
+        }
     }
 }

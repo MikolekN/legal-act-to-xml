@@ -289,6 +289,7 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 | `Layout` | Opcjonalne metadane układu (`BlockLayoutInfo` — wcięcia, pogrubienie, kursywa) — z DOCX/PDF |
 | `Source` | Położenie w źródle (`BlockSourceLocation`) — diagnostyka |
 | `Role` | `BlockRole` (`Body`, `FootnoteText`, `JournalHeader`, …) — bloki spoza głównego biegu treści są filtrowane przez orkiestrator i klasyfikator |
+| `Footnotes` | Przypisy, do których odwołuje się blok (`BlockFootnote`: numer jak w akcie i akapity treści) — tylko DOCX, gdzie treść przypisu leży w osobnej części pakietu (`DocxFootnotes`); w `Text` stoi znacznik `[N)]` z tym samym numerem |
 | `IsEmpty` | `true` gdy `Text` jest pusty/białe znaki |
 
 `PdfBlockReader` (PdfPig) składa bloki z geometrii linii tekstu (`PdfLineExtractor`, `BlockAssembler`,
@@ -885,6 +886,7 @@ src/Saga.Core/
 │   ├── BlockSourceLocation.cs       # Położenie bloku w źródle (diagnostyka)
 │   ├── BlockAlignment.cs / BlockAssembler.cs  # Składanie bloków z linii (PDF)
 │   ├── DocxBlockReader.cs           # Adapter DOCX (OpenXml Paragraph → DocumentBlock)
+│   ├── DocxFootnotes.cs             # Przypisy DOCX: numer jak w akcie i treść z word/footnotes.xml
 │   ├── PlainTextBlockReader.cs      # Adapter TXT
 │   ├── TextLine.cs / TextNormalizer.cs  # Pomocnicze dla adaptera TXT
 │   └── Pdf/
