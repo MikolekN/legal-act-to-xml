@@ -41,6 +41,8 @@ a wersjonowanie zgodne z Semantic Versioning.
   `OBW_TJ`…, wcześniej nazwa wersalikami), `DataAktu` zawiera `DataWydania`, `GUIDwersji` stoi w przestrzeni
   `gd:`, a rola organu to `wydajacy`. Daty wejścia w życie i mocy wstecznej aktu zostają na razie
   w dotychczasowych elementach — schemat trzyma je w `DaneCzasowe`.
+- **Unikalny `gd:nowGUID` każdego cytatu**: komenda eksportowana kilkoma cytatami (tekstowym i strukturalnym)
+  dawała im ten sam GUID; teraz pierwszy niesie GUID komendy, kolejne własne.
 - **Atrybuty GUID w przestrzeni `gd:`** (GUIDs.xsd): jednostki i organ — `gd:GUID`, zdanie — `gd:zdGUID`
   (wcześniej `GUID`) i `gd:fragmentGUID`, komendy nowelizacji — `gd:nowGUID`. Korzeń deklaruje `xmlns:gd`.
 - **Atrybut `cudzyslowy` z wartościami schematu**: `brak`/`otwierajacy`/`zamykajacy`/`oba` zamiast maski

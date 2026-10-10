@@ -12,7 +12,26 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class AmendmentXmlConverter
     {
-        private sealed record Command(StructuralAmendmentReference? Target, Guid Guid);
+        /// <summary>Komenda nowelizacji: cel i GUID, którym wiąże się z modelem.</summary>
+        private sealed class Command(StructuralAmendmentReference? target, Guid guid)
+        {
+            private bool _guidTaken;
+
+            internal StructuralAmendmentReference? Target { get; } = target;
+
+            /// <summary>
+            /// GUID kolejnego elementu komendy. Pierwszy niesie GUID komendy, następne własne — jedna komenda
+            /// bywa kilkoma cytatami (tekstowy i strukturalny), a schemat wymaga unikalnego nowGUID.
+            /// </summary>
+            internal Guid NextGuid()
+            {
+                if (_guidTaken)
+                    return Guid.NewGuid();
+
+                _guidTaken = true;
+                return guid;
+            }
+        }
 
         internal static void ToXml(Amendment? amendment, XNode? sentence = null)
         {
@@ -119,7 +138,7 @@ namespace Saga.Core.Services.Converters
             element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute,
                 XmlConverterConstants.Contents.Citation.Quotation.QuotationBoth));
 
-            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.Guid.ToString()));
+            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
 
             // if (amendment.RefNowGuid != Guid.Empty)
             // element.Add(new XAttribute(XmlConverterConstants.QuotationRefGUIDAttribute, "UNKNOWN"));
@@ -167,7 +186,7 @@ namespace Saga.Core.Services.Converters
             var uchyl = new XElement(now + XmlConverterConstants.Contents.Instruction.Repeal);
             uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
             AddTargetAttributes(uchyl, command.Target);
-            uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.Guid.ToString()));
+            uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
 
             zdanie.Add(uchyl);
         }

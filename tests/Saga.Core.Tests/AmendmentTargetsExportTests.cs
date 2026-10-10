@@ -180,6 +180,22 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void OneCommandInSeveralCitations_GivesEachItsOwnGuid()
+        {
+            // Korpus: 351212_3113348 — tytuł rozdziału (cytat tekstowy) i artykuły (cytat strukturalny)
+            // z jednej komendy; schemat wymaga unikalnego nowGUID każdego cytatu.
+            var (xml, _) = Convert(
+                "1) art. 5 otrzymuje brzmienie:",
+                "„Przepis wprowadzający",
+                "Art. 5. Nowe brzmienie artykułu.”;");
+
+            var citations = Commands(xml);
+
+            Assert.Equal(new[] { "cytat-w-tekscie", "cytat-strukt" }, citations.Select(c => c.Name.LocalName));
+            Assert.Equal(2, citations.Select(c => Attr(c, "nowGUID")).Distinct().Count());
+        }
+
+        [Fact]
         public void ReplacedWords_AreQuotedOnBothEnds_ByTheAttribute()
         {
             // Jak w przykładach autorów schematu: cudzysłowy w atrybucie („oba"), nie w treści cytatu.
