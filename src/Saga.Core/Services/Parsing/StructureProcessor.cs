@@ -374,7 +374,8 @@ namespace Saga.Core.Services.Parsing
                     if (context.CurrentLetter.Tirets.Count == 0)
                         ParsingFactories.AttachIntroCommonPart(ExplicitOwner(context.CurrentLetter));
 
-                    var tiretDepth = GetTiretDepth(sourceStyleId, layout, context);
+                    var writtenDepth = TiretMarker.Depth(text);
+                    var tiretDepth = GetTiretDepth(writtenDepth, sourceStyleId, layout, context);
 
                     // Skroc stos do glebokosci depth-1 (usun tirety glebsze lub rowne)
                     context.PopTiretsToDepth(tiretDepth);
@@ -397,7 +398,7 @@ namespace Saga.Core.Services.Parsing
                     ValidationReporter.AddClassificationWarning(tiret, classification, "TIR");
 
                     // Gdy zagniezdzenie wywnioskowano z wciecia (a nie ze stylu 2TIR/3TIR) — audyt decyzji (§ 58 ZTP).
-                    if (parentTiret != null && !StyleEncodesTiretDepth(sourceStyleId))
+                    if (parentTiret != null && writtenDepth < 2 && !StyleEncodesTiretDepth(sourceStyleId))
                         ValidationReporter.AddValidationMessage(tiret, ValidationLevel.Info,
                             $"Glebokosc tiretu ({tiretDepth}) ustalona z wciecia (§ 58 ZTP).");
                     // Degradacja: sklasyfikowano na poziom > 1, ale brak tiretu nadrzednego — slad diagnostyczny.
@@ -408,7 +409,7 @@ namespace Saga.Core.Services.Parsing
                     // Tirety o glebokosci ustalonej ze STYLU nie wnosza wciecia jako punktu odniesienia dla
                     // wnioskowania (ich wciecie moze byc null lub sprzeczne z narzucona stylem glebokoscia) —
                     // inaczej mieszanie trybu stylowego i wcieciowego w obrebie litery falszowaloby zagniezdzenie.
-                    context.PushTiret(tiret, StyleDecidesTiretDepth(sourceStyleId) ? null : layout?.LeftIndentTwips);
+                    context.PushTiret(tiret, writtenDepth > 1 || StyleDecidesTiretDepth(sourceStyleId) ? null : layout?.LeftIndentTwips);
 
                     UpdateStructuralReference(context, tiret);
                     DetectAmendmentTargets(context, tiret);
@@ -716,12 +717,17 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Wyznacza glebokosc tiretu. Priorytet:
-        /// 1) styl jawnie kodujacy glebokosc (2TIR/3TIR/TIR) — dokumenty szablonowe niezmienione;
-        /// 2) wciecie lewe bloku wzgledem tiretow otwartych na stosie (§ 58 ZTP) — dla dokumentow bezstylowych z ukladem;
-        /// 3) brak sygnalu (np. czysty TXT) — domyslnie poziom 1 (zachowanie dotychczasowe).
+        /// 1) znacznik zapisany w tresci („– –", „– – –", <see cref="TiretMarker"/>) — zagniezdzenie stoi w samym tekscie;
+        /// 2) styl jawnie kodujacy glebokosc (2TIR/3TIR/TIR);
+        /// 3) wciecie lewe bloku wzgledem tiretow otwartych na stosie (§ 58 ZTP) — dla dokumentow bezstylowych z ukladem;
+        /// 4) brak sygnalu — poziom 1.
         /// </summary>
-        private static int GetTiretDepth(string? styleId, BlockLayoutInfo? layout, ParsingContext context)
+        private static int GetTiretDepth(int writtenDepth, string? styleId, BlockLayoutInfo? layout, ParsingContext context)
         {
+            // Zagnieżdżenie zapisane znacznikiem („– –") stoi w treści — rozstrzyga przed stylem i wcięciem.
+            if (writtenDepth > 1)
+                return System.Math.Min(writtenDepth, MaxTiretDepth);
+
             if (!string.IsNullOrEmpty(styleId))
             {
                 if (styleId.StartsWith("3TIR", StringComparison.OrdinalIgnoreCase)) return 3;

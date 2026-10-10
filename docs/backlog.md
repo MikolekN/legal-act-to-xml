@@ -13,19 +13,19 @@ Styl Word pozostaje najsilniejszym sygnałem; poniższe zachowania są dostępne
 stylach szablonu i nie mają odpowiednika w rozpoznawaniu z samej treści.
 
 Miarą jest `CorpusValidator --styleless-parity`: ta sama struktura jednostek z bloków pozbawionych stylu.
-Stan 2026-10-10: ustawy ogłoszone 98,37 % jednostek zgodnych (550 ginie, 550 nadmiarowych; 191 z 242
-dokumentów w pełni zgodnych), teksty jednolite 99,55 % (322 z 460). Bez układu i tabel („sam tekst") wynik
+Stan 2026-10-10: ustawy ogłoszone 98,72 % jednostek zgodnych (432 ginie, 432 nadmiarowe; 197 z 242
+dokumentów w pełni zgodnych), teksty jednolite 99,56 % (327 z 460). Bez układu i tabel („sam tekst") wynik
 jest prawie ten sam — rozstrzyga treść. Granice cytatu wyznacza treść (cudzysłów, przecinek po cudzysłowie,
-cudzysłów po komendzie bez dwukropka — `QuoteBalanceTracker`, `AmendmentStateManager.UpdateState`).
-Zostają: zagnieżdżenie tiretów w akcie zmieniającym (podwójny tiret bez stylu jest tiretem), część wspólna
-jako jedyna treść cytowana („dodaje się część wspólną w brzmieniu:" — bez stylu tiret), część wspólna tiretów
-i cudzysłów zamykający zapisany znakiem `ˮ` (U+02EE; 5 wystąpień w 4 dokumentach — cytat się nie domyka);
-lista w `styleless-parity-units.tsv`.
+cudzysłów po komendzie bez dwukropka — `QuoteBalanceTracker`, `AmendmentStateManager.UpdateState`),
+a zagnieżdżenie tiretu — jego znacznik (`TiretMarker`).
+Zostają: część wspólna jako jedyna treść cytowana („dodaje się część wspólną w brzmieniu:" — bez stylu tiret),
+część wspólna tiretów i cudzysłów zamykający zapisany znakiem `ˮ` (U+02EE; 5 wystąpień w 4 dokumentach — cytat
+się nie domyka); lista w `styleless-parity-units.tsv`.
 
 | Luka | Stan faktyczny | Dlaczego odłożone |
 |---|---|---|
 | **Część wspólna tiretów bez stylu** | Ze stylem `CZ_WSP_*` część wspólna jest rozpoznawana zawsze (gałąź `styleType == "WRAPUP"` w [`ParagraphClassifier.Classify`](../src/Saga.Core/Services/Classify/ParagraphClassifier.cs)). Bez stylu — z kontekstu, ale tylko po punkcie albo literze: „– tekst" tuż po jednostce bez żadnego znaku końcowego to część wspólna (ostatni element przed nią nie ma interpunkcji — § 57 ust. 3 ZTP; wyliczenie tiretów otwiera zaś dwukropek — § 56), więc `StructureProcessor.TryHandleStylelessWrapUp` (treść aktu) i `AmendmentBuilder.TryBuildStylelessCommonPart` (treść cytowana) dołączają go jako część wspólną punktów/liter. Regułę trzyma `CommonPartPlacement.LeavesEnumerationOpen`; kropka skrótu roku („… 2026 r.") nie jest znakiem końcowym (w korpusie ze stylami: 47 części wspólnych po takim zakończeniu, żadnego tiretu). Po elemencie zakończonym `,`/`;`/`.` myślnik zostaje tiretem — w korpusie to zwykle legenda wzoru albo pozycja tabeli, ale gubimy tak nieliczne sankcje po niechlujnym „;". Po tirecie „– tekst" nadal staje się kolejnym tiretem, także gdy to część wspólna tiretów. | Po tirecie kontekst nie rozstrzyga: kolejny tiret i część wspólna tiretów zaczynają się tym samym myślnikiem. Pewny sygnał to układ (wcięcie na wysokości wprowadzenia do wyliczenia, § 58 ZTP), a `ClassificationInput` to dziś rekord `(Text, StyleId)` i layout do klasyfikatora nie dochodzi (trafia osobnym parametrem tylko do `StructureProcessor.GetTiretDepth`). Kierunek do zbadania: ta sama reguła „bez znaku końcowego" dla tiretu (§ 57 ust. 6). |
-| **Głębokość tiretu bez sygnału** | Dwa poziomy priorytetu: styl (`2TIR`/`3TIR`/`TIR`) → wcięcie z `ParsingContext.OpenTiretIndents` (tolerancja ±120 twips, cap 3). Brak obu (czysty TXT) → zawsze poziom 1. | TXT nie niesie wcięć w sposób wiarygodny. Świadomie wybrano deterministyczne „poziom 1" zamiast heurystyki na interpunkcji. |
+| **Głębokość tiretu bez sygnału** | Trzy poziomy priorytetu: znacznik w treści („– –", „– – –" — `TiretMarker`) → styl (`2TIR`/`3TIR`/`TIR`) → wcięcie z `ParsingContext.OpenTiretIndents` (tolerancja ±120 twips, cap 3). Brak wszystkich → poziom 1. Podwójne tiret bez tiretu nadrzędnego zostaje na poziomie 1, a następne staje się jego dzieckiem. | Znacznik rozstrzyga niemal zawsze (w korpusie każdy akapit w stylu `2TIR`/`3TIR` go ma). Zostaje tiret zagnieżdżony zapisany pojedynczym myślnikiem bez stylu i bez wcięcia — nie ma wtedy żadnego sygnału. |
 | **Nowelizacje zagnieżdżone (`ZZ/`)** | Trigger wykryty wewnątrz otwartego cytatu jest tylko flagowany (`QuoteBalanceTracker.MarkNestedTrigger`) — zagnieżdżony obiekt `Amendment` nie jest budowany. | Wymaga rekurencyjnego zbierania w cytacie; bez stylów nie ma sygnału zamknięcia wewnętrznego poziomu. |
 | **`CommonPartOf` w nowelizacji** | Ze stylu: właściwość `AmendmentStyleInfo.CommonPartOf` w [`AmendmentStyleDecoder`](../src/Saga.Core/Helpers/AmendmentStyleDecoder.cs), ~240 wpisów `StyleLibraryMapper`. Bez stylu — z kontekstu, tą samą regułą co w treści aktu (pozycja bez znaku końcowego), dla punktów i liter. Część wspólna jako jedyna treść cytowana („dodaje się część wspólną w brzmieniu:") zostaje bez stylu tiretem — sygnał jest w komendzie, nie w treści. | Informacja „część wspólna czego" jest w szablonie zakodowana w nazwie stylu i nie ma odpowiednika w treści. |
 

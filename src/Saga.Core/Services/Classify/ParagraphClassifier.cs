@@ -112,10 +112,6 @@ namespace Saga.Core.Services.Classify
         internal static readonly Regex LetterNumberCapture = new(
             $@"^{OptionalQuotePrefix}({DesignationAlphabet.Letter}{{1,5}}{OptionalSuperscript})\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        /// <summary>Prefiks tiretu do usuwania (bez wymagania spacji; dywiz lub półpauza).</summary>
-        internal static readonly Regex TiretStripPattern = new(
-            $@"^{OptionalQuotePrefix}[-–]+\s*", RegexOptions.Compiled);
-
         // === Jednostki systematyzacyjne (§ 60-62 ZTP) ===
         // Wzorce ZAKOTWICZONE na całej linii ($): marker jednostki stoi w osobnym wierszu (§ 60), więc
         // proza „Rozdział 5 stosuje się…"/„Tytuł V wprowadza się…" NIE jest brana za nagłówek. Dozwolona

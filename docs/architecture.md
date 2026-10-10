@@ -360,7 +360,7 @@ Jednoprzebiegowy pipeline ze stanem. Dla każdego bloku:
    ├── Paragraph → ParagraphBuilder.Build()
    ├── Point    → PointBuilder.Build()
    ├── Letter   → LetterBuilder.Build()
-   ├── Tiret    → TiretBuilder.Build() (głębokość ze stylu 2TIR/3TIR lub z wcięcia layoutu)
+   ├── Tiret    → TiretBuilder.Build() (głębokość ze znacznika „– –", stylu 2TIR/3TIR lub z wcięcia layoutu)
    └── WrapUp   → AttachWrapUpCommonPart (dla CZ_WSP_*)
 8. Jeśli StructureProcessor zwrócił true → AmendmentStateManager.DetectTrigger (szuka
    "otrzymuje brzmienie:", "dodaje się", "uchyla się")
@@ -385,7 +385,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | `CurrentPoint` | Bieżący punkt |
 | `CurrentLetter` | Bieżąca litera |
 | `TiretStack` | Stos tiretów — `List<DtoTiret>` wspierający zagnieżdżone tirety (1TIR/2TIR/3TIR); `CurrentTiret` jako property `TiretStack[^1]` |
-| `OpenTiretIndents` | Lista równoległa do `TiretStack` — wcięcia lewe (twips) tiretów otwartych na stosie, zasila wnioskowanie głębokości z układu (§ 58 ZTP) gdy styl 2TIR/3TIR nie rozstrzyga |
+| `OpenTiretIndents` | Lista równoległa do `TiretStack` — wcięcia lewe (twips) tiretów otwartych na stosie, zasila wnioskowanie głębokości z układu (§ 58 ZTP) gdy nie rozstrzyga ani znacznik tiretu (`TiretMarker`: „– –" to poziom drugi), ani styl 2TIR/3TIR |
 | `Metadata` | `DocumentMetadataCollector` — zbiera rodzaj/datę/przedmiot aktu ze strefy tytułowej (§ 16-19 ZTP) |
 | `InsideAmendment` | Flaga: czy jesteśmy wewnątrz treści nowelizacji |
 | `AmendmentTriggerDetected` | Flaga: czy wykryto zwrot "otrzymuje brzmienie:" |

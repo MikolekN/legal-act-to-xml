@@ -230,6 +230,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   zgodnych 136 → 191 z 242 dokumentów; teksty jednolite 313 → 322 z 460. W eksporcie dokumentów ze
   stylami zmienił się 1 dokument: część wspólna bez stylu w treści cytowanej (wcześniej tiret w osobnym cytacie).
 
+- **Znacznik tiretu jako źródło głębokości**: zagnieżdżenie tiretu stoi w treści — „– –" to podwójne tiret,
+  „– – –" potrójne — więc `TiretMarker` czyta je z samego tekstu, przed stylem (`2TIR`/`3TIR`) i wcięciem; w korpusie
+  taki znacznik ma 433 z 437 akapitów w stylu `2TIR` (pozostałe 4 nie mają myślnika) i wszystkie 8 w stylu `3TIR`,
+  a żaden w stylu `TIR`.
+  Znacznik schodzi z treści w całości: tekst podwójnego tiretu nie zaczyna się już od myślnika (142 zdania
+  w 32 dokumentach). Tirety zagnieżdżone w treści cytowanej są zagnieżdżone także w modelu i w eksporcie
+  (`podw-tiret` zamiast kolejnego `tiret`; 25 jednostek w 4 dokumentach). Zgodność struktury bez stylów:
+  ustawy ogłoszone 98,37 % → 98,72 % jednostek (197 z 242 dokumentów w pełni zgodnych), teksty jednolite 327 z 460.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

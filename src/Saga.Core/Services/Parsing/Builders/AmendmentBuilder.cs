@@ -54,6 +54,9 @@ namespace Saga.Core.Services.Parsing.Builders
         private Letter? _currentLetter;
         private int _currentTiretIndex;
 
+        // Otwarte tirety cytatu od poziomu pierwszego — tiret zagnieżdżony („– –") trafia do ostatniego.
+        private readonly List<Tiret> _openTirets = new();
+
         // Otwarte jednostki systematyzacyjne cytatu, od najwyższej — artykuł trafia do najgłębszej.
         private readonly List<BaseEntity> _openUnits = new();
         private ISystematizingUnit? _pendingHeading;
@@ -249,7 +252,7 @@ namespace Saga.Core.Services.Parsing.Builders
             AmendmentEntityKind.Paragraph => _currentParagraph,
             AmendmentEntityKind.Point => _currentPoint,
             AmendmentEntityKind.Letter => _currentLetter,
-            AmendmentEntityKind.Tiret => (_currentLetter?.Tirets ?? content.Tirets).LastOrDefault(),
+            AmendmentEntityKind.Tiret => _openTirets.LastOrDefault(),
             _ => null,
         };
 
@@ -288,7 +291,7 @@ namespace Saga.Core.Services.Parsing.Builders
                     break;
                 case AmendmentEntityKind.Tiret:
                     if (!TryBuildStylelessCommonPart(para, content))
-                        BuildAmendmentTiret(para.Text, content);
+                        BuildAmendmentTiret(para, content);
                     break;
                 case AmendmentEntityKind.CommonPart:
                     BuildAmendmentCommonPart(para, content);
@@ -335,7 +338,7 @@ namespace Saga.Core.Services.Parsing.Builders
             _currentParagraph = paragraph;
             _currentPoint = null;
             _currentLetter = null;
-            _currentTiretIndex = 0;
+            ResetTirets();
 
             Log.Debug("AmendmentBuilder: artykuł {Number}", article.Number?.Value ?? "?");
         }
@@ -393,7 +396,7 @@ namespace Saga.Core.Services.Parsing.Builders
 
             _currentPoint = null;
             _currentLetter = null;
-            _currentTiretIndex = 0;
+            ResetTirets();
 
             Log.Debug("AmendmentBuilder: ustęp {Number}", _currentParagraph.Number?.Value ?? "?");
         }
@@ -427,7 +430,7 @@ namespace Saga.Core.Services.Parsing.Builders
 
             _currentPoint = point;
             _currentLetter = null;
-            _currentTiretIndex = 0;
+            ResetTirets();
 
             Log.Debug("AmendmentBuilder: punkt {Number}", point.Number?.Value ?? "?");
         }
@@ -459,28 +462,39 @@ namespace Saga.Core.Services.Parsing.Builders
             }
 
             _currentLetter = letter;
-            _currentTiretIndex = 0;
+            ResetTirets();
 
             Log.Debug("AmendmentBuilder: litera {Number}", letter.Number?.Value ?? "?");
         }
 
-        private void BuildAmendmentTiret(string text, AmendmentContent content)
+        private void BuildAmendmentTiret(CollectedAmendmentParagraph para, AmendmentContent content)
         {
-            var contentText = ParsingFactories.StripTiretPrefix(text);
-            _currentTiretIndex++;
+            var contentText = ParsingFactories.StripTiretPrefix(para.Text);
+
+            // Zagnieżdżenie zapisane znacznikiem („– –") albo stylem; bez tiretu nadrzędnego zostaje poziom 1.
+            var depth = Math.Min(TiretDepth(para), _openTirets.Count + 1);
+            _openTirets.RemoveRange(depth - 1, _openTirets.Count - (depth - 1));
+            var parentTiret = _openTirets.LastOrDefault();
 
             var tiret = new Tiret
             {
-                Parent = _currentLetter,
+                Parent = (BaseEntity?)parentTiret ?? _currentLetter,
                 Article = _currentArticle,
                 Paragraph = _currentParagraph,
                 Point = _currentPoint,
                 Letter = _currentLetter,
-                Number = NumberService.Create(numericPart: _currentTiretIndex)
+                Number = NumberService.Create(numericPart: parentTiret != null ? parentTiret.Tirets.Count + 1 : ++_currentTiretIndex)
             };
             ParsingFactories.SetContentAndSegments(tiret, contentText);
 
-            if (_currentLetter != null)
+            if (parentTiret != null)
+            {
+                if (parentTiret.Tirets.Count == 0)
+                    ParsingFactories.AttachIntroCommonPart(parentTiret);
+
+                parentTiret.Tirets.Add(tiret);
+            }
+            else if (_currentLetter != null)
             {
                 if (_currentLetter.Tirets.Count == 0)
                     ParsingFactories.AttachIntroCommonPart(_currentLetter);
@@ -492,7 +506,23 @@ namespace Saga.Core.Services.Parsing.Builders
                 content.Tirets.Add(tiret);
             }
 
+            _openTirets.Add(tiret);
             Log.Debug("AmendmentBuilder: tiret {Number}", tiret.Number?.Value ?? "?");
+        }
+
+        private static int TiretDepth(CollectedAmendmentParagraph para)
+        {
+            var written = TiretMarker.Depth(para.Text);
+            if (written > 1)
+                return written;
+
+            return para.StyleInfo?.TargetKind == AmendmentTargetKind.DoubleTiret ? 2 : 1;
+        }
+
+        private void ResetTirets()
+        {
+            _currentTiretIndex = 0;
+            _openTirets.Clear();
         }
 
         /// <summary>
@@ -645,7 +675,7 @@ namespace Saga.Core.Services.Parsing.Builders
             _currentParagraph = null;
             _currentPoint = null;
             _currentLetter = null;
-            _currentTiretIndex = 0;
+            ResetTirets();
 
             Log.Debug("AmendmentBuilder: jednostka systematyzacyjna {Kind} {Number}", kind, number.Value);
             return true;
@@ -703,7 +733,7 @@ namespace Saga.Core.Services.Parsing.Builders
             _currentParagraph = null;
             _currentPoint = null;
             _currentLetter = null;
-            _currentTiretIndex = 0;
+            ResetTirets();
             _openUnits.Clear();
             _pendingHeading = null;
         }

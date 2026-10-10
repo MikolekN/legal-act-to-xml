@@ -53,10 +53,10 @@ namespace Saga.Core.Services.Parsing
             => ParagraphClassifier.LetterStripPattern.Replace(text.Trim(), "", 1);
 
         /// <summary>
-        /// Usuwa prefiks tiretu (np. "– ") z tekstu.
+        /// Usuwa znacznik tiretu z tekstu — cały, także wielokrotny („– – ").
         /// </summary>
         public static string StripTiretPrefix(string text)
-            => ParagraphClassifier.TiretStripPattern.Replace(text.Trim(), "", 1);
+            => TiretMarker.Strip(text);
 
         /// <summary>
         /// Usuwa prefiks wrapUp (polpauza lub myślnik) z tekstu.
