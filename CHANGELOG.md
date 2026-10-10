@@ -171,6 +171,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   wychodzą jeszcze jako akapity, nie jednostki.
 - **Znacznik w treści odnośnika**: indeks górny własnego znacznika przypisu rozciągnięty na dalszy tekst nie
   zostawia już nawiasów w treści („[) Zmiany … i] 1914" → „Zmiany … i 1914").
+- **Wersaliki nadane wprost**: tekst przebiegu sformatowanego wersalikami (`w:caps`) jest czytany wielkimi
+  literami, jak stoi w akcie — tytuł załącznika „sektory ważne" to „SEKTORY WAŻNE". Dzięki temu nagłówek
+  „Rozporządzenie Rady Ministrów" zapisany małymi literami z wersalikami jest rozpoznawany jak wydrukowany
+  (8 dokumentów korpusu zyskało strefę tytułową, jeden — właściwy `Rodzaj`). Wersaliki wynikające ze stylu
+  zostają tekstem, jak go zapisano („Ustawa") — tak też mają przykłady autorów schematu.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

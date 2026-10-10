@@ -289,7 +289,7 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 
 | Właściwość `DocumentBlock` | Opis |
 |---|---|
-| `Text` | Tekst bloku (kanał indeksu górnego `[x]`, tabulatory `\t`, łącznik nierozdzielający jako dywiz, przejście wiersza jako odstęp; **nie** trymowany/sanityzowany) |
+| `Text` | Tekst bloku (kanał indeksu górnego `[x]`, tabulatory `\t`, łącznik nierozdzielający jako dywiz, przejście wiersza jako odstęp, wersaliki nadane przebiegowi wprost jako wielkie litery — wersaliki ze stylu zostają, jak zapisano; **nie** trymowany/sanityzowany) |
 | `StyleId` | Identyfikator stylu Word — tylko DOCX; `null` dla PDF/TXT |
 | `Layout` | Opcjonalne metadane układu (`BlockLayoutInfo` — wcięcia, pogrubienie, kursywa) — z DOCX/PDF |
 | `Source` | Położenie w źródle (`BlockSourceLocation`) — diagnostyka |

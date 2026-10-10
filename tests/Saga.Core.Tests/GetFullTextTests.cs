@@ -259,5 +259,51 @@ namespace Saga.Core.Tests
 
             Assert.Equal(string.Empty, result);
         }
+
+        // ============================================================
+        // Wersaliki
+        // ============================================================
+
+        [Fact]
+        public void GetFullText_RunFormattedAsAllCaps_IsReadInCapitals()
+        {
+            // Przykład autorów schematu (DU/2026/252): tytuł załącznika zapisany „sektory ważne" z wersalikami
+            // nadanymi wprost — w akcie i w przykładzie stoi „SEKTORY WAŻNE".
+            var paragraph = new Paragraph(
+                new Run(new RunProperties(new Caps()), new Text("sektory ważne")),
+                new Run(new Text(" (wykaz)")));
+
+            Assert.Equal("SEKTORY WAŻNE (wykaz)", paragraph.GetFullText());
+        }
+
+        [Fact]
+        public void GetFullText_AllCapsSwitchedOff_KeepsTheText()
+        {
+            var paragraph = new Paragraph(
+                new Run(new RunProperties(new Caps { Val = false }), new Text("sektory ważne")));
+
+            Assert.Equal("sektory ważne", paragraph.GetFullText());
+        }
+
+        [Fact]
+        public void GetFullText_SmallCaps_KeepTheLetters()
+        {
+            var paragraph = new Paragraph(
+                new Run(new RunProperties(new SmallCaps()), new Text("Sektory ważne")));
+
+            Assert.Equal("Sektory ważne", paragraph.GetFullText());
+        }
+
+        [Fact]
+        public void GetFullText_AllCapsOfTheStyle_KeepTheTextAsTyped()
+        {
+            // Styl rodzaju aktu pisze wersalikami, ale tekstem jest „Ustawa" — tak też stoi w przykładach
+            // autorów schematu (<rodzaj-aktu>Ustawa</rodzaj-aktu>).
+            var paragraph = new Paragraph(
+                new ParagraphProperties(new ParagraphStyleId { Val = "OZNRODZAKTUtznustawalubrozporzdzenieiorganwydajcy" }),
+                new Run(new Text("Ustawa")));
+
+            Assert.Equal("Ustawa", paragraph.GetFullText());
+        }
     }
 }

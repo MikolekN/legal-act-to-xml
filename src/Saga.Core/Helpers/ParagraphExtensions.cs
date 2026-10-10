@@ -41,6 +41,10 @@ namespace Saga.Core
                 if (text.Length == 0)
                     continue;
 
+                // Wersaliki nadane wprost przebiegowi to w akcie wielkie litery — tekst czytamy tak, jak go wydrukowano.
+                if (IsCapsRun(run))
+                    text = text.ToUpperInvariant();
+
                 if (IsSuperscriptRun(run))
                 {
                     superscript.Append(text);
@@ -121,6 +125,14 @@ namespace Saga.Core
             var trailing = value.Length - value.TrimEnd().Length;
             sb.Append(value, 0, leading).Append('[').Append(core).Append(']').Append(value, value.Length - trailing, trailing);
         }
+
+        /// <summary>
+        /// Wersaliki nadane przebiegowi wprost (<c>w:caps</c>). Wersaliki ze stylu zostają tekstem, jak go
+        /// zapisano: styl jest prezentacją rodzaju tekstu („Ustawa" w stylu rodzaju aktu), a formatowanie
+        /// wprost — decyzją o tym jednym tekście (tytuł załącznika). Kapitaliki liter nie zmieniają.
+        /// </summary>
+        private static bool IsCapsRun(Run run) =>
+            run.RunProperties?.Caps is { } caps && (caps.Val?.Value ?? true);
 
         private static bool IsSuperscriptRun(Run run)
         {
