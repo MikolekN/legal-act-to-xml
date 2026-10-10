@@ -53,17 +53,6 @@ namespace Saga.Core.Services
                 actElement.Add(Element(XmlConverterConstants.ActHeading.Subject, document.Subject));
         }
 
-        /// <summary>Kod rodzaju aktu ze słownika schematu (RodzajAktuTyp).</summary>
-        private static string KindCode(LegalActType type) => type switch
-        {
-            LegalActType.Statute or LegalActType.AmendingStatute or LegalActType.Code => "USTAWA",
-            LegalActType.Bill => "PROJ_U",
-            LegalActType.Regulation => "ROZP",
-            LegalActType.Announcement => "OBW_TJ",
-            LegalActType.Resolution => "UCHW",
-            LegalActType.ExecutiveOrder => "ZARZĄD",
-            _ => "INNY",
-        };
 
         private static void PrepareMetadata(LegalDocument document, XElement rootElement)
         {
@@ -100,7 +89,7 @@ namespace Saga.Core.Services
 
             metaElement.Add(Element(XmlConverterConstants.Metadata.TitleElement, FootnoteXmlConverter.WithoutMarkers(document.Title)));
 
-            metaElement.Add(Element(XmlConverterConstants.Metadata.TypeElement, KindCode(document.Type)));
+            metaElement.Add(Element(XmlConverterConstants.Metadata.TypeElement, ActKindXml.Code(document)));
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.PreviousTitlesElement, "xs:string"));
 
@@ -135,9 +124,12 @@ namespace Saga.Core.Services
             var organ = Element(XmlConverterConstants.Metadata.Authorities.Authority.Element);
             organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.GUID, Guid.NewGuid().ToString()));
             organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.Role, XmlConverterConstants.Metadata.Authorities.Authority.RoleIssuing));
-            organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.URI, "URI"));
-            var nazwa = Element(XmlConverterConstants.Metadata.Authorities.Authority.Name, "UNKNOWN");
-            organ.Add(nazwa);
+            // Organ wydający wynika z rodzaju aktu (ustawa — Sejm); nieodczytany zostaje nazwany wprost,
+            // bez zmyślonego zasobu ELI.
+            var issuing = ActKindXml.IssuingAuthority(document);
+            if (issuing?.EliUri is { } issuingUri)
+                organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.URI, issuingUri));
+            organ.Add(Element(XmlConverterConstants.Metadata.Authorities.Authority.Name, issuing?.Name ?? "UNKNOWN"));
             organy.Add(organ);
 
             if (document.Signature is { } signature)

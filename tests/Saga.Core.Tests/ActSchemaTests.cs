@@ -168,5 +168,58 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "metadane", "rodzaj-aktu", "data", "tytul", "rozdzial" },
                 act.Elements().Select(e => e.Name.LocalName).Take(5));
         }
+
+        // ============================================================
+        // Rodzaj aktu i organy w metadanych
+        // ============================================================
+
+        private static XElement Metadata(params string[] lines) =>
+            Export(lines).Descendants().First(e => e.Name.LocalName == "metadane");
+
+        private static string? Child(XElement parent, string name) =>
+            parent.Elements().FirstOrDefault(e => e.Name.LocalName == name)?.Value;
+
+        [Theory]
+        // Rodzaj rozstrzyga nagłówek samego aktu — inaczej każdy dokument wychodził jako USTAWA.
+        [InlineData("USTAWA", "o ochronie sygnalistów", "USTAWA")]
+        [InlineData("ROZPORZĄDZENIE MINISTRA FINANSÓW", "w sprawie wzoru deklaracji", "ROZP")]
+        [InlineData("OBWIESZCZENIE MARSZAŁKA SEJMU RZECZYPOSPOLITEJ POLSKIEJ", "w sprawie ogłoszenia jednolitego tekstu ustawy – Prawo bankowe", "OBW_TJ")]
+        [InlineData("OBWIESZCZENIE MINISTRA ZDROWIA", "w sprawie wykazu leków refundowanych", "OBW")]
+        public void ActKindCode_FollowsTheHeadingOfTheAct(string heading, string subject, string code)
+        {
+            var metadata = Metadata(heading, "z dnia 14 czerwca 2024 r.", subject,
+                "Art. 1. Przepis pierwszy.", "Art. 2. Akt wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+            Assert.Equal(code, Child(metadata, "Rodzaj"));
+        }
+
+        [Fact]
+        public void Statute_IsIssuedBySejm_AndSignedByThePresident()
+        {
+            // Jak w przykładach autorów schematu: organ wydający SEJM, podpisujący Prezydent, oba z zasobem ELI.
+            var metadata = Metadata(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                "Art. 1. Ustawa określa zasady ochrony sygnalistów.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.",
+                "Prezydent Rzeczypospolitej Polskiej: A. Duda");
+
+            var authorities = metadata.Descendants().Where(e => e.Name.LocalName == "Organ").ToList();
+
+            Assert.Equal(new[] { "wydajacy", "podpisujacy" }, authorities.Select(a => Attr(a, "rola")));
+            Assert.Equal("SEJM", Child(authorities[0], "Nazwa"));
+            Assert.Equal("https://eli.gov.pl/resource/authority/legal-institution/Sejm", Attr(authorities[0], "eliURI"));
+            Assert.Equal("https://eli.gov.pl/resource/authority/legal-institution/Prezydent", Attr(authorities[1], "eliURI"));
+        }
+
+        [Fact]
+        public void UnreadIssuingAuthority_HasNoInventedResource()
+        {
+            var metadata = Metadata(
+                "ROZPORZĄDZENIE MINISTRA FINANSÓW", "z dnia 14 czerwca 2024 r.", "w sprawie wzoru deklaracji",
+                "Art. 1. Przepis pierwszy.");
+
+            var issuing = metadata.Descendants().Single(e => e.Name.LocalName == "Organ");
+            Assert.Null(Attr(issuing, "eliURI"));
+        }
     }
 }

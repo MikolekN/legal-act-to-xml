@@ -19,14 +19,22 @@ namespace Saga.Core.Services.Converters
                     new XAttribute(XmlConverterConstants.Signatures.PersonGUID, signature.PersonGuid.ToString())));
 
         /// <summary>Organ podpisujący w <c>Organy</c>.</summary>
-        internal static XElement ToAuthority(ActSignature signature) =>
-            Element(XmlConverterConstants.Metadata.Authorities.Authority.Element,
+        internal static XElement ToAuthority(ActSignature signature)
+        {
+            var authority = Element(XmlConverterConstants.Metadata.Authorities.Authority.Element,
                 new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.GUID, Guid.NewGuid().ToString()),
                 new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.Role,
-                    XmlConverterConstants.Metadata.Authorities.Authority.RoleSigning),
+                    XmlConverterConstants.Metadata.Authorities.Authority.RoleSigning));
+
+            if (ActKindXml.EliUriOf(signature.Authority) is { } uri)
+                authority.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.URI, uri));
+
+            authority.Add(
                 Element(XmlConverterConstants.Metadata.Authorities.Authority.Name, signature.Authority),
                 Element(XmlConverterConstants.Metadata.Authorities.Authority.SigningAuthority, signature.Authority),
                 Person(XmlConverterConstants.Metadata.Authorities.Authority.SigningPerson, signature));
+            return authority;
+        }
 
         private static XElement Person(string name, ActSignature signature, params object[] attributes) =>
             Element(name,

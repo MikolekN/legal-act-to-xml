@@ -129,6 +129,12 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **ELI aktu zmienianego z publikatorem**: `now:akt` cytatu ma postać `https://eli.gov.pl/eli/DU/2025/350`;
   wcześniej brakowało segmentu publikatora (`…/eli//2025/350`), bo powołanie „Dz. U. z 2025 r. poz. 350"
   nie zapisywało, że chodzi o Dziennik Ustaw.
+- **Rodzaj aktu w metadanych z nagłówka aktu**: `Rodzaj` to `USTAWA`, `ROZP`, `OBW_TJ`, `OBW`, `UCHW` albo `ZARZĄD`
+  według nagłówka („ROZPORZĄDZENIE MINISTRA…", „OBWIESZCZENIE…"); wcześniej każdy dokument miał `USTAWA`, bo
+  `LegalDocument.Type` nie jest ustawiany przez potok. Jawnie ustawiony `Type` nadal wygrywa.
+- **Organy w metadanych**: organem wydającym ustawy jest `SEJM` z zasobem ELI, organ podpisujący „Prezydent
+  Rzeczypospolitej Polskiej" dostaje swój zasób ELI. Organ nieodczytany zostaje `UNKNOWN`, ale bez atrapy
+  `eliURI="URI"`.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
