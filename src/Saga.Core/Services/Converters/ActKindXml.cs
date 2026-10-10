@@ -16,13 +16,15 @@ namespace Saga.Core.Services.Converters
 
         /// <summary>
         /// Kod rodzaju aktu. <see cref="LegalDocument.Type"/> jest deklaracją wywołującego i wygrywa, gdy ją
-        /// ustawił; przy wartości domyślnej rozstrzyga nagłówek samego aktu („USTAWA", „ROZPORZĄDZENIE …") —
-        /// inaczej każde rozporządzenie i obwieszczenie wychodziłoby jako ustawa.
+        /// ustawił; przy wartości domyślnej rozstrzyga nagłówek samego aktu („USTAWA", „ROZPORZĄDZENIE …"),
+        /// a gdy nagłówek nie ma rozpoznawalnej postaci („ROZPORZĄDZENIE MINISTRA zDROWIA") — rodzaj
+        /// rozpoznany przez klasyfikator dokumentu. Inaczej każde rozporządzenie i obwieszczenie wychodziłoby
+        /// jako ustawa.
         /// </summary>
         internal static string Code(LegalDocument document) =>
             document.Type != LegalActType.Statute
                 ? CodeOf(document.Type)
-                : FromHeading(document) ?? CodeOf(document.Type);
+                : FromHeading(document) ?? FromClassification(document) ?? CodeOf(document.Type);
 
         /// <summary>
         /// Organ wydający wynikający z rodzaju aktu: ustawę uchwala Sejm. Dla pozostałych rodzajów organ
@@ -37,7 +39,7 @@ namespace Saga.Core.Services.Converters
 
         private static string? FromHeading(LegalDocument document)
         {
-            var heading = document.KindLine;
+            var heading = FootnoteMarkers.Remove(document.KindLine);
             if (heading.Length == 0)
                 return null;
 
@@ -55,6 +57,14 @@ namespace Saga.Core.Services.Converters
 
             return null;
         }
+
+        // Klasyfikator czyta cały dokument (formuły, jednostki, styl), więc zna rodzaj także bez nagłówka.
+        private static string? FromClassification(LegalDocument document) => document.Classification switch
+        {
+            { ActType: LegalActType.Announcement, IsConsolidatedText: false } => "OBW",
+            { ActType: { } type } => CodeOf(type),
+            _ => null,
+        };
 
         private static string CodeOf(LegalActType type) => type switch
         {

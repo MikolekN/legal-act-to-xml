@@ -14,6 +14,7 @@ namespace Saga.Core.Services.Converters
         private static readonly HashSet<string> Hosts =
         [
             XmlConverterConstants.Contents.Sentence.Element,
+            XmlConverterConstants.ActHeading.Kind,
             XmlConverterConstants.ActHeading.Subject,
             XmlConverterConstants.Contents.Citation.Text.Content,
             XmlConverterConstants.Contents.ContinuationFragment,

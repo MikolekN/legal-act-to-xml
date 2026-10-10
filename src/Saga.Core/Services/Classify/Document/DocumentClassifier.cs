@@ -430,6 +430,9 @@ namespace Saga.Core.Services.Classify.Document
 
         private static LegalActType? MatchHeaderType(string text)
         {
+            // Odnośnik przy nagłówku rodzaju aktu nie zmienia tego, że to nagłówek.
+            text = FootnoteMarkers.Remove(text);
+
             if (ZtpPatterns.StatuteHeaderPattern.IsMatch(text)) return LegalActType.Statute;
             if (ZtpPatterns.RegulationHeaderPattern.IsMatch(text)) return LegalActType.Regulation;
             if (ZtpPatterns.AnnouncementHeaderPattern.IsMatch(text)) return LegalActType.Announcement;

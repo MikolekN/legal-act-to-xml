@@ -200,6 +200,11 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Miara pokrycia tekstu** (`CorpusValidator --text-coverage`): dla każdego akapitu źródła sprawdza, czy jego
   tekst doszedł do eksportu (porównanie na literach i cyfrach, bez oznaczenia jednostki i znaczników
   odnośników); raport wg rodzaju aktu i lista niedoniesionych akapitów. Ustawy ogłoszone: 100 % akapitów.
+- **Rodzaj aktu bez rozpoznanego nagłówka**: gdy nagłówek nie ma rozpoznawalnej postaci („ROZPORZĄDZENIE MINISTRA
+  zDROWIA", „Rozporządzenie Ministra Finansów i Gospodarki"), `Rodzaj` bierze się z klasyfikatora dokumentu zamiast
+  domyślnego `USTAWA`. Nagłówek rodzaju ze znacznikiem odnośnika na końcu („Obwieszczenie Ministra …[1)]") jest
+  rozpoznawany jak bez niego, a odnośnik staje się elementem w `rodzaj-aktu`. W korpusie 11 dokumentów przestało
+  uchodzić za ustawy (i za wydane przez Sejm); wszystkie 242 dokumenty z `Rodzaj` = `USTAWA` to ustawy.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

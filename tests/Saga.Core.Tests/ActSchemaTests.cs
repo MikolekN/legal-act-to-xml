@@ -287,6 +287,41 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ActKindCode_ComesFromTheClassifier_WhenTheHeadingIsNotRecognised()
+        {
+            // Nagłówek z literówką w wersalikach nie pasuje do wzorca rodzaju — bez drugiego sygnału
+            // rozporządzenie wychodziło jako USTAWA, z Sejmem jako organem wydającym.
+            var metadata = Metadata(
+                "ROZPORZĄDZENIE MINISTRA zDROWIA",
+                "z dnia 18 sierpnia 2025 r.",
+                "w sprawie statutu Krajowej Rady Kardiologicznej",
+                "Na podstawie art. 33 ustawy z dnia 4 czerwca 2025 r. o Krajowej Sieci Kardiologicznej (Dz. U. poz. 779) zarządza się, co następuje:",
+                "§ 1. Określa się statut Krajowej Rady Kardiologicznej, stanowiący załącznik do rozporządzenia.",
+                "§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+            Assert.Equal("ROZP", Child(metadata, "Rodzaj"));
+            Assert.DoesNotContain(metadata.Descendants(), e => e.Name.LocalName == "Nazwa" && e.Value == "SEJM");
+        }
+
+        [Fact]
+        public void ActKindHeading_WithAFootnoteMarker_IsStillTheHeading()
+        {
+            // Odnośnik przy organie wyjaśnia jego właściwość — nagłówek z takim znacznikiem nie był rozpoznawany,
+            // więc obwieszczenie nie miało strefy tytułowej i wychodziło jako USTAWA.
+            var xml = Export(
+                "Obwieszczenie Ministra Rodziny, Pracy i Polityki Społecznej[1)]",
+                "z dnia 22 stycznia 2026 r.",
+                "w sprawie wysokości kwoty kryterium dochodowego",
+                "Na podstawie art. 9 ust. 2f ustawy z dnia 7 września 2007 r. o pomocy osobom uprawnionym do alimentów " +
+                "(Dz. U. z 2026 r. poz. 55) ogłasza się, że kwota kryterium dochodowego wynosi 1620 zł.");
+
+            var metadata = xml.Descendants().First(e => e.Name.LocalName == "metadane");
+            Assert.Equal("OBW", Child(metadata, "Rodzaj"));
+            Assert.StartsWith("Obwieszczenie Ministra Rodziny, Pracy i Polityki Społecznej",
+                xml.Descendants().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
+        }
+
+        [Fact]
         public void Statute_IsIssuedBySejm_AndSignedByThePresident()
         {
             // Jak w przykładach autorów schematu: organ wydający SEJM, podpisujący Prezydent, oba z zasobem ELI.

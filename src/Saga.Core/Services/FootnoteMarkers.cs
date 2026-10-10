@@ -25,6 +25,12 @@ namespace Saga.Core.Services
         /// Tekst ze znacznikami zastąpionymi odstępami tej samej długości — pozycje w tekście zostają ważne.
         /// Indeks górny oznaczenia zlany ze znacznikiem („4[1 15)]") zostaje jako „4[1]".
         /// </summary>
+        /// <summary>
+        /// Tekst bez znaczników odnośników — do rozpoznawania wierszy, przy których odnośnik stoi na końcu
+        /// („ROZPORZĄDZENIE MINISTRA ZDROWIA[1)]": odnośnik wyjaśnia właściwość ministra).
+        /// </summary>
+        internal static string Remove(string text) => Reference.Replace(text, string.Empty).TrimEnd();
+
         internal static string Blank(string text) => Marker.Replace(text, match =>
         {
             var superscript = match.Groups["superscript"];

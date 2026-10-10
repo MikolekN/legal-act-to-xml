@@ -132,12 +132,16 @@ namespace Saga.Core.Services.Parsing
                 _actDate = parsed;
         }
 
-        private static bool IsKindHeader(string t) =>
-            ZtpPatterns.StatuteHeaderPattern.IsMatch(t) ||
-            ZtpPatterns.RegulationHeaderPattern.IsMatch(t) ||
-            ZtpPatterns.AnnouncementHeaderPattern.IsMatch(t) ||
-            ZtpPatterns.ResolutionHeaderPattern.IsMatch(t) ||
-            ZtpPatterns.OrderHeaderPattern.IsMatch(t);
+        // Odnośnik przy nagłówku („OBWIESZCZENIE MINISTRA …[1)]") nie zmienia tego, że to nagłówek rodzaju.
+        private static bool IsKindHeader(string line)
+        {
+            var t = FootnoteMarkers.Remove(line);
+            return ZtpPatterns.StatuteHeaderPattern.IsMatch(t) ||
+                ZtpPatterns.RegulationHeaderPattern.IsMatch(t) ||
+                ZtpPatterns.AnnouncementHeaderPattern.IsMatch(t) ||
+                ZtpPatterns.ResolutionHeaderPattern.IsMatch(t) ||
+                ZtpPatterns.OrderHeaderPattern.IsMatch(t);
+        }
 
         private static bool IsIssuingOrgan(string t) =>
             ZtpPatterns.IssuingOrganLinePattern.IsMatch(t) ||
