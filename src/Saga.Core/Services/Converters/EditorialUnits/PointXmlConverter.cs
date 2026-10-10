@@ -43,7 +43,7 @@ namespace Saga.Core.Services.Converters
 
         private static XElement GetPointElement(bool isPathological) =>
             Element(isPathological
-                ? XmlConverterConstants.Contents.PatoPoint
+                ? XmlConverterConstants.Contents.NonZtpPoint
                 : XmlConverterConstants.Contents.Point);
 
         private static bool IsPathological(Point point, bool isParentPathological)

@@ -39,8 +39,8 @@ namespace Saga.Core.Services.Converters
         private static string GetTiretElementName(int nesting, bool isPathological) =>
             nesting switch
             {
-                1 => isPathological ? XmlConverterConstants.Contents.PatoTiret : XmlConverterConstants.Contents.Tiret,
-                2 => isPathological ? XmlConverterConstants.Contents.PatoDoubleTiret : XmlConverterConstants.Contents.DoubleTiret,
+                1 => isPathological ? XmlConverterConstants.Contents.NonZtpTiret : XmlConverterConstants.Contents.Tiret,
+                2 => isPathological ? XmlConverterConstants.Contents.NonZtpDoubleTiret : XmlConverterConstants.Contents.DoubleTiret,
                 3 => XmlConverterConstants.Contents.TripleTiret,
                 4 => XmlConverterConstants.Contents.QuadrupleTiret,
                 5 => XmlConverterConstants.Contents.QuintupleTiret,

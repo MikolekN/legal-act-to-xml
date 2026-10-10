@@ -43,7 +43,7 @@ namespace Saga.Core.Services.Converters
 
         private static XElement GetLetterElement(bool isPathological) =>
             Element(isPathological
-                ? XmlConverterConstants.Contents.PatoLetter
+                ? XmlConverterConstants.Contents.NonZtpLetter
                 : XmlConverterConstants.Contents.Letter);
 
         private static bool IsPathological(Letter letter, bool isParentPathological)

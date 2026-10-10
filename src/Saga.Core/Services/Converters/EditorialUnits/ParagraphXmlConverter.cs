@@ -59,14 +59,14 @@ namespace Saga.Core.Services.Converters
             return (isImplicit, isPathological) switch
             {
                 (true, true) => Element(isCodeParagraph
-                    ? XmlConverterConstants.Contents.PatoCodeParagraphImplicit
-                    : XmlConverterConstants.Contents.PatoParagraphImplicit),
+                    ? XmlConverterConstants.Contents.NonZtpCodeParagraphImplicit
+                    : XmlConverterConstants.Contents.NonZtpParagraphImplicit),
                 (true, false) => Element(isCodeParagraph
                     ? XmlConverterConstants.Contents.CodeParagraphImplicit
                     : XmlConverterConstants.Contents.ParagraphImplicit),
                 (false, true) => Element(isCodeParagraph
-                    ? XmlConverterConstants.Contents.PatoCodeParagraph
-                    : XmlConverterConstants.Contents.PatoParagraph),
+                    ? XmlConverterConstants.Contents.NonZtpCodeParagraph
+                    : XmlConverterConstants.Contents.NonZtpParagraph),
                 (false, false) => Element(isCodeParagraph
                     ? XmlConverterConstants.Contents.CodeParagraph
                     : XmlConverterConstants.Contents.Paragraph)

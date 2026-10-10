@@ -76,6 +76,37 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Jednostki spoza ZTP
+        // ============================================================
+
+        [SchemaPlFact]
+        public void SingleItemEnumerations_AreNonZtpUnits_AndSchemaValid()
+        {
+            // Wyliczenie z jedną pozycją odbiega od ZTP — schemat ma na to elementy „nie-ztp-*".
+            var xml = Export(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                "Art. 1. 1. Ustawa określa:",
+                "1) zasady ochrony.",
+                "2. Przepisy stosuje się do:",
+                "1) pracodawców:",
+                "a) publicznych;",
+                "2) organów:",
+                "a) centralnych:",
+                "– naczelnych,",
+                "b) terenowych.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.");
+
+            var names = xml.Descendants().Select(e => e.Name.LocalName).ToList();
+            Assert.Contains("nie-ztp-ustep", names);
+            Assert.Contains("nie-ztp-punkt", names);
+            Assert.Contains("nie-ztp-litera", names);
+            Assert.Contains("nie-ztp-tiret", names);
+            Assert.DoesNotContain(names, name => name.StartsWith("pato-"));
+
+            Assert.Empty(Problems(xml));
+        }
+
+        // ============================================================
         // Grupy czasowe i atrybut „okres" (ADR-0022)
         // ============================================================
 

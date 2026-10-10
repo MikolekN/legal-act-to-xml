@@ -42,6 +42,9 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Załącznik aktu nie jest już częścią ostatniego artykułu**: treść za nagłówkiem „Załącznik do
   ustawy z dnia…" nie trafia do struktury aktu (wcześniej jej punkty i rozdziały wchodziły do
   ostatniego artykułu albo stawały się jednostkami aktu).
+- **Jednostki spoza ZTP pod nazwami schematu**: wyliczenie z jedną pozycją (ustęp z jednym punktem, punkt
+  z jedną literą, litera z jednym tiretem) eksportuje się jako `nie-ztp-ustep`, `nie-ztp-punkt`,
+  `nie-ztp-litera`, `nie-ztp-tiret` — wcześniej `pato-*`, których aktualny schemat nie zna.
 - **Daty aktu jako zdarzenia cyklu życia**: zamiast `DataWejsciaWZycie` i `DatyMocyWstecznej` metadane
   niosą `DaneCzasowe/CyklZyciaAktu` — jedno `Zdarzenie` na każdą datę wejścia w życie (także wyjątków,
   z ich jednostkami i zakresem) i na każdą datę mocy wstecznej. Jednostki, zdania i części wspólne
