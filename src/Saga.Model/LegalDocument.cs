@@ -66,6 +66,15 @@ namespace Saga.Model
         /// </summary>
         public string Title { get; set; } = string.Empty;
 
+        /// <summary>Wiersz rodzaju aktu ze strefy tytułowej, jak w akcie („USTAWA"); pusty, gdy nierozpoznany.</summary>
+        public string KindLine { get; set; } = string.Empty;
+
+        /// <summary>Wiersz daty aktu („z dnia 14 czerwca 2024 r."); pusty, gdy nierozpoznany.</summary>
+        public string DateLine { get; set; } = string.Empty;
+
+        /// <summary>Przedmiot aktu („o ochronie sygnalistów") — sam, bez rodzaju i daty; pusty, gdy nierozpoznany.</summary>
+        public string Subject { get; set; } = string.Empty;
+
         /// <summary>
         /// Data uchwalenia/wydania aktu (§ 17 ZTP), wydobyta ze strefy tytułowej ("z dnia D miesiąca RRRR r.").
         /// Null gdy nierozpoznana (np. czysty tekst bez wiersza daty).

@@ -25,6 +25,9 @@ namespace Saga.Core.Services.Parsing
     public sealed class DocumentMetadataCollector
     {
         private readonly List<string> _titleParts = new();
+        private string _kindLine = string.Empty;
+        private string _dateLine = string.Empty;
+        private string _subject = string.Empty;
         private DateTime? _actDate;
         private bool _kindSeen;
         private bool _sealed;
@@ -49,6 +52,7 @@ namespace Saga.Core.Services.Parsing
                 if (IsKindHeader(t))
                 {
                     _kindSeen = true;
+                    _kindLine = t;
                     _titleParts.Add(t);
                     return true;
                 }
@@ -74,6 +78,8 @@ namespace Saga.Core.Services.Parsing
             if (dm.Success)
             {
                 _titleParts.Add(t);
+                if (_dateLine.Length == 0)
+                    _dateLine = t;
                 TryCaptureDate(dm.Groups["day"].Value, dm.Groups["month"].Value, dm.Groups["year"].Value);
                 return true;
             }
@@ -82,6 +88,7 @@ namespace Saga.Core.Services.Parsing
             if (ZtpPatterns.ActSubjectPattern.IsMatch(t))
             {
                 _titleParts.Add(t);
+                _subject = t;
                 Seal();
                 return true;
             }
@@ -105,6 +112,10 @@ namespace Saga.Core.Services.Parsing
 
             if (_actDate.HasValue && !document.ActDate.HasValue)
                 document.ActDate = _actDate;
+
+            if (document.KindLine.Length == 0) document.KindLine = _kindLine;
+            if (document.DateLine.Length == 0) document.DateLine = _dateLine;
+            if (document.Subject.Length == 0) document.Subject = _subject;
         }
 
         private void TryCaptureDate(string day, string month, string year)

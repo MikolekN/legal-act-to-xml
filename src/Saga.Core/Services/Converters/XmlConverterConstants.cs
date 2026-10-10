@@ -14,6 +14,14 @@ namespace Saga.Core.Services.Converters
         internal const string MathMLNamespace = "http://www.w3.org/1998/Math/MathML";
         internal const string ELIUrl = "https://eli.gov.pl/";
         internal const string Act = "ustawa";
+
+        /// <summary>Strefa tytułowa aktu: rodzaj, data i przedmiot — zaraz po metadanych.</summary>
+        internal static class ActHeading
+        {
+            internal const string Kind = "rodzaj-aktu";
+            internal const string Date = "data";
+            internal const string Subject = "tytul";
+        }
         internal const string ActEnclavesAttribute = "enclaves";
 
         /// <summary>Tabele (grupa-tabeli: tytul-tabeli? + tabela).</summary>
@@ -93,7 +101,7 @@ namespace Saga.Core.Services.Converters
                 internal const string ELIDLdotyczyAktu = "ELIDLdotyczyAktu";
                 internal const string ELIDLproces = "ELIDLproces";
             }
-            internal const string VersionGUID = "GUIDwersji";
+            internal static readonly XName VersionGUID = GuidNamespace + "GUIDwersji";
             internal const string ISAPAdressElement = "AdresISAP";
             internal const string PublisherElement = "Wydawnictwo";
             internal const string YearElement = "Rok";
@@ -141,8 +149,8 @@ namespace Saga.Core.Services.Converters
                     internal const string URI = "eliURI";
                     internal const string SigningAuthority = "OrganPodpisujacy";
                     internal const string SigningPerson = "OsobaPodpisujaca";
-                    internal const string RoleIssuing = "wydający";
-                    internal const string RoleSigning = "podpisujący";
+                    internal const string RoleIssuing = "wydajacy";
+                    internal const string RoleSigning = "podpisujacy";
                 }
             }
 

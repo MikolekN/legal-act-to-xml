@@ -20,9 +20,7 @@ namespace Saga.Core.Services
             rootElement.Add(actElement);
 
             PrepareMetadata(document, actElement);
-            // PrepareActType(document, actElement);
-            // PrepareDate(document, actElement);
-            // PrepareTitle(document, actElement);
+            PrepareHeading(document, actElement);
 
             foreach (var part in document.Parts)
                 actElement.Add(SystematizingUnitXmlConverter.ActLevel(part));
@@ -33,8 +31,31 @@ namespace Saga.Core.Services
             return rootElement;
         }
 
-        private static string? NullIfEmpty(string value) =>
-            string.IsNullOrEmpty(value) ? null : value;
+        /// <summary>
+        /// Strefa tytułowa: rodzaj aktu, data i przedmiot jak w akcie. Wiersz nierozpoznany nie jest
+        /// emitowany — schemat go wymaga, więc brak widać w walidacji, zamiast zgadywać treść.
+        /// </summary>
+        private static void PrepareHeading(LegalDocument document, XElement actElement)
+        {
+            if (document.KindLine.Length > 0)
+                actElement.Add(Element(XmlConverterConstants.ActHeading.Kind, document.KindLine));
+            if (document.DateLine.Length > 0)
+                actElement.Add(Element(XmlConverterConstants.ActHeading.Date, document.DateLine));
+            if (document.Subject.Length > 0)
+                actElement.Add(Element(XmlConverterConstants.ActHeading.Subject, document.Subject));
+        }
+
+        /// <summary>Kod rodzaju aktu ze słownika schematu (RodzajAktuTyp).</summary>
+        private static string KindCode(LegalActType type) => type switch
+        {
+            LegalActType.Statute or LegalActType.AmendingStatute or LegalActType.Code => "USTAWA",
+            LegalActType.Bill => "PROJ_U",
+            LegalActType.Regulation => "ROZP",
+            LegalActType.Announcement => "OBW_TJ",
+            LegalActType.Resolution => "UCHW",
+            LegalActType.ExecutiveOrder => "ZARZĄD",
+            _ => "INNY",
+        };
 
         private static void PrepareMetadata(LegalDocument document, XElement rootElement)
         {
@@ -49,7 +70,7 @@ namespace Saga.Core.Services
                     eliElement.Add(Element(XmlConverterConstants.Metadata.Eli.ELI, eliString));
             metaElement.Add(eliElement);
 
-            metaElement.Add(Element(XmlConverterConstants.Metadata.VersionGUID, Guid.NewGuid().ToString()));
+            metaElement.Add(new XElement(XmlConverterConstants.Metadata.VersionGUID, Guid.NewGuid().ToString()));
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.ISAPAdressElement, "xs:string"));
 
@@ -71,7 +92,7 @@ namespace Saga.Core.Services
 
             metaElement.Add(Element(XmlConverterConstants.Metadata.TitleElement, document.Title));
 
-            metaElement.Add(Element(XmlConverterConstants.Metadata.TypeElement, document.Type.ToFriendlyString().ToUpper()));
+            metaElement.Add(Element(XmlConverterConstants.Metadata.TypeElement, KindCode(document.Type)));
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.PreviousTitlesElement, "xs:string"));
 
@@ -81,11 +102,8 @@ namespace Saga.Core.Services
                 metaElement.Add(Element(XmlConverterConstants.Metadata.AnnouncementDateElement, document.AnnouncementDate.Value.ToString("yyyy-MM-dd")));
 
             var dateElement = Element(XmlConverterConstants.Metadata.Date.Element);
-            // dateElement.Add(Element(XmlConverterConstants.Metadata.Date.Project, ""));
-            // if (document.PublicationDate == null)
-            //     dateElement.Add(Element(XmlConverterConstants.Metadata.Date.Publication, ""));
-            // else
-            //     dateElement.Add(Element(XmlConverterConstants.Metadata.Date.Publication, document.PublicationDate.Value.ToString("yyyy-MM-dd")));
+            if (document.ActDate is { } actDate)
+                dateElement.Add(Element(XmlConverterConstants.Metadata.Date.Publication, actDate.ToString("yyyy-MM-dd")));
             metaElement.Add(dateElement);
 
             if (document.EffectiveDate != default)

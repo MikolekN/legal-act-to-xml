@@ -17,6 +17,9 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Cele nowelizacji wskazane jednostką systematyzacyjną**: „po rozdziale 9 dodaje się…", „w dziale II
   po rozdziale 9…", „uchyla się rozdziały 4 i 5" dają `element-eId` `rozdz_9`, `dzial_2__rozdz_9`,
   `rozdz_4`/`rozdz_5` zamiast `UNKNOWN`. Wejście w życie takich powołań jeszcze nie czyta.
+- **Strefa tytułowa aktu w eksporcie**: po `metadane` stoją `rodzaj-aktu`, `data` i `tytul` z wierszy aktu
+  („USTAWA", „z dnia 14 czerwca 2024 r.", „o ochronie sygnalistów"); model trzyma je osobno
+  (`LegalDocument.KindLine`, `DateLine`, `Subject`).
 - **Walidacja numeracji jednostek systematyzacyjnych**: powtórzone oznaczenie, luka, malejąca
   numeracja, oddział poza rozdziałem i jednostka bez tytułu dostają komunikat walidacji.
 
@@ -34,6 +37,10 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Załącznik aktu nie jest już częścią ostatniego artykułu**: treść za nagłówkiem „Załącznik do
   ustawy z dnia…" nie trafia do struktury aktu (wcześniej jej punkty i rozdziały wchodziły do
   ostatniego artykułu albo stawały się jednostkami aktu).
+- **Metadane aktu zgodne ze schematem**: `Rodzaj` niesie kod ze słownika schematu (`USTAWA`, `ROZP`,
+  `OBW_TJ`…, wcześniej nazwa wersalikami), `DataAktu` zawiera `DataWydania`, `GUIDwersji` stoi w przestrzeni
+  `gd:`, a rola organu to `wydajacy`. Daty wejścia w życie i mocy wstecznej aktu zostają na razie
+  w dotychczasowych elementach — schemat trzyma je w `DaneCzasowe`.
 - **Atrybuty GUID w przestrzeni `gd:`** (GUIDs.xsd): jednostki i organ — `gd:GUID`, zdanie — `gd:zdGUID`
   (wcześniej `GUID`) i `gd:fragmentGUID`, komendy nowelizacji — `gd:nowGUID`. Korzeń deklaruje `xmlns:gd`.
 - **Atrybut `cudzyslowy` z wartościami schematu**: `brak`/`otwierajacy`/`zamykajacy`/`oba` zamiast maski
