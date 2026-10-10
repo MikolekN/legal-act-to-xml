@@ -16,10 +16,11 @@ namespace CorpusValidator;
 ///   2. eId jednostek redakcyjnych,
 ///   3. umiejscowienie artykułów w jednostkach systematyzacyjnych.
 ///
-///   4. datę wejścia w życie i grupę czasową (<c>okres</c>) każdej jednostki z eId.
+///   4. datę wejścia w życie i grupę czasową (<c>okres</c>) każdej jednostki z eId,
+///   5. treść zdań — własny tekst każdego zdania, bez treści odnośników i cytatów, z podziałem różnic
+///      na rodzaje (odstępy, myślniki, cudzysłowy, indeks górny, inne).
 ///
-/// Z porównania wyłączone są rozjazdy spoza struktury jednostek: prefiks aktu w eId
-/// („DU/2024/928__"), atrybuty GUID i treść zdań.
+/// Z porównania wyłączone są prefiks aktu w eId („DU/2024/928__") i atrybuty GUID.
 ///
 /// Użycie:
 ///   dotnet run --project tools/CorpusValidator -- --compare-reference &lt;plik.docx&gt; &lt;referencja.xml&gt; &lt;katalog-wyjsciowy&gt;
@@ -71,10 +72,12 @@ internal static class ReferenceStructureComparison
         }
         ours.Save(Path.Combine(outputDirectory, "ours.xml"));
 
-        var reference = Collect(XDocument.Load(referencePath).Root!);
+        var referenceRoot = XDocument.Load(referencePath).Root!;
+        var reference = Collect(referenceRoot);
         var actual = Collect(ours);
 
-        var report = Report(docxPath, referencePath, reference, actual);
+        var report = Report(docxPath, referencePath, reference, actual)
+            + SentenceReport(Sentences(referenceRoot), Sentences(ours));
         File.WriteAllText(Path.Combine(outputDirectory, "comparison.txt"), report);
         Console.WriteLine(report);
         return 0;
@@ -174,6 +177,127 @@ internal static class ReferenceStructureComparison
         WriteDiff(W, refDated, ourDated, 25);
 
         return sb.ToString();
+    }
+
+    // ============================================================
+    // 5. Treść zdań
+    // ============================================================
+
+    /// <summary>Elementy, których zawartość nie jest własnym tekstem zdania.</summary>
+    private static readonly HashSet<string> ForeignToSentence =
+    [
+        "odnosnik", "odsylacz-do-odnosnika", "cytat-strukt", "cytat-w-tekscie", "cytat-blok",
+    ];
+
+    internal sealed record Sentence(string Key, string Text);
+
+    /// <summary>
+    /// Zdania spoza metadanych i odnośników, w kolejności dokumentu. Klucz: eId najbliższej jednostki,
+    /// elementy między nią a zdaniem, numer zdania i fragmentu — bez niego ten sam tekst w dwóch
+    /// jednostkach zgadzałby się na krzyż.
+    /// </summary>
+    internal static List<Sentence> Sentences(XElement root)
+    {
+        var sentences = new List<Sentence>();
+        foreach (var sentence in root.Descendants().Where(e => e.Name.LocalName == "zdanie"))
+        {
+            var ancestors = sentence.Ancestors().ToList();
+            if (ancestors.Any(a => a.Name.LocalName is "metadane" or "odnosnik"))
+                continue;
+
+            var owner = ancestors.FirstOrDefault(a => a.Attribute("eId") != null);
+            var between = ancestors.TakeWhile(a => a != owner).Select(a => a.Name.LocalName).Reverse();
+            var key = $"{(owner == null ? "" : EId(owner))}/{string.Join("/", between)}" +
+                      $"#{sentence.Attribute("nr")?.Value}.{sentence.Attribute("fragment")?.Value}";
+            sentences.Add(new Sentence(key, OwnText(sentence)));
+        }
+
+        return sentences;
+    }
+
+    // Instrukcje nowelizacyjne w zdaniu (przestrzeń „now") są w obu plikach zapisane inaczej — poza miarą tekstu.
+    private static string OwnText(XElement element) => string.Concat(element.Nodes().Select(node => node switch
+    {
+        XText text => text.Value,
+        XElement child when ForeignToSentence.Contains(child.Name.LocalName) => "",
+        XElement child when child.Name.NamespaceName != element.Name.NamespaceName => "",
+        XElement child => OwnText(child),
+        _ => "",
+    }));
+
+    private static readonly (string Name, Func<string, string> Normalize)[] DifferenceKinds =
+    [
+        ("odstępy", text => Whitespace.Replace(text.Replace('\u00a0', ' '), " ").Trim()),
+        ("myślnik", text => text.Replace('\u2013', '-').Replace('\u2212', '-')),
+        ("cudzysłów", text => Regex.Replace(text, "[\u201e\u201d\u201c\"]", "\"")),
+        ("indeks górny w nawiasie", text => Regex.Replace(text, @"\[([^\[\]]*)\]", "$1")),
+    ];
+
+    private static string SentenceReport(List<Sentence> reference, List<Sentence> actual)
+    {
+        var sb = new StringBuilder();
+        void W(string line = "") => sb.AppendLine(line);
+
+        var ours = actual.GroupBy(s => s.Key).ToDictionary(g => g.Key, g => new Queue<string>(g.Select(s => s.Text)));
+        int exact = 0, missing = 0;
+        var kinds = new Dictionary<string, int>();
+        var samples = new List<string>();
+
+        foreach (var sentence in reference)
+        {
+            if (!ours.TryGetValue(sentence.Key, out var candidates) || candidates.Count == 0)
+            {
+                missing++;
+                continue;
+            }
+
+            var text = candidates.Dequeue();
+            if (text == sentence.Text)
+            {
+                exact++;
+                continue;
+            }
+
+            // Rodzaj różnicy: zestaw normalizacji, po którym teksty się zgadzają.
+            string a = sentence.Text, b = text;
+            var applied = new List<string>();
+            foreach (var (name, normalize) in DifferenceKinds)
+            {
+                var (na, nb) = (normalize(a), normalize(b));
+                if (na == a && nb == b)
+                    continue;
+
+                (a, b) = (na, nb);
+                applied.Add(name);
+                if (a == b)
+                    break;
+            }
+
+            var kind = a == b ? string.Join(" + ", applied) : "inne";
+            kinds[kind] = kinds.GetValueOrDefault(kind) + 1;
+            if (samples.Count(s => s.StartsWith($"[{kind}]")) < 4)
+                samples.Add($"[{kind}] {sentence.Key}\n      ref:   {Truncate(Diverging(sentence.Text, text), 150)}\n      nasze: {Truncate(Diverging(text, sentence.Text), 150)}");
+        }
+
+        W();
+        W($"--- Treść zdań: referencja {reference.Count}, zgodne co do znaku {exact}, różne {kinds.Values.Sum()}, bez odpowiednika {missing} ---");
+        foreach (var (kind, count) in kinds.OrderByDescending(k => k.Value))
+            W($"  {count,5}  {kind}");
+        foreach (var sample in samples)
+            W($"  {sample}");
+
+        return sb.ToString();
+    }
+
+    /// <summary>Fragment tekstu od miejsca pierwszej różnicy, z krótkim kontekstem przed nią.</summary>
+    private static string Diverging(string text, string other)
+    {
+        var index = 0;
+        while (index < text.Length && index < other.Length && text[index] == other[index])
+            index++;
+
+        var start = Math.Max(0, index - 30);
+        return (start > 0 ? "…" : "") + text[start..];
     }
 
     private static int Matching(List<string> a, List<string> b)
