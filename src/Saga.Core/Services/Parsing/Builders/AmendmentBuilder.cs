@@ -175,7 +175,8 @@ namespace Saga.Core.Services.Parsing.Builders
         internal static AmendmentObjectType DetermineObjectType(
             IReadOnlyList<CollectedAmendmentParagraph> paragraphs)
         {
-            foreach (var para in paragraphs)
+            // Tabela nie rozstrzyga rodzaju cytowanej jednostki — rozstrzyga pierwszy akapit.
+            foreach (var para in paragraphs.Where(p => p.Table is null))
             {
                 var kind = ClassifyAmendmentParagraph(para);
                 return kind switch
@@ -198,6 +199,12 @@ namespace Saga.Core.Services.Parsing.Builders
 
         private void ProcessAmendmentParagraph(CollectedAmendmentParagraph para, AmendmentContent content)
         {
+            if (para.Table is { } table)
+            {
+                AttachTable(table, content);
+                return;
+            }
+
             if (TryEnterSystematizingUnit(para.Text, content))
                 return;
 
@@ -218,6 +225,19 @@ namespace Saga.Core.Services.Parsing.Builders
 
             if (overriddenStyleKind is { } styleKind)
                 ReportStyleOverride(LastBuiltEntity(entityKind, content), styleKind, entityKind, para.StyleId);
+        }
+
+        /// <summary>
+        /// Tabela w treści cytowanej: dalsza treść jednostki, za którą stoi (ADR-0029), a gdy cytat nie ma
+        /// jeszcze żadnej jednostki — tabela cytowana wprost.
+        /// </summary>
+        private void AttachTable(ContentTable table, AmendmentContent content)
+        {
+            var unit = (BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? _currentParagraph;
+            if (unit is null)
+                content.Tables.Add(table);
+            else
+                unit.Continuation.Add(new ContentBlock { Table = table });
         }
 
         /// <summary>

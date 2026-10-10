@@ -52,7 +52,8 @@ namespace Saga.Core.Services.Converters
 
             var units = AmendmentTargetPairing.ContentUnits(amendment.Content);
 
-            if (units.Count == 0 && commands.Count > 1)
+            // Tekst cytowany przy kilku celach powtarza się przy każdym; tabela cytowana jest jedna, przy pierwszym.
+            if (units.Count == 0 && amendment.Content.Tables.Count == 0 && commands.Count > 1)
             {
                 foreach (var command in commands)
                 {
@@ -77,6 +78,8 @@ namespace Saga.Core.Services.Converters
                     if (i == 0)
                         AddPlainTextContent(amendment, commands[i], sentence, blocks);
                     AddStructuredContentItems(amendment, commands[i], paired[i], sentence, blocks);
+                    if (i == 0)
+                        AddTables(amendment, commands[i], sentence, blocks);
                     if (i == commands.Count - 1)
                         AddCommonParts(amendment, commands[i], sentence, blocks);
                 }
@@ -224,6 +227,21 @@ namespace Saga.Core.Services.Converters
                     zdanie.Add(citation);
                 blocks.Add(citation);
             }
+        }
+
+        // Tabela cytowana wprost (wiersze dodawane do tabeli aktu zmienianego) to cytat strukturalny z „tabela".
+        private static void AddTables(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks)
+        {
+            var tables = (amendment.Content?.Tables ?? []).Select(TableXmlConverter.ToXml).OfType<XElement>().ToList();
+            if (tables.Count == 0)
+                return;
+
+            var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
+            ApplyAttributes(citation, amendment, command, isStructural: true);
+            citation.Add(tables);
+            if (sentence is XElement zdanie)
+                zdanie.Add(citation);
+            blocks.Add(citation);
         }
 
         private static void AddTextCitation(Amendment amendment, Command command, XNode? sentence, string text, List<XElement> blocks)

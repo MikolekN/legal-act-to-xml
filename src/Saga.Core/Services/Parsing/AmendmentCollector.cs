@@ -13,6 +13,9 @@ namespace Saga.Core.Services.Parsing
         AmendmentStyleInfo? StyleInfo)
     {
         public string Text { get; set; } = Text;
+
+        /// <summary>Tabela stojąca w tym miejscu treści cytowanej; pozycja z tabelą nie niesie tekstu.</summary>
+        public ContentTable? Table { get; init; }
     }
 
     /// <summary>
@@ -111,6 +114,16 @@ namespace Saga.Core.Services.Parsing
                 styleId,
                 styleInfo?.Instrument.ToString() ?? "brak",
                 styleInfo?.TargetKind.ToString() ?? "brak");
+        }
+
+        /// <summary>
+        /// Dodaje tabelę do bufora nowelizacji, w miejscu, w którym stoi w treści cytowanej. Tabela nie bierze
+        /// udziału w bilansie cudzysłowów — jej granice wyznacza ona sama.
+        /// </summary>
+        public void AddTable(ContentTable table)
+        {
+            _paragraphs.Add(new CollectedAmendmentParagraph(string.Empty, null, null) { Table = table });
+            Log.Debug("AmendmentCollector: dodano tabelę #{Index} ({Rows} wierszy)", _paragraphs.Count, table.Rows.Count);
         }
 
         /// <summary>

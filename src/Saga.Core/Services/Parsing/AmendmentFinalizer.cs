@@ -409,6 +409,7 @@ namespace Saga.Core.Services.Parsing
                 && content.Letters.Count == 0
                 && content.Tirets.Count == 0
                 && content.CommonParts.Count == 0
+                && content.Tables.Count == 0
                 && string.IsNullOrEmpty(content.PlainText);
         }
     }

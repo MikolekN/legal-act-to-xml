@@ -59,6 +59,13 @@ namespace Saga.Model
         /// </summary>
         public string? PlainText { get; set; }
 
+        /// <summary>
+        /// Tabele cytowane wprost — treść nowelizacji, która jest tabelą albo jej wierszami („po lp. 2a dodaje
+        /// się lp. 2b w brzmieniu:" i wiersz tabeli). Tabela stojąca w cytowanej jednostce należy do jej dalszej
+        /// treści (<see cref="BaseEntity.Continuation"/>), nie tutaj.
+        /// </summary>
+        public List<ContentTable> Tables { get; set; } = new();
+
         public override string ToString()
         {
             if (!string.IsNullOrEmpty(PlainText))
@@ -72,6 +79,7 @@ namespace Saga.Model
             if (Letters.Any()) counts.Add($"{Letters.Count} lit.");
             if (Tirets.Any()) counts.Add($"{Tirets.Count} tir.");
             if (CommonParts.Any()) counts.Add($"{CommonParts.Count} cz. wspólne");
+            if (Tables.Any()) counts.Add($"{Tables.Count} tab.");
 
             return counts.Any() ? string.Join(", ", counts) : "brak treści";
         }

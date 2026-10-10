@@ -169,23 +169,108 @@ namespace Saga.Core.Tests
             Assert.Equal(3, Single(paragraph, "tbody").Elements().Count());
         }
 
-        [Fact]
-        public void TableStartedInsideAnAmendment_IsNotSplitBetweenTwoPaths()
+        // ============================================================
+        // Tabela w treści nowelizacji
+        // ============================================================
+
+        private static string Styled(string text, string style) =>
+            $"<w:p><w:pPr><w:pStyle w:val=\"{style}\"/></w:pPr><w:r><w:t>{text}</w:t></w:r></w:p>";
+
+        private static LegalDocument ParseBody(string body)
         {
-            // Wiersz tabeli cytowany w nowelizacji: pierwszą komórkę bierze nowelizacja, więc reszta tabeli
-            // nie może stać się osobną, niepełną tabelą przepisu zmieniającego.
-            var body =
-                P("USTAWA") + P("z dnia 14 czerwca 2024 r.") + P("o zmianie ustawy o transporcie drogowym") +
-                P("Art. 1. W ustawie z dnia 6 września 2001 r. o transporcie drogowym (Dz. U. z 2024 r. poz. 1539) " +
-                  "w załączniku nr 1 w tabeli po lp. 2a dodaje się lp. 2b w brzmieniu:") +
-                "<w:tbl>" + Row(Cell("2b."), Cell("Wykonywanie przewozu z naruszeniem obowiązku"), Cell("2000")) + "</w:tbl>" +
-                P("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
-
             using var stream = new MemoryStream(DocxFixtures.WithBodyXml(body));
-            var document = LegalDocumentParser.Parse(stream, "ustawa.docx", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            return LegalDocumentParser.Parse(stream, "ustawa.docx", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+        }
 
-            var units = document.Articles.SelectMany(article => article.Paragraphs).ToList();
-            Assert.DoesNotContain(units.SelectMany(unit => unit.Continuation), block => block.Table is not null);
+        // Wiersz tabeli dodawany nowelizacją: tabela stoi tuż po komendzie, bez cudzysłowów.
+        private static LegalDocument ParseWithQuotedRow() => ParseBody(
+            P("USTAWA") + P("z dnia 14 czerwca 2024 r.") + P("o zmianie ustawy o transporcie drogowym") +
+            P("Art. 1. W ustawie z dnia 6 września 2001 r. o transporcie drogowym (Dz. U. z 2024 r. poz. 1539) " +
+              "w załączniku nr 1 wprowadza się następujące zmiany:") +
+            P("1) w tabeli po lp. 2a dodaje się lp. 2b w brzmieniu:") +
+            "<w:tbl>" + Row(Cell("2b."), Cell("Wykonywanie przewozu z naruszeniem obowiązku"), Cell("2000")) + "</w:tbl>" +
+            P("2) uchyla się lp. 7.") +
+            P("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."));
+
+        [Fact]
+        public void TableAfterACommand_IsTheQuotedContentOfTheAmendment()
+        {
+            var document = ParseWithQuotedRow();
+            var points = document.Articles.First().Paragraphs.Single().Points;
+
+            // Tabela jest całą treścią cytowaną: zamyka ją jej koniec, więc „2)" jest już następnym punktem aktu.
+            Assert.Equal(new[] { "art_1__pkt_1", "art_1__pkt_2" }, points.Select(p => p.Id));
+
+            var content = points[0].Amendment!.Content!;
+            var table = Assert.Single(content.Tables);
+            Assert.Equal(
+                new[] { "2b.", "Wykonywanie przewozu z naruszeniem obowiązku", "2000" },
+                Assert.Single(table.Rows).Cells.Select(cell => cell.Paragraphs.Single()));
+
+            // Komórki nie stały się ani jednostkami cytatu, ani tekstem, ani dalszą treścią przepisu zmieniającego.
+            Assert.Empty(content.Paragraphs);
+            Assert.Null(content.PlainText);
+            Assert.Empty(points[0].Continuation);
+        }
+
+        [Fact]
+        public void QuotedTable_IsExportedInsideAStructuralCitation()
+        {
+            var xml = LegalDocumentConverter.Convert(ParseWithQuotedRow());
+
+            var citation = Single(xml, "cytat-strukt");
+            Assert.Equal(new[] { "tabela" }, ChildNames(citation));
+            Assert.Equal("brak", citation.Attribute("cudzyslowy")?.Value);
+            Assert.Equal("zdanie", citation.Parent!.Name.LocalName);
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
+        }
+
+        [Fact]
+        public void QuotedTable_OfACommandWithSeveralTargets_IsExportedOnce()
+        {
+            // „ust. 26 i 27 otrzymują brzmienie:" i tabela: wierszy nie da się rozdać między cele, więc tabela
+            // stoi w jednym cytacie — nie może zniknąć.
+            var document = ParseBody(
+                P("USTAWA") + P("z dnia 14 czerwca 2024 r.") + P("o zmianie ustawy o opłacie skarbowej") +
+                P("Art. 1. W ustawie z dnia 16 listopada 2006 r. o opłacie skarbowej (Dz. U. z 2025 r. poz. 1154) " +
+                  "w załączniku ust. 26 i 27 otrzymują brzmienie:") +
+                "<w:tbl>" + Row(Cell("26."), Cell("Nadanie obywatelstwa"), Cell("277 zł")) +
+                            Row(Cell("27."), Cell("Przywrócenie obywatelstwa"), Cell("1669 zł")) + "</w:tbl>" +
+                P("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."));
+
+            var xml = LegalDocumentConverter.Convert(document);
+
+            var citation = Single(xml, "cytat-strukt");
+            Assert.Equal(2, Single(citation, "tbody").Elements().Count());
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
+        }
+
+        [Fact]
+        public void TableInsideQuotedUnits_ContinuesTheQuotedUnit()
+        {
+            // Tabela w środku cytowanego artykułu należy do jednostki, za którą stoi; cytat trwa dalej.
+            var document = ParseBody(
+                P("USTAWA") + P("z dnia 14 czerwca 2024 r.") + P("o zmianie ustawy o dochodach jednostek samorządu") +
+                Styled("Art. 1. W ustawie z dnia 1 października 2024 r. o dochodach jednostek samorządu terytorialnego " +
+                       "(Dz. U. poz. 1572) po art. 78 dodaje się art. 78a w brzmieniu:", "ARTartustawynprozporzdzenia") +
+                Styled("„Art. 78a. 1. W celu obliczenia przeliczeniowej liczby mieszkańców przyjmuje się:", "ZARTzmartartykuempunktem") +
+                "<w:tbl>" + Row(Cell("gminy"), Cell("administracja publiczna"), Cell("0,25")) + "</w:tbl>" +
+                Styled("2. Wartości determinant ustala się na dzień 31 maja 2025 r.”.", "ZUSTzmustartykuempunktem") +
+                Styled("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", "ARTartustawynprozporzdzenia"));
+
+            var content = document.Articles.First().Paragraphs.Single().Amendment!.Content!;
+            var quoted = Assert.Single(content.Articles);
+
+            Assert.Empty(content.Tables);
+            Assert.Equal(new[] { "art_78a__ust_1", "art_78a__ust_2" }, quoted.Paragraphs.Select(p => p.Id));
+            Assert.NotNull(Assert.Single(quoted.Paragraphs[0].Continuation).Table);
+            Assert.Equal(new[] { "art_1", "art_2" }, document.Articles.Select(a => a.Id));
+        }
+
+        [SchemaPlFact]
+        public void AmendmentWithAQuotedTable_IsSchemaValid_InTheActBody()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(ParseWithQuotedRow()).Elements().First()));
         }
 
         [SchemaPlFact]

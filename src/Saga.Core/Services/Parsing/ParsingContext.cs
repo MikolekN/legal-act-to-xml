@@ -62,10 +62,10 @@ namespace Saga.Core.Services.Parsing
         public List<DocumentBlock> TableBlocks { get; } = new();
 
         /// <summary>
-        /// Numer tabeli zaczętej w treści nowelizacji. Taka tabela idzie drogą nowelizacji do ostatniej komórki,
-        /// choćby nowelizacja po drodze się zamknęła — tabeli nie dzieli się między dwie drogi.
+        /// Czy zbierana tabela zaczęła się w treści nowelizacji (po komendzie albo w cytacie). Tabela należy
+        /// w całości tam, gdzie się zaczęła — nie dzieli się jej między przepis i cytat.
         /// </summary>
-        public int? AmendmentTable { get; set; }
+        public bool TableInAmendment { get; set; }
 
         /// <summary>Liczba jednostek nazwanych bez numeru danego rodzaju — źródło tymczasowego eId (TMP1, TMP2…).</summary>
         public Dictionary<ParagraphKind, int> NamedUnitCounts { get; } = new();

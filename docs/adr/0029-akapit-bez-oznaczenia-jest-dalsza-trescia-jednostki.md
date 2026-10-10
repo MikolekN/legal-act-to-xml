@@ -28,8 +28,9 @@ dalsza treść (`BaseEntity.Continuation`), w kolejności z aktu.**
   ustęp) i wychodzi jako `fragment`.
 - Bloki tabeli stojącej w treści przepisu omijają rozpoznawanie jednostek: są zbierane do końca tabeli
   i w całości stają się tabelą w dalszej treści tej jednostki (`tabela`).
-- Tabela należy w całości tam, gdzie się zaczęła. Zaczęta w treści nowelizacji (po komendzie, w cytacie)
-  idzie drogą nowelizacji do ostatniej komórki.
+- Tabela należy w całości tam, gdzie się zaczęła. Zaczęta w treści nowelizacji jest treścią cytowaną:
+  tuż po komendzie („…dodaje się lp. 2b w brzmieniu:") jest całym cytatem i zamyka ją jej koniec — takie
+  tabele nie mają cudzysłowów; w środku cytowanych jednostek należy do jednostki, za którą stoi.
 - Wiersz strefy tytułowej innego aktu („Załącznik do obwieszczenia…", „USTAWA", „z dnia …") nie jest
   dalszą treścią ostatniego przepisu — zostaje pominięty jak dotąd.
 
@@ -54,7 +55,8 @@ dalsza treść (`BaseEntity.Continuation`), w kolejności z aktu.**
 - Akapit **w stylu jednostki**, ale bez oznaczenia, nadal buduje się jako jednostka bez oznaczenia
   ([ADR-0024](0024-jednostka-bez-oznaczenia-nie-ma-eid.md)) — przeniesienie go do dalszej treści to osobny
   krok ([backlog](../backlog.md)).
-- Tabela w treści nowelizacji nie jest jeszcze tabelą: kolektor nowelizacji zbiera akapity.
+- Tabela cytowana wprost wychodzi w jednym cytacie strukturalnym, także gdy komenda ma kilka celów
+  („ust. 26 i 27 otrzymują brzmienie:") — wierszy nie da się rozdać między cele.
 - Podpis w formie, której `ActSignatureParser` nie czyta („Marszałek Sejmu: wz. …"), staje się dalszą
   treścią ostatniego przepisu zamiast zniknąć.
 
@@ -62,4 +64,4 @@ dalsza treść (`BaseEntity.Continuation`), w kolejności z aktu.**
 
 - `ArchitectureDecisionTests.Adr0029_UndesignatedParagraphAndTable_ContinueTheirUnit`.
 - `UnitContinuationTests` — najgłębsza jednostka, kolejność w eksporcie, strefa tytułowa innego aktu,
-  tabela w przepisie i w nowelizacji, zgodność treści aktu ze schematem.
+  tabela w przepisie, tabela po komendzie i w środku cytowanych jednostek, zgodność treści aktu ze schematem.

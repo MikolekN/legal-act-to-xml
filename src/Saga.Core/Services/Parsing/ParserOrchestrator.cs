@@ -58,12 +58,17 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
-            // Tabela w treści przepisu nie składa się z jednostek: jej komórki nie przechodzą przez rozpoznawanie,
-            // tylko w całości stają się dalszą treścią jednostki, w której tabela stoi.
-            if (IsTableOfTheAct(block, context))
+            // Tabela nie składa się z jednostek: jej komórki nie przechodzą przez rozpoznawanie, tylko w całości
+            // stają się dalszą treścią jednostki, w której tabela stoi, albo treścią cytowaną nowelizacji.
+            if (block.TableCell is { } cell && context.CurrentArticle != null)
             {
-                if (context.TableBlocks.Count > 0 && context.TableBlocks[0].TableCell!.Table != block.TableCell!.Table)
+                if (context.TableBlocks.Count > 0 && context.TableBlocks[0].TableCell!.Table != cell.Table)
                     FlushTable(context);
+
+                // Tabela należy w całości tam, gdzie się zaczęła.
+                if (context.TableBlocks.Count == 0)
+                    context.TableInAmendment = context.InsideAmendment || context.AmendmentTriggerDetected
+                        || context.AmendmentCollector.IsCollecting;
 
                 context.TableBlocks.Add(block);
                 RegisterFootnotes(block, context);
@@ -128,24 +133,10 @@ namespace Saga.Core.Services.Parsing
             && AnnexBuilder.AttachedTo.IsMatch(text);
 
         /// <summary>
-        /// Czy blok należy do tabeli stojącej w treści przepisu. Tabela należy w całości tam, gdzie się zaczęła:
-        /// zaczęta w treści nowelizacji (po komendzie, w cytacie) zostaje na razie przy dotychczasowej drodze —
-        /// kolektor nowelizacji zbiera akapity, nie tabele.
+        /// Zamyka zbieraną tabelę: w treści przepisu staje się dalszą treścią jednostki, w której stoi,
+        /// a w treści nowelizacji — treścią cytowaną.
         /// </summary>
-        private static bool IsTableOfTheAct(DocumentBlock block, ParsingContext context)
-        {
-            if (block.TableCell is not { } cell || context.CurrentArticle == null)
-                return false;
-
-            var continuesCollected = context.TableBlocks.Count > 0 && context.TableBlocks[0].TableCell!.Table == cell.Table;
-            var inAmendment = context.InsideAmendment || context.AmendmentTriggerDetected || context.AmendmentCollector.IsCollecting;
-            if (!continuesCollected && inAmendment)
-                context.AmendmentTable = cell.Table;
-
-            return cell.Table != context.AmendmentTable;
-        }
-
-        private static void FlushTable(ParsingContext context)
+        private void FlushTable(ParsingContext context)
         {
             if (context.TableBlocks.Count == 0)
                 return;
@@ -153,7 +144,12 @@ namespace Saga.Core.Services.Parsing
             var table = ContentTables.FromBlocks(context.TableBlocks);
             context.TableBlocks.Clear();
 
-            if (table.Rows.Any(row => row.Cells.Any(cell => cell.Paragraphs.Count > 0)))
+            if (!table.Rows.Any(row => row.Cells.Any(cell => cell.Paragraphs.Count > 0)))
+                return;
+
+            if (context.TableInAmendment)
+                _amendmentManager.CollectTable(context, table);
+            else
                 StructureProcessor.DeepestUnit(context)?.Continuation.Add(new Saga.Model.ContentBlock { Table = table });
         }
 

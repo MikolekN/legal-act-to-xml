@@ -135,6 +135,37 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Zbiera tabelę stojącą w treści nowelizacji. Tabela tuż po komendzie („…w brzmieniu:") jest całą
+        /// treścią cytowaną: nie ma cudzysłowu, który by ją zamknął, więc nowelizację zamyka koniec tabeli.
+        /// Tabela w środku treści cytowanej należy do jednostki, za którą stoi — zbieranie trwa.
+        /// </summary>
+        public void CollectTable(ParsingContext context, ContentTable table)
+        {
+            var collector = context.AmendmentCollector;
+            var opensQuotedContent = collector.Count == 0;
+
+            if (!collector.IsCollecting)
+            {
+                var owner = context.AmendmentOwner ?? GetOwner(context);
+                if (owner != null)
+                    collector.Begin(owner, context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid));
+            }
+
+            collector.AddTable(table);
+            context.AmendmentTriggerDetected = false;
+
+            if (opensQuotedContent)
+            {
+                Flush(context);
+                context.InsideAmendment = false;
+            }
+            else
+            {
+                context.InsideAmendment = true;
+            }
+        }
+
+        /// <summary>
         /// Buduje nowelizację z zebranych akapitów i deleguje finalizację
         /// do AmendmentFinalizer (Faza 3). Wywołuje się po zamknięciu nowelizacji
         /// (powrót do stylu ustawy matki) lub na końcu dokumentu.

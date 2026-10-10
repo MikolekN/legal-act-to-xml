@@ -316,6 +316,8 @@ namespace Saga.Core.Services.Converters
                 el.Add(SerializeTiret(tiret));
             foreach (var commonPart in content.CommonParts)
                 el.Add(SerializeCommonPart(commonPart));
+            foreach (var table in content.Tables)
+                el.Add(SerializeContentBlock(new ContentBlock { Table = table }));
 
             return el;
         }

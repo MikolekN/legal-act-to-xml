@@ -192,6 +192,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   rozpoznawanie jednostek („1." w kolumnie nie jest już ustępem). **Zmienia wyjście 159 dokumentów**
   (1156 fragmentów, 22 tabele); zgodność ze schematem bez zmian. Tabela w treści nowelizacji idzie
   jeszcze dotychczasową drogą.
+- **Tabela w treści nowelizacji**: wiersze tabeli cytowane po komendzie („po lp. 2a dodaje się lp. 2b
+  w brzmieniu:") są treścią cytowaną (`AmendmentContent.Tables`) i wychodzą jako `cytat-strukt` z `tabela`;
+  tabela w środku cytowanego artykułu należy do jednostki, za którą stoi. Wcześniej pierwsza kolumna stawała
+  się jednostkami cytatu albo tekstem, a reszta ginęła lub trafiała do następnego przepisu (16 tabel
+  w 9 ustawach korpusu).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
