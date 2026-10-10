@@ -67,22 +67,19 @@ namespace Saga.Core.Services.Converters
             element.Add(annex.AttachedTo.Select(line => new XElement("attachedTo", line)));
 
             foreach (var block in annex.Content)
-            {
-                if (block.Table is { } table)
-                    element.Add(new XElement("table", table.Rows.Select(row => new XElement("row",
-                        row.IsHeader ? new XAttribute("header", true) : null,
-                        row.Cells.Select(cell => new XElement("cell",
-                            cell.ColumnSpan > 1 ? new XAttribute("columnSpan", cell.ColumnSpan) : null,
-                            cell.RowSpan > 1 ? new XAttribute("rowSpan", cell.RowSpan) : null,
-                            cell.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph))))))));
-                else if (block.Unit is { } unit)
-                    element.Add(SerializeParagraph(unit));
-                else
-                    element.Add(new XElement("paragraph", block.Text));
-            }
+                element.Add(block.Unit is { } unit ? SerializeParagraph(unit) : SerializeContentBlock(block));
 
             return element;
         }
+
+        private static XElement SerializeContentBlock(ContentBlock block) => block.Table is { } table
+            ? new XElement("table", table.Rows.Select(row => new XElement("row",
+                row.IsHeader ? new XAttribute("header", true) : null,
+                row.Cells.Select(cell => new XElement("cell",
+                    cell.ColumnSpan > 1 ? new XAttribute("columnSpan", cell.ColumnSpan) : null,
+                    cell.RowSpan > 1 ? new XAttribute("rowSpan", cell.RowSpan) : null,
+                    cell.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph)))))))
+            : new XElement("paragraph", block.Text);
 
         private static XElement SerializePart(Part part)
         {
@@ -363,6 +360,9 @@ namespace Saga.Core.Services.Converters
         {
             if (!string.IsNullOrEmpty(entity.ContentText))
                 el.Add(new XElement("content", entity.ContentText));
+
+            if (entity.Continuation.Count > 0)
+                el.Add(new XElement("continuation", entity.Continuation.Select(SerializeContentBlock)));
 
             foreach (var message in entity.ValidationMessages)
             {

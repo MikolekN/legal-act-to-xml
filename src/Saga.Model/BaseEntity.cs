@@ -87,6 +87,12 @@ namespace Saga.Model
         public List<ValidationMessage> ValidationMessages { get; set; } = new();
 
         /// <summary>
+        /// Dalsza treść akapitu jednostki, w kolejności z aktu: akapity bez własnego oznaczenia i tabele stojące
+        /// za jej zdaniami, a przed jednostkami podrzędnymi (schemat: <c>kontynuacja-akapitu</c>).
+        /// </summary>
+        public List<ContentBlock> Continuation { get; set; } = new();
+
+        /// <summary>
         /// Adres w akcie zmienianym, pod którym stoi jednostka cytowana w nowelizacji — początek jej eId
         /// („art_68__ust_1" dla punktu dodawanego w art. 68 ust. 1). Pusty poza treścią nowelizacji.
         /// </summary>

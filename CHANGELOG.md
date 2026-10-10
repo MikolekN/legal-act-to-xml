@@ -185,6 +185,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   to `nie-ztp-ustep`. Treść mieszana i załącznik bez numeru zostają akapitami. Przykład DU/2026/252 zgadza się
   we wszystkich 2280 jednostkach. **Pełna walidacja 9 takich dokumentów zgłasza teraz ograniczenie `AktGUID`**
   — tak samo jak przykład autorów schematu (dowolna treść `segment-zalacznika`); szczegóły w ADR.
+- **Dalsza treść jednostki** ([ADR-0029](docs/adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)):
+  akapit bez oznaczenia stojący w przepisie (legenda wzoru, treść oświadczenia) nie jest już pomijany — należy
+  do jednostki, za którą stoi (`BaseEntity.Continuation`), i wychodzi jako `fragment` tuż za jej `p`. Tabela
+  w treści przepisu wychodzi jako `tabela` w tym samym miejscu, a jej komórki nie przechodzą przez
+  rozpoznawanie jednostek („1." w kolumnie nie jest już ustępem). **Zmienia wyjście 159 dokumentów**
+  (1156 fragmentów, 22 tabele); zgodność ze schematem bez zmian. Tabela w treści nowelizacji idzie
+  jeszcze dotychczasową drogą.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

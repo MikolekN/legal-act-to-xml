@@ -58,6 +58,20 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
+            // Tabela w treści przepisu nie składa się z jednostek: jej komórki nie przechodzą przez rozpoznawanie,
+            // tylko w całości stają się dalszą treścią jednostki, w której tabela stoi.
+            if (IsTableOfTheAct(block, context))
+            {
+                if (context.TableBlocks.Count > 0 && context.TableBlocks[0].TableCell!.Table != block.TableCell!.Table)
+                    FlushTable(context);
+
+                context.TableBlocks.Add(block);
+                RegisterFootnotes(block, context);
+                return;
+            }
+
+            FlushTable(context);
+
             if (block.IsEmpty)
                 return;
 
@@ -113,6 +127,36 @@ namespace Saga.Core.Services.Parsing
             && !context.InsideAmendment && !context.AmendmentCollector.IsCollecting
             && AnnexBuilder.AttachedTo.IsMatch(text);
 
+        /// <summary>
+        /// Czy blok należy do tabeli stojącej w treści przepisu. Tabela należy w całości tam, gdzie się zaczęła:
+        /// zaczęta w treści nowelizacji (po komendzie, w cytacie) zostaje na razie przy dotychczasowej drodze —
+        /// kolektor nowelizacji zbiera akapity, nie tabele.
+        /// </summary>
+        private static bool IsTableOfTheAct(DocumentBlock block, ParsingContext context)
+        {
+            if (block.TableCell is not { } cell || context.CurrentArticle == null)
+                return false;
+
+            var continuesCollected = context.TableBlocks.Count > 0 && context.TableBlocks[0].TableCell!.Table == cell.Table;
+            var inAmendment = context.InsideAmendment || context.AmendmentTriggerDetected || context.AmendmentCollector.IsCollecting;
+            if (!continuesCollected && inAmendment)
+                context.AmendmentTable = cell.Table;
+
+            return cell.Table != context.AmendmentTable;
+        }
+
+        private static void FlushTable(ParsingContext context)
+        {
+            if (context.TableBlocks.Count == 0)
+                return;
+
+            var table = ContentTables.FromBlocks(context.TableBlocks);
+            context.TableBlocks.Clear();
+
+            if (table.Rows.Any(row => row.Cells.Any(cell => cell.Paragraphs.Count > 0)))
+                StructureProcessor.DeepestUnit(context)?.Continuation.Add(new Saga.Model.ContentBlock { Table = table });
+        }
+
         private static void CollectAnnexBlock(DocumentBlock block, ParsingContext context)
         {
             context.AnnexBlocks.Add(block);
@@ -132,6 +176,8 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public void Finalize(ParsingContext context)
         {
+            FlushTable(context);
+
             if (context.InsideAmendment || context.AmendmentCollector.IsCollecting)
             {
                 _amendmentManager.Flush(context);

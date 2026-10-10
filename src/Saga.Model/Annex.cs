@@ -40,12 +40,8 @@ namespace Saga.Model
     /// <summary>
     /// Element treści załącznika: akapit tekstu, tabela albo jednostka redakcyjna — zawsze jedno z trojga.
     /// </summary>
-    public class AnnexBlock
+    public class AnnexBlock : ContentBlock
     {
-        public string? Text { get; set; }
-
-        public ContentTable? Table { get; set; }
-
         /// <summary>
         /// Jednostka najwyższego poziomu wyliczenia w załączniku („I. …" z punktami i literami pod sobą).
         /// Jej adres zaczyna się od adresu załącznika (<c>zal_4__ust_I</c>).

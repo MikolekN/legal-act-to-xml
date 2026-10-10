@@ -55,6 +55,18 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Bloki od nagłówka załącznika do końca dokumentu; załączniki składa z nich <c>AnnexBuilder</c>.</summary>
         public List<DocumentBlock> AnnexBlocks { get; } = new();
 
+        /// <summary>
+        /// Bloki tabeli stojącej w treści aktu, zbierane do jej końca; tabela trafia wtedy do dalszej treści
+        /// jednostki, w której stoi.
+        /// </summary>
+        public List<DocumentBlock> TableBlocks { get; } = new();
+
+        /// <summary>
+        /// Numer tabeli zaczętej w treści nowelizacji. Taka tabela idzie drogą nowelizacji do ostatniej komórki,
+        /// choćby nowelizacja po drodze się zamknęła — tabeli nie dzieli się między dwie drogi.
+        /// </summary>
+        public int? AmendmentTable { get; set; }
+
         /// <summary>Liczba jednostek nazwanych bez numeru danego rodzaju — źródło tymczasowego eId (TMP1, TMP2…).</summary>
         public Dictionary<ParagraphKind, int> NamedUnitCounts { get; } = new();
 

@@ -2,6 +2,7 @@ using System.Text.RegularExpressions;
 using Saga.Core.Helpers;
 using Saga.Core.Ingest;
 using Saga.Core.Services.Classify;
+using Saga.Core.Services.Classify.Document;
 using Saga.Core.Services.Parsing.Builders;
 using Saga.Core.Services.UnitReferences;
 using Saga.Model;
@@ -487,20 +488,54 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
-            var deepest = (BaseEntity?)context.CurrentLetter
-                ?? (BaseEntity?)context.CurrentPoint
-                ?? (BaseEntity?)context.CurrentParagraph
-                ?? (BaseEntity?)context.CurrentArticle;
+            var deepest = DeepestUnit(context);
+            var preview = text.Length > 80 ? text[..80] + "…" : text;
+
+            // Akapit bez oznaczenia należy do jednostki, za którą stoi: zostaje jej dalszą treścią, nie ginie.
+            if (deepest is not null && !IsActHeadingLine(text, sourceStyleId))
+            {
+                deepest.Continuation.Add(new ContentBlock { Text = text });
+                deepest.ValidationMessages.Add(new ValidationMessage(
+                    ValidationLevel.Info,
+                    $"Akapit bez oznaczenia dołączony jako dalsza treść jednostki (styl: '{sourceStyleId ?? "brak"}'). Tekst: '{preview}'"));
+                return;
+            }
 
             deepest?.ValidationMessages.Add(new ValidationMessage(
                 ValidationLevel.Warning,
                 $"{SkippedParagraphMessage} (styl: '{sourceStyleId ?? "brak"}')." +
-                $" Tekst: '{(text.Length > 80 ? text[..80] + "…" : text)}'"));
+                $" Tekst: '{preview}'"));
 
             Log.Warning("Akapit Unknown pominięty — brak dopasowania do wzorca. " +
                 "Styl: {StyleId}, Tekst: {Text}",
-                sourceStyleId, text.Length > 80 ? text[..80] + "…" : text);
+                sourceStyleId, preview);
         }
+
+        /// <summary>Jednostka, w której treści stoi bieżące miejsce dokumentu — najgłębsza otwarta.</summary>
+        internal static BaseEntity? DeepestUnit(ParsingContext context) =>
+            (BaseEntity?)context.CurrentTiret
+            ?? (BaseEntity?)context.CurrentLetter
+            ?? (BaseEntity?)context.CurrentPoint
+            ?? (BaseEntity?)context.CurrentParagraph
+            ?? context.CurrentArticle;
+
+        // Style strefy tytułowej aktu i wskazania załącznika.
+        private static readonly string[] ActHeadingStyles = ["OZNRODZAKTU", "DATAAKTU", "TYTUAKTU", "TEKSTZa"];
+
+        private static readonly Regex AnnouncementAnnexHeader = new(@"^Załącznik\s+do\s+obwieszczenia\b", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Wiersz strefy tytułowej aktu w środku dokumentu: tekst jednolity zaczyna się za przepisami
+        /// obwieszczenia („Załącznik do obwieszczenia…", „USTAWA", „z dnia …", tytuł). To początek innego aktu,
+        /// nie dalsza treść ostatniego przepisu.
+        /// </summary>
+        private static bool IsActHeadingLine(string text, string? styleId) =>
+            (styleId is not null && ActHeadingStyles.Any(prefix => styleId.StartsWith(prefix, StringComparison.Ordinal)))
+            || AnnouncementAnnexHeader.IsMatch(text)
+            || ZtpPatterns.StatuteHeaderPattern.IsMatch(text)
+            || ZtpPatterns.RegulationHeaderPattern.IsMatch(text)
+            || ZtpPatterns.AnnouncementHeaderPattern.IsMatch(text)
+            || ZtpPatterns.ActDateLinePattern.IsMatch(text);
 
         private static ParagraphKind TryInferKindFromText(string text)
         {

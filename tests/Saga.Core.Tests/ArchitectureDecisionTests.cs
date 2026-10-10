@@ -1030,6 +1030,43 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "art_1", "art_2" }, document.Articles.Select(a => a.Id));
         }
 
+        // ============================================================
+        // ADR-0029: akapit bez oznaczenia i tabela są dalszą treścią jednostki
+        // ============================================================
+
+        [Fact]
+        public void Adr0029_UndesignatedParagraphAndTable_ContinueTheirUnit()
+        {
+            static string P(string text) => $"<w:p><w:r><w:t>{text}</w:t></w:r></w:p>";
+            static string Row(params string[] cells) =>
+                $"<w:tr>{string.Concat(cells.Select(cell => $"<w:tc><w:tcPr/>{P(cell)}</w:tc>"))}</w:tr>";
+
+            var body =
+                P("USTAWA") + P("z dnia 14 czerwca 2024 r.") + P("o opłatach") +
+                P("Art. 1. 1. Wysokość opłaty oblicza się według wzoru:") +
+                P("gdzie poszczególne symbole oznaczają:") +
+                P("2. Stawki opłat określa tabela:") +
+                $"<w:tbl>{Row("1.", "Rozpatrzenie wniosku", "1500")}{Row("2.", "Wydanie potwierdzenia", "500")}</w:tbl>" +
+                P("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXml(body));
+            var document = LegalDocumentParser.Parse(stream, "ustawa.docx",
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Ani akapit bez oznaczenia, ani komórki tabeli nie stają się jednostkami i nie giną.
+            var paragraphs = document.Articles.First().Paragraphs;
+            Assert.Equal(new[] { "art_1__ust_1", "art_1__ust_2" }, paragraphs.Select(p => p.Id));
+            Assert.Equal("gdzie poszczególne symbole oznaczają:", Assert.Single(paragraphs[0].Continuation).Text);
+            Assert.Equal(2, Assert.Single(paragraphs[1].Continuation).Table!.Rows.Count);
+
+            // W eksporcie dalsza treść stoi tuż za zdaniami jednostki.
+            var exported = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "ustep")
+                .Select(e => string.Join(",", e.Elements().Select(child => child.Name.LocalName)))
+                .ToList();
+            Assert.Equal(new[] { "nr,p,fragment", "nr,p,tabela" }, exported);
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

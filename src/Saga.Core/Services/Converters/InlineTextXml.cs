@@ -16,6 +16,7 @@ namespace Saga.Core.Services.Converters
             XmlConverterConstants.Contents.Sentence.Element,
             XmlConverterConstants.ActHeading.Subject,
             XmlConverterConstants.Contents.Citation.Text.Content,
+            XmlConverterConstants.Contents.ContinuationFragment,
 
             // Treść załącznika i komórek tabel — tekst bez podziału na zdania.
             XmlConverterConstants.Attachments.AttachedTo,

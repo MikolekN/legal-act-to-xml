@@ -242,6 +242,7 @@ Wspólne cechy wszystkich encji:
 | `ContentText` | `string` | Pełny tekst jednostki |
 | `Parent` | `BaseEntity?` | Referencja do rodzica |
 | `ValidationMessages` | `List<ValidationMessage>` | Diagnostyka parsowania |
+| `Continuation` | `List<ContentBlock>` | Dalsza treść akapitu jednostki: akapity bez oznaczenia i tabele za jej zdaniami — [ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md) |
 | `Id` | `string` (virtual) | Hierarchiczny eId budowany dynamicznie |
 
 ---
@@ -420,6 +421,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`AnnexBuilder`** | Składa załączniki z bloków zebranych za nagłówkiem „Załącznik(i) do ustawy z dnia …" (`ParsingContext.AnnexBlocks`): wskazanie aktu z wierszem „(Dz. U. …)", oznaczenie w osobnym wierszu (ze znacznikiem odnośnika albo dopiskiem „(uchylony)"), tytuł (styl tytułu albo wyśrodkowany pierwszy wiersz), treść. Treści nie rozkłada na jednostki — załącznik nie przechodzi przez klasyfikator akapitów. |
 | **`ContentTables`** | Składa `ContentTable` z bloków jednej tabeli źródłowej według `DocumentBlock.TableCell`; dalszy ciąg komórki scalonej w pionie nie jest osobną komórką |
 | **`AnnexUnits`** | Wyliczenie w treści załącznika jako jednostki redakcyjne: akapity przechodzą przez potok aktu pod artykułem zastępczym (niejawnym, z `AddressAnchor` = adres załącznika), a ustęp z oznaczeniem rzymskim („I.") powstaje tu wprost. Zwraca jednostki tylko wtedy, gdy cała treść jest wyliczeniem i potok niczego nie pominął — [ADR-0028](adr/0028-wyliczenie-w-zalaczniku-buduje-potok-aktu.md) |
+| **Dalsza treść jednostki** (`StructureProcessor.HandleUnknown`, `ParserOrchestrator.FlushTable`) | Akapit, którego potok nie rozpoznał, trafia do `Continuation` najgłębszej otwartej jednostki (`StructureProcessor.DeepestUnit`); bloki tabeli stojącej w treści przepisu omijają klasyfikację, są zbierane w `ParsingContext.TableBlocks` i na końcu tabeli stają się jej `ContentTable`. Tabela zaczęta w treści nowelizacji zostaje przy drodze nowelizacji (`ParsingContext.AmendmentTable`) |
 | **`ValidationReporter`** | Reporter diagnostyczny — statyczne metody do rejestrowania ostrzeżeń o konfliktach styl/treść i brakujących stylach na encjach DTO. |
 
 ### 6.1b Warstwa klasyfikacji akapitów (`Services/Classify/`)
@@ -555,7 +557,8 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `SystematizingUnitXmlConverter` | Jednostki systematyzacyjne zagnieżdżone wg schemaPL; niejawny łańcuch bez jawnego przodka znika (artykuły wprost w akcie), pod jawną jednostką niejawne poziomy wychodzą jako `-n` z `brak-eid` — [ADR-0020](adr/0020-eksport-jednostek-systematyzacyjnych.md) |
 | `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym. Artykuł z paragrafami („§") stojący w oddziale to `artykul-kodeksu`, poza oddziałem `artykul`. Jednostka odbiegająca od ZTP (jedna pozycja wyliczenia, poziom pominięty) wychodzi jako `nie-ztp-*`, a punkt i litera niejawne nie mają elementu ([ADR-0023](adr/0023-poziom-pominiety-jako-jednostka-niejawna.md)) |
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
-| `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń (eId gospodarza z segmentem `czw` — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)), tabele i treść osadzona |
+| `CommonPartXmlConverter` | Części wspólne wyliczeń (eId gospodarza z segmentem `czw` — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)) |
+| `EmbeddedContentXmlConverter` | Dalsza treść jednostki tuż za jej `p`: akapit bez oznaczenia jako `fragment`, tabela jako `tabela` ([ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)) |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku (zakres wyjątku — adresem jednostki cytowanej albo celu komendy w akcie zmienianym); po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
 | `InlineTextXml` | Elementy wewnątrz tekstu powstają w eksporcie, przebiegiem po zbudowanej treści: wskazuje węzły tekstowe, które je przyjmują (`zdanie`, `tytul`, `tekst` oraz tekst załącznika i komórek tabel), i zamienia indeks górny z kanału tekstowego („477[9]") na `sup` |
 | `FootnoteXmlConverter` | Przebieg po zbudowaniu treści: znacznik odnośnika w `zdanie`/`tytul`/`tekst` → `odnosnik` z treścią, kolejne odwołanie → `odsylacz-do-odnosnika` ([ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md)) |
@@ -855,6 +858,7 @@ src/Saga.Model/
 ├── ActSignature.cs                  # Formuła podpisu aktu (organ, osoba)
 ├── Annex.cs                         # Załącznik aktu: wskazanie aktu, oznaczenie, tytuł, treść
 ├── ContentTable.cs                  # Tabela w treści (wiersze, komórki, scalenia)
+├── ContentBlock.cs                  # Element treści bez oznaczenia: akapit albo tabela
 ├── Footnote.cs                      # Odnośnik (przypis): numer i treść
 ├── PublisherType.cs                 # Enum typu publikatora
 ├── LegalActType.cs                  # Enum rodzaju aktu (11 wartości, w tym AmendingStatute/Announcement/Resolution/ExecutiveOrder/LocalLegalAct)
