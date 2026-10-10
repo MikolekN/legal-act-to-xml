@@ -20,6 +20,8 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Strefa tytułowa aktu w eksporcie**: po `metadane` stoją `rodzaj-aktu`, `data` i `tytul` z wierszy aktu
   („USTAWA", „z dnia 14 czerwca 2024 r.", „o ochronie sygnalistów"); model trzyma je osobno
   (`LegalDocument.KindLine`, `DateLine`, `Subject`).
+- **Tytuł zmieniający jako przedmiot aktu** (§ 96 ZTP): „zmieniająca ustawę …" i „zmieniające
+  rozporządzenie …" trafiają do tytułu aktu i elementu `tytul`; wcześniej tytuł kończył się na dacie.
 - **Walidacja numeracji jednostek systematyzacyjnych**: powtórzone oznaczenie, luka, malejąca
   numeracja, oddział poza rozdziałem i jednostka bez tytułu dostają komunikat walidacji.
 

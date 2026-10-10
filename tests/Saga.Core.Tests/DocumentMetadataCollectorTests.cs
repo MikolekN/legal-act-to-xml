@@ -31,6 +31,38 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void Collects_KindDateSubject_AsSeparateLines()
+        {
+            var c = new DocumentMetadataCollector();
+            c.Observe("USTAWA");
+            c.Observe("z dnia 1 marca 2024 r.");
+            c.Observe("o ochronie konkurencji i konsumentów");
+
+            var doc = new LegalDocument();
+            c.ApplyTo(doc);
+
+            Assert.Equal("USTAWA", doc.KindLine);
+            Assert.Equal("z dnia 1 marca 2024 r.", doc.DateLine);
+            Assert.Equal("o ochronie konkurencji i konsumentów", doc.Subject);
+        }
+
+        [Fact]
+        public void AmendingTitle_IsTheSubject()
+        {
+            // Ustawa 316639_2817102 (§ 96 ZTP): tytuł „zmieniająca ustawę …" zamiast „o zmianie ustawy …".
+            const string subject = "zmieniająca ustawę – Prawo wodne oraz ustawę o zmianie ustawy – Prawo wodne oraz niektórych innych ustaw";
+            var c = new DocumentMetadataCollector();
+            c.Observe("Ustawa");
+            c.Observe("z dnia 24 stycznia 2025 r.");
+            Assert.True(c.Observe(subject));
+
+            var doc = new LegalDocument();
+            c.ApplyTo(doc);
+
+            Assert.Equal(subject, doc.Subject);
+        }
+
+        [Fact]
         public void ProseBeforeKindHeader_IsIgnored()
         {
             var c = new DocumentMetadataCollector();

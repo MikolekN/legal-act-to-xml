@@ -76,14 +76,16 @@ namespace Saga.Core.Services.Classify.Document
             @"^z\s+dnia\s+(?<day>\d{1,2})\s+(?<month>" + PolishDates.MonthAlternation + @")\s+(?<year>\d{4})\s*r\.(?:\s*\[\d+\)?\])?$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        /// <summary>§ 18-19 / § 120 ust. 6: przedmiot aktu.</summary>
+        /// <summary>§ 18-19 / § 120 ust. 6: przedmiot aktu; § 96: także „zmieniająca ustawę o …".</summary>
         internal static readonly Regex ActSubjectPattern = new(
-            @"^(?:o\s+\p{Ll}.+|w\s+sprawie\s+.+|(?:Kodeks|Prawo|Ordynacja)\b.*|Przepisy\s+wprowadzające\b.+)$",
+            @"^(?:o\s+\p{Ll}.+|w\s+sprawie\s+.+|(?:Kodeks|Prawo|Ordynacja)\b.*|Przepisy\s+wprowadzające\b.+" +
+            @"|zmieniając[ae]\s+(?:ustawę|rozporządzenie|uchwałę|zarządzenie)\b.+)$",
             RegexOptions.Compiled);
 
         /// <summary>§ 96: tytuł zmieniający (akt nowelizujący).</summary>
         internal static readonly Regex AmendingTitlePattern = new(
-            @"o\s+zmianie\s+ustaw(?:y|)\b|oraz\s+niektórych\s+innych\s+ustaw|zmieniając[ea]\s+(?:rozporządzenie|uchwałę|zarządzenie)\s+w\s+sprawie",
+            @"o\s+zmianie\s+ustaw(?:y|)\b|oraz\s+niektórych\s+innych\s+ustaw|^zmieniając[ea]\s+ustawę\b" +
+            @"|zmieniając[ea]\s+(?:rozporządzenie|uchwałę|zarządzenie)\s+w\s+sprawie",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
