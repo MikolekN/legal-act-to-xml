@@ -18,14 +18,10 @@ namespace Saga.Model.SystematizingUnits
         /// </summary>
         public DateTime HeadingEffectiveDate { get; set; }
 
-        /// <summary>
-        /// Czy część jest domyślna/ukryta (niejawna w dokumencie).
-        /// </summary>
-        public bool IsImplicit { get; set; } = true;
-
         public Part()
         {
             UnitType = UnitType.Part;
+            IsImplicit = true;
             EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Part);
             DisplayLabel = "cz.";
         }

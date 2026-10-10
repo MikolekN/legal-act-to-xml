@@ -57,6 +57,12 @@ namespace Saga.Model
         /// </summary>
         public EntityNumber? Number { get; set; }
 
+        /// <summary>
+        /// Jednostka niejawna: nie ma oznaczenia w tekście, model wstawia ją dla spójności hierarchii
+        /// (jedyny ustęp artykułu, rozdział aktu bez rozdziałów). Nie wchodzi do eId.
+        /// </summary>
+        public bool IsImplicit { get; set; }
+
         //TODO: ContentText to tekst jednostki redakcyjnej. Tymczasowo jest to string, ale trzeba uwzgędnić:
         // - możliwość występowania elementów osadzonych, jak tabele, grafiki, wzory matematyczne itp.
         // - obecnie konwertujemy wszystko do tekstu płaskiego, ale w przyszłości będzie potrzebny model drzewa,
@@ -106,8 +112,9 @@ namespace Saga.Model
         /// używa separatora "__" zgodnie z założeniem (np. "art_10__ust_2__pkt_3").
         /// eId jednostki redakcyjnej kończy się na artykule — ścieżka jednostek systematyzacyjnych
         /// do niego nie wchodzi (ADR-0017); jednostka systematyzacyjna niesie ścieżkę swoich
-        /// jawnych przodków systematyzacyjnych. Jednostka cytowana w nowelizacji zaczyna się od adresu
-        /// celu w akcie zmienianym (<see cref="AddressAnchor"/> korzenia cytatu).
+        /// jawnych przodków systematyzacyjnych. Jednostki niejawne (<see cref="IsImplicit"/>) są pomijane.
+        /// Jednostka cytowana w nowelizacji zaczyna się od adresu celu w akcie zmienianym
+        /// (<see cref="AddressAnchor"/> korzenia cytatu).
         /// </summary>
         public virtual string Id
         {
@@ -120,19 +127,14 @@ namespace Saga.Model
                 while (current != null)
                 {
                     root = current;
-                    if (current is ISystematizingUnit systematizingUnit)
-                    {
-                        if (isEditorial)
-                            break;
+                    if (current is ISystematizingUnit && isEditorial)
+                        break;
 
-                        if (systematizingUnit.IsImplicit)
-                        {
-                            current = current.Parent;
-                            continue;
-                        }
+                    if (!current.IsImplicit)
+                    {
+                        var seg = current.GetLocalIdSegment();
+                        if (!string.IsNullOrEmpty(seg)) parts.Add(seg);
                     }
-                    var seg = current.GetLocalIdSegment();
-                    if (!string.IsNullOrEmpty(seg)) parts.Add(seg);
                     current = current.Parent;
                 }
                 if (current == null && root.AddressAnchor.Length > 0)

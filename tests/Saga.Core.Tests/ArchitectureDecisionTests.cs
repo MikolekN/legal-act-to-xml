@@ -811,6 +811,38 @@ namespace Saga.Core.Tests
             Assert.All(events, e => Assert.Equal("art_3", e.Attribute("dowod")?.Value));
         }
 
+        // ============================================================
+        // ADR-0023: poziom pominięty w akcie to jednostka niejawna
+        // ============================================================
+
+        [Fact]
+        public void Adr0023_SkippedLevel_IsAnImplicitUnit_AbsentFromEIdAndExport()
+        {
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Art. 1. 1. Ustawa określa:",
+                "a) zasady ochrony,",
+                "b) środki ochrony.",
+                "2. Przepisy stosuje się do pracodawców.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            // Model: litery stoją w punkcie, ale punktu nie ma w tekście — jest niejawny i bez oznaczenia.
+            var paragraph = document.Articles.First().Paragraphs[0];
+            var point = Assert.Single(paragraph.Points);
+            Assert.True(point.IsImplicit);
+            Assert.Null(point.Number);
+
+            // eId: adres litery jest powołaniem z innego przepisu („art. 1 ust. 1 lit. a").
+            Assert.Equal(new[] { "art_1__ust_1__lit_a", "art_1__ust_1__lit_b" }, point.Letters.Select(l => l.Id));
+
+            // Eksport: punkt nie ma elementu, litery stoją wprost w ustępie spoza ZTP.
+            var exported = LegalDocumentConverter.Convert(document).Descendants()
+                .Single(e => e.Attribute("eId")?.Value == "art_1__ust_1");
+            Assert.Equal("nie-ztp-ustep", exported.Name.LocalName);
+            Assert.Equal(new[] { "nr", "p", "nie-ztp-litera", "nie-ztp-litera" }, exported.Elements().Select(e => e.Name.LocalName));
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

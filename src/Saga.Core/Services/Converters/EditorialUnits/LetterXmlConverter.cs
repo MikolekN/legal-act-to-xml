@@ -10,6 +10,24 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class LetterXmlConverter
     {
+        /// <summary>
+        /// Dopisuje literę do jednostki nadrzędnej. Litera niejawna (poziom pominięty w akcie) nie ma elementu:
+        /// jej tirety i część wspólna stają wprost w jednostce nad nią, jako jednostki spoza ZTP.
+        /// </summary>
+        internal static void AppendTo(XElement parentElement, Letter letter, bool isParentPathological, SentenceContext? previousSentenceContext)
+        {
+            if (!letter.IsImplicit)
+            {
+                parentElement.Add(ToXml(letter, isParentPathological, previousSentenceContext));
+                return;
+            }
+
+            foreach (var tiret in letter.Tirets)
+                parentElement.Add(TiretXmlConverter.ToXml(tiret, isParentPathological: true, 1, previousSentenceContext));
+
+            HandleCommonPart(letter, parentElement, previousSentenceContext);
+        }
+
         internal static XElement ToXml(Letter letter, bool isParentPathological = false, SentenceContext? previousSentenceContext = null)
         {
             var isPathological = IsPathological(letter, isParentPathological);

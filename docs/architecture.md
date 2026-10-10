@@ -536,7 +536,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | Konwerter | Rola |
 |---|---|
 | `SystematizingUnitXmlConverter` | Jednostki systematyzacyjne zagnieżdżone wg schemaPL; niejawny łańcuch bez jawnego przodka znika (artykuły wprost w akcie), pod jawną jednostką niejawne poziomy wychodzą jako `-n` z `brak-eid` — [ADR-0020](adr/0020-eksport-jednostek-systematyzacyjnych.md) |
-| `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym |
+| `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym. Jednostka odbiegająca od ZTP (jedna pozycja wyliczenia, poziom pominięty) wychodzi jako `nie-ztp-*`, a punkt i litera niejawne nie mają elementu ([ADR-0023](adr/0023-poziom-pominiety-jako-jednostka-niejawna.md)) |
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
 | `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń, tabele i treść osadzona |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
@@ -738,15 +738,23 @@ Rejestruje ostrzeżenia klasyfikacyjne:
 
 ### 10.2 Encje implicit
 
-Encja implicit (niejawna) to jednostka, która fizycznie nie występuje w tekście, ale jest wymagana przez hierarchię:
-- Artykuł zawsze ma ≥1 ustęp → jedyny ustęp jest `IsImplicit = true`
-- Litera wymaga punktu → punkt może być `IsImplicit = true`
-- Tiret wymaga litery → litera może być `IsImplicit = true`
+Encja implicit (niejawna) to jednostka, która fizycznie nie występuje w tekście, ale jest wymagana przez hierarchię.
+Flagę `IsImplicit` niesie `BaseEntity`, więc każdy poziom pyta o nią tak samo:
+- Artykuł zawsze ma ≥1 ustęp → jedyny ustęp jest `IsImplicit = true` (i jako jedyna jednostka niejawna ma treść)
+- Litera wymaga punktu → litery wprost w ustępie stoją w punkcie `IsImplicit = true`
+- Tiret wymaga litery → tirety wprost w ustępie albo punkcie stoją w literze `IsImplicit = true`
+- Jednostki systematyzacyjne nieobecne w tekście (pkt 4.1)
 
 Encje implicit:
-- Są **pomijane** w generowaniu eId
+- Są **pomijane** w generowaniu eId (`art_5__ust_1__lit_a` dla litery wprost w ustępie)
 - Są **pomijane** w walidacji numeracji
 - Są **pomijane** w warstwie prezentacji
+- W eksporcie: jedyny ustęp to `ustep-n`; punkt i litera za pominięty poziom nie mają elementu, a ich
+  dzieci stają w najbliższej jednostce jawnej jako `nie-ztp-*` —
+  [ADR-0023](adr/0023-poziom-pominiety-jako-jednostka-niejawna.md); jednostki systematyzacyjne wg
+  [ADR-0020](adr/0020-eksport-jednostek-systematyzacyjnych.md)
+- Powołanie pomijające poziom („art. 5 ust. 1 lit. a") schodzi przez jednostkę niejawną
+  (`EntryIntoForceTargetResolver`)
 
 ### 10.3 Części wspólne (CommonPart)
 

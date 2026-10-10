@@ -19,14 +19,10 @@ namespace Saga.Model.SystematizingUnits
         /// </summary>
         public DateTime HeadingEffectiveDate { get; set; }
 
-        /// <summary>
-        /// Czy oddział jest domyślny/ukryty (niejawny w dokumencie).
-        /// </summary>
-        public bool IsImplicit { get; set; } = true;
-
         public Subchapter()
         {
             UnitType = UnitType.Subchapter;
+            IsImplicit = true;
             EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Subchapter);
             DisplayLabel = "oddz.";
         }

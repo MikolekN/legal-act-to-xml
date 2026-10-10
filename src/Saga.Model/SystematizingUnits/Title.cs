@@ -18,14 +18,10 @@ namespace Saga.Model.SystematizingUnits
         /// </summary>
         public DateTime HeadingEffectiveDate { get; set; }
 
-        /// <summary>
-        /// Czy tytuł jest domyślny/ukryty (niejawny w dokumencie).
-        /// </summary>
-        public bool IsImplicit { get; set; } = true;
-
         public Title()
         {
             UnitType = UnitType.Title;
+            IsImplicit = true;
             EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Title);
             DisplayLabel = "tyt.";
         }

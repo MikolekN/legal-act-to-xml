@@ -69,6 +69,12 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Indeks górny w tekście akapitu**: odnośnik wstawiony polem (`NOTEREF`) jest jednym znacznikiem (`[8)]`,
   wcześniej `[8][)]`), a odstęp sformatowany jako indeks górny zostaje zwykłym odstępem (`4. W sprawach`
   zamiast `4.[ ]W sprawach`, `art. 4[1] w brzmieniu` zamiast `art. 4[1 ]w[ ]brzmieniu`).
+- **Poziom pominięty w akcie** (litery wprost w ustępie, tirety wprost w ustępie albo punkcie): jednostki
+  pod nim mają eId bez pustego segmentu (`art_5__ust_1__lit_a` zamiast `art_5__ust_1__pkt__lit_a`) i stoją
+  w eksporcie wprost w najbliższej jednostce jawnej (`nie-ztp-litera` w `nie-ztp-ustep`), a nie w pustym
+  `nie-ztp-punkt` z `nr` `UNKNOWN`. Pozycje takiego wyliczenia są dalszymi fragmentami zdania ustępu. Wyjątek
+  wejścia w życie wskazujący „art. 5 ust. 1 lit. a" trafia w tę literę —
+  [ADR-0023](docs/adr/0023-poziom-pominiety-jako-jednostka-niejawna.md).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

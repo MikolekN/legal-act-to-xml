@@ -143,6 +143,8 @@ namespace Saga.Core.Services.Converters
         private static XElement SerializePoint(Point point)
         {
             var el = new XElement("point");
+            if (point.IsImplicit)
+                el.Add(new XAttribute("implicit", true));
             AddEntityCore(el, point);
 
             AddContentAndDiagnostics(el, point);
@@ -159,6 +161,8 @@ namespace Saga.Core.Services.Converters
         private static XElement SerializeLetter(Letter letter)
         {
             var el = new XElement("letter");
+            if (letter.IsImplicit)
+                el.Add(new XAttribute("implicit", true));
             AddEntityCore(el, letter);
 
             AddContentAndDiagnostics(el, letter);

@@ -94,10 +94,10 @@ namespace Saga.Core.Services.EntryIntoForce
             if (IsLeaf(reference, below: UnitDepth.Paragraph))
                 return Terminal(paragraph, reference);
 
-            if (reference.Point is null)
-                return null;   // litera albo tiret bez punktu nie istnieje w hierarchii modelu
-
-            var point = paragraph.Points.FirstOrDefault(p => Matches(p.Number?.Value, reference.Point));
+            // Litera albo tiret bez punktu („ust. 2 lit. a") stoi w punkcie niejawnym.
+            var point = reference.Point is not null
+                ? paragraph.Points.FirstOrDefault(p => Matches(p.Number?.Value, reference.Point))
+                : paragraph.Points.FirstOrDefault(p => p.IsImplicit);
             return point is null ? null : DescendFromPoint(point, reference);
         }
 
@@ -106,10 +106,9 @@ namespace Saga.Core.Services.EntryIntoForce
             if (IsLeaf(reference, below: UnitDepth.Point))
                 return Terminal(point, reference);
 
-            if (reference.Letter is null)
-                return null;
-
-            var letter = point.Letters.FirstOrDefault(l => Matches(l.Number?.Value, reference.Letter));
+            var letter = reference.Letter is not null
+                ? point.Letters.FirstOrDefault(l => Matches(l.Number?.Value, reference.Letter))
+                : point.Letters.FirstOrDefault(l => l.IsImplicit);
             return letter is null ? null : DescendFromLetter(letter, reference);
         }
 

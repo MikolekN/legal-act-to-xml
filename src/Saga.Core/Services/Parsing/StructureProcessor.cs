@@ -144,6 +144,15 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Jednostka, której treść otwiera wyliczenie: punkt i litera wstawione za pominięty poziom nie mają
+        /// treści, więc wprowadzeniem jest zdanie najbliższej jednostki nad nimi (litery wprost w ustępie).
+        /// </summary>
+        private static BaseEntity ExplicitOwner(BaseEntity unit) =>
+            unit is { UnitType: UnitType.Point or UnitType.Letter, IsImplicit: true, Parent: { } parent }
+                ? ExplicitOwner(parent)
+                : unit;
+
+        /// <summary>
         /// Przetwarza akapit: buduje encję domenową na podstawie klasyfikacji,
         /// aktualizuje pozycję strukturalną i wykrywa cele nowelizacji.
         /// Zwraca true jeśli encja została zbudowana (wykrywanie triggera powinno nastąpić po powrocie).
@@ -270,7 +279,7 @@ namespace Saga.Core.Services.Parsing
 
                     // Wiąż intro z segmentem rodzica przed dodaniem pierwszej litery
                     if (context.CurrentPoint.Letters.Count == 0)
-                        ParsingFactories.AttachIntroCommonPart(context.CurrentPoint);
+                        ParsingFactories.AttachIntroCommonPart(ExplicitOwner(context.CurrentPoint));
 
                     context.CurrentLetter = _letterBuilder.Build(
                         new LetterBuildInput(context.CurrentPoint, context.CurrentParagraph, context.CurrentArticle, text));
@@ -304,7 +313,7 @@ namespace Saga.Core.Services.Parsing
 
                     // Wiąż intro z segmentem rodzica przed dodaniem pierwszego tiretu
                     if (context.CurrentLetter.Tirets.Count == 0)
-                        ParsingFactories.AttachIntroCommonPart(context.CurrentLetter);
+                        ParsingFactories.AttachIntroCommonPart(ExplicitOwner(context.CurrentLetter));
 
                     var tiretDepth = GetTiretDepth(sourceStyleId, layout, context);
 

@@ -416,6 +416,10 @@ namespace Saga.Core.Services.Parsing
             return implicitParagraph;
         }
 
+        /// <summary>
+        /// Punkt za poziom pominięty w akcie (litery wprost w ustępie): bez oznaczenia i treści,
+        /// trzyma tylko litery. Nie wchodzi do eId ani do eksportu.
+        /// </summary>
         public static DtoPoint CreateImplicitPoint(DtoParagraph? paragraph, DtoArticle article)
         {
             return new DtoPoint
@@ -423,7 +427,8 @@ namespace Saga.Core.Services.Parsing
                 Parent = paragraph,
                 Article = article,
                 Paragraph = paragraph,
-                ContentText = string.Empty
+                ContentText = string.Empty,
+                IsImplicit = true
             };
         }
 
@@ -435,7 +440,8 @@ namespace Saga.Core.Services.Parsing
                 Article = article,
                 Paragraph = paragraph,
                 Point = point,
-                ContentText = string.Empty
+                ContentText = string.Empty,
+                IsImplicit = true
             };
         }
 

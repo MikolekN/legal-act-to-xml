@@ -18,14 +18,10 @@ namespace Saga.Model.SystematizingUnits
         /// </summary>
         public DateTime HeadingEffectiveDate { get; set; }
 
-        /// <summary>
-        /// Czy księga jest domyślna/ukryta (niejawna w dokumencie).
-        /// </summary>
-        public bool IsImplicit { get; set; } = true;
-
         public Book()
         {
             UnitType = UnitType.Book;
+            IsImplicit = true;
             EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Book);
             DisplayLabel = "ks.";
         }

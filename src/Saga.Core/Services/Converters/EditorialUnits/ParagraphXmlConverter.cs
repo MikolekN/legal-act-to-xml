@@ -45,7 +45,7 @@ namespace Saga.Core.Services.Converters
             EmbeddedContentXmlConverter.AppendEmbedded(paragraphElement, paragraph);
 
             foreach (var point in paragraph.Points)
-                paragraphElement.Add(PointXmlConverter.ToXml(point, isPathological, contextToPass));
+                PointXmlConverter.AppendTo(paragraphElement, point, isPathological, contextToPass);
 
             HandleCommonPart(paragraph, paragraphElement, contextToPass);
 
@@ -77,13 +77,8 @@ namespace Saga.Core.Services.Converters
         private static bool IsParagraphImplicit(Paragraph paragraph) =>
             paragraph.IsImplicitComputed == null ? paragraph.IsImplicit : paragraph.IsImplicitComputed.Value;
 
-        private static bool IsPathological(Paragraph paragraph)
-        {
-            // TODO: unhandled if the structure of paragraph is not respected - code doesn't expect that e.g. letter can appear in a paragraph
-            if (paragraph.Points.Count == 1) // Every paragraph is expected to have no points or more than 1 point
-                return true;
-            else
-                return false;
-        }
+        // Wyliczenie ma co najmniej dwa punkty; jeden punkt i poziom pominięty (litery wprost w ustępie) są spoza ZTP.
+        private static bool IsPathological(Paragraph paragraph) =>
+            paragraph.Points.Count == 1 || paragraph.Points.Any(point => point.IsImplicit);
     }
 }

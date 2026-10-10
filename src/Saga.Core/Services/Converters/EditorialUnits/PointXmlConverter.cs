@@ -10,6 +10,24 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class PointXmlConverter
     {
+        /// <summary>
+        /// Dopisuje punkt do jednostki nadrzędnej. Punkt niejawny (poziom pominięty w akcie) nie ma elementu:
+        /// jego litery i część wspólna stają wprost w ustępie, jako jednostki spoza ZTP, i ciągną zdanie ustępu.
+        /// </summary>
+        internal static void AppendTo(XElement parentElement, Point point, bool isParentPathological, SentenceContext? previousSentenceContext)
+        {
+            if (!point.IsImplicit)
+            {
+                parentElement.Add(ToXml(point, isParentPathological, previousSentenceContext));
+                return;
+            }
+
+            foreach (var letter in point.Letters)
+                LetterXmlConverter.AppendTo(parentElement, letter, isParentPathological: true, previousSentenceContext);
+
+            HandleCommonPart(point, parentElement, previousSentenceContext);
+        }
+
         internal static XElement ToXml(Point point, bool isParentPathological = false, SentenceContext? previousSentenceContext = null)
         {
             var isPathological = IsPathological(point, isParentPathological);
@@ -34,7 +52,7 @@ namespace Saga.Core.Services.Converters
             EmbeddedContentXmlConverter.AppendEmbedded(pointElement, point);
 
             foreach (var letter in point.Letters)
-                pointElement.Add(LetterXmlConverter.ToXml(letter, isPathological, contextToPass));
+                LetterXmlConverter.AppendTo(pointElement, letter, isPathological, contextToPass);
 
             HandleCommonPart(point, pointElement, contextToPass);
 
@@ -46,13 +64,8 @@ namespace Saga.Core.Services.Converters
                 ? XmlConverterConstants.Contents.NonZtpPoint
                 : XmlConverterConstants.Contents.Point);
 
-        private static bool IsPathological(Point point, bool isParentPathological)
-        {
-            // TODO: unhandled if the structure of point is not respected - code doesn't expect that e.g. tiret can appear in a point
-            if (isParentPathological || point.Letters.Count == 1) // Every point is expected to have no letters or more than 1 letter
-                return true;
-            else
-                return false;
-        }
+        // Wyliczenie ma co najmniej dwie litery; jedna litera i poziom pominięty (tirety wprost w punkcie) są spoza ZTP.
+        private static bool IsPathological(Point point, bool isParentPathological) =>
+            isParentPathological || point.Letters.Count == 1 || point.Letters.Any(letter => letter.IsImplicit);
     }
 }

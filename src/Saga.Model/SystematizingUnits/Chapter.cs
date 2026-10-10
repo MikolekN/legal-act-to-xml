@@ -22,14 +22,10 @@ namespace Saga.Model.SystematizingUnits
         /// </summary>
         public DateTime HeadingEffectiveDate { get; set; }
 
-        /// <summary>
-        /// Czy rozdział jest domyślny/ukryty (niejawny w dokumencie).
-        /// </summary>
-        public bool IsImplicit { get; set; } = true;
-
         public Chapter()
         {
             UnitType = UnitType.Chapter;
+            IsImplicit = true;
             EIdPrefix = SystematizingHierarchy.EIdPrefix(UnitType.Chapter);
             DisplayLabel = "rozd.";
         }
