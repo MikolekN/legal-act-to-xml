@@ -47,7 +47,13 @@ namespace Saga.Core.Services
 
                 if (!journalsByYear.TryGetValue(year, out var journalInfo))
                 {
-                    journalInfo = new JournalInfo { Year = year, SourceString = sourceMatch };
+                    // Wzorzec czyta wyłącznie „Dz. U." — publikator jest znany, a bez niego ELI aktu nie ma segmentu „DU".
+                    journalInfo = new JournalInfo
+                    {
+                        Publisher = PublisherType.DziennikUstaw,
+                        Year = year,
+                        SourceString = sourceMatch,
+                    };
                     journalsByYear[year] = journalInfo;
                     article.Journals.Add(journalInfo);
                 }

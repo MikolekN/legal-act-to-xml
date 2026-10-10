@@ -126,6 +126,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   a po wyliczeniu — jego częścią wspólną; tak samo w treści nowelizacji. Wcześniej akapit w stylu sankcji
   ginął jako „pominięty akapit nierozpoznany" (przepis karny zostawał bez kary), a sankcja po myślniku stawała
   się tiretem. W korpusie to 1199 akapitów w 105 dokumentach.
+- **ELI aktu zmienianego z publikatorem**: `now:akt` cytatu ma postać `https://eli.gov.pl/eli/DU/2025/350`;
+  wcześniej brakowało segmentu publikatora (`…/eli//2025/350`), bo powołanie „Dz. U. z 2025 r. poz. 350"
+  nie zapisywało, że chodzi o Dziennik Ustaw.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

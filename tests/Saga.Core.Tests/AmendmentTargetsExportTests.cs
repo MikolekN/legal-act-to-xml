@@ -275,5 +275,22 @@ namespace Saga.Core.Tests
             Assert.Null(AmendmentTargetPairing.Pair([Target("2"), Target("3")], [Unit("2")]));
             Assert.Null(AmendmentTargetPairing.Pair([Target("2", rangeEnd: "4"), Target("6")], [Unit("2"), Unit("6")]));
         }
+
+        [Fact]
+        public void AmendedAct_IsIdentifiedByItsFullEli()
+        {
+            // Przykłady autorów schematu: now:akt="https://eli.gov.pl/eli/DU/2025/350" — z publikatorem.
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Art. 1. W ustawie z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350) art. 5 otrzymuje brzmienie:",
+                "„Art. 5. Zakład wykonuje zadania określone w ustawie.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var citation = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "cytat-strukt");
+
+            Assert.Equal("https://eli.gov.pl/eli/DU/2025/350",
+                citation.Attributes().Single(a => a.Name.LocalName == "akt").Value);
+        }
     }
 }
