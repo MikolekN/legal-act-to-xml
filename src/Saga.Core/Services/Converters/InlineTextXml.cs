@@ -16,6 +16,17 @@ namespace Saga.Core.Services.Converters
             XmlConverterConstants.Contents.Sentence.Element,
             XmlConverterConstants.ActHeading.Subject,
             XmlConverterConstants.Contents.Citation.Text.Content,
+
+            // Treść załącznika i komórek tabel — tekst bez podziału na zdania.
+            XmlConverterConstants.Attachments.AttachedTo,
+            XmlConverterConstants.Attachments.TitleElement,
+            XmlConverterConstants.Table.ColumnTitle,
+            XmlConverterConstants.Table.Number,
+            XmlConverterConstants.Table.PlainText,
+            XmlConverterConstants.Table.Enumeration1,
+            XmlConverterConstants.Table.Enumeration2,
+            XmlConverterConstants.Table.Enumeration3,
+            XmlConverterConstants.Table.Enumeration4,
         ];
 
         // Indeks górny w kanale tekstowym: nawias tuż za literą albo cyfrą — „477[9]", „2[1a]", „m[2]".

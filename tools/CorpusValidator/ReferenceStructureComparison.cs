@@ -20,7 +20,8 @@ namespace CorpusValidator;
 ///   5. treść zdań — własny tekst każdego zdania, bez treści odnośników i cytatów, z podziałem różnic
 ///      na rodzaje (odstępy, myślniki, cudzysłowy, indeks górny, inne),
 ///   6. dane czasowe w metadanych — zdarzenia z podstawą i dowodem, jednostki wyjątków z zakresem,
-///      grupy czasowe.
+///      grupy czasowe,
+///   7. załączniki — każdy element załącznika z umiejscowieniem, scaleniami komórek i własnym tekstem.
 ///
 /// Adresy porównywane są z prefiksem aktu („DU/2024/928__art_1", w cytacie prefiks aktu zmienianego).
 /// Z porównania wyłączone są atrybuty GUID.
@@ -80,7 +81,8 @@ internal static class ReferenceStructureComparison
 
         var report = Report(docxPath, referencePath, reference, actual)
             + SentenceReport(Sentences(referenceRoot), Sentences(ours))
-            + LifecycleReport(LifecycleLines(referenceRoot), LifecycleLines(ours));
+            + LifecycleReport(LifecycleLines(referenceRoot), LifecycleLines(ours))
+            + AnnexReport(AnnexLines(referenceRoot), AnnexLines(ours));
         File.WriteAllText(Path.Combine(outputDirectory, "comparison.txt"), report);
         Console.WriteLine(report);
         return 0;
@@ -327,6 +329,48 @@ internal static class ReferenceStructureComparison
 
         W();
         W($"--- Dane czasowe (zdarzenia, jednostki wyjątków, grupy): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
+        WriteDiff(W, reference, actual, 40);
+        return sb.ToString();
+    }
+
+    // ============================================================
+    // 7. Załączniki
+    // ============================================================
+
+    private static readonly HashSet<string> AnnexAttributes = ["eId", "brak-eid", "rowspan", "colspan", "naglowek", "orientacja"];
+
+    /// <summary>
+    /// Elementy załączników jako wiersze: załącznik, ścieżka elementów nad elementem, atrybuty znaczące
+    /// (adres, scalenia, wiersz nagłówka) i tekst stojący wprost w elemencie — bez tekstu elementów podrzędnych,
+    /// żeby jedna różnica w komórce nie pociągała za sobą wiersza, tabeli i załącznika.
+    /// </summary>
+    internal static List<string> AnnexLines(XElement root)
+    {
+        var lines = new List<string>();
+        foreach (var annex in root.Descendants().Where(e => e.Name.LocalName == "zalacznik"))
+        {
+            var id = annex.Attribute("eId")?.Value ?? annex.Attribute("brak-eid")?.Value ?? "";
+            foreach (var element in annex.DescendantsAndSelf())
+            {
+                var path = string.Join("/", element.AncestorsAndSelf().TakeWhile(a => a != annex.Parent).Reverse().Select(a => a.Name.LocalName));
+                var attributes = string.Join(" ", element.Attributes()
+                    .Where(a => AnnexAttributes.Contains(a.Name.LocalName))
+                    .Select(a => $"{a.Name.LocalName}=\"{a.Value}\""));
+                var text = string.Concat(element.Nodes().OfType<XText>().Select(node => node.Value));
+                lines.Add($"{id} {path} {attributes} | {Normalize(text)}");
+            }
+        }
+
+        return lines;
+    }
+
+    private static string AnnexReport(List<string> reference, List<string> actual)
+    {
+        var sb = new StringBuilder();
+        void W(string line = "") => sb.AppendLine(line);
+
+        W();
+        W($"--- Załączniki (elementy z umiejscowieniem i tekstem): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
         WriteDiff(W, reference, actual, 40);
         return sb.ToString();
     }

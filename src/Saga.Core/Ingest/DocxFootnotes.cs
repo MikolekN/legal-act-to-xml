@@ -62,13 +62,20 @@ namespace Saga.Core.Ingest
         }
 
         // Treść przypisu zaczyna własny znacznik: pusty znak odwołania i nawias w indeksie górnym — „[)]".
-        private static string WithoutOwnMark(string text)
+        // Indeks górny znacznika bywa rozciągnięty na dalszy tekst („[) Zmiany … 1911 i] 1914"); nawias
+        // zamykający stoi wtedy w treści i też do niej nie należy.
+        internal static string WithoutOwnMark(string text)
         {
             var trimmed = text.TrimStart();
-            if (trimmed.StartsWith("[)]", StringComparison.Ordinal))
-                trimmed = trimmed[3..];
+            if (trimmed.StartsWith("[)", StringComparison.Ordinal))
+            {
+                var close = trimmed.IndexOf(']');
+                trimmed = close < 0 ? trimmed[2..] : trimmed[2..close] + trimmed[(close + 1)..];
+            }
             else if (trimmed.StartsWith(')'))
+            {
                 trimmed = trimmed[1..];
+            }
 
             return trimmed.Trim();
         }

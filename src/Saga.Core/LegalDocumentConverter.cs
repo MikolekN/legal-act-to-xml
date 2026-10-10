@@ -28,6 +28,9 @@ namespace Saga.Core.Services
             if (document.Signature is { } signature)
                 actElement.Add(SignatureXmlConverter.ToXml(signature));
 
+            foreach (var annex in document.Annexes)
+                actElement.Add(AnnexXmlConverter.ToXml(annex));
+
             FootnoteXmlConverter.Embed(actElement, document);
             InlineTextXml.EmbedSuperscripts(actElement);
 

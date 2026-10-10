@@ -17,10 +17,11 @@ namespace Saga.Core.Services.Parsing
             @"^Załącznik(?<plural>i)?(?:\s+nr\s+(?<number>\d+[a-z]*))?\s+do\s+(?:ustawy|rozporządzenia)\s+z\s+dnia\b",
             RegexOptions.Compiled);
 
-        // „Załącznik nr 4a" w osobnym wierszu; za numerem najwyżej znacznik odnośnika i dopisek w nawiasie
-        // („Załącznik nr 2[5)]", „Załącznik nr 3 (uchylony)"). Zdanie zaczynające się tak samo to treść.
+        // „Załącznik nr 4a" w osobnym wierszu; za numerem najwyżej znacznik odnośnika („Załącznik nr 2[5)]")
+        // i dopisek w nawiasie („Załącznik nr 3 (uchylony)") — dopisek jest już treścią załącznika.
+        // Zdanie zaczynające się tak samo to treść.
         private static readonly Regex Designation = new(
-            @"^Załącznik\s+nr\s+(?<number>\d+[a-z]*)(?:\s*\[[^\[\]]*\])*(?:\s*\([^()]*\))?(?:\s*\[[^\[\]]*\])*$",
+            @"^(?<heading>Załącznik\s+nr\s+(?<number>\d+[a-z]*)(?:\s*\[[^\[\]]*\])*)(?:\s*(?<note>\([^()]*\)(?:\s*\[[^\[\]]*\])*))?$",
             RegexOptions.Compiled);
 
         // „(Dz. U. poz. 252)" w wierszu pod wskazaniem aktu. Rozstrzyga treść, nie styl: w tym samym stylu
@@ -84,8 +85,12 @@ namespace Saga.Core.Services.Parsing
 
                 if (Designation.Match(text) is { Success: true } designation)
                 {
-                    Start(text, designation.Groups["number"].Value);
+                    var annex = Start(designation.Groups["heading"].Value, designation.Groups["number"].Value);
                     titleOpen = true;
+
+                    if (designation.Groups["note"] is { Success: true } note)
+                        annex.Content.Add(new AnnexBlock { Text = note.Value });
+
                     continue;
                 }
 

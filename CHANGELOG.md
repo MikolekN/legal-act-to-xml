@@ -163,6 +163,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   tytułem i treścią w kolejności dokumentu: akapitami i tabelami (`ContentTable`: wiersze, komórki, scalenia,
   wiersz nagłówka). Odnośniki z załączników trafiają do rejestru dokumentu. Eksport bez zmian — załącznik
   nie ma jeszcze elementu w XML; wyliczenia w załączniku zostają akapitami.
+- **Załączniki w eksporcie**: każdy załącznik wychodzi jako `zalacznik` za podpisem aktu — `zalacznik-do`,
+  `zalacznik-nr`, `tytul-zalacznika` i `segment-zalacznika` z treścią w kolejności dokumentu. Tabela to
+  `tabela`/`tbody`/`tr`/`td` z `naglowek`, `rowspan` i `colspan`; akapit komórki to `tytul-kolumny` (wiersz
+  nagłówka), `liczba`, `wyliczenie-N` albo `tekst-zwykly`. Załącznik z numerem ma `eId` (`DU/2026/252__zal_1`),
+  bez numeru — `brak-eid`. Odnośniki w treści załącznika są osadzane jak w treści aktu. Wyliczenia w załączniku
+  wychodzą jeszcze jako akapity, nie jednostki.
+- **Znacznik w treści odnośnika**: indeks górny własnego znacznika przypisu rozciągnięty na dalszy tekst nie
+  zostawia już nawiasów w treści („[) Zmiany … i] 1914" → „Zmiany … i 1914").
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
