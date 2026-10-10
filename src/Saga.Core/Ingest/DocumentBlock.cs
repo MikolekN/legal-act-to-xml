@@ -33,6 +33,9 @@ namespace Saga.Core.Ingest
         /// </summary>
         public IReadOnlyList<BlockFootnote> Footnotes { get; init; } = [];
 
+        /// <summary>Komórka tabeli, w której stoi blok; null dla akapitu poza tabelą i dla formatów bez tabel.</summary>
+        public BlockTableCell? TableCell { get; init; }
+
         public bool IsEmpty => string.IsNullOrWhiteSpace(Text);
     }
 

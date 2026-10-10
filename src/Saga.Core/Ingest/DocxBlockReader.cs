@@ -88,10 +88,11 @@ namespace Saga.Core.Ingest
             var blocks = new List<DocumentBlock>();
             blocks.AddRange(ReadPageHeaderBlocks(mainPart));
             var footnotes = DocxFootnotes.Read(mainPart);
+            var tables = DocxTables.Read(mainPart.Document);
             var index = 0;
             foreach (var paragraph in mainPart.Document.Descendants<Word.Paragraph>())
             {
-                blocks.Add(ToBlock(paragraph, index++, footnotes));
+                blocks.Add(ToBlock(paragraph, index++, footnotes, tables));
             }
 
             return blocks;
@@ -163,11 +164,13 @@ namespace Saga.Core.Ingest
         /// Konwersja pojedynczego akapitu OpenXml na blok IR.
         /// Tekst surowy (bez Trim/Sanitize) — normalizację wykonuje orkiestrator.
         /// </summary>
-        internal static DocumentBlock ToBlock(Word.Paragraph paragraph, int? blockIndex, DocxFootnotes? footnotes = null)
+        internal static DocumentBlock ToBlock(
+            Word.Paragraph paragraph, int? blockIndex, DocxFootnotes? footnotes = null, DocxTables? tables = null)
             => new()
             {
                 Text = paragraph.GetFullText(footnotes?.Numbers),
                 Footnotes = footnotes?.ReferencedBy(paragraph) ?? [],
+                TableCell = tables?.CellOf(paragraph),
                 StyleId = paragraph.StyleId(),
                 Layout = ExtractLayout(paragraph),
                 Source = new BlockSourceLocation { BlockIndex = blockIndex },

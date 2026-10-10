@@ -426,5 +426,106 @@ namespace Saga.Core.Tests
 
             Assert.All(blocks, block => Assert.Empty(block.Footnotes));
         }
+
+        // ============================================================
+        // Miejsce bloku w tabeli
+        // ============================================================
+
+        private static string P(string text) => $"<w:p><w:r><w:t>{text}</w:t></w:r></w:p>";
+
+        private static string Cell(string text, string properties = "") =>
+            $"<w:tc><w:tcPr>{properties}</w:tcPr>{P(text)}</w:tc>";
+
+        private static string Row(params string[] cells) => $"<w:tr>{string.Concat(cells)}</w:tr>";
+
+        private static string Table(params string[] rows) => $"<w:tbl>{string.Concat(rows)}</w:tbl>";
+
+        /// <summary>Komórka tabeli każdego niepustego bloku, po jego tekście.</summary>
+        private static Dictionary<string, BlockTableCell?> CellsByText(string bodyXml)
+        {
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXml(bodyXml));
+            return new DocxBlockReader().ReadBlocks(stream)
+                .Where(block => !block.IsEmpty)
+                .ToDictionary(block => block.Text, block => block.TableCell);
+        }
+
+        [Fact]
+        public void BlockInATable_CarriesItsTableRowAndColumn()
+        {
+            var cells = CellsByText(
+                P("Art. 1. Wykaz określa tabela.") +
+                Table(Row(Cell("A1"), Cell("B1")), Row(Cell("A2"), Cell("B2"))) +
+                P("Art. 2. Przepis końcowy."));
+
+            // Akapit poza tabelą nie ma komórki.
+            Assert.Null(cells["Art. 1. Wykaz określa tabela."]);
+            Assert.Null(cells["Art. 2. Przepis końcowy."]);
+
+            Assert.Equal((0, 0, 0), (cells["A1"]!.Table, cells["A1"]!.Row, cells["A1"]!.Column));
+            Assert.Equal((0, 0, 1), (cells["B1"]!.Table, cells["B1"]!.Row, cells["B1"]!.Column));
+            Assert.Equal((0, 1, 0), (cells["A2"]!.Table, cells["A2"]!.Row, cells["A2"]!.Column));
+            Assert.Equal((0, 1, 1), (cells["B2"]!.Table, cells["B2"]!.Row, cells["B2"]!.Column));
+            Assert.All(cells.Values.Where(c => c is not null), c => Assert.Equal((1, 1), (c!.ColumnSpan, c.RowSpan)));
+        }
+
+        [Fact]
+        public void CellSpanningColumns_ShiftsTheColumnsAfterIt()
+        {
+            var cells = CellsByText(Table(
+                Row(Cell("szeroka", @"<w:gridSpan w:val=""2""/>"), Cell("C1")),
+                Row(Cell("A2"), Cell("B2"), Cell("C2"))));
+
+            Assert.Equal((0, 2), (cells["szeroka"]!.Column, cells["szeroka"]!.ColumnSpan));
+            // Kolumna siatki, nie numer komórki w wierszu: „C1" stoi nad „C2".
+            Assert.Equal(2, cells["C1"]!.Column);
+            Assert.Equal(cells["C2"]!.Column, cells["C1"]!.Column);
+        }
+
+        [Fact]
+        public void CellMergedVertically_CountsItsRows_AndMarksTheContinuations()
+        {
+            // Word zapisuje komórkę scaloną w każdym wierszu: pierwsza zaczyna scalenie, kolejne je kontynuują.
+            var cells = CellsByText(Table(
+                Row(Cell("Energia", @"<w:vMerge w:val=""restart""/>"), Cell("gaz")),
+                Row(Cell("ciąg 1", "<w:vMerge/>"), Cell("ropa")),
+                Row(Cell("ciąg 2", @"<w:vMerge w:val=""continue""/>"), Cell("węgiel")),
+                Row(Cell("Transport"), Cell("kolej"))));
+
+            Assert.Equal(3, cells["Energia"]!.RowSpan);
+            Assert.False(cells["Energia"]!.ContinuesCellAbove);
+            Assert.True(cells["ciąg 1"]!.ContinuesCellAbove);
+            Assert.True(cells["ciąg 2"]!.ContinuesCellAbove);
+            Assert.Equal(1, cells["Transport"]!.RowSpan);
+            Assert.False(cells["Transport"]!.ContinuesCellAbove);
+        }
+
+        [Fact]
+        public void HeaderRow_IsMarkedOnItsCells()
+        {
+            var cells = CellsByText(Table(
+                $"<w:tr><w:trPr><w:tblHeader/></w:trPr>{Cell("Sektor")}{Cell("Podsektor")}</w:tr>",
+                Row(Cell("Energia"), Cell("gaz"))));
+
+            Assert.True(cells["Sektor"]!.IsHeaderRow);
+            Assert.True(cells["Podsektor"]!.IsHeaderRow);
+            Assert.False(cells["Energia"]!.IsHeaderRow);
+        }
+
+        [Fact]
+        public void NestedAndFollowingTables_HaveTheirOwnNumbers()
+        {
+            var inner = Table(Row(Cell("wewnętrzna")));
+            var cells = CellsByText(
+                Table(Row($"<w:tc>{P("zewnętrzna")}{inner}{P("")}</w:tc>", Cell("obok"))) +
+                P("między tabelami") +
+                Table(Row(Cell("druga"))));
+
+            // Akapit należy do najbliższej tabeli; tabele liczone w kolejności wystąpienia.
+            Assert.Equal(0, cells["zewnętrzna"]!.Table);
+            Assert.Equal((1, 0, 0), (cells["wewnętrzna"]!.Table, cells["wewnętrzna"]!.Row, cells["wewnętrzna"]!.Column));
+            Assert.Equal((0, 0, 1), (cells["obok"]!.Table, cells["obok"]!.Row, cells["obok"]!.Column));
+            Assert.Null(cells["między tabelami"]);
+            Assert.Equal(2, cells["druga"]!.Table);
+        }
     }
 }

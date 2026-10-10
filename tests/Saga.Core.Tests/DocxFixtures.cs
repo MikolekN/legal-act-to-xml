@@ -122,6 +122,27 @@ namespace Saga.Core.Tests
             => new(new Word.Run(new Word.Text(text) { Space = SpaceProcessingModeValues.Preserve }));
 
         // ============================================================
+        // Treść z surowego XML
+        // ============================================================
+
+        /// <summary>
+        /// Dokument o treści podanej jako XML wnętrza <c>w:body</c> — do konstrukcji, których nie da się
+        /// zapisać wierszami tekstu (tabele, scalenia komórek).
+        /// </summary>
+        internal static byte[] WithBodyXml(string bodyInnerXml)
+        {
+            using var stream = new MemoryStream();
+            using (var document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                var main = document.AddMainDocumentPart();
+                main.Document = new Word.Document(
+                    $@"<w:document xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main""><w:body>{bodyInnerXml}</w:body></w:document>");
+            }
+
+            return stream.ToArray();
+        }
+
+        // ============================================================
         // Przypisy
         // ============================================================
 

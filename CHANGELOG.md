@@ -154,6 +154,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   `DU/2023/1688` — rok z daty aktu zmienianego (§ 158 ust. 7 ZTP). Wcześniej brakujący rocznik zastępował
   bieżący rok kalendarzowy, więc identyfikator ELI aktu zmienianego zależał od dnia konwersji (w korpusie
   107 aktów zmienianych w 67 dokumentach). Publikator bez roku i bez daty aktu nie daje identyfikatora.
+- **Miejsce bloku w tabeli**: blok z akapitu w tabeli DOCX niesie `DocumentBlock.TableCell` — numer tabeli,
+  wiersz, kolumnę siatki, scalenia (`ColumnSpan`, `RowSpan`, kontynuacja komórki scalonej w pionie) i znacznik
+  wiersza nagłówka. Wcześniej akapity tabel były nieodróżnialne od zwykłych. Nic tego jeszcze nie czyta —
+  to podstawa pod tabele w załącznikach i jednostkach; eksport bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

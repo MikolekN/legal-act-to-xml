@@ -292,6 +292,7 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 | `Layout` | Opcjonalne metadane układu (`BlockLayoutInfo` — wcięcia, pogrubienie, kursywa) — z DOCX/PDF |
 | `Source` | Położenie w źródle (`BlockSourceLocation`) — diagnostyka |
 | `Role` | `BlockRole` (`Body`, `FootnoteText`, `JournalHeader`, …) — bloki spoza głównego biegu treści są filtrowane przez orkiestrator i klasyfikator |
+| `TableCell` | Komórka tabeli, w której stoi blok (`BlockTableCell`: numer tabeli, wiersz, kolumna siatki, `ColumnSpan`, `RowSpan`, kontynuacja scalenia pionowego, wiersz nagłówka) — tylko DOCX (`DocxTables`); `null` poza tabelą. Dziś nikt jej nie czyta: potok traktuje akapity tabel jak zwykłe |
 | `Footnotes` | Przypisy, do których odwołuje się blok (`BlockFootnote`: numer jak w akcie i akapity treści) — tylko DOCX, gdzie treść przypisu leży w osobnej części pakietu (`DocxFootnotes`); w `Text` stoi znacznik `[N)]` z tym samym numerem |
 | `IsEmpty` | `true` gdy `Text` jest pusty/białe znaki |
 
@@ -898,6 +899,8 @@ src/Saga.Core/
 │   ├── BlockAlignment.cs / BlockAssembler.cs  # Składanie bloków z linii (PDF)
 │   ├── DocxBlockReader.cs           # Adapter DOCX (OpenXml Paragraph → DocumentBlock)
 │   ├── DocxFootnotes.cs             # Przypisy DOCX: numer jak w akcie i treść z word/footnotes.xml
+│   ├── DocxTables.cs                # Tabele DOCX: komórka (tabela, wiersz, kolumna, scalenia) akapitu
+│   ├── BlockTableCell.cs            # Miejsce bloku w tabeli źródłowej
 │   ├── PlainTextBlockReader.cs      # Adapter TXT
 │   ├── TextLine.cs / TextNormalizer.cs  # Pomocnicze dla adaptera TXT
 │   └── Pdf/
