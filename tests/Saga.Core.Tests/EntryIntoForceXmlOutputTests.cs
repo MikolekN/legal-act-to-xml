@@ -111,8 +111,11 @@ namespace Saga.Core.Tests
             .Where(value => value is not null)
             .ToList()!;
 
-        private static string? Meta(XElement root, string name) =>
-            root.Descendants().FirstOrDefault(e => e.Name.LocalName == name)?.Value;
+        /// <summary>Data zdarzenia cyklu życia aktu danego rodzaju z metadanych (ADR-0022).</summary>
+        private static string? EventDate(XElement root, string kind) =>
+            root.Descendants().FirstOrDefault(e => e.Name.LocalName == XmlConverterConstants.Metadata.Temporal.Event
+                && e.Attribute(XmlConverterConstants.Metadata.Temporal.Kind)?.Value == kind)
+                ?.Attribute(XmlConverterConstants.Metadata.Temporal.Date)?.Value;
 
         [Fact]
         public void Retroactivity_MasksTheEntryDate_OnEveryDatedElement()
@@ -183,13 +186,11 @@ namespace Saga.Core.Tests
 
             var xml = LegalDocumentConverter.Convert(document);
 
-            Assert.Equal("2026-01-01", Meta(xml, XmlConverterConstants.Metadata.EntryIntoForceElement));
+            Assert.Equal("2026-01-01", EventDate(xml, XmlConverterConstants.Metadata.Temporal.KindEntryIntoForce));
+            Assert.Equal("2025-07-01", EventDate(xml, XmlConverterConstants.Metadata.Temporal.KindRetroactivity));
 
-            var retroactive = xml.Descendants()
-                .Single(e => e.Name.LocalName == XmlConverterConstants.Metadata.RetroactiveDateElement);
-
-            Assert.Equal("2025-07-01", Meta(retroactive, XmlConverterConstants.Metadata.PartialDate.Date));
-            Assert.DoesNotContain(retroactive.Descendants(), e => e.Name.LocalName == XmlConverterConstants.Metadata.PartialDate.Unit);
+            // Oba zdarzenia dotyczą całego aktu — nie wymieniają jednostek.
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == XmlConverterConstants.Metadata.Temporal.Unit);
         }
 
         [Fact]
@@ -238,8 +239,10 @@ namespace Saga.Core.Tests
             Assert.NotNull(document);
             var xml = LegalDocumentConverter.Convert(document!);
 
+            // Jednostki aktu — bez powołań w zdarzeniach metadanych, które niosą te same eId.
             var byEId = xml.Descendants()
-                .Where(e => e.Attribute(XmlConverterConstants.Contents.eId) is not null)
+                .Where(e => e.Attribute(XmlConverterConstants.Contents.eId) is not null
+                    && e.Name.LocalName != XmlConverterConstants.Metadata.Temporal.Unit)
                 .ToDictionary(
                     e => e.Attribute(XmlConverterConstants.Contents.eId)!.Value,
                     e => e.Attribute(XmlConverterConstants.Contents.EntryIntoForce)?.Value);
@@ -248,8 +251,8 @@ namespace Saga.Core.Tests
             Assert.Equal("2026-03-01", byEId["art_2"]);
             Assert.Equal("2025-07-01", byEId["art_3"]);
 
-            // Metadana aktu nadal niesie datę formalną, nie przysłoniętą.
-            Assert.Equal("2026-01-01", Meta(xml, XmlConverterConstants.Metadata.EntryIntoForceElement));
+            // Metadane aktu nadal niosą datę formalną, nie przysłoniętą.
+            Assert.Equal("2026-01-01", EventDate(xml, XmlConverterConstants.Metadata.Temporal.KindEntryIntoForce));
         }
     }
 }

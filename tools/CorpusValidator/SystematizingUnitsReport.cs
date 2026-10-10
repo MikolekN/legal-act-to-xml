@@ -291,7 +291,8 @@ internal static class SystematizingUnitsReport
         }
 
         // Jednostki w cytatach należą do aktu zmienianego — liczone osobno, a ich eId nie są duplikatami.
-        static bool Quoted(XElement e) => e.Ancestors().Any(a => a.Name.LocalName == "cytat-strukt");
+        // Metadane powołują jednostki po eId (zdarzenia cyklu życia) — to też nie duplikaty.
+        static bool Quoted(XElement e) => e.Ancestors().Any(a => a.Name.LocalName is "cytat-strukt" or "metadane");
         static bool IsUnit(XElement e) => ExplicitUnitElements.Contains(e.Name.LocalName)
             || (e.Name.LocalName == "tytul" && e.Attribute("eId") != null);
 
@@ -349,7 +350,7 @@ internal static class SystematizingUnitsReport
     }
 
     /// <summary>Kategoria = pierwszy katalog pod korzeniem; w documents/ katalogi lat (&lt;rok&gt;/) to ustawy.</summary>
-    private static string Category(string relativePath)
+    internal static string Category(string relativePath)
     {
         var parts = relativePath.Split(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
         if (parts.Length < 2)

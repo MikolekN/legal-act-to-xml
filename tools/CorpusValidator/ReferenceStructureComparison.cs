@@ -16,8 +16,10 @@ namespace CorpusValidator;
 ///   2. eId jednostek redakcyjnych,
 ///   3. umiejscowienie artykułów w jednostkach systematyzacyjnych.
 ///
+///   4. datę wejścia w życie i grupę czasową (<c>okres</c>) każdej jednostki z eId.
+///
 /// Z porównania wyłączone są rozjazdy spoza struktury jednostek: prefiks aktu w eId
-/// („DU/2024/928__"), atrybuty GUID, okres, daty i treść zdań.
+/// („DU/2024/928__"), atrybuty GUID i treść zdań.
 ///
 /// Użycie:
 ///   dotnet run --project tools/CorpusValidator -- --compare-reference &lt;plik.docx&gt; &lt;referencja.xml&gt; &lt;katalog-wyjsciowy&gt;
@@ -39,7 +41,8 @@ internal static class ReferenceStructureComparison
     private static readonly Regex ActPrefix = new(@"^[A-Z]{2}/\d{4}/\d+__", RegexOptions.Compiled);
     private static readonly Regex Whitespace = new(@"\s+", RegexOptions.Compiled);
 
-    internal sealed record Unit(string Name, string EId, string Nr, string Heading, string Path, int QuoteDepth)
+    internal sealed record Unit(string Name, string EId, string Nr, string Heading, string Path, int QuoteDepth,
+        string EntryDate = "", string Period = "")
     {
         public bool IsSystematizing => SystematizingElements.Contains(Name);
         public string Key => $"{QuoteDepth}|{Path}|{Name}|{EId}";
@@ -96,7 +99,8 @@ internal static class ReferenceStructureComparison
                 if (isUnit)
                 {
                     var unitName = name == "tytul" ? "tytul-jednostka" : name;
-                    units.Add(new Unit(unitName, EId(child), Nr(child), Heading(child), path, quoteDepth));
+                    units.Add(new Unit(unitName, EId(child), Nr(child), Heading(child), path, quoteDepth,
+                        child.Attribute("wejscie-w-zycie")?.Value ?? "", child.Attribute("okres")?.Value ?? ""));
                     childPath = SystematizingElements.Contains(unitName) || unitName == "tytul-jednostka"
                         ? (path.Length == 0 ? unitName : $"{path}/{unitName}")
                         : path;
@@ -159,6 +163,14 @@ internal static class ReferenceStructureComparison
         var ourFlat = actual.Where(u => !u.IsSystematizing).Select(Flat).ToList();
         W($"--- Jednostki redakcyjne (element, eId, nr; bez umiejscowienia): zgodne {Matching(refFlat, ourFlat)} z {refFlat.Count} ---");
         WriteDiff(W, refFlat, ourFlat, 25);
+        W();
+
+        // 4. Data wejścia w życie i grupa czasowa każdej jednostki z eId — ta sama klauzula ma dać te same okresy.
+        static string Dated(Unit u) => $"{u.QuoteDepth}|{u.Name}|{u.EId}|{u.EntryDate}|{u.Period}";
+        var refDated = reference.Where(u => u.EId.Length > 0).Select(Dated).ToList();
+        var ourDated = actual.Where(u => u.EId.Length > 0).Select(Dated).ToList();
+        W($"--- Daty i okresy jednostek (element, eId, wejscie-w-zycie, okres): zgodne {Matching(refDated, ourDated)} z {refDated.Count} ---");
+        WriteDiff(W, refDated, ourDated, 25);
 
         return sb.ToString();
     }

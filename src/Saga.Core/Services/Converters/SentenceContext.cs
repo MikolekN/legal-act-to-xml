@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using Saga.Model;
 using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters
@@ -35,7 +36,7 @@ namespace Saga.Core.Services.Converters
             ReferenceSentenceGUID = referenceSentenceGUID;
         }
 
-        internal static XElement ToXml(SentenceContext context, string text, string? entry = null)
+        internal static XElement ToXml(SentenceContext context, string text, IEntersIntoForce? dated = null)
         {
             var sentence = Element(XmlConverterConstants.Contents.Sentence.Element,
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Number, context.ReferenceSentenceNumber),
@@ -43,12 +44,11 @@ namespace Saga.Core.Services.Converters
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Fragment, context.CurrentFragment),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.FragmentGUID, Guid.NewGuid().ToString()),
                 text);
-            if (entry is not null)
-                sentence.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, entry));
+            UnitLifecycleXml.Apply(sentence, dated);
             return sentence;
         }
 
-        internal static XElement ToXml(string text, int number = 1, string? guid = null, int fragment = 1, string? entry = null)
+        internal static XElement ToXml(string text, int number = 1, string? guid = null, int fragment = 1, IEntersIntoForce? dated = null)
         {
             var sentence = Element(XmlConverterConstants.Contents.Sentence.Element,
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Number, number),
@@ -56,8 +56,7 @@ namespace Saga.Core.Services.Converters
                 new XAttribute(XmlConverterConstants.Contents.Sentence.Fragment, fragment),
                 new XAttribute(XmlConverterConstants.Contents.Sentence.FragmentGUID, Guid.NewGuid().ToString()),
                 text);
-            if (entry is not null)
-                sentence.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, entry));
+            UnitLifecycleXml.Apply(sentence, dated);
             return sentence;
         }
     };

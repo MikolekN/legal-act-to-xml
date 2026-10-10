@@ -33,18 +33,18 @@ namespace Saga.Core.Services.Converters
                 if (isContextExist && isFirst && isLast && isIntro) // E!FG
                 {
                     previousSentenceContext!.CurrentFragment += 1;
-                    textSectionElement.Add(SentenceContext.ToXml(context: previousSentenceContext, text: textSegment.Text, entry: UnitLifecycleXml.EntryDate(textSegment)));
+                    textSectionElement.Add(SentenceContext.ToXml(context: previousSentenceContext, text: textSegment.Text, dated: textSegment));
                     contextToPass = previousSentenceContext;
                 }
                 else if (isContextExist && isFirst && !isIntro) // E!F!G
                 {
                     previousSentenceContext!.CurrentFragment += 1;
-                    textSectionElement.Add(SentenceContext.ToXml(context: previousSentenceContext, text: textSegment.Text, entry: UnitLifecycleXml.EntryDate(textSegment)));
+                    textSectionElement.Add(SentenceContext.ToXml(context: previousSentenceContext, text: textSegment.Text, dated: textSegment));
                     contextToPass = null;
                 }
                 else if (!isIntro) // !E!F!G
                 {
-                    textSectionElement.Add(SentenceContext.ToXml(number: textSegment.Order, text: textSegment.Text, entry: UnitLifecycleXml.EntryDate(textSegment)));
+                    textSectionElement.Add(SentenceContext.ToXml(number: textSegment.Order, text: textSegment.Text, dated: textSegment));
                     contextToPass = null;
                 }
                 else if (isLast) // !EF!G
@@ -53,7 +53,7 @@ namespace Saga.Core.Services.Converters
                         currentFragment: 1,
                         referenceSentenceNumber: textSegment.Order,
                         referenceSentenceGUID: Guid.NewGuid().ToString());
-                    textSectionElement.Add(SentenceContext.ToXml(context: nextSentenceContext, text: textSegment.Text, entry: UnitLifecycleXml.EntryDate(textSegment)));
+                    textSectionElement.Add(SentenceContext.ToXml(context: nextSentenceContext, text: textSegment.Text, dated: textSegment));
                     contextToPass = nextSentenceContext;
                 }
                 else // a sentence that isn't last but is intro

@@ -5,17 +5,21 @@ using Saga.Model;
 namespace Saga.Core.Services.Converters
 {
     /// <summary>
-    /// Atrybuty cyklu życia jednostki (status-jednostki, wejscie-w-zycie)
-    /// na samej jednostce oraz na jej zdaniach.
+    /// Obie daty jednostki dołączone do jej elementu jako adnotacja (poza XML-em): atrybut
+    /// <c>wejscie-w-zycie</c> niesie tylko jedną z nich (ADR-0013), a grupę czasową wyznaczają obie.
     /// </summary>
+    internal sealed record UnitDates(DateTime Entry, DateTime Retroactive);
+
+    /// <summary>Atrybut <c>wejscie-w-zycie</c> jednostki, zdania i części wspólnej.</summary>
     internal static class UnitLifecycleXml
     {
-        internal static void Apply(XElement element, IEntersIntoForce entity)
+        internal static void Apply(XElement element, IEntersIntoForce? entity)
         {
-            if (EntryDate(entity) is { } entryDate)
-                element.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, entryDate));
-        }
+            if (GoverningDate.Text(entity) is not { } entryDate)
+                return;
 
-        internal static string? EntryDate(IEntersIntoForce entity) => GoverningDate.Text(entity);
+            element.Add(new XAttribute(XmlConverterConstants.Contents.EntryIntoForce, entryDate));
+            element.AddAnnotation(new UnitDates(entity!.EffectiveDate, entity.RetroactiveFrom));
+        }
     }
 }

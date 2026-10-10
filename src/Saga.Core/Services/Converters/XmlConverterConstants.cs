@@ -118,7 +118,36 @@ namespace Saga.Core.Services.Converters
                 internal const string Project = "DataProjektu";
                 internal const string Publication = "DataWydania";
             }
-            internal const string EntryIntoForceElement = "DataWejsciaWZycie";
+            /// <summary>Dane czasowe aktu: cykl życia jako zdarzenia (ADR-0022).</summary>
+            internal static class Temporal
+            {
+                internal const string Element = "DaneCzasowe";
+                internal const string ActLifecycle = "CyklZyciaAktu";
+                internal const string Event = "Zdarzenie";
+                internal const string Id = "id";
+                internal const string Kind = "rodzaj";
+                internal const string KindEntryIntoForce = "wejscie-w-zycie";
+                internal const string KindRetroactivity = "stosowanie-z-moca-wsteczna";
+                internal const string Origin = "pochodzenie";
+                internal const string OriginComputed = "domyslne-z-aktu";
+                internal const string OriginRead = "odczytane";
+                internal const string Date = "data";
+                internal const string Condition = "warunek";
+                internal const string Basis = "podstawa";
+                internal const string Source = "zrodlo";
+                internal const string Evidence = "dowod";
+                internal const string Unit = "JednostkaAktu";
+                internal const string UnitInScope = "JednostkaWZakresie";
+                internal const string SubjectScope = "ZakresMerytorycznyZdarzenia";
+                internal const string SubjectScopeText = "ZakresMerytoryczny";
+                internal const string Group = "GrupaCzasowa";
+                internal const string GroupIsMain = "glowna";
+                internal const string Interval = "Przedzial";
+                internal const string IntervalInForce = "obowiazywanie";
+                internal const string IntervalFrom = "od";
+                internal const string IntervalTo = "do";
+                internal const string Period = "okres";
+            }
             internal const string EntryIntoForcePartialsElement = "DatyWejsciaWZycieCzesciowe";
             internal const string EntryIntoForcePartialElement = "DataWejsciaWZycieCzesciowa";
             internal static class PartialDate
@@ -128,8 +157,6 @@ namespace Saga.Core.Services.Converters
                 internal const string UnitInScope = "Jednostka-w-zakresie";
                 internal const string EditorialNotes = "Uwagi-redakcyjne";
             }
-            internal const string RetroactiveDatesElement = "DatyMocyWstecznej";
-            internal const string RetroactiveDateElement = "DataMocyWstecznej";
             internal const string RepealDateElement = "DataUchylenia";
             internal const string RepealDatePartialElement = "DataUchyleniaCzesciowa";
             internal const string ExpirationDateElement = "DataWygasniecia";

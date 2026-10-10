@@ -31,7 +31,7 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0010](0010-jeden-kursor-sciezki-jednostek.md) | Kursor ścieżki jednostek | - | 2026-07-30 |
 | [0011](0011-data-ogolna-rozsylana-po-calym-drzewie.md) | Data reguły ogólnej wejścia w życie trafia na wszystkie jednostki. Brak daty znaczy nierozstrzygnięty wyjątek | - | 2026-07-31 |
 | [0012](0012-naglowek-strony-jako-rola-bloku.md) | Nagłówek aktu | - | 2026-08-28 |
-| [0013](0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md) | Moc wsteczna przysłania datę wejścia w życie dopiero przy zapisie; model trzyma obie daty osobno | - | 2026-09-03 |
+| [0013](0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md) | Moc wsteczna przysłania datę wejścia w życie dopiero przy zapisie; model trzyma obie daty osobno | - (w części zastąpiony przez 0022) | 2026-09-03 |
 | [0014](0014-skroty-jednostek-w-eid.md) | Skróty jednostek w eId (levelType) wyznacza jedna zamknięta tabela — także w adresach wskazywanych | Accepted | 2026-09-23 |
 | [0015](0015-jedno-zrodlo-powolan-jednostek.md) | Powołania jednostek rozbiera jedno źródło (słownik, ścieżka, „§”) — wejście w życie i cele nowelizacji; samodzielny „§” rozstrzyga rodzaj aktu | Accepted | 2026-09-23 |
 | [0016](0016-wyliczenie-celow-to-osobne-komendy.md) | Wyliczenie celów nowelizacji to osobne komendy; `element-do-eId` znaczy wyłącznie koniec przedziału | Accepted | 2026-09-23 |
@@ -40,5 +40,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0019](0019-indeks-gorny-w-eid.md) | Indeks górny zostaje w eId w notacji „[n]" (`art_53[1]`) — zgodnie ze schematem i przykładami jego autorów | Accepted | 2026-10-09 |
 | [0020](0020-eksport-jednostek-systematyzacyjnych.md) | Jednostki systematyzacyjne w eksporcie zagnieżdżone wg schemaPL; niejawny łańcuch nad pierwszą jawną jednostką znika, pod nią niejawne poziomy to `-n` | Accepted | 2026-10-09 |
 | [0021](0021-eid-jednostki-cytowanej-od-adresu-celu.md) | eId jednostki cytowanej w nowelizacji zaczyna się od adresu celu w akcie zmienianym (`art_68__ust_1__pkt_5`, nie `pkt_5`) | Accepted | 2026-10-09 |
+| [0022](0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md) | Daty aktu w metadanych jako zdarzenia cyklu życia (`DaneCzasowe`): jedno na każdą datę wejścia w życie i mocy wstecznej, wyjątek wymienia swoje jednostki; jednostki wskazują grupę czasową atrybutem `okres` | Accepted | 2026-10-10 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

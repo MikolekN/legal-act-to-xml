@@ -460,10 +460,12 @@ namespace Saga.Core.Tests
             Assert.NotEmpty(unitDates);
             Assert.All(unitDates, value => Assert.Equal("2025-07-01", value));
 
-            var metadata = xml.Descendants()
-                .First(e => e.Name.LocalName == "DataWejsciaWZycie");
+            // Metadane aktu niosą obie daty osobno, jako zdarzenia (ADR-0022).
+            var events = xml.Descendants().Where(e => e.Name.LocalName == "Zdarzenie")
+                .ToDictionary(e => e.Attribute("rodzaj")!.Value, e => e.Attribute("data")!.Value);
 
-            Assert.Equal("2026-01-01", metadata.Value);
+            Assert.Equal("2026-01-01", events["wejscie-w-zycie"]);
+            Assert.Equal("2025-07-01", events["stosowanie-z-moca-wsteczna"]);
         }
 
         // ============================================================
@@ -766,6 +768,47 @@ namespace Saga.Core.Tests
             Assert.Equal("art_68__ust_1__pkt_5", modified.Content!.Points.Single().Id);
             Assert.Equal(modified.Targets.Single().Structure.ToString(), modified.Content.Points.Single().Id);
             Assert.Equal("art_2__pkt_4a", inserted.Content!.Points.Single().Id);
+        }
+
+        // ============================================================
+        // ADR-0022: daty aktu w metadanych jako zdarzenia cyklu życia
+        // ============================================================
+
+        [Fact]
+        public void Adr0022_ActDates_AreLifecycleEvents_NotAdHocMetadataElements()
+        {
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 13 stycznia 2026 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 26", Role = BlockRole.JournalHeader },
+            };
+            blocks.AddRange(new[]
+            {
+                "USTAWA", "z dnia 9 stycznia 2026 r.", "o zmianie ustawy o rzeczach różnych",
+                "Art. 1. Wprowadza się zmiany porządkowe.",
+                "Art. 2. Przepis przejściowy.",
+                "Art. 3. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 2, " +
+                "który wchodzi w życie z dniem 1 stycznia 2027 r.",
+            }.Select(text => new DocumentBlock { Text = text }));
+
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            var metadata = LegalDocumentConverter.Convert(document).Descendants().First(e => e.Name.LocalName == "metadane");
+
+            Assert.DoesNotContain(metadata.Elements(), e => e.Name.LocalName is "DataWejsciaWZycie" or "DatyMocyWstecznej");
+
+            var events = metadata.Descendants().Where(e => e.Name.LocalName == "Zdarzenie").ToList();
+            Assert.Equal(new[] { "zdarz_wejscie_2026-01-28_DU-2026-26_domyslne", "zdarz_wejscie_2027-01-01_DU-2026-26_odczytane" },
+                events.Select(e => e.Attribute("id")?.Value));
+
+            // Reguła ogólna nie wymienia jednostek; wyjątek wymienia swoje.
+            Assert.Empty(events[0].Elements());
+            Assert.Equal(new[] { "art_2" }, events[1].Elements().Select(e => e.Attribute("eId")?.Value));
+
+            // Data z formuły niesie formułę; każda — klauzulę, z której pochodzi.
+            Assert.Equal("po upływie 14 dni od dnia ogłoszenia", events[0].Attribute("warunek")?.Value);
+            Assert.Null(events[1].Attribute("warunek"));
+            Assert.All(events, e => Assert.Equal("art_3", e.Attribute("dowod")?.Value));
         }
 
         private static DocumentClassificationResult Classify(byte[] docx)

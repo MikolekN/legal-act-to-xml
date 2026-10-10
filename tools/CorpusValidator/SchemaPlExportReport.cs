@@ -49,6 +49,7 @@ internal static class SchemaPlExportReport
 		int schemaValid = 0, schemaInvalid = 0, bodyValid = 0, bodyInvalid = 0;
 		var schemaProblems = new Dictionary<string, (int Hits, HashSet<string> Files, string Sample)>();
 		var bodyProblems = new Dictionary<string, (int Hits, HashSet<string> Files, string Sample)>();
+		var validByCategory = new SortedDictionary<string, (int Valid, int Total)>();
 		var failures = new List<string>();
 		var withUndated = new List<string>();
 		var withForeign = new List<string>();
@@ -79,12 +80,19 @@ internal static class SchemaPlExportReport
 
 				if (validator is not null)
 				{
-					CollectSchemaProblems(validator.Validate(xml), name,
-						ref schemaValid, ref schemaInvalid, schemaProblems);
-					// Pełna walidacja staje na nagłówku aktu — treść sprawdza się osobno.
+					var problems = validator.Validate(xml);
+					CollectSchemaProblems(problems, name, ref schemaValid, ref schemaInvalid, schemaProblems);
+
+					// Akt bez treści nie mówi nic o eksporcie jednostek — liczą się dokumenty z treścią.
 					if (xml.Elements().First() is var act && SchemaPlValidator.HasBody(act))
+					{
+						var category = SystematizingUnitsReport.Category(Path.GetRelativePath(corpusRoot, file));
+						var tally = validByCategory.GetValueOrDefault(category);
+						validByCategory[category] = (tally.Valid + (problems.Count == 0 ? 1 : 0), tally.Total + 1);
+
 						CollectSchemaProblems(validator.ValidateActBody(act), name,
 							ref bodyValid, ref bodyInvalid, bodyProblems);
+					}
 				}
 
 				var allowed = AllowedDates(document);
@@ -126,6 +134,8 @@ internal static class SchemaPlExportReport
 			Console.WriteLine($"4. Zgodnych ze schematem:        {schemaValid,6} / {converted}   niezgodnych: {schemaInvalid}");
 			Console.WriteLine($"   Schemat: {validator.SchemaPath}");
 			Console.WriteLine("   (informacyjnie — bramką twardą stanie się, gdy eksport przestanie łamać schemat)");
+			foreach (var (category, tally) in validByCategory)
+				Console.WriteLine($"   {category,-16} {tally.Valid,6} / {tally.Total}   (dokumenty z treścią)");
 			Console.WriteLine($"5. Treść aktu zgodna (bez nagł.): {bodyValid,6} / {bodyValid + bodyInvalid}   niezgodnych: {bodyInvalid}   (dokumenty z treścią)");
 		}
 

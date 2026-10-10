@@ -1,6 +1,6 @@
 # ADR-0013: Moc wsteczna przysłania datę wejścia w życie dopiero przy zapisie, nigdy w modelu
 
-- Status: -
+- Status: - (w części o elementach metadanych zastąpiony przez [ADR-0022](0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md))
 - Data: 2026-09-03
 
 ## Kontekst

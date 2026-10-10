@@ -25,6 +25,8 @@ namespace Saga.Core.Services
             foreach (var part in document.Parts)
                 actElement.Add(SystematizingUnitXmlConverter.ActLevel(part));
 
+            TemporalDataXmlConverter.AssignPeriods(actElement, document);
+
             if (ContainsMathML(rootElement))
                 rootElement.Add(new XAttribute(XNamespace.Xmlns + "mml", XmlConverterConstants.MathMLNamespace));
 
@@ -106,15 +108,8 @@ namespace Saga.Core.Services
                 dateElement.Add(Element(XmlConverterConstants.Metadata.Date.Publication, actDate.ToString("yyyy-MM-dd")));
             metaElement.Add(dateElement);
 
-            if (document.EffectiveDate != default)
-                metaElement.Add(Element(XmlConverterConstants.Metadata.EntryIntoForceElement,
-                    document.EffectiveDate.ToString("yyyy-MM-dd")));
-
-            if (document.RetroactiveFrom != default)
-                metaElement.Add(Element(XmlConverterConstants.Metadata.RetroactiveDatesElement,
-                    Element(XmlConverterConstants.Metadata.RetroactiveDateElement,
-                        Element(XmlConverterConstants.Metadata.PartialDate.Date,
-                            document.RetroactiveFrom.ToString("yyyy-MM-dd")))));
+            if (TemporalDataXmlConverter.ToXml(document) is { } temporal)
+                metaElement.Add(temporal);
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.RepealDateElement, "xs:date"));
 

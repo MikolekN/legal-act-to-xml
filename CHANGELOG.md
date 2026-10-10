@@ -39,10 +39,14 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Załącznik aktu nie jest już częścią ostatniego artykułu**: treść za nagłówkiem „Załącznik do
   ustawy z dnia…" nie trafia do struktury aktu (wcześniej jej punkty i rozdziały wchodziły do
   ostatniego artykułu albo stawały się jednostkami aktu).
+- **Daty aktu jako zdarzenia cyklu życia**: zamiast `DataWejsciaWZycie` i `DatyMocyWstecznej` metadane
+  niosą `DaneCzasowe/CyklZyciaAktu` — jedno `Zdarzenie` na każdą datę wejścia w życie (także wyjątków,
+  z ich jednostkami i zakresem) i na każdą datę mocy wstecznej. Jednostki, zdania i części wspólne
+  wskazują swoją grupę czasową (`GrupaCzasowa`) atrybutem `okres` —
+  [ADR-0022](docs/adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md).
 - **Metadane aktu zgodne ze schematem**: `Rodzaj` niesie kod ze słownika schematu (`USTAWA`, `ROZP`,
   `OBW_TJ`…, wcześniej nazwa wersalikami), `DataAktu` zawiera `DataWydania`, `GUIDwersji` stoi w przestrzeni
-  `gd:`, a rola organu to `wydajacy`. Daty wejścia w życie i mocy wstecznej aktu zostają na razie
-  w dotychczasowych elementach — schemat trzyma je w `DaneCzasowe`.
+  `gd:`, a rola organu to `wydajacy`.
 - **Unikalny `gd:nowGUID` każdego cytatu**: komenda eksportowana kilkoma cytatami (tekstowym i strukturalnym)
   dawała im ten sam GUID; teraz pierwszy niesie GUID komendy, kolejne własne.
 - **Atrybuty GUID w przestrzeni `gd:`** (GUIDs.xsd): jednostki i organ — `gd:GUID`, zdanie — `gd:zdGUID`

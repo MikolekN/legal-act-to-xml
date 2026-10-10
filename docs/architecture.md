@@ -514,6 +514,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | **`EntryDates`** | Para (data wejścia w życie, moc wsteczna) chodząca po propagacji razem — dwa gołe `DateTime?` w sygnaturze dałyby się zamienić miejscami. |
 | **`EntryIntoForceExceptionMap`** | Rozstrzygnięcia wyjątków przypięte do encji (klucz po tożsamości, bo eId nie jest w akcie unikalny). Dwa NIEZALEŻNE kanały — daty wejścia w życie i mocy wstecznej — bo wyjątek nie musi nadpisywać obu składników. W kanale daty `null` = cel znany, data nie; w kanale mocy wstecznej `null` = mocy wstecznej nie ma. |
 | **`EffectiveDatePropagator`** | Kolorowanie drzewa PARĄ dat: reguła ogólna trafia na wszystkie jednostki i zdania, wyjątek nadpisuje ją w dół, a **brak daty znaczy nierozstrzygnięty wyjątek** — patrz [ADR-0011](adr/0011-data-ogolna-rozsylana-po-calym-drzewie.md). Składniki dziedziczą się osobno: jednostka może wziąć datę z reguły ogólnej, a moc wsteczną z wyjątku wskazującego ją samą. |
+| **`LifecycleEvents`** | Zdarzenia cyklu życia aktu z rozłożonej klauzuli: jedno na każdą różną datę wejścia w życie i jedno na każdą datę mocy wstecznej; wyjątek niesie swoje jednostki, reguła ogólna żadnej — [ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md). Wyznacza też grupę czasową jednostki z pary jej dat (`GroupFor`). Eksportuje je `TemporalDataXmlConverter` do `metadane/DaneCzasowe`. |
 | **`GoverningDate`** | Która z dwóch dat trafia do atrybutu `wejscie-w-zycie`: moc wsteczna przysłania datę wejścia w życie. JEDYNE miejsce liczące tę wartość — patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md). |
 
 ### 6.4 Helpery (`Helpers/`)
@@ -538,6 +539,8 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym |
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
 | `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń, tabele i treść osadzona |
+| `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
+| `UnitLifecycleXml` | Jedyne miejsce piszące `wejscie-w-zycie`; zostawia przy elemencie obie daty jednostki (`UnitDates`), z których powstaje `okres` |
 | `SchemaPlValidator` | Walidacja eksportu wobec lokalnego `schema/schemaPL.xsd` (narzędzia i testy `[SchemaPlFact]`): cały dokument albo treść aktu bez nagłówka, element po elemencie wobec deklaracji w typie aktu |
 
 ---
