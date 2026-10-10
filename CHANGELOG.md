@@ -75,6 +75,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   `nie-ztp-punkt` z `nr` `UNKNOWN`. Pozycje takiego wyliczenia są dalszymi fragmentami zdania ustępu. Wyjątek
   wejścia w życie wskazujący „art. 5 ust. 1 lit. a" trafia w tę literę —
   [ADR-0023](docs/adr/0023-poziom-pominiety-jako-jednostka-niejawna.md).
+- **Oznaczenia spoza ZTP czytane w całości**: indeks górny z literą („Art. 130[1a].", „§ 2[1a].", „8d[2a].")
+  i polska litera („Art. 48ł.", „1ł.", „ł)") należą do numeru jednostki. Wcześniej art. 130[1a] był drugim
+  `art_130`, art. 48ł drugim `art_48`, a reszta oznaczenia stała w treści. Powołania („art. 48ł", „lit. ł")
+  i kontrola ciągłości numeracji (l → ł → m) znają te same litery.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

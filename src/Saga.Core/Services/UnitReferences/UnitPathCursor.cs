@@ -192,7 +192,7 @@ namespace Saga.Core.Services.UnitReferences
         {
             UnitLevel.Article or UnitLevel.Paragraph or UnitLevel.Point =>
                 designation.Length > 0 && char.IsDigit(designation[0]),
-            UnitLevel.Letter => designation.Length is 1 or 2 && designation.All(c => c is >= 'a' and <= 'z'),
+            UnitLevel.Letter => designation.Length is 1 or 2 && designation.All(DesignationAlphabet.IsLowerLetter),
             _ => true,
         };
 

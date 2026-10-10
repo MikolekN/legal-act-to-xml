@@ -30,10 +30,14 @@ namespace Saga.Core.Services.Classify
         internal const string OptionalQuotePrefix = "(?:[\"\\u201E\\u201C\\u201D]\\s*)?";
 
         /// <summary>
-        /// Opcjonalny indeks górny numeru jednostki w notacji [x] (§ 89 ust. 6 ZTP; kanał GetFullText).
-        /// Celowo tylko cyfry — odnośniki przypisów mają postać [N)] i nie mogą tu wpadać.
+        /// Opcjonalny indeks górny numeru jednostki w notacji [x] (§ 89 ust. 6 ZTP; kanał GetFullText):
+        /// liczba, w aktach wielokrotnie nowelizowanych także z literą („130[1a]"). Bez nawiasu zamykającego —
+        /// odnośniki przypisów mają postać [N)] i nie mogą tu wpadać.
         /// </summary>
-        internal const string OptionalSuperscript = @"(?:\[\d+\])?";
+        internal const string OptionalSuperscript = @"(?:\[\d+[a-z]*\])?";
+
+        /// <summary>Litery za liczbą w oznaczeniu („2a", „15zzs", „48ł").</summary>
+        private const string LetterSuffix = DesignationAlphabet.Letter + "*";
 
         /// <summary>Znacznik odnośnika w notacji GetFullText: indeks górny zakończony nawiasem — „[9)]", „[2), 3)]".</summary>
         internal const string FootnoteMarker = @"\[[^\]]*\)\]";
@@ -51,15 +55,15 @@ namespace Saga.Core.Services.Classify
             $@"^{OptionalQuotePrefix}Art\.?\s*\d+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         internal static readonly Regex ParagraphPattern = new(
-            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}\d+[a-zA-Z]*{OptionalSuperscript}\.{AfterNumberDot}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}\d+{LetterSuffix}{OptionalSuperscript}\.{AfterNumberDot}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         internal static readonly Regex PointPattern = new(
-            $@"^{OptionalQuotePrefix}\d+[a-zA-Z]*{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}\d+{LetterSuffix}{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         // ROZPOZNANIE litery z samego tekstu (§ 56 ZTP): litera to MAŁA litera alfabetu łacińskiego (bez
         // polskich znaków diakrytycznych), a po wyczerpaniu alfabetu dwuznak „za", „zb"… — stąd [a-z]{1,2}
         // BEZ IgnoreCase. Wersalik „A)" czy token 3+ znaków to nie litera redakcyjna (wyliczenie załącznika
-        // lub proza). Wzorzec węższy jest CELOWO tylko dla rozpoznania (gałąź regex-only); wydobycie numeru i
+        // lub proza). Litera „ł)", którą akty wstawiają między „l)" a „m)", wchodzi tylko ścieżką stylową. Wzorzec węższy jest CELOWO tylko dla rozpoznania (gałąź regex-only); wydobycie numeru i
         // obcięcie prefiksu (po sklasyfikowaniu, także ze stylu LIT) używają szerszych <see cref="LetterStripPattern"/>
         // / <see cref="LetterNumberCapture"/>, aby nie zmieniać ścieżki stylowej.
         internal static readonly Regex LetterPattern = new(
@@ -71,7 +75,7 @@ namespace Saga.Core.Services.Classify
         /// w rozpoznaniu, więc szerokość nie zwiększa liczby fałszywych trafień.
         /// </summary>
         internal static readonly Regex LetterStripPattern = new(
-            $@"^{OptionalQuotePrefix}[a-zA-Z]{{1,5}}{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{DesignationAlphabet.Letter}{{1,5}}{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         // Półpauza – dopuszczona dla tekstu niesanityzowanego (Sanitize normalizuje ją do dywizu)
         internal static readonly Regex TiretPattern = new(
@@ -79,15 +83,15 @@ namespace Saga.Core.Services.Classify
 
         /// <summary>Artykuł z grupą przechwytującą numer (do ParseArticleNumber).</summary>
         internal static readonly Regex ArticleNumberCapture = new(
-            $@"^{OptionalQuotePrefix}Art\.?\s*(\d+[a-zA-Z]*{OptionalSuperscript})", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}Art\.?\s*(\d+{LetterSuffix}{OptionalSuperscript})", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>Artykuł z przechwyceniem ogona (do GetArticleTail).</summary>
         internal static readonly Regex ArticleTailCapture = new(
-            $@"^{OptionalQuotePrefix}Art\.?\s*\d+[a-zA-Z]*{OptionalSuperscript}\.?\s*(.*)$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}Art\.?\s*\d+{LetterSuffix}{OptionalSuperscript}\.?\s*(.*)$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>Numer ustępu/paragrafu kodeksu z grupą przechwytującą (do ParseParagraphNumber).</summary>
         internal static readonly Regex ParagraphNumberCapture = new(
-            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}(\d+[a-zA-Z]*{OptionalSuperscript})\.{AfterNumberDot}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}(\d+{LetterSuffix}{OptionalSuperscript})\.{AfterNumberDot}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
         /// Znaczniki odnośników na początku ogona artykułu („Art. 13ja.[36)] 1. Podmiot…") — odnoszą się
@@ -98,7 +102,7 @@ namespace Saga.Core.Services.Classify
 
         /// <summary>Numer punktu z grupą przechwytującą (do ParsePointNumber).</summary>
         internal static readonly Regex PointNumberCapture = new(
-            $@"^{OptionalQuotePrefix}(\d+[a-zA-Z]*{OptionalSuperscript})\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}(\d+{LetterSuffix}{OptionalSuperscript})\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
         /// Numer litery z grupą przechwytującą (do ParseLetterNumber). Wzorzec PARSUJĄCY (uruchamiany po
@@ -106,7 +110,7 @@ namespace Saga.Core.Services.Classify
         /// aby wydobyć numer i uniknąć pozostawienia prefiksu w treści (zasada „nie przeinaczyć", ścieżka stylowa bez zmian).
         /// </summary>
         internal static readonly Regex LetterNumberCapture = new(
-            $@"^{OptionalQuotePrefix}([a-zA-Z]{{1,5}}{OptionalSuperscript})\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}({DesignationAlphabet.Letter}{{1,5}}{OptionalSuperscript})\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>Prefiks tiretu do usuwania (bez wymagania spacji; dywiz lub półpauza).</summary>
         internal static readonly Regex TiretStripPattern = new(

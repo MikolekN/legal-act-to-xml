@@ -82,14 +82,17 @@ namespace Saga.Core.Services.Classify
 
         private static bool IsExpectedNextLetter(EntityNumber previous, EntityNumber current)
         {
-            // Ten sam LexicalPart — wariant z indeksem (a → a^1)
-            if (string.Equals(current.LexicalPart, previous.LexicalPart, System.StringComparison.OrdinalIgnoreCase))
+            // Polska litera stoi za bazową (l → ł → m), więc w porównaniu liczy się jak ona.
+            var previousLetters = DesignationAlphabet.Fold(previous.LexicalPart);
+            var currentLetters = DesignationAlphabet.Fold(current.LexicalPart);
+
+            // Ten sam LexicalPart — wariant z indeksem (a → a^1) albo polska litera po bazowej (l → ł)
+            if (currentLetters == previousLetters)
                 return true;
 
             // Następna litera alfabetu (a → b, z → aa)
-            var expectedNext = GetNextLetterValue(previous.LexicalPart);
-            return !string.IsNullOrEmpty(expectedNext) &&
-                   string.Equals(current.LexicalPart, expectedNext, System.StringComparison.OrdinalIgnoreCase);
+            var expectedNext = GetNextLetterValue(previousLetters);
+            return !string.IsNullOrEmpty(expectedNext) && currentLetters == expectedNext;
         }
     }
 }

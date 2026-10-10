@@ -95,15 +95,24 @@ namespace Saga.Core.Services.UnitReferences
         /// <summary>Oznaczenie rzymskie jednostki wyższej („dział VIa", „tytuł XIII") — wersaliki.</summary>
         private const string RomanDesignationPattern = @"(?-i:[IVXLC]+[a-z]?)\b";
 
+        /// <summary>Liczba z literami oznaczenia: „85c", „48ł".</summary>
+        private const string Number = @"\d+" + DesignationAlphabet.Letter + "*";
+
+        /// <summary>Liczba z indeksem górnym: „125[1]", „130[1a]".</summary>
+        private const string NumberWithSuperscript = Number + @"(?:\s*\[\s*" + Number + @"\s*\])?";
+
+        /// <summary>Litera jako oznaczenie: „a", „za", „ł".</summary>
+        private const string LetterDesignation = @"(?<!\w)" + DesignationAlphabet.LowerLetter + @"{1,2}(?!\w)";
+
         /// <summary>Przedział oznaczeń: „85c–85j", „a–c", „czwarte–szóste".</summary>
         internal static readonly string RangePattern =
-            @"\d+[a-zA-Z]*\s*[-–]\s*\d+[a-zA-Z]*" +
-            @"|\b[a-z]{1,2}\s*[-–]\s*[a-z]{1,2}\b" +
+            Number + @"\s*[-–]\s*" + Number +
+            @"|" + LetterDesignation + @"\s*[-–]\s*" + LetterDesignation +
             @"|" + OrdinalWord + @"\s*[-–]\s*" + OrdinalWord;
 
         /// <summary>Oznaczenie jednostki: numer (z indeksem górnym „125[1]"), liczebnik porządkowy albo litera.</summary>
         internal static readonly string DesignationPattern =
-            @"\d+[a-zA-Z]*(?:\s*\[\s*\d+[a-zA-Z]*\s*\])?|" + OrdinalWord + @"|\b[a-z]{1,2}\b";
+            NumberWithSuperscript + "|" + OrdinalWord + "|" + LetterDesignation;
 
         private static readonly Regex TokenPattern = BuildTokenPattern(UnitKeywordPattern, DesignationPattern);
 
@@ -114,7 +123,7 @@ namespace Saga.Core.Services.UnitReferences
         /// </summary>
         private static readonly Regex SystematizingTokenPattern = BuildTokenPattern(
             SystematizingKeywordPattern + "|" + UnitKeywordPattern,
-            @"\d+[a-zA-Z]*(?:\s*\[\s*\d+[a-zA-Z]*\s*\])?|" + OrdinalWord + "|" + RomanDesignationPattern + @"|\b[a-z]{1,2}\b");
+            NumberWithSuperscript + "|" + OrdinalWord + "|" + RomanDesignationPattern + "|" + LetterDesignation);
 
         private static Regex BuildTokenPattern(string unitKeyword, string designation) => new(
             @"(?<prosescope>w\s+zakresie\s*,\s*w\s+jakim.*|w\s+jakim\s+dotycz\p{L}*.*)" +

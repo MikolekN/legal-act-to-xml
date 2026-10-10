@@ -474,6 +474,7 @@ Kaskadowe tworzenie encji implicit:
 | Serwis | Rola |
 |---|---|
 | **`EntityNumberService`** | Parsowanie numerów encji z tekstu na `EntityNumber` (rozbicie na `NumericPart` / `LexicalPart` / `Superscript`) i formatowanie zwrotne. |
+| **`DesignationAlphabet`** | Litery w oznaczeniach jednostek — łacińskie i polskie („art. 48ł", „lit. ł") — jako jedno źródło dla wzorców klasyfikatora, powołań (`UnitReferenceTokenizer`) i ciągłości numeracji (`NumberingHint`: l → ł → m). |
 | **`LegalReferenceService`** | Cele nowelizacji z treści encji („w art. 5 § 2 pkt 3") jako lista `StructuralAmendmentReference`, bez zdania; kontekstem jest cel komendy nadrzędnej. Sam nie rozbiera powołań — deleguje do `UnitAddressReader` (6.3a). |
 | **`JournalReferenceService`** | Parsowanie publikatorów (Dz. U.) z treści artykułów nowelizujących i uzupełnianie listy `JournalInfo`. |
 
@@ -876,6 +877,7 @@ src/Saga.Core/
 │       └── PageArtifactFilter.cs    # Filtrowanie artefaktów strony (nagłówki/stopki/numery stron)
 └── Services/
     ├── EntityNumberService.cs       # Parsowanie/formatowanie numerów encji
+    ├── DesignationAlphabet.cs       # Litery w oznaczeniach jednostek (także polskie)
     ├── LegalReferenceService.cs     # Adres celu nowelizacji (przez UnitAddressReader)
     ├── JournalReferenceService.cs   # Parsowanie publikatorów (Dz.U.)
     ├── Classify/                    # WARSTWA KLASYFIKACJI AKAPITÓW (jednoprzebiegowa)
