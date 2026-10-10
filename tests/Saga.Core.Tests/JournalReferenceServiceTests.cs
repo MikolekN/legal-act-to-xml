@@ -102,6 +102,36 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void AmendingFormula_MayNameTheStatuteBeforeItsDate()
+        {
+            // Ustawa budżetowa: między „ustawie" a datą stoi jej określenie.
+            var article = new Article
+            {
+                ContentText = "Art. 1. W ustawie budżetowej na rok 2024 z dnia 18 stycznia 2024 r. (Dz. U. poz. 122) " +
+                              "wprowadza się następujące zmiany:"
+            };
+
+            _service.ParseJournalReferences(article);
+
+            var journal = Assert.Single(article.Journals);
+            Assert.Equal(2024, journal.Year);
+            Assert.Equal(new[] { 122 }, journal.Positions);
+        }
+
+        [Theory]
+        // Przepis, który ustawę tylko przywołuje, nie jest przepisem zmieniającym.
+        [InlineData("Art. 5. W ustawie, o której mowa w art. 1 (Dz. U. z 2022 r. poz. 902), nie stosuje się art. 4.")]
+        [InlineData("Art. 6. W roku 2026 rezerwa, o której mowa w art. 34 ust. 1 ustawy z dnia 1 października 2024 r. (Dz. U. poz. 1572), wynosi 0.")]
+        public void ArticleOnlyCitingAStatute_IsNotAmending(string text)
+        {
+            var article = new Article { ContentText = text };
+
+            _service.ParseJournalReferences(article);
+
+            Assert.Empty(article.Journals);
+        }
+
+        [Fact]
         public void ParseJournalReferences_IgnoresNonAmendingArticles()
         {
             var article = new Article

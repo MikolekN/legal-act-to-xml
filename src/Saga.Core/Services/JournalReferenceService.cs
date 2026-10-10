@@ -100,11 +100,16 @@ namespace Saga.Core.Services
         private static readonly Regex ArticlePrefixStrip = new(
             @"^(Art\.|\u00a7)\s*[\w\d]+\.?\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        // „W ustawie z dnia …", także z określeniem ustawy przed datą („W ustawie budżetowej na rok 2024 z dnia …").
+        // Określenie nie sięga za nawias — tam zaczyna się już publikator albo inna treść.
+        private static readonly Regex AmendingFormula = new(
+            @"^W\s+ustawie\b[^()]{0,60}?\bz\s+dnia\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         private static bool StartsWithAmendingFormula(string contentText)
         {
             var text = contentText.Trim();
             text = ArticlePrefixStrip.Replace(text, string.Empty, 1);
-            return text.StartsWith("W ustawie z dnia", StringComparison.OrdinalIgnoreCase);
+            return AmendingFormula.IsMatch(text);
         }
     }
 }

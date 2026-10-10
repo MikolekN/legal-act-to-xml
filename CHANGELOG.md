@@ -176,6 +176,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   „Rozporządzenie Rady Ministrów" zapisany małymi literami z wersalikami jest rozpoznawany jak wydrukowany
   (8 dokumentów korpusu zyskało strefę tytułową, jeden — właściwy `Rodzaj`). Wersaliki wynikające ze stylu
   zostają tekstem, jak go zapisano („Ustawa") — tak też mają przykłady autorów schematu.
+- **Formuła zmieniająca z określeniem ustawy**: „W ustawie budżetowej na rok 2024 z dnia 18 stycznia 2024 r.
+  (Dz. U. poz. 122) wprowadza się następujące zmiany" jest przepisem zmieniającym — wcześniej formuła musiała
+  brzmieć dosłownie „W ustawie z dnia", więc cytaty takiego przepisu nie wskazywały aktu zmienianego.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
