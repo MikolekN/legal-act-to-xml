@@ -34,7 +34,7 @@ internal static class ReferenceStructureComparison
 
     private static readonly HashSet<string> EditorialElements =
     [
-        "artykul", "ustep", "ustep-n", "paragraf-kodeksu", "paragraf-kodeksu-n", "punkt", "litera",
+        "artykul", "artykul-kodeksu", "ustep", "ustep-n", "paragraf-kodeksu", "paragraf-kodeksu-n", "punkt", "litera",
         "tiret", "podw-tiret", "potr-tiret", "poczw-tiret", "piec-tiret",
     ];
 

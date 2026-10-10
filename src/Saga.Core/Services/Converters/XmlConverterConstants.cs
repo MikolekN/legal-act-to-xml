@@ -260,6 +260,7 @@ namespace Saga.Core.Services.Converters
                 internal const string Header = "naglowek-oddzialu";
             }
             internal const string Article = "artykul";
+            internal const string CodeArticle = "artykul-kodeksu";
             internal const string NonZtpArticle = "nie-ztp-artykul";
             internal const string Paragraph = "ustep";
             internal const string NonZtpParagraph = "nie-ztp-ustep";

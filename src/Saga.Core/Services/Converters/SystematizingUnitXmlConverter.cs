@@ -64,7 +64,9 @@ namespace Saga.Core.Services.Converters
             }
 
             foreach (var child in Children(unit))
-                element.Add(child is Article article ? ArticleXmlConverter.ToXml(article) : ToXml(child, actLevel: false));
+                element.Add(child is Article article
+                    ? ArticleXmlConverter.ToXml(article, inSubchapter: true)
+                    : ToXml(child, actLevel: false));
 
             return element;
         }

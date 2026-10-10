@@ -343,6 +343,88 @@ namespace Saga.Core.Tests
             Assert.Equal(AmendmentEntityKind.PlainText, Classify("2. Fragment zdania.", FragmentStyleId));
         }
 
+        // ============================================================
+        // Element artykułu z paragrafami: „artykul-kodeksu" w oddziale
+        // ============================================================
+
+        private static XElement ExportCode(params string[] lines) => LegalDocumentConverter.Convert(
+            LegalDocumentParser.ParseBlocks(lines.Select(text => new DocumentBlock { Text = text }).ToList()));
+
+        private static string ElementOf(XElement xml, string eId) =>
+            xml.Descendants().Single(e => e.Attribute("eId")?.Value == eId).Name.LocalName;
+
+        [Fact]
+        public void ArticleWithCodeParagraphs_InAChapter_IsACodeArticle()
+        {
+            var xml = ExportCode(
+                "Rozdział 1",
+                "Przepisy ogólne",
+                "Art. 1. § 1. Kodeks reguluje stosunki cywilnoprawne.",
+                "§ 2. Przepisy stosuje się odpowiednio.",
+                "Art. 2. Prawo podmiotowe podlega ochronie.",
+                "Art. 3. 1. Przepis z ustępami.",
+                "2. Drugi ustęp.");
+
+            // Schemat: w oddziale artykuł z „§" to „artykul-kodeksu", artykuł z ustępami — „artykul".
+            Assert.Equal("artykul-kodeksu", ElementOf(xml, "art_1"));
+            Assert.Equal("oddzial-n", xml.Descendants().Single(e => e.Attribute("eId")?.Value == "art_1").Parent!.Name.LocalName);
+            Assert.Equal("artykul", ElementOf(xml, "art_2"));
+            Assert.Equal("artykul", ElementOf(xml, "art_3"));
+        }
+
+        [Fact]
+        public void ArticleWithCodeParagraphs_OutsideAChapter_StaysAnArticle()
+        {
+            // Wprost w akcie i na szczycie cytatu element nazywa się „artykul" — rodzaj rozstrzyga typ rodzica.
+            var xml = ExportCode(
+                "Art. 1. W ustawie z dnia 23 kwietnia 1964 r. - Kodeks cywilny (Dz. U. z 2024 r. poz. 1061) art. 5 otrzymuje brzmienie:",
+                "„Art. 5. § 1. Nie można czynić ze swego prawa użytku sprzecznego z jego przeznaczeniem.",
+                "§ 2. Takie działanie nie jest uważane za wykonywanie prawa.”.",
+                "Art. 2. § 1. Przepis przejściowy.",
+                "§ 2. Drugi paragraf.");
+
+            Assert.Equal("artykul", ElementOf(xml, "art_5"));
+            Assert.Equal("cytat-strukt", xml.Descendants().Single(e => e.Attribute("eId")?.Value == "art_5").Parent!.Name.LocalName);
+            Assert.Equal("artykul", ElementOf(xml, "art_2"));
+        }
+
+        [Fact]
+        public void QuotedChapterOfACode_HoldsCodeArticles()
+        {
+            var xml = ExportCode(
+                "Art. 1. W ustawie z dnia 5 stycznia 2011 r. - Kodeks wyborczy (Dz. U. z 2025 r. poz. 365) po rozdziale 9 dodaje się rozdział 9a w brzmieniu:",
+                "„Rozdział 9a",
+                "Głosowanie korespondencyjne",
+                "Art. 53a. § 1. Wyborca może głosować korespondencyjnie.",
+                "§ 2. Głosowanie korespondencyjne jest wyłączone w obwodach odrębnych.",
+                "Art. 53b. § 1. Zamiar głosowania zgłasza się komisarzowi.",
+                "§ 2. Zgłoszenie zawiera dane wyborcy.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+            var quoted = xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt");
+            Assert.Equal(new[] { "artykul-kodeksu", "artykul-kodeksu" },
+                quoted.Descendants().Where(e => e.Name.LocalName.StartsWith("artykul")).Select(e => e.Name.LocalName));
+        }
+
+        [SchemaPlFact]
+        public void CodeArticlesInChapters_AreSchemaValid()
+        {
+            var xml = ExportCode(
+                "Rozdział 1",
+                "Przepisy ogólne",
+                "Art. 1. § 1. Kodeks reguluje stosunki cywilnoprawne.",
+                "§ 2. Przepisy stosuje się odpowiednio.",
+                "Art. 2. Prawo podmiotowe podlega ochronie.",
+                "Art. 3. W ustawie z dnia 5 stycznia 2011 r. - Kodeks wyborczy (Dz. U. z 2025 r. poz. 365) po rozdziale 9 dodaje się rozdział 9a w brzmieniu:",
+                "„Rozdział 9a",
+                "Głosowanie korespondencyjne",
+                "Art. 53a. § 1. Wyborca może głosować korespondencyjnie.",
+                "§ 2. Głosowanie korespondencyjne jest wyłączone w obwodach odrębnych.”.");
+
+            var act = xml.Elements().First();
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(act));
+        }
+
         [Fact]
         public void SuperscriptedArticleAndCodeParagraph_KeepTheSuperscriptInEIdAndNr()
         {

@@ -537,7 +537,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | Konwerter | Rola |
 |---|---|
 | `SystematizingUnitXmlConverter` | Jednostki systematyzacyjne zagnieżdżone wg schemaPL; niejawny łańcuch bez jawnego przodka znika (artykuły wprost w akcie), pod jawną jednostką niejawne poziomy wychodzą jako `-n` z `brak-eid` — [ADR-0020](adr/0020-eksport-jednostek-systematyzacyjnych.md) |
-| `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym. Jednostka odbiegająca od ZTP (jedna pozycja wyliczenia, poziom pominięty) wychodzi jako `nie-ztp-*`, a punkt i litera niejawne nie mają elementu ([ADR-0023](adr/0023-poziom-pominiety-jako-jednostka-niejawna.md)) |
+| `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym. Artykuł z paragrafami („§") stojący w oddziale to `artykul-kodeksu`, poza oddziałem `artykul`. Jednostka odbiegająca od ZTP (jedna pozycja wyliczenia, poziom pominięty) wychodzi jako `nie-ztp-*`, a punkt i litera niejawne nie mają elementu ([ADR-0023](adr/0023-poziom-pominiety-jako-jednostka-niejawna.md)) |
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
 | `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń, tabele i treść osadzona |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |

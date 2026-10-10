@@ -79,6 +79,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   i polska litera („Art. 48ł.", „1ł.", „ł)") należą do numeru jednostki. Wcześniej art. 130[1a] był drugim
   `art_130`, art. 48ł drugim `art_48`, a reszta oznaczenia stała w treści. Powołania („art. 48ł", „lit. ł")
   i kontrola ciągłości numeracji (l → ł → m) znają te same litery.
+- **Artykuł z paragrafami („§") w oddziale to `artykul-kodeksu`**: schemat rozróżnia tam artykuł ustawy
+  i artykuł kodeksu, więc `artykul` z `paragraf-kodeksu` był w rozdziale niezgodny. Dotyczy kodeksów
+  i rozdziałów kodeksu cytowanych w nowelizacji; wprost w akcie i na szczycie cytatu element zostaje `artykul`.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

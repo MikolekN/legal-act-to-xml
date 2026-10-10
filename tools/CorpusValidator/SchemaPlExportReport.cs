@@ -29,7 +29,7 @@ internal static class SchemaPlExportReport
 	/// </summary>
 	private static readonly string[] DatedElements =
 	{
-		"artykul", "ustep", "ustep-n", "punkt", "litera", "tiret", "paragraf-kodeksu", "zdanie",
+		"artykul", "artykul-kodeksu", "ustep", "ustep-n", "punkt", "litera", "tiret", "paragraf-kodeksu", "zdanie",
 	};
 
 	internal static int Run(string corpusRoot, string outputDirectory, DateTime? announcementDate)

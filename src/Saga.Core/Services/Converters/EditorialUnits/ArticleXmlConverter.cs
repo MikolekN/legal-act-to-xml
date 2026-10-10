@@ -9,9 +9,15 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class ArticleXmlConverter
     {
-        internal static XElement ToXml(Article article)
+        /// <summary>
+        /// <paramref name="inSubchapter"/> — artykuł stoi w oddziale (jawnym albo „-n"), a nie wprost w akcie
+        /// albo na szczycie cytatu. Schemat rozróżnia tam artykuł ustawy i artykuł z paragrafami („§").
+        /// </summary>
+        internal static XElement ToXml(Article article, bool inSubchapter = false)
         {
-            var articleElement = Element(XmlConverterConstants.Contents.Article);
+            var articleElement = Element(inSubchapter && HasCodeParagraphs(article)
+                ? XmlConverterConstants.Contents.CodeArticle
+                : XmlConverterConstants.Contents.Article);
 
             articleElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, article.Id));
             articleElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, article.Guid.ToString()));
@@ -25,5 +31,8 @@ namespace Saga.Core.Services.Converters
 
             return articleElement;
         }
+
+        private static bool HasCodeParagraphs(Article article) =>
+            article.Paragraphs.Any(paragraph => paragraph.Role == Paragraph.CodeParagraphRole);
     }
 }
