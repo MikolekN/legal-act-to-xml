@@ -34,6 +34,43 @@ namespace Saga.Core.Tests
             Assert.Equal("\u2013 tresc po polpauzie", result);
         }
 
+        private static Run Superscript(string text) => new(
+            new RunProperties { RunStyle = new RunStyle { Val = "IGindeksgrny" } },
+            new Text(text) { Space = SpaceProcessingModeValues.Preserve });
+
+        [Fact]
+        public void GetFullText_FootnoteInsertedAsAField_StaysInOneBracket()
+        {
+            // TJ 307519_2779687: odnośnik wstawiony polem NOTEREF — między „8" a „)" stoi przebieg końca pola
+            // bez tekstu i bez indeksu górnego. Nie może rozciąć odnośnika na „[8][)]".
+            var paragraph = new Paragraph(
+                new Run(new Text("17a.")),
+                new Run(new FieldChar { FieldCharType = FieldCharValues.Begin }),
+                new Run(new FieldCode(" NOTEREF _Ref1 \\h ")),
+                new Run(new FieldChar { FieldCharType = FieldCharValues.Separate }),
+                new Run(new RunProperties { RunStyle = new RunStyle { Val = "Odwoanieprzypisudolnego" } }, new Text("8")),
+                new Run(new FieldChar { FieldCharType = FieldCharValues.End }),
+                Superscript(")"),
+                new Run(new Text(" Wojskowy sąd okręgowy") { Space = SpaceProcessingModeValues.Preserve }));
+
+            Assert.Equal("17a.[8)] Wojskowy sąd okręgowy", paragraph.GetFullText());
+        }
+
+        [Theory]
+        // Odstęp sformatowany jako indeks górny to zwykły odstęp, nie pusty indeks.
+        [InlineData(" ", "4. W sprawach")]
+        // Odstęp na końcu indeksu wychodzi za nawias.
+        [InlineData("7) ", "4.[7)] W sprawach")]
+        public void GetFullText_WhitespaceStyledAsSuperscript_StaysOutsideTheBrackets(string superscript, string expected)
+        {
+            var paragraph = new Paragraph(
+                new Run(new Text("4.")),
+                Superscript(superscript),
+                new Run(new Text("W sprawach")));
+
+            Assert.Equal(expected, paragraph.GetFullText());
+        }
+
         [Fact]
         public void GetFullText_FootnoteWithSuperscript_WrappedInBrackets()
         {

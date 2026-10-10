@@ -62,6 +62,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   schematu), a interpunkcja po cytacie stoi w zdaniu za nim.
 - **Indeks górny w eId** w notacji `[n]`, zgodnie z aktualnym schematem i przykładami jego autorów:
   `art_4[1]` w eId jednostki i `element-eId` celu — [ADR-0019](docs/adr/0019-indeks-gorny-w-eid.md).
+- **Odnośnik tuż za numerem jednostki**: „2.[9)] Do wniosku…", „§ 4.[9)] Przepisów…" i „Art. 13ja.[36)] 1. Podmiot…"
+  dają numer ustępu (paragrafu), a znacznik odnośnika zostaje na początku treści. Wcześniej numer się nie
+  odczytywał: jednostka miała `nr` `UNKNOWN`, eId bez numeru (`art_5__ust`), a oznaczenie stało w treści.
+  Dotyczy głównie tekstów jednolitych.
+- **Indeks górny w tekście akapitu**: odnośnik wstawiony polem (`NOTEREF`) jest jednym znacznikiem (`[8)]`,
+  wcześniej `[8][)]`), a odstęp sformatowany jako indeks górny zostaje zwykłym odstępem (`4. W sprawach`
+  zamiast `4.[ ]W sprawach`, `art. 4[1] w brzmieniu` zamiast `art. 4[1 ]w[ ]brzmieniu`).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

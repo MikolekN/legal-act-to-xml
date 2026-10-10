@@ -35,6 +35,15 @@ namespace Saga.Core.Services.Classify
         /// </summary>
         internal const string OptionalSuperscript = @"(?:\[\d+\])?";
 
+        /// <summary>Znacznik odnośnika w notacji GetFullText: indeks górny zakończony nawiasem — „[9)]", „[2), 3)]".</summary>
+        internal const string FootnoteMarker = @"\[[^\]]*\)\]";
+
+        /// <summary>
+        /// Co stoi za kropką numeru ustępu: odstęp albo — w tekstach jednolitych — od razu znacznik odnośnika
+        /// („2.[9)] Do wniosku…"). Znacznik zostaje w treści jednostki, numer kończy się na kropce.
+        /// </summary>
+        internal const string AfterNumberDot = @"(?:\s+|(?=" + FootnoteMarker + "))";
+
         /// <summary>Opcjonalny znak paragrafu kodeksu.</summary>
         internal const string OptionalParagraphMark = @"(?:§\s*)?";
 
@@ -42,7 +51,7 @@ namespace Saga.Core.Services.Classify
             $@"^{OptionalQuotePrefix}Art\.?\s*\d+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         internal static readonly Regex ParagraphPattern = new(
-            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}\d+[a-zA-Z]*{OptionalSuperscript}\.\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}\d+[a-zA-Z]*{OptionalSuperscript}\.{AfterNumberDot}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         internal static readonly Regex PointPattern = new(
             $@"^{OptionalQuotePrefix}\d+[a-zA-Z]*{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -78,7 +87,14 @@ namespace Saga.Core.Services.Classify
 
         /// <summary>Numer ustępu/paragrafu kodeksu z grupą przechwytującą (do ParseParagraphNumber).</summary>
         internal static readonly Regex ParagraphNumberCapture = new(
-            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}(\d+[a-zA-Z]*{OptionalSuperscript})\.\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{OptionalParagraphMark}(\d+[a-zA-Z]*{OptionalSuperscript})\.{AfterNumberDot}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Znaczniki odnośników na początku ogona artykułu („Art. 13ja.[36)] 1. Podmiot…") — odnoszą się
+        /// do oznaczenia artykułu i stoją przed numerem pierwszego ustępu.
+        /// </summary>
+        internal static readonly Regex LeadingFootnoteMarkers = new(
+            $@"^(?:{FootnoteMarker}\s*)+", RegexOptions.Compiled);
 
         /// <summary>Numer punktu z grupą przechwytującą (do ParsePointNumber).</summary>
         internal static readonly Regex PointNumberCapture = new(

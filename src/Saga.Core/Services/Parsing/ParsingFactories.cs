@@ -385,10 +385,15 @@ namespace Saga.Core.Services.Parsing
                 return CreateImplicitParagraph(article);
             }
 
-            var match = ParagraphClassifier.ParagraphNumberCapture.Match(normalizedTail);
+            // Odnośnik przy oznaczeniu artykułu stoi przed numerem pierwszego ustępu — numer czytamy za nim,
+            // a znacznik zostaje na początku treści, jak każdy inny odnośnik.
+            var markers = ParagraphClassifier.LeadingFootnoteMarkers.Match(normalizedTail).Value;
+            var afterMarkers = normalizedTail[markers.Length..];
+
+            var match = ParagraphClassifier.ParagraphNumberCapture.Match(afterMarkers);
             if (match.Success)
             {
-                var contentText = StripParagraphPrefix(normalizedTail);
+                var contentText = markers + StripParagraphPrefix(afterMarkers);
                 var paragraph = new DtoParagraph
                 {
                     Parent = article,
@@ -396,7 +401,7 @@ namespace Saga.Core.Services.Parsing
                     Number = _numberService.Parse(match.Groups[1].Value),
                     IsImplicit = false
                 };
-                ApplyCodeParagraphRole(paragraph, normalizedTail);
+                ApplyCodeParagraphRole(paragraph, afterMarkers);
                 SetContentAndSegments(paragraph, contentText);
                 return paragraph;
             }

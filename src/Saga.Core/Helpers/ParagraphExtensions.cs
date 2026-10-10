@@ -27,52 +27,82 @@ namespace Saga.Core
         public static string GetFullText(this Paragraph paragraph)
         {
             var sb = new StringBuilder();
-            bool inSuperscript = false;
+            var superscript = new StringBuilder();
 
             foreach (var run in paragraph.Descendants<Run>())
             {
-                bool isSuperscript = IsSuperscriptRun(run);
+                var text = RunText(run);
 
-                if (isSuperscript && !inSuperscript)
+                // Przebieg bez tekstu (znaczniki pola: odnośnik wstawiony polem NOTEREF) nie rozcina indeksu
+                // górnego — inaczej „8" i „)" jednego odnośnika stają w dwóch nawiasach „[8][)]".
+                if (text.Length == 0)
+                    continue;
+
+                if (IsSuperscriptRun(run))
                 {
-                    sb.Append('[');
-                    inSuperscript = true;
-                }
-                else if (!isSuperscript && inSuperscript)
-                {
-                    sb.Append(']');
-                    inSuperscript = false;
+                    superscript.Append(text);
+                    continue;
                 }
 
-                foreach (var child in run.ChildElements)
-                {
-                    switch (child)
-                    {
-                        case Text text:
-                            sb.Append(text.Text);
-                            break;
-
-                        case SymbolChar sym
-                            when string.Equals(sym.Font?.Value, "Symbol", StringComparison.OrdinalIgnoreCase)
-                              && string.Equals(sym.Char?.Value, "F02D", StringComparison.OrdinalIgnoreCase):
-                            sb.Append('\u2013');
-                            break;
-
-                        case FootnoteReference fnRef:
-                            sb.Append(fnRef.Id?.Value);
-                            break;
-
-                        case TabChar:
-                            sb.Append('\t');
-                            break;
-                    }
-                }
+                FlushSuperscript(sb, superscript);
+                sb.Append(text);
             }
 
-            if (inSuperscript)
-                sb.Append(']');
-
+            FlushSuperscript(sb, superscript);
             return sb.ToString();
+        }
+
+        private static string RunText(Run run)
+        {
+            var sb = new StringBuilder();
+            foreach (var child in run.ChildElements)
+            {
+                switch (child)
+                {
+                    case Text text:
+                        sb.Append(text.Text);
+                        break;
+
+                    case SymbolChar sym
+                        when string.Equals(sym.Font?.Value, "Symbol", StringComparison.OrdinalIgnoreCase)
+                          && string.Equals(sym.Char?.Value, "F02D", StringComparison.OrdinalIgnoreCase):
+                        sb.Append('\u2013');
+                        break;
+
+                    case FootnoteReference fnRef:
+                        sb.Append(fnRef.Id?.Value);
+                        break;
+
+                    case TabChar:
+                        sb.Append('\t');
+                        break;
+                }
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Zamyka grupę indeksu górnego: nawias obejmuje samą treść, a odstępy sformatowane jako indeks
+        /// zostają zwykłym tekstem („4.[ ]W sprawach" → „4. W sprawach", „[7) ]w sprawach" → „[7)] w sprawach").
+        /// </summary>
+        private static void FlushSuperscript(StringBuilder sb, StringBuilder superscript)
+        {
+            if (superscript.Length == 0)
+                return;
+
+            var value = superscript.ToString();
+            superscript.Clear();
+
+            var core = value.Trim();
+            if (core.Length == 0)
+            {
+                sb.Append(value);
+                return;
+            }
+
+            var leading = value.Length - value.TrimStart().Length;
+            var trailing = value.Length - value.TrimEnd().Length;
+            sb.Append(value, 0, leading).Append('[').Append(core).Append(']').Append(value, value.Length - trailing, trailing);
         }
 
         private static bool IsSuperscriptRun(Run run)
