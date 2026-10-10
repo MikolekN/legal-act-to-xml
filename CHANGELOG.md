@@ -197,6 +197,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   tabela w środku cytowanego artykułu należy do jednostki, za którą stoi. Wcześniej pierwsza kolumna stawała
   się jednostkami cytatu albo tekstem, a reszta ginęła lub trafiała do następnego przepisu (16 tabel
   w 9 ustawach korpusu).
+- **Miara pokrycia tekstu** (`CorpusValidator --text-coverage`): dla każdego akapitu źródła sprawdza, czy jego
+  tekst doszedł do eksportu (porównanie na literach i cyfrach, bez oznaczenia jednostki i znaczników
+  odnośników); raport wg rodzaju aktu i lista niedoniesionych akapitów. Ustawy ogłoszone: 100 % akapitów.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

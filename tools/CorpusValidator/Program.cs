@@ -104,6 +104,11 @@ if (args.Length > 2 && args[0] == "--systematizing")
 if (args.Length > 3 && args[0] == "--compare-reference")
     return CorpusValidator.ReferenceStructureComparison.Run(args[1], args[2], args[3]);
 
+// Pokrycie tekstu: czy tekst każdego akapitu źródła doszedł do eksportu — miara akapitów pominiętych przez potok.
+//   dotnet run --project tools/CorpusValidator -- --text-coverage <root> <katalog-wyjsciowy>
+if (args.Length > 2 && args[0] == "--text-coverage")
+    return CorpusValidator.TextCoverageReport.Run(args[1], args[2]);
+
 if (args.Length > 0 && args[0] == "--entry-into-force")
 {
     var eifRoot = args.Length > 1 ? args[1] : "documents";
