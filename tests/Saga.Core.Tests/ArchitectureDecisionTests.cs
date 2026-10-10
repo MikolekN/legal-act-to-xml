@@ -901,6 +901,32 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "art_1__ust_1__czw", "art_2__czw" }, closing);
         }
 
+        // ============================================================
+        // ADR-0026: treść odnośnika w rejestrze dokumentu, miejsce w tekście jednostki
+        // ============================================================
+
+        [Fact]
+        public void Adr0026_Footnote_LivesInTheRegistry_AndIsExportedAtItsMarker()
+        {
+            using var stream = new MemoryStream(DocxFixtures.WithFootnotes(
+                ["Zmiany wymienionej ustawy zostały ogłoszone w Dz. U. poz. 2."],
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                "Art. 1. Ustawa (Dz. U. poz. 1, z późn. zm.{1}) określa zasady.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."));
+            var document = LegalDocumentParser.Parse(stream, "ustawa.docx",
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Model: treść w rejestrze, miejsce w tekście jednostki — znacznik z numerem jak w akcie.
+            Assert.Equal("1", Assert.Single(document.Footnotes).Symbol);
+            Assert.Contains("z późn. zm.[1)])", document.Articles.First().Paragraphs.Single().ContentText);
+
+            // Eksport: element w miejscu znacznika, a znacznika w tekście już nie ma.
+            var sentence = LegalDocumentConverter.Convert(document).Descendants()
+                .First(e => e.Name.LocalName == "zdanie");
+            Assert.Equal("odnosnik", Assert.Single(sentence.Elements()).Name.LocalName);
+            Assert.DoesNotContain("[", string.Concat(sentence.Nodes().OfType<XText>().Select(t => t.Value)));
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

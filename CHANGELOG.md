@@ -30,6 +30,11 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Podpis aktu**: formuła za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda") trafia do modelu
   (`LegalDocument.Signature`) i eksportu — `organ-podpisujacy` z `osoba` (`imie`, `nazwisko`) na końcu aktu oraz organ
   o roli `podpisujacy` w metadanych. Wcześniej ginęła jako „pominięty akapit nierozpoznany" ostatniego artykułu.
+- **Odnośniki (przypisy)**: treść przypisów z pliku Word trafia do modelu (`LegalDocument.Footnotes`), a eksport
+  osadza ją jako `odnosnik` w miejscu odwołania — w zdaniu i w tytule aktu, jak w przykładach autorów schematu.
+  Kolejne odwołanie do tego samego odnośnika (częste w tekstach jednolitych) to `odsylacz-do-odnosnika`.
+  Znaczniki `[N)]` znikają z treści zdań, tytułu i metadanych `Tytul` —
+  [ADR-0026](docs/adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md).
 
 ### Zmieniono
 - **eId jednostek redakcyjnych nie zawiera już ścieżki jednostek systematyzacyjnych**: artykuł

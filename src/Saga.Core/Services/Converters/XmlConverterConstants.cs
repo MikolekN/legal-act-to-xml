@@ -374,6 +374,7 @@ namespace Saga.Core.Services.Converters
             internal const string Num = "nr";
             internal const string Label = "label";
             internal const string TextSection = "p";
+            internal const string Superscript = "sup";
             internal const string eId = "eId";
             internal static readonly XName GUID = GuidNamespace + "GUID";
             internal const string MissingEId = "brak-eid";

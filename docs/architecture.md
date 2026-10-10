@@ -39,6 +39,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `ValidationMessage.cs` | Komunikaty diagnostyczne (Info/Warning/Error/Critical) |
 | `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje) |
 | `ActSignature.cs` | Formuła podpisu zamykająca akt: organ i osoba, jak stoją w akcie (`LegalDocument.Signature`) |
+| `Footnote.cs` | Odnośnik (przypis): numer jak w akcie i akapity treści; rejestr w `LegalDocument.Footnotes`, miejsce odwołania niesie znacznik `[N)]` w tekście jednostki — [ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md) |
 | `CommonPartType.cs` | Enum: `Intro` / `WrapUp` |
 | `LegalActType.cs` | Enum rodzaju aktu: `Statute`, `Bill`, `Regulation`, `Code`, `Ordinance`, `RegulatoryImpactAssessment`, `AmendingStatute`, `Announcement`, `Resolution`, `ExecutiveOrder`, `LocalLegalAct` |
 | `DocumentClassificationResult.cs` | Wynik klasyfikacji dokumentu (rodzaj aktu, pewność, sygnały, uzasadnienie) |
@@ -548,6 +549,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
 | `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń (eId gospodarza z segmentem `czw` — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)), tabele i treść osadzona |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
+| `FootnoteXmlConverter` | Przebieg po zbudowaniu treści: znacznik odnośnika w `zdanie`/`tytul`/`tekst` → `odnosnik` z treścią, kolejne odwołanie → `odsylacz-do-odnosnika` ([ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md)) |
 | `SignatureXmlConverter` | Podpis aktu: `organ-podpisujacy` z `osoba` (`imie`, `nazwisko`) za ostatnią jednostką i organ o roli `podpisujacy` w `Organy` |
 | `UnitAddressXml` | Jedyne miejsce piszące adres jednostki redakcyjnej: `eId` albo `brak-eid` z powodem, oraz `nr` (pusty, gdy oznaczenia nie odczytano) — [ADR-0024](adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md) |
 | `UnitLifecycleXml` | Jedyne miejsce piszące `wejscie-w-zycie`; zostawia przy elemencie obie daty jednostki (`UnitDates`), z których powstaje `okres` |
@@ -835,6 +837,7 @@ src/Saga.Model/
 ├── ValidationMessage.cs             # Komunikat diagnostyczny
 ├── JournalInfo.cs                   # Metadane publikatora (Dz.U.)
 ├── ActSignature.cs                  # Formuła podpisu aktu (organ, osoba)
+├── Footnote.cs                      # Odnośnik (przypis): numer i treść
 ├── PublisherType.cs                 # Enum typu publikatora
 ├── LegalActType.cs                  # Enum rodzaju aktu (11 wartości, w tym AmendingStatute/Announcement/Resolution/ExecutiveOrder/LocalLegalAct)
 ├── DocumentClassificationResult.cs  # Wynik klasyfikacji dokumentu (rodzaj aktu, pewność, sygnały)

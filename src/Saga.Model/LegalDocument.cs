@@ -120,6 +120,11 @@ namespace Saga.Model
         public ActSignature? Signature { get; set; }
 
         /// <summary>
+        /// Odnośniki aktu w kolejności odwołań. Miejsce odwołania niesie tekst jednostki (znacznik „[N)]").
+        /// </summary>
+        public List<Footnote> Footnotes { get; } = new();
+
+        /// <summary>
         /// Części aktu w kolejności (kodeksy mają ich kilka). Pierwsza zawsze istnieje i zawiera minimalną
         /// pełną hierarchię od Części do Oddziału; jednostki obecne w tekście mają IsImplicit = false.
         /// </summary>

@@ -76,6 +76,10 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
+            // Treść odnośników leży poza treścią aktu; znacznik odwołania zostaje w tekście bloku.
+            foreach (var footnote in block.Footnotes)
+                context.Document.Footnotes.Add(new Saga.Model.Footnote { Symbol = footnote.Symbol, Paragraphs = [.. footnote.Paragraphs] });
+
             if (IsMisstyledActUnit(context, classification, text))
                 classification = AsActContent(classification);
 

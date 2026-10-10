@@ -233,6 +233,10 @@ internal static class SchemaPlExportReport
 			if (!DatedElements.Contains(element.Name.LocalName))
 				continue;
 
+			// Zdania odnośnika nie wchodzą w życie osobno — plik referencyjny też ich nie datuje.
+			if (element.Ancestors().Any(ancestor => ancestor.Name.LocalName == "odnosnik"))
+				continue;
+
 			var value = element.Attribute("wejscie-w-zycie")?.Value;
 			if (value is null)
 			{

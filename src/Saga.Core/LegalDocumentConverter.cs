@@ -28,6 +28,8 @@ namespace Saga.Core.Services
             if (document.Signature is { } signature)
                 actElement.Add(SignatureXmlConverter.ToXml(signature));
 
+            FootnoteXmlConverter.Embed(actElement, document);
+
             TemporalDataXmlConverter.AssignPeriods(actElement, document);
 
             if (ContainsMathML(rootElement))
@@ -95,7 +97,7 @@ namespace Saga.Core.Services
                 metaElement.Add(Element(XmlConverterConstants.Metadata.DisplayAddressElement,
                     $"{document.SourceJournal.PublisherShort()} {document.SourceJournal.Year} poz. {document.SourceJournal.Positions.First()}"));
 
-            metaElement.Add(Element(XmlConverterConstants.Metadata.TitleElement, document.Title));
+            metaElement.Add(Element(XmlConverterConstants.Metadata.TitleElement, FootnoteXmlConverter.WithoutMarkers(document.Title)));
 
             metaElement.Add(Element(XmlConverterConstants.Metadata.TypeElement, KindCode(document.Type)));
 

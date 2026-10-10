@@ -33,6 +33,11 @@ namespace Saga.Core.Services.Converters
             foreach (var part in document.Parts)
                 root.Add(SerializePart(part));
 
+            foreach (var footnote in document.Footnotes)
+                root.Add(new XElement("footnote",
+                    new XAttribute("symbol", footnote.Symbol),
+                    footnote.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph))));
+
             if (document.Signature is { } signature)
                 root.Add(new XElement("signature",
                     new XAttribute("authority", signature.Authority),
