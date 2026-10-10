@@ -23,7 +23,8 @@ namespace Saga.Core.Services.Converters
                 && (paragraph.Amendment == null || paragraph.Amendment.Content == null))
                 return null;
 
-            var paragraphElement = GetParagraphElement(paragraph, isImplicit, isPathological);
+            // Oznaczenie liczbą rzymską („I.") jest spoza ZTP, ale wyliczenie pod takim ustępem zostaje zwykłe.
+            var paragraphElement = GetParagraphElement(paragraph, isImplicit, isPathological || HasRomanDesignation(paragraph));
 
             paragraphElement.Add(UnitAddressXml.Address(paragraph, addressed: !isImplicit && designated));
             paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, paragraph.Guid.ToString()));
@@ -86,6 +87,9 @@ namespace Saga.Core.Services.Converters
         // Use parent article to check for number of child paragraphs and assigned IsImplicit value as fallback.
         private static bool IsParagraphImplicit(Paragraph paragraph) =>
             paragraph.IsImplicitComputed == null ? paragraph.IsImplicit : paragraph.IsImplicitComputed.Value;
+
+        private static bool HasRomanDesignation(Paragraph paragraph) =>
+            paragraph.Number?.Value is { Length: > 0 } value && value.All(c => "IVXLCDM".Contains(c));
 
         // Wyliczenie ma co najmniej dwa punkty; jeden punkt i poziom pominięty (litery wprost w ustępie) są spoza ZTP.
         private static bool IsPathological(Paragraph paragraph) =>

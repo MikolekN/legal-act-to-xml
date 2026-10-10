@@ -433,6 +433,9 @@ namespace Saga.Core.Services.Parsing
         /// Obsługuje akapit Unknown: najpierw próbuje wywnioskować rodzaj z treści,
         /// a gdy brak wzorca — dołącza ValidationMessage do najgłębszej aktywnej encji.
         /// </summary>
+        /// <summary>Początek komunikatu walidacji o akapicie, którego potok nie rozpoznał i nie wbudował.</summary>
+        internal const string SkippedParagraphMessage = "Pominięty akapit nierozpoznany";
+
         private void HandleUnknown(ParsingContext context, string text, string? sourceStyleId, BlockLayoutInfo? layout)
         {
             // Krok 1: wywnioskuj z treści (ochrona przed edge cases LayeredClassifier)
@@ -491,7 +494,7 @@ namespace Saga.Core.Services.Parsing
 
             deepest?.ValidationMessages.Add(new ValidationMessage(
                 ValidationLevel.Warning,
-                $"Pominięty akapit nierozpoznany (styl: '{sourceStyleId ?? "brak"}')." +
+                $"{SkippedParagraphMessage} (styl: '{sourceStyleId ?? "brak"}')." +
                 $" Tekst: '{(text.Length > 80 ? text[..80] + "…" : text)}'"));
 
             Log.Warning("Akapit Unknown pominięty — brak dopasowania do wzorca. " +

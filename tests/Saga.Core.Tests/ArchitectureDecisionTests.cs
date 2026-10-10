@@ -992,6 +992,44 @@ namespace Saga.Core.Tests
                 xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt").Attribute("element-eId")?.Value);
         }
 
+        // ============================================================
+        // ADR-0028: wyliczenie w załączniku buduje potok aktu, pod artykułem zastępczym
+        // ============================================================
+
+        [Fact]
+        public void Adr0028_AnnexEnumeration_IsBuiltByTheActPipeline_OrLeftAsParagraphs()
+        {
+            string[] act =
+            [
+                "USTAWA", "z dnia 23 stycznia 2026 r.", "o krajowym systemie cyberbezpieczeństwa",
+                "Art. 1. Wymogi określają załączniki do ustawy.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+                "Załączniki do ustawy z dnia 23 stycznia 2026 r.",
+                "Załącznik nr 1",
+                "I. System zarządzania obejmuje co najmniej:",
+                "1) inwentaryzację produktów;",
+                "2) kontrolowanie wersji.",
+                "Załącznik nr 2",
+                "Wykaz sektorów ustala się odrębnie.",
+                "1) energia;",
+                "2) transport.",
+            ];
+            var document = LegalDocumentParser.ParseBlocks(act.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            // Treść będąca w całości wyliczeniem: jednostki adresowane od załącznika, oznaczenie rzymskie jako ustęp.
+            var unit = Assert.Single(document.Annexes[0].Content).Unit!;
+            Assert.Equal("zal_1__ust_I", unit.Id);
+            Assert.Equal(new[] { "zal_1__ust_I__pkt_1", "zal_1__ust_I__pkt_2" }, unit.Points.Select(p => p.Id));
+
+            // Wszystko albo nic: akapit spoza wyliczenia zostawia całą treść akapitami — nic nie ginie.
+            Assert.Equal(
+                new[] { "Wykaz sektorów ustala się odrębnie.", "1) energia;", "2) transport." },
+                document.Annexes[1].Content.Select(block => block.Text));
+
+            // Załącznik nie wchodzi w strukturę aktu.
+            Assert.Equal(new[] { "art_1", "art_2" }, document.Articles.Select(a => a.Id));
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

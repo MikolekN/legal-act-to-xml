@@ -175,6 +175,116 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Wyliczenie w załączniku jako jednostki
+        // ============================================================
+
+        // Układ przykładu autorów schematu (DU/2026/252, załącznik nr 4).
+        private static LegalDocument ParseWithEnumeration(params DocumentBlock[] extra) => Parse(
+        [
+            Block("Załączniki do ustawy z dnia 23 stycznia 2026 r.", AttachedToStyle),
+            Block("Załącznik nr 4", DesignationStyle),
+            Block("WYMOGI DLA SYSTEMU ZARZĄDZANIA", TitleStyle),
+            Block("I. System zarządzania bezpieczeństwem informacji obejmuje co najmniej:"),
+            Block("1) inwentaryzację produktów ICT;", "PKTpunkt"),
+            Block("2) zapewnienie ochrony informacji w zakresie:", "PKTpunkt"),
+            Block("a) ochrony fizycznej miejsc,", "LITlitera"),
+            Block("b) ochrony wykorzystującej oprogramowanie;", "LITlitera"),
+            Block("II. Podmiot zapewnia:"),
+            Block("1) szkolenia;", "PKTpunkt"),
+            Block("2) audyty.", "PKTpunkt"),
+            .. extra,
+        ]);
+
+        [Fact]
+        public void EnumerationInAnAnnex_BecomesUnitsAddressedFromTheAnnex()
+        {
+            var annex = Assert.Single(ParseWithEnumeration().Annexes);
+
+            var units = annex.Content.Select(block => block.Unit!).ToList();
+            Assert.Equal(new[] { "zal_4__ust_I", "zal_4__ust_II" }, units.Select(u => u.Id));
+            Assert.Equal(new[] { "I", "II" }, units.Select(u => u.Number!.Value));
+            Assert.Equal("System zarządzania bezpieczeństwem informacji obejmuje co najmniej:", units[0].ContentText);
+
+            Assert.Equal(new[] { "zal_4__ust_I__pkt_1", "zal_4__ust_I__pkt_2" }, units[0].Points.Select(p => p.Id));
+            Assert.Equal(
+                new[] { "zal_4__ust_I__pkt_2__lit_a", "zal_4__ust_I__pkt_2__lit_b" },
+                units[0].Points[1].Letters.Select(l => l.Id));
+
+            // Numeracja punktów zaczyna się w każdym ustępie od nowa — adresy się nie powtarzają.
+            Assert.Equal(new[] { "zal_4__ust_II__pkt_1", "zal_4__ust_II__pkt_2" }, units[1].Points.Select(p => p.Id));
+        }
+
+        [Fact]
+        public void AnnexWithTextOutsideTheEnumeration_KeepsItsParagraphs()
+        {
+            // Treść nie jest w całości wyliczeniem: nic nie zamieniamy, żeby nic nie zginęło.
+            var annex = Assert.Single(ParseWithEnumeration(Block("Objaśnienia do wymogów zawiera odrębny dokument.")).Annexes);
+
+            Assert.All(annex.Content, block => Assert.Null(block.Unit));
+            Assert.Equal(9, annex.Content.Count);
+            Assert.Equal("I. System zarządzania bezpieczeństwem informacji obejmuje co najmniej:", annex.Content[0].Text);
+        }
+
+        [Fact]
+        public void EnumerationInAnUnnumberedAnnex_StaysAsParagraphs()
+        {
+            // Załącznik bez numeru nie ma adresu — „pkt_1" wyglądałby jak punkt samego aktu.
+            var document = Parse(
+                Block("Załącznik do ustawy z dnia 23 stycznia 2026 r."),
+                Block("WYMOGI", TitleStyle),
+                Block("1) inwentaryzację produktów;", "PKTpunkt"),
+                Block("2) kontrolowanie wersji.", "PKTpunkt"));
+
+            Assert.All(Assert.Single(document.Annexes).Content, block => Assert.Null(block.Unit));
+        }
+
+        [Fact]
+        public void AnnexUnits_AreExportedInTheSegment_WithTheDateOfTheAct()
+        {
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 2 marca 2026 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 252", Role = BlockRole.JournalHeader },
+            };
+            blocks.AddRange(Act.Select(text => Block(text)));
+            blocks.AddRange(
+            [
+                Block("Załączniki do ustawy z dnia 23 stycznia 2026 r."),
+                Block("Załącznik nr 4"),
+                Block("I. System zarządzania obejmuje co najmniej:"),
+                Block("1) inwentaryzację produktów ICT;", "PKTpunkt"),
+                Block("2) kontrolowanie wersji.", "PKTpunkt"),
+                Block("II. Wymogi uznaje się za spełnione."),
+            ]);
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var segment = Assert.Single(Named(LegalDocumentConverter.Convert(document), "segment-zalacznika"));
+
+            // Oznaczenie rzymskie jest spoza ZTP; punkty pod nim to zwykłe punkty.
+            var paragraphs = segment.Elements().ToList();
+            Assert.Equal(new[] { "nie-ztp-ustep", "nie-ztp-ustep" }, paragraphs.Select(p => p.Name.LocalName));
+            Assert.Equal(new[] { "DU/2026/252__zal_4__ust_I", "DU/2026/252__zal_4__ust_II" }, paragraphs.Select(p => Attr(p, "eId")));
+            Assert.Equal("I", paragraphs[0].Elements().First(e => e.Name.LocalName == "nr").Value);
+
+            var points = Named(paragraphs[0], "punkt");
+            Assert.Equal(
+                new[] { "DU/2026/252__zal_4__ust_I__pkt_1", "DU/2026/252__zal_4__ust_I__pkt_2" },
+                points.Select(p => Attr(p, "eId")));
+
+            // Jednostki załącznika wchodzą w życie z aktem (ogłoszenie 2 marca 2026 r., 14 dni).
+            Assert.All(paragraphs.Concat(points), unit => Assert.Equal("2026-03-17", Attr(unit, "wejscie-w-zycie")));
+        }
+
+        [SchemaPlFact]
+        public void AnnexUnits_AreSchemaValid_InTheActBody()
+        {
+            var xml = LegalDocumentConverter.Convert(ParseWithEnumeration());
+
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
+        }
+
+        // ============================================================
         // Tabela w załączniku
         // ============================================================
 

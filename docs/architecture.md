@@ -39,7 +39,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `ValidationMessage.cs` | Komunikaty diagnostyczne (Info/Warning/Error/Critical) |
 | `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje) |
 | `ActSignature.cs` | Formuła podpisu zamykająca akt: organ i osoba, jak stoją w akcie (`LegalDocument.Signature`) |
-| `Annex.cs` | Załącznik aktu (`LegalDocument.Annexes`): wskazanie aktu, oznaczenie i numer (eId `zal_1`; bez numeru — bez eId), tytuł, treść w kolejności dokumentu (`AnnexBlock`: akapit albo tabela) |
+| `Annex.cs` | Załącznik aktu (`LegalDocument.Annexes`): wskazanie aktu, oznaczenie i numer (eId `zal_1`; bez numeru — bez eId), tytuł, treść w kolejności dokumentu (`AnnexBlock`: akapit, tabela albo jednostka redakcyjna) |
 | `ContentTable.cs` | Tabela w treści: wiersze (znacznik wiersza nagłówka) i komórki ze scaleniami i akapitami |
 | `Footnote.cs` | Odnośnik (przypis): numer jak w akcie i akapity treści; rejestr w `LegalDocument.Footnotes`, miejsce odwołania niesie znacznik `[N)]` w tekście jednostki — [ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md) |
 | `CommonPartType.cs` | Enum: `Intro` / `WrapUp` |
@@ -419,6 +419,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`ActSignatureParser`** | Rozpoznaje formułę podpisu za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda") — organ, inicjały, nazwisko. Formuła, po której stoi kolejny artykuł, podpisem aktu nie jest. |
 | **`AnnexBuilder`** | Składa załączniki z bloków zebranych za nagłówkiem „Załącznik(i) do ustawy z dnia …" (`ParsingContext.AnnexBlocks`): wskazanie aktu z wierszem „(Dz. U. …)", oznaczenie w osobnym wierszu (ze znacznikiem odnośnika albo dopiskiem „(uchylony)"), tytuł (styl tytułu albo wyśrodkowany pierwszy wiersz), treść. Treści nie rozkłada na jednostki — załącznik nie przechodzi przez klasyfikator akapitów. |
 | **`ContentTables`** | Składa `ContentTable` z bloków jednej tabeli źródłowej według `DocumentBlock.TableCell`; dalszy ciąg komórki scalonej w pionie nie jest osobną komórką |
+| **`AnnexUnits`** | Wyliczenie w treści załącznika jako jednostki redakcyjne: akapity przechodzą przez potok aktu pod artykułem zastępczym (niejawnym, z `AddressAnchor` = adres załącznika), a ustęp z oznaczeniem rzymskim („I.") powstaje tu wprost. Zwraca jednostki tylko wtedy, gdy cała treść jest wyliczeniem i potok niczego nie pominął — [ADR-0028](adr/0028-wyliczenie-w-zalaczniku-buduje-potok-aktu.md) |
 | **`ValidationReporter`** | Reporter diagnostyczny — statyczne metody do rejestrowania ostrzeżeń o konfliktach styl/treść i brakujących stylach na encjach DTO. |
 
 ### 6.1b Warstwa klasyfikacji akapitów (`Services/Classify/`)
@@ -946,6 +947,7 @@ src/Saga.Core/
     │   ├── DocumentMetadataCollector.cs  # Zbiera rodzaj/datę/przedmiot aktu ze strefy tytułowej
     │   ├── ActSignatureParser.cs      # Formuła podpisu za ostatnim przepisem
     │   ├── AnnexBuilder.cs            # Załączniki z bloków za nagłówkiem załącznika
+    │   ├── AnnexUnits.cs              # Wyliczenie w załączniku jako jednostki (potok aktu pod artykułem zastępczym)
     │   ├── ContentTables.cs           # Tabela treści z bloków tabeli źródłowej
     │   ├── JournalHeaderParser.cs    # Metadane publikatora z nagłówka strony (akty ogłoszone)
     │   ├── ParsingContext.cs        # Stan parsowania (mutowalny)

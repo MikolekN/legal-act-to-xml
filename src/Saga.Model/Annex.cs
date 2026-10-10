@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Saga.Model.EditorialUnits;
 
 #nullable enable
 
@@ -29,18 +30,26 @@ namespace Saga.Model
 
         public string? Title { get; set; }
 
-        /// <summary>Treść: akapity i tabele w kolejności dokumentu.</summary>
+        /// <summary>Treść: akapity, tabele i jednostki redakcyjne w kolejności dokumentu.</summary>
         public List<AnnexBlock> Content { get; set; } = new();
 
         /// <summary>Adres załącznika w akcie („zal_1"); pusty, gdy załącznik nie ma numeru (ADR-0024).</summary>
         public string Id => string.IsNullOrEmpty(Number) ? string.Empty : EIdSegment.Of(EIdPrefix, Number);
     }
 
-    /// <summary>Element treści załącznika: akapit tekstu albo tabela — zawsze jedno z dwojga.</summary>
+    /// <summary>
+    /// Element treści załącznika: akapit tekstu, tabela albo jednostka redakcyjna — zawsze jedno z trojga.
+    /// </summary>
     public class AnnexBlock
     {
         public string? Text { get; set; }
 
         public ContentTable? Table { get; set; }
+
+        /// <summary>
+        /// Jednostka najwyższego poziomu wyliczenia w załączniku („I. …" z punktami i literami pod sobą).
+        /// Jej adres zaczyna się od adresu załącznika (<c>zal_4__ust_I</c>).
+        /// </summary>
+        public Paragraph? Unit { get; set; }
     }
 }

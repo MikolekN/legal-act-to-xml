@@ -75,6 +75,8 @@ namespace Saga.Core.Services.Converters
                             cell.ColumnSpan > 1 ? new XAttribute("columnSpan", cell.ColumnSpan) : null,
                             cell.RowSpan > 1 ? new XAttribute("rowSpan", cell.RowSpan) : null,
                             cell.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph))))))));
+                else if (block.Unit is { } unit)
+                    element.Add(SerializeParagraph(unit));
                 else
                     element.Add(new XElement("paragraph", block.Text));
             }

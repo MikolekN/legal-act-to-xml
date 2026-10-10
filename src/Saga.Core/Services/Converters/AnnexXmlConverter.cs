@@ -1,5 +1,6 @@
 using System.Xml.Linq;
 using Saga.Model;
+using Saga.Model.EditorialUnits;
 using static Saga.Core.XLinqWrappers;
 
 namespace Saga.Core.Services.Converters
@@ -29,16 +30,32 @@ namespace Saga.Core.Services.Converters
             if (annex.Title is { Length: > 0 } title)
                 element.Add(Element(XmlConverterConstants.Attachments.TitleElement, Guid(), title));
 
-            var content = annex.Content.Select(ToContent).OfType<XElement>().ToList();
+            var content = annex.Content.SelectMany(ToContent).ToList();
             if (content.Count > 0)
                 element.Add(Element(XmlConverterConstants.Attachments.Segment, Guid(), content));
 
             return element;
         }
 
-        private static XElement? ToContent(AnnexBlock block) => block.Table is { } table
-            ? TableXmlConverter.ToXml(table)
-            : Element(XmlConverterConstants.Table.PlainText, Guid(), block.Text ?? string.Empty);
+        private static IEnumerable<XElement> ToContent(AnnexBlock block)
+        {
+            if (block.Table is { } table)
+                return TableXmlConverter.ToXml(table) is { } element ? [element] : [];
+
+            if (block.Unit is { } unit)
+                return ToUnit(unit);
+
+            return [Element(XmlConverterConstants.Table.PlainText, Guid(), block.Text ?? string.Empty)];
+        }
+
+        // Wyliczenie zaczęte od punktów nie ma ustępu — punkty stoją wtedy wprost w treści załącznika.
+        private static IEnumerable<XElement> ToUnit(Paragraph unit)
+        {
+            if (ParagraphXmlConverter.ToXml(unit) is not { } element)
+                return [];
+
+            return unit.IsImplicit ? element.Elements().ToList() : [element];
+        }
 
         private static XAttribute Guid() => new(XmlConverterConstants.Contents.GUID, System.Guid.NewGuid().ToString());
     }

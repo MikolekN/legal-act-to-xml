@@ -7,7 +7,7 @@ namespace Saga.Core.Services.Parsing
     /// <summary>
     /// Składa załączniki z bloków stojących za nagłówkiem „Załącznik(i) do ustawy z dnia …": wskazanie aktu,
     /// oznaczenie („Załącznik nr 1"), tytuł i treść — akapity i tabele w kolejności dokumentu.
-    /// Treść nie jest jeszcze rozkładana na jednostki (wyliczenia w załączniku zostają akapitami).
+    /// Treść będąca w całości wyliczeniem staje się jednostkami redakcyjnymi (<see cref="AnnexUnits"/>).
     /// </summary>
     internal static class AnnexBuilder
     {
@@ -35,6 +35,9 @@ namespace Saga.Core.Services.Parsing
             var annexes = new List<Annex>();
             var pendingAttachedTo = new List<string>();
             Annex? current = null;
+
+            // Bloki akapitów treści każdego załącznika — z nich powstają jednostki, jeśli treść jest wyliczeniem.
+            var paragraphs = new Dictionary<Annex, List<DocumentBlock>>();
 
             // Wiersz „(Dz. U. …)" domyka wskazanie aktu; tytuł stoi tuż za oznaczeniem, przed treścią.
             var attachedToOpen = false;
@@ -103,7 +106,14 @@ namespace Saga.Core.Services.Parsing
 
                 titleOpen = false;
                 Current().Content.Add(new AnnexBlock { Text = text });
+
+                if (!paragraphs.TryGetValue(current!, out var collected))
+                    paragraphs[current!] = collected = [];
+                collected.Add(block);
             }
+
+            foreach (var (annex, blocksOfAnnex) in paragraphs)
+                StructureContent(annex, blocksOfAnnex);
 
             return annexes;
 
@@ -117,6 +127,19 @@ namespace Saga.Core.Services.Parsing
                 annexes.Add(current);
                 return current;
             }
+        }
+
+        /// <summary>
+        /// Załącznik, którego cała treść to akapity wyliczenia, dostaje zamiast nich jednostki. Treść z tabelą,
+        /// dopiskiem albo choć jednym akapitem spoza wyliczenia zostaje, jaka była.
+        /// </summary>
+        private static void StructureContent(Annex annex, List<DocumentBlock> blocks)
+        {
+            if (annex.Content.Count != blocks.Count || annex.Content.Any(block => block.Text is null))
+                return;
+
+            if (AnnexUnits.TryBuild(blocks, annex.Id) is { } units)
+                annex.Content = units.Select(unit => new AnnexBlock { Unit = unit }).ToList();
         }
 
         // Tytuł ma własny styl; bez niego tytułem jest pierwszy wiersz, jeśli jest wyśrodkowany (styl bywa

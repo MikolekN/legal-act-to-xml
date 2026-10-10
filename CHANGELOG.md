@@ -179,6 +179,12 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Formuła zmieniająca z określeniem ustawy**: „W ustawie budżetowej na rok 2024 z dnia 18 stycznia 2024 r.
   (Dz. U. poz. 122) wprowadza się następujące zmiany" jest przepisem zmieniającym — wcześniej formuła musiała
   brzmieć dosłownie „W ustawie z dnia", więc cytaty takiego przepisu nie wskazywały aktu zmienianego.
+- **Wyliczenie w załączniku jako jednostki** ([ADR-0028](docs/adr/0028-wyliczenie-w-zalaczniku-buduje-potok-aktu.md)):
+  załącznik, którego cała treść to wyliczenie („I. … 1) … a) …"), wychodzi jednostkami redakcyjnymi adresowanymi
+  od załącznika (`DU/2026/252__zal_4__ust_I__pkt_1`) z datą wejścia w życie aktu; ustęp z oznaczeniem rzymskim
+  to `nie-ztp-ustep`. Treść mieszana i załącznik bez numeru zostają akapitami. Przykład DU/2026/252 zgadza się
+  we wszystkich 2280 jednostkach. **Pełna walidacja 9 takich dokumentów zgłasza teraz ograniczenie `AktGUID`**
+  — tak samo jak przykład autorów schematu (dowolna treść `segment-zalacznika`); szczegóły w ADR.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

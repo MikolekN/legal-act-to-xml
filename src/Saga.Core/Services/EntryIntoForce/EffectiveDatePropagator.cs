@@ -18,6 +18,10 @@ namespace Saga.Core.Services.EntryIntoForce
             var visited = new HashSet<BaseEntity>(ReferenceEqualityComparer.Instance);
             foreach (var part in document.Parts)
                 Paint(part, general, exceptions, visited);
+
+            // Jednostki w załącznikach wchodzą w życie z aktem; wyjątki klauzuli wskazują dziś tylko jednostki aktu.
+            foreach (var unit in document.Annexes.SelectMany(annex => annex.Content).Select(block => block.Unit).OfType<BaseEntity>())
+                Paint(unit, general, exceptions, visited);
         }
 
         private static void Paint(

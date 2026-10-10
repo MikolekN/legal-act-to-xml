@@ -46,5 +46,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0025](0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md) | Część wspólna zamykająca wyliczenie ma eId: adres gospodarza i segment `czw` (`art_51__ust_1__czw`), jak w przykładach autorów schematu | Accepted | 2026-10-10 |
 | [0026](0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md) | Treść odnośnika w rejestrze dokumentu (`LegalDocument.Footnotes`), miejsce — znacznik `[N)]` w tekście jednostki; eksport osadza `odnosnik` w miejscu znacznika, kolejne odwołanie to `odsylacz-do-odnosnika` | Accepted | 2026-10-10 |
 | [0027](0027-prefiks-aktu-dopisuje-eksport.md) | Prefiks aktu w eId (`DU/2024/928__art_1`) dopisuje eksport jednym przebiegiem; jednostka cytowana i cel komendy niosą prefiks aktu zmienianego; `BaseEntity.Id` zostaje adresem w akcie | Accepted | 2026-10-10 |
+| [0028](0028-wyliczenie-w-zalaczniku-buduje-potok-aktu.md) | Wyliczenie w załączniku buduje potok aktu pod artykułem zastępczym zakotwiczonym w adresie załącznika (`zal_4__ust_I__pkt_1`); wszystko albo nic — treść mieszana zostaje akapitami; oznaczenie rzymskie tylko w załączniku | Accepted | 2026-10-10 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.
