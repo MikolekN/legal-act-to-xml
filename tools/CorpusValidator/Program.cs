@@ -104,6 +104,11 @@ if (args.Length > 2 && args[0] == "--systematizing")
 if (args.Length > 3 && args[0] == "--compare-reference")
     return CorpusValidator.ReferenceStructureComparison.Run(args[1], args[2], args[3]);
 
+// Porównanie dwóch przebiegów --xml-corpus (przed zmianą i po niej): zmienione pliki, elementy, próbka wierszy.
+//   dotnet run --project tools/CorpusValidator -- --compare-exports <przed> <po> [<raport.txt>]
+if (args.Length > 2 && args[0] == "--compare-exports")
+    return CorpusValidator.ExportComparison.Run(args[1], args[2], args.Length > 3 ? args[3] : null);
+
 // Pokrycie tekstu: czy tekst każdego akapitu źródła doszedł do eksportu — miara akapitów pominiętych przez potok.
 //   dotnet run --project tools/CorpusValidator -- --text-coverage <root> <katalog-wyjsciowy>
 if (args.Length > 2 && args[0] == "--text-coverage")

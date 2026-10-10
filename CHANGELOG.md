@@ -205,6 +205,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   domyślnego `USTAWA`. Nagłówek rodzaju ze znacznikiem odnośnika na końcu („Obwieszczenie Ministra …[1)]") jest
   rozpoznawany jak bez niego, a odnośnik staje się elementem w `rodzaj-aktu`. W korpusie 11 dokumentów przestało
   uchodzić za ustawy (i za wydane przez Sejm); wszystkie 242 dokumenty z `Rodzaj` = `USTAWA` to ustawy.
+- **Porównanie dwóch eksportów** (`CorpusValidator --compare-exports <przed> <po>`): dla dwóch przebiegów
+  `--xml-corpus` podaje zmienione pliki, zmianę liczby wystąpień każdego elementu i próbkę zmienionych wierszy,
+  z pominięciem losowych identyfikatorów GUID — miara „co ta zmiana zrobiła z wyjściem".
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
