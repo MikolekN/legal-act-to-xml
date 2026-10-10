@@ -34,12 +34,12 @@ namespace Saga.Core.Services.Converters
 
             var pointElement = GetPointElement(isPathological);
 
-            pointElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, point.Id));
+            pointElement.Add(UnitAddressXml.Address(point, UnitAddressXml.HasDesignation(point)));
             pointElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, point.Guid.ToString()));
 
             UnitLifecycleXml.Apply(pointElement, point);
 
-            pointElement.Add(Element(XmlConverterConstants.Contents.Num, point.Number?.Designation ?? "UNKNOWN"));
+            pointElement.Add(UnitAddressXml.Number(point));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(point.TextSegments, previousSentenceContext, textSectionElement);
@@ -64,8 +64,10 @@ namespace Saga.Core.Services.Converters
                 ? XmlConverterConstants.Contents.NonZtpPoint
                 : XmlConverterConstants.Contents.Point);
 
-        // Wyliczenie ma co najmniej dwie litery; jedna litera i poziom pominięty (tirety wprost w punkcie) są spoza ZTP.
+        // Wyliczenie ma co najmniej dwie litery; jedna litera, poziom pominięty (tirety wprost w punkcie)
+        // i punkt bez odczytanego oznaczenia są spoza ZTP.
         private static bool IsPathological(Point point, bool isParentPathological) =>
-            isParentPathological || point.Letters.Count == 1 || point.Letters.Any(letter => letter.IsImplicit);
+            isParentPathological || point.Letters.Count == 1 || point.Letters.Any(letter => letter.IsImplicit) ||
+            !UnitAddressXml.HasDesignation(point);
     }
 }

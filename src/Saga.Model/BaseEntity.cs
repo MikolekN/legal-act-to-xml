@@ -102,17 +102,22 @@ namespace Saga.Model
 
         /// <summary>
         /// Lokalny segment identyfikatora (np. "art_10" albo "lit_a").
+        /// Jednostka bez odczytanego oznaczenia nie wnosi segmentu: jej adresem jest najbliższy oznaczony
+        /// przodek, a jednostki pod nią adresują się względem niego (ADR-0024).
         /// Można nadpisać w klasach pochodnych, gdy format różni się.
         /// </summary>
         protected virtual string GetLocalIdSegment() =>
-            string.IsNullOrEmpty(EIdPrefix) ? string.Empty : EIdSegment.Of(EIdPrefix, Number?.Designation);
+            string.IsNullOrEmpty(EIdPrefix) || string.IsNullOrEmpty(Number?.Designation)
+                ? string.Empty
+                : EIdSegment.Of(EIdPrefix, Number.Designation);
 
         /// <summary>
         /// Hierarchiczne, stabilne i parsowalne Id (eId) budowane od korzenia w dół,
         /// używa separatora "__" zgodnie z założeniem (np. "art_10__ust_2__pkt_3").
         /// eId jednostki redakcyjnej kończy się na artykule — ścieżka jednostek systematyzacyjnych
         /// do niego nie wchodzi (ADR-0017); jednostka systematyzacyjna niesie ścieżkę swoich
-        /// jawnych przodków systematyzacyjnych. Jednostki niejawne (<see cref="IsImplicit"/>) są pomijane.
+        /// jawnych przodków systematyzacyjnych. Jednostki niejawne (<see cref="IsImplicit"/>) i jednostki
+        /// bez odczytanego oznaczenia są pomijane.
         /// Jednostka cytowana w nowelizacji zaczyna się od adresu celu w akcie zmienianym
         /// (<see cref="AddressAnchor"/> korzenia cytatu).
         /// </summary>

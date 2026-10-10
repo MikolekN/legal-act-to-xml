@@ -210,6 +210,8 @@ Format: `art_5__ust_2__pkt_3__lit_a__tir_1`
 - Separator segmentów: `__` (double underscore)
 - Separator prefiks-numer: `_` (single underscore)
 - Jednostki implicit (`IsImplicit = true`) są **pomijane** w eId
+- Jednostka bez odczytanego oznaczenia też nie wnosi segmentu; w eksporcie nie ma `eId`, tylko
+  `brak-eid="jednostka-nieoznaczona"` — [ADR-0024](adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md)
 - eId jednostki redakcyjnej nie zawiera ścieżki jednostek systematyzacyjnych (`art_5`, nie
   `rozdz_1__art_5`); jednostka systematyzacyjna niesie ścieżkę jawnych przodków (`rozdz_3__oddz_1`)
   — [ADR-0017](adr/0017-eid-jednostki-redakcyjnej-bez-sciezki-systematyzacyjnej.md)
@@ -541,6 +543,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
 | `CommonPartXmlConverter`, `EmbeddedContentXmlConverter` | Części wspólne wyliczeń, tabele i treść osadzona |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
+| `UnitAddressXml` | Jedyne miejsce piszące adres jednostki redakcyjnej: `eId` albo `brak-eid` z powodem, oraz `nr` (pusty, gdy oznaczenia nie odczytano) — [ADR-0024](adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md) |
 | `UnitLifecycleXml` | Jedyne miejsce piszące `wejscie-w-zycie`; zostawia przy elemencie obie daty jednostki (`UnitDates`), z których powstaje `okres` |
 | `SchemaPlValidator` | Walidacja eksportu wobec lokalnego `schema/schemaPL.xsd` (narzędzia i testy `[SchemaPlFact]`): cały dokument albo treść aktu bez nagłówka, element po elemencie wobec deklaracji w typie aktu |
 

@@ -13,7 +13,8 @@ namespace Saga.Core.Services.Converters
         internal static XElement? ToXml(Paragraph paragraph, SentenceContext? previousSentenceContext = null)
         {
             var isImplicit = IsParagraphImplicit(paragraph);
-            var isPathological = IsPathological(paragraph);
+            var designated = UnitAddressXml.HasDesignation(paragraph);
+            var isPathological = IsPathological(paragraph) || (!isImplicit && !designated);
 
             // Parsowane dokumenty potrafią zawierać puste ustępy
             if (isImplicit
@@ -24,15 +25,13 @@ namespace Saga.Core.Services.Converters
 
             var paragraphElement = GetParagraphElement(paragraph, isImplicit, isPathological);
 
-            if (!isImplicit)
-                paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, paragraph.Id));
-
+            paragraphElement.Add(UnitAddressXml.Address(paragraph, addressed: !isImplicit && designated));
             paragraphElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, paragraph.Guid.ToString()));
 
             UnitLifecycleXml.Apply(paragraphElement, paragraph);
 
             if (!isImplicit)
-                paragraphElement.Add(Element(XmlConverterConstants.Contents.Num, paragraph.Number?.Designation ?? "UNKNOWN"));
+                paragraphElement.Add(UnitAddressXml.Number(paragraph));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(paragraph.TextSegments, previousSentenceContext, textSectionElement);
@@ -54,7 +53,7 @@ namespace Saga.Core.Services.Converters
 
         private static XElement GetParagraphElement(Paragraph paragraph, bool isImplicit, bool isPathological)
         {
-            var isCodeParagraph = paragraph.Role == Paragraph.CodeParagraphRole;
+            var isCodeParagraph = IsCodeParagraph(paragraph);
 
             return (isImplicit, isPathological) switch
             {
@@ -72,6 +71,14 @@ namespace Saga.Core.Services.Converters
                     : XmlConverterConstants.Contents.Paragraph)
             };
         }
+
+        // Akapit bez oznaczenia między paragrafami („§") należy do tej samej rodziny elementów co one —
+        // artykuł nie może mieszać ustępów z paragrafami kodeksu.
+        private static bool IsCodeParagraph(Paragraph paragraph) =>
+            paragraph.Role == Paragraph.CodeParagraphRole ||
+            (!UnitAddressXml.HasDesignation(paragraph) &&
+             paragraph.Article is { } article &&
+             article.Paragraphs.Any(sibling => sibling.Role == Paragraph.CodeParagraphRole));
 
         // Use parent article to check for number of child paragraphs and assigned IsImplicit value as fallback.
         private static bool IsParagraphImplicit(Paragraph paragraph) =>

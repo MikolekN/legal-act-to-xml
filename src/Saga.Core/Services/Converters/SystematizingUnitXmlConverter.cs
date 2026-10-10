@@ -50,7 +50,7 @@ namespace Saga.Core.Services.Converters
             if (systematizing.IsImplicit)
             {
                 element = Element(names.Implicit,
-                    new XAttribute(XmlConverterConstants.Contents.MissingEId, XmlConverterConstants.Contents.UnmarkedUnit),
+                    UnitAddressXml.Address(unit, addressed: false),
                     new XAttribute(XmlConverterConstants.Contents.GUID, unit.Guid.ToString()));
                 UnitLifecycleXml.Apply(element, unit);
             }

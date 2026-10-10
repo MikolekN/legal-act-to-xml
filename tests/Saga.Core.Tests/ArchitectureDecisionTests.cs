@@ -843,6 +843,36 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "nr", "p", "nie-ztp-litera", "nie-ztp-litera" }, exported.Elements().Select(e => e.Name.LocalName));
         }
 
+        // ============================================================
+        // ADR-0024: jednostka bez odczytanego oznaczenia nie ma eId
+        // ============================================================
+
+        [Fact]
+        public void Adr0024_UnitWithoutADesignation_HasNoEId_OnlyAReason()
+        {
+            var document = LegalDocumentParser.ParseBlocks(
+            [
+                new() { Text = "Art. 1. 1. Opłatę oblicza się według wzoru." },
+                new() { Text = "w którym poszczególne symbole oznaczają:", StyleId = "UST" },
+                new() { Text = "1) K - kwotę pożyczki;" },
+                new() { Text = "2) R - liczbę dni w roku." },
+                new() { Text = "2. Opłaty nie pobiera się od osób fizycznych." },
+            ]);
+
+            // Model: ustęp bez numeru jest w adresie przezroczysty — jego punkty adresują się od artykułu.
+            var unnumbered = document.Articles.Single().Paragraphs[1];
+            Assert.Null(unnumbered.Number);
+            Assert.Equal("art_1", unnumbered.Id);
+            Assert.Equal(new[] { "art_1__pkt_1", "art_1__pkt_2" }, unnumbered.Points.Select(p => p.Id));
+
+            // Eksport: bez eId i bez udawanego oznaczenia, za to z nazwanym powodem.
+            var exported = LegalDocumentConverter.Convert(document).Descendants()
+                .Single(e => e.Name.LocalName == "nie-ztp-ustep");
+            Assert.Null(exported.Attribute("eId"));
+            Assert.Equal("jednostka-nieoznaczona", exported.Attribute("brak-eid")?.Value);
+            Assert.Equal(string.Empty, exported.Elements().First(e => e.Name.LocalName == "nr").Value);
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

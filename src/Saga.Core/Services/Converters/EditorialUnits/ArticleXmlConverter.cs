@@ -19,12 +19,12 @@ namespace Saga.Core.Services.Converters
                 ? XmlConverterConstants.Contents.CodeArticle
                 : XmlConverterConstants.Contents.Article);
 
-            articleElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, article.Id));
+            articleElement.Add(UnitAddressXml.Address(article, UnitAddressXml.HasDesignation(article)));
             articleElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, article.Guid.ToString()));
 
             UnitLifecycleXml.Apply(articleElement, article);
 
-            articleElement.Add(Element(XmlConverterConstants.Contents.Num, article.Number == null ? "UNKNOWN" : article.Number.Designation));
+            articleElement.Add(UnitAddressXml.Number(article));
 
             foreach (var paragraph in article.Paragraphs)
                 articleElement.Add(ParagraphXmlConverter.ToXml(paragraph));

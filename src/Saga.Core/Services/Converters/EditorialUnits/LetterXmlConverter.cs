@@ -34,12 +34,12 @@ namespace Saga.Core.Services.Converters
 
             var letterElement = GetLetterElement(isPathological);
 
-            letterElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, letter.Id));
+            letterElement.Add(UnitAddressXml.Address(letter, UnitAddressXml.HasDesignation(letter)));
             letterElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, letter.Guid.ToString()));
 
             UnitLifecycleXml.Apply(letterElement, letter);
 
-            letterElement.Add(Element(XmlConverterConstants.Contents.Num, letter.Number == null ? "UNKNOWN" : letter.Number.Designation));
+            letterElement.Add(UnitAddressXml.Number(letter));
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(letter.TextSegments, previousSentenceContext, textSectionElement);
@@ -68,6 +68,8 @@ namespace Saga.Core.Services.Converters
         {
             // TODO: unhandled if the structure of letter is not respected - code doesn't expect that e.g. secondary tiret can appear in a letter
             if (isParentPathological || letter.Tirets.Count == 1) // Every letter is expected to have no tirets or more than 1 tiret
+                return true;
+            if (!UnitAddressXml.HasDesignation(letter)) // litera bez odczytanego oznaczenia
                 return true;
             else
                 return false;

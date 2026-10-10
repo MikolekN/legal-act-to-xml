@@ -82,6 +82,13 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Artykuł z paragrafami („§") w oddziale to `artykul-kodeksu`**: schemat rozróżnia tam artykuł ustawy
   i artykuł kodeksu, więc `artykul` z `paragraf-kodeksu` był w rozdziale niezgodny. Dotyczy kodeksów
   i rozdziałów kodeksu cytowanych w nowelizacji; wprost w akcie i na szczycie cytatu element zostaje `artykul`.
+- **Jednostka bez odczytanego oznaczenia nie ma eId**: zamiast `nr` `UNKNOWN` i eId z pustym segmentem
+  (`art_16f__ust`) wychodzi jako `nie-ztp-*` z pustym `nr` i `brak-eid="jednostka-nieoznaczona"`, a jednostki
+  pod nią adresują się od najbliższego oznaczonego przodka (`art_16f__pkt_1`). Akapit bez oznaczenia obok
+  paragrafów („§") to `nie-ztp-paragraf-kodeksu` —
+  [ADR-0024](docs/adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md).
+- **`brak-eid` na jedynym ustępie artykułu**: `ustep-n` i `paragraf-kodeksu-n` nazywają powód braku eId
+  (`jednostka-nieoznaczona`), jak jednostki systematyzacyjne `-n` i przykłady autorów schematu.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

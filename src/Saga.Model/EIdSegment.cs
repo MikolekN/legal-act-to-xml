@@ -15,7 +15,7 @@ namespace Saga.Model
         /// <summary>
         /// Segment „levelType_oznaczenie".
         /// Indeks górny zostaje w notacji „5[1]" (ADR-0019).
-        /// Przy braku oznaczenia sam levelType (jednostka zostaje w adresie).
+        /// Jednostka bez oznaczenia segmentu nie ma (ADR-0024) — wywołujący jej tu nie przekazuje.
         /// </summary>
         public static string Of(string levelType, string? designation) =>
             string.IsNullOrEmpty(designation) ? levelType : $"{levelType}_{designation}";
