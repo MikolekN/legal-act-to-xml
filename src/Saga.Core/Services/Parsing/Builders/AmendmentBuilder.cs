@@ -392,6 +392,7 @@ namespace Saga.Core.Services.Parsing.Builders
                 if (_currentParagraph.Points.Count == 0)
                     ParsingFactories.AttachIntroCommonPart(_currentParagraph);
 
+                CommonPartPlacement.BeforeNextItem(_currentParagraph, _currentParagraph.Points);
                 _currentParagraph.Points.Add(point);
             }
             else
@@ -425,6 +426,7 @@ namespace Saga.Core.Services.Parsing.Builders
                 if (_currentPoint.Letters.Count == 0)
                     ParsingFactories.AttachIntroCommonPart(_currentPoint);
 
+                CommonPartPlacement.BeforeNextItem(_currentPoint, _currentPoint.Letters);
                 _currentPoint.Letters.Add(letter);
             }
             else
@@ -488,7 +490,13 @@ namespace Saga.Core.Services.Parsing.Builders
                 parent?.Id ?? string.Empty,
                 para.Text)
             {
-                Parent = parent
+                Parent = parent,
+                ListItemType = commonPartOf switch
+                {
+                    AmendmentTargetKind.Letter => UnitType.Letter,
+                    AmendmentTargetKind.Tiret => UnitType.Tiret,
+                    _ => UnitType.Point,
+                }
             };
 
             if (parent is IHasCommonParts hasCommonParts)

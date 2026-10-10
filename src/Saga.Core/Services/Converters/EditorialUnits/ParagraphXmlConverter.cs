@@ -43,8 +43,11 @@ namespace Saga.Core.Services.Converters
 
             EmbeddedContentXmlConverter.AppendEmbedded(paragraphElement, paragraph);
 
-            foreach (var point in paragraph.Points)
-                PointXmlConverter.AppendTo(paragraphElement, point, isPathological, contextToPass);
+            for (var i = 0; i < paragraph.Points.Count; i++)
+            {
+                PointXmlConverter.AppendTo(paragraphElement, paragraph.Points[i], isPathological, contextToPass);
+                AppendInterrupting(paragraph, paragraphElement, itemsSoFar: i + 1, contextToPass);
+            }
 
             HandleCommonPart(paragraph, paragraphElement, contextToPass);
 

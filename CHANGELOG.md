@@ -92,6 +92,13 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **eId części wspólnej**: `czesc-wspolna-punkt`, `-litera` i `-tiret` dostają adres gospodarza z segmentem
   `czw` (`art_51__ust_1__czw`, w artykule z jednym ustępem `art_16__czw`), jak w przykładach autorów schematu —
   [ADR-0025](docs/adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md).
+- **Część wspólna, po której wyliczenie biegnie dalej**: stojąca tuż za literami punktu, a przed kolejnym
+  punktem, zamyka litery (`czesc-wspolna-litera` w punkcie), choć styl akapitu mówi „część wspólna punktów";
+  w pozostałych przypadkach przerywa wyliczenie i wychodzi w swoim miejscu jako `nie-ztp-czesc-wspolna-punkt`
+  / `-litera` z `brak-eid="nie-ztp-wielokrotna-czesc-wspolna"`. Wcześniej trafiała na koniec wyliczenia,
+  a druga część wspólna tego samego ustępu ginęła albo stawała się tiretem.
+- **Część wspólna jako treść nowelizacji** („dodaje się część wspólną w brzmieniu:") jest cytatem strukturalnym
+  z `czesc-wspolna-*` pod adresem celu (`art_18zg__ust_2__czw`) i funkcją `dodaj-w`, a nie cytatem tekstowym.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

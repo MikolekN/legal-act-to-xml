@@ -407,6 +407,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`AmendmentCollector`** | Bufor nowelizacji — zbiera akapity treści nowelizacji od momentu wejścia (trigger) do momentu powrotu do stylu ustawy matki. |
 | **`AmendmentFinalizer`** | Finalizator nowelizacji — wykrywa typ operacji (Modification/Insertion/Repeal), tworzy obiekt `Amendment`, łączy z JournalInfo, przypisuje do encji-właściciela. Ostrzega, gdy jednostek treści nie da się przypisać wyliczonym celom. |
 | **`AmendmentTargetPairing`** | Przypisuje jednostki treści nowelizacji jej celom — po oznaczeniu, a przy rozjeździe oznaczeń i równej liczbie po kolejności. Korzystają z niego eksport (komenda na cel) i walidacja finalizatora. |
+| **`CommonPartPlacement`** | Rozstrzyga część wspólną, po której przychodzi kolejna pozycja tego samego wyliczenia: zamyka niższe wyliczenie albo przerywa bieżące (`CommonPart.InterruptsAfter`). Wołany przez `StructureProcessor` i `AmendmentBuilder`. |
 | **`ValidationReporter`** | Reporter diagnostyczny — statyczne metody do rejestrowania ostrzeżeń o konfliktach styl/treść i brakujących stylach na encjach DTO. |
 
 ### 6.1b Warstwa klasyfikacji akapitów (`Services/Classify/`)
@@ -768,6 +769,12 @@ Encje implicit:
 - W eksporcie: wprowadzenie zostaje zdaniem gospodarza (pozycje wyliczenia są jego dalszymi fragmentami), a część
   wspólna po wyliczeniu to element `czesc-wspolna-punkt` / `-litera` / `-tiret` z eId gospodarza i segmentem `czw`
   — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)
+- Część wspólna, po której stoi kolejna pozycja tego samego wyliczenia, jest rozstrzygana przy tej pozycji
+  (`CommonPartPlacement`, w treści aktu i nowelizacji): jeśli tuż przed nią stało niższe wyliczenie bez zamknięcia,
+  zamyka je (styl wskazał o poziom za wysoko); inaczej przerywa wyliczenie (`CommonPart.InterruptsAfter`) i wychodzi
+  w tym miejscu jako `nie-ztp-czesc-wspolna-*` z `brak-eid="nie-ztp-wielokrotna-czesc-wspolna"`
+- Część wspólna jako jedyna treść nowelizacji („dodaje się część wspólną w brzmieniu:") to cytat strukturalny
+  z `czesc-wspolna-*` pod adresem celu (`art_18zg__ust_2__czw`), funkcja `dodaj-w`
 
 ### 10.4 Null safety w OpenXml
 
@@ -913,6 +920,7 @@ src/Saga.Core/
     │   ├── AmendmentCollector.cs    # Bufor akapitów nowelizacji
     │   ├── AmendmentFinalizer.cs    # Finalizator: typ operacji, Assignment
     │   ├── AmendmentTargetPairing.cs  # Przypisanie jednostek treści do celów nowelizacji
+    │   ├── CommonPartPlacement.cs     # Część wspólna, po której wyliczenie biegnie dalej
     │   ├── ValidationReporter.cs    # Reporter diagnostyczny (statyczne metody)
     │   └── Builders/
     │       ├── IEntityBuilder.cs    # Kontrakt buildera

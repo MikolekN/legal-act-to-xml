@@ -548,7 +548,8 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Tworzy CommonPart typu WrapUp na podstawie akapitu po liscie.
-        /// Warunki wstepne: rodzic implementuje IHasCommonParts i nie ma jeszcze WrapUp.
+        /// Warunki wstepne: rodzic implementuje IHasCommonParts i nie ma jeszcze czesci zamykajacej wyliczenie
+        /// (czesci przerywajace wyliczenie jej nie blokuja).
         /// Zwraca true, gdy dodano CommonPart.
         /// </summary>
         public static bool AttachWrapUpCommonPart(BaseEntity parent, string text)
@@ -556,7 +557,7 @@ namespace Saga.Core.Services.Parsing
             if (parent is not IHasCommonParts hasCommonParts) return false;
             if (string.IsNullOrWhiteSpace(text)) return false;
 
-            if (hasCommonParts.CommonParts.Any(cp => cp.Type == CommonPartType.WrapUp))
+            if (hasCommonParts.CommonParts.Any(CommonPartPlacement.IsClosing))
                 return false;
 
             var contentText = StripWrapUpPrefix(text);

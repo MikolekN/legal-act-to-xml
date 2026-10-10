@@ -129,7 +129,10 @@ namespace Saga.Core.Services.Converters
         private static string BuildActUri(Amendment amendment) =>
             XmlConverterConstants.ELIUrl + "eli/" + (amendment.TargetLegalAct.GetELIStrings().FirstOrDefault() ?? string.Empty);
 
-        private static void ApplyAttributes(XElement element, Amendment amendment, Command command, bool isStructural)
+        /// <param name="function">Funkcja inna niż wynikająca z rodzaju operacji.</param>
+        /// <param name="address">Adres inny niż cel komendy — gdy cytat zastępuje jednostkę pod celem.</param>
+        private static void ApplyAttributes(XElement element, Amendment amendment, Command command, bool isStructural,
+            string? function = null, string? address = null)
         {
             XNamespace now = XmlConverterConstants.AmendmentNamespace;
 
@@ -143,9 +146,13 @@ namespace Saga.Core.Services.Converters
             // if (amendment.RefNowGuid != Guid.Empty)
             // element.Add(new XAttribute(XmlConverterConstants.QuotationRefGUIDAttribute, "UNKNOWN"));
 
-            AddTargetAttributes(element, command.Target);
+            if (string.IsNullOrEmpty(address))
+                AddTargetAttributes(element, command.Target);
+            else
+                element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, address));
 
-            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.FunctionAttribute, GetFunctionType(amendment.OperationType, isStructural)));
+            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.FunctionAttribute,
+                function ?? GetFunctionType(amendment.OperationType, isStructural)));
 
             // element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.SentenceAttribute, sentence.ReferenceSentenceNumber));
 
@@ -203,8 +210,20 @@ namespace Saga.Core.Services.Converters
             var commonParts = amendment.Content?.CommonParts;
             if (commonParts == null) return;
 
+            // Część wspólna jest elementem struktury, nie fragmentem tekstu: cytat strukturalny z `czesc-wspolna-*`.
+            // Dodawana staje W jednostce wskazanej komendą; przy zmianie brzmienia komenda wskazuje ją samą.
             foreach (var commonPart in commonParts)
-                AddTextCitation(amendment, command, sentence, commonPart.ContentText, blocks);
+            {
+                var replaces = amendment.OperationType == AmendmentOperationType.Modification;
+                var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
+                ApplyAttributes(citation, amendment, command, isStructural: true,
+                    function: replaces ? null : XmlConverterConstants.Contents.Citation.Quotation.Function.AddInside,
+                    address: replaces ? commonPart.Id : null);
+                citation.Add(CommonPartXmlConverter.Quoted(commonPart));
+                if (sentence is XElement zdanie)
+                    zdanie.Add(citation);
+                blocks.Add(citation);
+            }
         }
 
         private static void AddTextCitation(Amendment amendment, Command command, XNode? sentence, string text, List<XElement> blocks)

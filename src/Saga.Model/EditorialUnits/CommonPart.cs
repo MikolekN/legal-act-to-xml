@@ -54,6 +54,19 @@ namespace Saga.Model.EditorialUnits
         /// </summary>
         public int? SourceSegmentOrder { get; set; }
 
+        /// <summary>
+        /// Liczba pozycji wyliczenia stojących przed częścią wspólną, gdy ta PRZERYWA wyliczenie — po niej
+        /// idą jego kolejne pozycje (§ 57 ZTP tego nie przewiduje). Null dla części zamykającej wyliczenie.
+        /// </summary>
+        public int? InterruptsAfter { get; set; }
+
+        /// <summary>
+        /// Rodzaj pozycji wyliczenia, którego dotyczy część wspólna (punkt, litera, tiret), gdy nie wynika
+        /// z gospodarza: część wspólna bywa jedyną treścią nowelizacji („dodaje się część wspólną
+        /// w brzmieniu:") i gospodarza w cytacie nie ma.
+        /// </summary>
+        public UnitType? ListItemType { get; set; }
+
         public CommonPart()
         {
             UnitType = UnitType.CommonPart;

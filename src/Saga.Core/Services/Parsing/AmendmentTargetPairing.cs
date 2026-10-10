@@ -72,7 +72,16 @@ namespace Saga.Core.Services.Parsing
         {
             var units = ContentUnits(amendment.Content);
             var targets = amendment.Targets ?? [];
-            if (units.Count == 0 || targets.Count == 0)
+            if (targets.Count == 0)
+                return;
+
+            // Część wspólna cytowana bez gospodarza („dodaje się część wspólną w brzmieniu:") stoi pod całym
+            // adresem celu — gospodarzem jest jednostka wskazana komendą (art_18zg__ust_2 → art_18zg__ust_2__czw).
+            foreach (var part in amendment.Content?.CommonParts ?? [])
+                if (part.Parent is null)
+                    part.AddressAnchor = targets[0].Structure.ToString();
+
+            if (units.Count == 0)
                 return;
 
             var paired = Pair(targets, units) ?? [units];

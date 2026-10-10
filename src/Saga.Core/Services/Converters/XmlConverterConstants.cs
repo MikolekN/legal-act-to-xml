@@ -296,6 +296,8 @@ namespace Saga.Core.Services.Converters
             {
                 internal const string Point = "czesc-wspolna-punkt";
                 internal const string Letter = "czesc-wspolna-litera";
+                internal const string InterruptingPoint = "nie-ztp-czesc-wspolna-punkt";
+                internal const string InterruptingLetter = "nie-ztp-czesc-wspolna-litera";
                 internal const string Tiret = "czesc-wspolna-tiret";
                 internal const string DoubleTiret = "czesc-wspolna-podw-tiret";
                 internal const string TripleTiret = "czesc-wspolna-potr-tiret";
@@ -371,6 +373,7 @@ namespace Saga.Core.Services.Converters
             internal static readonly XName GUID = GuidNamespace + "GUID";
             internal const string MissingEId = "brak-eid";
             internal const string UnmarkedUnit = "jednostka-nieoznaczona";
+            internal const string RepeatedCommonPart = "nie-ztp-wielokrotna-czesc-wspolna";
 
             internal const string EntryIntoForce = "wejscie-w-zycie";
             internal const string UnitStatus = "status-jednostki";

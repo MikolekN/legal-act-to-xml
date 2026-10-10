@@ -22,10 +22,18 @@ namespace Saga.Core.Services.Converters
                 return;
             }
 
-            foreach (var letter in point.Letters)
-                LetterXmlConverter.AppendTo(parentElement, letter, isParentPathological: true, previousSentenceContext);
-
+            AppendLetters(parentElement, point, isPathological: true, previousSentenceContext);
             HandleCommonPart(point, parentElement, previousSentenceContext);
+        }
+
+        // Litery z częściami wspólnymi, które przerywają ich wyliczenie, w kolejności z aktu.
+        private static void AppendLetters(XElement element, Point point, bool isPathological, SentenceContext? context)
+        {
+            for (var i = 0; i < point.Letters.Count; i++)
+            {
+                LetterXmlConverter.AppendTo(element, point.Letters[i], isPathological, context);
+                AppendInterrupting(point, element, itemsSoFar: i + 1, context);
+            }
         }
 
         internal static XElement ToXml(Point point, bool isParentPathological = false, SentenceContext? previousSentenceContext = null)
@@ -51,8 +59,7 @@ namespace Saga.Core.Services.Converters
 
             EmbeddedContentXmlConverter.AppendEmbedded(pointElement, point);
 
-            foreach (var letter in point.Letters)
-                LetterXmlConverter.AppendTo(pointElement, letter, isPathological, contextToPass);
+            AppendLetters(pointElement, point, isPathological, contextToPass);
 
             HandleCommonPart(point, pointElement, contextToPass);
 

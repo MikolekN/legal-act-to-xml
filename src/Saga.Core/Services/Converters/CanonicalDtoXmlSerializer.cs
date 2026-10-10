@@ -201,6 +201,10 @@ namespace Saga.Core.Services.Converters
                 el.Add(new XAttribute("parentEId", commonPart.ParentEId));
             if (commonPart.SourceSegmentOrder.HasValue)
                 el.Add(new XAttribute("segmentOrder", commonPart.SourceSegmentOrder.Value));
+            if (commonPart.InterruptsAfter.HasValue)
+                el.Add(new XAttribute("interruptsAfter", commonPart.InterruptsAfter.Value));
+            if (commonPart.ListItemType.HasValue)
+                el.Add(new XAttribute("listItemType", commonPart.ListItemType.Value));
 
             AddContentAndDiagnostics(el, commonPart);
             return el;

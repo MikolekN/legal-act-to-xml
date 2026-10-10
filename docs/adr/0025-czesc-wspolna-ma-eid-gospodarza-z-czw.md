@@ -36,9 +36,10 @@ ustępem `art_16__czw`, w cytacie `art_68__ust_2__czw` (pod adresem w akcie zmie
 
 - Zmienia wyjście: elementy `czesc-wspolna-*` dostają `eId`; w snapshotach kanonicznych `wrapUp`
   w eId staje się `czw`.
-- Eksport zapisuje jedną część wspólną na gospodarza, więc adres jest jednoznaczny. Część wspólna
-  przerywająca wyliczenie albo sama zawierająca wyliczenie (w schemacie `nie-ztp-czesc-wspolna-*`
-  z `brak-eid`) nie jest rozpoznawana.
+- Adres niesie tylko część wspólna zamykająca wyliczenie — jedna na gospodarza, więc jest
+  jednoznaczny. Część wspólna przerywająca wyliczenie wychodzi jako `nie-ztp-czesc-wspolna-*` bez eId,
+  z `brak-eid="nie-ztp-wielokrotna-czesc-wspolna"`; część wspólna sama zawierająca wyliczenie nie jest
+  rozpoznawana.
 - `czw` nie jest skrótem jednostki i nie wchodzi do tabeli ADR-0014: nie ma oznaczenia i nie może
   mieć jednostek pod sobą.
 

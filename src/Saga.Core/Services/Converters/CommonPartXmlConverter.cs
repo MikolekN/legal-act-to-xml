@@ -10,34 +10,72 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class CommonPartXmlConverter
     {
+        /// <summary>Część wspólna zamykająca wyliczenie — po ostatniej pozycji, z eId gospodarza (ADR-0025).</summary>
         internal static void HandleCommonPart(IHasCommonParts entity, XElement element, SentenceContext? context, int? nesting = null)
         {
-            if (entity.CommonParts.Any())
+            var wrapUp = entity.CommonParts.FirstOrDefault(cp => cp is { Type: CommonPartType.WrapUp, InterruptsAfter: null });
+            if (wrapUp == null)
+                return;
+
+            var commonPartElement = Element(GetCommonPartName(entity, nesting));
+            commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, wrapUp.Id));
+            Fill(commonPartElement, wrapUp, context);
+            element.Add(commonPartElement);
+        }
+
+        /// <summary>
+        /// Część wspólna będąca treścią nowelizacji, cytowana bez gospodarza. Rodzaj wyliczenia niesie sama
+        /// (ze stylu akapitu), a adres — kotwica celu komendy.
+        /// </summary>
+        internal static XElement Quoted(CommonPart part)
+        {
+            var commonPartElement = Element(part.ListItemType switch
             {
-                var wrapUp = entity.CommonParts.FirstOrDefault(cp => cp.Type == CommonPartType.WrapUp);
-                if (wrapUp != null)
-                {
-                    var textElement = Element(XmlConverterConstants.Contents.TextSection);
-                    if (context != null)
-                    {
-                        context.CurrentFragment += 1;
-                        textElement.Add(SentenceContext.ToXml(context, wrapUp.ContentText, dated: wrapUp));
-                    }
-                    else
-                    {
-                        textElement.Add(SentenceContext.ToXml(text: wrapUp.ContentText, dated: wrapUp));
-                    }
-                    var commonPartElement = Element(GetCommonPartName(entity, nesting));
+                UnitType.Letter => XmlConverterConstants.Contents.CommonPart.Letter,
+                UnitType.Tiret => XmlConverterConstants.Contents.CommonPart.Tiret,
+                _ => XmlConverterConstants.Contents.CommonPart.Point,
+            });
+            commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, part.Id));
+            Fill(commonPartElement, part, context: null);
+            return commonPartElement;
+        }
 
-                    commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, wrapUp.Id));
-                    commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, wrapUp.Guid.ToString()));
-
-                    UnitLifecycleXml.Apply(commonPartElement, wrapUp);
-
-                    commonPartElement.Add(textElement);
-                    element.Add(commonPartElement);
-                }
+        /// <summary>
+        /// Części wspólne przerywające wyliczenie, które stoją po <paramref name="itemsSoFar"/> pozycjach.
+        /// Wychodzą w miejscu, w którym stoją w akcie, bez eId: adres części wspólnej nie rozróżnia kilku
+        /// pod jednym gospodarzem, więc schemat każe nazwać powód jego braku.
+        /// </summary>
+        internal static void AppendInterrupting(IHasCommonParts entity, XElement element, int itemsSoFar, SentenceContext? context)
+        {
+            foreach (var part in entity.CommonParts.Where(cp => cp.Type == CommonPartType.WrapUp && cp.InterruptsAfter == itemsSoFar))
+            {
+                var commonPartElement = Element(entity is Paragraph
+                    ? XmlConverterConstants.Contents.CommonPart.InterruptingPoint
+                    : XmlConverterConstants.Contents.CommonPart.InterruptingLetter);
+                commonPartElement.Add(new XAttribute(
+                    XmlConverterConstants.Contents.MissingEId, XmlConverterConstants.Contents.RepeatedCommonPart));
+                Fill(commonPartElement, part, context);
+                element.Add(commonPartElement);
             }
+        }
+
+        // Tekst części wspólnej jest kolejnym fragmentem zdania otwartego wprowadzeniem do wyliczenia.
+        private static void Fill(XElement commonPartElement, CommonPart part, SentenceContext? context)
+        {
+            var textElement = Element(XmlConverterConstants.Contents.TextSection);
+            if (context != null)
+            {
+                context.CurrentFragment += 1;
+                textElement.Add(SentenceContext.ToXml(context, part.ContentText, dated: part));
+            }
+            else
+            {
+                textElement.Add(SentenceContext.ToXml(text: part.ContentText, dated: part));
+            }
+
+            commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, part.Guid.ToString()));
+            UnitLifecycleXml.Apply(commonPartElement, part);
+            commonPartElement.Add(textElement);
         }
 
         private static string GetCommonPartName(IHasCommonParts entity, int? nesting)

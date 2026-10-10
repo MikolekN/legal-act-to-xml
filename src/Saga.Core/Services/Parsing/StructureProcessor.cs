@@ -258,6 +258,8 @@ namespace Saga.Core.Services.Parsing
                     if (context.CurrentParagraph.Points.Count == 0)
                         ParsingFactories.AttachIntroCommonPart(context.CurrentParagraph);
 
+                    CommonPartPlacement.BeforeNextItem(context.CurrentParagraph, context.CurrentParagraph.Points);
+
                     context.CurrentPoint = _pointBuilder.Build(
                         new PointBuildInput(context.CurrentParagraph, context.CurrentArticle, text));
                     ValidationReporter.AddClassificationWarning(context.CurrentPoint, classification, "PKT");
@@ -280,6 +282,8 @@ namespace Saga.Core.Services.Parsing
                     // Wiąż intro z segmentem rodzica przed dodaniem pierwszej litery
                     if (context.CurrentPoint.Letters.Count == 0)
                         ParsingFactories.AttachIntroCommonPart(ExplicitOwner(context.CurrentPoint));
+
+                    CommonPartPlacement.BeforeNextItem(context.CurrentPoint, context.CurrentPoint.Letters);
 
                     context.CurrentLetter = _letterBuilder.Build(
                         new LetterBuildInput(context.CurrentPoint, context.CurrentParagraph, context.CurrentArticle, text));
