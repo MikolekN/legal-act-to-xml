@@ -1,3 +1,6 @@
+using Saga.Core.Ingest;
+using Saga.Core.Services;
+
 namespace Saga.Core.Tests
 {
     public class ReferenceActTests
@@ -72,6 +75,32 @@ namespace Saga.Core.Tests
             {
                 File.Delete(tempPath);
             }
+        }
+
+        [DocRepoFact(TestFiles.ReferenceActFileName)]
+        public void ReferenceAct_WithoutStyles_HasTheSameUnitStructure()
+        {
+            // Styl szablonu jest wskazówką, nie warunkiem: te same bloki bez StyleId (DOCX bez szablonu) muszą dać
+            // tę samą strukturę jednostek. Pilnuje na akcie referencyjnym wyniku miary
+            // `CorpusValidator --styleless-parity`.
+            List<DocumentBlock> blocks;
+            using (var stream = File.OpenRead(TestFiles.GetReferenceDocPath(TestFiles.ReferenceActFileName)))
+                blocks = DocumentBlockReaderFactory.Create(SourceFormat.Docx).ReadBlocks(stream).ToList();
+
+            var styled = AddressedElements(blocks);
+            var styleless = AddressedElements(blocks.Select(block => block with { StyleId = null }).ToList());
+
+            Assert.NotEmpty(styled);
+            Assert.Equal(styled, styleless);
+        }
+
+        private static List<string> AddressedElements(IReadOnlyList<DocumentBlock> blocks)
+        {
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            return LegalDocumentConverter.Convert(document).Descendants()
+                .Where(element => element.Attribute("eId") != null)
+                .Select(element => $"{element.Name.LocalName} {element.Attribute("eId")!.Value}")
+                .ToList();
         }
     }
 }

@@ -33,7 +33,10 @@ i część wspólna tiretów. Lista w `styleless-parity-units.tsv`.
 Część domkniętą (część wspólna punktów i liter, jednostki systematyzacyjne bez stylu) pilnuje
 `ParserEquivalenceTests.ActWithWrapUpAndSystematizingUnits_DocxAndTxt_AreEquivalent`
 ([plik](../tests/Saga.Core.Tests/ParserEquivalenceTests.cs)) — ten sam akt jako bloki DOCX ze stylami
-i jako TXT, łącznie z kontrolą, że prawdziwe tirety po dwukropku zostają tiretami. Testy
+i jako TXT, łącznie z kontrolą, że prawdziwe tirety po dwukropku zostają tiretami. Na prawdziwym akcie
+pilnuje jej `ReferenceActTests.ReferenceAct_WithoutStyles_HasTheSameUnitStructure`
+([plik](../tests/Saga.Core.Tests/ReferenceActTests.cs)): akt referencyjny bez stylów ma tę samą strukturę
+jednostek co ze stylami. Testy
 charakteryzujące w `ParagraphClassifierStylelessTests` utrwalają obecne, częściowo błędne wyniki
 klasyfikatora — zmiana któregokolwiek wymaga jawnej aktualizacji z uzasadnieniem ZTP.
 

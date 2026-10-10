@@ -252,6 +252,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   artykułu zmieniającego (4 przepisy w 2 ustawach). Eksport dokumentów ze stylami bez zmian; zgodność struktury
   bez stylów: ustawy ogłoszone 99,41 % → 99,67 % jednostek.
 
+- **Strażnik zgodności bez stylów na akcie referencyjnym**: `ReferenceActTests.ReferenceAct_WithoutStyles_HasTheSameUnitStructure`
+  parsuje akt referencyjny z bloków pozbawionych stylu i wymaga tej samej struktury jednostek co ze stylami
+  (element i eId każdej jednostki) — wynik miary `--styleless-parity` przestaje zależeć od ręcznego przebiegu.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.
