@@ -13,13 +13,15 @@ Styl Word pozostaje najsilniejszym sygnałem; poniższe zachowania są dostępne
 stylach szablonu i nie mają odpowiednika w rozpoznawaniu z samej treści.
 
 Miarą jest `CorpusValidator --styleless-parity`: ta sama struktura jednostek z bloków pozbawionych stylu.
-Stan 2026-10-10: ustawy ogłoszone 99,41 % jednostek zgodnych (200 ginie, 272 nadmiarowe; 199 z 242
+Stan 2026-10-10: ustawy ogłoszone 99,67 % jednostek zgodnych (111 ginie, 228 nadmiarowych; 199 z 242
 dokumentów w pełni zgodnych), teksty jednolite 99,56 % (327 z 460). Bez układu i tabel („sam tekst") wynik
 jest prawie ten sam — rozstrzyga treść. Granice cytatu wyznacza treść (cudzysłów w każdym wariancie
 z `QuotationMarks`, przecinek po cudzysłowie, cudzysłów po komendzie bez dwukropka — `QuoteBalanceTracker`,
 `AmendmentStateManager.UpdateState`), a zagnieżdżenie tiretu — jego znacznik (`TiretMarker`).
-Zostają: część wspólna jako jedyna treść cytowana („dodaje się część wspólną w brzmieniu:" — bez stylu tiret)
-i część wspólna tiretów; lista w `styleless-parity-units.tsv`.
+Zostaje to, czego rodzaj wynika z przedmiotu komendy, a nie z treści cytatu: część wspólna jako jedyna treść
+cytowana („dodaje się część wspólną w brzmieniu:" — bez stylu tiret) i wyliczenie w cytowanym odnośniku
+(„odnośnik nr 1 otrzymuje brzmienie:" — bez stylu punkty); do tego legenda wzoru zapisana myślnikami
+i część wspólna tiretów. Lista w `styleless-parity-units.tsv`.
 
 | Luka | Stan faktyczny | Dlaczego odłożone |
 |---|---|---|

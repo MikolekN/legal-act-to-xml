@@ -321,6 +321,11 @@ namespace Saga.Core.Services.Parsing
                         "Komenda wyrazowa (skreślenie/dodanie wyrazów) — nieodwzorowana jako obiekt nowelizacji; " +
                         "treść komendy zachowana werbatim.");
                 }
+
+                // Komenda złożona („…dodaje się wyraz „lub" oraz dodaje się pkt 4 w brzmieniu:"): po dwukropku
+                // stoi treść cytowana — komenda wyrazowa zostaje w treści przepisu, a zwrot końcowy obowiązuje.
+                if (AmendmentFinalizer.ModificationAtEndPattern.IsMatch(text))
+                    ArmTrigger(context, text);
                 return;
             }
 
@@ -358,13 +363,16 @@ namespace Saga.Core.Services.Parsing
 
             // Zmiana brzmienia / dodanie — trigger dla kolejnych akapitów
             if (AmendmentFinalizer.ModificationPattern.IsMatch(text))
-            {
-                context.AmendmentTriggerDetected = true;
-                context.AmendmentOwner = GetOwner(context);
-                Log.Debug("Wykryto zwrot nowelizacyjny (owner={OwnerId}): {Text}",
-                    context.AmendmentOwner?.Id ?? "brak",
-                    text.Length > 80 ? text.Substring(0, 80) + "..." : text);
-            }
+                ArmTrigger(context, text);
+        }
+
+        private static void ArmTrigger(ParsingContext context, string text)
+        {
+            context.AmendmentTriggerDetected = true;
+            context.AmendmentOwner = GetOwner(context);
+            Log.Debug("Wykryto zwrot nowelizacyjny (owner={OwnerId}): {Text}",
+                context.AmendmentOwner?.Id ?? "brak",
+                text.Length > 80 ? text.Substring(0, 80) + "..." : text);
         }
 
         /// <summary>

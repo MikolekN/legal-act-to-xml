@@ -246,6 +246,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   Zgodność struktury bez stylów: ustawy ogłoszone 98,72 % → 99,41 % jednostek (199 z 242 dokumentów w pełni
   zgodnych), teksty jednolite 327 z 460.
 
+- **Komenda złożona otwiera cytat**: przepis łączący komendę wyrazową z dodaniem jednostki („… dodaje się wyraz
+  „lub” oraz dodaje się pkt 4 w brzmieniu:") kończy się zwrotem zapowiadającym treść cytowaną, więc bez stylów
+  następny blok jest cytatem — wcześniej komenda wyrazowa gasiła zwrot i cytowany punkt stawał się punktem
+  artykułu zmieniającego (4 przepisy w 2 ustawach). Eksport dokumentów ze stylami bez zmian; zgodność struktury
+  bez stylów: ustawy ogłoszone 99,41 % → 99,67 % jednostek.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

@@ -51,6 +51,14 @@ namespace Saga.Core.Services.Parsing
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// Zwrot zmiany brzmienia zamykający przepis („… dodaje się pkt 4 w brzmieniu:") — po nim stoi treść
+        /// cytowana, cokolwiek przepis mówił wcześniej.
+        /// </summary>
+        internal static readonly Regex ModificationAtEndPattern = new(
+            @"(?:otrzymuj[eą]\s+brzmienie|w\s+brzmieniu):\s*$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
         /// Zwrot zmiany brzmienia na końcu przepisu, ale bez dwukropka („ust. 1 otrzymuje brzmienie") —
         /// usterka zapisu; komendą czyni go dopiero cudzysłów otwierający następnego bloku.
         /// </summary>

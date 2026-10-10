@@ -409,6 +409,27 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void WordLevelCommandEndingWithAQuotedUnitCommand_OpensTheQuotation()
+        {
+            // 325312_2892112: komenda wyrazowa i dodanie punktu w jednym przepisie. Zwrot „w brzmieniu:" na końcu
+            // zapowiada treść cytowaną — bez niego „„3) …" stawało się punktem artykułu zmieniającego.
+            var (orch, ctx) = NewPipeline();
+
+            Feed(orch, ctx,
+                "Art. 1. W ustawie wprowadza się następujące zmiany:",
+                "1) w art. 318 w ust. 3 w pkt 2 kropkę zastępuje się przecinkiem i dodaje się wyraz „lub” oraz dodaje się pkt 3 w brzmieniu:",
+                "„3) nabywcą jest osoba fizyczna.”;",
+                "2) w art. 319 skreśla się wyrazy „albo upoważniony”.",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.");
+            orch.Finalize(ctx);
+
+            var points = ctx.Document.Articles.First().Paragraphs[0].Points;
+            Assert.Equal(new[] { "1", "2" }, points.Select(p => p.Number?.Value));
+            Assert.Equal("3", Assert.Single(points[0].Amendment!.Content!.Points).Number?.Value);
+            Assert.Null(points[1].Amendment);
+        }
+
+        [Fact]
         public void DefaultEditorStyle_DoesNotDisarmQuoteTracking()
         {
             // Styl „Normalny" (domyślny styl edytora, bez semantyki) nie może wyłączyć granic
