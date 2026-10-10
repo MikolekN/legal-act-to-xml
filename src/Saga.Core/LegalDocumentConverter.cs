@@ -32,6 +32,7 @@ namespace Saga.Core.Services
             InlineTextXml.EmbedSuperscripts(actElement);
 
             TemporalDataXmlConverter.AssignPeriods(actElement, document);
+            ActPrefixXml.Apply(actElement, document);
 
             if (ContainsMathML(rootElement))
                 rootElement.Add(new XAttribute(XNamespace.Xmlns + "mml", XmlConverterConstants.MathMLNamespace));

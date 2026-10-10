@@ -47,8 +47,9 @@ namespace Saga.Core.Tests
         private static List<Paragraph> Paragraphs(LegalDocument document) =>
             document.Articles.First(a => a.Number!.Value == "1").Paragraphs;
 
+        // W eksporcie adres poprzedza prefiks aktu (ADR-0027) — tu Dz. U. z 2024 r. poz. 928.
         private static XElement Unit(XElement xml, string eId) =>
-            xml.Descendants().Single(e => (string?)e.Attribute("eId") == eId);
+            xml.Descendants().Single(e => (string?)e.Attribute("eId") == "DU/2024/928__" + eId);
 
         private static List<string> ChildNames(XElement element) =>
             element.Elements().Select(e => e.Name.LocalName).ToList();

@@ -383,8 +383,9 @@ namespace Saga.Core.Tests
                 "Art. 2. § 1. Przepis przejściowy.",
                 "§ 2. Drugi paragraf.");
 
-            Assert.Equal("artykul", ElementOf(xml, "art_5"));
-            Assert.Equal("cytat-strukt", xml.Descendants().Single(e => e.Attribute("eId")?.Value == "art_5").Parent!.Name.LocalName);
+            Assert.Equal("artykul", ElementOf(xml, "DU/2024/1061__art_5"));
+            Assert.Equal("cytat-strukt",
+                xml.Descendants().Single(e => e.Attribute("eId")?.Value == "DU/2024/1061__art_5").Parent!.Name.LocalName);
             Assert.Equal("artykul", ElementOf(xml, "art_2"));
         }
 

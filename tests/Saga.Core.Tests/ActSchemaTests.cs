@@ -150,10 +150,11 @@ namespace Saga.Core.Tests
             Assert.Equal(Attr(main.Elements().First(), "do"), Attr(main.Elements().Last(), "od"));
 
             // Wyjątki mają własne daty wejścia w życie i nie dziedziczą mocy wstecznej reguły ogólnej.
+            // Artykuł cytowany niesie prefiks aktu zmienianego, artykuły samej ustawy — jej własny (ADR-0027).
             XElement Unit(string eId) => xml.Descendants().Single(e => e.Name.LocalName == "artykul" && Attr(e, "eId") == eId);
-            Assert.Equal("okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2024-928_odczytane.x", Attr(Unit("art_85a"), "okres"));
-            Assert.Equal("okr_obowiazywanie.zdarz_wejscie_2024-06-25_DU-2024-928_domyslne.x", Attr(Unit("art_2"), "okres"));
-            Assert.Equal(Attr(main, "id"), Attr(Unit("art_1"), "okres"));
+            Assert.Equal("okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2024-928_odczytane.x", Attr(Unit("DU/2025/350__art_85a"), "okres"));
+            Assert.Equal("okr_obowiazywanie.zdarz_wejscie_2024-06-25_DU-2024-928_domyslne.x", Attr(Unit("DU/2024/928__art_2"), "okres"));
+            Assert.Equal(Attr(main, "id"), Attr(Unit("DU/2024/928__art_1"), "okres"));
         }
 
         [Fact]

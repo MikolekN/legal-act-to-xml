@@ -20,7 +20,8 @@ namespace CorpusValidator;
 ///   5. treść zdań — własny tekst każdego zdania, bez treści odnośników i cytatów, z podziałem różnic
 ///      na rodzaje (odstępy, myślniki, cudzysłowy, indeks górny, inne).
 ///
-/// Z porównania wyłączone są prefiks aktu w eId („DU/2024/928__") i atrybuty GUID.
+/// Adresy porównywane są z prefiksem aktu („DU/2024/928__art_1", w cytacie prefiks aktu zmienianego).
+/// Z porównania wyłączone są atrybuty GUID.
 ///
 /// Użycie:
 ///   dotnet run --project tools/CorpusValidator -- --compare-reference &lt;plik.docx&gt; &lt;referencja.xml&gt; &lt;katalog-wyjsciowy&gt;
@@ -40,7 +41,6 @@ internal static class ReferenceStructureComparison
         "czesc-wspolna-punkt", "czesc-wspolna-litera", "czesc-wspolna-tiret",
     ];
 
-    private static readonly Regex ActPrefix = new(@"^[A-Z]{2}/\d{4}/\d+__", RegexOptions.Compiled);
     private static readonly Regex Whitespace = new(@"\s+", RegexOptions.Compiled);
 
     internal sealed record Unit(string Name, string EId, string Nr, string Heading, string Path, int QuoteDepth,
@@ -115,8 +115,7 @@ internal static class ReferenceStructureComparison
         }
     }
 
-    private static string EId(XElement element) =>
-        ActPrefix.Replace(element.Attribute("eId")?.Value ?? "", "");
+    private static string EId(XElement element) => element.Attribute("eId")?.Value ?? "";
 
     private static string Nr(XElement element)
     {

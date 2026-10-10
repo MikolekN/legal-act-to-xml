@@ -135,6 +135,11 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Organy w metadanych**: organem wydającym ustawy jest `SEJM` z zasobem ELI, organ podpisujący „Prezydent
   Rzeczypospolitej Polskiej" dostaje swój zasób ELI. Organ nieodczytany zostaje `UNKNOWN`, ale bez atrapy
   `eliURI="URI"`.
+- **Prefiks aktu w adresach** ([ADR-0027](docs/adr/0027-prefiks-aktu-dopisuje-eksport.md)): `eId` jednostki
+  aktu ma postać `DU/2024/928__art_1`, a jednostka cytowana w nowelizacji i cel komendy (`element-eId`,
+  `element-do-eId`) niosą prefiks aktu zmienianego (`DU/2025/350__art_68__ust_1__pkt_5`) — jak w przykładach
+  autorów schematu. W metadanych prefiks dostają `JednostkaAktu` i `dowod`. Akt bez znanego publikatora
+  zostaje przy adresach bez prefiksu. **Zmienia każdy adres w eksporcie**; model (`BaseEntity.Id`) bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

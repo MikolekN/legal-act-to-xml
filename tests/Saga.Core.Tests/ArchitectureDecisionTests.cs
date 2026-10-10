@@ -803,12 +803,12 @@ namespace Saga.Core.Tests
 
             // Reguła ogólna nie wymienia jednostek; wyjątek wymienia swoje.
             Assert.Empty(events[0].Elements());
-            Assert.Equal(new[] { "art_2" }, events[1].Elements().Select(e => e.Attribute("eId")?.Value));
+            Assert.Equal(new[] { "DU/2026/26__art_2" }, events[1].Elements().Select(e => e.Attribute("eId")?.Value));
 
             // Data z formuły niesie formułę; każda — klauzulę, z której pochodzi.
             Assert.Equal("po upływie 14 dni od dnia ogłoszenia", events[0].Attribute("warunek")?.Value);
             Assert.Null(events[1].Attribute("warunek"));
-            Assert.All(events, e => Assert.Equal("art_3", e.Attribute("dowod")?.Value));
+            Assert.All(events, e => Assert.Equal("DU/2026/26__art_3", e.Attribute("dowod")?.Value));
         }
 
         // ============================================================
@@ -925,6 +925,69 @@ namespace Saga.Core.Tests
                 .First(e => e.Name.LocalName == "zdanie");
             Assert.Equal("odnosnik", Assert.Single(sentence.Elements()).Name.LocalName);
             Assert.DoesNotContain("[", string.Concat(sentence.Nodes().OfType<XText>().Select(t => t.Value)));
+        }
+
+        // ============================================================
+        // ADR-0027: prefiks aktu w eId dopisuje eksport, model trzyma adres w akcie
+        // ============================================================
+
+        private static readonly string[] Adr0027Act =
+        [
+            "USTAWA", "z dnia 9 stycznia 2026 r.", "o zmianie ustawy o świadczeniach",
+            "Art. 1. W ustawie z dnia 25 czerwca 1999 r. o świadczeniach (Dz. U. z 2025 r. poz. 350) wprowadza się następujące zmiany:",
+            "1) w art. 68 ust. 1 pkt 5 otrzymuje brzmienie:",
+            "„5) orzekanie o niezdolności do pracy;”;",
+            "2) uchyla się art. 70.",
+            "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+        ];
+
+        [Fact]
+        public void Adr0027_ActPrefix_IsAddedByTheExport_AndQuotedUnitsCarryTheAmendedAct()
+        {
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 13 stycznia 2026 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 26", Role = BlockRole.JournalHeader },
+            };
+            blocks.AddRange(Adr0027Act.Select(text => new DocumentBlock { Text = text }));
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Model: adres w akcie — taki sam bez względu na to, gdzie akt ogłoszono.
+            var point = document.Articles.First().Paragraphs[0].Points[0];
+            Assert.Equal("art_1__pkt_1", point.Id);
+            Assert.Equal("art_68__ust_1__pkt_5", point.Amendment!.Content!.Points.Single().Id);
+
+            var xml = LegalDocumentConverter.Convert(document);
+            string?[] Values(string element, string attribute) => xml.Descendants()
+                .Where(e => e.Name.LocalName == element)
+                .Select(e => e.Attribute(attribute)?.Value)
+                .ToArray();
+
+            // Eksport: jednostki aktu niosą jego prefiks…
+            Assert.Equal(new[] { "DU/2026/26__art_1", "DU/2026/26__art_2" }, Values("artykul", "eId"));
+
+            // …a jednostka cytowana i cele komend — prefiks aktu zmienianego.
+            Assert.Equal(new[] { "DU/2025/350__art_68__ust_1__pkt_5" }, Values("cytat-strukt", "element-eId"));
+            Assert.Equal(new[] { "DU/2025/350__art_70" }, Values("uchyl", "element-eId"));
+            Assert.Equal("DU/2025/350__art_68__ust_1__pkt_5",
+                xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt").Elements().Single().Attribute("eId")?.Value);
+        }
+
+        [Fact]
+        public void Adr0027_ActWithoutAKnownJournal_KeepsAddressesWithoutAPrefix()
+        {
+            // Projekt albo tekst bez nagłówka dziennika: nie ma czym poprzedzić adresu — prefiksu się nie zmyśla.
+            var document = LegalDocumentParser.ParseBlocks(
+                Adr0027Act.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var xml = LegalDocumentConverter.Convert(document);
+
+            Assert.Equal(new[] { "art_1", "art_2" },
+                xml.Descendants().Where(e => e.Name.LocalName == "artykul").Select(e => e.Attribute("eId")?.Value));
+            // Akt zmieniany jest znany z powołania publikatora, więc cytat ma prefiks także tutaj.
+            Assert.Equal("DU/2025/350__art_68__ust_1__pkt_5",
+                xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt").Attribute("element-eId")?.Value);
         }
 
         private static DocumentClassificationResult Classify(byte[] docx)

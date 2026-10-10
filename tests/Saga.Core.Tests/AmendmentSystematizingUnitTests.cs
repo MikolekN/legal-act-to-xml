@@ -63,12 +63,12 @@ namespace Saga.Core.Tests
 
             var chapter = citation.Elements().Single();
             Assert.Equal("rozdzial", chapter.Name.LocalName);
-            Assert.Equal("rozdz_9a", chapter.Attribute("eId")?.Value);
+            Assert.Equal("DU/2025/350__rozdz_9a", chapter.Attribute("eId")?.Value);
             Assert.Equal("9a", chapter.Element(ns + "naglowek-rozdzialu")?.Element(ns + "nr")?.Value);
             Assert.Equal("Orzekanie dla celów świadczeń", chapter.Element(ns + "naglowek-rozdzialu")?.Element(ns + "p")?.Value);
 
             var subchapter = chapter.Element(ns + "oddzial-n")!;
-            Assert.Equal(new[] { "art_85a", "art_85b" },
+            Assert.Equal(new[] { "DU/2025/350__art_85a", "DU/2025/350__art_85b" },
                 subchapter.Elements(ns + "artykul").Select(a => a.Attribute("eId")?.Value));
             Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
         }
@@ -91,9 +91,9 @@ namespace Saga.Core.Tests
 
             var xml = LegalDocumentConverter.Convert(document);
             var citation = xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt");
-            Assert.Equal("dzial_2__rozdz_9", citation.Attribute("element-eId")?.Value);
+            Assert.Equal("DU/2025/350__dzial_2__rozdz_9", citation.Attribute("element-eId")?.Value);
             Assert.Equal("dodaj-po", citation.Attribute("funkcja")?.Value);
-            Assert.Equal(new[] { "rozdz_10", "rozdz_11" },
+            Assert.Equal(new[] { "DU/2025/350__rozdz_10", "DU/2025/350__rozdz_11" },
                 xml.Descendants().Where(e => e.Name.LocalName == "uchyl").Select(e => e.Attribute("element-eId")?.Value));
         }
 

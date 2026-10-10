@@ -220,6 +220,8 @@ Format: `art_5__ust_2__pkt_3__lit_a__tir_1`
 - Oznaczenie w eId: liczba arabska (także z rzymskiej i słownej — `ksi_1`, `dzial_2`), sufiks jak
   w tekście ([ADR-0018](adr/0018-postac-oznaczenia-w-eid.md)), indeks górny w notacji `[n]`
   (`art_53[1]`, [ADR-0019](adr/0019-indeks-gorny-w-eid.md)); segmenty składa `EIdSegment`
+- `Id` w modelu to adres w akcie; prefiks aktu (`DU/2024/928__art_5`, w cytacie prefiks aktu zmienianego)
+  dopisuje dopiero eksport — [ADR-0027](adr/0027-prefiks-aktu-dopisuje-eksport.md)
 - Paragraf kodeksu (§ 55 ust. 3 ZTP) to `Paragraph` z prefiksem `par` zamiast `ust` (`art_2__par_1`),
   eksportowany jako `paragraf-kodeksu`; rolę nadaje `ParsingFactories.ApplyCodeParagraphRole` po znaku „§".
 - Logika w `BaseEntity.Id` (getter) — buduje od bieżącej encji do korzenia, odwraca kolejność
@@ -551,6 +553,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku; po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
 | `InlineTextXml` | Elementy wewnątrz tekstu powstają w eksporcie, przebiegiem po zbudowanej treści: wskazuje węzły tekstowe, które je przyjmują (`zdanie`, `tytul`, `tekst`), i zamienia indeks górny z kanału tekstowego („477[9]") na `sup` |
 | `FootnoteXmlConverter` | Przebieg po zbudowaniu treści: znacznik odnośnika w `zdanie`/`tytul`/`tekst` → `odnosnik` z treścią, kolejne odwołanie → `odsylacz-do-odnosnika` ([ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md)) |
+| `ActPrefixXml` | Ostatni przebieg po gotowym dokumencie: poprzedza adresy prefiksem aktu — własnym dla jednostek aktu, `JednostkaAktu` i `dowod`, aktu zmienianego dla jednostek pod `cytat-strukt`, celów komend i `JednostkaWZakresie` — [ADR-0027](adr/0027-prefiks-aktu-dopisuje-eksport.md) |
 | `ActKindXml` | Rodzaj aktu w metadanych (`Rodzaj`): jawny `LegalDocument.Type` albo — przy wartości domyślnej — nagłówek aktu; organ wydający wynikający z rodzaju (ustawa — Sejm) i zasoby ELI znanych organów |
 | `SignatureXmlConverter` | Podpis aktu: `organ-podpisujacy` z `osoba` (`imie`, `nazwisko`) za ostatnią jednostką i organ o roli `podpisujacy` w `Organy` |
 | `UnitAddressXml` | Jedyne miejsce piszące adres jednostki redakcyjnej: `eId` albo `brak-eid` z powodem, oraz `nr` (pusty, gdy oznaczenia nie odczytano) — [ADR-0024](adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md) |

@@ -122,7 +122,7 @@ namespace Saga.Core.Tests
             var part = xml.Descendants().Single(e => e.Name.LocalName.StartsWith("czesc-wspolna"));
 
             Assert.Equal("czesc-wspolna-litera", part.Name.LocalName);
-            Assert.Equal("art_68b__ust_1__pkt_1__czw", part.Attribute("eId")?.Value);
+            Assert.Equal("DU/2025/350__art_68b__ust_1__pkt_1__czw", part.Attribute("eId")?.Value);
         }
 
         // ============================================================
@@ -143,12 +143,12 @@ namespace Saga.Core.Tests
             // Dokument ze stylami: cytat kończy się na akapicie w stylie artykułu, jak w aktach ogłoszonych.
             Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
             var citation = xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt");
-            Assert.Equal("art_18zg__ust_2", citation.Attribute("element-eId")?.Value);
+            Assert.Equal("DU/2025/640__art_18zg__ust_2", citation.Attribute("element-eId")?.Value);
             Assert.Equal("dodaj-w", citation.Attribute("funkcja")?.Value);
 
             var part = Assert.Single(citation.Elements());
             Assert.Equal("czesc-wspolna-punkt", part.Name.LocalName);
-            Assert.Equal("art_18zg__ust_2__czw", part.Attribute("eId")?.Value);
+            Assert.Equal("DU/2025/640__art_18zg__ust_2__czw", part.Attribute("eId")?.Value);
         }
 
         [SchemaPlFact]
