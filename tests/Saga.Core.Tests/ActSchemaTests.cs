@@ -157,6 +157,61 @@ namespace Saga.Core.Tests
             Assert.Equal(Attr(main, "id"), Attr(Unit("DU/2024/928__art_1"), "okres"));
         }
 
+        // ============================================================
+        // Zakres wyjątku: adres jednostki w akcie zmienianym
+        // ============================================================
+
+        private static string?[] ScopeOf(XElement xml, string unit) => xml.Descendants()
+            .Single(e => e.Name.LocalName == "JednostkaAktu" && Attr(e, "eId") == unit)
+            .Elements().Select(e => Attr(e, "eId")).ToArray();
+
+        [Fact]
+        public void ExceptionScope_IsTheAddressOfTheQuotedUnit()
+        {
+            // Przykład autorów schematu (DU/2026/26, art. 43 pkt 3): zakres zapisany względem przepisu
+            // zmieniającego („w zakresie ust. 1d") wskazuje jednostkę aktu zmienianego.
+            var xml = Export(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o świadczeniach",
+                "Art. 1. W ustawie z dnia 27 sierpnia 2004 r. o świadczeniach (Dz. U. z 2025 r. poz. 501) w art. 17 po ust. 1c dodaje się ust. 1d i 1e w brzmieniu:",
+                "„1d. Pierwszy dodawany ustęp.",
+                "1e. Drugi dodawany ustęp.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 1 w zakresie ust. 1d, " +
+                "który wchodzi w życie z dniem 1 stycznia 2027 r.");
+
+            Assert.Equal(new[] { "DU/2025/501__art_17__ust_1d" }, ScopeOf(xml, "DU/2024/928__art_1"));
+
+            // Artykuł bez ustępów niesie nowelizację w ustępie niejawnym — wyjątek datuje wskazany ustęp cytowany.
+            string? Entry(string eId) =>
+                Attr(xml.Descendants().Single(e => e.Name.LocalName == "ustep" && Attr(e, "eId") == eId), "wejscie-w-zycie");
+            Assert.Equal("2027-01-01", Entry("DU/2025/501__art_17__ust_1d"));
+            Assert.Equal("2024-07-09", Entry("DU/2025/501__art_17__ust_1e"));
+        }
+
+        [Fact]
+        public void ExceptionScope_OfARepeal_IsTheTargetOfItsCommand()
+        {
+            // Uchylenie nie cytuje jednostki — jej adres niesie cel komendy.
+            var xml = Export(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o świadczeniach",
+                "Art. 1. W ustawie z dnia 27 sierpnia 2004 r. o świadczeniach (Dz. U. z 2025 r. poz. 501) w art. 22 uchyla się ust. 12.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 1 w zakresie ust. 12, " +
+                "który wchodzi w życie z dniem 1 stycznia 2027 r.");
+
+            Assert.Equal(new[] { "DU/2025/501__art_22__ust_12" }, ScopeOf(xml, "DU/2024/928__art_1"));
+        }
+
+        [Fact]
+        public void ExceptionScope_NotPointedAtByTheProvision_StaysAsWrittenInTheClause()
+        {
+            var xml = Export(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o świadczeniach",
+                "Art. 1. W ustawie z dnia 27 sierpnia 2004 r. o świadczeniach (Dz. U. z 2025 r. poz. 501) w art. 22 uchyla się ust. 12.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 1 w zakresie ust. 7, " +
+                "który wchodzi w życie z dniem 1 stycznia 2027 r.");
+
+            Assert.Equal(new[] { "ust_7" }, ScopeOf(xml, "DU/2024/928__art_1"));
+        }
+
         [Fact]
         public void ActTitleBlock_IsExportedAsKindDateAndSubject()
         {

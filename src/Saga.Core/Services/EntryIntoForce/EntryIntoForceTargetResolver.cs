@@ -20,11 +20,22 @@ namespace Saga.Core.Services.EntryIntoForce
         }
 
         /// <summary>
+        /// Nowelizacja przepisu wskazanego wyjątkiem. Artykuł bez ustępów („Art. 5. W ustawie … dodaje się
+        /// ust. 1d") niesie ją w swoim ustępie niejawnym — klauzula powołuje wtedy sam artykuł.
+        /// </summary>
+        internal static Amendment? AmendmentOf(BaseEntity host) => host switch
+        {
+            IHasAmendments owner => owner.Amendment,
+            Article { Paragraphs: [{ IsImplicit: true } only] } => only.Amendment,
+            _ => null,
+        };
+
+        /// <summary>
         /// Odnajduje jednostkę wskazaną zakresem („w zakresie art. 85a ust. 1") w cytowanej treści.
         /// </summary>
         internal static BaseEntity? ResolveInAmendment(BaseEntity host, StructuralReference scope)
         {
-            if (host is not IHasAmendments owner || owner.Amendment?.Content is not { } content)
+            if (AmendmentOf(host)?.Content is not { } content)
                 return null;
 
             // „w zakresie rozdziału 9a" — cały cytowany rozdział.

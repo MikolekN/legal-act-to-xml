@@ -28,7 +28,7 @@ nagłówka dziennika — nie.
 - Jednostka pod `cytat-strukt` dostaje ELI aktu zmienianego — z atrybutu `akt` tego cytatu; cel komendy
   — z atrybutu `akt` elementu, który go niesie.
 - W metadanych: `JednostkaAktu` i `dowod` wskazują jednostki aktu (prefiks własny), `JednostkaWZakresie`
-  — jednostkę cytowaną (prefiks aktu zmienianego, odczytany z cytatu, w którym ten adres stoi).
+  — jednostkę aktu zmienianego (prefiks odczytany z cytatu albo komendy, w których ten adres stoi).
 - Prefiksu się nie zmyśla: akt bez znanego publikatora zostaje przy adresach bez prefiksu, tak samo cytat,
   którego aktu zmienianego nie odczytano.
 
@@ -54,9 +54,9 @@ nagłówka dziennika — nie.
   ogłoszonym pod tą pozycją (`DU/2025/350__art_68` w nowelizacji i w tekście jednolitym) — to podstawa
   zestawiania zmiany z tekstem zmienianym.
 - Nowy atrybut niosący adres trzeba dopisać do `ActPrefixXml`; inaczej wyjdzie bez prefiksu.
-- `JednostkaWZakresie` dostaje prefiks tylko wtedy, gdy jej adres jest adresem jednostki cytowanej.
-  Zakres zapisany względnie („w zakresie ust. 1d" → `ust_1d`) nie ma jeszcze adresu od celu i zostaje
-  bez prefiksu (175 z 218 w korpusie) — luka w [backlogu](../backlog.md).
+- `JednostkaWZakresie` dostaje prefiks tylko wtedy, gdy jej adres jest adresem jednostki cytowanej albo
+  celem komendy. Zakres, który został ścieżką z klauzuli („w zakresie ust. 1d" → `ust_1d`), prefiksu nie
+  ma — stan w [backlogu](../backlog.md).
 - `CorpusValidator --compare-reference` porównuje adresy z prefiksem.
 
 ## Weryfikacja

@@ -400,7 +400,7 @@ namespace Saga.Core.Services.EntryIntoForce
         {
             // Uchylenie nie cytuje treści — „w zakresie uchylanego pkt 20" wskazuje jednostkę aktu
             // zmienianego, której ten dokument nigdzie nie przytacza. Nie ma czego datować.
-            var hasQuotedContent = host is IHasAmendments { Amendment.Content: not null };
+            var hasQuotedContent = EntryIntoForceTargetResolver.AmendmentOf(host)?.Content is not null;
             if (!hasQuotedContent)
             {
                 missed.Add($"{target.Structure} w zakresie {string.Join(", ", target.ScopeStructures)} " +

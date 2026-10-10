@@ -126,14 +126,14 @@ namespace Saga.Core.Services.Converters
             }
 
             foreach (var target in lifecycleEvent.Targets)
-                if (UnitElement(target) is { } unit)
+                if (UnitElement(target, document) is { } unit)
                     element.Add(unit);
 
             return element;
         }
 
         /// <summary>Jednostka objęta zdarzeniem, z zakresem („w zakresie art. 85a ust. 1"), jeśli wyjątek go zawęża.</summary>
-        private static XElement? UnitElement(ScopedUnitReference target)
+        private static XElement? UnitElement(ScopedUnitReference target, LegalDocument document)
         {
             var eId = target.Structure.ToString();
             if (!WellFormedEId.IsMatch(eId))
@@ -142,7 +142,8 @@ namespace Saga.Core.Services.Converters
             var unit = Element(XmlConverterConstants.Metadata.Temporal.Unit,
                 new XAttribute(XmlConverterConstants.Contents.eId, eId));
 
-            foreach (var scope in target.ScopeStructures.Select(s => s.ToString()).Where(s => WellFormedEId.IsMatch(s)))
+            var host = target.ScopeStructures.Count > 0 ? EntryIntoForceTargetResolver.Resolve(document, target.Structure) : null;
+            foreach (var scope in target.ScopeStructures.Select(s => ScopeAddress(host, s)).Where(s => WellFormedEId.IsMatch(s)))
                 unit.Add(Element(XmlConverterConstants.Metadata.Temporal.UnitInScope,
                     new XAttribute(XmlConverterConstants.Contents.eId, scope)));
 
@@ -152,6 +153,28 @@ namespace Saga.Core.Services.Converters
                         new XAttribute(XmlConverterConstants.Metadata.Temporal.SubjectScopeText, prose))));
 
             return unit;
+        }
+
+        /// <summary>
+        /// Adres jednostki z zakresu. Klauzula zapisuje go względem przepisu zmieniającego („art. 13 pkt 2
+        /// lit. b w zakresie ust. 1d"), a jednostka stoi w akcie zmienianym — adresem jest więc eId jednostki
+        /// cytowanej („art_17__ust_1d"), a gdy przepis jej nie cytuje (uchylenie, zmiana wyrazów) — cel jego
+        /// komendy. Zakres, którego przepis nie wskazuje, zostaje ścieżką z klauzuli.
+        /// </summary>
+        private static string ScopeAddress(BaseEntity? host, StructuralReference scope)
+        {
+            var written = scope.ToString();
+
+            if (host is not null && EntryIntoForceTargetResolver.ResolveInAmendment(host, scope) is { Id: { Length: > 0 } quoted })
+                return scope.Sentence is null
+                    ? quoted
+                    : EIdSegment.Join([quoted, new StructuralReference { Sentence = scope.Sentence }.ToString()]);
+
+            var amendment = host is null ? null : EntryIntoForceTargetResolver.AmendmentOf(host);
+            var targets = amendment?.Targets.Select(t => t.Structure.ToString()) ?? [];
+            return targets.FirstOrDefault(target =>
+                       target == written || target.EndsWith(EIdSegment.Separator + written, StringComparison.Ordinal))
+                   ?? written;
         }
 
         /// <summary>Powołanie jednostki z jej eId („art_43__pkt_1" → „art. 43 pkt 1"); null dla poziomu spoza tabeli.</summary>

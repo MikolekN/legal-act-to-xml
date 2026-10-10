@@ -31,8 +31,9 @@ namespace Saga.Core.Services.Converters
             var own = document.SourceJournal.GetELIStrings().FirstOrDefault();
             var metadata = actElement.Elements().FirstOrDefault(e => e.Name.LocalName == XmlConverterConstants.Metadata.Element);
 
-            // Adres jednostki cytowanej → prefiks aktu zmienianego; potrzebny metadanym, które wskazują ją bez cytatu.
-            var quoted = new Dictionary<string, string?>();
+            // Adres w akcie zmienianym (jednostki cytowanej albo celu komendy) → prefiks tego aktu; potrzebny
+            // metadanym, które wskazują taką jednostkę bez cytatu.
+            var amendedUnits = new Dictionary<string, string?>();
 
             foreach (var element in actElement.Descendants().Where(e => e.AncestorsAndSelf().All(a => a != metadata)).ToList())
             {
@@ -40,7 +41,10 @@ namespace Saga.Core.Services.Converters
 
                 foreach (var name in TargetAttributes)
                     if (element.Attribute(name) is { } target && amended is not null && IsAddress(target.Value))
+                    {
+                        Remember(amendedUnits, target.Value, amended);
                         target.Value = amended + Separator + target.Value;
+                    }
 
                 if (element.Attribute(XmlConverterConstants.Contents.eId) is not { } eId)
                     continue;
@@ -54,18 +58,21 @@ namespace Saga.Core.Services.Converters
                 }
 
                 var prefix = AmendedActOf(citation);
-                // Ten sam adres w cytatach z dwóch różnych aktów nie rozstrzyga, o który chodzi.
-                quoted[eId.Value] = quoted.TryGetValue(eId.Value, out var known) && known != prefix ? null : prefix;
+                Remember(amendedUnits, eId.Value, prefix);
                 if (prefix is not null)
                     eId.Value = prefix + Separator + eId.Value;
             }
 
             if (metadata is not null)
-                PrefixMetadata(metadata, own, quoted);
+                PrefixMetadata(metadata, own, amendedUnits);
         }
 
+        // Ten sam adres w dwóch różnych aktach zmienianych nie rozstrzyga, o który chodzi.
+        private static void Remember(Dictionary<string, string?> amendedUnits, string address, string? prefix) =>
+            amendedUnits[address] = amendedUnits.TryGetValue(address, out var known) && known != prefix ? null : prefix;
+
         // Zdarzenia cyklu życia wskazują jednostki aktu (własny prefiks) i jednostki cytowane w zakresie wyjątku.
-        private static void PrefixMetadata(XElement metadata, string? own, Dictionary<string, string?> quoted)
+        private static void PrefixMetadata(XElement metadata, string? own, Dictionary<string, string?> amendedUnits)
         {
             foreach (var element in metadata.Descendants())
             {
@@ -77,7 +84,7 @@ namespace Saga.Core.Services.Converters
 
                     case XmlConverterConstants.Metadata.Temporal.UnitInScope:
                         if (element.Attribute(XmlConverterConstants.Contents.eId) is { } scoped
-                            && quoted.GetValueOrDefault(scoped.Value) is { } amended)
+                            && amendedUnits.GetValueOrDefault(scoped.Value) is { } amended)
                             Prefix(scoped, amended);
                         break;
                 }

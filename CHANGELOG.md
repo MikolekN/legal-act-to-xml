@@ -140,6 +140,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   `element-do-eId`) niosą prefiks aktu zmienianego (`DU/2025/350__art_68__ust_1__pkt_5`) — jak w przykładach
   autorów schematu. W metadanych prefiks dostają `JednostkaAktu` i `dowod`. Akt bez znanego publikatora
   zostaje przy adresach bez prefiksu. **Zmienia każdy adres w eksporcie**; model (`BaseEntity.Id`) bez zmian.
+- **Zakres wyjątku wejścia w życie adresem w akcie zmienianym**: `JednostkaWZakresie` niesie adres jednostki
+  cytowanej (`DU/2025/501__art_17__ust_1d` zamiast `ust_1d`), a gdy przepis jej nie cytuje (uchylenie, zmiana
+  wyrazów) — cel jego komendy. Zakres, którego przepis nie wskazuje, zostaje ścieżką z klauzuli.
+- **Wyjątek z zakresem dla artykułu bez ustępów**: „art. 5 w zakresie ust. 1d", gdy art. 5 sam jest przepisem
+  zmieniającym, datuje wskazaną jednostkę cytowaną; wcześniej zakres nie był odnajdywany, bo nowelizację
+  niesie ustęp niejawny artykułu.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
