@@ -514,5 +514,22 @@ namespace Saga.Core.Tests
             Assert.Empty(result.Targets);
             Assert.Empty(result.Unresolved);
         }
+
+        // ============================================================
+        // Znacznik odnośnika przy powołaniu
+        // ============================================================
+
+        [Theory]
+        // TJ 317125_2841297: odnośnik przy „art. 217" czytał się jako kolejny artykuł („art. 22").
+        [InlineData("art. 217[22)] oraz art. 227", new[] { "art_217", "art_227" })]
+        [InlineData("art. 5 ust. 2[3)] i ust. 4", new[] { "art_5__ust_2", "art_5__ust_4" })]
+        // Indeks górny oznaczenia zlany w DOCX z odnośnikiem w jeden nawias.
+        [InlineData("art. 4[1 15)] i art. 6", new[] { "art_4[1]", "art_6" })]
+        public void FootnoteMarker_IsNotAUnitDesignation(string units, string[] expected)
+        {
+            var result = UnitEnumerationParser.Parse(units);
+
+            Assert.Equal(expected, result.Targets.Select(t => t.Structure.ToString()));
+        }
     }
 }

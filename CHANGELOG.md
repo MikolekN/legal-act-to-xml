@@ -102,6 +102,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   a druga część wspólna tego samego ustępu ginęła albo stawała się tiretem.
 - **Część wspólna jako treść nowelizacji** („dodaje się część wspólną w brzmieniu:") jest cytatem strukturalnym
   z `czesc-wspolna-*` pod adresem celu (`art_18zg__ust_2__czw`) i funkcją `dodaj-w`, a nie cytatem tekstowym.
+- **Numery odnośników jak w akcie**: znacznik odnośnika w treści niesie numer, pod którym przypis stoi w akcie
+  (`[1)]`, `[2)]`…), a nie identyfikator przypisu z pliku Word, który zwykle jest o jeden większy — tytuł
+  ustawy o ochronie sygnalistów kończył się `[2), 3)]` zamiast `[1), 2)]`.
+- **Odnośnik przy powołaniu nie jest oznaczeniem jednostki**: w „…, z wyjątkiem art. 217[22)] oraz art. 227…"
+  znacznik odnośnika czytał się jako kolejny artykuł i dostawał datę wyjątku. Powołania pomijają znaczniki
+  odnośników, zachowując indeks górny oznaczenia („art. 4[1]").
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

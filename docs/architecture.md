@@ -480,6 +480,7 @@ Kaskadowe tworzenie encji implicit:
 |---|---|
 | **`EntityNumberService`** | Parsowanie numerów encji z tekstu na `EntityNumber` (rozbicie na `NumericPart` / `LexicalPart` / `Superscript`) i formatowanie zwrotne. |
 | **`DesignationAlphabet`** | Litery w oznaczeniach jednostek — łacińskie i polskie („art. 48ł", „lit. ł") — jako jedno źródło dla wzorców klasyfikatora, powołań (`UnitReferenceTokenizer`) i ciągłości numeracji (`NumberingHint`: l → ł → m). |
+| **`FootnoteMarkers`** | Znacznik odnośnika w kanale tekstowym (`[9)]`): wzorzec dla klasyfikatora i wygaszanie znaczników przed czytaniem powołań, żeby numer odnośnika nie stał się oznaczeniem jednostki. |
 | **`LegalReferenceService`** | Cele nowelizacji z treści encji („w art. 5 § 2 pkt 3") jako lista `StructuralAmendmentReference`, bez zdania; kontekstem jest cel komendy nadrzędnej. Sam nie rozbiera powołań — deleguje do `UnitAddressReader` (6.3a). |
 | **`JournalReferenceService`** | Parsowanie publikatorów (Dz. U.) z treści artykułów nowelizujących i uzupełnianie listy `JournalInfo`. |
 
@@ -894,6 +895,7 @@ src/Saga.Core/
 └── Services/
     ├── EntityNumberService.cs       # Parsowanie/formatowanie numerów encji
     ├── DesignationAlphabet.cs       # Litery w oznaczeniach jednostek (także polskie)
+    ├── FootnoteMarkers.cs           # Znacznik odnośnika w kanale tekstowym
     ├── LegalReferenceService.cs     # Adres celu nowelizacji (przez UnitAddressReader)
     ├── JournalReferenceService.cs   # Parsowanie publikatorów (Dz.U.)
     ├── Classify/                    # WARSTWA KLASYFIKACJI AKAPITÓW (jednoprzebiegowa)

@@ -40,7 +40,7 @@ namespace Saga.Core.Services.Classify
         private const string LetterSuffix = DesignationAlphabet.Letter + "*";
 
         /// <summary>Znacznik odnośnika w notacji GetFullText: indeks górny zakończony nawiasem — „[9)]", „[2), 3)]".</summary>
-        internal const string FootnoteMarker = @"\[[^\]]*\)\]";
+        internal const string FootnoteMarker = FootnoteMarkers.Pattern;
 
         /// <summary>
         /// Co stoi za kropką numeru ustępu: odstęp albo — w tekstach jednolitych — od razu znacznik odnośnika

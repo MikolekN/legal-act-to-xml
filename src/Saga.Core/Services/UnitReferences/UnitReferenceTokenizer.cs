@@ -152,7 +152,8 @@ namespace Saga.Core.Services.UnitReferences
             if (string.IsNullOrWhiteSpace(text))
                 return tokens;
 
-            var input = text.Trim();
+            // Znacznik odnośnika przy powołaniu („art. 217[22)] oraz art. 227") nie jest oznaczeniem jednostki.
+            var input = FootnoteMarkers.Blank(text.Trim());
             var cursor = 0;
 
             foreach (Match match in (systematizing ? SystematizingTokenPattern : TokenPattern).Matches(input))

@@ -19,19 +19,21 @@ namespace Saga.Core
         /// Ekstrahuje pelny tekst z akapitu, uwzgledniajac elementy pomijane
         /// przez standardowe InnerText:
         /// - SymbolChar (w:sym font="Symbol" char="F02D") → en-dash (\u2013)
-        /// - FootnoteReference (w:footnoteReference) → numer przypisu
+        /// - FootnoteReference (w:footnoteReference) → numer przypisu jak w akcie (<paramref name="footnoteNumbers"/>);
+        ///   bez tej mapy zostaje identyfikator w:id, który bywa przesunięty względem numeru
         /// - TabChar (w:tab) → tabulator
         /// - Tekst w indeksie gornym (styl IGindeksgrny, Odwoanieprzypisudolnego
         ///   lub VerticalAlignment=Superscript) jest ujmowany w nawiasy [ ].
         /// </summary>
-        public static string GetFullText(this Paragraph paragraph)
+        /// <param name="footnoteNumbers">Numer przypisu, pod którym stoi w akcie, dla każdego w:id.</param>
+        public static string GetFullText(this Paragraph paragraph, IReadOnlyDictionary<long, int>? footnoteNumbers = null)
         {
             var sb = new StringBuilder();
             var superscript = new StringBuilder();
 
             foreach (var run in paragraph.Descendants<Run>())
             {
-                var text = RunText(run);
+                var text = RunText(run, footnoteNumbers);
 
                 // Przebieg bez tekstu (znaczniki pola: odnośnik wstawiony polem NOTEREF) nie rozcina indeksu
                 // górnego — inaczej „8" i „)" jednego odnośnika stają w dwóch nawiasach „[8][)]".
@@ -52,7 +54,7 @@ namespace Saga.Core
             return sb.ToString();
         }
 
-        private static string RunText(Run run)
+        private static string RunText(Run run, IReadOnlyDictionary<long, int>? footnoteNumbers)
         {
             var sb = new StringBuilder();
             foreach (var child in run.ChildElements)
@@ -70,7 +72,10 @@ namespace Saga.Core
                         break;
 
                     case FootnoteReference fnRef:
-                        sb.Append(fnRef.Id?.Value);
+                        if (fnRef.Id?.Value is { } id && footnoteNumbers != null && footnoteNumbers.TryGetValue(id, out var number))
+                            sb.Append(number);
+                        else
+                            sb.Append(fnRef.Id?.Value);
                         break;
 
                     case TabChar:

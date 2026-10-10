@@ -377,5 +377,28 @@ namespace Saga.Core.Tests
 
             Assert.Equal("DZIENNIK USTAW", Assert.Single(header).Text);
         }
+
+        // ============================================================
+        // Przypisy
+        // ============================================================
+
+        private static IReadOnlyList<DocumentBlock> Read(byte[] docx)
+        {
+            using var stream = new MemoryStream(docx);
+            return DocumentBlockReaderFactory.Create(SourceFormat.Docx).ReadBlocks(stream);
+        }
+
+        [Fact]
+        public void FootnoteReference_CarriesTheNumberPrintedInTheAct_NotTheWordId()
+        {
+            // Ustawa o ochronie sygnalistów: tytuł ma odnośniki 1) i 2), a w:id tych przypisów to 2 i 3.
+            var blocks = Read(DocxFixtures.WithFootnotes(
+                ["Niniejsza ustawa wdraża dyrektywę.", "Niniejszą ustawą zmienia się ustawy.", "Zmiany zostały ogłoszone."],
+                "o ochronie sygnalistów{1}{, }{2}",
+                "Art. 1. Ustawa (Dz. U. poz. 1, z późn. zm.{3}) określa zasady."));
+
+            Assert.Equal("o ochronie sygnalistów[1), 2)]", blocks[0].Text);
+            Assert.Equal("Art. 1. Ustawa (Dz. U. poz. 1, z późn. zm.[3)]) określa zasady.", blocks[1].Text);
+        }
     }
 }
