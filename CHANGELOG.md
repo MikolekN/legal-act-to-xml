@@ -146,6 +146,10 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Wyjątek z zakresem dla artykułu bez ustępów**: „art. 5 w zakresie ust. 1d", gdy art. 5 sam jest przepisem
   zmieniającym, datuje wskazaną jednostkę cytowaną; wcześniej zakres nie był odnajdywany, bo nowelizację
   niesie ustęp niejawny artykułu.
+- **Podstawa zdarzenia wyjątku**: `podstawa` i `dowod` zdarzenia wskazują pozycję wyliczenia wyjątków, która
+  je zapisuje (`art. 43 pkt 2`, `DU/2026/26__art_43__pkt_2`), a nie całą klauzulę. Reguła ogólna i zdarzenie
+  zapisane w kilku pozycjach nadal wskazują klauzulę. `DaneCzasowe` trzech przykładów autorów schematu
+  zgadzają się w całości; `CorpusValidator --compare-reference` porównuje je osobną sekcją.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

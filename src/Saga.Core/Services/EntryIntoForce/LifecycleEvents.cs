@@ -32,6 +32,15 @@ namespace Saga.Core.Services.EntryIntoForce
 
         /// <summary>Jednostki objęte zdarzeniem na mocy wyjątku.</summary>
         internal List<ScopedUnitReference> Targets { get; } = [];
+
+        /// <summary>Jednostki klauzuli, w których zapisano wyjątki składające się na to zdarzenie.</summary>
+        internal HashSet<string> SourceUnitEIds { get; } = new(StringComparer.Ordinal);
+
+        /// <summary>
+        /// Jednostka, w której zdarzenie zapisano, gdy jest jedna (pozycja wyliczenia wyjątków). Null dla reguły
+        /// ogólnej i dla zdarzenia złożonego z kilku pozycji — podstawą jest wtedy cała klauzula.
+        /// </summary>
+        internal string? SourceUnitEId => SourceUnitEIds.Count == 1 ? SourceUnitEIds.Single() : null;
     }
 
     /// <summary>
@@ -134,8 +143,12 @@ namespace Saga.Core.Services.EntryIntoForce
         /// <summary>Wyjątek o dacie reguły ogólnej nic do niej nie dodaje — ogólna obejmuje jego jednostki i tak.</summary>
         private static void AddTargets(LifecycleEvent target, PartialEntryIntoForce partial)
         {
-            if (!target.IsGeneral)
-                target.Targets.AddRange(partial.Targets);
+            if (target.IsGeneral)
+                return;
+
+            target.Targets.AddRange(partial.Targets);
+            if (partial.SourceUnitEId is { } source)
+                target.SourceUnitEIds.Add(source);
         }
 
         private static string? JournalKey(JournalInfo journal) =>

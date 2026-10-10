@@ -158,6 +158,43 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Podstawa zdarzenia: jednostka klauzuli, która je zapisuje
+        // ============================================================
+
+        private static (string? Basis, string? Evidence) BasisOf(XElement xml, string date)
+        {
+            var entry = xml.Descendants().Single(e =>
+                e.Name.LocalName == "Zdarzenie" && Attr(e, "rodzaj") == "wejscie-w-zycie" && Attr(e, "data") == date);
+            return (Attr(entry, "podstawa"), Attr(entry, "dowod"));
+        }
+
+        [Fact]
+        public void ExceptionEvent_IsBasedOnTheClauseItemThatStatesIt()
+        {
+            // Przykład autorów schematu (DU/2026/26, art. 43): zdarzenie wyjątku wskazuje punkt klauzuli,
+            // zdarzenie reguły ogólnej — artykuł.
+            var xml = ExportWithExceptionsAndRetroactivity();
+
+            Assert.Equal(("art. 3 pkt 1", "DU/2024/928__art_3__pkt_1"), BasisOf(xml, "2027-01-01"));
+            Assert.Equal(("art. 3 pkt 2", "DU/2024/928__art_3__pkt_2"), BasisOf(xml, "2024-06-25"));
+            Assert.Equal(("art. 3", "DU/2024/928__art_3"), BasisOf(xml, "2024-07-09"));
+        }
+
+        [Fact]
+        public void ExceptionEvent_StatedInSeveralItems_IsBasedOnTheWholeClause()
+        {
+            var xml = Export(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                "Art. 1. Przepis pierwszy.",
+                "Art. 2. Przepis drugi.",
+                "Art. 3. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:",
+                "1) art. 1, który wchodzi w życie z dniem 1 stycznia 2027 r.;",
+                "2) art. 2, który wchodzi w życie z dniem 1 stycznia 2027 r.");
+
+            Assert.Equal(("art. 3", "DU/2024/928__art_3"), BasisOf(xml, "2027-01-01"));
+        }
+
+        // ============================================================
         // Zakres wyjątku: adres jednostki w akcie zmienianym
         // ============================================================
 

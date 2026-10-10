@@ -114,9 +114,11 @@ namespace Saga.Core.Services.Converters
             if (lifecycleEvent.Condition is { Length: > 0 } condition)
                 element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Condition, condition));
 
-            // Klauzula wejścia w życie jako podstawa i dowód zdarzenia. Klauzulę niesie bywa część wspólna
-            // wyliczenia („art_3__intro") — dowodem jest wtedy najbliższa jednostka z oznaczeniem.
-            if (document.EntryIntoForce?.SourceUnitEId is { } clause && WellFormedPrefix.Match(clause) is { Success: true, Value: var source })
+            // Podstawą i dowodem zdarzenia jest jednostka, która je zapisuje: pozycja wyliczenia wyjątków
+            // („art. 43 pkt 2"), a dla reguły ogólnej i zdarzenia z kilku pozycji — klauzula. Klauzulę niesie bywa
+            // część wspólna wyliczenia („art_3__intro") — dowodem jest wtedy najbliższa jednostka z oznaczeniem.
+            var stated = lifecycleEvent.SourceUnitEId ?? document.EntryIntoForce?.SourceUnitEId;
+            if (stated is not null && WellFormedPrefix.Match(stated) is { Success: true, Value: var source })
             {
                 if (Citation(source) is { } citation)
                     element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Basis, citation));

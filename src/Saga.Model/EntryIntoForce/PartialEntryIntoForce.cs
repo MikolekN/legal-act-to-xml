@@ -45,6 +45,12 @@ namespace Saga.Model.EntryIntoForce
         /// <summary>Dosłowny tekst wyjątku.</summary>
         public string RawText { get; set; } = string.Empty;
 
+        /// <summary>
+        /// eId jednostki, w której wyjątek zapisano: pozycja wyliczenia wyjątków („art_43__pkt_2")
+        /// albo jednostka klauzuli głównej, gdy wyjątek stoi w jej zdaniu.
+        /// </summary>
+        public string? SourceUnitEId { get; set; }
+
         /// <summary>Czy wyjątek można zastosować.</summary>
         public bool IsApplicable { get; set; } = true;
 

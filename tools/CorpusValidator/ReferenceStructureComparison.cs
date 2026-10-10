@@ -18,7 +18,9 @@ namespace CorpusValidator;
 ///
 ///   4. datę wejścia w życie i grupę czasową (<c>okres</c>) każdej jednostki z eId,
 ///   5. treść zdań — własny tekst każdego zdania, bez treści odnośników i cytatów, z podziałem różnic
-///      na rodzaje (odstępy, myślniki, cudzysłowy, indeks górny, inne).
+///      na rodzaje (odstępy, myślniki, cudzysłowy, indeks górny, inne),
+///   6. dane czasowe w metadanych — zdarzenia z podstawą i dowodem, jednostki wyjątków z zakresem,
+///      grupy czasowe.
 ///
 /// Adresy porównywane są z prefiksem aktu („DU/2024/928__art_1", w cytacie prefiks aktu zmienianego).
 /// Z porównania wyłączone są atrybuty GUID.
@@ -77,7 +79,8 @@ internal static class ReferenceStructureComparison
         var actual = Collect(ours);
 
         var report = Report(docxPath, referencePath, reference, actual)
-            + SentenceReport(Sentences(referenceRoot), Sentences(ours));
+            + SentenceReport(Sentences(referenceRoot), Sentences(ours))
+            + LifecycleReport(LifecycleLines(referenceRoot), LifecycleLines(ours));
         File.WriteAllText(Path.Combine(outputDirectory, "comparison.txt"), report);
         Console.WriteLine(report);
         return 0;
@@ -289,6 +292,45 @@ internal static class ReferenceStructureComparison
     }
 
     /// <summary>Fragment tekstu od miejsca pierwszej różnicy, z krótkim kontekstem przed nią.</summary>
+    // ============================================================
+    // 6. Dane czasowe w metadanych
+    // ============================================================
+
+    /// <summary>
+    /// Elementy <c>DaneCzasowe</c> jako wiersze: zdarzenia z podstawą i dowodem, jednostki wyjątków
+    /// z zakresem, grupy czasowe z przedziałami. Element podrzędny niesie w wierszu swojego właściciela,
+    /// bo jednostka i przedział znaczą coś tylko w swoim zdarzeniu albo grupie.
+    /// </summary>
+    internal static List<string> LifecycleLines(XElement root)
+    {
+        var temporal = root.Descendants().FirstOrDefault(e => e.Name.LocalName == "DaneCzasowe");
+        if (temporal is null)
+            return [];
+
+        static string Label(XElement e) =>
+            e.Attribute("id")?.Value ?? e.Attribute("eId")?.Value ?? e.Name.LocalName;
+
+        return temporal.Descendants().Select(element =>
+        {
+            var owners = element.Ancestors().TakeWhile(a => a != temporal).Reverse().Select(Label);
+            var attributes = element.Attributes()
+                .Where(a => !a.IsNamespaceDeclaration && !a.Name.LocalName.Contains("GUID"))
+                .Select(a => $"{a.Name.LocalName}=\"{a.Value}\"");
+            return string.Join(" > ", owners.Append(element.Name.LocalName)) + " " + string.Join(" ", attributes);
+        }).ToList();
+    }
+
+    private static string LifecycleReport(List<string> reference, List<string> actual)
+    {
+        var sb = new StringBuilder();
+        void W(string line = "") => sb.AppendLine(line);
+
+        W();
+        W($"--- Dane czasowe (zdarzenia, jednostki wyjątków, grupy): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
+        WriteDiff(W, reference, actual, 40);
+        return sb.ToString();
+    }
+
     private static string Diverging(string text, string other)
     {
         var index = 0;

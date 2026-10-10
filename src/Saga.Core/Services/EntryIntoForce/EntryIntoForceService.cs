@@ -278,6 +278,7 @@ namespace Saga.Core.Services.EntryIntoForce
                 ResolvedDate = EntryIntoForceDateResolver.Resolve(formula, announcementDate),
                 RetroactiveFrom = retroactive,
                 RawText = $"{unitsText}, {formulaTail}".Trim(),
+                SourceUnitEId = owner.Id,
             };
 
             foreach (var fragment in enumeration.Unresolved)
@@ -327,6 +328,7 @@ namespace Saga.Core.Services.EntryIntoForce
                 Targets = enumeration.Targets.ToList(),
                 RetroactiveFrom = retroactive,
                 RawText = $"{unitsText} {rawText}".Trim(),
+                SourceUnitEId = owner.Id,
             };
 
             foreach (var fragment in enumeration.Unresolved)
