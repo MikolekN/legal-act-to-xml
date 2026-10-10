@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Saga.Core.Ingest;
 using Saga.Core.Services.Classify;
@@ -18,10 +17,6 @@ namespace Saga.Core.Services.Parsing
         private readonly StructureProcessor _structureProcessor = new();
         private readonly EntryIntoForceService _entryIntoForce = new();
 
-        // „Załącznik do ustawy z dnia…", „Załączniki do ustawy…", „Załącznik nr 2 do ustawy…" — nie
-        // „Załącznik do obwieszczenia", który w tekście jednolitym otwiera sam akt.
-        private static readonly Regex AnnexHeader = new(
-            @"^Załącznik(?:i)?(?:\s+nr\s+\S+)?\s+do\s+(?:ustawy|rozporządzenia)\s+z\s+dnia\b", RegexOptions.Compiled);
 
         /// <summary>
         /// Konstruktor domyślny — używa ParagraphClassifier.
@@ -49,13 +44,21 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public void ProcessBlock(DocumentBlock block, ParsingContext context)
         {
-            if (block.IsEmpty)
-                return;
-
             // Kontrakt adapterów: bloki spoza głównego biegu treści NIE są treścią jednostek
             // redakcyjnych. Czytają je osobni konsumenci, z pełnej listy bloków:
             // klasyfikator dokumentu (sygnały TJ) oraz JournalHeaderParser (metadane publikatora).
             if (block.Role is BlockRole.FootnoteText or BlockRole.JournalHeader)
+                return;
+
+            // Załącznik stoi za ostatnim artykułem i ma własną treść (tabele, wykazy, nawet „Rozdział 1") —
+            // nie jest częścią struktury aktu. Zbierany jest w całości, z pustymi komórkami tabel.
+            if (context.InAnnex)
+            {
+                CollectAnnexBlock(block, context);
+                return;
+            }
+
+            if (block.IsEmpty)
                 return;
 
             var text = block.Text.CollapseWhitespace().Trim();
@@ -67,18 +70,14 @@ namespace Saga.Core.Services.Parsing
                 NumberingHint = hint,
             });
 
-            // Załącznik stoi za ostatnim artykułem i ma własną treść (tabele, wykazy, nawet „Rozdział 1") —
-            // nie jest częścią struktury aktu.
-            if (context.InAnnex) return;
             if (IsAnnexHeader(context, classification, text))
             {
                 context.InAnnex = true;
+                CollectAnnexBlock(block, context);
                 return;
             }
 
-            // Treść odnośników leży poza treścią aktu; znacznik odwołania zostaje w tekście bloku.
-            foreach (var footnote in block.Footnotes)
-                context.Document.Footnotes.Add(new Saga.Model.Footnote { Symbol = footnote.Symbol, Paragraphs = [.. footnote.Paragraphs] });
+            RegisterFootnotes(block, context);
 
             if (IsMisstyledActUnit(context, classification, text))
                 classification = AsActContent(classification);
@@ -112,7 +111,20 @@ namespace Saga.Core.Services.Parsing
             context.CurrentArticle != null
             && !classification.IsAmendmentContent
             && !context.InsideAmendment && !context.AmendmentCollector.IsCollecting
-            && AnnexHeader.IsMatch(text);
+            && AnnexBuilder.AttachedTo.IsMatch(text);
+
+        private static void CollectAnnexBlock(DocumentBlock block, ParsingContext context)
+        {
+            context.AnnexBlocks.Add(block);
+            RegisterFootnotes(block, context);
+        }
+
+        // Treść odnośników leży poza treścią aktu; znacznik odwołania zostaje w tekście bloku.
+        private static void RegisterFootnotes(DocumentBlock block, ParsingContext context)
+        {
+            foreach (var footnote in block.Footnotes)
+                context.Document.Footnotes.Add(new Saga.Model.Footnote { Symbol = footnote.Symbol, Paragraphs = [.. footnote.Paragraphs] });
+        }
 
         /// <summary>
         /// Finalizuje przetwarzanie — wypróżnia bufor nowelizacji jeśli dokument
@@ -128,6 +140,8 @@ namespace Saga.Core.Services.Parsing
 
             // Zapisz metadane aktu zebrane ze strefy tytułowej (rodzaj/data/przedmiot → Title/ActDate).
             context.Metadata.ApplyTo(context.Document);
+
+            context.Document.Annexes = AnnexBuilder.Build(context.AnnexBlocks);
 
             SystematizingUnitValidator.Validate(context.Document);
 

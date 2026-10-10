@@ -1,3 +1,4 @@
+using Saga.Core.Ingest;
 using Saga.Core.Services.Classify;
 using Saga.Model;
 using Saga.Model.SystematizingUnits;
@@ -50,6 +51,9 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Za nagłówkiem załącznika aktu — dalsze bloki nie należą do struktury aktu.</summary>
         public bool InAnnex { get; set; }
+
+        /// <summary>Bloki od nagłówka załącznika do końca dokumentu; załączniki składa z nich <c>AnnexBuilder</c>.</summary>
+        public List<DocumentBlock> AnnexBlocks { get; } = new();
 
         /// <summary>Liczba jednostek nazwanych bez numeru danego rodzaju — źródło tymczasowego eId (TMP1, TMP2…).</summary>
         public Dictionary<ParagraphKind, int> NamedUnitCounts { get; } = new();

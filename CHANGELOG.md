@@ -158,6 +158,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   wiersz, kolumnę siatki, scalenia (`ColumnSpan`, `RowSpan`, kontynuacja komórki scalonej w pionie) i znacznik
   wiersza nagłówka. Wcześniej akapity tabel były nieodróżnialne od zwykłych. Nic tego jeszcze nie czyta —
   to podstawa pod tabele w załącznikach i jednostkach; eksport bez zmian.
+- **Załączniki w modelu**: treść za nagłówkiem „Załącznik(i) do ustawy z dnia …" nie jest już pomijana —
+  `LegalDocument.Annexes` niesie każdy załącznik z wskazaniem aktu, oznaczeniem („Załącznik nr 1"), numerem,
+  tytułem i treścią w kolejności dokumentu: akapitami i tabelami (`ContentTable`: wiersze, komórki, scalenia,
+  wiersz nagłówka). Odnośniki z załączników trafiają do rejestru dokumentu. Eksport bez zmian — załącznik
+  nie ma jeszcze elementu w XML; wyliczenia w załączniku zostają akapitami.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

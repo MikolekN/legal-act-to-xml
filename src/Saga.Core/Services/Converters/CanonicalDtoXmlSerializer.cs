@@ -44,12 +44,43 @@ namespace Saga.Core.Services.Converters
                     new XAttribute("givenName", signature.GivenName),
                     new XAttribute("surname", signature.Surname)));
 
+            foreach (var annex in document.Annexes)
+                root.Add(SerializeAnnex(annex));
+
             return ToCanonicalString(root);
         }
 
         // ============================================================
         // Jednostki systematyzacyjne
         // ============================================================
+
+        private static XElement SerializeAnnex(Annex annex)
+        {
+            var element = new XElement("annex");
+            if (annex.Number is not null)
+                element.Add(new XAttribute("number", annex.Number));
+            if (annex.Heading is not null)
+                element.Add(new XAttribute("heading", annex.Heading));
+            if (annex.Title is not null)
+                element.Add(new XAttribute("title", annex.Title));
+
+            element.Add(annex.AttachedTo.Select(line => new XElement("attachedTo", line)));
+
+            foreach (var block in annex.Content)
+            {
+                if (block.Table is { } table)
+                    element.Add(new XElement("table", table.Rows.Select(row => new XElement("row",
+                        row.IsHeader ? new XAttribute("header", true) : null,
+                        row.Cells.Select(cell => new XElement("cell",
+                            cell.ColumnSpan > 1 ? new XAttribute("columnSpan", cell.ColumnSpan) : null,
+                            cell.RowSpan > 1 ? new XAttribute("rowSpan", cell.RowSpan) : null,
+                            cell.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph))))))));
+                else
+                    element.Add(new XElement("paragraph", block.Text));
+            }
+
+            return element;
+        }
 
         private static XElement SerializePart(Part part)
         {

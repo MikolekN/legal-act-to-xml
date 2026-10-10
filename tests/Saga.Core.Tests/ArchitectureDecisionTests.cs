@@ -491,6 +491,7 @@ namespace Saga.Core.Tests
             ["potrójny tiret"] = "trtir",
             ["poczwórny tiret"] = "cztir",
             ["pięciokrotny tiret"] = "pitir",
+            ["załącznik"] = "zal",
         };
 
         [Fact]
@@ -517,6 +518,7 @@ namespace Saga.Core.Tests
                 ["potrójny tiret"] = Tiret.PrefixForDepth(3),
                 ["poczwórny tiret"] = Tiret.PrefixForDepth(4),
                 ["pięciokrotny tiret"] = Tiret.PrefixForDepth(5),
+                ["załącznik"] = Annex.EIdPrefix,
             };
 
             Assert.Equal(LevelTypeTable, actual);

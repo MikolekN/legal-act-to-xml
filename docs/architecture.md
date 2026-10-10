@@ -39,6 +39,8 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `ValidationMessage.cs` | Komunikaty diagnostyczne (Info/Warning/Error/Critical) |
 | `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje) |
 | `ActSignature.cs` | Formuła podpisu zamykająca akt: organ i osoba, jak stoją w akcie (`LegalDocument.Signature`) |
+| `Annex.cs` | Załącznik aktu (`LegalDocument.Annexes`): wskazanie aktu, oznaczenie i numer (eId `zal_1`; bez numeru — bez eId), tytuł, treść w kolejności dokumentu (`AnnexBlock`: akapit albo tabela) |
+| `ContentTable.cs` | Tabela w treści: wiersze (znacznik wiersza nagłówka) i komórki ze scaleniami i akapitami |
 | `Footnote.cs` | Odnośnik (przypis): numer jak w akcie i akapity treści; rejestr w `LegalDocument.Footnotes`, miejsce odwołania niesie znacznik `[N)]` w tekście jednostki — [ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md) |
 | `CommonPartType.cs` | Enum: `Intro` / `WrapUp` |
 | `LegalActType.cs` | Enum rodzaju aktu: `Statute`, `Bill`, `Regulation`, `Code`, `Ordinance`, `RegulatoryImpactAssessment`, `AmendingStatute`, `Announcement`, `Resolution`, `ExecutiveOrder`, `LocalLegalAct` |
@@ -415,6 +417,8 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`AmendmentTargetPairing`** | Przypisuje jednostki treści nowelizacji jej celom — po oznaczeniu, a przy rozjeździe oznaczeń i równej liczbie po kolejności. Korzystają z niego eksport (komenda na cel) i walidacja finalizatora. |
 | **`CommonPartPlacement`** | Rozstrzyga część wspólną, po której przychodzi kolejna pozycja tego samego wyliczenia: zamyka niższe wyliczenie albo przerywa bieżące (`CommonPart.InterruptsAfter`). Wołany przez `StructureProcessor` i `AmendmentBuilder`. |
 | **`ActSignatureParser`** | Rozpoznaje formułę podpisu za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda") — organ, inicjały, nazwisko. Formuła, po której stoi kolejny artykuł, podpisem aktu nie jest. |
+| **`AnnexBuilder`** | Składa załączniki z bloków zebranych za nagłówkiem „Załącznik(i) do ustawy z dnia …" (`ParsingContext.AnnexBlocks`): wskazanie aktu z wierszem „(Dz. U. …)", oznaczenie w osobnym wierszu (ze znacznikiem odnośnika albo dopiskiem „(uchylony)"), tytuł (styl tytułu albo wyśrodkowany pierwszy wiersz), treść. Treści nie rozkłada na jednostki — załącznik nie przechodzi przez klasyfikator akapitów. |
+| **`ContentTables`** | Składa `ContentTable` z bloków jednej tabeli źródłowej według `DocumentBlock.TableCell`; dalszy ciąg komórki scalonej w pionie nie jest osobną komórką |
 | **`ValidationReporter`** | Reporter diagnostyczny — statyczne metody do rejestrowania ostrzeżeń o konfliktach styl/treść i brakujących stylach na encjach DTO. |
 
 ### 6.1b Warstwa klasyfikacji akapitów (`Services/Classify/`)
@@ -846,6 +850,8 @@ src/Saga.Model/
 ├── ValidationMessage.cs             # Komunikat diagnostyczny
 ├── JournalInfo.cs                   # Metadane publikatora (Dz.U.)
 ├── ActSignature.cs                  # Formuła podpisu aktu (organ, osoba)
+├── Annex.cs                         # Załącznik aktu: wskazanie aktu, oznaczenie, tytuł, treść
+├── ContentTable.cs                  # Tabela w treści (wiersze, komórki, scalenia)
 ├── Footnote.cs                      # Odnośnik (przypis): numer i treść
 ├── PublisherType.cs                 # Enum typu publikatora
 ├── LegalActType.cs                  # Enum rodzaju aktu (11 wartości, w tym AmendingStatute/Announcement/Resolution/ExecutiveOrder/LocalLegalAct)
@@ -937,6 +943,8 @@ src/Saga.Core/
     │   ├── AmendmentCommandParser.cs  # Rozpoznanie rodzaju komendy nowelizacyjnej z treści
     │   ├── DocumentMetadataCollector.cs  # Zbiera rodzaj/datę/przedmiot aktu ze strefy tytułowej
     │   ├── ActSignatureParser.cs      # Formuła podpisu za ostatnim przepisem
+    │   ├── AnnexBuilder.cs            # Załączniki z bloków za nagłówkiem załącznika
+    │   ├── ContentTables.cs           # Tabela treści z bloków tabeli źródłowej
     │   ├── JournalHeaderParser.cs    # Metadane publikatora z nagłówka strony (akty ogłoszone)
     │   ├── ParsingContext.cs        # Stan parsowania (mutowalny)
     │   ├── ParsingFactories.cs      # Fabryki: numery, prefiksy, zdania

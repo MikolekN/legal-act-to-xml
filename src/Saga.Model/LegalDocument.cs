@@ -124,6 +124,9 @@ namespace Saga.Model
         /// </summary>
         public List<Footnote> Footnotes { get; } = new();
 
+        /// <summary>Załączniki aktu w kolejności dokumentu.</summary>
+        public List<Annex> Annexes { get; set; } = new();
+
         /// <summary>
         /// Części aktu w kolejności (kodeksy mają ich kilka). Pierwsza zawsze istnieje i zawiera minimalną
         /// pełną hierarchię od Części do Oddziału; jednostki obecne w tekście mają IsImplicit = false.
