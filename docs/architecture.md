@@ -570,7 +570,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `SignatureXmlConverter` | Podpis aktu: `organ-podpisujacy` z `osoba` (`imie`, `nazwisko`) za ostatnią jednostką i organ o roli `podpisujacy` w `Organy` |
 | `UnitAddressXml` | Jedyne miejsce piszące adres jednostki redakcyjnej: `eId` albo `brak-eid` z powodem, oraz `nr` (pusty, gdy oznaczenia nie odczytano) — [ADR-0024](adr/0024-jednostka-bez-oznaczenia-nie-ma-eid.md) |
 | `UnitLifecycleXml` | Jedyne miejsce piszące `wejscie-w-zycie`; zostawia przy elemencie obie daty jednostki (`UnitDates`), z których powstaje `okres` |
-| `SchemaPlValidator` | Walidacja eksportu wobec lokalnego `schema/schemaPL.xsd` (narzędzia i testy `[SchemaPlFact]`): cały dokument albo treść aktu bez nagłówka, element po elemencie wobec deklaracji w typie aktu |
+| `SchemaPlValidator` | Walidacja eksportu wobec lokalnego `schema/schemaPL.xsd` (narzędzia i testy `[SchemaPlFact]`): cały dokument albo treść aktu bez nagłówka, element po elemencie wobec deklaracji w typie aktu. Koryguje jedno odstępstwo walidatora .NET: komunikat o polu ograniczenia unikalności przy elemencie bez deklaracji (jednostki pod `segment-zalacznika`) pomija i sam sprawdza unikalność atrybutu |
 
 ---
 

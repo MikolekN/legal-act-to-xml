@@ -12,6 +12,13 @@ namespace Saga.Core.Services.Converters
     /// go nie ma: <see cref="TryLoad"/> zwraca wtedy null z powodem, a wywołujący pomija walidację,
     /// zamiast się czerwienić. Import plików zależnych (mathml3, typografia, instrukcje nowelizacyjne)
     /// rozwiązuje się względem katalogu schematu, dlatego schemat ładujemy ze ścieżki.
+    ///
+    /// Walidator .NET ma jedno odstępstwo, które tu korygujemy: element bez deklaracji, dopuszczony przez
+    /// treść dowolną (<c>xs:any</c> w <c>segment-zalacznika</c>), a niosący atrybut objęty ograniczeniem
+    /// unikalności, zgłasza jako drugą wartość pola elementu nadrzędnego („The field … is expecting at the
+    /// most one value") i unikalności tej wartości nie sprawdza. libxml2 i Xerces przyjmują taki dokument
+    /// i sprawdzają unikalność. Komunikat pomijamy, a unikalność sprawdzamy sami
+    /// (<see cref="DuplicatedOutsideDeclarations"/>).
     /// </summary>
     internal sealed class SchemaPlValidator
     {
@@ -22,6 +29,10 @@ namespace Saga.Core.Services.Converters
         private static readonly HashSet<string> ActHeader = ["metadane", "oznaczenie", "rodzaj-aktu", "data", "tytul"];
 
         private static readonly Regex Quoted = new("'[^']*'", RegexOptions.Compiled);
+
+        /// <summary>Komunikat walidatora .NET o polu ograniczenia tożsamości z więcej niż jedną wartością.</summary>
+        private static readonly Regex SingleValueExpected = new(
+            @"^The field '(?<field>[^']+)' is expecting at the most one value", RegexOptions.Compiled);
 
         private readonly XmlSchemaSet _schemas;
 
@@ -66,16 +77,69 @@ namespace Saga.Core.Services.Converters
         internal IReadOnlyList<string> Validate(XElement root)
         {
             var problems = new List<string>();
+            var singleValue = new List<(XElement Element, string Field, string Message)>();
+            var document = new XDocument(new XElement(root));
             try
             {
-                new XDocument(new XElement(root)).Validate(_schemas, (_, e) => problems.Add(e.Message));
+                document.Validate(_schemas, (sender, e) =>
+                {
+                    var element = sender as XElement ?? (sender as XAttribute)?.Parent;
+                    var match = SingleValueExpected.Match(e.Message);
+                    if (element is not null && match.Success)
+                        singleValue.Add((element, match.Groups["field"].Value, e.Message));
+                    else
+                        problems.Add(e.Message);
+                }, addSchemaInfo: true);
             }
             catch (XmlSchemaValidationException ex)
             {
                 // Błąd, po którym walidator nie potrafi kontynuować — dokument i tak jest niezgodny.
                 problems.Add(ex.Message);
             }
+
+            // O tym, czy element miał deklarację, wiadomo dopiero po walidacji — stąd rozstrzygnięcie na końcu.
+            var uncheckedFields = new HashSet<string>();
+            foreach (var (element, field, message) in singleValue)
+            {
+                if (IsUndeclared(element))
+                    uncheckedFields.Add(field);
+                else
+                    problems.Add(message);
+            }
+
+            problems.AddRange(DuplicatedOutsideDeclarations(document, uncheckedFields));
             return problems;
+        }
+
+        private static bool IsUndeclared(XElement element) => element.GetSchemaInfo()?.SchemaElement is null;
+
+        /// <summary>
+        /// Unikalność, której walidator .NET nie sprawdza: wartość atrybutu elementu bez deklaracji nie może
+        /// powtórzyć się w dokumencie — dla atrybutów, przy których pominięto jego komunikat.
+        /// </summary>
+        private static IEnumerable<string> DuplicatedOutsideDeclarations(XDocument document, HashSet<string> fields)
+        {
+            if (fields.Count == 0)
+                yield break;
+
+            var elements = document.Descendants().ToList();
+            foreach (var field in fields)
+            {
+                var bearers = elements
+                    .Select(element => (Element: element, Attribute: element.Attributes().FirstOrDefault(a => a.Name.LocalName == field)))
+                    .Where(bearer => bearer.Attribute is not null)
+                    .ToList();
+                var occurrences = bearers.GroupBy(bearer => (bearer.Attribute!.Name, bearer.Attribute.Value))
+                    .ToDictionary(group => group.Key, group => group.Count());
+
+                var repeated = bearers
+                    .Where(bearer => IsUndeclared(bearer.Element) && occurrences[(bearer.Attribute!.Name, bearer.Attribute.Value)] > 1)
+                    .Select(bearer => bearer.Attribute!.Value)
+                    .Distinct();
+
+                foreach (var value in repeated)
+                    yield return $"Powtórzona wartość atrybutu {field}: '{value}' (element w treści dowolnej, bez deklaracji).";
+            }
         }
 
         /// <summary>

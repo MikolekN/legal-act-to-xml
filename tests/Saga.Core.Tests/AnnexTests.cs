@@ -507,6 +507,62 @@ namespace Saga.Core.Tests
             Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(document)));
         }
 
+        // Akt z nagłówkiem dziennika i załącznikiem, którego treścią jest wyliczenie (jednostki pod segmentem).
+        private static XElement WholeActWithAnnexUnits()
+        {
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 2 marca 2026 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 252", Role = BlockRole.JournalHeader },
+            };
+            blocks.AddRange(Act.Select(text => Block(text)));
+            blocks.AddRange(
+            [
+                Block("Załączniki do ustawy z dnia 23 stycznia 2026 r.", AttachedToStyle),
+                Block("(Dz. U. poz. 252)", AttachedToStyle),
+                Block("Załącznik nr 4", DesignationStyle),
+                Block("WYMOGI DLA SYSTEMU ZARZĄDZANIA", TitleStyle),
+                Block("I. System zarządzania bezpieczeństwem informacji obejmuje co najmniej:"),
+                Block("1) inwentaryzację produktów ICT;", "PKTpunkt"),
+                Block("2) zapewnienie ochrony informacji.", "PKTpunkt"),
+                Block("II. Podmiot zapewnia:"),
+                Block("1) szkolenia;", "PKTpunkt"),
+                Block("2) audyty.", "PKTpunkt"),
+            ]);
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            return LegalDocumentConverter.Convert(document);
+        }
+
+        [SchemaPlFact]
+        public void ActWithAnnexUnits_IsSchemaValid_AsAWhole()
+        {
+            // Jednostki pod segmentem nie mają deklaracji w schemacie (treść dowolna). Walidator .NET brał ich
+            // GUID za drugą wartość pola elementu nadrzędnego; libxml2 i Xerces taki dokument przyjmują.
+            var xml = WholeActWithAnnexUnits();
+
+            Assert.Contains(xml.Descendants().Where(e => e.Name.LocalName == "segment-zalacznika").Descendants(),
+                e => e.Name.LocalName == "punkt");
+            Assert.Empty(SchemaPl.Validator.Validate(xml));
+        }
+
+        [SchemaPlFact]
+        public void RepeatedGuidOfAnAnnexUnit_IsStillReported()
+        {
+            // Pominięty komunikat nie może ukryć prawdziwego naruszenia: GUID jednostki załącznika powtarzający
+            // GUID z treści aktu zgłaszamy sami, bo walidator .NET go tam nie sprawdza.
+            var xml = WholeActWithAnnexUnits();
+            XAttribute Guid(XElement element) => element.Attributes().Single(a => a.Name.LocalName == "GUID");
+
+            var article = xml.Descendants().First(e => e.Name.LocalName == "artykul");
+            var annexPoint = xml.Descendants().Where(e => e.Name.LocalName == "segment-zalacznika").Descendants()
+                .First(e => e.Name.LocalName == "punkt");
+            Guid(annexPoint).Value = Guid(article).Value;
+
+            var problem = Assert.Single(SchemaPl.Validator.Validate(xml));
+            Assert.Contains("Powtórzona wartość atrybutu GUID", problem);
+        }
+
         [SchemaPlFact]
         public void ActWithAnAnnexTable_IsSchemaValid_InItsBody()
         {

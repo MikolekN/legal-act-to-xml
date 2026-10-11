@@ -256,6 +256,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   parsuje akt referencyjny z bloków pozbawionych stylu i wymaga tej samej struktury jednostek co ze stylami
   (element i eId każdej jednostki) — wynik miary `--styleless-parity` przestaje zależeć od ręcznego przebiegu.
 
+- **Walidacja: odstępstwo walidatora .NET przy treści dowolnej**: komunikat „The field 'GUID' is expecting at the
+  most one value" przy jednostkach załącznika nie był niezgodnością ze schematem. Walidator .NET bierze atrybut
+  elementu bez deklaracji (treść `xs:any` w `segment-zalacznika`) za drugą wartość pola elementu nadrzędnego
+  i unikalności tej wartości nie sprawdza; libxml2 i Xerces przyjmują taki dokument — także przykład autorów
+  schematu — i unikalność sprawdzają. `SchemaPlValidator.Validate` pomija ten komunikat przy elemencie bez
+  deklaracji i sam zgłasza powtórzoną wartość atrybutu. Zgodnych w całości: ustawy ogłoszone 239 → 240 z 241,
+  teksty jednolite 402 → 410 z 460; eksport bez zmian.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.
