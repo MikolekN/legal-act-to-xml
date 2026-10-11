@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using Saga.Core.Helpers;
+using Saga.Model;
 
 namespace Saga.Core.Services.Classify.Document
 {
@@ -30,7 +31,8 @@ namespace Saga.Core.Services.Classify.Document
         /// dotyczy tylko słowa kluczowego — spójnie z nagłówkami uchwały/zarządzenia.
         /// </summary>
         internal static readonly Regex RegulationHeaderPattern = new(
-            @"^(?:ROZPORZĄDZENIE|Rozporządzenie)(?:\s+(?<organ>[A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\s\-,\.]+))?$", RegexOptions.Compiled);
+            @"^(?:ROZPORZĄDZENIE|Rozporządzenie)(?:\s+(?<organ>[A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\s\-,\.]+|" + TitleCaseOrgan + @"))?$",
+            RegexOptions.Compiled);
 
         /// <summary>
         /// § 102: nagłówek obwieszczenia (w tym tekstu jednolitego). Dopuszcza wersaliki „OBWIESZCZENIE",
@@ -44,6 +46,14 @@ namespace Saga.Core.Services.Classify.Document
         internal static readonly Regex AnnouncementHeaderPattern = new(
             @"^(?:OBWIESZCZENIE|[Oo]bwieszczenie)(?:\s+(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*|i|oraz|do|ds|w|z|na|dla|spraw)[,\)]?)*$",
             RegexOptions.Compiled);
+
+        /// <summary>
+        /// Organ w dopełniaczu pisany jak nazwa własna („Ministra Finansów i Gospodarki") — ta sama gramatyka co
+        /// w nagłówku obwieszczenia: wyrazy wielką literą i dozwolone spójniki; wyraz małą literą spoza listy
+        /// (czasownik prozy) unieważnia dopasowanie.
+        /// </summary>
+        private const string TitleCaseOrgan =
+            @"(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*[,\)]?)(?:\s+(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*|i|oraz|do|ds|w|z|na|dla|spraw)[,\)]?)*";
 
         // § 138a: uchwała / zarządzenie. Zakotwiczone na $ (jak pozostałe nagłówki) i tak zbudowane,
         // by NIE łapać zwykłych zdań („Uchwała wchodzi w życie…"): forma mieszana wymaga „Nr",
@@ -82,8 +92,46 @@ namespace Saga.Core.Services.Classify.Document
         /// </summary>
         internal static readonly Regex ActSubjectPattern = new(
             @"^(?:o\s+\p{L}.+|w\s+sprawie\s+.+|(?:Kodeks|Prawo|Ordynacja)\b.*|Przepisy\s+wprowadzające\b.+" +
-            @"|zmieniając[ae]\s+(?:ustawę|rozporządzenie|uchwałę|zarządzenie)\b.+)$",
+            @"|(?:zmieniając[ae]|uchylając[ae])\s+(?:ustawę|rozporządzenie|uchwałę|zarządzenie)\b.+)$",
             RegexOptions.Compiled);
+
+        /// <summary>
+        /// Słowo rodzaju aktu na początku wiersza, w dowolnej pisowni („rozporządzenie", „ZARządzenie NR 249" —
+        /// szczotka bywa pisana małymi literami i składana wersalikami przez styl). Sam ten wzorzec nagłówkiem
+        /// rodzaju wiersza nie czyni: pasuje też do prozy („Rozporządzenie wchodzi w życie …"), więc wymaga
+        /// drugiego sygnału — stylu wiersza rodzaju albo miejsca w dokumencie.
+        /// </summary>
+        internal static readonly Regex ActKindKeywordPattern = new(
+            @"^(?<kind>ustawa|rozporządzenie|obwieszczenie|uchwała|zarządzenie)(?![\p{L}\d])",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+        /// <summary>
+        /// Nagłówek rodzaju z organem w tym samym wierszu („ROZPORZĄDZENIE MINISTRA FINANSÓW", „UCHWAŁA NR 12
+        /// RADY MINISTRÓW"); numer uchwały i zarządzenia należy do rodzaju. Stosować tylko do wiersza, który
+        /// już uznano za nagłówek rodzaju.
+        /// </summary>
+        internal static readonly Regex KindWithIssuerPattern = new(
+            @"^(?<kind>(?:uchwała|zarządzenie)(?:\s+nr\s*[\w/\-\.]+)?|rozporządzenie|obwieszczenie)\s+(?!nr\b)(?<issuer>\p{L}.+)$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>Rodzaj aktu nazwany przez wiersz uznany za nagłówek rodzaju; null, gdy słowo nie jest rodzajem.</summary>
+        internal static LegalActType? KindOfHeading(string kindLine)
+        {
+            if (StatuteHeaderPattern.IsMatch(kindLine))
+                return LegalActType.Statute;
+
+            return ActKindKeywordPattern.Match(kindLine) is { Success: true } keyword
+                ? keyword.Groups["kind"].Value.ToLowerInvariant() switch
+                {
+                    "ustawa" => LegalActType.Statute,
+                    "rozporządzenie" => LegalActType.Regulation,
+                    "obwieszczenie" => LegalActType.Announcement,
+                    "uchwała" => LegalActType.Resolution,
+                    "zarządzenie" => LegalActType.ExecutiveOrder,
+                    _ => null,
+                }
+                : null;
+        }
 
         /// <summary>§ 96: tytuł zmieniający (akt nowelizujący).</summary>
         internal static readonly Regex AmendingTitlePattern = new(

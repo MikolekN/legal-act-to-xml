@@ -22,9 +22,24 @@ namespace Saga.Core.Services.Parsing
     ///
     /// Tytuł składany jest WERBATIM z rozpoznanych wierszy (zasada „nie przeinaczyć"); datę wydobywa dodatkowo
     /// w postaci strukturalnej (<see cref="LegalDocument.ActDate"/>).
+    ///
+    /// Wiersz rozpoznaje wzorzec tekstowy; gdy tekst nie ma wzorcowej postaci („rozporządzenie" małymi literami,
+    /// „ROZPORZĄDZENIE MINISTRA zDROWIA", tytuł „uchylające …"), rozstrzyga drugi sygnał: styl wiersza
+    /// (<c>OZNRODZAKTU…</c>, <c>TYTUAKTU…</c>) albo miejsce — pierwszy wiersz aktu ogłaszanego w załączniku
+    /// do obwieszczenia (<see cref="ExpectKindFirst"/>). Sam styl bez słowa rodzaju nagłówka nie czyni.
     /// </summary>
     public sealed class DocumentMetadataCollector
     {
+        private const string KindLineStyle = "OZNRODZAKTU";
+        private const string SubjectStyle = "TYTUAKTU";
+
+        /// <summary>
+        /// Pierwszy obserwowany wiersz stoi w miejscu nagłówka rodzaju (akt w załączniku do obwieszczenia) —
+        /// słowo rodzaju w dowolnej pisowni wystarcza wtedy za nagłówek.
+        /// </summary>
+        public bool ExpectKindFirst { get; init; }
+
+        private bool _anyObserved;
         private readonly List<string> _titleParts = new();
         private string _kindLine = string.Empty;
         private string _issuerLine = string.Empty;
@@ -41,17 +56,20 @@ namespace Saga.Core.Services.Parsing
         /// Obserwuje nierozpoznany akapit sprzed pierwszego artykułu. Zwraca true, gdy wiersz uznano
         /// za metadaną (wywołujący pomija wtedy ostrzeżenie „pominięty akapit nierozpoznany").
         /// </summary>
-        public bool Observe(string text)
+        /// <param name="styleId">Styl akapitu — drugi sygnał dla wiersza, którego tekst nie ma wzorcowej postaci.</param>
+        public bool Observe(string text, string? styleId = null)
         {
             if (_sealed || string.IsNullOrWhiteSpace(text))
                 return false;
 
             var t = text.Trim();
+            var first = !_anyObserved;
+            _anyObserved = true;
 
             if (!_kindSeen)
             {
                 // Strefa tytułowa rusza dopiero na nagłówku rodzaju — inaczej proza sprzed aktu trafiłaby do tytułu.
-                if (IsKindHeader(t))
+                if (IsKindHeader(t) || IsKindBySecondSignal(t, styleId, first && ExpectKindFirst))
                 {
                     _kindSeen = true;
                     _titleParts.Add(t);
@@ -60,7 +78,7 @@ namespace Saga.Core.Services.Parsing
                     // nagłówkiem rodzaju, a organ jest dodatkowo znany osobno — eksport rozdziela je tam,
                     // gdzie korzeń ma miejsce na organ.
                     _kindLine = t;
-                    if (KindWithIssuer.Match(t) is { Success: true } sameLine)
+                    if (ZtpPatterns.KindWithIssuerPattern.Match(t) is { Success: true } sameLine)
                         _issuerLine = sameLine.Groups["issuer"].Value;
                     return true;
                 }
@@ -75,11 +93,12 @@ namespace Saga.Core.Services.Parsing
             }
 
             // Organ wydający w osobnym wierszu (§ 120 ust. 4 — rozporządzenie; § 102 — „Marszałka Sejmu…").
+            // Akt wydany wspólnie ma go w dwóch wierszach („MINISTRÓW INFRASTRUKTURY" / „ORAZ SPRAW WEWNĘTRZNYCH
+            // I ADMINISTRACJI") — drugi dołącza do pierwszego.
             if (IsIssuingOrgan(t) || IsIssuerByPosition(t))
             {
                 _titleParts.Add(t);
-                if (_issuerLine.Length == 0)
-                    _issuerLine = t;
+                _issuerLine = _issuerLine.Length == 0 ? t : _issuerLine + " " + t;
                 return true;
             }
 
@@ -95,7 +114,8 @@ namespace Saga.Core.Services.Parsing
             }
 
             // Przedmiot aktu (§ 18-19 / § 120 ust. 6) — komponent końcowy tytułu; domyka strefę tytułową.
-            if (ZtpPatterns.ActSubjectPattern.IsMatch(t))
+            // Tytuł o nietypowym początku rozpoznaje styl tytułu aktu.
+            if (ZtpPatterns.ActSubjectPattern.IsMatch(t) || HasStyle(styleId, SubjectStyle))
             {
                 _titleParts.Add(t);
                 _subject = t;
@@ -166,14 +186,23 @@ namespace Saga.Core.Services.Parsing
                 ZtpPatterns.OrderHeaderPattern.IsMatch(t);
         }
 
+        /// <summary>
+        /// Wiersz zaczynający się słowem rodzaju w pisowni spoza wzorca jest nagłówkiem, gdy potwierdza to drugi
+        /// sygnał: styl wiersza rodzaju albo miejsce pierwszego wiersza aktu ogłaszanego w załączniku.
+        /// </summary>
+        private static bool IsKindBySecondSignal(string line, string? styleId, bool expectedHere) =>
+            (expectedHere || HasStyle(styleId, KindLineStyle))
+            && ZtpPatterns.ActKindKeywordPattern.IsMatch(FootnoteMarkers.Remove(line));
+
+        private static bool HasStyle(string? styleId, string prefix) =>
+            styleId is not null && styleId.StartsWith(prefix, StringComparison.Ordinal);
+
         private static bool IsIssuingOrgan(string t) =>
             ZtpPatterns.IssuingOrganLinePattern.IsMatch(t) ||
             ZtpPatterns.MarshalOfSejmIssuerPattern.IsMatch(t);
 
-        /// <summary>Nagłówek rodzaju z organem w tym samym wierszu; numer uchwały i zarządzenia należy do rodzaju.</summary>
-        private static readonly Regex KindWithIssuer = new(
-            @"^(?<kind>(?:uchwała|zarządzenie)(?:\s+nr\s*[\w/\-\.]+)?|rozporządzenie|obwieszczenie)\s+(?!nr\b)(?<issuer>\p{L}.+)$",
-            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        /// <summary>Drugi wiersz organu aktu wydanego wspólnie zaczyna się spójnikiem („ORAZ SPRAW WEWNĘTRZNYCH …").</summary>
+        private static readonly Regex IssuerContinuation = new(@"^(?:oraz|i)\s", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>Początek wiersza, który organem na pewno nie jest: podstawa prawna albo jednostka.</summary>
         private static readonly Regex NotAnIssuer = new(@"^(?:Na\s+podstawie\b|Art\.|§|\d)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -185,7 +214,10 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         private bool IsIssuerByPosition(string t)
         {
-            if (_dateLine.Length > 0 || _issuerLine.Length > 0 || t.Length > 200)
+            if (_dateLine.Length > 0 || t.Length > 200)
+                return false;
+
+            if (_issuerLine.Length > 0 && !IssuerContinuation.IsMatch(t))
                 return false;
 
             if (ZtpPatterns.ActDateLinePattern.IsMatch(t) || ZtpPatterns.ActSubjectPattern.IsMatch(t) || NotAnIssuer.IsMatch(t))

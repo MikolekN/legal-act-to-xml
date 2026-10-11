@@ -143,7 +143,7 @@ namespace Saga.Core.Services.Parsing
         {
             AnnouncedActAttachedTo = attachedTo;
             AnnouncementMetadata = Metadata;
-            Metadata = new DocumentMetadataCollector();
+            Metadata = new DocumentMetadataCollector { ExpectKindFirst = true };
         }
 
         /// <summary>

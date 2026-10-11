@@ -473,7 +473,7 @@ namespace Saga.Core.Services.Parsing
             if (context.CurrentArticle == null)
             {
                 // Strefa tytułowa (§ 16-19): spróbuj wychwycić metadane aktu (rodzaj/data/przedmiot).
-                if (context.Metadata.Observe(text))
+                if (context.Metadata.Observe(text, sourceStyleId))
                     return;
 
                 // Podstawa prawna aktu wykonawczego (§ 121) stoi między tytułem a pierwszym paragrafem.

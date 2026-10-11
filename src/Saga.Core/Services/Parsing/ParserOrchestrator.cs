@@ -173,7 +173,7 @@ namespace Saga.Core.Services.Parsing
             RegisterFootnotes(block, context);
 
             if (block.TableCell is null
-                && (block.IsEmpty || context.Metadata.Observe(block.Text.CollapseWhitespace().Trim())))
+                && (block.IsEmpty || context.Metadata.Observe(block.Text.CollapseWhitespace().Trim(), block.StyleId)))
                 return;
 
             context.AnnouncementBlocks.Add(block);

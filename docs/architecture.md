@@ -406,7 +406,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`ParserOrchestrator`** | Orkiestrator — jednoprzebiegowy pipeline sterujący całym procesem parsowania. Konstruktor: `(IParagraphClassifier? classifier = null)` z DI. Metoda `ProcessBlock(DocumentBlock, ParsingContext)` (format-agnostyczna); `ProcessParagraph(Paragraph, context)` to cienki adapter OpenXml → `ProcessBlock`. Koordynuje klasyfikację, zarządzanie nowelizacjami i budowanie struktury. |
 | **`StructureProcessor`** (`internal sealed`) | Przetwarzanie struktury — buduje encje na podstawie `ClassificationResult`. Obsługuje mapowanie `Kind` na typ buildera (w tym jednostki systematyzacyjne przez `SystematizingUnitBuilder`), tworzenie implicit encji, obsługę `WrapUp`, wnioskowanie `Unknown` (tekst / metadane strefy tytułowej), aktualizację `CurrentStructuralReference` i wykrywanie celów nowelizacji (`DetectAmendmentTargets`). |
 | **`SystematizingUnitBuilder`** (w `Builders/`) | Buduje jednostki systematyzacyjne (Część→Księga→Tytuł→Dział→Rozdział→Oddział, § 60-62 ZTP) i utrzymuje bieżącą ścieżkę w `ParsingContext`. |
-| **`DocumentMetadataCollector`** | Zbiera metadane aktu (rodzaj, organ, data, przedmiot) ze strefy tytułowej (§ 16-19, § 102, § 120 ZTP); karmiony akapitami `Unknown` sprzed pierwszego artykułu; `ApplyTo(document)` zapisuje `Title`/`ActDate` przy finalizacji. |
+| **`DocumentMetadataCollector`** | Zbiera metadane aktu (rodzaj, organ, data, przedmiot) ze strefy tytułowej (§ 16-19, § 102, § 120 ZTP); karmiony akapitami `Unknown` sprzed pierwszego artykułu; `ApplyTo(document)` zapisuje `Title`/`ActDate` przy finalizacji. Wiersz rozpoznaje wzorzec tekstowy; słowo rodzaju w pisowni spoza wzorca i tytuł o nietypowym początku wymagają drugiego sygnału — stylu wiersza (`OZNRODZAKTU…`, `TYTUAKTU…`) albo miejsca (`ExpectKindFirst`: pierwszy wiersz aktu w załączniku do obwieszczenia). Organ aktu wydanego wspólnie składa z dwóch wierszy. |
 | **`JournalHeaderParser`** | Czyta metadane publikatora (dziennik, data ogłoszenia, pozycja) z bloków `BlockRole.JournalHeader`; przebieg wstępny w `ParseBlocks`, przed pętlą bloków. Wymaga rozpoznanego publikatora i co najmniej jednej z wartości data/pozycja — nierozpoznany nagłówek daje brak metadanych, nigdy wyjątek ([ADR-0012](adr/0012-naglowek-strony-jako-rola-bloku.md)). |
 | **`AmendmentStateManager`** | Zarządzanie cyklem życia nowelizacji — `UpdateState()`, `Collect()`, `Flush()`, `DetectTrigger()`. Wyodrębniony z orkiestratora dla lepszej separacji concerns. |
 | **`QuoteBalanceTracker`** | Bilans cudzysłowów dla nowelizacji bez stylów `Z/*` (§ 94 ZTP) — wyznacza koniec cytowanej treści przez parzystość cudzysłowów, gdy brak sygnału stylowego. |
@@ -1099,6 +1099,17 @@ ze strefą tytułową `rodzaj-aktu`, `autor-aktu` (`LegalDocument.IssuerLine`), 
 obowiązuje w treści cytowanej: `AmendmentStateManager.Flush` przekazuje rodzaj aktu przez
 `AmendmentBuildInput.SectionIsBasicUnit`, a `AmendmentBuilder` buduje z cytowanego „§ 5. 1. …" `Article`
 z `IsSection` i ustępami — w ustawie zmieniającej kodeks cytowany „§ 2." pozostaje paragrafem kodeksu.
+
+**Strefa tytułowa: dwa sygnały dla pisowni spoza wzorca.** Szczotki bywają pisane małymi literami i składane
+wersalikami przez styl („rozporządzenie", „ZARządzenie NR 249", „ROZPORZĄDZENIE MINISTRA zDROWIA"). Wzorce
+nagłówka rodzaju (`ZtpPatterns.*HeaderPattern`) zostają ścisłe — pasują do całego wiersza i nie mylą nagłówka
+z prozą („Rozporządzenie wchodzi w życie …"). Słowo rodzaju w dowolnej pisowni (`ZtpPatterns.ActKindKeywordPattern`)
+czyni wiersz nagłówkiem dopiero z drugim sygnałem: stylem wiersza rodzaju albo miejscem pierwszego wiersza aktu
+ogłaszanego w załączniku (`DocumentMetadataCollector`). Rodzaj nazwany przez zebrany nagłówek czyta jedno miejsce —
+`ZtpPatterns.KindOfHeading` (korzeń eksportu, kod rodzaju), a podział „rodzaj / organ w tym samym wierszu" —
+`ZtpPatterns.KindWithIssuerPattern`. Odrzucone: wzorce bez rozróżniania wielkości liter (każdy akapit „uchwała"
+w treści stawałby się nagłówkiem) i stosowanie wersalików ze stylu przy odczycie (`ParagraphExtensions.GetFullText`
+czyta tekst tak, jak go zapisano; wersaliki stosuje tylko dla formatowania nadanego wprost).
 
 **Korzeń eksportu.** `LegalDocumentConverter.Convert` pisze `ustawa`, `kodeks` (ustawa o tytule „Kodeks …",
 której artykuły stoją w jednostkach systematyzacyjnych) albo korzeń aktu opartego na paragrafach, a dla tekstu

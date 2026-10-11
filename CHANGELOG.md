@@ -368,6 +368,17 @@ a wersjonowanie zgodne z Semantic Versioning.
     w metadanych; 539 formuł przestaje być `fragment` pod ostatnią jednostką, 8 nadpisywanych wraca do eksportu.
     Zgodność ze schematem bez zmian (1648 z 2321, tak samo wg libxml2).
 
+- **Strefa tytułowa w pisowni spoza wzorca**: nagłówek rodzaju pisany inaczej niż wzorzec („rozporządzenie",
+  „ZARządzenie NR 249", „ROZPORZĄDZENIE MINISTRA zDROWIA") jest rozpoznawany, gdy potwierdza go drugi sygnał —
+  styl wiersza rodzaju albo miejsce pierwszego wiersza aktu w załączniku do obwieszczenia; organ pisany jak nazwa
+  własna w wierszu rodzaju („Rozporządzenie Ministra Finansów") i organ aktu wydanego wspólnie w dwóch wierszach
+  są częścią strefy tytułowej; tytuł „uchylające rozporządzenie …" oraz tytuł w stylu tytułu aktu są przedmiotem.
+  Rodzaj nazwany przez nagłówek czyta jedno miejsce (`ZtpPatterns.KindOfHeading`).
+  - W korpusie: 16 tekstów jednolitych rozporządzeń i zarządzeń przechodzi spod korzenia `ustawa` pod
+    `obwieszczenie`, 13 rozporządzeń odzyskuje organ, datę albo tytuł. Zgodnych ze schematem w całości:
+    1648 → 1675 z 2321 (tak samo wg libxml2; żaden wcześniej zgodny nie przestał nim być) — obwieszczenia 598
+    z 708, rozporządzenia 836 z 1067; treść aktu zgodna w 1998 z 2017.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

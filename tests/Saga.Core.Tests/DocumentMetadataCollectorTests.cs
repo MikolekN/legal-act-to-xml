@@ -209,6 +209,135 @@ namespace Saga.Core.Tests
             Assert.Equal(new DateTime(2020, 1, 5), doc.ActDate);
         }
 
+        // ============================================================
+        // Drugi sygnał: styl wiersza albo miejsce w dokumencie
+        // ============================================================
+
+        private const string KindStyle = "OZNRODZAKTUtznustawalubrozporzdzenieiorganwydajcy";
+        private const string SubjectStyle = "TYTUAKTUprzedmiotregulacjiustawylubrozporzdzenia";
+
+        private static LegalDocument Applied(DocumentMetadataCollector collector)
+        {
+            var document = new LegalDocument();
+            collector.ApplyTo(document);
+            return document;
+        }
+
+        [Theory]
+        // Korpus: 327892_2995332, 303866_2776495, 298226_2711116 — pisownia spoza wzorca, wiersz w stylu rodzaju aktu.
+        [InlineData("ROZPORZĄDZENIE MINISTRA zDROWIA[1)]", "MINISTRA zDROWIA[1)]")]
+        [InlineData("rozporządzenie", "")]
+        [InlineData("ZARządzenie NR 249", "")]
+        public void KindWordInUnusualSpelling_IsTheKindHeader_WhenTheLineHasTheKindStyle(string line, string issuer)
+        {
+            var collector = new DocumentMetadataCollector();
+
+            Assert.True(collector.Observe(line, KindStyle));
+            Assert.True(collector.Observe("z dnia 18 sierpnia 2025 r."));
+
+            var document = Applied(collector);
+            Assert.Equal(line, document.KindLine);
+            Assert.Equal(issuer, document.IssuerLine);
+            Assert.Equal(new DateTime(2025, 8, 18), document.ActDate);
+        }
+
+        [Theory]
+        // Słowo rodzaju bez drugiego sygnału to może być proza.
+        [InlineData("rozporządzenie", null)]
+        [InlineData("Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", null)]
+        // Sam styl bez słowa rodzaju nagłówka nie czyni (organ w stylu rodzaju przed nagłówkiem).
+        [InlineData("Rady Ministrów", KindStyle)]
+        public void OneSignalAlone_DoesNotOpenTheTitleZone(string line, string? style)
+        {
+            var collector = new DocumentMetadataCollector();
+
+            Assert.False(collector.Observe(line, style));
+            Assert.Equal(0, collector.CollectedLineCount);
+        }
+
+        [Fact]
+        public void KindWordInUnusualSpelling_IsTheKindHeader_AtTheStartOfAnAnnouncedAct()
+        {
+            // Bez stylu wystarcza miejsce: pierwszy wiersz aktu w załączniku do obwieszczenia.
+            var collector = new DocumentMetadataCollector { ExpectKindFirst = true };
+
+            Assert.True(collector.Observe("zarządzenie nr 136"));
+            Assert.True(collector.Observe("prezesa rady ministrów"));
+            Assert.True(collector.Observe("z dnia 14 listopada 2002 r."));
+            Assert.True(collector.Observe("w sprawie nadania statutu Urzędowi Lotnictwa Cywilnego"));
+
+            var document = Applied(collector);
+            Assert.Equal("zarządzenie nr 136", document.KindLine);
+            Assert.Equal("prezesa rady ministrów", document.IssuerLine);
+        }
+
+        [Fact]
+        public void ExpectedKind_AppliesOnlyToTheFirstLine()
+        {
+            var collector = new DocumentMetadataCollector { ExpectKindFirst = true };
+
+            Assert.False(collector.Observe("Tekst przed nagłówkiem."));
+            Assert.False(collector.Observe("rozporządzenie"));
+        }
+
+        [Fact]
+        public void TitleCaseIssuerOnTheKindLine_IsRecognisedFromTheTextAlone()
+        {
+            // Korpus: 316888_2965777 — „Rozporządzenie Ministra Finansów[1)]" w jednym wierszu.
+            var collector = new DocumentMetadataCollector();
+
+            Assert.True(collector.Observe("Rozporządzenie Ministra Finansów i Gospodarki[1)]"));
+            collector.Observe("z dnia 5 sierpnia 2025 r.");
+            collector.Observe("zmieniające rozporządzenie w sprawie zakresu informacji");
+
+            var document = Applied(collector);
+            Assert.Equal("Ministra Finansów i Gospodarki[1)]", document.IssuerLine);
+            Assert.StartsWith("zmieniające rozporządzenie", document.Subject);
+        }
+
+        [Fact]
+        public void IssuerOfAJointlyIssuedAct_SpansTwoLines()
+        {
+            // Korpus: 329092_3181272.
+            var collector = new DocumentMetadataCollector();
+            collector.Observe("ROZPORZĄDZENIE");
+            Assert.True(collector.Observe("MINISTRÓW INFRASTRUKTURY[1)]"));
+            Assert.True(collector.Observe("ORAZ SPRAW WEWNĘTRZNYCH I ADMINISTRACJI[2)]"));
+            Assert.True(collector.Observe("z dnia 14 stycznia 2026 r."));
+            Assert.True(collector.Observe("zmieniające rozporządzenie w sprawie znaków i sygnałów drogowych"));
+
+            var document = Applied(collector);
+            Assert.Equal("MINISTRÓW INFRASTRUKTURY[1)] ORAZ SPRAW WEWNĘTRZNYCH I ADMINISTRACJI[2)]", document.IssuerLine);
+            Assert.Equal(new DateTime(2026, 1, 14), document.ActDate);
+            Assert.StartsWith("zmieniające rozporządzenie", document.Subject);
+        }
+
+        [Theory]
+        // Tytuł uchylający — wzorzec; tytuł o innym początku — styl tytułu aktu.
+        [InlineData("uchylające rozporządzenie w sprawie wprowadzenia stanu klęski żywiołowej", null)]
+        [InlineData("dotyczące zasad wynagradzania pracowników", SubjectStyle)]
+        public void Subject_IsRecognisedByItsOpeningOrByItsStyle(string subject, string? style)
+        {
+            var collector = new DocumentMetadataCollector();
+            collector.Observe("Rozporządzenie");
+            collector.Observe("Rady Ministrów");
+            collector.Observe("z dnia 15 października 2024 r.");
+
+            Assert.True(collector.Observe(subject, style));
+            Assert.Equal(subject, Applied(collector).Subject);
+        }
+
+        [Fact]
+        public void UnusualSubjectWithoutAStyle_ClosesTheTitleZone()
+        {
+            var collector = new DocumentMetadataCollector();
+            collector.Observe("Rozporządzenie");
+            collector.Observe("z dnia 15 października 2024 r.");
+
+            Assert.False(collector.Observe("dotyczące zasad wynagradzania pracowników"));
+            Assert.Equal(string.Empty, Applied(collector).Subject);
+        }
+
         [Fact]
         public void SecondKindHeader_SealsWithoutMerging()
         {

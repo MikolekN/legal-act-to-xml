@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using Saga.Core.Services.Classify.Document;
 using Saga.Core.Services.Converters;
 using Saga.Model;
 using static Saga.Core.XLinqWrappers;
@@ -117,8 +118,8 @@ namespace Saga.Core.Services
         /// „ROZPORZĄDZENIE") — organ wychodzi wtedy osobno, w <c>autor-aktu</c>.
         /// </summary>
         private static string KindWithoutIssuer(string kindLine, string issuerLine) =>
-            issuerLine.Length > 0 && kindLine.Length > issuerLine.Length && kindLine.EndsWith(issuerLine, StringComparison.Ordinal)
-                ? kindLine[..^issuerLine.Length].TrimEnd()
+            issuerLine.Length > 0 && ZtpPatterns.KindWithIssuerPattern.Match(kindLine) is { Success: true } sameLine
+                ? sameLine.Groups["kind"].Value
                 : kindLine;
 
         private static void PrepareMetadata(LegalDocument document, XElement rootElement)

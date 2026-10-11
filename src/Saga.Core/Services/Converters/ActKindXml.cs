@@ -16,10 +16,10 @@ namespace Saga.Core.Services.Converters
 
         /// <summary>
         /// Kod rodzaju aktu. <see cref="LegalDocument.Type"/> jest deklaracją wywołującego i wygrywa, gdy ją
-        /// ustawił; przy wartości domyślnej rozstrzyga nagłówek samego aktu („USTAWA", „ROZPORZĄDZENIE …"),
-        /// a gdy nagłówek nie ma rozpoznawalnej postaci („ROZPORZĄDZENIE MINISTRA zDROWIA") — rodzaj
-        /// rozpoznany przez klasyfikator dokumentu. Inaczej każde rozporządzenie i obwieszczenie wychodziłoby
-        /// jako ustawa.
+        /// ustawił; przy wartości domyślnej rozstrzyga nagłówek samego aktu („USTAWA", „ROZPORZĄDZENIE …",
+        /// także w pisowni spoza wzorca — wiersz zebrany jako nagłówek rodzaju nazywa rodzaj swoim pierwszym
+        /// słowem), a gdy strefa tytułowa nagłówka nie dała — rodzaj rozpoznany przez klasyfikator dokumentu.
+        /// Inaczej każde rozporządzenie i obwieszczenie wychodziłoby jako ustawa.
         /// </summary>
         internal static string Code(LegalDocument document) =>
             document.Type != LegalActType.Statute
@@ -77,17 +77,20 @@ namespace Saga.Core.Services.Converters
         /// </summary>
         internal static string? AnnouncedActElement(LegalDocument document)
         {
-            var heading = FootnoteMarkers.Remove(document.Announcement?.ActKindLine ?? string.Empty);
-            if (ZtpPatterns.StatuteHeaderPattern.IsMatch(heading))
+            var kind = ZtpPatterns.KindOfHeading(FootnoteMarkers.Remove(document.Announcement?.ActKindLine ?? string.Empty));
+            if (kind == LegalActType.Statute)
                 return StatuteElement(document.Announcement!.ActSubject, document);
 
             if (!document.Articles.Any(article => article.IsSection))
                 return null;
 
-            if (ZtpPatterns.RegulationHeaderPattern.IsMatch(heading)) return XmlConverterConstants.SectionBasedActs.Regulation;
-            if (ZtpPatterns.ResolutionHeaderPattern.IsMatch(heading)) return XmlConverterConstants.SectionBasedActs.Resolution;
-            if (ZtpPatterns.OrderHeaderPattern.IsMatch(heading)) return XmlConverterConstants.SectionBasedActs.Order;
-            return null;
+            return kind switch
+            {
+                LegalActType.Regulation => XmlConverterConstants.SectionBasedActs.Regulation,
+                LegalActType.Resolution => XmlConverterConstants.SectionBasedActs.Resolution,
+                LegalActType.ExecutiveOrder => XmlConverterConstants.SectionBasedActs.Order,
+                _ => null,
+            };
         }
 
         /// <summary>
@@ -107,19 +110,21 @@ namespace Saga.Core.Services.Converters
             if (heading.Length == 0)
                 return null;
 
-            if (ZtpPatterns.StatuteHeaderPattern.IsMatch(heading)) return "USTAWA";
-            if (ZtpPatterns.RegulationHeaderPattern.IsMatch(heading)) return "ROZP";
-            if (ZtpPatterns.ResolutionHeaderPattern.IsMatch(heading)) return "UCHW";
-            if (ZtpPatterns.OrderHeaderPattern.IsMatch(heading)) return "ZARZĄD";
-            // Obwieszczenie o tekście jednolitym: mówi to jego tytuł („w sprawie ogłoszenia jednolitego tekstu…"),
-            // a gdy strefa tytułowa nie dała przedmiotu — klasyfikacja dokumentu (formuła obwieszczenia).
-            if (ZtpPatterns.AnnouncementHeaderPattern.IsMatch(heading))
-                return ZtpPatterns.ConsolidatedTextTitlePattern.IsMatch(document.Subject)
-                       || document.Classification is { IsConsolidatedText: true }
-                    ? "OBW_TJ"
-                    : "OBW";
-
-            return null;
+            return ZtpPatterns.KindOfHeading(heading) switch
+            {
+                LegalActType.Statute => "USTAWA",
+                LegalActType.Regulation => "ROZP",
+                LegalActType.Resolution => "UCHW",
+                LegalActType.ExecutiveOrder => "ZARZĄD",
+                // Obwieszczenie o tekście jednolitym: mówi to jego tytuł („w sprawie ogłoszenia jednolitego
+                // tekstu…"), a gdy strefa tytułowa nie dała przedmiotu — klasyfikacja dokumentu (formuła obwieszczenia).
+                LegalActType.Announcement =>
+                    ZtpPatterns.ConsolidatedTextTitlePattern.IsMatch(document.Subject)
+                    || document.Classification is { IsConsolidatedText: true }
+                        ? "OBW_TJ"
+                        : "OBW",
+                _ => null,
+            };
         }
 
         // Klasyfikator czyta cały dokument (formuły, jednostki, styl), więc zna rodzaj także bez nagłówka.
