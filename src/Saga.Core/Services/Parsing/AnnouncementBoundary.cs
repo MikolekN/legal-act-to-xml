@@ -61,7 +61,7 @@ namespace Saga.Core.Services.Parsing
                 var text = FootnoteMarkers.Remove(block.Text.CollapseWhitespace().Trim());
                 if (!opens)
                 {
-                    if (!ZtpPatterns.AnnouncementHeaderPattern.IsMatch(text))
+                    if (!IsAnnouncementHeading(text))
                         return new Layout(false, -1, false, false);
 
                     opens = true;
@@ -90,6 +90,20 @@ namespace Saga.Core.Services.Parsing
                 HasSections: sections && !articles);
         }
 
+        // Wiersz dłuższy niż nagłówek z nazwą organu jest już zdaniem.
+        private const int LongestHeading = 160;
+
+        /// <summary>
+        /// Nagłówek obwieszczenia w pierwszym wierszu treści dokumentu. Wzorcowa pisownia wystarcza sama;
+        /// pisownię spoza wzorca („Obwieszczenie marszałka Sejmu Rzeczypospolitej Polskiej" — organ małą literą)
+        /// potwierdza miejsce: to pierwszy wiersz dokumentu, zaczyna się słowem rodzaju i nie jest zdaniem.
+        /// </summary>
+        private static bool IsAnnouncementHeading(string firstLine) =>
+            ZtpPatterns.AnnouncementHeaderPattern.IsMatch(firstLine)
+            || (ZtpPatterns.KindOfHeading(firstLine) == Saga.Model.LegalActType.Announcement
+                && firstLine.Length <= LongestHeading
+                && !firstLine.EndsWith('.'));
+
         private static readonly Regex SectionDesignation = new(@"^§\s*\d+[a-z]*\.", RegexOptions.Compiled);
 
         /// <summary>
@@ -107,7 +121,7 @@ namespace Saga.Core.Services.Parsing
                 var text = block.Text.CollapseWhitespace().Trim();
                 if (!opensWithAnnouncement)
                 {
-                    if (!ZtpPatterns.AnnouncementHeaderPattern.IsMatch(FootnoteMarkers.Remove(text)))
+                    if (!IsAnnouncementHeading(FootnoteMarkers.Remove(text)))
                         return -1;
 
                     opensWithAnnouncement = true;

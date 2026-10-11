@@ -207,6 +207,20 @@ namespace Saga.Core.Tests
             Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(Parse(Sections))));
         }
 
+        [Theory]
+        // Korpus: 329084_2934669 — organ małą literą w wierszu nagłówka; nagłówek poznaje się po miejscu.
+        [InlineData("Obwieszczenie marszałka Sejmu Rzeczypospolitej Polskiej", true)]
+        [InlineData("OBWIESZCZENIE MINISTRA FINANSÓW", true)]
+        // Zdanie zaczynające się tym słowem nagłówkiem nie jest.
+        [InlineData("Obwieszczenie zostało wydane na podstawie odrębnych przepisów.", false)]
+        public void FirstLineStartingWithTheKindWord_IsTheHeadingOfAnAnnouncement(string firstLine, bool expected)
+        {
+            var layout = AnnouncementBoundary.Describe(Blocks(
+                firstLine, "z dnia 11 czerwca 2025 r.", "w sprawie wysokości stawki opłaty", LegalBasis, Signature));
+
+            Assert.Equal(expected, layout.OpensWithAnnouncement);
+        }
+
         [Fact]
         public void DocumentThatIsNotAnAnnouncement_HasNoAnnouncementLayout()
         {

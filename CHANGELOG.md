@@ -518,6 +518,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   ginęły jako akapity sprzed pierwszego artykułu.
   - W korpusie: 23 teksty jednolite ustaw, 61 akapitów; zgubionych akapitów w tekstach jednolitych 137 → 79.
     Zgodność ze schematem bez zmian.
+- **Nagłówek obwieszczenia w pisowni spoza wzorca**: pierwszy wiersz dokumentu zaczynający się słowem „Obwieszczenie"
+  jest nagłówkiem obwieszczenia także wtedy, gdy organ stoi w nim małą literą („Obwieszczenie marszałka Sejmu
+  Rzeczypospolitej Polskiej") — pisownię potwierdza miejsce w dokumencie (`AnnouncementBoundary`). Zdanie
+  zaczynające się tym słowem nagłówkiem nie jest.
+  - W korpusie: jeden tekst jednolity odzyskuje obwieszczenie (punkty, przytoczony przepis, podpis).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
