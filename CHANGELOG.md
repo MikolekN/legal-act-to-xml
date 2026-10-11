@@ -470,6 +470,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   a ustęp wychodził jako jednostka spoza ZTP.
   - W korpusie: 9 dokumentów; 9 `nie-ztp-ustep` staje się zwykłym ustępem, 12 wierszy legendy wzoru wychodzi jako
     `opis` zamiast `fragment`; jednostek `nie-ztp-*` 618 → 600. Zgodność ze schematem bez zmian.
+- **Odnośniki w strefie tytułowej, podstawie prawnej i tytule jednostki systematyzacyjnej**: znacznik odnośnika
+  przy organie wydającym („MINISTRA FINANSÓW¹⁾" — z jakiego przepisu minister kieruje działem), w podstawie
+  prawnej („… z późn. zm.²⁾") i w tytule rozdziału albo działu staje się elementem `odnosnik` z treścią przypisu
+  (`InlineTextXml`). Przedtem te odnośniki nie trafiały do eksportu, a w tekście zostawał zapis „[1)]"; kolejne
+  odwołania do nich też zostawały tekstem.
+  - W korpusie: 1233 odnośniki więcej w 951 dokumentach (12 325 → 13 558) i 121 odsyłaczy do nich; znaczników
+    zostających w tekście 1564 → 246. Zgodność ze schematem bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

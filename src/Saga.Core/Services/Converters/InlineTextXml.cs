@@ -16,6 +16,11 @@ namespace Saga.Core.Services.Converters
             XmlConverterConstants.Contents.Sentence.Element,
             XmlConverterConstants.ActHeading.Kind,
             XmlConverterConstants.ActHeading.Subject,
+
+            // Organ wydający i podstawa prawna aktu wykonawczego: tu stoją jego pierwsze odnośniki
+            // („MINISTRA FINANSÓW[1)]" — zakres działania ministra; „… z późn. zm.[2)]" — zmiany ustawy).
+            XmlConverterConstants.Announcements.Author,
+            XmlConverterConstants.SectionBasedActs.LegalBasis,
             XmlConverterConstants.Contents.Citation.Text.Content,
             XmlConverterConstants.Contents.ContinuationFragment,
 
@@ -36,13 +41,22 @@ namespace Saga.Core.Services.Converters
         private static readonly Regex Superscript = new(
             @"(?<=[\p{L}\d])\[(?<index>[0-9a-z]{1,4})\]", RegexOptions.Compiled);
 
+        private const string UnitHeadingPrefix = "naglowek-";
+
         /// <summary>Węzły tekstowe treści aktu (bez metadanych), w kolejności dokumentu.</summary>
         internal static List<XText> Texts(XElement actElement) =>
             actElement.DescendantNodes().OfType<XText>()
                 .Where(text => text.Parent is { } parent
-                    && Hosts.Contains(parent.Name.LocalName)
+                    && (Hosts.Contains(parent.Name.LocalName) || IsUnitHeading(parent))
                     && !parent.Ancestors().Any(a => a.Name.LocalName == XmlConverterConstants.Metadata.Element))
                 .ToList();
+
+        // Tytuł jednostki systematyzacyjnej stoi w „p" bez zdań („naglowek-dzialu" → „p") — w tekstach jednolitych
+        // niesie odnośnik o brzmieniu tytułu. Zwykłe „p" tekstu nie ma: mieści zdania.
+        private static bool IsUnitHeading(XElement parent) =>
+            parent.Name.LocalName == XmlConverterConstants.Contents.TextSection
+            && parent.Parent is { } owner
+            && owner.Name.LocalName.StartsWith(UnitHeadingPrefix, StringComparison.Ordinal);
 
         /// <summary>
         /// Indeks górny w tekście zdania staje się elementem <c>sup</c> („art. 477[9]" → 477, sup 9).

@@ -146,9 +146,9 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void FootnoteWithoutAPlaceInTheExport_DoesNotHoldBackTheNextOnes()
+        public void FootnoteAtAUnitHeading_IsEmbeddedInTheHeading()
         {
-            // Odnośnik przy tytule rozdziału: nagłówek jednostki nie przyjmuje elementu odnośnika.
+            // W tekstach jednolitych tytuł jednostki systematyzacyjnej niesie odnośnik o swoim brzmieniu.
             var document = Parse(
                 "USTAWA",
                 "z dnia 14 czerwca 2024 r.",
@@ -158,8 +158,62 @@ namespace Saga.Core.Tests
                 "Art. 1. Ustawa (Dz. U. poz. 1, z późn. zm.{2}) określa zasady.",
                 "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
 
-            Assert.Equal(2, document.Footnotes.Count);
-            Assert.Equal("2", Assert.Single(Named(LegalDocumentConverter.Convert(document), "odnosnik")).Attribute("symbol")?.Value);
+            var xml = LegalDocumentConverter.Convert(document);
+
+            Assert.Equal(new[] { "1", "2" }, Named(xml, "odnosnik").Select(footnote => footnote.Attribute("symbol")?.Value));
+            var heading = Named(xml, "naglowek-rozdzialu").Single();
+            Assert.Equal("1", Assert.Single(heading.Descendants(), e => e.Name.LocalName == "odnosnik").Attribute("symbol")?.Value);
+            Assert.DoesNotContain("[", heading.Value);
+        }
+
+        private static LegalDocument Regulation() => Parse(
+            "ROZPORZĄDZENIE",
+            "MINISTRA FINANSÓW{1}",
+            "z dnia 14 czerwca 2024 r.",
+            "w sprawie wzoru zgłoszenia",
+            "Na podstawie art. 5 ustawy z dnia 1 lutego 2021 r. o zgłoszeniach (Dz. U. poz. 200, z późn. zm.{2}) zarządza się, co następuje:",
+            "§ 1. Rozporządzenie określa wzór zgłoszenia.",
+            "§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+        [Fact]
+        public void FootnoteAtTheIssuingAuthority_IsEmbeddedInTheTitleZone()
+        {
+            // Korpus: 1093 akty wykonawcze — pierwszy odnośnik aktu stoi przy organie („MINISTRA FINANSÓW¹⁾")
+            // i mówi, z jakiego przepisu minister kieruje działem; drugi zwykle w podstawie prawnej.
+            var xml = LegalDocumentConverter.Convert(Regulation());
+
+            var issuer = Named(xml, "autor-aktu").Single();
+            Assert.Equal("1", Assert.Single(issuer.Elements(), e => e.Name.LocalName == "odnosnik").Attribute("symbol")?.Value);
+            Assert.StartsWith("MINISTRA FINANSÓW", issuer.Value);
+            Assert.DoesNotContain("[", issuer.Value);
+
+            var basis = Named(xml, "podstawa-prawna").Single();
+            Assert.Equal("2", Assert.Single(basis.Elements(), e => e.Name.LocalName == "odnosnik").Attribute("symbol")?.Value);
+            Assert.DoesNotContain("[", basis.Value);
+            Assert.EndsWith(") zarządza się, co następuje:", basis.Value);
+        }
+
+        [Fact]
+        public void FootnoteAtTheIssuingAuthority_StaysOutOfTheNameOfTheAuthority()
+        {
+            var xml = LegalDocumentConverter.Convert(Regulation());
+
+            var authority = Named(xml, "Organ").Single();
+            Assert.Equal("Minister Finansów", authority.Elements().Single(e => e.Name.LocalName == "Nazwa").Value);
+        }
+
+        [SchemaPlFact]
+        public void ActWithFootnotesInTheTitleZoneAndAHeading_IsSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(Regulation()).Elements().First()));
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(Parse(
+                "USTAWA",
+                "z dnia 14 czerwca 2024 r.",
+                "o ochronie sygnalistów",
+                "Rozdział 1",
+                "Przepisy ogólne{1}",
+                "Art. 1. Ustawa określa zasady.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.")).Elements().First()));
         }
 
         [SchemaPlFact]
