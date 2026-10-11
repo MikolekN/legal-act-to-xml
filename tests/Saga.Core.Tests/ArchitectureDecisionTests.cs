@@ -1207,12 +1207,60 @@ namespace Saga.Core.Tests
             var point = Assert.Single(document.Announcement!.Points);
             Assert.Equal("pkt_1", point.Id);
             Assert.Equal(new[] { "pkt_1__ppkt_1", "pkt_1__ppkt_2" }, point.Points.Select(subPoint => subPoint.Id));
-            Assert.Equal(3, point.Points[0].Continuation.Count);
+
+            // Przytoczenie jest dalszą treścią podpunktu — od ADR-0036 jako jednostki, nie akapity tekstu.
+            Assert.NotNull(Assert.Single(point.Points[0].Continuation).Quotation);
 
             var exported = LegalDocumentConverter.Convert(document).Descendants()
                 .Where(element => element.Name.LocalName is "punkt-OTJ" or "podpunkt-OTJ")
                 .Select(element => $"{element.Name.LocalName} {element.Attribute("eId")?.Value}");
             Assert.Equal(new[] { "punkt-OTJ pkt_1", "podpunkt-OTJ pkt_1__ppkt_1", "podpunkt-OTJ pkt_1__ppkt_2" }, exported);
+        }
+
+        // ============================================================
+        // ADR-0036: przytoczone artykuły to jednostki adresowane w akcie przytaczanym
+        // ============================================================
+
+        [Fact]
+        public void Adr0036_QuotedArticles_AreUnitsOfTheQuotedAct_OtherQuotationsStayText()
+        {
+            static XElement Export(params string[] quoted)
+            {
+                string[] lines =
+                [
+                    "Obwieszczenie",
+                    "Marszałka Sejmu Rzeczypospolitej Polskiej",
+                    "z dnia 6 sierpnia 2025 r.",
+                    "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
+                    "1. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje:",
+                    "1) art. 57 ustawy z dnia 1 października 2024 r. o zmianie ustawy (Dz. U. poz. 1473), który stanowi:",
+                    .. quoted,
+                    "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
+                    "USTAWA",
+                    "z dnia 11 sierpnia 2001 r.",
+                    "o odbudowie obiektów budowlanych",
+                    "Art. 57. Ustawa reguluje zasady odbudowy.",
+                ];
+                var document = LegalDocumentParser.Parse(
+                    lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                    new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+                return LegalDocumentConverter.Convert(document).Elements().Single();
+            }
+
+            // Cały artykuł: jednostka w zdaniu podpunktu, z adresem w akcie, z którego pochodzi — nie myli się
+            // z art. 57 ogłaszanego aktu ani z jednostkami obwieszczenia.
+            var whole = Export("„Art. 57. Przepisy stosuje się do odbudowy.”.");
+            var quoted = Assert.Single(whole.Descendants(), e => e.Name.LocalName == "tresc-strukt");
+            Assert.Equal("zdanie", quoted.Parent!.Name.LocalName);
+            Assert.Equal("DU/2024/1473__art_57", Assert.Single(quoted.Elements()).Attribute("eId")!.Value);
+            Assert.DoesNotContain(whole.Descendants(), e => e.Name.LocalName == "fragment");
+
+            // Przytoczenie, którego nie da się zbudować w całości z artykułów, zostaje tekstem — nic nie ginie.
+            var partial = Export("„3. W przypadku odbudowy przepisu nie stosuje się.”.");
+            Assert.DoesNotContain(partial.Descendants(), e => e.Name.LocalName == "tresc-strukt");
+            Assert.Equal(
+                "„3. W przypadku odbudowy przepisu nie stosuje się.”.",
+                Assert.Single(partial.Descendants(), e => e.Name.LocalName == "fragment").Value);
         }
 
         // ============================================================

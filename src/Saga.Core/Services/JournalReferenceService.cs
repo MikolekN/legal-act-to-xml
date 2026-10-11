@@ -36,15 +36,42 @@ namespace Saga.Core.Services
             if (!StartsWithAmendingFormula(article.ContentText))
                 return;
 
+            article.Journals.AddRange(ReadJournals(article.ContentText));
+
+            if (article.Journals.Count > 0)
+            {
+                Log.Debug("Wykryto {Count} publikator(ów) w artykule [{ArticleId}]: {Journals}",
+                    article.Journals.Count,
+                    article.Id,
+                    string.Join("; ", article.Journals.Select(j => j.ToStringLong())));
+            }
+        }
+
+        /// <summary>
+        /// Jedyny akt wskazany w tekście przez publikator („art. 19 ustawy z dnia … (Dz. U. poz. 1792), który
+        /// stanowi:"); null, gdy tekst nie wskazuje aktu albo wskazuje więcej niż jeden — wtedy nie wiadomo, który.
+        /// </summary>
+        public static JournalInfo? ReadSingleAct(string? text)
+        {
+            if (string.IsNullOrEmpty(text) || JournalRegex.Matches(text).Count != 1)
+                return null;
+
+            return ReadJournals(text).FirstOrDefault();
+        }
+
+        /// <summary>Publikatory (Dz. U.) wymienione w tekście, z pozycjami scalonymi w obrębie rocznika.</summary>
+        internal static List<JournalInfo> ReadJournals(string text)
+        {
+            var journals = new List<JournalInfo>();
             var journalsByYear = new Dictionary<int, JournalInfo>();
 
-            foreach (Match m in JournalRegex.Matches(article.ContentText))
+            foreach (Match m in JournalRegex.Matches(text))
             {
                 var sourceMatch = m.Groups["source"].Value;
                 // § 158 ust. 7 ZTP: rocznik pomija się, gdy akt ogłoszono w roku wymienionym w jego dacie —
                 // brakujący rok to rok z daty aktu, którego tytuł poprzedza publikator.
                 int? written = m.Groups["year"].Success ? int.Parse(m.Groups["year"].Value) : null;
-                if ((written ?? YearOfActDateBefore(article.ContentText, m.Index)) is not { } year)
+                if ((written ?? YearOfActDateBefore(text, m.Index)) is not { } year)
                 {
                     Log.Warning("Publikator bez rocznika i bez daty aktu przed nim — pominięty: {Source}", sourceMatch);
                     continue;
@@ -62,7 +89,7 @@ namespace Saga.Core.Services
                         SourceString = sourceMatch,
                     };
                     journalsByYear[year] = journalInfo;
-                    article.Journals.Add(journalInfo);
+                    journals.Add(journalInfo);
                 }
                 else
                 {
@@ -84,13 +111,7 @@ namespace Saga.Core.Services
                 journalInfo.Positions = journalInfo.Positions.Distinct().OrderBy(p => p).ToList();
             }
 
-            if (article.Journals.Count > 0)
-            {
-                Log.Debug("Wykryto {Count} publikator(ów) w artykule [{ArticleId}]: {Journals}",
-                    article.Journals.Count,
-                    article.Id,
-                    string.Join("; ", article.Journals.Select(j => j.ToStringLong())));
-            }
+            return journals;
         }
 
         /// <summary>Rok z ostatniej daty aktu stojącej przed wskazanym miejscem tekstu; null, gdy daty nie ma.</summary>

@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using Saga.Core.Ingest;
+using Saga.Core.Services.Parsing.Builders;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
 
@@ -10,6 +11,9 @@ namespace Saga.Core.Services.Parsing
     /// („1) ustawą …") i część wspólna podpunktów. Przytoczone przepisy („…, który stanowi: „Art. 57. …"")
     /// i tabele są dalszą treścią jednostki, za którą stoją; podpis trafia do dokumentu.
     /// Potok aktu tu nie pracuje — przytoczony artykuł nie jest artykułem żadnego z dwóch aktów dokumentu.
+    /// Przytoczenie złożone z całych artykułów (paragrafów aktu wykonawczego) buduje się jak treść cytowaną
+    /// w nowelizacji (<see cref="AmendmentBuilder"/>) i trafia do jednostki jako <see cref="Quotation"/>;
+    /// każde inne zostaje akapitami tekstu.
     /// </summary>
     internal static class AnnouncementUnits
     {
@@ -17,7 +21,11 @@ namespace Saga.Core.Services.Parsing
 
         private static readonly Regex SubPointDesignation = new(@"^\d+[a-z]*\)\s", RegexOptions.Compiled);
 
-        internal static Announcement Build(IReadOnlyList<DocumentBlock> blocks, LegalDocument document)
+        /// <param name="sectionIsBasicUnit">
+        /// Ogłaszany akt jest oparty na paragrafach — przytoczone „§ 2." to wtedy jednostka podstawowa (ADR-0034).
+        /// </param>
+        internal static Announcement Build(
+            IReadOnlyList<DocumentBlock> blocks, LegalDocument document, bool sectionIsBasicUnit = false)
         {
             var announcement = new Announcement();
             Paragraph? point = null;
@@ -26,11 +34,14 @@ namespace Saga.Core.Services.Parsing
             // Głębokość otwartego przytoczenia; ciągnie się przez kolejne bloki do domknięcia cudzysłowu.
             var quoteDepth = 0;
             var quotedSinceSubPoint = false;
+            var quoted = new List<string>();
 
             for (var i = 0; i < blocks.Count; i++)
             {
                 if (blocks[i].TableCell is { } cell)
                 {
+                    // Tabela w środku przytoczenia: jednostek z niej nie będzie — akapity zostają tekstem.
+                    AttachAsText(quoted);
                     var run = blocks.Skip(i).TakeWhile(b => b.TableCell?.Table == cell.Table).ToList();
                     i += run.Count - 1;
                     Attach(new ContentBlock { Table = ContentTables.FromBlocks(run) });
@@ -44,9 +55,11 @@ namespace Saga.Core.Services.Parsing
 
                 if (quoteDepth > 0 || QuoteBalanceTracker.OpensQuote(text))
                 {
-                    Attach(new ContentBlock { Text = text });
+                    quoted.Add(text);
                     quoteDepth = Balance(quoteDepth, text);
                     quotedSinceSubPoint = true;
+                    if (quoteDepth == 0)
+                        AttachQuotation(quoted);
                     continue;
                 }
 
@@ -99,6 +112,8 @@ namespace Saga.Core.Services.Parsing
                 Attach(new ContentBlock { Text = text });
             }
 
+            // Przytoczenie niedomknięte do końca obwieszczenia zostaje tekstem.
+            AttachAsText(quoted);
             return announcement;
 
             // Treść bez oznaczenia należy do najgłębszej otwartej jednostki; przed pierwszym punktem — do obwieszczenia.
@@ -110,6 +125,68 @@ namespace Saga.Core.Services.Parsing
                 else
                     announcement.Content.Add(block);
             }
+
+            void AttachAsText(List<string> paragraphs)
+            {
+                foreach (var paragraph in paragraphs)
+                    Attach(new ContentBlock { Text = paragraph });
+                paragraphs.Clear();
+            }
+
+            // Domknięte przytoczenie: jednostki, gdy da się je zbudować w całości; inaczej akapity tekstu.
+            void AttachQuotation(List<string> paragraphs)
+            {
+                var owner = (BaseEntity?)subPoint ?? point;
+                if (owner is not null && !string.IsNullOrWhiteSpace(owner.ContentText)
+                    && BuildQuotation(paragraphs, owner.ContentText, sectionIsBasicUnit) is { } quotation)
+                {
+                    Attach(new ContentBlock { Quotation = quotation });
+                    paragraphs.Clear();
+                    return;
+                }
+
+                AttachAsText(paragraphs);
+            }
+        }
+
+        /// <summary>
+        /// Przytoczenie jako jednostki — tylko gdy składa się z całych artykułów (paragrafów aktu wykonawczego)
+        /// i żaden akapit nie został poza nimi. Przytoczony ustęp albo punkt („„3. W przypadku …"") wymagałby
+        /// adresu z treści jednostki („art. 5 ust. 3 ustawy …"), więc zostaje tekstem. Tak samo przytoczony
+        /// przepis zmieniający z własnym cytatem („Art. 54. W ustawie … ust. 2 otrzymuje brzmienie: „2. …""):
+        /// cytowana w nim treść nie jest jednostką przytaczanego artykułu.
+        /// </summary>
+        private static Quotation? BuildQuotation(IReadOnlyList<string> paragraphs, string ownerText, bool sectionIsBasicUnit)
+        {
+            if (paragraphs.Skip(1).Any(QuoteBalanceTracker.OpensQuote))
+                return null;
+
+            var collected = paragraphs.Select(text => new CollectedAmendmentParagraph(text, null, null)).ToList();
+            var quotes = AmendmentStateManager.TrimQuoteBoundaries(collected);
+            if (!quotes.HasOpening || !quotes.HasClosing)
+                return null;
+
+            var content = new AmendmentBuilder().Build(new AmendmentBuildInput(
+                collected, null, AmendmentOperationType.Modification, sectionIsBasicUnit));
+
+            var wholeProvisions = content.Articles.Count > 0
+                && content.SystematizingUnits.Count == 0
+                && content.Paragraphs.Count == 0
+                && content.Points.Count == 0
+                && content.Letters.Count == 0
+                && content.Tirets.Count == 0
+                && content.CommonParts.Count == 0
+                && content.Tables.Count == 0
+                && string.IsNullOrEmpty(content.PlainText);
+            if (!wholeProvisions)
+                return null;
+
+            return new Quotation
+            {
+                Content = content,
+                SourceAct = JournalReferenceService.ReadSingleAct(ownerText),
+                TrailingPunctuation = quotes.Punctuation,
+            };
         }
 
         private static int Balance(int depth, string text)

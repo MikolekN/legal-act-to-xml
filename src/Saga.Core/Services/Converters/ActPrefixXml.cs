@@ -6,11 +6,18 @@ namespace Saga.Core.Services.Converters
 {
     /// <summary>
     /// Prefiks aktu w adresach eksportu (ADR-0027): adres w akcie („art_5__ust_2") staje się adresem
-    /// w zbiorze aktów („DU/2024/928__art_5__ust_2"). Jednostki aktu niosą jego własny prefiks, a jednostki
-    /// cytowane w nowelizacji i cele komend — prefiks aktu zmienianego.
+    /// w zbiorze aktów („DU/2024/928__art_5__ust_2"). Jednostki aktu niosą jego własny prefiks, jednostki
+    /// cytowane w nowelizacji i cele komend — prefiks aktu zmienianego, a jednostki przytoczone
+    /// w obwieszczeniu (<c>tresc-strukt</c>) — prefiks aktu, z którego pochodzą.
     /// </summary>
     internal static class ActPrefixXml
     {
+        /// <summary>
+        /// Akt, z którego pochodzi przytoczenie (ELI bez adresu zasobu, np. „DU/2025/1792"); null, gdy nieodczytany.
+        /// Adnotacja elementu <c>tresc-strukt</c> — schemat nie przewiduje dla niego atrybutu aktu.
+        /// </summary>
+        internal sealed record QuotedAct(string? Eli);
+
         private const string Separator = EIdSegment.Separator;
 
         // Identyfikator ELI aktu na końcu adresu zasobu: „https://eli.gov.pl/eli/DU/2025/350" → „DU/2025/350".
@@ -100,16 +107,23 @@ namespace Saga.Core.Services.Converters
                 attribute.Value = prefix + Separator + attribute.Value;
         }
 
-        /// <summary>Akt zmieniany wskazany przez cytat albo instrukcję (atrybut <c>akt</c>); null, gdy nieodczytany.</summary>
+        /// <summary>
+        /// Akt zmieniany wskazany przez cytat albo instrukcję (atrybut <c>akt</c>), a dla przytoczenia — akt,
+        /// z którego pochodzi (<see cref="QuotedAct"/>); null, gdy nieodczytany.
+        /// </summary>
         private static string? AmendedActOf(XElement element)
         {
+            if (element.Annotation<QuotedAct>() is { } quoted)
+                return quoted.Eli;
+
             var act = element.Attributes().FirstOrDefault(a =>
                 a.Name.LocalName == XmlConverterConstants.Contents.Citation.Quotation.ActAttribute && !a.IsNamespaceDeclaration);
             return act is null ? null : EliOfAct.Match(act.Value) is { Success: true } match ? match.Groups["eli"].Value : null;
         }
 
         private static bool IsStructuralCitation(XElement element) =>
-            element.Name.LocalName == XmlConverterConstants.Contents.Citation.StructElement;
+            element.Name.LocalName is XmlConverterConstants.Contents.Citation.StructElement
+                or XmlConverterConstants.Contents.Citation.QuotedStructElement;
 
         // „UNKNOWN" i pusta wartość nie są adresami — nie ma czego poprzedzać.
         private static bool IsAddress(string value) => value.Length > 0 && value.Contains('_');

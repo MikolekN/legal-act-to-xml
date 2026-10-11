@@ -345,6 +345,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   (3478 komend), a w 43 dokumentach bez nagłówka dziennika adres aktu był pusty (184); teraz 3654 komendy w 570
   rozporządzeniach adresują akt zmieniany. Zgodność ze schematem bez zmian (1648 z 2321, tak samo wg libxml2).
 
+- **Przytoczone przepisy w obwieszczeniu tekstu jednolitego** ([ADR-0036](docs/adr/0036-przytoczone-artykuly-sa-jednostkami-aktu-przytaczanego.md)):
+  artykuły przytoczone w obwieszczeniu („…, który stanowi: „Art. 19. …"") są jednostkami — `tresc-strukt`
+  w zdaniu punktu albo podpunktu, z adresem w akcie, z którego pochodzą (`DU/2025/1792__art_19__pkt_1`),
+  jak w przykładzie autorów schematu. Model: `Quotation` w dalszej treści jednostki (`ContentBlock.Quotation`).
+  Przytoczenie, którego nie da się zbudować w całości z artykułów (ustęp, akapit poza jednostkami, przepis
+  zmieniający z własnym cytatem), zostaje tekstem (`fragment`) jak dotąd.
+  - W korpusie: 1625 z 1717 przytoczeń w 684 obwieszczeniach (1772 artykuły, 567 paragrafów, 1403 ustępy,
+    2405 punktów, 229 liter; 6068 akapitów mniej jako `fragment`), 1570 z prefiksem aktu przytaczanego.
+    Zgodność ze schematem (1648 z 2321, tak samo wg libxml2) i pokrycie tekstu bez zmian.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

@@ -218,7 +218,7 @@ namespace Saga.Core.Services.Parsing
 
             if (context.AnnouncementMetadata is not null)
             {
-                var announcement = AnnouncementUnits.Build(context.AnnouncementBlocks, context.Document);
+                var announcement = AnnouncementUnits.Build(context.AnnouncementBlocks, context.Document, context.SectionIsBasicUnit);
                 announcement.AttachedTo = context.AnnouncedActAttachedTo;
                 announcement.IsConsolidatedText =
                     Classify.Document.ZtpPatterns.ConsolidatedTextTitlePattern.IsMatch(context.Document.Subject)

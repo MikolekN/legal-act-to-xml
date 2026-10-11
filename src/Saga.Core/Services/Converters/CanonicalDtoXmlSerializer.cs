@@ -82,7 +82,13 @@ namespace Saga.Core.Services.Converters
             return element;
         }
 
-        private static XElement SerializeContentBlock(ContentBlock block) => block.Table is { } table
+        private static XElement SerializeContentBlock(ContentBlock block) => block.Quotation is { } quotation
+            ? new XElement("quotation",
+                quotation.SourceAct?.GetELIStrings().FirstOrDefault() is { } act ? new XAttribute("sourceAct", act) : null,
+                SerializeAmendmentContent(quotation.Content))
+            : SerializeTextOrTable(block);
+
+        private static XElement SerializeTextOrTable(ContentBlock block) => block.Table is { } table
             ? new XElement("table", table.Rows.Select(row => new XElement("row",
                 row.IsHeader ? new XAttribute("header", true) : null,
                 row.Cells.Select(cell => new XElement("cell",

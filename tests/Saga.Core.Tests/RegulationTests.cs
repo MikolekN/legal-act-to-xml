@@ -364,6 +364,28 @@ namespace Saga.Core.Tests
             Assert.Equal("Prezesa Rady Ministrów", announcement.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
         }
 
+        [Fact]
+        public void SectionQuotedInTheAnnouncement_IsTheBasicUnitOfTheQuotedRegulation()
+        {
+            // Obwieszczenie ogłasza rozporządzenie, więc przytoczone „§ 2." to paragraf, nie paragraf kodeksu.
+            var lines = ConsolidatedRegulation.ToList();
+            var signature = lines.IndexOf("Prezes Rady Ministrów: D. Tusk");
+            lines.InsertRange(signature,
+            [
+                "2. Podany w załączniku do niniejszego obwieszczenia tekst jednolity rozporządzenia nie obejmuje § 2 rozporządzenia " +
+                    "Ministra Finansów z dnia 3 marca 2025 r. zmieniającego rozporządzenie w sprawie wykazu osób prawnych (Dz. U. poz. 310), który stanowi:",
+                "„§ 2. 1. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+                "2. Przepis § 1 stosuje się od dnia 1 stycznia 2026 r.”",
+            ]);
+
+            var quoted = Export(lines).Descendants().Single(e => e.Name.LocalName == "tresc-strukt");
+
+            var section = Assert.Single(quoted.Elements());
+            Assert.Equal("paragraf", section.Name.LocalName);
+            Assert.Equal("DU/2025/310__art_2", section.Attribute("eId")!.Value);
+            Assert.Equal(new[] { "nr", "ustep", "ustep" }, ChildNames(section));
+        }
+
         [SchemaPlFact]
         public void ConsolidatedRegulation_IsSchemaValid_InItsBody()
         {

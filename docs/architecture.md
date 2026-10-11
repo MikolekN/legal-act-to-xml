@@ -242,7 +242,7 @@ Wspólne cechy wszystkich encji:
 | `ContentText` | `string` | Pełny tekst jednostki |
 | `Parent` | `BaseEntity?` | Referencja do rodzica |
 | `ValidationMessages` | `List<ValidationMessage>` | Diagnostyka parsowania |
-| `Continuation` | `List<ContentBlock>` | Dalsza treść akapitu jednostki: akapity bez oznaczenia i tabele za jej zdaniami — [ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md) |
+| `Continuation` | `List<ContentBlock>` | Dalsza treść akapitu jednostki: akapity bez oznaczenia, tabele i przytoczenia (`Quotation`) za jej zdaniami — [ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md) |
 | `Id` | `string` (virtual) | Hierarchiczny eId budowany dynamicznie |
 
 ---
@@ -421,7 +421,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`ActSignatureParser`** | Rozpoznaje formułę podpisu za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda") — organ, inicjały, nazwisko. Formuła, po której stoi kolejny artykuł, podpisem aktu nie jest. |
 | **`AnnexBuilder`** | Składa załączniki z bloków zebranych za nagłówkiem „Załącznik(i) do ustawy z dnia …" (`ParsingContext.AnnexBlocks`): wskazanie aktu z wierszem „(Dz. U. …)", oznaczenie w osobnym wierszu (ze znacznikiem odnośnika albo dopiskiem „(uchylony)"), tytuł (styl tytułu albo wyśrodkowany pierwszy wiersz), treść. Treści nie rozkłada na jednostki — załącznik nie przechodzi przez klasyfikator akapitów. |
 | **`AnnouncementBoundary`** | Tekst jednolity: dokument zaczyna się nagłówkiem obwieszczenia, a ogłaszany akt — wierszem „Załącznik do obwieszczenia …" ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md)). Bloki sprzed tego wiersza omijają potok aktu (`ParserOrchestrator.CollectAnnouncementBlock`): wiersze nagłówka czyta kolektor metadanych, reszta trafia do `LegalDocument.Announcement` (akapity i tabele). Na granicy kolektor jest wymieniany (`ParsingContext.BeginAnnouncedAct`), więc strefa tytułowa ogłaszanego aktu („USTAWA", data, przedmiot) trafia do `Announcement`, a nagłówkiem dokumentu pozostaje nagłówek obwieszczenia. |
-| **`AnnouncementUnits`** | Jednostki obwieszczenia z samej treści, poza potokiem aktu ([ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)): „N." to punkt (`Paragraph` z `EIdPrefix` `pkt`), „N)" pod punktem — podpunkt (`Point` z `ppkt`), akapit tuż za ostatnim podpunktem bez znaku końcowego — część wspólna podpunktów. Przytoczenie (od cudzysłowu otwierającego do domknięcia) i tabela są dalszą treścią jednostki, za którą stoją; formuła podpisu trafia do `LegalDocument.Signature`. |
+| **`AnnouncementUnits`** | Jednostki obwieszczenia z samej treści, poza potokiem aktu ([ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)): „N." to punkt (`Paragraph` z `EIdPrefix` `pkt`), „N)" pod punktem — podpunkt (`Point` z `ppkt`), akapit tuż za ostatnim podpunktem bez znaku końcowego — część wspólna podpunktów. Przytoczenie (od cudzysłowu otwierającego do domknięcia) i tabela są dalszą treścią jednostki, za którą stoją; formuła podpisu trafia do `LegalDocument.Signature`. Przytoczenie złożone z całych artykułów (paragrafów aktu wykonawczego) buduje `AmendmentBuilder` i trafia do jednostki jako `Quotation` z aktem przytaczanym odczytanym z jej treści (`JournalReferenceService.ReadSingleAct`); inne — w tym przytoczony ustęp i przepis zmieniający z własnym cytatem — zostaje akapitami tekstu ([ADR-0036](adr/0036-przytoczone-artykuly-sa-jednostkami-aktu-przytaczanego.md)). |
 | **`ContentTables`** | Składa `ContentTable` z bloków jednej tabeli źródłowej według `DocumentBlock.TableCell`; dalszy ciąg komórki scalonej w pionie nie jest osobną komórką |
 | **`AnnexUnits`** | Wyliczenie w treści załącznika jako jednostki redakcyjne: akapity przechodzą przez potok aktu pod artykułem zastępczym (niejawnym, z `AddressAnchor` = adres załącznika), a ustęp z oznaczeniem rzymskim („I.") powstaje tu wprost. Zwraca jednostki tylko wtedy, gdy cała treść jest wyliczeniem i potok niczego nie pominął — [ADR-0028](adr/0028-wyliczenie-w-zalaczniku-buduje-potok-aktu.md) |
 | **Dalsza treść jednostki** (`StructureProcessor.HandleUnknown`, `ParserOrchestrator.FlushTable`) | Akapit, którego potok nie rozpoznał, trafia do `Continuation` najgłębszej otwartej jednostki (`StructureProcessor.DeepestUnit`); bloki tabeli stojącej w treści przepisu omijają klasyfikację, są zbierane w `ParsingContext.TableBlocks` i na końcu tabeli stają się jej `ContentTable`. Tabela zaczęta w treści nowelizacji (`ParsingContext.TableInAmendment`) jest treścią cytowaną: `AmendmentStateManager.CollectTable` dokłada ją do kolektora, a `AmendmentBuilder` przypina do jednostki, za którą stoi, albo — gdy cytat nie ma jednostek — do `AmendmentContent.Tables` |
@@ -565,7 +565,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku (zakres wyjątku — adresem jednostki cytowanej albo celu komendy w akcie zmienianym); po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
 | `InlineTextXml` | Elementy wewnątrz tekstu powstają w eksporcie, przebiegiem po zbudowanej treści: wskazuje węzły tekstowe, które je przyjmują (`zdanie`, `tytul`, `tekst` oraz tekst załącznika i komórek tabel), i zamienia indeks górny z kanału tekstowego („477[9]") na `sup` |
 | `FootnoteXmlConverter` | Przebieg po zbudowaniu treści: znacznik odnośnika w `zdanie`/`tytul`/`tekst` → `odnosnik` z treścią, kolejne odwołanie → `odsylacz-do-odnosnika` ([ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md)) |
-| `ActPrefixXml` | Ostatni przebieg po gotowym dokumencie: poprzedza adresy prefiksem aktu — własnym dla jednostek aktu, `JednostkaAktu` i `dowod`, aktu zmienianego dla jednostek pod `cytat-strukt`, celów komend i `JednostkaWZakresie` — [ADR-0027](adr/0027-prefiks-aktu-dopisuje-eksport.md) |
+| `ActPrefixXml` | Ostatni przebieg po gotowym dokumencie: poprzedza adresy prefiksem aktu — własnym dla jednostek aktu, `JednostkaAktu` i `dowod`, aktu zmienianego dla jednostek pod `cytat-strukt`, celów komend i `JednostkaWZakresie`, aktu przytaczanego dla jednostek pod `tresc-strukt` (adnotacja `ActPrefixXml.QuotedAct`) — [ADR-0027](adr/0027-prefiks-aktu-dopisuje-eksport.md), [ADR-0036](adr/0036-przytoczone-artykuly-sa-jednostkami-aktu-przytaczanego.md) |
 | `AnnexXmlConverter` | Załącznik: `zalacznik` z `eId` albo `brak-eid`, `zalacznik-do`, `zalacznik-nr`, `tytul-zalacznika` i `segment-zalacznika` z treścią w kolejności dokumentu; załączniki stoją za podpisem aktu |
 | `TableXmlConverter` | Tabela treści: `tabela`/`tbody`/`tr`/`td` ze scaleniami i wierszem nagłówka; akapit komórki jako `tytul-kolumny`, `liczba`, `wyliczenie-N` (poziom liczony w komórce) albo `tekst-zwykly`; pusta komórka niesie pusty akapit |
 | `ActKindXml` | Rodzaj aktu w metadanych (`Rodzaj`): jawny `LegalDocument.Type` albo — przy wartości domyślnej — nagłówek aktu, a gdy nie da się go rozpoznać, rodzaj z klasyfikatora dokumentu; organ wydający wynikający z rodzaju (ustawa — Sejm) i zasoby ELI znanych organów |
@@ -870,7 +870,8 @@ src/Saga.Model/
 ├── ActSignature.cs                  # Formuła podpisu aktu (organ, osoba)
 ├── Annex.cs                         # Załącznik aktu: wskazanie aktu, oznaczenie, tytuł, treść
 ├── ContentTable.cs                  # Tabela w treści (wiersze, komórki, scalenia)
-├── ContentBlock.cs                  # Element treści bez oznaczenia: akapit albo tabela
+├── ContentBlock.cs                  # Element treści bez oznaczenia: akapit, tabela albo przytoczenie
+├── Quotation.cs                     # Przytoczenie przepisów innego aktu jako jednostki (obwieszczenie TJ)
 ├── Footnote.cs                      # Odnośnik (przypis): numer i treść
 ├── PublisherType.cs                 # Enum typu publikatora
 ├── LegalActType.cs                  # Enum rodzaju aktu (11 wartości, w tym AmendingStatute/Announcement/Resolution/ExecutiveOrder/LocalLegalAct)
@@ -1103,7 +1104,8 @@ z `IsSection` i ustępami — w ustawie zmieniającej kodeks cytowany „§ 2." 
 której artykuły stoją w jednostkach systematyzacyjnych) albo korzeń aktu opartego na paragrafach, a dla tekstu
 jednolitego —
 `obwieszczenie` (z `autor-aktu`), w nim punkty obwieszczenia (`AnnouncementXmlConverter`: `punkt-OTJ`,
-`podpunkt-OTJ`, `czesc-wspolna-podpunkt-OTJ`), podpis i ogłaszany akt (`ustawa`, `kodeks` albo `rozporzadzenie` /
+`podpunkt-OTJ`, `czesc-wspolna-podpunkt-OTJ`; przytoczone artykuły jako `tresc-strukt` w zdaniu jednostki —
+[ADR-0036](adr/0036-przytoczone-artykuly-sa-jednostkami-aktu-przytaczanego.md)), podpis i ogłaszany akt (`ustawa`, `kodeks` albo `rozporzadzenie` /
 `uchwala` / `zarzadzenie` — `ActKindXml.AnnouncedActElement`) z własną strefą tytułową (`zalacznik-do`,
 `rodzaj-aktu`, `data`, `tytul`), jednostkami i załącznikami ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md),
 [ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)).

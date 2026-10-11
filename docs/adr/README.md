@@ -54,5 +54,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0033](0033-tekst-jednolity-ma-zdarzenie-ujednolicenia.md) | Tekst jednolity nie czyta klauzuli wejścia w życie: ma jedno zdarzenie `ujednolicenie` w dniu ogłoszenia obwieszczenia, a jego jednostki nie niosą `wejscie-w-zycie` ani `okres` | Accepted | 2026-10-11 |
 | [0034](0034-paragraf-jest-jednostka-podstawowa-aktu-wykonawczego.md) | W rozporządzeniu, uchwale i zarządzeniu „§ N." jest jednostką podstawową: encja `Article` z `IsSection`, adres `art_5__ust_2`, element `paragraf`, korzeń według rodzaju aktu; rozstrzyga rodzaj aktu z klasyfikatora, nie sam znak | Accepted | 2026-10-11 |
 | [0035](0035-paragraf-po-paragrafie-to-kolejny-paragraf.md) | W akcie opartym na paragrafach „§" po paragrafie wskazuje kolejny paragraf (rodzeństwo), nie paragraf kodeksu; po jawnym „art." pozostaje paragrafem kodeksu — uzupełnia regułę 1 z ADR-0015 | Accepted | 2026-10-11 |
+| [0036](0036-przytoczone-artykuly-sa-jednostkami-aktu-przytaczanego.md) | Artykuły przytoczone w obwieszczeniu są jednostkami w `tresc-strukt`, adresowanymi w akcie, z którego pochodzą (`Quotation`); przytoczenie, którego nie da się tak zbudować w całości, zostaje tekstem — zastępuje punkt ADR-0032 o przytoczeniu | Accepted | 2026-10-11 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

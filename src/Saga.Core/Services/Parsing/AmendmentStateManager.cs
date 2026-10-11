@@ -235,17 +235,21 @@ namespace Saga.Core.Services.Parsing
         /// Zdejmuje graniczne cudzysłowy cytatu.
         /// Zwraca zdjętą interpunkcję (np. ',' z '…”,').
         /// </summary>
-        internal static QuoteBoundaries TrimQuoteBoundaries(AmendmentCollector collector)
+        internal static QuoteBoundaries TrimQuoteBoundaries(AmendmentCollector collector) =>
+            TrimQuoteBoundaries(collector.Paragraphs);
+
+        /// <summary>Zdejmuje graniczne cudzysłowy z pierwszego i ostatniego akapitu cytowanej treści.</summary>
+        internal static QuoteBoundaries TrimQuoteBoundaries(IReadOnlyList<CollectedAmendmentParagraph> paragraphs)
         {
-            if (collector.Count == 0)
+            if (paragraphs.Count == 0)
                 return default;
 
-            var first = collector.Paragraphs[0];
+            var first = paragraphs[0];
             var trimmedText = OpeningQuotePattern.Replace(first.Text, "", 1);
             var hasOpening = trimmedText.Length != first.Text.Length;
             first.Text = trimmedText;
 
-            var last = collector.Paragraphs[^1];
+            var last = paragraphs[^1];
             var match = ClosingQuotePattern.Match(last.Text);
             if (!match.Success)
                 return new QuoteBoundaries(hasOpening, false, null);

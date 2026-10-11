@@ -109,27 +109,115 @@ namespace Saga.Core.Tests
             Assert.StartsWith("oraz zmian wynikających", commonPart.ContentText);
         }
 
+        // ============================================================
+        // Przytoczone przepisy (ADR-0036)
+        // ============================================================
+
+        private const int QuotedLine = 9;
+
+        /// <summary>Wzorcowe obwieszczenie z innym przytoczeniem w punkcie 2.</summary>
+        private static List<string> WithQuotation(params string[] quoted)
+        {
+            var lines = ConsolidatedText.ToList();
+            lines.RemoveAt(QuotedLine);
+            lines.InsertRange(QuotedLine, quoted);
+            return lines;
+        }
+
         [Fact]
-        public void QuotedProvision_ContinuesThePointItStandsAfter()
+        public void QuotedArticle_IsAQuotationOfThePointItStandsAfter()
         {
             var second = Parse(ConsolidatedText).Announcement!.Points[1];
 
             Assert.Empty(second.Points);
-            Assert.StartsWith("„Art. 57.", Assert.Single(second.Continuation).Text);
+            var quotation = Assert.Single(second.Continuation).Quotation!;
+            var article = Assert.Single(quotation.Content.Articles);
+            Assert.Equal("57", article.Number?.Value);
+            Assert.Equal("Przepisy ustawy zmienianej w art. 10 stosuje się również do odbudowy.", article.Paragraphs[0].ContentText);
+
+            // Akt przytaczany wskazuje treść punktu: „art. 57 ustawy z dnia 1 października 2024 r. … (Dz. U. poz. 1473)".
+            Assert.Equal(new[] { "DU/2024/1473" }, quotation.SourceAct!.GetELIStrings());
         }
 
         [Fact]
-        public void QuotedProvisionOfSeveralParagraphs_StaysOneQuotation()
+        public void QuotedArticleOfSeveralParagraphs_IsOneQuotation()
         {
             // Przytoczenie otwarte cudzysłowem ciągnie się do jego domknięcia — „1)" w środku nie jest podpunktem.
-            var lines = ConsolidatedText.ToList();
-            lines[9] = "„Art. 57. Przepisy stosuje się do:";
-            lines.InsertRange(10, ["1) odbudowy,", "2) remontu.”"]);
-
-            var second = Parse(lines).Announcement!.Points[1];
+            var second = Parse(WithQuotation("„Art. 57. Przepisy stosuje się do:", "1) odbudowy,", "2) remontu.”"))
+                .Announcement!.Points[1];
 
             Assert.Empty(second.Points);
-            Assert.Equal(new[] { "„Art. 57. Przepisy stosuje się do:", "1) odbudowy,", "2) remontu.”" }, second.Continuation.Select(c => c.Text));
+            var article = Assert.Single(Assert.Single(second.Continuation).Quotation!.Content.Articles);
+            Assert.Equal(new[] { "1", "2" }, article.Paragraphs[0].Points.Select(point => point.Number?.Value));
+        }
+
+        [Fact]
+        public void SeveralQuotedArticles_AreOneQuotation()
+        {
+            var second = Parse(WithQuotation(
+                    "„Art. 57. 1. Przepisy stosuje się do odbudowy.",
+                    "2. Przepisów nie stosuje się do remontu.",
+                    "Art. 58. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.”"))
+                .Announcement!.Points[1];
+
+            var articles = Assert.Single(second.Continuation).Quotation!.Content.Articles;
+            Assert.Equal(new[] { "57", "58" }, articles.Select(article => article.Number?.Value));
+            Assert.Equal(2, articles[0].Paragraphs.Count);
+        }
+
+        [Theory]
+        // Przytoczony ustęp wymagałby adresu z treści punktu („art. 5 ust. 3 ustawy …").
+        [InlineData("„3. W przypadku gdy osoba posiada zaświadczenie, przepisu nie stosuje się.”")]
+        // Akapit poza jednostkami — przytoczenia nie da się zbudować w całości.
+        [InlineData("„Na dzień ogłoszenia obwieszczenia działem kieruje Minister Finansów.”")]
+        public void QuotationThatIsNotWholeArticles_StaysText(string quoted)
+        {
+            var block = Assert.Single(Parse(WithQuotation(quoted)).Announcement!.Points[1].Continuation);
+
+            Assert.Null(block.Quotation);
+            Assert.Equal(quoted, block.Text);
+        }
+
+        [Fact]
+        public void QuotationWithAParagraphOutsideItsUnits_StaysText()
+        {
+            string[] quoted = ["„Art. 57. Przepisy stosuje się do odbudowy.", "Wyjaśnienie bez oznaczenia jednostki.”"];
+
+            var blocks = Parse(WithQuotation(quoted)).Announcement!.Points[1].Continuation;
+
+            Assert.All(blocks, block => Assert.Null(block.Quotation));
+            Assert.Equal(quoted, blocks.Select(block => block.Text));
+        }
+
+        [Fact]
+        public void QuotedAmendingProvisionWithItsOwnQuotation_StaysText()
+        {
+            // Cytowany w przepisie zmieniającym „2. …" nie jest ustępem przytaczanego artykułu (nowelizacja zagnieżdżona).
+            string[] quoted =
+            [
+                "„Art. 54. W ustawie z dnia 7 września 1991 r. o systemie oświaty (Dz. U. z 2019 r. poz. 1481) w art. 90m ust. 2 otrzymuje brzmienie:",
+                "„2. Rada gminy może upoważnić kierownika ośrodka pomocy społecznej do prowadzenia postępowania.”.”",
+            ];
+
+            var blocks = Parse(WithQuotation(quoted)).Announcement!.Points[1].Continuation;
+
+            Assert.All(blocks, block => Assert.Null(block.Quotation));
+            Assert.Equal(quoted, blocks.Select(block => block.Text));
+        }
+
+        [Fact]
+        public void QuotationUnderAPointNamingTwoActs_HasNoSourceAct()
+        {
+            // Dwa publikatory w treści punktu — nie wiadomo, z którego aktu pochodzi przytoczenie.
+            var lines = ConsolidatedText.ToList();
+            lines[QuotedLine - 1] = "2. Podany w załączniku tekst jednolity nie obejmuje art. 57 ustawy z dnia 1 października 2024 r. " +
+                "o zmianie ustawy o odbudowie (Dz. U. poz. 1473) oraz art. 3 ustawy z dnia 9 maja 2025 r. (Dz. U. poz. 680), które stanowią:";
+
+            var quotation = Assert.Single(Parse(lines).Announcement!.Points[1].Continuation).Quotation!;
+
+            Assert.Null(quotation.SourceAct);
+            var exported = LegalDocumentConverter.Convert(Parse(lines)).Descendants().Single(e => e.Name.LocalName == "tresc-strukt");
+            Assert.Equal("art_57", exported.Elements().Single().Attribute("eId")!.Value);
         }
 
         [Fact]
@@ -194,14 +282,51 @@ namespace Saga.Core.Tests
                 new[] { "pkt_1__ppkt_1", "pkt_1__ppkt_2", "pkt_1__czw" },
                 first.Elements().Skip(2).Select(e => e.Attribute("eId")!.Value));
 
-            // Przytoczony przepis stoi za zdaniami punktu jako jego dalsza treść.
+            // Przytoczony przepis stoi w zdaniu punktu, nie obok niego.
             var second = announcement.Elements().Where(e => e.Name.LocalName == "punkt-OTJ").ElementAt(1);
-            Assert.Equal(new[] { "nr", "p", "fragment" }, ChildNames(second));
+            Assert.Equal(new[] { "nr", "p" }, ChildNames(second));
 
             // Jednostki obwieszczenia nie są przepisami aktu — nie niosą dat.
             Assert.DoesNotContain(
                 announcement.Elements().Where(e => e.Name.LocalName == "punkt-OTJ").DescendantsAndSelf(),
                 e => e.Attribute("wejscie-w-zycie") != null || e.Attribute("okres") != null);
+        }
+
+        [Fact]
+        public void QuotedArticle_IsExportedInTheSentence_AddressedInItsOwnAct()
+        {
+            var announcement = LegalDocumentConverter.Convert(
+                    Parse(WithQuotation("„Art. 57. Przepisy stosuje się do:", "1) odbudowy,", "2) remontu.”;")))
+                .Elements().Single();
+
+            var sentence = announcement.Elements().Where(e => e.Name.LocalName == "punkt-OTJ").ElementAt(1)
+                .Descendants().First(e => e.Name.LocalName == "zdanie");
+            var quoted = Assert.Single(sentence.Elements());
+
+            Assert.Equal("tresc-strukt", quoted.Name.LocalName);
+            Assert.Equal("oba", quoted.Attribute("cudzyslowy")!.Value);
+            Assert.EndsWith("który stanowi:", sentence.Nodes().OfType<XText>().First().Value);
+
+            // Interpunkcja za cudzysłowem należy do zdania punktu.
+            Assert.Equal(";", sentence.Nodes().OfType<XText>().Last().Value);
+
+            // Adres w akcie przytaczanym, nie w obwieszczeniu ani w ogłaszanym akcie.
+            Assert.Equal(
+                new[] { "DU/2024/1473__art_57", "DU/2024/1473__art_57__pkt_1", "DU/2024/1473__art_57__pkt_2" },
+                quoted.Descendants().Select(e => e.Attribute("eId")?.Value).OfType<string>());
+        }
+
+        [SchemaPlFact]
+        public void AnnouncementWithQuotedArticles_IsSchemaValid_InItsBody()
+        {
+            var lines = WithQuotation(
+                "„Art. 57. 1. Przepisy stosuje się do:",
+                "1) odbudowy,",
+                "2) remontu.",
+                "2. Przepisów nie stosuje się do rozbiórki.",
+                "Art. 58. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.”");
+
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(Parse(lines)).Elements().First()));
         }
 
         [Fact]

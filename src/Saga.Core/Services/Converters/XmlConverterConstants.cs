@@ -343,6 +343,9 @@ namespace Saga.Core.Services.Converters
                 }
 
                 internal const string StructElement = "cytat-strukt";
+
+                /// <summary>Przytoczenie przepisów innego aktu jako jednostki — bez instrukcji nowelizującej.</summary>
+                internal const string QuotedStructElement = "tresc-strukt";
                 internal const string EmptyStructElement = "cytat-strukt-pusty";
                 internal const string BlocElement = "cytat-blok";
                 internal static class Quotation

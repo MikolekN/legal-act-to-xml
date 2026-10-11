@@ -1,6 +1,6 @@
 # ADR-0032: Jednostki obwieszczenia tekstu jednolitego adresuje się od obwieszczenia: punkt `pkt`, podpunkt `ppkt`
 
-- Status: Accepted
+- Status: Accepted (rozstrzygnięcie o przytoczeniu zastąpione przez [ADR-0036](0036-przytoczone-artykuly-sa-jednostkami-aktu-przytaczanego.md))
 - Data: 2026-10-11
 
 ## Kontekst
