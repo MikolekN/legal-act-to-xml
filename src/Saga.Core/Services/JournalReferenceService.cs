@@ -100,10 +100,13 @@ namespace Saga.Core.Services
         private static readonly Regex ArticlePrefixStrip = new(
             @"^(Art\.|\u00a7)\s*[\w\d]+\.?\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        // „W ustawie z dnia …", także z określeniem ustawy przed datą („W ustawie budżetowej na rok 2024 z dnia …").
+        // „W ustawie z dnia …", także z określeniem ustawy przed datą („W ustawie budżetowej na rok 2024 z dnia …"),
+        // oraz „W rozporządzeniu Ministra … z dnia …" — przed datą stoi organ wydający, stąd dłuższe okno
+        // („Ministrów Infrastruktury oraz Spraw Wewnętrznych i Administracji").
         // Określenie nie sięga za nawias — tam zaczyna się już publikator albo inna treść.
         private static readonly Regex AmendingFormula = new(
-            @"^W\s+ustawie\b[^()]{0,60}?\bz\s+dnia\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            @"^W\s+(?:ustawie\b[^()]{0,60}?|rozporządzeniu\b[^()]{0,120}?)\bz\s+dnia\b",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private static bool StartsWithAmendingFormula(string contentText)
         {

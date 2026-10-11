@@ -119,6 +119,40 @@ namespace Saga.Core.Tests
         }
 
         [Theory]
+        // Rozporządzenie zmieniające: między „rozporządzeniu" a datą stoi organ wydający, także długi.
+        [InlineData("§ 1. W rozporządzeniu Rady Ministrów z dnia 3 grudnia 2015 r. w sprawie Pełnomocnika Rządu " +
+                    "(Dz. U. z 2021 r. poz. 562 oraz z 2023 r. poz. 2620) wprowadza się następujące zmiany:", 2021, 562)]
+        [InlineData("§ 1. W rozporządzeniu Ministrów Infrastruktury oraz Spraw Wewnętrznych i Administracji z dnia " +
+                    "31 lipca 2002 r. w sprawie znaków i sygnałów drogowych (Dz. U. z 2019 r. poz. 2310) w § 5 uchyla się ust. 2.", 2019, 2310)]
+        // § 158 ust. 7 ZTP: rocznik pominięty — rok z daty rozporządzenia.
+        [InlineData("§ 1. W rozporządzeniu Ministra Finansów z dnia 1 lutego 2021 r. w sprawie wzoru zgłoszenia " +
+                    "(Dz. U. poz. 200) wprowadza się następujące zmiany:", 2021, 200)]
+        public void AmendingFormula_OfARegulation_NamesItsIssuerBeforeTheDate(string text, int year, int position)
+        {
+            var section = new Article { ContentText = text, IsSection = true };
+
+            _service.ParseJournalReferences(section);
+
+            var journal = Assert.Single(section.Journals);
+            Assert.Equal(year, journal.Year);
+            Assert.Equal(new[] { position }, journal.Positions);
+        }
+
+        [Fact]
+        public void SectionOnlyCitingARegulation_IsNotAmending()
+        {
+            var section = new Article
+            {
+                IsSection = true,
+                ContentText = "§ 4. W rozporządzeniu, o którym mowa w § 3 (Dz. U. z 2022 r. poz. 902), określa się wzór wniosku.",
+            };
+
+            _service.ParseJournalReferences(section);
+
+            Assert.Empty(section.Journals);
+        }
+
+        [Theory]
         // Przepis, który ustawę tylko przywołuje, nie jest przepisem zmieniającym.
         [InlineData("Art. 5. W ustawie, o której mowa w art. 1 (Dz. U. z 2022 r. poz. 902), nie stosuje się art. 4.")]
         [InlineData("Art. 6. W roku 2026 rezerwa, o której mowa w art. 34 ust. 1 ustawy z dnia 1 października 2024 r. (Dz. U. poz. 1572), wynosi 0.")]

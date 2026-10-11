@@ -308,6 +308,24 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "7a", "7b" }, amendment.Content!.Articles.Select(unit => unit.Number?.Value));
         }
 
+        [Fact]
+        public void QuotedSection_IsAddressedInTheAmendedRegulation()
+        {
+            // „W rozporządzeniu … (Dz. U. poz. 200)" wskazuje akt zmieniany — jego publikator jest prefiksem
+            // celu i cytowanej jednostki, nie publikator rozporządzenia zmieniającego (ADR-0027).
+            var amendment = Parse(AmendingRegulation).Articles.First().Paragraphs[0].Points[0].Amendment!;
+
+            Assert.Equal(2021, amendment.TargetLegalAct.Year);
+            Assert.Equal(new[] { 200 }, amendment.TargetLegalAct.Positions);
+
+            var quote = Export(AmendingRegulation, withJournalHeader: true)
+                .Descendants().First(e => e.Name.LocalName == "cytat-strukt");
+
+            Assert.Equal("DU/2021/200__art_5", quote.Attribute("element-eId")?.Value);
+            Assert.Equal("DU/2021/200__art_5", quote.Elements().Single().Attribute("eId")?.Value);
+            Assert.EndsWith("/DU/2021/200", quote.Attributes().Single(a => a.Name.LocalName == "akt").Value);
+        }
+
         [SchemaPlFact]
         public void AmendingRegulation_IsSchemaValid_InItsBody()
         {
