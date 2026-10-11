@@ -505,6 +505,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   o tym, że jednostką podstawową jest paragraf, mówi sama treść (`AnnouncementBoundary.Layout.HasSections`).
   - W korpusie: 4 dokumenty; zgodnych ze schematem 1933 → 1937 z 2321. Żaden dokument korpusu nie wychodzi już
     bez treści.
+- **Część wspólna w stylu części wspólnej bez myślnika**: akapit w stylu CZ_WSP_* stojący tuż za wyliczeniem zamyka je
+  także wtedy, gdy nie zaczyna się od myślnika („1) urlopu bezpłatnego, … 5) nieusprawiedliwionej nieobecności"
+  i w nowym wierszu „ulega proporcjonalnemu obniżeniu …") — styl i miejsce to dwa zgodne sygnały. Kolejny taki akapit
+  za wyliczeniem już zamkniętym (drugie brzmienie w tekście jednolitym) jest dalszą treścią części wspólnej, a akapit,
+  który niczego nie zamyka — dalszą treścią przepisu. Przedtem wszystkie trzy ginęły z modelu i eksportu.
+  - W korpusie: 70 dokumentów; 90 części wspólnych i 20 akapitów dalszej treści więcej, 10 odnośników odzyskanych;
+    zgubionych akapitów w tekstach jednolitych 230 → 137. Zgodność ze schematem bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

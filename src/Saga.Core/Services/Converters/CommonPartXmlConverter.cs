@@ -76,6 +76,9 @@ namespace Saga.Core.Services.Converters
             commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, part.Guid.ToString()));
             UnitLifecycleXml.Apply(commonPartElement, part);
             commonPartElement.Add(textElement);
+
+            // Dalsza treść części wspólnej: kolejny akapit w jej stylu (drugie brzmienie w tekście jednolitym).
+            EmbeddedContentXmlConverter.AppendEmbedded(commonPartElement, part);
         }
 
         private static string GetCommonPartName(IHasCommonParts entity, int? nesting)

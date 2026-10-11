@@ -32,22 +32,17 @@ namespace Saga.Core.Services.Parsing
         private readonly JournalReferenceService _journalReferenceService = new();
 
         /// <summary>
-        /// Obsługuje akapit wrap-up (zamknięcie listy przez półpauzę przed pozycją nadrzędną).
-        /// Wywoływana z Process() gdy classification.Kind == WrapUp.
+        /// Akapit w stylu części wspólnej (CZ_WSP_*) zamyka wyliczenie poziomu, który styl wskazuje. Styl i miejsce
+        /// tuż za wyliczeniem to dwa zgodne sygnały, więc myślnik na początku nie jest wymagany — szczotki gubią go
+        /// („1) urlopu bezpłatnego, … 5) nieusprawiedliwionej nieobecności" i w nowym wierszu „ulega obniżeniu …").
+        /// Kolejny taki akapit za wyliczeniem już zamkniętym (tekst jednolity niesie bywa dwa brzmienia części
+        /// wspólnej, każde z odnośnikiem) jest dalszą treścią części wspólnej, która je zamknęła.
+        /// False, gdy na tym poziomie nie ma wyliczenia: akapit jest wtedy dalszą treścią przepisu, nie ginie.
         /// </summary>
         private static bool TryHandleWrapUp(ParsingContext context, string text, string? styleId)
         {
             if (!TryGetWrapUpTarget(styleId, out var targetKind))
                 return false;
-
-            if (!IsWrapUpByText(text))
-            {
-                Log.Warning(
-                    "WrapUp pominiety: styl={StyleId}, brak polpauzy w tekscie: {Text}",
-                    styleId,
-                    text);
-                return true;
-            }
 
             BaseEntity? parent = targetKind switch
             {
@@ -57,15 +52,6 @@ namespace Saga.Core.Services.Parsing
                 _ => null
             };
 
-            if (parent == null)
-            {
-                Log.Warning(
-                    "WrapUp pominiety: brak rodzica dla {TargetKind} (styl={StyleId})",
-                    targetKind,
-                    styleId);
-                return true;
-            }
-
             var hasListItems = targetKind switch
             {
                 AmendmentTargetKind.Point => context.CurrentParagraph?.Points.Count > 0,
@@ -74,20 +60,27 @@ namespace Saga.Core.Services.Parsing
                 _ => false
             };
 
-            if (!hasListItems)
+            if (parent is null || !hasListItems)
             {
                 Log.Warning(
-                    "WrapUp pominiety: brak elementow listy dla {TargetKind} (styl={StyleId})",
-                    targetKind,
-                    styleId);
+                    "Akapit w stylu części wspólnej nie zamyka wyliczenia ({TargetKind}, styl={StyleId}) — dalsza treść przepisu: {Text}",
+                    targetKind, styleId, text);
+                return false;
+            }
+
+            if (!ParsingFactories.AttachWrapUpCommonPart(parent, text))
+            {
+                if (string.IsNullOrWhiteSpace(text)
+                    || ((IHasCommonParts)parent).CommonParts.LastOrDefault(CommonPartPlacement.IsClosing) is not { } closing)
+                    return false;
+
+                closing.Continuation.Add(new ContentBlock { Text = text.Trim() });
                 return true;
             }
 
-            var attached = ParsingFactories.AttachWrapUpCommonPart(parent, text);
-            Log.Debug(attached
-                ? "WrapUp dodany dla {ParentId}"
-                : "WrapUp pominiety (duplikat lub pusty tekst) dla {ParentId}",
-                parent.Id);
+            if (!IsWrapUpByText(text))
+                ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
+                    "Część wspólna rozpoznana ze stylu i miejsca za wyliczeniem; akapit nie zaczyna się od myślnika.");
 
             return true;
         }
@@ -464,7 +457,10 @@ namespace Saga.Core.Services.Parsing
                     return true;
 
                 case ParagraphKind.WrapUp:
-                    TryHandleWrapUp(context, text, sourceStyleId);
+                    // Akapit w stylu części wspólnej, który niczego nie zamyka, przechodzi zwykłą drogą akapitu
+                    // bez oznaczenia: wniosek z treści albo dalsza treść jednostki (ADR-0029).
+                    if (!TryHandleWrapUp(context, text, sourceStyleId))
+                        HandleUnknown(context, text, sourceStyleId, layout);
                     return true;
 
                 default:

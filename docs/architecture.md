@@ -815,6 +815,10 @@ Encje implicit:
   (`CommonPartPlacement`, w treści aktu i nowelizacji): jeśli tuż przed nią stało niższe wyliczenie bez zamknięcia,
   zamyka je (styl wskazał o poziom za wysoko); inaczej przerywa wyliczenie (`CommonPart.InterruptsAfter`) i wychodzi
   w tym miejscu jako `nie-ztp-czesc-wspolna-*` z `brak-eid="nie-ztp-wielokrotna-czesc-wspolna"`
+- Akapit w stylu części wspólnej (`CZ_WSP_*`) tuż za wyliczeniem poziomu, który styl wskazuje, zamyka je także bez
+  myślnika na początku — styl i miejsce to dwa zgodne sygnały (`StructureProcessor.TryHandleWrapUp`); kolejny taki
+  akapit za wyliczeniem już zamkniętym jest dalszą treścią części wspólnej (`fragment` w `czesc-wspolna-*`),
+  a akapit, który niczego nie zamyka, przechodzi drogą akapitu bez oznaczenia — nic nie ginie
 - Sankcja karna w osobnym akapicie (styl `S_KARN`, „podlega …") domyka zdanie przepisu, a po wyliczeniu jest jego częścią
   wspólną (`StructureProcessor.TryHandleSanction`; w cytacie `AmendmentBuilder`) — rozpoznają ją dwa zgodne sygnały z trzech:
   styl, początek „podlega" i niedokończone zdanie przed nią
