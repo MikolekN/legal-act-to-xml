@@ -13,7 +13,7 @@ namespace Saga.Core.Services.Classify
         /// po nim odstęp — „– -5 °C" to tiret pierwszego poziomu z treścią zaczynającą się od minusa.
         /// </summary>
         private static readonly Regex Marker = new(
-            $@"^{ParagraphClassifier.OptionalQuotePrefix}(?<dash>[-–]+)(?:\s+(?<dash>[-–]+)(?=\s))*\s*",
+            $@"^{ParagraphClassifier.OptionalQuotePrefix}(?<dash>[{Dashes.Any}]+)(?:\s+(?<dash>[{Dashes.Any}]+)(?=\s))*\s*",
             RegexOptions.Compiled);
 
         /// <summary>Poziom zapisany znacznikiem; 0, gdy tekst nie zaczyna się myślnikiem.</summary>

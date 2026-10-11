@@ -145,7 +145,7 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Początek sankcji karnej: „podlega karze…", także po myślniku.</summary>
         private static readonly Regex SanctionStart = new(
-            @"^(?:[–-]\s*)?podlega\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^(?:[{Dashes.Any}]\s*)?podlega\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private const string SanctionStyleName = "S_KARN";
 
@@ -823,11 +823,7 @@ namespace Saga.Core.Services.Parsing
             if (trimmed.Length < 2)
                 return false;
 
-            var first = trimmed[0];
-            if (first != '\u2013' && first != '-')
-                return false;
-
-            return char.IsWhiteSpace(trimmed[1]);
+            return Dashes.IsDash(trimmed[0]) && char.IsWhiteSpace(trimmed[1]);
         }
 
         private static bool TryGetWrapUpTarget(string? styleId, out AmendmentTargetKind targetKind)

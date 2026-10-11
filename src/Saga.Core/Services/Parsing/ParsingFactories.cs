@@ -17,7 +17,7 @@ namespace Saga.Core.Services.Parsing
     public static class ParsingFactories
     {
         private static readonly EntityNumberService _numberService = new();
-        private static readonly Regex WrapUpPrefixPattern = new(@"^(\u2013|-)\s*", RegexOptions.Compiled);
+        private static readonly Regex WrapUpPrefixPattern = new($@"^[{Dashes.Any}]\s*", RegexOptions.Compiled);
         private static readonly Regex CodeParagraphMark = new(
             $@"^{ParagraphClassifier.OptionalQuotePrefix}\u00a7", RegexOptions.Compiled);
 

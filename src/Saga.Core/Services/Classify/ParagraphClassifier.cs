@@ -90,9 +90,9 @@ namespace Saga.Core.Services.Classify
         internal static readonly Regex LetterStripPattern = new(
             $@"^{OptionalQuotePrefix}{DesignationAlphabet.Letter}{{1,5}}{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        // Tiret zaczyna półpauza; dywiz dopuszczony dla tekstu po Sanitize i aktów pisanych dywizem
+        // Tiret zaczyna myślnik — w każdej postaci, jaką piszą szczotki (Dashes, ADR-0040)
         internal static readonly Regex TiretPattern = new(
-            $@"^{OptionalQuotePrefix}[-–]+\s+", RegexOptions.Compiled);
+            $@"^{OptionalQuotePrefix}[{Dashes.Any}]+\s+", RegexOptions.Compiled);
 
         /// <summary>Artykuł z grupą przechwytującą numer (do ParseArticleNumber).</summary>
         internal static readonly Regex ArticleNumberCapture = new(
@@ -251,8 +251,7 @@ namespace Saga.Core.Services.Classify
             var trimmed = text.TrimStart();
             if (trimmed.Length < 2)
                 return false;
-            var first = trimmed[0];
-            return (first == '\u2013' || first == '-') && char.IsWhiteSpace(trimmed[1]);
+            return Dashes.IsDash(trimmed[0]) && char.IsWhiteSpace(trimmed[1]);
         }
 
         // ============================================================

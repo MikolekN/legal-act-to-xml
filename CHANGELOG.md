@@ -446,6 +446,13 @@ a wersjonowanie zgodne z Semantic Versioning.
     `fragment`, 147 jednostek wraca do zwykłych elementów. Zgodność ze schematem (1685 z 2321, tak samo wg
     libxml2) i pokrycie tekstu bez zmian.
 
+- **Warianty myślnika z jednego źródła** ([ADR-0040](docs/adr/0040-warianty-myslnika-z-jednego-zrodla.md)):
+  tiret, część wspólna zaczynająca się od myślnika, przedział oznaczeń („art. 1–3") i legenda wzoru rozpoznają
+  każdy myślnik, którym piszą szczotki — także myślnik cyfrowy (U+2012) i minus, nie tylko dywiz i półpauzę
+  (`Services/Dashes.cs`). Tekst nie jest normalizowany.
+  - W korpusie: 84 części wspólne i 17 tiretów więcej (65 części wspólnych ginęło z eksportu), znak znika z treści
+    67 tiretów; zgubionych akapitów w tekstach jednolitych 1136 → 1072. Zgodność ze schematem bez zmian.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

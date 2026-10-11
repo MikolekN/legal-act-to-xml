@@ -1171,6 +1171,47 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0040: warianty myślnika z jednego źródła
+        // ============================================================
+
+        [Fact]
+        public void Adr0040_DashCharacters_AreDefinedInExactlyOnePlace()
+        {
+            // Myślnik typograficzny w klasie znaków wzorca, jako literał znakowy albo kodem w nawiasie alternatywy
+            // to własny zestaw wariantów — kolejny wariant trzeba by wtedy dopisywać w każdym miejscu z osobna.
+            var typographic = "[" + string.Concat(Dashes.Characters.Where(dash => dash != '-')) + "]";
+            var ownSet = new System.Text.RegularExpressions.Regex(
+                @"\[[^\]\n]*" + typographic + @"[^\]\n]*\]|'" + typographic + @"'|'\\u(?:201[0-5]|2212)'|\(\\u201[0-5]\|");
+            var servicesRoot = Path.Combine(TestFiles.GetRepositoryRoot(), "src", "Saga.Core", "Services");
+
+            var offenders = Directory.EnumerateFiles(servicesRoot, "*.cs", SearchOption.AllDirectories)
+                .Where(file => Path.GetFileName(file) != "Dashes.cs")
+                .Where(file => File.ReadLines(file)
+                    .Select(line => line.TrimStart())
+                    .Where(line => !line.StartsWith("//", StringComparison.Ordinal))
+                    .Any(line => ownSet.IsMatch(line)))
+                .Select(Path.GetFileName)
+                .ToList();
+
+            Assert.True(offenders.Count == 0,
+                "Warianty myślnika muszą pochodzić z Services/Dashes.cs (ADR-0040). " +
+                "Pliki z własnymi zestawami: " + string.Join(", ", offenders));
+        }
+
+        [Fact]
+        public void Adr0040_EveryDashVariant_MarksATiret()
+        {
+            // Tekstu się nie normalizuje, więc każdy wariant musi działać sam: otworzyć tiret i zejść z jego treści.
+            foreach (var dash in Dashes.Characters)
+            {
+                var text = $"{dash} treść tiretu,";
+                Assert.True(Saga.Core.Services.Classify.ParagraphClassifier.IsTiretByText(text), $"U+{(int)dash:X4} nie otwiera tiretu");
+                Assert.Equal("treść tiretu,", Saga.Core.Services.Classify.TiretMarker.Strip(text));
+                Assert.True(Dashes.IsDash(dash));
+            }
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

@@ -19,7 +19,7 @@ namespace Saga.Core.Services.Converters
         [
             new(@"^\d+[a-z]*\)\s", RegexOptions.Compiled),
             new(@"^[a-z]{1,2}\)\s", RegexOptions.Compiled),
-            new(@"^[–-]\s", RegexOptions.Compiled),
+            new($@"^[{Dashes.Any}]\s", RegexOptions.Compiled),
         ];
 
         private static readonly string[] EnumerationLevels =

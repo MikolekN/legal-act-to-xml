@@ -106,9 +106,11 @@ namespace Saga.Core.Services.UnitReferences
 
         /// <summary>Przedział oznaczeń: „85c–85j", „a–c", „czwarte–szóste".</summary>
         internal static readonly string RangePattern =
-            Number + @"\s*[-–]\s*" + Number +
-            @"|" + LetterDesignation + @"\s*[-–]\s*" + LetterDesignation +
-            @"|" + OrdinalWord + @"\s*[-–]\s*" + OrdinalWord;
+            Number + RangeDash + Number +
+            @"|" + LetterDesignation + RangeDash + LetterDesignation +
+            @"|" + OrdinalWord + RangeDash + OrdinalWord;
+
+        private const string RangeDash = @"\s*[" + Dashes.Any + @"]\s*";
 
         /// <summary>Oznaczenie jednostki: numer (z indeksem górnym „125[1]"), liczebnik porządkowy albo litera.</summary>
         internal static readonly string DesignationPattern =
@@ -128,7 +130,7 @@ namespace Saga.Core.Services.UnitReferences
         private static Regex BuildTokenPattern(string unitKeyword, string designation) => new(
             @"(?<prosescope>w\s+zakresie\s*,\s*w\s+jakim.*|w\s+jakim\s+dotycz\p{L}*.*)" +
             @"|(?<scope>w\s+zakresie|w\s+odniesieniu\s+do|w\s+stosunku\s+do)" +
-            @"|(?<dash>\s[-–]\s)" +
+            @"|(?<dash>\s[" + Dashes.Any + @"]\s)" +
             @"|(?<unit>" + unitKeyword + ")" +
             @"|(?<range>" + RangePattern + ")" +
             @"|(?<separator>,|;|:|\bi\b|\boraz\b|\blub\b|\balbo\b)" +
@@ -298,7 +300,7 @@ namespace Saga.Core.Services.UnitReferences
             if (match.Groups["range"].Success)
             {
                 var raw = match.Groups["range"].Value;
-                var parts = raw.Split(new[] { '-', '–' }, 2, StringSplitOptions.TrimEntries);
+                var parts = raw.Split(Dashes.Characters, 2, StringSplitOptions.TrimEntries);
                 return new UnitToken(UnitTokenKind.Range, raw)
                 {
                     RangeFrom = parts.Length == 2 ? parts[0] : null,

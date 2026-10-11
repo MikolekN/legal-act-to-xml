@@ -18,12 +18,15 @@ namespace Saga.Core.Services.Parsing
             @"^(?:gdzie|w\s+który[mch]+|przy\s+czym)\b.*:$|^.*\boznacza(?:ją)?\s*:$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-        /// <summary>Opis symbolu: krótki symbol, myślnik, objaśnienie.</summary>
+        /// <summary>
+        /// Opis symbolu: krótki symbol, myślnik, objaśnienie. Dywiz rozdziela tylko wtedy, gdy stoi po odstępie —
+        /// w symbolu bywa jego częścią („n-1" z objaśnieniem „rok poprzedzający").
+        /// </summary>
         private static readonly Regex Entry = new(
-            @"^(?<symbol>[^\s–—\-][^–—]{0,40}?)\s*[–—\-]\s*(?<explanation>\S.*)$",
+            $@"^(?<symbol>[^\s{Dashes.Any}][^{Dashes.Long}]{{0,40}}?)(?:\s+[{Dashes.Any}]|\s*[{Dashes.Long}])\s*(?<explanation>\S.*)$",
             RegexOptions.Compiled | RegexOptions.Singleline);
 
-        private static readonly Regex LeadingDash = new(@"^\s*[–—\-]\s*", RegexOptions.Compiled);
+        private static readonly Regex LeadingDash = new($@"^\s*[{Dashes.Any}]\s*", RegexOptions.Compiled);
 
         /// <summary>
         /// Dołącza wiersz do legendy wzoru, za którym stoi; false, gdy wiersz legendą nie jest.
