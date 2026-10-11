@@ -132,16 +132,79 @@ namespace Saga.Core.Tests
             Assert.Single(root.Elements(), e => e.Name.LocalName == "rozporzadzenie");
         }
 
-        [Fact]
-        public void AnnouncementBuiltOfSections_KeepsTheActPipeline()
-        {
-            // Korpus: 340765_3073132 — obwieszczenie z paragrafami; jednostki buduje potok aktu.
-            var layout = AnnouncementBoundary.Describe(Blocks(
-                [.. Heading, LegalBasis, "§ 1. Stawka wynosi 10 zł.", "§ 2. Obwieszczenie wchodzi w życie z dniem ogłoszenia.", Signature]));
+        // Korpus: 340765_3073132 — obwieszczenie zbudowane z paragrafów, jak akt wykonawczy.
+        private const string BasisOfSections =
+            "Na podstawie art. 80zd ust. 3 ustawy z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym (Dz. U. z 2024 r. poz. 1251) " +
+            "ogłasza się, co następuje:";
 
-            Assert.True(layout.OpensWithAnnouncement);
+        private static readonly string[] Sections =
+        [
+            BasisOfSections,
+            "§ 1. Od dnia 1 stycznia 2026 r. stawka opłaty za wydanie:",
+            "1) decyzji o profesjonalnej rejestracji pojazdów nie może przekroczyć 147 zł;",
+            "2) znaku legalizacyjnego nie może przekroczyć 22,50 zł.",
+            "§ 2. Od dnia 1 stycznia 2026 r. stawka opłaty za wydanie blankietu wynosi 15 zł.",
+            Signature,
+        ];
+
+        [Fact]
+        public void AnnouncementBuiltOfSections_IsAnAnnouncementWithProvisions()
+        {
+            var layout = AnnouncementBoundary.Describe(Blocks([.. Heading, .. Sections]));
+
+            Assert.True(layout.IsPlainAnnouncement);
             Assert.True(layout.HasProvisions);
-            Assert.False(layout.IsPlainAnnouncement);
+            Assert.True(layout.HasSections);
+        }
+
+        [Fact]
+        public void SectionsOfAnAnnouncement_AreItsBasicUnits()
+        {
+            var document = Parse(Sections);
+
+            Assert.False(document.Announcement!.AnnouncesAct);
+            Assert.Null(document.Announcement.Body);
+            Assert.Equal(BasisOfSections, document.LegalBasis);
+            Assert.Equal(new[] { "1", "2" }, document.Articles.Select(article => article.Number?.Value));
+            Assert.All(document.Articles, article => Assert.True(article.IsSection));
+            Assert.Equal(2, document.Articles.First().Paragraphs.Single().Points.Count);
+            Assert.Equal("Koperski", document.Signature?.Surname);
+        }
+
+        [Fact]
+        public void Export_PutsTheSectionsUnderTheAnnouncement()
+        {
+            var root = LegalDocumentConverter.Convert(Parse(Sections)).Elements().Single();
+
+            Assert.Equal("obwieszczenie", root.Name.LocalName);
+            Assert.Equal(
+                new[] { "metadane", "rodzaj-aktu", "autor-aktu", "data", "tytul", "podstawa-prawna", "paragraf", "paragraf", "organ-podpisujacy" },
+                root.Elements().Select(e => e.Name.LocalName));
+            // Jednostka podstawowa ma w adresie skrót „art" także wtedy, gdy jest paragrafem (ADR-0034).
+            Assert.Equal(
+                new[] { "MP/2025/702__art_1", "MP/2025/702__art_2" },
+                root.Elements().Where(e => e.Name.LocalName == "paragraf").Select(e => e.Attribute("eId")?.Value));
+        }
+
+        [Fact]
+        public void AnnexOfAnAnnouncementWithSections_IsItsAnnex()
+        {
+            // Korpus: 345769_3066483 — paragrafy, podpis i załącznik z listą.
+            var document = Parse(
+            [
+                .. Sections,
+                "Załącznik do obwieszczenia Ministra Infrastruktury z dnia 25 lipca 2025 r. (M.P. poz. 702)",
+                "Stawki opłat w poszczególnych regionach nie ulegają zmianie.",
+            ]);
+
+            Assert.Equal(2, document.Articles.Count());
+            Assert.Single(document.Annexes);
+        }
+
+        [SchemaPlFact]
+        public void AnnouncementWithSections_IsSchemaValid_AsAWhole()
+        {
+            Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(Parse(Sections))));
         }
 
         [Fact]

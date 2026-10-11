@@ -499,6 +499,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   ma ich za mało i wychodziło bez żadnego paragrafu (`AnnouncementBoundary.Layout.AnnouncedKind`).
   - W korpusie: 20 tekstów jednolitych rozporządzeń odzyskuje treść (64 paragrafy); zgodnych ze schematem
     1915 → 1933 z 2321; zgubionych akapitów w tekstach jednolitych 1072 → 230.
+- **Obwieszczenie zbudowane z paragrafów**: obwieszczenie, które nie ogłasza aktu, a samo ma przepisy („Na podstawie
+  art. … ogłasza się, co następuje:" i „§ 1. …", „§ 2. …"), wychodzi pod korzeniem `obwieszczenie` z `podstawa-prawna`,
+  paragrafami jako jednostkami podstawowymi, podpisem i załącznikami obwieszczenia. Przepisy buduje potok aktu;
+  o tym, że jednostką podstawową jest paragraf, mówi sama treść (`AnnouncementBoundary.Layout.HasSections`).
+  - W korpusie: 4 dokumenty; zgodnych ze schematem 1933 → 1937 z 2321. Żaden dokument korpusu nie wychodzi już
+    bez treści.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

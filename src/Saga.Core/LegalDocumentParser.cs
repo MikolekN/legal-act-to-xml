@@ -119,8 +119,10 @@ namespace Saga.Core
             {
                 // O jednostce podstawowej ogłaszanego aktu mówi też jego własny nagłówek („ROZPORZĄDZENIE"):
                 // klasyfikator dokumentu waży liczbę jednostek, a krótki akt ma ich za mało.
+                // Obwieszczenie zbudowane z paragrafów („§ 1. …") ma je za jednostki podstawowe z samej treści.
                 SectionIsBasicUnit = Services.UnitReferences.SectionSignRole.IsBasicUnit(classification)
-                    || Services.UnitReferences.SectionSignRole.IsSectionBased(layout.AnnouncedKind),
+                    || Services.UnitReferences.SectionSignRole.IsSectionBased(layout.AnnouncedKind)
+                    || (layout.IsPlainAnnouncement && layout.HasSections),
                 IsPlainAnnouncement = layout.IsPlainAnnouncement,
             };
             var orchestrator = new ParserOrchestrator();
@@ -134,10 +136,14 @@ namespace Saga.Core
 
                 if (layout.IsPlainAnnouncement)
                 {
-                    if (layout.AnnexStart < 0 || i < layout.AnnexStart)
-                        orchestrator.CollectAnnouncementBlock(block, context);
-                    else
+                    // Przepisy obwieszczenia zbudowanego z paragrafów albo artykułów buduje potok aktu;
+                    // treść bez nich jest treścią obwieszczenia.
+                    if (layout.AnnexStart >= 0 && i >= layout.AnnexStart)
                         orchestrator.CollectAnnouncementAnnexBlock(block, context);
+                    else if (layout.HasProvisions)
+                        orchestrator.ProcessBlock(block, context);
+                    else
+                        orchestrator.CollectAnnouncementBlock(block, context);
                 }
                 else if (i < actStart)
                     orchestrator.CollectAnnouncementBlock(block, context);

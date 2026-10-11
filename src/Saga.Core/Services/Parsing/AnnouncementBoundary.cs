@@ -24,16 +24,19 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         /// <param name="AnnexStart">Indeks wiersza „Załącznik do obwieszczenia …"; -1, gdy go nie ma.</param>
         /// <param name="AnnouncesAct">Załącznik jest aktem (tekst jednolity), a nie załącznikiem obwieszczenia.</param>
-        /// <param name="HasProvisions">W treści obwieszczenia stoją artykuły albo paragrafy.</param>
+        /// <param name="HasProvisions">W treści obwieszczenia stoją artykuły albo paragrafy („§ 1.").</param>
         /// <param name="AnnouncedKind">Rodzaj aktu nazwany jego nagłówkiem tuż za wierszem załącznika; null, gdy go nie ma.</param>
+        /// <param name="HasSections">Przepisy obwieszczenia są paragrafami („§ 1."), nie artykułami.</param>
         internal readonly record struct Layout(
-            bool OpensWithAnnouncement, int AnnexStart, bool AnnouncesAct, bool HasProvisions, Saga.Model.LegalActType? AnnouncedKind = null)
+            bool OpensWithAnnouncement, int AnnexStart, bool AnnouncesAct, bool HasProvisions,
+            Saga.Model.LegalActType? AnnouncedKind = null, bool HasSections = false)
         {
             /// <summary>
-            /// Obwieszczenie, które nie ogłasza aktu i samo nie jest zbudowane z artykułów: cały dokument jest
-            /// obwieszczeniem, a jego załączniki — załącznikami obwieszczenia.
+            /// Obwieszczenie, które nie ogłasza aktu: cały dokument jest obwieszczeniem, a jego załączniki —
+            /// załącznikami obwieszczenia. Gdy samo jest zbudowane z paragrafów albo artykułów
+            /// (<see cref="HasProvisions"/>), jego przepisy buduje potok aktu.
             /// </summary>
-            internal bool IsPlainAnnouncement => OpensWithAnnouncement && !AnnouncesAct && !HasProvisions;
+            internal bool IsPlainAnnouncement => OpensWithAnnouncement && !AnnouncesAct;
         }
 
         /// <summary>
@@ -46,7 +49,8 @@ namespace Saga.Core.Services.Parsing
             var annexStart = Find(blocks);
             var opens = annexStart >= 0;
             var consolidated = false;
-            var provisions = false;
+            var articles = false;
+            var sections = false;
             var afterAnnex = (string?)null;
 
             for (var i = 0; i < blocks.Count; i++)
@@ -74,12 +78,16 @@ namespace Saga.Core.Services.Parsing
                     continue;
 
                 consolidated |= ZtpPatterns.ConsolidatedTextTitlePattern.IsMatch(text);
-                provisions |= Classify.ParagraphClassifier.IsArticleByText(text) || SectionDesignation.IsMatch(text);
+                sections |= SectionDesignation.IsMatch(text);
+                articles |= !SectionDesignation.IsMatch(text) && Classify.ParagraphClassifier.IsArticleByText(text);
             }
 
             var announcedKind = afterAnnex is null ? null : ZtpPatterns.KindOfHeading(afterAnnex);
             var announcesAct = annexStart >= 0 && (consolidated || announcedKind is not null);
-            return new Layout(opens, annexStart, announcesAct, provisions, announcesAct ? announcedKind : null);
+            return new Layout(
+                opens, annexStart, announcesAct, articles || sections,
+                announcesAct ? announcedKind : null,
+                HasSections: sections && !articles);
         }
 
         private static readonly Regex SectionDesignation = new(@"^§\s*\d+[a-z]*\.", RegexOptions.Compiled);
