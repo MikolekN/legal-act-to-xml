@@ -6,14 +6,15 @@ using Serilog;
 namespace Saga.Core.Services
 {
     /// <summary>
-    /// Serwis do parsowania publikatorów (Dz. U.) z treści artykułów
+    /// Serwis do parsowania publikatorów (Dz. U., M.P.) z treści artykułów
     /// i uzupełniania listy JournalInfo w encji Article.
     /// </summary>
     public class JournalReferenceService
     {
-        // Regex dla publikatorów typu "Dz. U. z 2020 r. poz. 1234, 5678 i 9012"
+        // Regex dla publikatorów typu "Dz. U. z 2020 r. poz. 1234, 5678 i 9012" oraz "M.P. poz. 1029"
+        // (Monitor Polski — uchwały i zarządzenia; § 158 ust. 7 ZTP stosuje się do obu dzienników).
         private static readonly Regex JournalRegex = new Regex(
-            @"(?<source>Dz\.\s*U\.\s*(?:z\s*(?<year>\d{4})\s*r\.?)?\s*poz\.\s*(?<positions>[\d,\sandi]+(?:,\s*[\d,\sandi]+)*))",
+            @"(?<source>(?:Dz\.\s*U\.|(?<monitor>M\.\s?P\.))\s*(?:z\s*(?<year>\d{4})\s*r\.?)?\s*poz\.\s*(?<positions>[\d,\sandi]+(?:,\s*[\d,\sandi]+)*))",
             RegexOptions.Compiled | RegexOptions.IgnoreCase
         );
 
@@ -59,11 +60,13 @@ namespace Saga.Core.Services
             return ReadJournals(text).FirstOrDefault();
         }
 
-        /// <summary>Publikatory (Dz. U.) wymienione w tekście, z pozycjami scalonymi w obrębie rocznika.</summary>
+        /// <summary>
+        /// Publikatory (Dz. U., M.P.) wymienione w tekście, z pozycjami scalonymi w obrębie dziennika i rocznika.
+        /// </summary>
         internal static List<JournalInfo> ReadJournals(string text)
         {
             var journals = new List<JournalInfo>();
-            var journalsByYear = new Dictionary<int, JournalInfo>();
+            var journalsByYear = new Dictionary<(PublisherType Publisher, int Year), JournalInfo>();
 
             foreach (Match m in JournalRegex.Matches(text))
             {
@@ -79,16 +82,18 @@ namespace Saga.Core.Services
 
                 var positionsStr = m.Groups["positions"].Success ? m.Groups["positions"].Value : "";
 
-                if (!journalsByYear.TryGetValue(year, out var journalInfo))
+                // Dziennik jest częścią tożsamości aktu: bez niego ELI nie ma segmentu „DU" albo „MP".
+                var publisher = m.Groups["monitor"].Success ? PublisherType.MonitorPolski : PublisherType.DziennikUstaw;
+
+                if (!journalsByYear.TryGetValue((publisher, year), out var journalInfo))
                 {
-                    // Wzorzec czyta wyłącznie „Dz. U." — publikator jest znany, a bez niego ELI aktu nie ma segmentu „DU".
                     journalInfo = new JournalInfo
                     {
-                        Publisher = PublisherType.DziennikUstaw,
+                        Publisher = publisher,
                         Year = year,
                         SourceString = sourceMatch,
                     };
-                    journalsByYear[year] = journalInfo;
+                    journalsByYear[(publisher, year)] = journalInfo;
                     journals.Add(journalInfo);
                 }
                 else

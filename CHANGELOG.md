@@ -355,6 +355,11 @@ a wersjonowanie zgodne z Semantic Versioning.
     2405 punktów, 229 liter; 6068 akapitów mniej jako `fragment`), 1570 z prefiksem aktu przytaczanego.
     Zgodność ze schematem (1648 z 2321, tak samo wg libxml2) i pokrycie tekstu bez zmian.
 
+- **Publikator w Monitorze Polskim**: `JournalReferenceService` czyta „M.P. poz. 1029" i „M.P. z 2018 r. poz. 756"
+  tak jak „Dz. U." — akt dostaje ELI z segmentem `MP` (`MP/2023/1029`), a pozycje scala się w obrębie dziennika
+  i rocznika. W korpusie: 23 przytoczenia z uchwał i zarządzeń w 11 obwieszczeniach zyskują prefiks aktu
+  przytaczanego (1593 z 1625 przytoczeń z prefiksem). Zgodność ze schematem bez zmian.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

@@ -138,6 +138,25 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { position }, journal.Positions);
         }
 
+        [Theory]
+        // Monitor Polski: uchwały i zarządzenia; rocznik pominięty to rok z daty aktu (§ 158 ust. 7 ZTP).
+        [InlineData("§ 2 uchwały nr 151 Rady Ministrów z dnia 22 sierpnia 2023 r. zmieniającej uchwałę w sprawie programu (M.P. poz. 1029), który stanowi:", "MP/2023/1029")]
+        [InlineData("§ 2 zarządzenia nr 81 Prezesa Rady Ministrów z dnia 24 lipca 2017 r. (M. P. z 2018 r. poz. 756), który stanowi:", "MP/2018/756")]
+        [InlineData("art. 19 ustawy z dnia 21 listopada 2025 r. o zmianie ustawy (Dz. U. poz. 1792), który stanowi:", "DU/2025/1792")]
+        public void ReadSingleAct_ReadsThePublisherWithTheJournal(string text, string eli)
+        {
+            Assert.Equal(new[] { eli }, JournalReferenceService.ReadSingleAct(text)!.GetELIStrings());
+        }
+
+        [Fact]
+        public void ReadSingleAct_TextNamingTwoActs_HasNoSingleAct()
+        {
+            // Ten sam rocznik i pozycja w dwóch dziennikach to dwa różne akty.
+            Assert.Null(JournalReferenceService.ReadSingleAct(
+                "uchwały z dnia 3 marca 2023 r. (M.P. poz. 200) oraz ustawy z dnia 3 marca 2023 r. (Dz. U. poz. 200)"));
+            Assert.Null(JournalReferenceService.ReadSingleAct("przepisu, który stanowi:"));
+        }
+
         [Fact]
         public void SectionOnlyCitingARegulation_IsNotAmending()
         {

@@ -386,6 +386,23 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "nr", "ustep", "ustep" }, ChildNames(section));
         }
 
+        [Fact]
+        public void SectionQuotedFromMonitorPolski_IsAddressedInThatJournal()
+        {
+            var lines = ConsolidatedRegulation.ToList();
+            var signature = lines.IndexOf("Prezes Rady Ministrów: D. Tusk");
+            lines.InsertRange(signature,
+            [
+                "2. Podany w załączniku do niniejszego obwieszczenia tekst jednolity nie obejmuje § 2 zarządzenia nr 81 " +
+                    "Prezesa Rady Ministrów z dnia 24 lipca 2017 r. zmieniającego zarządzenie w sprawie Komitetu (M.P. poz. 756), który stanowi:",
+                "„§ 2. Zarządzenie wchodzi w życie z dniem ogłoszenia.”",
+            ]);
+
+            var quoted = Export(lines).Descendants().Single(e => e.Name.LocalName == "tresc-strukt");
+
+            Assert.Equal("MP/2017/756__art_2", Assert.Single(quoted.Elements()).Attribute("eId")!.Value);
+        }
+
         [SchemaPlFact]
         public void ConsolidatedRegulation_IsSchemaValid_InItsBody()
         {
