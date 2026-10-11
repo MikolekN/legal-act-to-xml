@@ -1212,6 +1212,49 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0041: organ, który sam podpisuje akt, jest jednym organem wydającym
+        // ============================================================
+
+        [Fact]
+        public void Adr0041_AuthorityThatIssuesAndSigns_IsOneIssuingAuthority()
+        {
+            static List<(string? Role, string Name, bool Signs)> Authorities(string issuer, string signature)
+            {
+                string[] lines =
+                [
+                    "ROZPORZĄDZENIE",
+                    issuer,
+                    "z dnia 14 czerwca 2024 r.",
+                    "w sprawie wzoru zgłoszenia",
+                    "Na podstawie art. 5 ustawy z dnia 1 lutego 2021 r. o zgłoszeniach (Dz. U. poz. 200) zarządza się, co następuje:",
+                    "§ 1. Rozporządzenie określa wzór zgłoszenia.",
+                    "§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+                    signature,
+                ];
+                var document = LegalDocumentParser.Parse(
+                    lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                    new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+                return LegalDocumentConverter.Convert(document).Descendants()
+                    .Where(e => e.Name.LocalName == "Organ")
+                    .Select(e => (
+                        e.Attribute("rola")?.Value,
+                        e.Elements().Single(child => child.Name.LocalName == "Nazwa").Value,
+                        e.Elements().Any(child => child.Name.LocalName == "OsobaPodpisujaca")))
+                    .ToList();
+            }
+
+            // Organ ze strefy tytułowej podpisuje sam: jeden organ wydający z osobą, nie para wydający–podpisujący.
+            Assert.Equal(
+                new (string?, string, bool)[] { ("wydajacy", "Minister Finansów", true) },
+                Authorities("MINISTRA FINANSÓW", "Minister Finansów: A. Domański"));
+
+            // Organ kolegialny podpisuje jego przewodniczący: dwa organy, a wydającym nie zostaje podpisujący.
+            Assert.Equal(
+                new (string?, string, bool)[] { ("wydajacy", "Rada Ministrów", false), ("podpisujacy", "Prezes Rady Ministrów", true) },
+                Authorities("RADY MINISTRÓW", "Prezes Rady Ministrów: D. Tusk"));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

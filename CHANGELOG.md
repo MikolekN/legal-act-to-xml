@@ -452,6 +452,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   (`Services/Dashes.cs`). Tekst nie jest normalizowany.
   - W korpusie: 84 części wspólne i 17 tiretów więcej (65 części wspólnych ginęło z eksportu), znak znika z treści
     67 tiretów; zgubionych akapitów w tekstach jednolitych 1136 → 1072. Zgodność ze schematem bez zmian.
+- **Organ wydający w metadanych** ([ADR-0041](docs/adr/0041-organ-ktory-sam-podpisuje-jest-jednym-organem-wydajacym.md)):
+  rozporządzenie, uchwała, zarządzenie i obwieszczenie mają w `Organy` organ ze strefy tytułowej zamiast `UNKNOWN`.
+  Organ, który sam podpisuje akt, jest jednym organem wydającym z osobą podpisującą — nazwa w mianowniku pochodzi
+  z formuły podpisu („Minister Finansów"), jak w przykładzie autorów schematu. Organ kolegialny i podpisujący go
+  przewodniczący („Rada Ministrów" — „Prezes Rady Ministrów") oraz kontrasygnata to osobne organy; akt wydany
+  wspólnie ma organ wydający dla każdego podpisującego. Bez odczytanego podpisu nazwę daje strefa tytułowa,
+  sprowadzona do mianownika i pisowni nazwy (`AuthoritiesXmlConverter`). Marszałek Sejmu dostaje zasób ELI
+  z przykładu autorów schematu.
+  - W korpusie: organ wydający `UNKNOWN` w 2079 → 0 dokumentów; zmiany wyłącznie w `Organy`, zgodność ze
+    schematem bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

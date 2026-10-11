@@ -340,13 +340,15 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void UnreadIssuingAuthority_HasNoInventedResource()
+        public void IssuingAuthorityOutsideTheDictionary_HasNoInventedResource()
         {
             var metadata = Metadata(
                 "ROZPORZĄDZENIE MINISTRA FINANSÓW", "z dnia 14 czerwca 2024 r.", "w sprawie wzoru deklaracji",
                 "Art. 1. Przepis pierwszy.");
 
+            // Organ jest odczytany ze strefy tytułowej, ale jego zasobu ELI nie ma w przykładach autorów schematu.
             var issuing = metadata.Descendants().Single(e => e.Name.LocalName == "Organ");
+            Assert.Equal("Minister Finansów", issuing.Elements().Single(e => e.Name.LocalName == "Nazwa").Value);
             Assert.Null(Attr(issuing, "eliURI"));
         }
     }

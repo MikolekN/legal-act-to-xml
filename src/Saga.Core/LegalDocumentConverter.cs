@@ -188,25 +188,8 @@ namespace Saga.Core.Services
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.InForceElement, "xs:string"));
 
-            var organy = Element(XmlConverterConstants.Metadata.Authorities.Element);
-            var organ = Element(XmlConverterConstants.Metadata.Authorities.Authority.Element);
-            organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.GUID, Guid.NewGuid().ToString()));
-            organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.Role, XmlConverterConstants.Metadata.Authorities.Authority.RoleIssuing));
-            // Organ wydający wynika z rodzaju aktu (ustawa — Sejm); nieodczytany zostaje nazwany wprost,
-            // bez zmyślonego zasobu ELI.
-            var issuing = ActKindXml.IssuingAuthority(document);
-            if (issuing?.EliUri is { } issuingUri)
-                organ.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.URI, issuingUri));
-            organ.Add(Element(XmlConverterConstants.Metadata.Authorities.Authority.Name, issuing?.Name ?? "UNKNOWN"));
-            organy.Add(organ);
-
-            if (document.Signature is { } signature)
-            {
-                organy.Add(SignatureXmlConverter.ToAuthority(signature));
-                organy.Add(document.CoSignatures.Select(SignatureXmlConverter.ToAuthority));
-            }
-
-            metaElement.Add(organy);
+            // Kto akt wydał i kto go podpisał — z rodzaju aktu, strefy tytułowej i formuł podpisu.
+            metaElement.Add(AuthoritiesXmlConverter.ToXml(document));
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.KeywordsElement, "COMPLEX"));
 

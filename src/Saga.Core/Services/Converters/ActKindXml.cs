@@ -95,14 +95,22 @@ namespace Saga.Core.Services.Converters
 
         /// <summary>
         /// Organ wydający wynikający z rodzaju aktu: ustawę uchwala Sejm. Dla pozostałych rodzajów organ
-        /// stoi w tytule w dopełniaczu („Ministra Finansów") i nie jest jeszcze odczytywany.
+        /// stoi w strefie tytułowej w dopełniaczu („Ministra Finansów") — odczytuje go
+        /// <see cref="AuthoritiesXmlConverter"/>.
         /// </summary>
         internal static Authority? IssuingAuthority(LegalDocument document) =>
             Code(document) == "USTAWA" ? new Authority("SEJM", AuthorityResource + "Sejm") : null;
 
+        // Zasoby ELI organów — wyłącznie te, które stoją w przykładach autorów schematu; innych się nie zgaduje.
+        private static readonly Dictionary<string, string> AuthorityResources = new(StringComparer.Ordinal)
+        {
+            ["Prezydent Rzeczypospolitej Polskiej"] = "Prezydent",
+            ["Marszałek Sejmu"] = "MSEJMU",
+        };
+
         /// <summary>Zasób ELI organu o podanej nazwie; null, gdy nie ma go w słowniku.</summary>
         internal static string? EliUriOf(string authorityName) =>
-            authorityName == "Prezydent Rzeczypospolitej Polskiej" ? AuthorityResource + "Prezydent" : null;
+            AuthorityResources.TryGetValue(authorityName, out var resource) ? AuthorityResource + resource : null;
 
         private static string? FromHeading(LegalDocument document)
         {

@@ -19,12 +19,19 @@ namespace Saga.Core.Services.Converters
                     new XAttribute(XmlConverterConstants.Signatures.PersonGUID, signature.PersonGuid.ToString())));
 
         /// <summary>Organ podpisujący w <c>Organy</c>.</summary>
-        internal static XElement ToAuthority(ActSignature signature)
+        internal static XElement ToAuthority(ActSignature signature) => ToAuthority(signature, issuing: false);
+
+        /// <summary>
+        /// Organ z formuły podpisu w <c>Organy</c>: podpisujący albo — gdy sam akt wydał — wydający z osobą
+        /// podpisującą, jak w przykładzie autorów schematu dla obwieszczenia Marszałka Sejmu.
+        /// </summary>
+        internal static XElement ToAuthority(ActSignature signature, bool issuing)
         {
             var authority = Element(XmlConverterConstants.Metadata.Authorities.Authority.Element,
                 new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.GUID, Guid.NewGuid().ToString()),
-                new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.Role,
-                    XmlConverterConstants.Metadata.Authorities.Authority.RoleSigning));
+                new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.Role, issuing
+                    ? XmlConverterConstants.Metadata.Authorities.Authority.RoleIssuing
+                    : XmlConverterConstants.Metadata.Authorities.Authority.RoleSigning));
 
             if (ActKindXml.EliUriOf(signature.Authority) is { } uri)
                 authority.Add(new XAttribute(XmlConverterConstants.Metadata.Authorities.Authority.URI, uri));
