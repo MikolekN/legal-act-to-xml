@@ -130,6 +130,7 @@ namespace Saga.Core.Services.Parsing.Builders
                 if (byStyle == AmendmentEntityKind.Article && byText == AmendmentEntityKind.Unknown)
                     return (AmendmentEntityKind.Unknown, null);
 
+
                 return (byStyle, null);
             }
 
@@ -238,6 +239,15 @@ namespace Saga.Core.Services.Parsing.Builders
 
             var (entityKind, overriddenStyleKind) = ClassifyWithStyleOverride(para, _sectionIsBasicUnit);
 
+            // Akapit w stylu jednostki bez żadnego oznaczenia w treści jest dalszą treścią jednostki, za którą
+            // stoi (ADR-0039). Bez jednostki przed sobą otwiera cytat i zostaje jednostką bez odczytanego
+            // oznaczenia (ADR-0024) — cytat strukturalny nie staje się przez to cytatem tekstu.
+            if (IsStyleOnlyUnit(entityKind, para) && HasOpenUnit)
+            {
+                AttachText(para.Text, content, symbol: para.LeadingSymbol);
+                return;
+            }
+
             // Tytuł jednostki (§ 62 ust. 2 ZTP): pierwszy akapit po oznaczeniu, jeśli nie jest jednostką redakcyjną.
             if (_pendingHeading is { } titled)
             {
@@ -267,6 +277,15 @@ namespace Saga.Core.Services.Parsing.Builders
             else
                 unit.Continuation.Add(new ContentBlock { Table = table });
         }
+
+        private bool HasOpenUnit => _currentLetter is not null || _currentPoint is not null || _currentParagraph is not null;
+
+        /// <summary>Jednostka (poza artykułem) rozpoznana z samego stylu: treść nie niesie niczego, co wygląda na oznaczenie.</summary>
+        private bool IsStyleOnlyUnit(AmendmentEntityKind kind, CollectedAmendmentParagraph para) =>
+            kind is AmendmentEntityKind.Paragraph or AmendmentEntityKind.Point or AmendmentEntityKind.Letter or AmendmentEntityKind.Tiret
+            && para.StyleInfo is not null
+            && ClassifyByText(para.Text, _sectionIsBasicUnit) == AmendmentEntityKind.Unknown
+            && !UnitDesignation.LooksDesignated(para.Text);
 
         /// <summary>
         /// Akapit bez oznaczenia w treści cytowanej: dalsza treść jednostki, za którą stoi (ADR-0029) — wzór,

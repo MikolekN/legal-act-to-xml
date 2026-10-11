@@ -39,7 +39,10 @@ namespace Saga.Core.Services.Parsing
 
             // Artykuł zastępczy: niejawny, więc bez segmentu w eId, a adres jednostek zaczyna od załącznika.
             var document = new LegalDocument();
-            var context = new ParsingContext(document, document.RootPart.Books[0].Titles[0].Divisions[0].Chapters[0].Subchapters[0]);
+            var context = new ParsingContext(document, document.RootPart.Books[0].Titles[0].Divisions[0].Chapters[0].Subchapters[0])
+            {
+                StyleOnlyUnitsStayUnits = true,
+            };
             var container = new Article { IsImplicit = true, AddressAnchor = annexId };
             context.CurrentArticle = container;
 

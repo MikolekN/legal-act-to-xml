@@ -436,6 +436,16 @@ a wersjonowanie zgodne z Semantic Versioning.
     jednostek `nie-ztp-*` 1787 → 1362. Pokrycie tekstu: rozporządzenia 127 → 15 zgubionych akapitów (99,97 %),
     teksty jednolite 1215 → 1136. Zgodność ze schematem bez zmian (1685 z 2321, tak samo wg libxml2).
 
+- **Akapit w stylu jednostki bez oznaczenia** ([ADR-0039](docs/adr/0039-akapit-w-stylu-jednostki-bez-oznaczenia-jest-dalsza-trescia.md)):
+  akapit złożony stylem ustępu, punktu, litery albo tiretu, którego treść nie zaczyna się niczym, co wygląda na
+  oznaczenie, jest dalszą treścią jednostki, za którą stoi — w treści aktu i w treści cytowanej. Wcześniej stawał
+  się jednostką bez numeru (`nie-ztp-*` z `brak-eid`), a jednostki pod nim też wychodziły jako `nie-ztp-*`.
+  Akapit z oznaczeniem spoza wzorca („l)", „A)", „3.8.", „2.1 …", tiret pisany „‒") zostaje jednostką.
+  - Druga treść cytowana pod tą samą jednostką dołącza do pierwszej nowelizacji — wcześniej ją zastępowała.
+  - W korpusie: 50 dokumentów; 744 jednostki bez oznaczenia mniej (603 `nie-ztp-punkt`), 614 akapitów jako
+    `fragment`, 147 jednostek wraca do zwykłych elementów. Zgodność ze schematem (1685 z 2321, tak samo wg
+    libxml2) i pokrycie tekstu bez zmian.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

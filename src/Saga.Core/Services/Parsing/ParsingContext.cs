@@ -67,6 +67,13 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public string? CurrentFormula { get; set; }
 
+        /// <summary>
+        /// Akapit w stylu jednostki bez oznaczenia zostaje jednostką (ADR-0024), zamiast dalszą treścią poprzedniej
+        /// (ADR-0039). Ustawia to budowa jednostek załącznika: tam jednostka bez oznaczenia powtarza adres i tym
+        /// samym mówi, że treść załącznika nie jest w całości wyliczeniem — zostaje wtedy akapitami.
+        /// </summary>
+        public bool StyleOnlyUnitsStayUnits { get; init; }
+
         /// <summary>Równanie otwierające przetwarzany blok (symbol wiersza legendy wzoru); null, gdy go nie ma.</summary>
         public Ingest.BlockSymbol? CurrentSymbol { get; set; }
 

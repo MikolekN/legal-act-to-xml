@@ -106,10 +106,17 @@ namespace Saga.Core.Services.Parsing
             if (block.FormulaMathMl is not null && classification.Kind != ParagraphKind.Unknown)
                 classification = WithoutUnitKind(classification);
 
+
             if (IsMisstyledActUnit(context, classification, text))
                 classification = AsActContent(classification);
 
             if (HandleAmendmentFlow(context, classification, text, styleId)) return;
+
+            // Akapit w stylu jednostki bez żadnego oznaczenia w treści jest dalszą treścią jednostki, za którą
+            // stoi (ADR-0039). Granice nowelizacji rozstrzygnęła już klasyfikacja ze stylu — zmienia się tylko to,
+            // co z akapitu powstaje w strukturze aktu.
+            if (!context.StyleOnlyUnitsStayUnits && IsUndesignatedUnit(classification.Kind, text) && HasUnitToContinue(context))
+                classification = WithoutUnitKind(classification);
 
             if (_structureProcessor.Process(context, classification, text, styleId, block.Layout))
                 _amendmentManager.DetectTrigger(context, text);
@@ -125,6 +132,34 @@ namespace Saga.Core.Services.Parsing
             && text is not [QuotationMarks.Opening or QuotationMarks.Straight, ..]
             && (StructureProcessor.IsSystematizing(classification.Kind)
                 || (context.PendingHeadingUnit != null && classification.Kind is ParagraphKind.Unknown or ParagraphKind.UnitHeading));
+
+        /// <summary>
+        /// Jednostka rozpoznana z samego stylu: treść nie niesie jej oznaczenia ani niczego, co na oznaczenie
+        /// wygląda. Artykuł ma własną regułę w klasyfikatorze (bez oznaczenia nie jest rozpoznawany).
+        /// </summary>
+        private static bool IsUndesignatedUnit(ParagraphKind kind, string text)
+        {
+            var designated = kind switch
+            {
+                ParagraphKind.Paragraph => ParagraphClassifier.IsParagraphByText(text),
+                ParagraphKind.Point => ParagraphClassifier.IsPointByText(text),
+                ParagraphKind.Letter => ParagraphClassifier.IsLetterByText(text),
+                ParagraphKind.Tiret => ParagraphClassifier.IsTiretByText(text),
+                _ => true,
+            };
+
+            return !designated && !UnitDesignation.LooksDesignated(text);
+        }
+
+        /// <summary>
+        /// Jest jednostka, której dalszą treścią akapit może zostać. Pusty ustęp niejawny („Art. 5." w osobnym
+        /// wierszu) czeka na swoją treść — akapit w stylu ustępu staje się nim, nie jego dalszą treścią.
+        /// </summary>
+        private static bool HasUnitToContinue(ParsingContext context) =>
+            StructureProcessor.DeepestUnit(context) is { } unit
+            && unit is not Saga.Model.EditorialUnits.Article
+            && !(unit is Saga.Model.EditorialUnits.Paragraph { IsImplicit: true } paragraph
+                 && string.IsNullOrWhiteSpace(paragraph.ContentText));
 
         private static ClassificationResult WithoutUnitKind(ClassificationResult classification) => new()
         {

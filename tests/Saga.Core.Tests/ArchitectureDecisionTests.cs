@@ -870,17 +870,18 @@ namespace Saga.Core.Tests
         [Fact]
         public void Adr0024_UnitWithoutADesignation_HasNoEId_OnlyAReason()
         {
+            // Pierwszy akapit artykułu, po którym stoi od razu „2." — oznaczenia nie ma, a jednostką jest.
+            // (Akapit w stylu ustępu bez oznaczenia za inną jednostką jest od ADR-0039 jej dalszą treścią.)
             var document = LegalDocumentParser.ParseBlocks(
             [
-                new() { Text = "Art. 1. 1. Opłatę oblicza się według wzoru." },
-                new() { Text = "w którym poszczególne symbole oznaczają:", StyleId = "UST" },
-                new() { Text = "1) K - kwotę pożyczki;" },
-                new() { Text = "2) R - liczbę dni w roku." },
+                new() { Text = "Art. 1. Opłatę oblicza się od:" },
+                new() { Text = "1) kwoty pożyczki;" },
+                new() { Text = "2) liczby dni w roku." },
                 new() { Text = "2. Opłaty nie pobiera się od osób fizycznych." },
             ]);
 
             // Model: ustęp bez numeru jest w adresie przezroczysty — jego punkty adresują się od artykułu.
-            var unnumbered = document.Articles.Single().Paragraphs[1];
+            var unnumbered = document.Articles.Single().Paragraphs[0];
             Assert.Null(unnumbered.Number);
             Assert.Equal("art_1", unnumbered.Id);
             Assert.Equal(new[] { "art_1__pkt_1", "art_1__pkt_2" }, unnumbered.Points.Select(p => p.Id));
@@ -891,6 +892,42 @@ namespace Saga.Core.Tests
             Assert.Null(exported.Attribute("eId"));
             Assert.Equal("jednostka-nieoznaczona", exported.Attribute("brak-eid")?.Value);
             Assert.Equal(string.Empty, exported.Elements().First(e => e.Name.LocalName == "nr").Value);
+        }
+
+        // ============================================================
+        // ADR-0039: akapit w stylu jednostki bez oznaczenia jest dalszą treścią jednostki, za którą stoi
+        // ============================================================
+
+        [Fact]
+        public void Adr0039_UnitStyleWithoutADesignation_ContinuesTheUnitItFollows()
+        {
+            // Styl mówi „ustęp", treść nie ma oznaczenia: to dalszy akapit ustępu 1, nie ustęp bez numeru.
+            // Wyliczenie za nim należy do ustępu 1 i tak jest adresowane.
+            var document = LegalDocumentParser.ParseBlocks(
+            [
+                new() { Text = "Art. 1. 1. Opłatę oblicza się według wzoru." },
+                new() { Text = "w którym poszczególne symbole oznaczają:", StyleId = "UST" },
+                new() { Text = "1) K - kwotę pożyczki;" },
+                new() { Text = "2) R - liczbę dni w roku." },
+                new() { Text = "2. Opłaty nie pobiera się od osób fizycznych." },
+            ]);
+
+            var paragraphs = document.Articles.Single().Paragraphs;
+            Assert.Equal(new[] { "1", "2" }, paragraphs.Select(paragraph => paragraph.Number?.Value));
+            Assert.Equal("w którym poszczególne symbole oznaczają:", Assert.Single(paragraphs[0].Continuation).Text);
+            Assert.Equal(new[] { "art_1__ust_1__pkt_1", "art_1__ust_1__pkt_2" }, paragraphs[0].Points.Select(point => point.Id));
+
+            var exported = LegalDocumentConverter.Convert(document);
+            Assert.DoesNotContain(exported.Descendants(), e => e.Name.LocalName.StartsWith("nie-ztp-", StringComparison.Ordinal));
+
+            // Oznaczenie spoza wzorca to nadal jednostka — bez odczytanego oznaczenia (ADR-0024).
+            var irregular = LegalDocumentParser.ParseBlocks(
+            [
+                new() { Text = "Art. 1. 1. Opłatę wnosi:" },
+                new() { Text = "1) osoba fizyczna;" },
+                new() { Text = "A) osoba prawna.", StyleId = "PKT" },
+            ]);
+            Assert.Equal(2, irregular.Articles.Single().Paragraphs[0].Points.Count);
         }
 
         // ============================================================

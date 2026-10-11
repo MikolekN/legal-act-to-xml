@@ -40,14 +40,14 @@ namespace Saga.Core.Tests
             });
         }
 
-        // Akapit w stylu ustępu, ale bez numeru — legenda wzoru, sankcja w osobnym wierszu.
+        // Pierwszy akapit artykułu bez numeru, po którym stoi „2." — jednostka bez odczytanego oznaczenia.
+        // (Akapit w stylu ustępu bez oznaczenia za inną jednostką jest jej dalszą treścią — ADR-0039.)
         private static XElement ExportWithUnnumberedParagraph() => LegalDocumentConverter.Convert(
             LegalDocumentParser.ParseBlocks(
             [
-                new() { Text = "Art. 1. 1. Opłatę oblicza się według wzoru." },
-                new() { Text = "w którym poszczególne symbole oznaczają:", StyleId = "UST" },
-                new() { Text = "1) K - kwotę pożyczki;" },
-                new() { Text = "2) R - liczbę dni w roku." },
+                new() { Text = "Art. 1. Opłatę oblicza się od:" },
+                new() { Text = "1) kwoty pożyczki;" },
+                new() { Text = "2) liczby dni w roku." },
                 new() { Text = "2. Opłaty nie pobiera się od osób fizycznych." },
             ]));
 
@@ -57,13 +57,13 @@ namespace Saga.Core.Tests
             var xml = ExportWithUnnumberedParagraph();
             var paragraphs = Named(xml, "artykul").Single().Elements().Where(e => e.Name.LocalName != "nr").ToList();
 
-            Assert.Equal(new[] { "ustep", "nie-ztp-ustep", "ustep" }, paragraphs.Select(e => e.Name.LocalName));
+            Assert.Equal(new[] { "nie-ztp-ustep", "ustep" }, paragraphs.Select(e => e.Name.LocalName));
 
-            var unnumbered = paragraphs[1];
+            var unnumbered = paragraphs[0];
             Assert.Null(Attr(unnumbered, "eId"));
             Assert.Equal("jednostka-nieoznaczona", Attr(unnumbered, "brak-eid"));
             Assert.Equal(string.Empty, unnumbered.Elements().First(e => e.Name.LocalName == "nr").Value);
-            Assert.StartsWith("w którym poszczególne symbole", unnumbered.Elements().First(e => e.Name.LocalName == "p").Value);
+            Assert.StartsWith("Opłatę oblicza się od:", unnumbered.Elements().First(e => e.Name.LocalName == "p").Value);
 
             Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "nr" && e.Value == "UNKNOWN");
         }

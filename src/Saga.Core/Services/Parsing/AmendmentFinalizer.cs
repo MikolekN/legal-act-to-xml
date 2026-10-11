@@ -350,12 +350,40 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         private static bool AssignToOwner(Amendment amendment, BaseEntity owner)
         {
-            if (owner is IHasAmendments hasAmendments)
+            if (owner is not IHasAmendments hasAmendments)
+                return false;
+
+            // Jednostka niesie jedną nowelizację. Druga treść cytowana pod tą samą jednostką (akapity w stylu
+            // zmiany rozdzielone dalszą treścią jednostki) dołącza do pierwszej — nie może jej zastąpić.
+            if (hasAmendments.Amendment is { Content: { } existing } && amendment.Content is { } added)
             {
-                hasAmendments.Amendment = amendment;
+                Append(existing, added);
+                ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
+                    "Druga treść cytowana pod tą samą jednostką — dołączona do pierwszej nowelizacji.");
                 return true;
             }
-            return false;
+
+            hasAmendments.Amendment = amendment;
+            return true;
+        }
+
+        private static void Append(AmendmentContent existing, AmendmentContent added)
+        {
+            if (!string.IsNullOrEmpty(added.PlainText))
+            {
+                existing.PlainText = string.IsNullOrEmpty(existing.PlainText)
+                    ? added.PlainText
+                    : existing.PlainText + Environment.NewLine + added.PlainText;
+            }
+
+            existing.SystematizingUnits.AddRange(added.SystematizingUnits);
+            existing.Articles.AddRange(added.Articles);
+            existing.Paragraphs.AddRange(added.Paragraphs);
+            existing.Points.AddRange(added.Points);
+            existing.Letters.AddRange(added.Letters);
+            existing.Tirets.AddRange(added.Tirets);
+            existing.CommonParts.AddRange(added.CommonParts);
+            existing.Tables.AddRange(added.Tables);
         }
 
         // ============================================================
