@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Saga.Core.Helpers;
 using Saga.Core.Services.Classify.Document;
 using Saga.Model;
@@ -53,8 +54,14 @@ namespace Saga.Core.Services.Parsing
                 if (IsKindHeader(t))
                 {
                     _kindSeen = true;
-                    _kindLine = t;
                     _titleParts.Add(t);
+
+                    // Organ w wierszu nagłówka („ROZPORZĄDZENIE MINISTRA FINANSÓW"): wiersz zostaje w całości
+                    // nagłówkiem rodzaju, a organ jest dodatkowo znany osobno — eksport rozdziela je tam,
+                    // gdzie korzeń ma miejsce na organ.
+                    _kindLine = t;
+                    if (KindWithIssuer.Match(t) is { Success: true } sameLine)
+                        _issuerLine = sameLine.Groups["issuer"].Value;
                     return true;
                 }
                 return false;
@@ -68,7 +75,7 @@ namespace Saga.Core.Services.Parsing
             }
 
             // Organ wydający w osobnym wierszu (§ 120 ust. 4 — rozporządzenie; § 102 — „Marszałka Sejmu…").
-            if (IsIssuingOrgan(t))
+            if (IsIssuingOrgan(t) || IsIssuerByPosition(t))
             {
                 _titleParts.Add(t);
                 if (_issuerLine.Length == 0)
@@ -129,6 +136,7 @@ namespace Saga.Core.Services.Parsing
         public void ApplyTo(Announcement announcement)
         {
             announcement.ActKindLine = _kindLine;
+            announcement.ActIssuerLine = _issuerLine;
             announcement.ActDateLine = _dateLine;
             announcement.ActSubject = _subject;
         }
@@ -161,5 +169,30 @@ namespace Saga.Core.Services.Parsing
         private static bool IsIssuingOrgan(string t) =>
             ZtpPatterns.IssuingOrganLinePattern.IsMatch(t) ||
             ZtpPatterns.MarshalOfSejmIssuerPattern.IsMatch(t);
+
+        /// <summary>Nagłówek rodzaju z organem w tym samym wierszu; numer uchwały i zarządzenia należy do rodzaju.</summary>
+        private static readonly Regex KindWithIssuer = new(
+            @"^(?<kind>(?:uchwała|zarządzenie)(?:\s+nr\s*[\w/\-\.]+)?|rozporządzenie|obwieszczenie)\s+(?!nr\b)(?<issuer>\p{L}.+)$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>Początek wiersza, który organem na pewno nie jest: podstawa prawna albo jednostka.</summary>
+        private static readonly Regex NotAnIssuer = new(@"^(?:Na\s+podstawie\b|Art\.|§|\d)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Między nagłówkiem rodzaju a datą stoi w strefie tytułowej tylko organ wydający — w dowolnej pisowni
+        /// („Ministra Finansów", „MINISTRa transportu…") i z odnośnikiem („Ministra Zdrowia[1)]"). Ustawa nie ma
+        /// tu nic: po „USTAWA" stoi od razu data.
+        /// </summary>
+        private bool IsIssuerByPosition(string t)
+        {
+            if (_dateLine.Length > 0 || _issuerLine.Length > 0 || t.Length > 200)
+                return false;
+
+            if (ZtpPatterns.ActDateLinePattern.IsMatch(t) || ZtpPatterns.ActSubjectPattern.IsMatch(t) || NotAnIssuer.IsMatch(t))
+                return false;
+
+            var name = FootnoteMarkers.Remove(t).TrimEnd();
+            return name.Length > 0 && char.IsLetter(name[0]) && name[^1] is not ('.' or ':' or ';');
+        }
     }
 }

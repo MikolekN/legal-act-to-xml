@@ -31,6 +31,9 @@ namespace Saga.Model
         /// <summary>Wiersz rodzaju ogłaszanego aktu („USTAWA"); pusty, gdy nierozpoznany.</summary>
         public string ActKindLine { get; set; } = string.Empty;
 
+        /// <summary>Wiersz organu wydającego ogłaszany akt („MINISTRA FINANSÓW"); pusty dla ustawy.</summary>
+        public string ActIssuerLine { get; set; } = string.Empty;
+
         /// <summary>Wiersz daty ogłaszanego aktu („z dnia 11 sierpnia 2001 r."); pusty, gdy nierozpoznany.</summary>
         public string ActDateLine { get; set; } = string.Empty;
 

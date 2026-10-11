@@ -18,17 +18,26 @@ namespace Saga.Core.Services
 
             // Tekst jednolity ustawy: korzeniem jest obwieszczenie, a ogłaszany akt stoi w nim jako osobny
             // element z własną strefą tytułową (ADR-0031).
-            var announced = AnnouncedStatute(document);
-            var actElement = Element(announced is null ? XmlConverterConstants.Act : XmlConverterConstants.Announcements.Element);
+            var announcedName = ActKindXml.AnnouncedActElement(document);
+            var announced = announcedName is null ? null : document.Announcement;
+            var actName = ActKindXml.RootElement(document);
+            var sectionBased = announced is null && document.Announcement is null && actName != XmlConverterConstants.Act;
+            var actElement = Element(announced is not null
+                ? XmlConverterConstants.Announcements.Element
+                : sectionBased ? actName : XmlConverterConstants.Act);
             rootElement.Add(actElement);
 
             PrepareMetadata(document, actElement);
-            PrepareHeading(document, actElement, withIssuer: announced is not null);
+            PrepareHeading(document, actElement, withIssuer: announced is not null || sectionBased);
+
+            // Podstawa prawna aktu wykonawczego stoi między tytułem a pierwszym paragrafem (§ 121 ZTP).
+            if (sectionBased && document.LegalBasis.Length > 0)
+                actElement.Add(Element(XmlConverterConstants.SectionBasedActs.LegalBasis, document.LegalBasis));
 
             if (announced is not null)
                 actElement.Add(AnnouncementXmlConverter.Points(announced));
 
-            var body = announced is null ? actElement : AnnouncedActElement(announced);
+            var body = announced is null ? actElement : AnnouncedActElement(announced, announcedName!, document);
 
             foreach (var part in document.Parts)
                 body.Add(SystematizingUnitXmlConverter.ActLevel(part));
@@ -63,7 +72,8 @@ namespace Saga.Core.Services
         private static void PrepareHeading(LegalDocument document, XElement actElement, bool withIssuer)
         {
             if (document.KindLine.Length > 0)
-                actElement.Add(Element(XmlConverterConstants.ActHeading.Kind, document.KindLine));
+                actElement.Add(Element(XmlConverterConstants.ActHeading.Kind,
+                    withIssuer ? KindWithoutIssuer(document.KindLine, document.IssuerLine) : document.KindLine));
             if (withIssuer && document.IssuerLine.Length > 0)
                 actElement.Add(Element(XmlConverterConstants.Announcements.Author, document.IssuerLine));
             if (document.DateLine.Length > 0)
@@ -74,28 +84,37 @@ namespace Saga.Core.Services
 
 
         /// <summary>
-        /// Obwieszczenie, które ogłasza w załączniku ustawę; null dla aktu ogłoszonego wprost i dla obwieszczeń
-        /// ogłaszających inne akty (rozporządzenia nie są jeszcze budowane).
+        /// Akt ogłaszany w załączniku do obwieszczenia: element według jego rodzaju z własną strefą tytułową.
+        /// Akt oparty na paragrafach niesie też organ wydający i podstawę prawną.
         /// </summary>
-        private static Announcement? AnnouncedStatute(LegalDocument document) =>
-            document.Announcement is { } announcement
-            && Classify.Document.ZtpPatterns.StatuteHeaderPattern.IsMatch(FootnoteMarkers.Remove(announcement.ActKindLine))
-                ? announcement
-                : null;
-
-        private static XElement AnnouncedActElement(Announcement announcement)
+        private static XElement AnnouncedActElement(Announcement announcement, string name, LegalDocument document)
         {
-            var act = Element(XmlConverterConstants.Act);
+            var act = Element(name);
             if (announcement.AttachedTo.Length > 0)
                 act.Add(Element(XmlConverterConstants.Attachments.AttachedTo, announcement.AttachedTo));
             if (announcement.ActKindLine.Length > 0)
-                act.Add(Element(XmlConverterConstants.ActHeading.Kind, announcement.ActKindLine));
+                act.Add(Element(XmlConverterConstants.ActHeading.Kind, name != XmlConverterConstants.Act
+                    ? KindWithoutIssuer(announcement.ActKindLine, announcement.ActIssuerLine)
+                    : announcement.ActKindLine));
+            if (name != XmlConverterConstants.Act && announcement.ActIssuerLine.Length > 0)
+                act.Add(Element(XmlConverterConstants.Announcements.Author, announcement.ActIssuerLine));
             if (announcement.ActDateLine.Length > 0)
                 act.Add(Element(XmlConverterConstants.ActHeading.Date, announcement.ActDateLine));
             if (announcement.ActSubject.Length > 0)
                 act.Add(Element(XmlConverterConstants.ActHeading.Subject, announcement.ActSubject));
+            if (name != XmlConverterConstants.Act && document.LegalBasis.Length > 0)
+                act.Add(Element(XmlConverterConstants.SectionBasedActs.LegalBasis, document.LegalBasis));
             return act;
         }
+
+        /// <summary>
+        /// Rodzaj aktu bez organu stojącego w tym samym wierszu („ROZPORZĄDZENIE MINISTRA FINANSÓW" →
+        /// „ROZPORZĄDZENIE") — organ wychodzi wtedy osobno, w <c>autor-aktu</c>.
+        /// </summary>
+        private static string KindWithoutIssuer(string kindLine, string issuerLine) =>
+            issuerLine.Length > 0 && kindLine.Length > issuerLine.Length && kindLine.EndsWith(issuerLine, StringComparison.Ordinal)
+                ? kindLine[..^issuerLine.Length].TrimEnd()
+                : kindLine;
 
         private static void PrepareMetadata(LegalDocument document, XElement rootElement)
         {

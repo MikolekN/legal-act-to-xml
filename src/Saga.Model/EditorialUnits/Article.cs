@@ -14,6 +14,12 @@ namespace Saga.Model.EditorialUnits
 
         public bool IsAmending => Journals.Count > 0;
 
+        /// <summary>
+        /// Czy jednostka podstawowa jest oznaczona znakiem „§" — paragraf rozporządzenia, uchwały albo
+        /// zarządzenia (§ 124 ZTP), nie artykuł ustawy. Miejsce w hierarchii i adres ma to samo (ADR-0034).
+        /// </summary>
+        public bool IsSection { get; set; }
+
         public Article()
         {
             UnitType = UnitType.Article;

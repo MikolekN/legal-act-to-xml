@@ -475,6 +475,13 @@ namespace Saga.Core.Services.Parsing
                 if (context.Metadata.Observe(text))
                     return;
 
+                // Podstawa prawna aktu wykonawczego (§ 121) stoi między tytułem a pierwszym paragrafem.
+                if (context.Document.LegalBasis.Length == 0 && ZtpPatterns.LegalBasisPattern.IsMatch(text))
+                {
+                    context.Document.LegalBasis = text;
+                    return;
+                }
+
                 Log.Warning("Akapit Unknown przed pierwszym artykułem (metadane) — pominięty. " +
                     "Styl: {StyleId}, Tekst: {Text}",
                     sourceStyleId, text.Length > 80 ? text[..80] + "…" : text);

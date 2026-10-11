@@ -15,6 +15,16 @@ namespace Saga.Core.Services.Converters
         internal const string ELIUrl = "https://eli.gov.pl/";
         internal const string Act = "ustawa";
 
+        /// <summary>Akty oparte na paragrafach (§ 124 ZTP): korzeń według rodzaju, treść typu rozporządzenia.</summary>
+        internal static class SectionBasedActs
+        {
+            internal const string Regulation = "rozporzadzenie";
+            internal const string Resolution = "uchwala";
+            internal const string Order = "zarzadzenie";
+            internal const string LegalBasis = "podstawa-prawna";
+            internal const string Section = "paragraf";
+        }
+
         /// <summary>Obwieszczenie ogłaszające akt w załączniku (tekst jednolity) — korzeń zamiast aktu.</summary>
         internal static class Announcements
         {

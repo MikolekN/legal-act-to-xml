@@ -109,7 +109,10 @@ namespace Saga.Core
 
             var subchapter = GetDefaultSubchapter(document);
 
-            var context = new ParsingContext(document, subchapter);
+            var context = new ParsingContext(document, subchapter)
+            {
+                SectionIsBasicUnit = Services.UnitReferences.SectionSignRole.IsBasicUnit(classification),
+            };
             var orchestrator = new ParserOrchestrator();
 
             // Tekst jednolity: bloki sprzed wiersza „Załącznik do obwieszczenia …" są treścią obwieszczenia,

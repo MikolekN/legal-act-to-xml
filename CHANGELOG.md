@@ -306,6 +306,21 @@ a wersjonowanie zgodne z Semantic Versioning.
   jednostki nie niosą `wejscie-w-zycie` ani `okres` — jak w przykładzie autorów schematu. W korpusie: zdarzeń
   cyklu życia 1118 → 1114, w tym 727 ujednoliceń — po jednym na tekst jednolity (379 tekstów jednolitych miało wcześniej daty na jednostkach); raport `--xml-corpus` nie liczy tekstów jednolitych do „elementów bez daty".
 
+- **Rozporządzenia, uchwały i zarządzenia: „§" jako jednostka podstawowa** (ADR-0034): w akcie opartym na
+  paragrafach „§ 5. 1. …" jest tym, czym „Art. 5. 1. …" w ustawie — jednostką z ustępami, punktami i literami,
+  budowaną tym samym potokiem i z adresem `art_5__ust_1`. O znaczeniu znaku rozstrzyga rodzaj aktu z klasyfikatora
+  dokumentu; w ustawie „§" zostaje paragrafem kodeksu. Eksport ma korzeń według rodzaju aktu (`rozporzadzenie`,
+  `uchwala`, `zarzadzenie`), jednostkę `paragraf` i strefę tytułową z `autor-aktu` oraz `podstawa-prawna`;
+  tekst jednolity takiego aktu stoi pod `obwieszczenie`, jak tekst jednolity ustawy.
+  - Organ wydający jest rozpoznawany po miejscu w strefie tytułowej — między rodzajem aktu a datą — w dowolnej
+    pisowni i z odnośnikiem („Ministra Finansów[1)]"). Wcześniej taki wiersz zamykał strefę tytułową, więc
+    w większości rozporządzeń ginęły też data i tytuł aktu (a z nimi `DataAktu` w metadanych).
+  - W korpusie: 1067 rozporządzeń przestaje być pustych (8169 paragrafów, 20 tys. punktów), a 287 tekstów
+    jednolitych aktów wykonawczych zyskuje treść. Zgodnych ze schematem w całości: 651 → 1648 z 2321 dokumentów
+    (tak samo wg libxml2; żaden wcześniej zgodny nie przestał nim być) — rozporządzenia 823 z 1067, obwieszczenia
+    584 z 708, ustawy 240 z 241; treść aktu zgodna w 1984 z 2017. Pokrycie tekstu: rozporządzenia 4 % → 99,6 %
+    akapitów, teksty jednolite 99,7 %.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

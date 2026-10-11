@@ -1088,9 +1088,19 @@ w [docs/adr/](adr/README.md). Tutaj tylko skrót z odesłaniem; ta sekcja nie je
 
 ### Rozstrzygnięcia bez osobnego ADR
 
-**Korzeń eksportu.** `LegalDocumentConverter.Convert` pisze `ustawa`, a dla tekstu jednolitego ustawy —
+**Akt oparty na paragrafach.** W rozporządzeniu, uchwale i zarządzeniu „§ N." jest jednostką podstawową:
+klasyfikator dostaje `ClassificationInput.SectionIsBasicUnit` (z `SectionSignRole.IsBasicUnit`, czyli z rodzaju
+aktu), a `ArticleBuilder` buduje `Article` z `IsSection` — tym samym potokiem co artykuł, z adresem `art_5__ust_2`.
+W eksporcie to `paragraf` pod korzeniem `rozporzadzenie` / `uchwala` / `zarzadzenie` (`ActKindXml.RootElement`),
+ze strefą tytułową `rodzaj-aktu`, `autor-aktu` (`LegalDocument.IssuerLine`), `data`, `tytul`, `podstawa-prawna`
+(`LegalDocument.LegalBasis`). W ustawie „§" zostaje paragrafem kodeksu
+([ADR-0034](adr/0034-paragraf-jest-jednostka-podstawowa-aktu-wykonawczego.md)).
+
+**Korzeń eksportu.** `LegalDocumentConverter.Convert` pisze `ustawa` albo korzeń aktu opartego na paragrafach,
+a dla tekstu jednolitego —
 `obwieszczenie` (z `autor-aktu`), w nim punkty obwieszczenia (`AnnouncementXmlConverter`: `punkt-OTJ`,
-`podpunkt-OTJ`, `czesc-wspolna-podpunkt-OTJ`), podpis i `ustawa` ze strefą tytułową ogłaszanego aktu (`zalacznik-do`,
+`podpunkt-OTJ`, `czesc-wspolna-podpunkt-OTJ`), podpis i ogłaszany akt (`ustawa` albo `rozporzadzenie` /
+`uchwala` / `zarzadzenie` — `ActKindXml.AnnouncedActElement`) z własną strefą tytułową (`zalacznik-do`,
 `rodzaj-aktu`, `data`, `tytul`), jednostkami i załącznikami ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md),
 [ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)).
 Tekst jednolity nie czyta klauzuli wejścia w życie: `LifecycleEvents.Of` daje mu jedno zdarzenie `ujednolicenie`

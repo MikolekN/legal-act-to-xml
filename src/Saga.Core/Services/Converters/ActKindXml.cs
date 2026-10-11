@@ -27,6 +27,43 @@ namespace Saga.Core.Services.Converters
                 : FromHeading(document) ?? FromClassification(document) ?? CodeOf(document.Type);
 
         /// <summary>
+        /// Element aktu w eksporcie: akt oparty na paragrafach ma korzeń według rodzaju (wszystkie typu
+        /// rozporządzenia w schemacie), pozostałe — <c>ustawa</c>. Rozstrzyga treść: korzeń aktu opartego na
+        /// paragrafach wymaga jednostek „§", więc bez nich zostaje dotychczasowy.
+        /// </summary>
+        internal static string RootElement(LegalDocument document)
+        {
+            if (!document.Articles.Any(article => article.IsSection))
+                return XmlConverterConstants.Act;
+
+            return Code(document) switch
+            {
+                "UCHW" => XmlConverterConstants.SectionBasedActs.Resolution,
+                "ZARZĄD" => XmlConverterConstants.SectionBasedActs.Order,
+                _ => XmlConverterConstants.SectionBasedActs.Regulation,
+            };
+        }
+
+        /// <summary>
+        /// Element aktu ogłaszanego w załączniku do obwieszczenia — z jego własnego nagłówka i jednostek;
+        /// null, gdy rodzaju nie da się nazwać albo akt oparty na paragrafach nie ma żadnej jednostki „§".
+        /// </summary>
+        internal static string? AnnouncedActElement(LegalDocument document)
+        {
+            var heading = FootnoteMarkers.Remove(document.Announcement?.ActKindLine ?? string.Empty);
+            if (ZtpPatterns.StatuteHeaderPattern.IsMatch(heading))
+                return XmlConverterConstants.Act;
+
+            if (!document.Articles.Any(article => article.IsSection))
+                return null;
+
+            if (ZtpPatterns.RegulationHeaderPattern.IsMatch(heading)) return XmlConverterConstants.SectionBasedActs.Regulation;
+            if (ZtpPatterns.ResolutionHeaderPattern.IsMatch(heading)) return XmlConverterConstants.SectionBasedActs.Resolution;
+            if (ZtpPatterns.OrderHeaderPattern.IsMatch(heading)) return XmlConverterConstants.SectionBasedActs.Order;
+            return null;
+        }
+
+        /// <summary>
         /// Organ wydający wynikający z rodzaju aktu: ustawę uchwala Sejm. Dla pozostałych rodzajów organ
         /// stoi w tytule w dopełniaczu („Ministra Finansów") i nie jest jeszcze odczytywany.
         /// </summary>

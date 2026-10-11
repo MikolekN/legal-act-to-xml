@@ -1241,6 +1241,49 @@ namespace Saga.Core.Tests
             Assert.DoesNotContain(xml.Descendants(), element => element.Attribute("wejscie-w-zycie") != null);
         }
 
+        // ============================================================
+        // ADR-0034: „§" jest jednostką podstawową aktu opartego na paragrafach
+        // ============================================================
+
+        [Fact]
+        public void Adr0034_SectionSign_IsTheBasicUnit_OnlyInASectionBasedAct()
+        {
+            // Ten sam znak, dwa znaczenia: w rozporządzeniu „§ 1." to jednostka podstawowa (encja artykułu,
+            // adres „art", element „paragraf"), w ustawie — paragraf kodeksu pod artykułem.
+            static LegalDocument Parse(params string[] lines) => LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var regulation = Parse(
+                "ROZPORZĄDZENIE",
+                "MINISTRA FINANSÓW",
+                "z dnia 11 maja 2017 r.",
+                "w sprawie wykazu osób prawnych",
+                "Na podstawie art. 12 ust. 3 ustawy z dnia 15 grudnia 2016 r. o Prokuratorii Generalnej (Dz. U. poz. 2261) zarządza się, co następuje:",
+                "§ 1. 1. Rozporządzenie określa wykaz osób prawnych.",
+                "2. Wykaz ogłasza się w Biuletynie Informacji Publicznej.",
+                "§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+            Assert.All(regulation.Articles, unit => Assert.True(unit.IsSection));
+            Assert.Equal(new[] { "art_1", "art_2" }, regulation.Articles.Select(unit => unit.Id));
+            Assert.Equal(new[] { "art_1__ust_1", "art_1__ust_2" }, regulation.Articles.First().Paragraphs.Select(p => p.Id));
+
+            var exported = Assert.Single(LegalDocumentConverter.Convert(regulation).Elements());
+            Assert.Equal("rozporzadzenie", exported.Name.LocalName);
+            Assert.Equal(2, exported.Elements().Count(element => element.Name.LocalName == "paragraf"));
+
+            var statute = Parse(
+                "USTAWA",
+                "z dnia 6 czerwca 1997 r.",
+                "Kodeks karny",
+                "Art. 1. § 1. Odpowiedzialności karnej podlega ten tylko, kto popełnia czyn zabroniony.",
+                "§ 2. Nie stanowi przestępstwa czyn zabroniony, którego społeczna szkodliwość jest znikoma.");
+
+            var article = Assert.Single(statute.Articles);
+            Assert.False(article.IsSection);
+            Assert.Equal(new[] { "art_1__par_1", "art_1__par_2" }, article.Paragraphs.Select(p => p.Id));
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

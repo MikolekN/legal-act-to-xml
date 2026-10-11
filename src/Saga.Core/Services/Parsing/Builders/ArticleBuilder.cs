@@ -1,3 +1,4 @@
+using Saga.Core.Services.Classify;
 using Saga.Model.SystematizingUnits;
 using DtoArticle = Saga.Model.EditorialUnits.Article;
 using DtoParagraph = Saga.Model.EditorialUnits.Paragraph;
@@ -37,7 +38,8 @@ namespace Saga.Core.Services.Parsing.Builders
             {
                 Parent = subchapter,
                 ContentText = text,
-                Number = ParsingFactories.ParseArticleNumber(text)
+                Number = ParsingFactories.ParseArticleNumber(text),
+                IsSection = ParagraphClassifier.SectionUnitPattern.IsMatch(text),
             };
 
             subchapter.Articles.Add(article);

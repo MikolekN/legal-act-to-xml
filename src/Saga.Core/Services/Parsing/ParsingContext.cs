@@ -55,6 +55,12 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Bloki od nagłówka załącznika do końca dokumentu; załączniki składa z nich <c>AnnexBuilder</c>.</summary>
         public List<DocumentBlock> AnnexBlocks { get; } = new();
 
+        /// <summary>
+        /// Czy samodzielny „§" jest w tym dokumencie jednostką podstawową — z rodzaju aktu rozpoznanego przez
+        /// klasyfikator dokumentu (rozporządzenie, uchwała, zarządzenie; także ogłaszane w tekście jednolitym).
+        /// </summary>
+        public bool SectionIsBasicUnit { get; init; }
+
         /// <summary>Bloki treści obwieszczenia tekstu jednolitego — sprzed aktu ogłaszanego w załączniku.</summary>
         public List<DocumentBlock> AnnouncementBlocks { get; } = new();
 

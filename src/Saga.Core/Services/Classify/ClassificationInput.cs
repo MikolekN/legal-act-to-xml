@@ -11,5 +11,11 @@ namespace Saga.Core.Services.Classify
         /// jeśli numer jednostki zaburza ciągłość.
         /// </summary>
         public NumberingHint? NumberingHint { get; init; }
+
+        /// <summary>
+        /// Czy samodzielny „§" jest w tym dokumencie jednostką podstawową (rozporządzenie, uchwała, zarządzenie)
+        /// — wtedy „§ 5." jest tym, czym „Art. 5." w ustawie, a nie paragrafem kodeksu.
+        /// </summary>
+        public bool SectionIsBasicUnit { get; init; }
     }
 }

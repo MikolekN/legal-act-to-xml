@@ -78,6 +78,12 @@ namespace Saga.Model
         /// <summary>Wiersz daty aktu („z dnia 14 czerwca 2024 r."); pusty, gdy nierozpoznany.</summary>
         public string DateLine { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Podstawa prawna aktu wykonawczego (§ 121 ZTP): „Na podstawie art. … zarządza się, co następuje:";
+        /// pusta dla ustawy i gdy nierozpoznana.
+        /// </summary>
+        public string LegalBasis { get; set; } = string.Empty;
+
         /// <summary>Przedmiot aktu („o ochronie sygnalistów") — sam, bez rodzaju i daty; pusty, gdy nierozpoznany.</summary>
         public string Subject { get; set; } = string.Empty;
 

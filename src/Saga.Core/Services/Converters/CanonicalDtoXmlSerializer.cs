@@ -51,6 +51,7 @@ namespace Saga.Core.Services.Converters
                 root.Add(new XElement("announcement",
                     new XAttribute("attachedTo", announcement.AttachedTo),
                     new XAttribute("actKind", announcement.ActKindLine),
+                    new XAttribute("actIssuer", announcement.ActIssuerLine),
                     new XAttribute("actDate", announcement.ActDateLine),
                     new XAttribute("actSubject", announcement.ActSubject),
                     announcement.Content.Select(SerializeContentBlock),

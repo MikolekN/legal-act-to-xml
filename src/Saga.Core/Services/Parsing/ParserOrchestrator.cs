@@ -87,6 +87,7 @@ namespace Saga.Core.Services.Parsing
             var classification = _classifier.Classify(new ClassificationInput(text, styleId)
             {
                 NumberingHint = hint,
+                SectionIsBasicUnit = context.SectionIsBasicUnit,
             });
 
             if (IsAnnexHeader(context, classification, text))

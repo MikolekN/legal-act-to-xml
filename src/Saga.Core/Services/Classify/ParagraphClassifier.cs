@@ -51,8 +51,21 @@ namespace Saga.Core.Services.Classify
         /// <summary>Opcjonalny znak paragrafu kodeksu.</summary>
         internal const string OptionalParagraphMark = @"(?:§\s*)?";
 
+        /// <summary>
+        /// Znak jednostki podstawowej przy odczycie numeru i treści jednostki już rozpoznanej: „Art." albo „§".
+        /// O tym, czy „§ 5." jest jednostką podstawową, rozstrzyga rozpoznanie (<see cref="SectionUnitPattern"/>).
+        /// </summary>
+        private const string BasicUnitMark = @"(?:Art\.?|§)";
+
         internal static readonly Regex ArticlePattern = new(
             $@"^{OptionalQuotePrefix}Art\.?\s*\d+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Oznaczenie jednostki podstawowej aktu opartego na paragrafach: „§ 5." (ADR-0034). Rozpoznawane
+        /// tylko wtedy, gdy rodzaj aktu na to wskazuje — w ustawie „§" pod artykułem to paragraf kodeksu.
+        /// </summary>
+        internal static readonly Regex SectionUnitPattern = new(
+            $@"^{OptionalQuotePrefix}§\s*\d+{LetterSuffix}{OptionalSuperscript}\.", RegexOptions.Compiled);
 
         internal static readonly Regex ParagraphPattern = new(
             $@"^{OptionalQuotePrefix}{OptionalParagraphMark}\d+{LetterSuffix}{OptionalSuperscript}\.{AfterNumberDot}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -83,11 +96,11 @@ namespace Saga.Core.Services.Classify
 
         /// <summary>Artykuł z grupą przechwytującą numer (do ParseArticleNumber).</summary>
         internal static readonly Regex ArticleNumberCapture = new(
-            $@"^{OptionalQuotePrefix}Art\.?\s*(\d+{LetterSuffix}{OptionalSuperscript})", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{BasicUnitMark}\s*(\d+{LetterSuffix}{OptionalSuperscript})", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>Artykuł z przechwyceniem ogona (do GetArticleTail).</summary>
         internal static readonly Regex ArticleTailCapture = new(
-            $@"^{OptionalQuotePrefix}Art\.?\s*\d+{LetterSuffix}{OptionalSuperscript}\.?\s*(.*)$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^{OptionalQuotePrefix}{BasicUnitMark}\s*\d+{LetterSuffix}{OptionalSuperscript}\.?\s*(.*)$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>Numer ustępu/paragrafu kodeksu z grupą przechwytującą (do ParseParagraphNumber).</summary>
         internal static readonly Regex ParagraphNumberCapture = new(
@@ -171,7 +184,7 @@ namespace Saga.Core.Services.Classify
 
             // Sygnał syntaktyczny (regex)
             // Słowo kluczowe małą literą („dział II") to oznaczenie tylko przy stylu oznaczenia.
-            ParagraphKind? syntacticKind = MatchRegex(text)
+            ParagraphKind? syntacticKind = MatchRegex(text, input.SectionIsBasicUnit)
                 ?? (IsDesignationStyle(styleType) ? MatchSystematizingRegex(CapitalizeFirst(text)) : null);
 
             return BuildResult(input, styleType, isAmend, styleKind, syntacticKind);
@@ -403,13 +416,14 @@ namespace Saga.Core.Services.Classify
             _ => false,
         };
 
-        private static ParagraphKind? MatchRegex(string text)
+        private static ParagraphKind? MatchRegex(string text, bool sectionIsBasicUnit)
         {
             // Jednostki systematyzacyjne sprawdzane najpierw (§ 60-62); rozstrzyga walidacja numeru.
             var systematizing = MatchSystematizingRegex(text);
             if (systematizing != null) return systematizing;
 
             if (IsArticleByText(text)) return ParagraphKind.Article;
+            if (sectionIsBasicUnit && SectionUnitPattern.IsMatch(text)) return ParagraphKind.Article;
             if (IsParagraphByText(text)) return ParagraphKind.Paragraph;
             if (IsPointByText(text)) return ParagraphKind.Point;
             if (IsLetterByText(text)) return ParagraphKind.Letter;

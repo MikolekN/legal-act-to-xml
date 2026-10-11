@@ -15,9 +15,11 @@ namespace Saga.Core.Services.Converters
         /// </summary>
         internal static XElement ToXml(Article article, bool inSubchapter = false)
         {
-            var articleElement = Element(inSubchapter && HasCodeParagraphs(article)
-                ? XmlConverterConstants.Contents.CodeArticle
-                : XmlConverterConstants.Contents.Article);
+            var articleElement = Element(article.IsSection
+                ? XmlConverterConstants.SectionBasedActs.Section
+                : inSubchapter && HasCodeParagraphs(article)
+                    ? XmlConverterConstants.Contents.CodeArticle
+                    : XmlConverterConstants.Contents.Article);
 
             articleElement.Add(UnitAddressXml.Address(article, UnitAddressXml.HasDesignation(article)));
             articleElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, article.Guid.ToString()));

@@ -213,13 +213,14 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void AnnouncementOfAnotherKindOfAct_KeepsTheLegacyRoot()
+        public void AnnouncementWithAnAnnexThatIsNotAnAct_KeepsTheLegacyRoot()
         {
-            // Tekst jednolity rozporządzenia: jednostek „§" potok jeszcze nie buduje, więc korzeń zostaje bez zmian.
+            // Załącznik do obwieszczenia bywa wykazem, nie aktem: nie ma rodzaju, którym dałoby się nazwać
+            // osadzony element, więc eksport nie udaje, że go zbudował.
             var lines = ConsolidatedText.Take(ActStart + 1).Concat(
             [
-                "ROZPORZĄDZENIE", "MINISTRA FINANSÓW", "z dnia 11 maja 2017 r.", "w sprawie osób prawnych",
-                "§ 1. Rozporządzenie określa wykaz osób prawnych.",
+                "WYKAZ ZAREJESTROWANYCH KANCELARII",
+                "(według stanu na dzień 31 grudnia 2024 r.)",
             ]);
 
             var xml = LegalDocumentConverter.Convert(Parse(lines));
