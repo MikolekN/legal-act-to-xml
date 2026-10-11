@@ -25,7 +25,9 @@ namespace Saga.Core.Services.Parsing
         /// <param name="AnnexStart">Indeks wiersza „Załącznik do obwieszczenia …"; -1, gdy go nie ma.</param>
         /// <param name="AnnouncesAct">Załącznik jest aktem (tekst jednolity), a nie załącznikiem obwieszczenia.</param>
         /// <param name="HasProvisions">W treści obwieszczenia stoją artykuły albo paragrafy.</param>
-        internal readonly record struct Layout(bool OpensWithAnnouncement, int AnnexStart, bool AnnouncesAct, bool HasProvisions)
+        /// <param name="AnnouncedKind">Rodzaj aktu nazwany jego nagłówkiem tuż za wierszem załącznika; null, gdy go nie ma.</param>
+        internal readonly record struct Layout(
+            bool OpensWithAnnouncement, int AnnexStart, bool AnnouncesAct, bool HasProvisions, Saga.Model.LegalActType? AnnouncedKind = null)
         {
             /// <summary>
             /// Obwieszczenie, które nie ogłasza aktu i samo nie jest zbudowane z artykułów: cały dokument jest
@@ -75,9 +77,9 @@ namespace Saga.Core.Services.Parsing
                 provisions |= Classify.ParagraphClassifier.IsArticleByText(text) || SectionDesignation.IsMatch(text);
             }
 
-            var announcesAct = annexStart >= 0
-                && (consolidated || (afterAnnex is not null && ZtpPatterns.KindOfHeading(afterAnnex) is not null));
-            return new Layout(opens, annexStart, announcesAct, provisions);
+            var announcedKind = afterAnnex is null ? null : ZtpPatterns.KindOfHeading(afterAnnex);
+            var announcesAct = annexStart >= 0 && (consolidated || announcedKind is not null);
+            return new Layout(opens, annexStart, announcesAct, provisions, announcesAct ? announcedKind : null);
         }
 
         private static readonly Regex SectionDesignation = new(@"^§\s*\d+[a-z]*\.", RegexOptions.Compiled);

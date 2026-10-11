@@ -493,6 +493,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   - W korpusie: 108 obwieszczeń, 500 punktów, 158 liter, 42 tirety; pokrycie tekstu obwieszczeń 83 % → 99 %.
     Zgodność ze schematem bez zmian. Jednostek `nie-ztp-*` 600 → 1408 — schemat nie przyjmuje pod takim
     przepisem jednostek zwykłych.
+- **Jednostka podstawowa ogłaszanego aktu z jego nagłówka**: w tekście jednolitym o tym, że jednostką podstawową
+  jest paragraf, mówi także nagłówek aktu stojący za wierszem „Załącznik do obwieszczenia …" („ROZPORZĄDZENIE",
+  „UCHWAŁA", „ZARZĄDZENIE"), nie tylko klasyfikator dokumentu, który waży liczbę jednostek — krótkie rozporządzenie
+  ma ich za mało i wychodziło bez żadnego paragrafu (`AnnouncementBoundary.Layout.AnnouncedKind`).
+  - W korpusie: 20 tekstów jednolitych rozporządzeń odzyskuje treść (64 paragrafy); zgodnych ze schematem
+    1915 → 1933 z 2321; zgubionych akapitów w tekstach jednolitych 1072 → 230.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

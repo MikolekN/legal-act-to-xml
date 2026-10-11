@@ -16,6 +16,9 @@ namespace Saga.Core.Services.UnitReferences
             LegalActType.LocalLegalAct,
         };
 
+        /// <summary>Czy jednostką podstawową aktu tego rodzaju jest paragraf („§ 1.").</summary>
+        internal static bool IsSectionBased(LegalActType? kind) => kind is { } known && SectionBasedActs.Contains(known);
+
         /// <summary>Czy samodzielny „§" jest w tym dokumencie jednostką główną.</summary>
         internal static bool IsBasicUnit(DocumentClassificationResult? classification)
         {

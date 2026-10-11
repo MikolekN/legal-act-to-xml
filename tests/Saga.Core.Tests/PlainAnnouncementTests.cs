@@ -97,6 +97,42 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ShortConsolidatedRegulation_BuildsItsSections_FromTheHeadingOfTheAnnouncedAct()
+        {
+            // Korpus: 329550_2989608 — rozporządzenie o dwóch paragrafach; klasyfikator dokumentu nie widzi w nim
+            // przewagi „§", a o jednostce podstawowej mówi nagłówek ogłaszanego aktu.
+            string[] lines =
+            [
+                "OBWIESZCZENIE",
+                "MINISTRA SPRAWIEDLIWOŚCI",
+                "z dnia 4 sierpnia 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu rozporządzenia Ministra Sprawiedliwości w sprawie określenia stanowisk w Służbie Więziennej",
+                "1. Na podstawie art. 16 ust. 3 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku jednolity tekst rozporządzenia.",
+                "Minister Sprawiedliwości: W. Żurek",
+                "Załącznik do obwieszczenia Ministra Sprawiedliwości z dnia 4 sierpnia 2025 r. (Dz. U. poz. 1102)",
+                "ROZPORZĄDZENIE",
+                "MINISTRA SPRAWIEDLIWOŚCI",
+                "z dnia 12 stycznia 2011 r.",
+                "w sprawie określenia stanowisk w Służbie Więziennej",
+                "Na podstawie art. 26 ust. 2 ustawy z dnia 9 kwietnia 2010 r. o Służbie Więziennej (Dz. U. z 2024 r. poz. 1869) zarządza się, co następuje:",
+                "§ 1. Wykaz stanowisk określa załącznik do rozporządzenia.",
+                "§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+
+            var layout = AnnouncementBoundary.Describe(Blocks(lines));
+            Assert.Equal(LegalActType.Regulation, layout.AnnouncedKind);
+
+            var document = LegalDocumentParser.Parse(Blocks(lines), new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            Assert.Equal(new[] { "1", "2" }, document.Articles.Select(article => article.Number?.Value));
+            Assert.All(document.Articles, article => Assert.True(article.IsSection));
+
+            var root = LegalDocumentConverter.Convert(document).Elements().Single();
+            Assert.Equal("obwieszczenie", root.Name.LocalName);
+            Assert.Equal(2, Named(root, "paragraf").Count);
+            Assert.Single(root.Elements(), e => e.Name.LocalName == "rozporzadzenie");
+        }
+
+        [Fact]
         public void AnnouncementBuiltOfSections_KeepsTheActPipeline()
         {
             // Korpus: 340765_3073132 — obwieszczenie z paragrafami; jednostki buduje potok aktu.

@@ -117,7 +117,10 @@ namespace Saga.Core
 
             var context = new ParsingContext(document, subchapter)
             {
-                SectionIsBasicUnit = Services.UnitReferences.SectionSignRole.IsBasicUnit(classification),
+                // O jednostce podstawowej ogłaszanego aktu mówi też jego własny nagłówek („ROZPORZĄDZENIE"):
+                // klasyfikator dokumentu waży liczbę jednostek, a krótki akt ma ich za mało.
+                SectionIsBasicUnit = Services.UnitReferences.SectionSignRole.IsBasicUnit(classification)
+                    || Services.UnitReferences.SectionSignRole.IsSectionBased(layout.AnnouncedKind),
                 IsPlainAnnouncement = layout.IsPlainAnnouncement,
             };
             var orchestrator = new ParserOrchestrator();
