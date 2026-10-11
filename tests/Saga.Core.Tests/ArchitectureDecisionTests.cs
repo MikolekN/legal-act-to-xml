@@ -1255,6 +1255,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0042: myślnik bez wprowadzenia z dwukropkiem nie otwiera tiretu
+        // ============================================================
+
+        [Fact]
+        public void Adr0042_DashWithoutAColonIntroduction_ContinuesTheParagraph_UnlessStyledAsATiret()
+        {
+            static Saga.Model.EditorialUnits.Paragraph Parsed(string introduction, string? dashStyle)
+            {
+                DocumentBlock[] blocks =
+                [
+                    new() { Text = "USTAWA" }, new() { Text = "z dnia 14 czerwca 2024 r." }, new() { Text = "o opłatach" },
+                    new() { Text = "Art. 1. 1. " + introduction },
+                    new() { Text = "– wymierza się karę pieniężną w wysokości 1000 zł.", StyleId = dashStyle },
+                    new() { Text = "2. Karę uiszcza się w terminie 14 dni." },
+                ];
+                return LegalDocumentParser.Parse(blocks.ToList(), new ParseOptions { Policy = ParsePolicy.AlwaysParse })
+                    .Document!.Articles.Single().Paragraphs.First();
+            }
+
+            // Bez dwukropka i bez stylu tiretu: dalszy ciąg zdania — żadnego dostawionego punktu ani litery.
+            var continued = Parsed("Za niedołączenie dokumentów, o których mowa w art. 5 ust. 7", null);
+            Assert.Empty(continued.Points);
+            Assert.EndsWith("– wymierza się karę pieniężną w wysokości 1000 zł.", continued.ContentText);
+
+            // Wprowadzenie z dwukropkiem (§ 56 ZTP) albo styl tiretu: tiret.
+            Assert.Single(Parsed("Za niedołączenie dokumentów:", null).Points);
+            Assert.Single(Parsed("Za niedołączenie dokumentów, o których mowa w art. 5 ust. 7", "TIRtiret").Points);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

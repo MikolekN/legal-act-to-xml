@@ -462,6 +462,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   z przykładu autorów schematu.
   - W korpusie: organ wydający `UNKNOWN` w 2079 → 0 dokumentów; zmiany wyłącznie w `Organy`, zgodność ze
     schematem bez zmian.
+- **Myślnik bez wprowadzenia z dwukropkiem nie otwiera tiretu** ([ADR-0042](docs/adr/0042-myslnik-bez-wprowadzenia-z-dwukropkiem-nie-otwiera-tiretu.md)):
+  akapit zaczynający się od myślnika, stojący pod ustępem bez punktów i liter, jest tiretem tylko po wprowadzeniu
+  zakończonym dwukropkiem (§ 56 ZTP) albo w stylu tiretu. W innym razie domyka urwane zdanie przepisu („Za
+  niewykonanie obowiązku … – wymierza się karę pieniężną …") albo jest jego dalszą treścią — za wzorem jako
+  wprowadzenie do opisu symboli („– gdzie poszczególne symbole oznaczają:"). Przedtem dostawiany był punkt i litera,
+  a ustęp wychodził jako jednostka spoza ZTP.
+  - W korpusie: 9 dokumentów; 9 `nie-ztp-ustep` staje się zwykłym ustępem, 12 wierszy legendy wzoru wychodzi jako
+    `opis` zamiast `fragment`; jednostek `nie-ztp-*` 618 → 600. Zgodność ze schematem bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

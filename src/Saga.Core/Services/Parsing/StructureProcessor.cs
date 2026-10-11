@@ -143,6 +143,50 @@ namespace Saga.Core.Services.Parsing
             return true;
         }
 
+        /// <summary>
+        /// Myślnik pod ustępem bez otwartego wyliczenia. Wyliczenie tiretów otwiera wprowadzenie zakończone
+        /// dwukropkiem (§ 56 ZTP); bez niego akapit zaczynający się od myślnika nie jest tiretem pod dostawionym
+        /// punktem i literą, tylko dalszym ciągiem przepisu: domyka urwane zdanie („Za niewykonanie obowiązku …"
+        /// i w nowym wierszu „– wymierza się karę pieniężną …") albo stoi za wzorem, legendą czy tabelą
+        /// („– gdzie x oznacza …"). Styl tiretu zgodny z myślnikiem zostawia tiret — to dwa sygnały (ADR-0042).
+        /// </summary>
+        private static bool TryContinueAfterDash(
+            ParsingContext context, ClassificationResult classification, string text, string? styleId)
+        {
+            if (classification.IsAmendmentContent
+                || context.CurrentPoint is not null || context.CurrentLetter is not null
+                || context.CurrentParagraph is not { } paragraph
+                || ParagraphClassifier.GetStyleType(styleId) == "TIR")
+                return false;
+
+            var last = paragraph.Continuation.LastOrDefault();
+            var before = (last is null ? paragraph.ContentText : LastTextOf(last)).TrimEnd();
+            var afterEmbeddedContent = last is { Table: not null } or { Quotation: not null };
+            if (!afterEmbeddedContent && (before.Length == 0 || before[^1] == ':'))
+                return false;
+
+            if (last is null && CommonPartPlacement.LeavesEnumerationOpen(before))
+            {
+                // Zdanie przepisu urwane przed myślnikiem: akapit je domyka, jak sankcja w osobnym wierszu.
+                ParsingFactories.SetContentAndSegments(paragraph, $"{before} {text.Trim()}");
+            }
+            else if (!FormulaLegend.TryAbsorb(paragraph, text, SymbolOf(context.CurrentSymbol)))
+            {
+                paragraph.Continuation.Add(new ContentBlock { Text = text });
+            }
+
+            ValidationReporter.AddValidationMessage(paragraph, ValidationLevel.Info,
+                "Akapit zaczynający się od myślnika dołączony jako dalszy ciąg przepisu: " +
+                "nie poprzedza go wprowadzenie zakończone dwukropkiem (§ 56 ZTP).");
+            return true;
+        }
+
+        /// <summary>Ostatni tekst dalszej treści jednostki: przy wzorze z legendą — ostatnie objaśnienie.</summary>
+        private static string LastTextOf(ContentBlock block) =>
+            (block.Formula is { } formula
+                ? formula.Legend.LastOrDefault()?.Explanation ?? formula.LegendIntroduction ?? block.Text
+                : block.Text) ?? string.Empty;
+
         /// <summary>Początek sankcji karnej: „podlega karze…", także po myślniku.</summary>
         private static readonly Regex SanctionStart = new(
             $@"^(?:[{Dashes.Any}]\s*)?podlega\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -352,6 +396,9 @@ namespace Saga.Core.Services.Parsing
 
                 case ParagraphKind.Tiret:
                     if (TryHandleStylelessWrapUp(context, classification, text, sourceStyleId))
+                        return true;
+
+                    if (TryContinueAfterDash(context, classification, text, sourceStyleId))
                         return true;
 
                     var ensuredPointForTiret = _pointBuilder.EnsureForLetter(context.CurrentParagraph, context.CurrentArticle, context.CurrentPoint);

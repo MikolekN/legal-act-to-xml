@@ -817,6 +817,10 @@ Encje implicit:
 - Sankcja karna w osobnym akapicie (styl `S_KARN`, „podlega …") domyka zdanie przepisu, a po wyliczeniu jest jego częścią
   wspólną (`StructureProcessor.TryHandleSanction`; w cytacie `AmendmentBuilder`) — rozpoznają ją dwa zgodne sygnały z trzech:
   styl, początek „podlega" i niedokończone zdanie przed nią
+- Myślnik pod ustępem bez otwartego punktu i litery otwiera tiret tylko po wprowadzeniu zakończonym dwukropkiem
+  (§ 56 ZTP) albo w stylu tiretu; w innym razie domyka urwane zdanie przepisu albo jest jego dalszą treścią — za wzorem
+  jako wprowadzenie do opisu symboli (`StructureProcessor.TryContinueAfterDash`) —
+  [ADR-0042](adr/0042-myslnik-bez-wprowadzenia-z-dwukropkiem-nie-otwiera-tiretu.md)
 - Część wspólna jako jedyna treść nowelizacji („dodaje się część wspólną w brzmieniu:") to cytat strukturalny
   z `czesc-wspolna-*` pod adresem celu (`art_18zg__ust_2__czw`), funkcja `dodaj-w`
 
