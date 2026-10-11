@@ -418,6 +418,14 @@ a wersjonowanie zgodne z Semantic Versioning.
     odwołań do odnośników i 12 fałszywych `sup` mniej; zgodność ze schematem (1685 z 2321, tak samo wg libxml2)
     i pokrycie tekstu bez zmian. Legenda wzoru zostaje na razie jako `fragment`.
 
+- **Legenda wzoru w `wzor-mat`**: wiersze tuż za wzorem — wprowadzenie („gdzie poszczególne symbole oznaczają:")
+  i opisy symboli („I_e – ilość energii …") — należą do wzoru (`ContentFormula.LegendIntroduction`, `Legend`)
+  i wychodzą jako `wprowadzenie-do-opisu` oraz `opis` z symbolem (`symbol-mat` z MathML, gdy symbol jest równaniem;
+  `symbol-txt`, gdy zapisano go tekstem) i objaśnieniem podzielonym na zdania — jak w przykładzie autorów schematu.
+  Wiersz, który legendą nie jest, zamyka ją i zostaje dalszą treścią jednostki.
+  - W korpusie: 148 wprowadzeń i 725 opisów symboli (356 z MathML) w 40 dokumentach, 873 `fragment` mniej;
+    zgodność ze schematem (1685 z 2321, tak samo wg libxml2) i pokrycie tekstu bez zmian.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

@@ -67,6 +67,9 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public string? CurrentFormula { get; set; }
 
+        /// <summary>Równanie otwierające przetwarzany blok (symbol wiersza legendy wzoru); null, gdy go nie ma.</summary>
+        public Ingest.BlockSymbol? CurrentSymbol { get; set; }
+
         /// <summary>Bloki treści obwieszczenia tekstu jednolitego — sprzed aktu ogłaszanego w załączniku.</summary>
         public List<DocumentBlock> AnnouncementBlocks { get; } = new();
 

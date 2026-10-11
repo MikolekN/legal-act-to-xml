@@ -81,6 +81,49 @@ namespace Saga.Core.Helpers
             return math;
         }
 
+        /// <summary>
+        /// Równanie, którym akapit się zaczyna, gdy za nim stoi tekst (wiersz legendy: symbol, myślnik,
+        /// objaśnienie); null, gdy akapit zaczyna się tekstem albo jest samym wzorem.
+        /// </summary>
+        internal static Ingest.BlockSymbol? LeadingSymbolOf(OpenXmlElement paragraph)
+        {
+            OpenXmlElement? first = null;
+            var textFollows = false;
+
+            foreach (var element in paragraph.Descendants())
+            {
+                if (element.Ancestors().TakeWhile(ancestor => ancestor != paragraph).Any(OfficeMathText.IsMath))
+                    continue;
+
+                if (OfficeMathText.IsMath(element))
+                {
+                    if (first is null)
+                        first = element;
+                    continue;
+                }
+
+                if (element.NamespaceUri != WordNamespace || element.LocalName != "r")
+                    continue;
+
+                var hasText = element.ChildElements.Any(child => child.LocalName == "t" && child.InnerText.Trim().Length > 0);
+                if (!hasText)
+                    continue;
+
+                // Tekst przed pierwszym równaniem: akapit nie zaczyna się symbolem.
+                if (first is null)
+                    return null;
+
+                textFollows = true;
+                break;
+            }
+
+            return first is not null && textFollows
+                ? new Ingest.BlockSymbol(
+                    OfficeMathText.Linear(first).CollapseWhitespace().Trim(),
+                    ToMathMl(first).ToString(SaveOptions.DisableFormatting))
+                : null;
+        }
+
         private static List<XElement> Children(OpenXmlElement element) => element.ChildElements.SelectMany(Part).ToList();
 
         private static IEnumerable<XElement> Part(OpenXmlElement element)

@@ -273,13 +273,21 @@ namespace Saga.Core.Services.Parsing.Builders
         /// wiersz legendy, zdanie w nowym wierszu. Gdy cytat nie ma jeszcze żadnej jednostki, jest tekstem
         /// cytowanym wprost („zdanie pierwsze otrzymuje brzmienie: „…"").
         /// </summary>
-        private void AttachText(string text, AmendmentContent content, ContentFormula? formula = null)
+        private void AttachText(string text, AmendmentContent content, ContentFormula? formula = null, Ingest.BlockSymbol? symbol = null)
         {
             var unit = (BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? _currentParagraph;
             if (unit is null)
+            {
                 AppendPlainText(content, text);
-            else
-                unit.Continuation.Add(new ContentBlock { Text = text.Trim(), Formula = formula });
+                return;
+            }
+
+            // Wprowadzenie i opisy symboli tuż za wzorem należą do wzoru.
+            var leading = symbol is null ? null : new FormulaSymbol { Symbol = symbol.Text, SymbolMathMl = symbol.MathMl };
+            if (formula is null && FormulaLegend.TryAbsorb(unit, text, leading))
+                return;
+
+            unit.Continuation.Add(new ContentBlock { Text = text.Trim(), Formula = formula });
         }
 
         /// <summary>
@@ -339,7 +347,7 @@ namespace Saga.Core.Services.Parsing.Builders
                     if (para.StyleInfo?.TargetKind == AmendmentTargetKind.PenalSanction && TryContinueWithSanction(para.Text))
                         break;
 
-                    AttachText(para.Text, content);
+                    AttachText(para.Text, content, symbol: para.LeadingSymbol);
                     Log.Debug("AmendmentBuilder: akapit niesklasyfikowany, dodano jako tekst: {Text}",
                         para.Text.Length > 60 ? para.Text[..60] + "..." : para.Text);
                     break;

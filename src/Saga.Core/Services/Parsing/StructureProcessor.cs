@@ -513,6 +513,10 @@ namespace Saga.Core.Services.Parsing
             // Akapit bez oznaczenia należy do jednostki, za którą stoi: zostaje jej dalszą treścią, nie ginie.
             if (deepest is not null && !IsActHeadingLine(text, sourceStyleId))
             {
+                // Wprowadzenie i opisy symboli tuż za wzorem należą do wzoru.
+                if (FormulaLegend.TryAbsorb(deepest, text, SymbolOf(context.CurrentSymbol)))
+                    return;
+
                 deepest.Continuation.Add(new ContentBlock { Text = text });
                 deepest.ValidationMessages.Add(new ValidationMessage(
                     ValidationLevel.Info,
@@ -537,6 +541,9 @@ namespace Saga.Core.Services.Parsing
             ?? (BaseEntity?)context.CurrentPoint
             ?? (BaseEntity?)context.CurrentParagraph
             ?? context.CurrentArticle;
+
+        private static FormulaSymbol? SymbolOf(BlockSymbol? symbol) =>
+            symbol is null ? null : new FormulaSymbol { Symbol = symbol.Text, SymbolMathMl = symbol.MathMl };
 
         // Style strefy tytułowej aktu i wskazania załącznika.
         private static readonly string[] ActHeadingStyles = ["OZNRODZAKTU", "DATAAKTU", "TYTUAKTU", "TEKSTZa"];

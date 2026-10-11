@@ -33,14 +33,43 @@ namespace Saga.Core.Services.Converters
         /// </summary>
         private static XElement Formula(ContentFormula formula)
         {
-            var math = XElement.Parse(formula.MathMl);
-            foreach (var element in math.DescendantsAndSelf())
-                element.Attributes().Where(attribute => attribute.IsNamespaceDeclaration).Remove();
+            var math = Math(formula.MathMl);
 
-            return Element(XmlConverterConstants.Contents.Formula.Element,
+            var element = Element(XmlConverterConstants.Contents.Formula.Element,
                 new XAttribute(XNamespace.Xmlns + XmlConverterConstants.Contents.Formula.MathMlPrefix, math.Name.Namespace),
                 new XAttribute(XmlConverterConstants.Contents.GUID, Guid.NewGuid().ToString()),
                 Element(XmlConverterConstants.Contents.Formula.Expression, math));
+
+            if (formula.LegendIntroduction is { Length: > 0 } introduction)
+                element.Add(Element(XmlConverterConstants.Contents.Formula.LegendIntroduction, introduction));
+
+            element.Add(formula.Legend.Select(Description));
+            return element;
+        }
+
+        /// <summary>
+        /// Opis symbolu: symbol (MathML, gdy w źródle jest równaniem; inaczej tekst) i objaśnienie podzielone
+        /// na zdania, jak treść jednostki.
+        /// </summary>
+        private static XElement Description(FormulaSymbol symbol)
+        {
+            var explanation = Element(XmlConverterConstants.Contents.TextSection);
+            SentenceProcessor.Process(Parsing.ParsingFactories.SplitIntoSentences(symbol.Explanation), null, explanation);
+
+            return Element(XmlConverterConstants.Contents.Formula.Description,
+                symbol.SymbolMathMl is { Length: > 0 } mathMl
+                    ? Element(XmlConverterConstants.Contents.Formula.SymbolAsMath, Math(mathMl))
+                    : Element(XmlConverterConstants.Contents.Formula.SymbolAsText, symbol.Symbol),
+                Element(XmlConverterConstants.Contents.Formula.Explanation, explanation));
+        }
+
+        // Deklaracje przestrzeni nazw z zapisanego MathML ustępują deklaracji na elemencie wzoru.
+        private static XElement Math(string mathMl)
+        {
+            var math = XElement.Parse(mathMl);
+            foreach (var element in math.DescendantsAndSelf())
+                element.Attributes().Where(attribute => attribute.IsNamespaceDeclaration).Remove();
+            return math;
         }
     }
 }

@@ -149,7 +149,7 @@ namespace Saga.Core.Services.Parsing
                 }
             }
 
-            context.AmendmentCollector.AddParagraph(text, styleId, context.CurrentFormula);
+            context.AmendmentCollector.AddParagraph(text, styleId, context.CurrentFormula, context.CurrentSymbol);
         }
 
         /// <summary>

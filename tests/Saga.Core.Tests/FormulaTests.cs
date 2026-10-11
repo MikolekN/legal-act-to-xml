@@ -115,10 +115,105 @@ namespace Saga.Core.Tests
         {
             var paragraph = Parse(ActWithFormula()).Articles.First().Paragraphs[0];
 
-            var blocks = paragraph.Continuation;
-            Assert.Equal(new[] { "K=A∙W", "gdzie poszczególne symbole oznaczają:", "K – wysokość kary, wyrażoną w złotych," }, blocks.Select(b => b.Text));
-            Assert.StartsWith("<math", blocks[0].Formula!.MathMl);
-            Assert.All(blocks.Skip(1), block => Assert.Null(block.Formula));
+            var block = Assert.Single(paragraph.Continuation);
+            Assert.Equal("K=A∙W", block.Text);
+            Assert.StartsWith("<math", block.Formula!.MathMl);
+        }
+
+        // ============================================================
+        // Legenda wzoru
+        // ============================================================
+
+        [Fact]
+        public void LinesAfterTheFormula_AreItsLegend()
+        {
+            var formula = Parse(ActWithFormula()).Articles.First().Paragraphs[0].Continuation[0].Formula!;
+
+            Assert.Equal("gdzie poszczególne symbole oznaczają:", formula.LegendIntroduction);
+            var symbol = Assert.Single(formula.Legend);
+            Assert.Equal("K", symbol.Symbol);
+            Assert.Equal("wysokość kary, wyrażoną w złotych,", symbol.Explanation);
+            Assert.Null(symbol.SymbolMathMl);
+        }
+
+        [Theory]
+        [InlineData("gdzie:")]
+        [InlineData("w którym poszczególne symbole oznaczają:")]
+        [InlineData("przy czym:")]
+        [InlineData("poszczególne symbole oznaczają:")]
+        public void LegendIntroduction_IsASentenceAnnouncingTheSymbols(string introduction)
+        {
+            var blocks = ActWithFormula();
+            blocks[5] = Text(introduction);
+
+            var formula = Parse(blocks).Articles.First().Paragraphs[0].Continuation[0].Formula!;
+
+            Assert.Equal(introduction, formula.LegendIntroduction);
+            Assert.Single(formula.Legend);
+        }
+
+        [Fact]
+        public void SymbolWrittenAsAnEquation_KeepsItsMathMl()
+        {
+            // Korpus: 318581_2836177 — wiersz legendy zaczyna się równaniem „I_e", za nim myślnik i objaśnienie.
+            var blocks = ActWithFormula();
+            blocks[6] = new DocumentBlock
+            {
+                Text = "I_e \t–\tilość energii elektrycznej,",
+                LeadingSymbol = new BlockSymbol("I_e", $"<math xmlns=\"{MathNamespace}\"><msub><mi>I</mi><mi>e</mi></msub></math>"),
+            };
+
+            var symbol = Assert.Single(Parse(blocks).Articles.First().Paragraphs[0].Continuation[0].Formula!.Legend);
+
+            Assert.Equal("I_e", symbol.Symbol);
+            Assert.Equal("ilość energii elektrycznej,", symbol.Explanation);
+            Assert.Contains("<msub>", symbol.SymbolMathMl);
+        }
+
+        [Fact]
+        public void LineThatIsNotALegend_ClosesIt()
+        {
+            // Zdanie za legendą jest zwykłą dalszą treścią; wiersz „X – …" po nim nie wraca do legendy.
+            var blocks = ActWithFormula().ToList();
+            blocks.InsertRange(7,
+            [
+                Text("Kwotę zaokrągla się do pełnych złotych."),
+                Text("W – współczynnik stosowany w latach następnych,"),
+            ]);
+
+            var continuation = Parse(blocks.ToArray()).Articles.First().Paragraphs[0].Continuation;
+
+            Assert.Single(continuation[0].Formula!.Legend);
+            Assert.Equal(
+                new[] { "Kwotę zaokrągla się do pełnych złotych.", "W – współczynnik stosowany w latach następnych," },
+                continuation.Skip(1).Select(block => block.Text));
+        }
+
+        [Fact]
+        public void SentenceAfterTheFormulaWithoutAColon_IsNotALegend()
+        {
+            // Korpus: 296403_2650204 — „gdzie ZEE oznacza …." to zdanie, nie wprowadzenie do opisów.
+            var blocks = ActWithFormula();
+            blocks[5] = Text("gdzie K oznacza wysokość kary w złotych.");
+            blocks[6] = Text("2. Karę uiszcza się w terminie 14 dni.");
+
+            var continuation = Parse(blocks.Take(7).ToArray()).Articles.First().Paragraphs[0].Continuation;
+
+            Assert.Null(continuation[0].Formula!.LegendIntroduction);
+            Assert.Empty(continuation[0].Formula!.Legend);
+            Assert.Equal("gdzie K oznacza wysokość kary w złotych.", continuation[1].Text);
+        }
+
+        [Fact]
+        public void EquationOpeningAParagraphWithText_IsItsLeadingSymbol()
+        {
+            var legendLine = DocxBlockReader.ToBlock(Word(Equation("Ie") + Run(" – ilość energii elektrycznej")), null);
+            Assert.Equal("Ie", legendLine.LeadingSymbol!.Text);
+            Assert.StartsWith("<math", legendLine.LeadingSymbol.MathMl);
+
+            // Tekst przed równaniem albo sam wzór — akapit nie zaczyna się symbolem.
+            Assert.Null(DocxBlockReader.ToBlock(Word(Run("kwoty ") + Equation("W") + Run(", o której mowa")), null).LeadingSymbol);
+            Assert.Null(DocxBlockReader.ToBlock(Word(Equation("a=b")), null).LeadingSymbol);
         }
 
         [Theory]
@@ -140,7 +235,7 @@ namespace Saga.Core.Tests
             var act = LegalDocumentConverter.Convert(Parse(ActWithFormula())).Elements().Single();
             var paragraph = act.Descendants().First(e => e.Name.LocalName == "ustep");
 
-            Assert.Equal(new[] { "nr", "p", "wzor-mat", "fragment", "fragment" }, paragraph.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal(new[] { "nr", "p", "wzor-mat" }, paragraph.Elements().Select(e => e.Name.LocalName));
 
             var formula = paragraph.Elements().Single(e => e.Name.LocalName == "wzor-mat");
             var math = formula.Elements().Single(e => e.Name.LocalName == "wzor").Elements().Single();
@@ -148,8 +243,48 @@ namespace Saga.Core.Tests
             Assert.Equal("math", math.Name.LocalName);
             Assert.Equal("K=A∙W", math.Value);
 
-            // Wzór nie zostaje drugi raz jako tekst.
-            Assert.DoesNotContain(paragraph.Elements().Where(e => e.Name.LocalName == "fragment"), e => e.Value == "K=A∙W");
+            // Wzór ani jego legenda nie zostają drugi raz jako tekst.
+            Assert.DoesNotContain(paragraph.Descendants(), e => e.Name.LocalName == "fragment");
+        }
+
+        [Fact]
+        public void Legend_IsExportedInsideTheFormula()
+        {
+            var blocks = ActWithFormula().ToList();
+            blocks.Insert(7, new DocumentBlock
+            {
+                Text = "A – współczynnik równy 0,20.",
+                LeadingSymbol = new BlockSymbol("A", $"<math xmlns=\"{MathNamespace}\"><mi>A</mi></math>"),
+            });
+
+            var formula = LegalDocumentConverter.Convert(Parse(blocks.ToArray())).Descendants().Single(e => e.Name.LocalName == "wzor-mat");
+
+            Assert.Equal(new[] { "wzor", "wprowadzenie-do-opisu", "opis", "opis" }, formula.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal("gdzie poszczególne symbole oznaczają:", formula.Elements().ElementAt(1).Value);
+
+            // Symbol zapisany tekstem i symbol będący równaniem; objaśnienie podzielone na zdania.
+            var typed = formula.Elements().ElementAt(2);
+            Assert.Equal(new[] { "symbol-txt", "objasnienie" }, typed.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal("K", typed.Elements().First().Value);
+            Assert.Equal("wysokość kary, wyrażoną w złotych,", typed.Descendants().Single(e => e.Name.LocalName == "zdanie").Value);
+
+            var equation = formula.Elements().ElementAt(3);
+            Assert.Equal(new[] { "symbol-mat", "objasnienie" }, equation.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal("math", equation.Elements().First().Elements().Single().Name.LocalName);
+        }
+
+        [SchemaPlFact]
+        public void FormulaWithALegend_IsSchemaValid_InItsBody()
+        {
+            var blocks = ActWithFormula().ToList();
+            blocks.Insert(7, new DocumentBlock
+            {
+                Text = "A – współczynnik równy 0,20.",
+                LeadingSymbol = new BlockSymbol("A", $"<math xmlns=\"{MathNamespace}\"><mi>A</mi></math>"),
+            });
+
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(Parse(blocks.ToArray())).Elements().First()));
         }
 
         [SchemaPlFact]

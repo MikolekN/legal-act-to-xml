@@ -545,6 +545,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 |---|---|
 | **`ParagraphExtensions`** | Metody rozszerzające `Paragraph` (OpenXml) — bezpieczne pobieranie `StyleId` z null-checkiem na `ParagraphProperties`; `GetFullText` składa tekst akapitu z przebiegów i równań w kolejności dokumentu. |
 | **`OfficeMathMl`** | Równanie Worda (`m:oMath`) jako MathML prezentacyjny (`math` z `msub`, `msup`, `mfrac`, `mrow` z nawiasami, `munderover`, `msqrt`/`mroot`, `mtable`); tekst przebiegu dzieli na `mi`, `mn`, `mo`, przebieg tekstu zwykłego to `mtext`. Wszystkie 1206 równań korpusu dają wyrażenie zgodne ze schematem (miara `CorpusValidator --equations`). `FormulaOf` rozstrzyga, czy akapit jest wzorem (same równania, co najwyżej z interpunkcją) — czytnik DOCX zapisuje wtedy MathML w `DocumentBlock.FormulaMathMl` ([ADR-0038](adr/0038-wzor-w-osobnym-akapicie-to-wzor-mat-z-mathml.md)). |
+| **`FormulaLegend`** | Legenda wzoru: wiersze tuż za wzorem — wprowadzenie („gdzie poszczególne symbole oznaczają:", „w którym …:", „przy czym:") i opisy symboli („I_e – ilość energii …") — trafiają do `ContentFormula.LegendIntroduction` i `Legend`, nie do dalszej treści jednostki. Dwa sygnały: miejsce (ostatnim elementem dalszej treści jest wzór) i kształt wiersza; symbol będący równaniem niesie MathML (`DocumentBlock.LeadingSymbol`). Wiersz, który legendą nie jest, zamyka ją. Wołany z `StructureProcessor.HandleUnknown` i `AmendmentBuilder.AttachText`. |
 | **`OfficeMathText`** | Równanie Worda (`m:oMath`) jako tekst w zapisie liniowym: `E_i`, `x^2`, `a/b`, nawiasy z właściwości równania, operator z granicami (`∑_(i=u)^j`), pierwiastek (`√x`, `√(8&x)`) — [ADR-0037](adr/0037-rownanie-worda-wchodzi-do-tekstu-w-zapisie-liniowym.md). |
 | **`StringExtensions`** | Metody rozszerzające `string` — `CollapseWhitespace()` dla treści jednostek (odstępy zwinięte, półpauza zostaje) i `Sanitize()` dla rozpoznawania rodzaju aktu i nagłówka publikatora (dodatkowo półpauza → dywiz). |
 | **`PolishDates`** | Nazwy miesięcy i parsowanie dat w formie długiej („1 stycznia 2025 r."). Metody `Try*` nie rzucają — data niemożliwa („31 lutego") zwraca `false`. Alternatywa miesięcy jest `const`, bo leksykon jest zamknięty. |
@@ -563,7 +564,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | `EditorialUnits/*XmlConverter` | Artykuł, ustęp, punkt, litera, tiret; `nr` = oznaczenie z indeksem górnym. Artykuł z paragrafami („§") stojący w oddziale to `artykul-kodeksu`, poza oddziałem `artykul`. Jednostka odbiegająca od ZTP (jedna pozycja wyliczenia, poziom pominięty) wychodzi jako `nie-ztp-*`, a punkt i litera niejawne nie mają elementu ([ADR-0023](adr/0023-poziom-pominiety-jako-jednostka-niejawna.md)) |
 | `AmendmentXmlConverter` | Komendy nowelizacji i treść zmiany (`cytat-strukt`) |
 | `CommonPartXmlConverter` | Części wspólne wyliczeń (eId gospodarza z segmentem `czw` — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)) |
-| `EmbeddedContentXmlConverter` | Dalsza treść jednostki tuż za jej `p`: akapit bez oznaczenia jako `fragment`, tabela jako `tabela` ([ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)), wzór w osobnym akapicie jako `wzor-mat` → `wzor` → `mml:math` ([ADR-0038](adr/0038-wzor-w-osobnym-akapicie-to-wzor-mat-z-mathml.md)) |
+| `EmbeddedContentXmlConverter` | Dalsza treść jednostki tuż za jej `p`: akapit bez oznaczenia jako `fragment`, tabela jako `tabela` ([ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)), wzór w osobnym akapicie jako `wzor-mat` → `wzor` → `mml:math` z legendą (`wprowadzenie-do-opisu`, `opis` → `symbol-mat` albo `symbol-txt` + `objasnienie` podzielone na zdania) ([ADR-0038](adr/0038-wzor-w-osobnym-akapicie-to-wzor-mat-z-mathml.md)) |
 | `TemporalDataXmlConverter` | `DaneCzasowe` w metadanych: zdarzenia wejścia w życie i mocy wstecznej z identyfikatorem, pochodzeniem, formułą, klauzulą i jednostkami wyjątku (zakres wyjątku — adresem jednostki cytowanej albo celu komendy w akcie zmienianym); po zbudowaniu treści nadaje elementom z datą atrybut `okres` i dopisuje grupy czasowe ([ADR-0022](adr/0022-daty-aktu-jako-zdarzenia-cyklu-zycia.md)) |
 | `InlineTextXml` | Elementy wewnątrz tekstu powstają w eksporcie, przebiegiem po zbudowanej treści: wskazuje węzły tekstowe, które je przyjmują (`zdanie`, `tytul`, `tekst` oraz tekst załącznika i komórek tabel), i zamienia indeks górny z kanału tekstowego („477[9]") na `sup` |
 | `FootnoteXmlConverter` | Przebieg po zbudowaniu treści: znacznik odnośnika w `zdanie`/`tytul`/`tekst` → `odnosnik` z treścią, kolejne odwołanie → `odsylacz-do-odnosnika` ([ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md)) |
@@ -873,7 +874,7 @@ src/Saga.Model/
 ├── Annex.cs                         # Załącznik aktu: wskazanie aktu, oznaczenie, tytuł, treść
 ├── ContentTable.cs                  # Tabela w treści (wiersze, komórki, scalenia)
 ├── ContentBlock.cs                  # Element treści bez oznaczenia: akapit (także wzór), tabela albo przytoczenie
-├── ContentFormula.cs                # Wzór w osobnym akapicie: wyrażenie w MathML
+├── ContentFormula.cs                # Wzór w osobnym akapicie: wyrażenie w MathML, legenda (FormulaSymbol)
 ├── Quotation.cs                     # Przytoczenie przepisów innego aktu jako jednostki (obwieszczenie TJ)
 ├── Footnote.cs                      # Odnośnik (przypis): numer i treść
 ├── PublisherType.cs                 # Enum typu publikatora
@@ -967,6 +968,7 @@ src/Saga.Core/
     │   ├── QuoteBalanceTracker.cs   # Bilans cudzysłowów dla nowelizacji bez stylów (§ 94 ZTP)
     │   ├── AmendmentCommandParser.cs  # Rozpoznanie rodzaju komendy nowelizacyjnej z treści
     │   ├── DocumentMetadataCollector.cs  # Zbiera rodzaj/datę/przedmiot aktu ze strefy tytułowej
+    │   ├── FormulaLegend.cs           # Wprowadzenie i opisy symboli tuż za wzorem należą do wzoru
     │   ├── ActSignatureParser.cs      # Formuła podpisu za ostatnim przepisem
     │   ├── AnnexBuilder.cs            # Załączniki z bloków za nagłówkiem załącznika
     │   ├── AnnouncementBoundary.cs    # Granica obwieszczenia i ogłaszanego aktu (tekst jednolity)

@@ -42,8 +42,17 @@ namespace Saga.Core.Ingest
         /// </summary>
         public string? FormulaMathMl { get; init; }
 
+        /// <summary>
+        /// Równanie otwierające akapit, po którym stoi tekst — symbol opisywany w wierszu legendy wzoru
+        /// („I_e – ilość energii …"); null, gdy akapit nie zaczyna się równaniem albo jest samym wzorem.
+        /// </summary>
+        public BlockSymbol? LeadingSymbol { get; init; }
+
         public bool IsEmpty => string.IsNullOrWhiteSpace(Text);
     }
+
+    /// <summary>Symbol otwierający akapit: zapis liniowy (początek <see cref="DocumentBlock.Text"/>) i MathML.</summary>
+    public sealed record BlockSymbol(string Text, string MathMl);
 
     /// <summary>Przypis w reprezentacji pośredniej: numer, pod którym stoi w akcie, i akapity jego treści.</summary>
     public sealed record BlockFootnote(string Symbol, IReadOnlyList<string> Paragraphs);

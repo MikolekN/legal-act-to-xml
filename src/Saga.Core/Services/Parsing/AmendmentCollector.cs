@@ -19,6 +19,9 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>MathML akapitu będącego wzorem; tekst pozycji to jego zapis liniowy.</summary>
         public string? FormulaMathMl { get; init; }
+
+        /// <summary>Równanie otwierające akapit (symbol wiersza legendy wzoru).</summary>
+        public Ingest.BlockSymbol? LeadingSymbol { get; init; }
     }
 
     /// <summary>
@@ -98,10 +101,15 @@ namespace Saga.Core.Services.Parsing
         /// Dekoduje metadane stylu przez <see cref="AmendmentStyleDecoder"/>.
         /// </summary>
         /// <param name="formulaMathMl">MathML akapitu, gdy jest wzorem.</param>
-        public void AddParagraph(string text, string? styleId, string? formulaMathMl = null)
+        /// <param name="leadingSymbol">Równanie otwierające akapit, gdy za nim stoi tekst.</param>
+        public void AddParagraph(string text, string? styleId, string? formulaMathMl = null, Ingest.BlockSymbol? leadingSymbol = null)
         {
             var styleInfo = AmendmentStyleDecoder.DecodeByStyleId(styleId);
-            _paragraphs.Add(new CollectedAmendmentParagraph(text, styleId, styleInfo) { FormulaMathMl = formulaMathMl });
+            _paragraphs.Add(new CollectedAmendmentParagraph(text, styleId, styleInfo)
+            {
+                FormulaMathMl = formulaMathMl,
+                LeadingSymbol = leadingSymbol,
+            });
 
             // Bilans cudzysłowów — tylko dla zbierania bezstylowego. Rozbraja wyłącznie styl ZNACZĄCY
             // (nowelizacyjny Z/* lub rozpoznany styl ustawy matki) — domyślny styl edytora

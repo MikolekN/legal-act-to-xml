@@ -409,6 +409,11 @@ namespace Saga.Core.Services.Converters
                 internal const string Element = "wzor-mat";
                 internal const string Expression = "wzor";
                 internal const string MathMlPrefix = "mml";
+                internal const string LegendIntroduction = "wprowadzenie-do-opisu";
+                internal const string Description = "opis";
+                internal const string SymbolAsMath = "symbol-mat";
+                internal const string SymbolAsText = "symbol-txt";
+                internal const string Explanation = "objasnienie";
             }
             internal const string Superscript = "sup";
             internal const string eId = "eId";

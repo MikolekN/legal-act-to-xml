@@ -170,6 +170,7 @@ namespace Saga.Core.Ingest
             {
                 Text = paragraph.GetFullText(footnotes?.Numbers),
                 FormulaMathMl = Helpers.OfficeMathMl.FormulaOf(paragraph)?.ToString(System.Xml.Linq.SaveOptions.DisableFormatting),
+                LeadingSymbol = Helpers.OfficeMathMl.LeadingSymbolOf(paragraph),
                 Footnotes = footnotes?.ReferencedBy(paragraph) ?? [],
                 TableCell = tables?.CellOf(paragraph),
                 StyleId = paragraph.StyleId(),
