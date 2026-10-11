@@ -34,7 +34,7 @@ namespace Saga.Core.Services.Converters
         internal static string RootElement(LegalDocument document)
         {
             if (!document.Articles.Any(article => article.IsSection))
-                return XmlConverterConstants.Act;
+                return StatuteElement(document.Subject, document);
 
             return Code(document) switch
             {
@@ -45,6 +45,33 @@ namespace Saga.Core.Services.Converters
         }
 
         /// <summary>
+        /// Ustawa o tytule „Kodeks …" jest kodeksem; ustawa o zmianie kodeksu — zwykłą ustawą. Element kodeksu
+        /// dostaje akt, którego artykuły stoją w jednostkach systematyzacyjnych (każdy kodeks je ma): artykuł
+        /// wprost w kodeksie ma w schemacie inną budowę niż ta, którą eksport pisze dla ustawy.
+        /// </summary>
+        private static string StatuteElement(string subject, LegalDocument document) =>
+            subject.StartsWith("Kodeks ", StringComparison.Ordinal) && document.Articles.All(InSystematizingUnit)
+                ? XmlConverterConstants.Code
+                : XmlConverterConstants.Act;
+
+        private static bool InSystematizingUnit(BaseEntity unit)
+        {
+            for (var parent = unit.Parent; parent is not null; parent = parent.Parent)
+            {
+                if (parent is Saga.Model.SystematizingUnits.ISystematizingUnit { IsImplicit: false })
+                    return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>Czy element aktu jest korzeniem aktu opartego na paragrafach (z organem i podstawą prawną).</summary>
+        internal static bool IsSectionBased(string actElement) =>
+            actElement is XmlConverterConstants.SectionBasedActs.Regulation
+                or XmlConverterConstants.SectionBasedActs.Resolution
+                or XmlConverterConstants.SectionBasedActs.Order;
+
+        /// <summary>
         /// Element aktu ogłaszanego w załączniku do obwieszczenia — z jego własnego nagłówka i jednostek;
         /// null, gdy rodzaju nie da się nazwać albo akt oparty na paragrafach nie ma żadnej jednostki „§".
         /// </summary>
@@ -52,7 +79,7 @@ namespace Saga.Core.Services.Converters
         {
             var heading = FootnoteMarkers.Remove(document.Announcement?.ActKindLine ?? string.Empty);
             if (ZtpPatterns.StatuteHeaderPattern.IsMatch(heading))
-                return XmlConverterConstants.Act;
+                return StatuteElement(document.Announcement!.ActSubject, document);
 
             if (!document.Articles.Any(article => article.IsSection))
                 return null;

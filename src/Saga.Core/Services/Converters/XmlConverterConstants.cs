@@ -15,6 +15,9 @@ namespace Saga.Core.Services.Converters
         internal const string ELIUrl = "https://eli.gov.pl/";
         internal const string Act = "ustawa";
 
+        /// <summary>Ustawa będąca kodeksem („Kodeks karny") — w schemacie osobny element z artykułami o paragrafach.</summary>
+        internal const string Code = "kodeks";
+
         /// <summary>Akty oparte na paragrafach (§ 124 ZTP): korzeń według rodzaju, treść typu rozporządzenia.</summary>
         internal static class SectionBasedActs
         {

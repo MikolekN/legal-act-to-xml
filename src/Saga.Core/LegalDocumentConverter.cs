@@ -20,11 +20,12 @@ namespace Saga.Core.Services
             // element z własną strefą tytułową (ADR-0031).
             var announcedName = ActKindXml.AnnouncedActElement(document);
             var announced = announcedName is null ? null : document.Announcement;
-            var actName = ActKindXml.RootElement(document);
-            var sectionBased = announced is null && document.Announcement is null && actName != XmlConverterConstants.Act;
-            var actElement = Element(announced is not null
-                ? XmlConverterConstants.Announcements.Element
-                : sectionBased ? actName : XmlConverterConstants.Act);
+            // Akt ogłoszony wprost ma korzeń według rodzaju; obwieszczenie, którego aktu nie da się nazwać,
+            // zostaje przy dotychczasowym korzeniu.
+            var direct = announced is null && document.Announcement is null;
+            var actName = direct ? ActKindXml.RootElement(document) : XmlConverterConstants.Act;
+            var sectionBased = ActKindXml.IsSectionBased(actName);
+            var actElement = Element(announced is not null ? XmlConverterConstants.Announcements.Element : actName);
             rootElement.Add(actElement);
 
             PrepareMetadata(document, actElement);
@@ -90,19 +91,20 @@ namespace Saga.Core.Services
         private static XElement AnnouncedActElement(Announcement announcement, string name, LegalDocument document)
         {
             var act = Element(name);
+            var sectionBased = ActKindXml.IsSectionBased(name);
             if (announcement.AttachedTo.Length > 0)
                 act.Add(Element(XmlConverterConstants.Attachments.AttachedTo, announcement.AttachedTo));
             if (announcement.ActKindLine.Length > 0)
-                act.Add(Element(XmlConverterConstants.ActHeading.Kind, name != XmlConverterConstants.Act
+                act.Add(Element(XmlConverterConstants.ActHeading.Kind, sectionBased
                     ? KindWithoutIssuer(announcement.ActKindLine, announcement.ActIssuerLine)
                     : announcement.ActKindLine));
-            if (name != XmlConverterConstants.Act && announcement.ActIssuerLine.Length > 0)
+            if (sectionBased && announcement.ActIssuerLine.Length > 0)
                 act.Add(Element(XmlConverterConstants.Announcements.Author, announcement.ActIssuerLine));
             if (announcement.ActDateLine.Length > 0)
                 act.Add(Element(XmlConverterConstants.ActHeading.Date, announcement.ActDateLine));
             if (announcement.ActSubject.Length > 0)
                 act.Add(Element(XmlConverterConstants.ActHeading.Subject, announcement.ActSubject));
-            if (name != XmlConverterConstants.Act && document.LegalBasis.Length > 0)
+            if (sectionBased && document.LegalBasis.Length > 0)
                 act.Add(Element(XmlConverterConstants.SectionBasedActs.LegalBasis, document.LegalBasis));
             return act;
         }

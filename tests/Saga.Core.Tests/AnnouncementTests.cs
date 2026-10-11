@@ -240,6 +240,71 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Kodeks
+        // ============================================================
+
+        private static readonly string[] Code =
+        [
+            "USTAWA",
+            "z dnia 6 czerwca 1997 r.",
+            "Kodeks karny",
+            "Rozdział I",
+            "Zasady odpowiedzialności karnej",
+            "Art. 1. § 1. Odpowiedzialności karnej podlega ten tylko, kto popełnia czyn zabroniony.",
+            "§ 2. Nie stanowi przestępstwa czyn zabroniony, którego społeczna szkodliwość jest znikoma.",
+            "Art. 2. Odpowiedzialności karnej podlega ten tylko, na kim ciążył prawny obowiązek.",
+        ];
+
+        [Fact]
+        public void ConsolidatedCode_IsEmbeddedAsACode()
+        {
+            var lines = ConsolidatedText.Take(ActStart + 1).Concat(Code);
+
+            var announcement = LegalDocumentConverter.Convert(Parse(lines)).Elements().Single();
+
+            Assert.Equal("obwieszczenie", announcement.Name.LocalName);
+            var act = Assert.Single(announcement.Elements(), e => e.Name.LocalName == "kodeks");
+            Assert.Equal("Kodeks karny", Child(act, "tytul").Value);
+            Assert.DoesNotContain(announcement.Elements(), e => e.Name.LocalName == "ustawa");
+        }
+
+        [Fact]
+        public void CodeAnnouncedDirectly_HasTheCodeRoot()
+        {
+            var xml = LegalDocumentConverter.Convert(Parse(Code));
+
+            Assert.Equal("kodeks", Assert.Single(xml.Elements()).Name.LocalName);
+        }
+
+        [Fact]
+        public void CodeWithArticlesOutsideSystematizingUnits_KeepsTheStatuteElement()
+        {
+            // Artykuł wprost w kodeksie ma w schemacie inną budowę; taki akt (w praktyce: wycinek) zostaje ustawą.
+            var xml = LegalDocumentConverter.Convert(Parse(Code.Where(line => line != "Rozdział I" && line != "Zasady odpowiedzialności karnej")));
+
+            Assert.Equal("ustawa", Assert.Single(xml.Elements()).Name.LocalName);
+        }
+
+        [Fact]
+        public void StatuteAmendingACode_IsAnOrdinaryStatute()
+        {
+            var lines = Code.ToArray();
+            lines[2] = "o zmianie ustawy – Kodeks karny";
+
+            var xml = LegalDocumentConverter.Convert(Parse(lines));
+
+            Assert.Equal("ustawa", Assert.Single(xml.Elements()).Name.LocalName);
+        }
+
+        [SchemaPlFact]
+        public void Code_IsSchemaValid_InItsBody_DirectlyAndConsolidated()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(Parse(Code)).Elements().First()));
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(Parse(ConsolidatedText.Take(ActStart + 1).Concat(Code))).Elements().First()));
+        }
+
+        // ============================================================
         // Dane czasowe tekstu jednolitego (ADR-0033)
         // ============================================================
 

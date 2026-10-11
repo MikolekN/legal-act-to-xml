@@ -321,6 +321,11 @@ a wersjonowanie zgodne z Semantic Versioning.
     584 z 708, ustawy 240 z 241; treść aktu zgodna w 1984 z 2017. Pokrycie tekstu: rozporządzenia 4 % → 99,6 %
     akapitów, teksty jednolite 99,7 %.
 
+- **Kodeks jako `kodeks`**: ustawa o tytule „Kodeks …" wychodzi pod elementem `kodeks` — wprost albo osadzona
+  w obwieszczeniu tekstu jednolitego (13 tekstów jednolitych kodeksów w korpusie; zgodność ze schematem bez zmian).
+  Ustawa o zmianie kodeksu pozostaje `ustawa`, tak samo kodeks bez jednostek systematyzacyjnych (artykuł wprost
+  w `kodeks` ma w schemacie inną budowę).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

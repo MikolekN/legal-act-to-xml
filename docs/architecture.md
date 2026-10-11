@@ -1096,10 +1096,11 @@ ze strefą tytułową `rodzaj-aktu`, `autor-aktu` (`LegalDocument.IssuerLine`), 
 (`LegalDocument.LegalBasis`). W ustawie „§" zostaje paragrafem kodeksu
 ([ADR-0034](adr/0034-paragraf-jest-jednostka-podstawowa-aktu-wykonawczego.md)).
 
-**Korzeń eksportu.** `LegalDocumentConverter.Convert` pisze `ustawa` albo korzeń aktu opartego na paragrafach,
-a dla tekstu jednolitego —
+**Korzeń eksportu.** `LegalDocumentConverter.Convert` pisze `ustawa`, `kodeks` (ustawa o tytule „Kodeks …",
+której artykuły stoją w jednostkach systematyzacyjnych) albo korzeń aktu opartego na paragrafach, a dla tekstu
+jednolitego —
 `obwieszczenie` (z `autor-aktu`), w nim punkty obwieszczenia (`AnnouncementXmlConverter`: `punkt-OTJ`,
-`podpunkt-OTJ`, `czesc-wspolna-podpunkt-OTJ`), podpis i ogłaszany akt (`ustawa` albo `rozporzadzenie` /
+`podpunkt-OTJ`, `czesc-wspolna-podpunkt-OTJ`), podpis i ogłaszany akt (`ustawa`, `kodeks` albo `rozporzadzenie` /
 `uchwala` / `zarzadzenie` — `ActKindXml.AnnouncedActElement`) z własną strefą tytułową (`zalacznik-do`,
 `rodzaj-aktu`, `data`, `tytul`), jednostkami i załącznikami ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md),
 [ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)).
