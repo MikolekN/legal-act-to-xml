@@ -324,6 +324,11 @@ namespace Saga.Core.Services.Parsing
             {
                 context.Metadata.Seal();
 
+                // Preambuła bywa wyliczeniem myślnikami („– uznając konieczność ochrony …"); akapit z numerem
+                // albo literą preambułą nie jest.
+                if (classification.Kind == ParagraphKind.Tiret && TryAddToPreamble(context, text))
+                    return true;
+
                 Log.Warning("Akapit {Kind} poza kontekstem artykułu (metadane lub pre-art.) — pominięty. Styl: {StyleId}",
                     classification.Kind, sourceStyleId);
                 return false;
@@ -533,6 +538,9 @@ namespace Saga.Core.Services.Parsing
                     return;
                 }
 
+                if (TryAddToPreamble(context, text))
+                    return;
+
                 Log.Warning("Akapit Unknown przed pierwszym artykułem (metadane) — pominięty. " +
                     "Styl: {StyleId}, Tekst: {Text}",
                     sourceStyleId, text.Length > 80 ? text[..80] + "…" : text);
@@ -575,6 +583,28 @@ namespace Saga.Core.Services.Parsing
             Log.Warning("Akapit Unknown pominięty — brak dopasowania do wzorca. " +
                 "Styl: {StyleId}, Tekst: {Text}",
                 sourceStyleId, preview);
+        }
+
+        /// <summary>
+        /// Preambuła: akapit ustawy stojący za przedmiotem aktu, przed pierwszą jednostką — także systematyzacyjną.
+        /// Akt wykonawczy ma w tym miejscu podstawę prawną, nie preambułę; wiersz strefy tytułowej innego aktu
+        /// (granica tekstu jednolitego) preambułą nie jest, podobnie jak adnotacja tekstu jednolitego w nawiasie
+        /// („(oznaczenie rozdziału 1 i tytuł – uchylone)").
+        /// </summary>
+        private static bool TryAddToPreamble(ParsingContext context, string text)
+        {
+            if (context.SectionIsBasicUnit || !context.Metadata.HasSubject || context.PendingHeadingUnit is not null
+                || !context.CurrentPart.IsImplicit || !context.CurrentBook.IsImplicit || !context.CurrentTitle.IsImplicit
+                || !context.CurrentDivision.IsImplicit || !context.CurrentChapter.IsImplicit || !context.Subchapter.IsImplicit
+                || string.IsNullOrWhiteSpace(text) || IsActHeadingLine(text, styleId: null))
+                return false;
+
+            var paragraph = text.Trim();
+            if (paragraph is ['(', .., ')'])
+                return false;
+
+            context.Document.Preamble.Add(paragraph);
+            return true;
         }
 
         /// <summary>Jednostka, w której treści stoi bieżące miejsce dokumentu — najgłębsza otwarta.</summary>

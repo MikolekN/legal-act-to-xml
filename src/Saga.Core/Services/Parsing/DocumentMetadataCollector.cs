@@ -50,6 +50,9 @@ namespace Saga.Core.Services.Parsing
         private bool _kindSeen;
         private bool _sealed;
 
+        /// <summary>Czy strefa tytułowa doszła do przedmiotu aktu — za nim stoi już treść: preambuła albo przepisy.</summary>
+        public bool HasSubject => _subject.Length > 0;
+
         /// <summary>Liczba zebranych wierszy metadanych (diagnostyka/testy).</summary>
         public int CollectedLineCount => _titleParts.Count;
 

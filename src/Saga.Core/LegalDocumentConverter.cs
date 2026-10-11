@@ -1,6 +1,7 @@
 using System.Xml.Linq;
 using Saga.Core.Services.Classify.Document;
 using Saga.Core.Services.Converters;
+using Saga.Core.Services.Parsing;
 using Saga.Model;
 using static Saga.Core.XLinqWrappers;
 
@@ -34,6 +35,10 @@ namespace Saga.Core.Services
 
             PrepareMetadata(document, actElement);
             PrepareHeading(document, actElement, withIssuer: announcement is not null || sectionBased);
+
+            // Preambuła ustawy stoi tuż za tytułem; w tekście jednolitym — za tytułem ogłaszanego aktu.
+            if (direct && !sectionBased)
+                actElement.Add(Preamble(document));
 
             // Podstawa prawna aktu wykonawczego stoi między tytułem a pierwszym paragrafem (§ 121 ZTP);
             // w obwieszczeniu, które aktu nie ogłasza — między tytułem a jego treścią.
@@ -93,6 +98,29 @@ namespace Saga.Core.Services
                 actElement.Add(Element(XmlConverterConstants.ActHeading.Subject, document.Subject));
         }
 
+        /// <summary>
+        /// Preambuła: jeden <c>p</c> na akapit, jak w przykładzie autorów schematu; bez adresu — schemat nie
+        /// daje jej segmentu w eId. Null, gdy akt jej nie ma.
+        /// </summary>
+        private static XElement? Preamble(LegalDocument document)
+        {
+            if (document.Preamble.Count == 0)
+                return null;
+
+            var preamble = Element(XmlConverterConstants.Preamble,
+                new XAttribute(XmlConverterConstants.Contents.GUID, Guid.NewGuid().ToString()));
+            foreach (var paragraph in document.Preamble)
+            {
+                var text = Element(XmlConverterConstants.Contents.TextSection);
+                var order = 0;
+                foreach (var sentence in ParsingFactories.SplitIntoSentences(paragraph))
+                    text.Add(SentenceContext.ToXml(text: sentence.Text, number: ++order));
+                preamble.Add(text);
+            }
+
+            return preamble;
+        }
+
 
         /// <summary>
         /// Akt ogłaszany w załączniku do obwieszczenia: element według jego rodzaju z własną strefą tytułową.
@@ -116,6 +144,8 @@ namespace Saga.Core.Services
                 act.Add(Element(XmlConverterConstants.ActHeading.Subject, announcement.ActSubject));
             if (sectionBased && document.LegalBasis.Length > 0)
                 act.Add(Element(XmlConverterConstants.SectionBasedActs.LegalBasis, document.LegalBasis));
+            if (!sectionBased)
+                act.Add(Preamble(document));
             return act;
         }
 

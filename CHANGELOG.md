@@ -512,6 +512,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   który niczego nie zamyka — dalszą treścią przepisu. Przedtem wszystkie trzy ginęły z modelu i eksportu.
   - W korpusie: 70 dokumentów; 90 części wspólnych i 20 akapitów dalszej treści więcej, 10 odnośników odzyskanych;
     zgubionych akapitów w tekstach jednolitych 230 → 137. Zgodność ze schematem bez zmian.
+- **Preambuła ustawy**: akapity między tytułem a pierwszą jednostką („W trosce o …", „– uznając, że …", „uchwala się,
+  co następuje:") trafiają do `LegalDocument.Preamble` i wychodzą jako `preambula` tuż za tytułem — jeden `p` na
+  akapit, jak w przykładzie autorów schematu; w tekście jednolitym preambuła stoi w ogłaszanym akcie. Przedtem
+  ginęły jako akapity sprzed pierwszego artykułu.
+  - W korpusie: 23 teksty jednolite ustaw, 61 akapitów; zgubionych akapitów w tekstach jednolitych 137 → 79.
+    Zgodność ze schematem bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

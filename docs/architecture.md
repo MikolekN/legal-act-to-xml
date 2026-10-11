@@ -30,7 +30,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `EditorialUnits/` | Jednostki redakcyjne: `Article`, `Paragraph`, `Point`, `Letter`, `Tiret`, `CommonPart` |
 | `SystematizingUnits/` | Jednostki systematyzujące: `Part`, `Book`, `Title`, `Division`, `Chapter`, `Subchapter` |
 | `BaseEntity.cs` | Abstrakcyjna klasa bazowa z wspólnymi właściwościami (Guid, Number, ContentText, Parent, eId) |
-| `LegalDocument.cs` | Korzeń modelu — wrapper całego aktu prawnego z metadanymi, hierarchią i `Classification` (`DocumentClassificationResult?`, ustawiane po budowie modelu) |
+| `LegalDocument.cs` | Korzeń modelu — wrapper całego aktu prawnego z metadanymi, hierarchią i `Classification` (`DocumentClassificationResult?`, ustawiane po budowie modelu); preambuła ustawy — akapity między tytułem a pierwszą jednostką (`Preamble`, eksport `preambula`) |
 | `EntityNumber.cs` | Model numeru encji z rozbiciem na: `NumericPart`, `LexicalPart`, `Superscript` |
 | `Amendment.cs` | Model nowelizacji (typ operacji, treść, cel, data wejścia w życie) |
 | `AmendmentContent.cs` | Treść nowelizacji — hierarchiczny fragment aktu (artykuły, ustępy, punkty...) |
@@ -819,6 +819,9 @@ Encje implicit:
   myślnika na początku — styl i miejsce to dwa zgodne sygnały (`StructureProcessor.TryHandleWrapUp`); kolejny taki
   akapit za wyliczeniem już zamkniętym jest dalszą treścią części wspólnej (`fragment` w `czesc-wspolna-*`),
   a akapit, który niczego nie zamyka, przechodzi drogą akapitu bez oznaczenia — nic nie ginie
+- Akapit ustawy stojący za przedmiotem aktu, przed pierwszą jednostką (także systematyzacyjną), jest preambułą
+  (`StructureProcessor.TryAddToPreamble` → `LegalDocument.Preamble`); akt wykonawczy ma w tym miejscu podstawę
+  prawną, a akapit z numerem albo adnotacja w nawiasie preambułą nie są
 - Sankcja karna w osobnym akapicie (styl `S_KARN`, „podlega …") domyka zdanie przepisu, a po wyliczeniu jest jego częścią
   wspólną (`StructureProcessor.TryHandleSanction`; w cytacie `AmendmentBuilder`) — rozpoznają ją dwa zgodne sygnały z trzech:
   styl, początek „podlega" i niedokończone zdanie przed nią

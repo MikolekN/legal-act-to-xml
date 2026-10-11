@@ -47,6 +47,9 @@ namespace Saga.Core.Services.Converters
         }
         internal const string ActEnclavesAttribute = "enclaves";
 
+        /// <summary>Preambuła ustawy — między tytułem a pierwszą jednostką.</summary>
+        internal const string Preamble = "preambula";
+
         /// <summary>Tabele (grupa-tabeli: tytul-tabeli? + tabela).</summary>
         internal static class Table
         {

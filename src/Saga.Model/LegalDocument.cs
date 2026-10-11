@@ -79,6 +79,12 @@ namespace Saga.Model
         public string DateLine { get; set; } = string.Empty;
 
         /// <summary>
+        /// Preambuła ustawy: akapity między tytułem a pierwszą jednostką („W trosce o …", „uznając, że …"),
+        /// w kolejności dokumentu; pusta, gdy akt jej nie ma.
+        /// </summary>
+        public List<string> Preamble { get; set; } = new();
+
+        /// <summary>
         /// Podstawa prawna aktu wykonawczego (§ 121 ZTP): „Na podstawie art. … zarządza się, co następuje:";
         /// pusta dla ustawy i gdy nierozpoznana.
         /// </summary>
