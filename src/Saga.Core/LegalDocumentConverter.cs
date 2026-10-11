@@ -21,23 +21,27 @@ namespace Saga.Core.Services
             // element z własną strefą tytułową (ADR-0031).
             var announcedName = ActKindXml.AnnouncedActElement(document);
             var announced = announcedName is null ? null : document.Announcement;
+            // Obwieszczenie, które aktu nie ogłasza (stawki, wskaźniki, wolne stanowiska): korzeniem jest ono samo.
+            var plain = document.Announcement is { AnnouncesAct: false } ? document.Announcement : null;
+            var announcement = announced ?? plain;
             // Akt ogłoszony wprost ma korzeń według rodzaju; obwieszczenie, którego aktu nie da się nazwać,
             // zostaje przy dotychczasowym korzeniu.
-            var direct = announced is null && document.Announcement is null;
+            var direct = document.Announcement is null;
             var actName = direct ? ActKindXml.RootElement(document) : XmlConverterConstants.Act;
             var sectionBased = ActKindXml.IsSectionBased(actName);
-            var actElement = Element(announced is not null ? XmlConverterConstants.Announcements.Element : actName);
+            var actElement = Element(announcement is not null ? XmlConverterConstants.Announcements.Element : actName);
             rootElement.Add(actElement);
 
             PrepareMetadata(document, actElement);
-            PrepareHeading(document, actElement, withIssuer: announced is not null || sectionBased);
+            PrepareHeading(document, actElement, withIssuer: announcement is not null || sectionBased);
 
-            // Podstawa prawna aktu wykonawczego stoi między tytułem a pierwszym paragrafem (§ 121 ZTP).
-            if (sectionBased && document.LegalBasis.Length > 0)
+            // Podstawa prawna aktu wykonawczego stoi między tytułem a pierwszym paragrafem (§ 121 ZTP);
+            // w obwieszczeniu, które aktu nie ogłasza — między tytułem a jego treścią.
+            if ((sectionBased || plain is not null) && document.LegalBasis.Length > 0)
                 actElement.Add(Element(XmlConverterConstants.SectionBasedActs.LegalBasis, document.LegalBasis));
 
-            if (announced is not null)
-                actElement.Add(AnnouncementXmlConverter.Points(announced));
+            if (announcement is not null)
+                actElement.Add(AnnouncementXmlConverter.Points(announcement));
 
             var body = announced is null ? actElement : AnnouncedActElement(announced, announcedName!, document);
 
@@ -46,7 +50,7 @@ namespace Saga.Core.Services
 
             // Podpis pod obwieszczeniem, którego aktu eksport nie niesie (tekst jednolity rozporządzenia), nie ma
             // gdzie stanąć: dotychczasowy korzeń nie jest obwieszczeniem.
-            if (document.Signature is { } signature && (announced is not null || document.Announcement is null))
+            if (document.Signature is { } signature && (announcement is not null || document.Announcement is null))
             {
                 actElement.Add(SignatureXmlConverter.ToXml(signature));
                 actElement.Add(document.CoSignatures.Select(SignatureXmlConverter.ToXml));

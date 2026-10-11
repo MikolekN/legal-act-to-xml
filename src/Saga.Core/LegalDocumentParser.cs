@@ -109,15 +109,18 @@ namespace Saga.Core
 
             var subchapter = GetDefaultSubchapter(document);
 
+            // Tekst jednolity: bloki sprzed wiersza „Załącznik do obwieszczenia …" są treścią obwieszczenia,
+            // nie aktu, który ono ogłasza. Obwieszczenie, które aktu nie ogłasza, jest obwieszczeniem w całości:
+            // za tym wierszem stoi jego załącznik.
+            var layout = AnnouncementBoundary.Describe(blocks);
+            var actStart = layout.IsPlainAnnouncement ? -1 : layout.AnnexStart;
+
             var context = new ParsingContext(document, subchapter)
             {
                 SectionIsBasicUnit = Services.UnitReferences.SectionSignRole.IsBasicUnit(classification),
+                IsPlainAnnouncement = layout.IsPlainAnnouncement,
             };
             var orchestrator = new ParserOrchestrator();
-
-            // Tekst jednolity: bloki sprzed wiersza „Załącznik do obwieszczenia …" są treścią obwieszczenia,
-            // nie aktu, który ono ogłasza.
-            var actStart = AnnouncementBoundary.Find(blocks);
 
             for (var i = 0; i < blocks.Count; i++)
             {
@@ -126,7 +129,14 @@ namespace Saga.Core
                 if (blocks[i] is not { } block)
                     continue;
 
-                if (i < actStart)
+                if (layout.IsPlainAnnouncement)
+                {
+                    if (layout.AnnexStart < 0 || i < layout.AnnexStart)
+                        orchestrator.CollectAnnouncementBlock(block, context);
+                    else
+                        orchestrator.CollectAnnouncementAnnexBlock(block, context);
+                }
+                else if (i < actStart)
                     orchestrator.CollectAnnouncementBlock(block, context);
                 else if (i == actStart)
                     orchestrator.BeginAnnouncedAct(block, context);

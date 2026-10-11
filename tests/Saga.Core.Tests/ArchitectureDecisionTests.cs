@@ -1285,6 +1285,39 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0043: obwieszczenie, które nie ogłasza aktu, jest korzeniem
+        // ============================================================
+
+        [Fact]
+        public void Adr0043_AnnouncementThatAnnouncesNoAct_IsTheRoot_AndItsAnnexIsNotAnAct()
+        {
+            string[] lines =
+            [
+                "OBWIESZCZENIE",
+                "MINISTRA INFRASTRUKTURY",
+                "z dnia 25 lipca 2025 r.",
+                "w sprawie wysokości stawki opłaty legalizacyjnej",
+                "Na podstawie art. 190 ust. 9 ustawy z dnia 20 lipca 2017 r. – Prawo wodne (Dz. U. z 2025 r. poz. 960) ogłasza się stawkę opłaty w załączniku do obwieszczenia.",
+                "Minister Infrastruktury: P. Koperski",
+                "Załącznik do obwieszczenia Ministra Infrastruktury z dnia 25 lipca 2025 r. (M.P. poz. 702)",
+                "Stawka opłaty legalizacyjnej wynosi 1125,64 zł.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Załącznik nie zaczyna się rodzajem aktu, a przedmiot nie mówi o tekście jednolitym: aktu nie ma.
+            Assert.False(document.Announcement!.AnnouncesAct);
+            Assert.Single(document.Annexes);
+
+            var root = LegalDocumentConverter.Convert(document).Elements().Single();
+            Assert.Equal("obwieszczenie", root.Name.LocalName);
+            Assert.Equal(
+                new[] { "metadane", "rodzaj-aktu", "autor-aktu", "data", "tytul", "podstawa-prawna", "organ-podpisujacy", "zalacznik" },
+                root.Elements().Select(e => e.Name.LocalName));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

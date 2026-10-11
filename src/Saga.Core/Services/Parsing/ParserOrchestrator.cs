@@ -231,6 +231,18 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Blok za wierszem „Załącznik do obwieszczenia …" w obwieszczeniu, które aktu nie ogłasza: treść
+        /// załącznika samego obwieszczenia.
+        /// </summary>
+        public void CollectAnnouncementAnnexBlock(DocumentBlock block, ParsingContext context)
+        {
+            if (block.Role is BlockRole.FootnoteText or BlockRole.JournalHeader)
+                return;
+
+            CollectAnnexBlock(block, context);
+        }
+
+        /// <summary>
         /// Wiersz „Załącznik do obwieszczenia …": koniec obwieszczenia, początek aktu, który ono ogłasza.
         /// </summary>
         public void BeginAnnouncedAct(DocumentBlock block, ParsingContext context)
@@ -265,9 +277,16 @@ namespace Saga.Core.Services.Parsing
             // zebrana za granicą należy do ogłaszanego aktu.
             (context.AnnouncementMetadata ?? context.Metadata).ApplyTo(context.Document);
 
-            context.Document.Annexes = AnnexBuilder.Build(context.AnnexBlocks);
+            context.Document.Annexes = AnnexBuilder.Build(context.AnnexBlocks, ofAnnouncement: context.IsPlainAnnouncement);
 
-            if (context.AnnouncementMetadata is not null)
+            if (context.IsPlainAnnouncement)
+            {
+                var announcement = AnnouncementUnits.Build(context.AnnouncementBlocks, context.Document, context.SectionIsBasicUnit);
+                announcement.AnnouncesAct = false;
+                AnnouncementUnits.TakeLegalBasis(announcement, context.Document);
+                context.Document.Announcement = announcement;
+            }
+            else if (context.AnnouncementMetadata is not null)
             {
                 var announcement = AnnouncementUnits.Build(context.AnnouncementBlocks, context.Document, context.SectionIsBasicUnit);
                 announcement.AttachedTo = context.AnnouncedActAttachedTo;

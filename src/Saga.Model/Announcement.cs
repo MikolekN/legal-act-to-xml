@@ -6,8 +6,9 @@ using Saga.Model.EditorialUnits;
 namespace Saga.Model
 {
     /// <summary>
-    /// Obwieszczenie w sprawie ogłoszenia tekstu jednolitego: to, co stoi przed aktem ogłaszanym w załączniku —
-    /// punkty obwieszczenia, przytoczone przepisy, podpis. Nie należy do struktury ogłaszanego aktu.
+    /// Obwieszczenie: jego własna treść — punkty, przytoczone przepisy, podpis. Obwieszczenie w sprawie
+    /// ogłoszenia tekstu jednolitego stoi przed aktem ogłaszanym w załączniku i nie należy do jego struktury;
+    /// obwieszczenie, które aktu nie ogłasza (stawki, wskaźniki, wolne stanowiska), jest całym dokumentem.
     /// Nagłówek obwieszczenia (rodzaj, organ, data, przedmiot) niesie <see cref="LegalDocument"/>;
     /// strefę tytułową ogłaszanego aktu — to obwieszczenie.
     /// </summary>
@@ -24,6 +25,12 @@ namespace Saga.Model
         /// innego rodzaju z załącznikiem. Tekst jednolity nie wchodzi w życie — jest ujednoliceniem.
         /// </summary>
         public bool IsConsolidatedText { get; set; }
+
+        /// <summary>
+        /// Czy obwieszczenie ogłasza akt w załączniku. Bez niego załączniki dokumentu są załącznikami samego
+        /// obwieszczenia („Załącznik do obwieszczenia Ministra … — wykaz jednostek"), a nie aktem.
+        /// </summary>
+        public bool AnnouncesAct { get; set; } = true;
 
         /// <summary>Wiersz otwierający ogłaszany akt („Załącznik do obwieszczenia … (Dz. U. poz. 1094)").</summary>
         public string AttachedTo { get; set; } = string.Empty;

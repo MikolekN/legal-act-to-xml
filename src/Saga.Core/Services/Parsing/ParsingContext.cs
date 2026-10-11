@@ -148,6 +148,12 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Kolektor nagłówka obwieszczenia, odstawiony na granicy ogłaszanego aktu; null poza tekstem jednolitym.</summary>
         public DocumentMetadataCollector? AnnouncementMetadata { get; private set; }
 
+        /// <summary>
+        /// Dokument jest obwieszczeniem, które nie ogłasza aktu: cała treść jest treścią obwieszczenia,
+        /// a załączniki — jego załącznikami.
+        /// </summary>
+        public bool IsPlainAnnouncement { get; init; }
+
         /// <summary>Wiersz „Załącznik do obwieszczenia …" otwierający ogłaszany akt.</summary>
         public string AnnouncedActAttachedTo { get; private set; } = string.Empty;
 

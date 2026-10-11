@@ -477,6 +477,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   odwołania do nich też zostawały tekstem.
   - W korpusie: 1233 odnośniki więcej w 951 dokumentach (12 325 → 13 558) i 121 odsyłaczy do nich; znaczników
     zostających w tekście 1564 → 246. Zgodność ze schematem bez zmian.
+- **Obwieszczenie, które nie ogłasza aktu** ([ADR-0043](docs/adr/0043-obwieszczenie-ktore-nie-oglasza-aktu-jest-korzeniem.md)):
+  obwieszczenie o stawkach, wskaźnikach, wykazach albo wolnych stanowiskach wychodzi pod korzeniem `obwieszczenie`
+  z organem wydającym, podstawą prawną („Na podstawie art. … ogłasza się …"), podpisem i własnymi załącznikami
+  („Załącznik do obwieszczenia Ministra … z dnia …"). Przedtem eksport pisał pusty element `ustawa`, a wiersz
+  załącznika otwierał „ogłaszany akt", którego nie było. O tym, czy obwieszczenie ogłasza akt, rozstrzyga jego
+  przedmiot albo rodzaj aktu tuż za wierszem załącznika (`AnnouncementBoundary.Describe`).
+  - W korpusie: 280 dokumentów; zgodnych ze schematem 1685 → 1915 z 2321; pokrycie tekstu obwieszczeń 10 % → 83 %.
+    Treść poza podstawą prawną (wyliczenie, dalsze akapity) nie jest jeszcze eksportowana.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

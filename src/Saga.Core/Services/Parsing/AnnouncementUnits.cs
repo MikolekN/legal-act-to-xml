@@ -94,9 +94,13 @@ namespace Saga.Core.Services.Parsing
                     continue;
                 }
 
-                if (document.Signature is null && ActSignatureParser.TryParse(text) is { } signature)
+                // Formuła podpisu; obwieszczenie wydane wspólnie ma ich kilka.
+                if (ActSignatureParser.TryParse(text) is { } signature)
                 {
-                    document.Signature = signature;
+                    if (document.Signature is null)
+                        document.Signature = signature;
+                    else
+                        document.CoSignatures.Add(signature);
                     continue;
                 }
 
@@ -147,6 +151,27 @@ namespace Saga.Core.Services.Parsing
 
                 AttachAsText(paragraphs);
             }
+        }
+
+        /// <summary>
+        /// Podstawa prawna obwieszczenia, które nie ogłasza aktu: pierwszy akapit jego treści („Na podstawie
+        /// art. … ogłasza się …") — jak w akcie wykonawczym. Akapit otwierający wyliczenie („… ogłasza się
+        /// następujące stawki:" i „1) …") jest wprowadzeniem do tego wyliczenia i zostaje z nim.
+        /// </summary>
+        internal static void TakeLegalBasis(Announcement announcement, LegalDocument document)
+        {
+            if (document.LegalBasis.Length > 0
+                || announcement.Content.FirstOrDefault()?.Text is not { } first
+                || !Classify.Document.ZtpPatterns.LegalBasisPattern.IsMatch(first))
+                return;
+
+            if (announcement.Content.Count > 1
+                && announcement.Content[1].Text is { } next
+                && Classify.UnitDesignation.LooksDesignated(next))
+                return;
+
+            document.LegalBasis = first;
+            announcement.Content.RemoveAt(0);
         }
 
         /// <summary>

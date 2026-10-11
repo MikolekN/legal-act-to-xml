@@ -19,6 +19,13 @@ namespace Saga.Core.Services.Parsing
             @"^Załącznik(?<plural>i)?(?:\s+nr\s+(?<number>\d+[a-z]*))?\s+do\s+(?:ustawy|rozporządzenia|uchwały|zarządzenia)\b[^()]{0,120}?\bz\s+dnia\b",
             RegexOptions.Compiled);
 
+        // Załącznik obwieszczenia, które nie ogłasza aktu („Załącznik do obwieszczenia Ministra Klimatu
+        // i Środowiska z dnia …", „Załącznik nr 2 do obwieszczenia …") — tylko tam, gdzie granicę rozstrzygnięto
+        // już na rzecz obwieszczenia (<see cref="AnnouncementBoundary.Layout"/>).
+        private static readonly Regex AttachedToAnnouncement = new(
+            @"^Załącznik(?<plural>i)?(?:\s+nr\s+(?<number>\d+[a-z]*))?\s+do\s+obwieszczenia\b[^()]{0,160}?\bz\s+dnia\b",
+            RegexOptions.Compiled);
+
         // „Załącznik nr 4a" w osobnym wierszu; za numerem najwyżej znacznik odnośnika („Załącznik nr 2[5)]")
         // i dopisek w nawiasie („Załącznik nr 3 (uchylony)") — dopisek jest już treścią załącznika.
         // Zdanie zaczynające się tak samo to treść.
@@ -32,8 +39,10 @@ namespace Saga.Core.Services.Parsing
 
         private static readonly string[] TitleStyles = ["TYTZAL", "TYTTABELI"];
 
-        internal static List<Annex> Build(IReadOnlyList<DocumentBlock> blocks)
+        /// <param name="ofAnnouncement">Załączniki obwieszczenia: wskazaniem jest „Załącznik do obwieszczenia …".</param>
+        internal static List<Annex> Build(IReadOnlyList<DocumentBlock> blocks, bool ofAnnouncement = false)
         {
+            var header = ofAnnouncement ? AttachedToAnnouncement : AttachedTo;
             var annexes = new List<Annex>();
             var pendingAttachedTo = new List<string>();
             Annex? current = null;
@@ -64,7 +73,7 @@ namespace Saga.Core.Services.Parsing
 
                 var text = block.Text.CollapseWhitespace().Trim();
 
-                if (AttachedTo.Match(text) is { Success: true } attached)
+                if (header.Match(text) is { Success: true } attached)
                 {
                     current = null;
                     pendingAttachedTo.Add(text);

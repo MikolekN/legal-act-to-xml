@@ -317,8 +317,11 @@ namespace Saga.Core.Tests
 
             var metadata = xml.Descendants().First(e => e.Name.LocalName == "metadane");
             Assert.Equal("OBW", Child(metadata, "Rodzaj"));
-            Assert.StartsWith("Obwieszczenie Ministra Rodziny, Pracy i Polityki Społecznej",
-                xml.Descendants().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
+
+            // Korzeniem jest obwieszczenie: rodzaj i organ stoją w nim osobno.
+            Assert.Equal("Obwieszczenie", xml.Descendants().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
+            Assert.StartsWith("Ministra Rodziny, Pracy i Polityki Społecznej",
+                xml.Descendants().Single(e => e.Name.LocalName == "autor-aktu").Value);
         }
 
         [Fact]
