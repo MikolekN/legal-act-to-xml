@@ -19,6 +19,12 @@ namespace Saga.Model
         /// <summary>Skrót podpunktu obwieszczenia w eId (<c>pkt_1__ppkt_2</c>) — ADR-0032.</summary>
         public const string SubPointEIdPrefix = "ppkt";
 
+        /// <summary>
+        /// Czy obwieszczenie ogłasza tekst jednolity („w sprawie ogłoszenia jednolitego tekstu …"), a nie akt
+        /// innego rodzaju z załącznikiem. Tekst jednolity nie wchodzi w życie — jest ujednoliceniem.
+        /// </summary>
+        public bool IsConsolidatedText { get; set; }
+
         /// <summary>Wiersz otwierający ogłaszany akt („Załącznik do obwieszczenia … (Dz. U. poz. 1094)").</summary>
         public string AttachedTo { get; set; } = string.Empty;
 

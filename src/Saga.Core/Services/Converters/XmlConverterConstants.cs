@@ -138,6 +138,7 @@ namespace Saga.Core.Services.Converters
                 internal const string Kind = "rodzaj";
                 internal const string KindEntryIntoForce = "wejscie-w-zycie";
                 internal const string KindRetroactivity = "stosowanie-z-moca-wsteczna";
+                internal const string KindConsolidation = "ujednolicenie";
                 internal const string Origin = "pochodzenie";
                 internal const string OriginComputed = "domyslne-z-aktu";
                 internal const string OriginRead = "odczytane";

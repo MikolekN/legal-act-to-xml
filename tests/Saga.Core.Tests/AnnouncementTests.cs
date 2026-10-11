@@ -238,6 +238,52 @@ namespace Saga.Core.Tests
             Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
         }
 
+        // ============================================================
+        // Dane czasowe tekstu jednolitego (ADR-0033)
+        // ============================================================
+
+        private static XElement ExportWithJournalHeader()
+        {
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 11 sierpnia 2025 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 1094", Role = BlockRole.JournalHeader },
+            };
+            blocks.AddRange(ConsolidatedText.Select(line => Block(line)));
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            return LegalDocumentConverter.Convert(document);
+        }
+
+        [Fact]
+        public void ConsolidatedText_HasOneConsolidationEvent_AndNoUnitDates()
+        {
+            var xml = ExportWithJournalHeader();
+            const string eventId = "zdarz_ujednolicenie_2025-08-11_DU-2025-1094_domyslne";
+
+            // „Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia" w art. 2 mówi o ogłoszeniu ustawy,
+            // nie obwieszczenia — z daty dokumentu nie wolno wyliczać wejścia w życie.
+            var lifecycleEvent = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "Zdarzenie");
+            Assert.Equal(eventId, lifecycleEvent.Attribute("id")!.Value);
+            Assert.Equal("ujednolicenie", lifecycleEvent.Attribute("rodzaj")!.Value);
+            Assert.Equal("2025-08-11", lifecycleEvent.Attribute("data")!.Value);
+
+            var group = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "GrupaCzasowa");
+            Assert.Equal($"okr_ujednolicenie.{eventId}", group.Attribute("id")!.Value);
+            Assert.Equal("true", group.Attribute("glowna")!.Value);
+            var interval = Assert.Single(group.Elements());
+            Assert.Equal("ujednolicenie", interval.Attribute("rodzaj")!.Value);
+            Assert.Equal(eventId, interval.Attribute("od")!.Value);
+
+            Assert.DoesNotContain(xml.Descendants(), e => e.Attribute("wejscie-w-zycie") != null || e.Attribute("okres") != null);
+        }
+
+        [SchemaPlFact]
+        public void ConsolidatedStatute_IsSchemaValid_AsAWhole()
+        {
+            Assert.Empty(SchemaPl.Validator.Validate(ExportWithJournalHeader()));
+        }
+
         [Theory]
         [InlineData("o Policji")]
         [InlineData("o Państwowej Straży Pożarnej[1)]")]

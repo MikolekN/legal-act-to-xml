@@ -104,6 +104,11 @@ namespace Saga.Core.Services.Converters
                     new XAttribute(XmlConverterConstants.Metadata.Temporal.Kind, XmlConverterConstants.Metadata.Temporal.IntervalInForce),
                     new XAttribute(XmlConverterConstants.Metadata.Temporal.IntervalFrom, entry)));
 
+            if (group.ConsolidationEventId is { } consolidation)
+                element.Add(Element(XmlConverterConstants.Metadata.Temporal.Interval,
+                    new XAttribute(XmlConverterConstants.Metadata.Temporal.Kind, XmlConverterConstants.Metadata.Temporal.KindConsolidation),
+                    new XAttribute(XmlConverterConstants.Metadata.Temporal.IntervalFrom, consolidation)));
+
             return element;
         }
 
@@ -111,9 +116,12 @@ namespace Saga.Core.Services.Converters
         {
             var element = Element(XmlConverterConstants.Metadata.Temporal.Event,
                 new XAttribute(XmlConverterConstants.Metadata.Temporal.Id, lifecycleEvent.Id),
-                new XAttribute(XmlConverterConstants.Metadata.Temporal.Kind, lifecycleEvent.Kind == LifecycleEventKind.EntryIntoForce
-                    ? XmlConverterConstants.Metadata.Temporal.KindEntryIntoForce
-                    : XmlConverterConstants.Metadata.Temporal.KindRetroactivity),
+                new XAttribute(XmlConverterConstants.Metadata.Temporal.Kind, lifecycleEvent.Kind switch
+                {
+                    LifecycleEventKind.EntryIntoForce => XmlConverterConstants.Metadata.Temporal.KindEntryIntoForce,
+                    LifecycleEventKind.Consolidation => XmlConverterConstants.Metadata.Temporal.KindConsolidation,
+                    _ => XmlConverterConstants.Metadata.Temporal.KindRetroactivity,
+                }),
                 new XAttribute(XmlConverterConstants.Metadata.Temporal.Origin, lifecycleEvent.FromFormula
                     ? XmlConverterConstants.Metadata.Temporal.OriginComputed
                     : XmlConverterConstants.Metadata.Temporal.OriginRead),

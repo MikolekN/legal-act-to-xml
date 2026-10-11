@@ -9,6 +9,9 @@ namespace Saga.Core.Services.EntryIntoForce
     {
         EntryIntoForce,
         Retroactivity,
+
+        /// <summary>Ujednolicenie: ogłoszenie tekstu jednolitego — jedyne zdarzenie takiego dokumentu.</summary>
+        Consolidation,
     }
 
     /// <summary>
@@ -48,7 +51,7 @@ namespace Saga.Core.Services.EntryIntoForce
     /// poprzedzony stosowaniem z mocą wsteczną, jeśli jednostka ją ma. Jednostka wskazuje grupę
     /// atrybutem <c>okres</c>.
     /// </summary>
-    internal sealed record TimeGroup(string Id, string? EntryEventId, string? RetroactiveEventId);
+    internal sealed record TimeGroup(string Id, string? EntryEventId, string? RetroactiveEventId, string? ConsolidationEventId = null);
 
     /// <summary>
     /// Zdarzenia cyklu życia aktu odczytane z klauzuli wejścia w życie (ADR-0022): jedno na każdą różną
@@ -61,6 +64,22 @@ namespace Saga.Core.Services.EntryIntoForce
         {
             var info = document.EntryIntoForce;
             var journal = JournalKey(document.SourceJournal);
+
+            // Tekst jednolity ma jedno zdarzenie — ujednolicenie w dniu ogłoszenia obwieszczenia.
+            if (document.Announcement is { IsConsolidatedText: true })
+            {
+                return document.AnnouncementDate is { } announced
+                    ? [new LifecycleEvent
+                    {
+                        Id = EventId(LifecycleEventKind.Consolidation, announced, journal, fromFormula: true),
+                        Kind = LifecycleEventKind.Consolidation,
+                        Date = announced,
+                        FromFormula = true,
+                        IsGeneral = true,
+                    }]
+                    : [];
+            }
+
             var events = new Dictionary<string, LifecycleEvent>(StringComparer.Ordinal);
 
             if (document.EffectiveDate != default)
@@ -108,6 +127,9 @@ namespace Saga.Core.Services.EntryIntoForce
         /// </summary>
         internal static TimeGroup? GroupFor(IReadOnlyList<LifecycleEvent> events, DateTime entry, DateTime retroactive)
         {
+            if (events is [{ Kind: LifecycleEventKind.Consolidation } consolidation])
+                return entry == default && retroactive == default ? ConsolidationGroup(consolidation) : null;
+
             var entryEvent = EventOn(events, LifecycleEventKind.EntryIntoForce, entry);
             var retroactiveEvent = EventOn(events, LifecycleEventKind.Retroactivity, retroactive);
 
@@ -120,6 +142,10 @@ namespace Saga.Core.Services.EntryIntoForce
             };
         }
 
+        /// <summary>Grupa tekstu jednolitego: „okr_ujednolicenie.&lt;zdarzenie&gt;", jak w przykładzie autorów schematu.</summary>
+        private static TimeGroup ConsolidationGroup(LifecycleEvent consolidation) =>
+            new($"okr_ujednolicenie.{consolidation.Id}", null, null, consolidation.Id);
+
         /// <summary>Zdarzenie danego rodzaju w danym dniu; przy dwóch pochodzeniach tej samej daty — reguły ogólnej.</summary>
         private static LifecycleEvent? EventOn(IReadOnlyList<LifecycleEvent> events, LifecycleEventKind kind, DateTime date) =>
             date == default
@@ -131,7 +157,12 @@ namespace Saga.Core.Services.EntryIntoForce
         {
             var parts = new List<string>
             {
-                kind == LifecycleEventKind.EntryIntoForce ? "zdarz_wejscie" : "zdarz_moc-wsteczna",
+                kind switch
+                {
+                    LifecycleEventKind.EntryIntoForce => "zdarz_wejscie",
+                    LifecycleEventKind.Consolidation => "zdarz_ujednolicenie",
+                    _ => "zdarz_moc-wsteczna",
+                },
                 date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
             };
             if (journal is not null)

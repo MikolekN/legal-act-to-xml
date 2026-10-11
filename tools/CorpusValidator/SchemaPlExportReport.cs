@@ -45,7 +45,7 @@ internal static class SchemaPlExportReport
 		var validator = SchemaPlValidator.TryLoad(Directory.GetCurrentDirectory(), out var schemaSkipReason);
 
 		var files = EntryIntoForceReport.EnumerateDistinct(corpusRoot).ToList();
-		int converted = 0, conversionErrors = 0, undated = 0, datedTotal = 0, foreignDates = 0;
+		int converted = 0, conversionErrors = 0, undated = 0, datedTotal = 0, foreignDates = 0, consolidated = 0;
 		int schemaValid = 0, schemaInvalid = 0, bodyValid = 0, bodyInvalid = 0;
 		var schemaProblems = new Dictionary<string, (int Hits, HashSet<string> Files, string Sample)>();
 		var bodyProblems = new Dictionary<string, (int Hits, HashSet<string> Files, string Sample)>();
@@ -95,6 +95,14 @@ internal static class SchemaPlExportReport
 					}
 				}
 
+				// Tekst jednolity nie wchodzi w życie: jego jednostki nie niosą dat, a dokument ma jedno zdarzenie
+				// ujednolicenia (ADR-0033) — brak daty nie jest tu brakiem.
+				if (document.Announcement is { IsConsolidatedText: true })
+				{
+					consolidated++;
+					continue;
+				}
+
 				var allowed = AllowedDates(document);
 				var (missing, dated, foreign) = Inspect(xml, allowed);
 
@@ -123,6 +131,7 @@ internal static class SchemaPlExportReport
 		Console.WriteLine($"1. Konwersja udana:              {converted,6} / {files.Count}   błędów: {conversionErrors}");
 		Console.WriteLine($"2. Elementów z datą:             {datedTotal,6}");
 		Console.WriteLine($"   Elementów bez daty:           {undated,6}   (dopuszczalne tylko pod wyjątkiem nierozstrzygalnym)");
+		Console.WriteLine($"   Teksty jednolite (bez dat):   {consolidated,6}   (zdarzenie ujednolicenia zamiast dat jednostek)");
 		Console.WriteLine($"3. Dat spoza klauzuli:           {foreignDates,6}   <- twarda bramka: 0");
 
 		if (validator is null)

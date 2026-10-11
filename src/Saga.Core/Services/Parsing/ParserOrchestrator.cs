@@ -219,6 +219,9 @@ namespace Saga.Core.Services.Parsing
             {
                 var announcement = AnnouncementUnits.Build(context.AnnouncementBlocks, context.Document);
                 announcement.AttachedTo = context.AnnouncedActAttachedTo;
+                announcement.IsConsolidatedText =
+                    Classify.Document.ZtpPatterns.ConsolidatedTextTitlePattern.IsMatch(context.Document.Subject)
+                    || context.Document.Classification is { IsConsolidatedText: true };
                 context.Metadata.ApplyTo(announcement);
                 context.Document.Announcement = announcement;
             }
@@ -227,7 +230,10 @@ namespace Saga.Core.Services.Parsing
 
             // Przebieg po gotowym drzewie: klauzula wejścia w życie.
             // Wymaga kompletnego drzewa, wraz z nowelizacjami.
-            _entryIntoForce.Apply(context.Document);
+            // Tekst jednolity jej nie ma: „dzień ogłoszenia" w jego przepisie końcowym to ogłoszenie ustawy,
+            // nie obwieszczenia, z którego pochodzi data dokumentu (ADR-0033).
+            if (context.Document.Announcement is not { IsConsolidatedText: true })
+                _entryIntoForce.Apply(context.Document);
         }
 
         // ============================================================

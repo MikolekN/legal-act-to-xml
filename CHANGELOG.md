@@ -299,6 +299,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   jednolitych: 91,1 % akapitów (88,0 % po wydzieleniu obwieszczenia, 90,3 % przed nim); liczba dokumentów zgodnych
   ze schematem bez zmian (651 z 2321, tak samo wg libxml2).
 
+- **Tekst jednolity: zdarzenie `ujednolicenie` zamiast wejścia w życie** (ADR-0033): przepis końcowy tekstu
+  jednolitego mówi o ogłoszeniu ustawy, a data dokumentu jest datą ogłoszenia obwieszczenia — wyliczone z nich
+  „wejście w życie" było datą, której ustawa nigdy nie miała. Tekst jednolity ma teraz w `DaneCzasowe` jedno
+  zdarzenie `rodzaj="ujednolicenie"` w dniu ogłoszenia obwieszczenia i grupę `okr_ujednolicenie.…`, a jego
+  jednostki nie niosą `wejscie-w-zycie` ani `okres` — jak w przykładzie autorów schematu. W korpusie: zdarzeń
+  cyklu życia 1118 → 1114, w tym 727 ujednoliceń — po jednym na tekst jednolity (379 tekstów jednolitych miało wcześniej daty na jednostkach); raport `--xml-corpus` nie liczy tekstów jednolitych do „elementów bez daty".
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

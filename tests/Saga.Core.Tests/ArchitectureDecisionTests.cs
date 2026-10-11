@@ -1199,6 +1199,48 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "punkt-OTJ pkt_1", "podpunkt-OTJ pkt_1__ppkt_1", "podpunkt-OTJ pkt_1__ppkt_2" }, exported);
         }
 
+        // ============================================================
+        // ADR-0033: tekst jednolity ma zdarzenie ujednolicenia, nie wejścia w życie
+        // ============================================================
+
+        [Fact]
+        public void Adr0033_ConsolidatedText_IsAConsolidationEvent_NotAnEntryIntoForce()
+        {
+            // Przepis końcowy tekstu jednolitego mówi o ogłoszeniu ustawy; data dokumentu jest datą ogłoszenia
+            // obwieszczenia. Wyliczenie z nich wejścia w życie dawało datę, której ustawa nigdy nie miała.
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 11 sierpnia 2025 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 1094", Role = BlockRole.JournalHeader },
+            };
+            string[] lines =
+            [
+                "Obwieszczenie",
+                "Marszałka Sejmu Rzeczypospolitej Polskiej",
+                "z dnia 6 sierpnia 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
+                "1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy.",
+                "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
+                "USTAWA",
+                "z dnia 11 sierpnia 2001 r.",
+                "o odbudowie obiektów budowlanych",
+                "Art. 1. Ustawa reguluje zasady odbudowy.",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.",
+            ];
+            blocks.AddRange(lines.Select(line => new DocumentBlock { Text = line }));
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            Assert.Null(document.EntryIntoForce);
+            Assert.Equal(default, document.EffectiveDate);
+
+            var xml = LegalDocumentConverter.Convert(document);
+            var lifecycleEvent = Assert.Single(xml.Descendants(), element => element.Name.LocalName == "Zdarzenie");
+            Assert.Equal("ujednolicenie", lifecycleEvent.Attribute("rodzaj")!.Value);
+            Assert.Equal("2025-08-11", lifecycleEvent.Attribute("data")!.Value);
+            Assert.DoesNotContain(xml.Descendants(), element => element.Attribute("wejscie-w-zycie") != null);
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

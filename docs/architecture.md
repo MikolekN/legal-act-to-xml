@@ -1093,6 +1093,8 @@ w [docs/adr/](adr/README.md). Tutaj tylko skrót z odesłaniem; ta sekcja nie je
 `podpunkt-OTJ`, `czesc-wspolna-podpunkt-OTJ`), podpis i `ustawa` ze strefą tytułową ogłaszanego aktu (`zalacznik-do`,
 `rodzaj-aktu`, `data`, `tytul`), jednostkami i załącznikami ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md),
 [ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)).
+Tekst jednolity nie czyta klauzuli wejścia w życie: `LifecycleEvents.Of` daje mu jedno zdarzenie `ujednolicenie`
+w dniu ogłoszenia obwieszczenia, a jednostki nie niosą dat ([ADR-0033](adr/0033-tekst-jednolity-ma-zdarzenie-ujednolicenia.md)).
 
 **Pierwszy nagłówek rodzaju aktu wygrywa.** Załącznik do obwieszczenia o tekście jednolitym zawiera
 własną linię „USTAWA", więc sygnały tytułowe liczone są tylko ze strefy tytułowej (pierwsze bloki),
