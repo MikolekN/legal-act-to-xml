@@ -485,6 +485,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   przedmiot albo rodzaj aktu tuż za wierszem załącznika (`AnnouncementBoundary.Describe`).
   - W korpusie: 280 dokumentów; zgodnych ze schematem 1685 → 1915 z 2321; pokrycie tekstu obwieszczeń 10 % → 83 %.
     Treść poza podstawą prawną (wyliczenie, dalsze akapity) nie jest jeszcze eksportowana.
+- **Treść obwieszczenia bez numerowanych punktów** ([ADR-0044](docs/adr/0044-tresc-obwieszczenia-bez-punktow-jest-przepisem-bez-oznaczenia.md)):
+  wyliczenie po wprowadzeniu („… ogłasza się następujące stawki:" i „1) …", z literami i tiretami), dalsze akapity
+  i tabela przed podpisem wychodzą jako jeden przepis bez oznaczenia (`nie-ztp-artykul`), zbudowany tym samym
+  potokiem co treść aktu (`AnnouncementBody`); punkty adresują się od obwieszczenia (`pkt_1__lit_a`). Wiersz
+  „Załączniki do obwieszczenia …" w liczbie mnogiej otwiera załączniki.
+  - W korpusie: 108 obwieszczeń, 500 punktów, 158 liter, 42 tirety; pokrycie tekstu obwieszczeń 83 % → 99 %.
+    Zgodność ze schematem bez zmian. Jednostek `nie-ztp-*` 600 → 1408 — schemat nie przyjmuje pod takim
+    przepisem jednostek zwykłych.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

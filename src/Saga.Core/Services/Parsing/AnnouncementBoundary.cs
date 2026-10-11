@@ -11,8 +11,13 @@ namespace Saga.Core.Services.Parsing
     /// </summary>
     internal static class AnnouncementBoundary
     {
-        /// <summary>Wiersz otwierający akt ogłaszany w załączniku do obwieszczenia.</summary>
-        internal static readonly Regex AnnexHeader = new(@"^Załącznik\s+do\s+obwieszczenia\b", RegexOptions.Compiled);
+        /// <summary>
+        /// Wiersz otwierający to, co obwieszczenie niesie w załączniku: akt (tekst jednolity) albo własne
+        /// załączniki — także w liczbie mnogiej i z numerem („Załączniki do obwieszczenia …", „Załącznik nr 2
+        /// do obwieszczenia …").
+        /// </summary>
+        internal static readonly Regex AnnexHeader = new(
+            @"^Załączniki?(?:\s+nr\s+\d+[a-z]*)?\s+do\s+obwieszczenia\b", RegexOptions.Compiled);
 
         /// <summary>
         /// Układ dokumentu zaczynającego się nagłówkiem obwieszczenia.

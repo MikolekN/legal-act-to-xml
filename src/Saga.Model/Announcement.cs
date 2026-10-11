@@ -53,6 +53,13 @@ namespace Saga.Model
         /// </summary>
         public List<Paragraph> Points { get; set; } = new();
 
+        /// <summary>
+        /// Treść obwieszczenia bez numerowanych punktów, poza podstawą prawną: jeden przepis bez oznaczenia —
+        /// tekst, wyliczenie (punkty, litery, tirety), część wspólna i dalsza treść (akapity, tabele).
+        /// Null, gdy obwieszczenie ma punkty albo kończy się na podstawie prawnej.
+        /// </summary>
+        public Paragraph? Body { get; set; }
+
         /// <summary>Treść sprzed pierwszego punktu, poza nagłówkiem: akapity i tabele w kolejności dokumentu.</summary>
         public List<ContentBlock> Content { get; set; } = new();
     }

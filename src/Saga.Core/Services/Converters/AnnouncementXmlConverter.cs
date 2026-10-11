@@ -15,6 +15,34 @@ namespace Saga.Core.Services.Converters
     {
         internal static IEnumerable<XElement> Points(Announcement announcement) => announcement.Points.Select(Point);
 
+        /// <summary>
+        /// Treść obwieszczenia bez numerowanych punktów: przepis bez oznaczenia (<c>nie-ztp-artykul</c> z pustym
+        /// <c>nr</c> i nazwanym powodem braku adresu). Jednostki pod nim są zwykłymi punktami, literami
+        /// i tiretami, adresowanymi od obwieszczenia (<c>pkt_1__lit_a</c>); schemat przyjmuje je pod takim
+        /// przepisem tylko w wariancie spoza ZTP.
+        /// </summary>
+        internal static XElement Body(Paragraph body)
+        {
+            var element = Element(XmlConverterConstants.Contents.NonZtpArticle,
+                UnitAddressXml.Address(body, addressed: false),
+                new XAttribute(XmlConverterConstants.Contents.GUID, body.Guid.ToString()),
+                Element(XmlConverterConstants.Contents.Num));
+
+            var text = Element(XmlConverterConstants.Contents.TextSection);
+            var context = SentenceProcessor.Process(body.TextSegments, null, text);
+            element.Add(text);
+            EmbeddedContentXmlConverter.AppendEmbedded(element, body);
+
+            for (var i = 0; i < body.Points.Count; i++)
+            {
+                PointXmlConverter.AppendTo(element, body.Points[i], isParentPathological: true, context);
+                CommonPartXmlConverter.AppendInterrupting(body, element, itemsSoFar: i + 1, context);
+            }
+
+            CommonPartXmlConverter.HandleCommonPart(body, element, context);
+            return element;
+        }
+
         private static XElement Point(Paragraph point)
         {
             var element = Unit(XmlConverterConstants.Announcements.Point, point);

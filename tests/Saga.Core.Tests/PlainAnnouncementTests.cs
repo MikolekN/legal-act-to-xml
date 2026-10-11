@@ -136,17 +136,115 @@ namespace Saga.Core.Tests
             Assert.Empty(document.Articles);
         }
 
-        [Fact]
-        public void LegalBasisThatOpensAnEnumeration_StaysWithIt()
-        {
-            // Korpus: 328975_2977599 — „… ogłasza się następujące wysokości stawek opłat:" i punkty.
-            const string introduction =
-                "Na podstawie art. 398 ust. 11 ustawy z dnia 20 lipca 2017 r. – Prawo wodne (Dz. U. z 2025 r. poz. 960) " +
-                "ogłasza się następujące wysokości stawek opłat:";
-            var document = Parse(introduction, "1) stawka opłaty za zgłoszenie wynosi 132,33 zł;", "2) stawka opłaty za pozwolenie wynosi 330,07 zł.", Signature);
+        // Korpus: 328975_2977599 — „… ogłasza się następujące wysokości stawek opłat:" i punkty.
+        private const string Introduction =
+            "Na podstawie art. 398 ust. 11 ustawy z dnia 20 lipca 2017 r. – Prawo wodne (Dz. U. z 2025 r. poz. 960) " +
+            "ogłasza się następujące wysokości stawek opłat:";
 
+        private static LegalDocument WithEnumeration() => Parse(
+            Introduction,
+            "1) stawka opłaty za przyjęcie zgłoszenia:",
+            "a) wodnoprawnego wynosi 132,33 zł,",
+            "b) uzupełniającego wynosi 66,16 zł;",
+            "2) stawka opłaty za wydanie pozwolenia wynosi 330,07 zł.",
+            Signature);
+
+        [Fact]
+        public void LegalBasisThatOpensAnEnumeration_IsTheTextOfTheProvision()
+        {
+            var document = WithEnumeration();
+
+            // Wprowadzenie nie odrywa się od wyliczenia: podstawy prawnej osobno nie ma.
             Assert.Empty(document.LegalBasis);
-            Assert.Equal(introduction, document.Announcement!.Content.First().Text);
+            var body = document.Announcement!.Body!;
+            Assert.Equal(Introduction, body.ContentText);
+            Assert.Equal(new[] { "1", "2" }, body.Points.Select(point => point.Number?.Value));
+            Assert.Equal(new[] { "a", "b" }, body.Points[0].Letters.Select(letter => letter.Number?.Value));
+            Assert.Empty(document.Announcement.Content);
+            Assert.Equal("Koperski", document.Signature?.Surname);
+        }
+
+        [Fact]
+        public void ParagraphsAfterTheLegalBasis_AreOneProvisionWithoutADesignation()
+        {
+            // Korpus: 338747_3016710 — „… obwieszcza się, co następuje:", akapity, wyliczenie, akapit.
+            const string basis =
+                "Na podstawie art. 6a § 2a ustawy z dnia 25 lipca 2002 r. – Prawo o ustroju sądów administracyjnych " +
+                "(Dz. U. z 2024 r. poz. 1267) obwieszcza się, co następuje:";
+            var document = Parse(
+                basis,
+                "W Wojewódzkim Sądzie Administracyjnym w Gliwicach jest wolne jedno stanowisko asesorskie.",
+                "Informuję, że w przedmiocie powołania do pełnienia urzędu stosuje się odpowiednio:",
+                "1) dział II ustawy – Prawo o ustroju sądów powszechnych;",
+                "2) rozporządzenie w sprawie badań kandydatów.",
+                "Wzór karty zgłoszenia opublikowany został w Biuletynie Informacji Publicznej.",
+                Signature);
+
+            Assert.Equal(basis, document.LegalBasis);
+            var body = document.Announcement!.Body!;
+            Assert.Equal("W Wojewódzkim Sądzie Administracyjnym w Gliwicach jest wolne jedno stanowisko asesorskie.", body.ContentText);
+            Assert.Equal(2, body.Points.Count);
+            Assert.Contains(body.Continuation, block => block.Text!.StartsWith("Informuję, że", StringComparison.Ordinal));
+        }
+
+        [Fact]
+        public void AnnouncementWithNumberedPoints_KeepsItsPoints()
+        {
+            // „1. …" to punkt obwieszczenia, jak w obwieszczeniu tekstu jednolitego — nie przepis bez oznaczenia.
+            var document = Parse(
+                "1. Na podstawie art. 5 ustawy z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) ogłasza się stawki.",
+                "2. Stawki obowiązują od dnia 1 stycznia 2026 r.",
+                Signature);
+
+            Assert.Null(document.Announcement!.Body);
+            Assert.Equal(new[] { "1", "2" }, document.Announcement.Points.Select(point => point.Number?.Value));
+        }
+
+        [Fact]
+        public void AnnexesAnnouncedInThePlural_AreAnnexesOfTheAnnouncement()
+        {
+            // Korpus: 334940_3004869 — „Załączniki do obwieszczenia …" i „Załącznik nr 1", „Załącznik nr 2".
+            var document = Parse(
+                LegalBasis, Signature,
+                "Załączniki do obwieszczenia Ministra Infrastruktury z dnia 25 lipca 2025 r. (M.P. poz. 702)",
+                "Załącznik nr 1",
+                "Stawki opłat w regionie wodnym Wisły nie ulegają zmianie.",
+                "Załącznik nr 2",
+                "Stawki opłat w regionie wodnym Odry nie ulegają zmianie.");
+
+            Assert.Equal(new[] { "1", "2" }, document.Annexes.Select(annex => annex.Number));
+            Assert.Null(document.Announcement!.Body);
+            Assert.Equal(LegalBasis, document.LegalBasis);
+        }
+
+        [Fact]
+        public void Export_WritesTheProvisionWithoutADesignation_WithUnitsAddressedFromTheAnnouncement()
+        {
+            var root = LegalDocumentConverter.Convert(WithEnumeration()).Elements().Single();
+
+            Assert.Equal(
+                new[] { "metadane", "rodzaj-aktu", "autor-aktu", "data", "tytul", "nie-ztp-artykul", "organ-podpisujacy" },
+                root.Elements().Select(e => e.Name.LocalName));
+
+            var provision = root.Elements().Single(e => e.Name.LocalName == "nie-ztp-artykul");
+            Assert.Equal("jednostka-nieoznaczona", provision.Attribute("brak-eid")?.Value);
+            Assert.Null(provision.Attribute("eId"));
+            Assert.Equal(string.Empty, provision.Elements().First().Value);
+            Assert.Equal("nr", provision.Elements().First().Name.LocalName);
+            Assert.Equal(Introduction, provision.Elements().Single(e => e.Name.LocalName == "p").Value);
+
+            // Schemat przyjmuje pod takim przepisem jednostki tylko w wariancie spoza ZTP; adres liczy się od obwieszczenia.
+            var points = provision.Elements().Where(e => e.Name.LocalName == "nie-ztp-punkt").ToList();
+            Assert.Equal(new[] { "MP/2025/702__pkt_1", "MP/2025/702__pkt_2" }, points.Select(point => point.Attribute("eId")?.Value));
+            Assert.Equal(
+                new[] { "MP/2025/702__pkt_1__lit_a", "MP/2025/702__pkt_1__lit_b" },
+                points[0].Elements().Where(e => e.Name.LocalName == "nie-ztp-litera").Select(letter => letter.Attribute("eId")?.Value));
+        }
+
+        [SchemaPlFact]
+        public void AnnouncementWithAProvision_IsSchemaValid_AsAWhole()
+        {
+            Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(WithEnumeration())));
         }
 
         [Fact]

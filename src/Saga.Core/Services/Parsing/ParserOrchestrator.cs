@@ -188,7 +188,7 @@ namespace Saga.Core.Services.Parsing
         /// Zamyka zbieraną tabelę: w treści przepisu staje się dalszą treścią jednostki, w której stoi,
         /// a w treści nowelizacji — treścią cytowaną.
         /// </summary>
-        private void FlushTable(ParsingContext context)
+        internal void FlushTable(ParsingContext context)
         {
             if (context.TableBlocks.Count == 0)
                 return;
@@ -281,9 +281,16 @@ namespace Saga.Core.Services.Parsing
 
             if (context.IsPlainAnnouncement)
             {
-                var announcement = AnnouncementUnits.Build(context.AnnouncementBlocks, context.Document, context.SectionIsBasicUnit);
-                announcement.AnnouncesAct = false;
-                AnnouncementUnits.TakeLegalBasis(announcement, context.Document);
+                // Treść bez numerowanych punktów jest jednym przepisem bez oznaczenia; z punktami („1. …")
+                // albo gdy przepisu nie da się złożyć — jednostkami obwieszczenia, jak w tekście jednolitym.
+                var announcement = AnnouncementBody.TryBuild(context.AnnouncementBlocks, context.Document);
+                if (announcement is null)
+                {
+                    announcement = AnnouncementUnits.Build(context.AnnouncementBlocks, context.Document, context.SectionIsBasicUnit);
+                    announcement.AnnouncesAct = false;
+                    AnnouncementUnits.TakeLegalBasis(announcement, context.Document);
+                }
+
                 context.Document.Announcement = announcement;
             }
             else if (context.AnnouncementMetadata is not null)

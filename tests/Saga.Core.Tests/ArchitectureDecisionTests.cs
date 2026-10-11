@@ -1318,6 +1318,43 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0044: treść obwieszczenia bez punktów jest przepisem bez oznaczenia
+        // ============================================================
+
+        [Fact]
+        public void Adr0044_AnnouncementContentWithoutPoints_IsOneProvisionWithoutADesignation()
+        {
+            string[] lines =
+            [
+                "OBWIESZCZENIE",
+                "MINISTRA INFRASTRUKTURY",
+                "z dnia 25 lipca 2025 r.",
+                "w sprawie wysokości stawek opłat",
+                "Na podstawie art. 398 ust. 11 ustawy z dnia 20 lipca 2017 r. – Prawo wodne (Dz. U. z 2025 r. poz. 960) ogłasza się następujące stawki:",
+                "1) za zgłoszenie – 132,33 zł;",
+                "2) za pozwolenie – 330,07 zł.",
+                "Minister Infrastruktury: P. Koperski",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Jednostki są zwykłymi punktami modelu — tymi samymi, które buduje potok aktu.
+            var body = document.Announcement!.Body!;
+            Assert.StartsWith("Na podstawie art. 398", body.ContentText);
+            Assert.All(body.Points, point => Assert.IsType<Saga.Model.EditorialUnits.Point>(point));
+            Assert.Equal(2, body.Points.Count);
+            Assert.Empty(document.Announcement.Points);
+
+            // Eksport: przepis bez oznaczenia i bez adresu, punkty adresowane od obwieszczenia.
+            var provision = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "nie-ztp-artykul");
+            Assert.Equal("jednostka-nieoznaczona", provision.Attribute("brak-eid")?.Value);
+            Assert.Equal(
+                new[] { "pkt_1", "pkt_2" },
+                provision.Elements().Where(e => e.Name.LocalName == "nie-ztp-punkt").Select(e => e.Attribute("eId")!.Value.Split("__").Last()));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 
