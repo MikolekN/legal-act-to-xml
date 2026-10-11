@@ -125,6 +125,8 @@ namespace Saga.Core
 
                 if (i < actStart)
                     orchestrator.CollectAnnouncementBlock(block, context);
+                else if (i == actStart)
+                    orchestrator.BeginAnnouncedAct(block, context);
                 else
                     orchestrator.ProcessBlock(block, context);
 

@@ -45,11 +45,8 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>Treść obwieszczenia z zebranych bloków: akapity i tabele w kolejności dokumentu.</summary>
-        internal static Announcement? Build(IReadOnlyList<DocumentBlock> blocks)
+        internal static Announcement Build(IReadOnlyList<DocumentBlock> blocks)
         {
-            if (blocks.Count == 0)
-                return null;
-
             var announcement = new Announcement();
             for (var i = 0; i < blocks.Count; i++)
             {

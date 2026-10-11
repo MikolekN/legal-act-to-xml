@@ -76,9 +76,12 @@ namespace Saga.Core.Services.Classify.Document
             @"^z\s+dnia\s+(?<day>\d{1,2})\s+(?<month>" + PolishDates.MonthAlternation + @")\s+(?<year>\d{4})\s*r\.(?:\s*\[\d+\)?\])?$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        /// <summary>§ 18-19 / § 120 ust. 6: przedmiot aktu; § 96: także „zmieniająca ustawę o …".</summary>
+        /// <summary>
+        /// § 18-19 / § 120 ust. 6: przedmiot aktu; § 96: także „zmieniająca ustawę o …". Po „o" stoi też nazwa
+        /// własna wielką literą („o Policji", „o Państwowej Straży Pożarnej").
+        /// </summary>
         internal static readonly Regex ActSubjectPattern = new(
-            @"^(?:o\s+\p{Ll}.+|w\s+sprawie\s+.+|(?:Kodeks|Prawo|Ordynacja)\b.*|Przepisy\s+wprowadzające\b.+" +
+            @"^(?:o\s+\p{L}.+|w\s+sprawie\s+.+|(?:Kodeks|Prawo|Ordynacja)\b.*|Przepisy\s+wprowadzające\b.+" +
             @"|zmieniając[ae]\s+(?:ustawę|rozporządzenie|uchwałę|zarządzenie)\b.+)$",
             RegexOptions.Compiled);
 

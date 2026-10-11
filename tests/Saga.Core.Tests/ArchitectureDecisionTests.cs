@@ -1115,6 +1115,45 @@ namespace Saga.Core.Tests
             }
         }
 
+        // ============================================================
+        // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
+        // ============================================================
+
+        [Fact]
+        public void Adr0031_ConsolidatedStatute_IsExportedUnderTheAnnouncement_WithoutItsQuotedProvisions()
+        {
+            // Przepis przytoczony w obwieszczeniu („…, który stanowi: „Art. 57. …"") nie jest artykułem
+            // ogłaszanego aktu, a akt stoi pod obwieszczeniem z własną strefą tytułową.
+            string[] lines =
+            [
+                "Obwieszczenie",
+                "Marszałka Sejmu Rzeczypospolitej Polskiej",
+                "z dnia 6 sierpnia 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
+                "1. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 57 ustawy z dnia 1 października 2024 r. o zmianie ustawy (Dz. U. poz. 1473), który stanowi:",
+                "„Art. 57. Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.”",
+                "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
+                "USTAWA",
+                "z dnia 11 sierpnia 2001 r.",
+                "o odbudowie obiektów budowlanych",
+                "Art. 1. Ustawa reguluje zasady odbudowy.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            Assert.Equal(new[] { "1" }, document.Articles.Select(article => article.Number?.Value));
+            Assert.Equal("Obwieszczenie", document.KindLine);
+            Assert.Equal("USTAWA", document.Announcement!.ActKindLine);
+
+            var announcement = Assert.Single(LegalDocumentConverter.Convert(document).Elements());
+            Assert.Equal("obwieszczenie", announcement.Name.LocalName);
+            var act = Assert.Single(announcement.Elements(), element => element.Name.LocalName == "ustawa");
+            Assert.Equal(
+                new[] { "zalacznik-do", "rodzaj-aktu", "data", "tytul", "artykul" },
+                act.Elements().Select(element => element.Name.LocalName));
+        }
+
         private static DocumentClassificationResult Classify(byte[] docx)
         {
             using var stream = new MemoryStream(docx);

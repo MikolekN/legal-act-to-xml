@@ -15,6 +15,13 @@ namespace Saga.Core.Services.Converters
         internal const string ELIUrl = "https://eli.gov.pl/";
         internal const string Act = "ustawa";
 
+        /// <summary>Obwieszczenie ogłaszające akt w załączniku (tekst jednolity) — korzeń zamiast aktu.</summary>
+        internal static class Announcements
+        {
+            internal const string Element = "obwieszczenie";
+            internal const string Author = "autor-aktu";
+        }
+
         /// <summary>Strefa tytułowa aktu: rodzaj, data i przedmiot — zaraz po metadanych.</summary>
         internal static class ActHeading
         {

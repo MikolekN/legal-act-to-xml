@@ -121,7 +121,24 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>Kolektor metadanych aktu (rodzaj/data/przedmiot) ze strefy tytulowej (§ 16-19 ZTP).</summary>
-        public DocumentMetadataCollector Metadata { get; } = new();
+        public DocumentMetadataCollector Metadata { get; private set; } = new();
+
+        /// <summary>Kolektor nagłówka obwieszczenia, odstawiony na granicy ogłaszanego aktu; null poza tekstem jednolitym.</summary>
+        public DocumentMetadataCollector? AnnouncementMetadata { get; private set; }
+
+        /// <summary>Wiersz „Załącznik do obwieszczenia …" otwierający ogłaszany akt.</summary>
+        public string AnnouncedActAttachedTo { get; private set; } = string.Empty;
+
+        /// <summary>
+        /// Granica tekstu jednolitego: nagłówek obwieszczenia jest zebrany, a strefa tytułowa ogłaszanego aktu
+        /// („USTAWA", data, przedmiot) zbiera się od nowa.
+        /// </summary>
+        public void BeginAnnouncedAct(string attachedTo)
+        {
+            AnnouncedActAttachedTo = attachedTo;
+            AnnouncementMetadata = Metadata;
+            Metadata = new DocumentMetadataCollector();
+        }
 
         /// <summary>
         /// Serwis do budowania i aktualizacji referencji strukturalnych

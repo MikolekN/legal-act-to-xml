@@ -69,6 +69,12 @@ namespace Saga.Model
         /// <summary>Wiersz rodzaju aktu ze strefy tytułowej, jak w akcie („USTAWA"); pusty, gdy nierozpoznany.</summary>
         public string KindLine { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Wiersz organu wydającego ze strefy tytułowej, jak w akcie („Marszałka Sejmu Rzeczypospolitej Polskiej",
+        /// „MINISTRA FINANSÓW"); pusty, gdy akt go nie ma (ustawa) albo nierozpoznany.
+        /// </summary>
+        public string IssuerLine { get; set; } = string.Empty;
+
         /// <summary>Wiersz daty aktu („z dnia 14 czerwca 2024 r."); pusty, gdy nierozpoznany.</summary>
         public string DateLine { get; set; } = string.Empty;
 

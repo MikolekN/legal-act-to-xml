@@ -49,5 +49,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0028](0028-wyliczenie-w-zalaczniku-buduje-potok-aktu.md) | Wyliczenie w załączniku buduje potok aktu pod artykułem zastępczym zakotwiczonym w adresie załącznika (`zal_4__ust_I__pkt_1`); wszystko albo nic — treść mieszana zostaje akapitami; oznaczenie rzymskie tylko w załączniku | Accepted | 2026-10-10 |
 | [0029](0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md) | Akapit bez oznaczenia i tabela w treści przepisu są dalszą treścią jednostki, za którą stoją (`BaseEntity.Continuation` → `fragment`, `tabela`); komórki tabeli nie przechodzą przez rozpoznawanie jednostek | Accepted | 2026-10-10 |
 | [0030](0030-warianty-cudzyslowu-rozpoznaje-jedno-zrodlo.md) | Warianty cudzysłowu (`„`, `”`, `“`, `ˮ`, `"`) trzyma wyłącznie `QuotationMarks`; tekstu się nie normalizuje — eksport niesie znak ze źródła | Accepted | 2026-10-10 |
+| [0031](0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md) | Tekst jednolity dzieli się na wierszu „Załącznik do obwieszczenia …": treść przed nim to obwieszczenie (`LegalDocument.Announcement`), nie ogłaszany akt; tekst jednolity ustawy eksportuje się pod korzeniem `obwieszczenie` z aktem osadzonym | Accepted | 2026-10-11 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

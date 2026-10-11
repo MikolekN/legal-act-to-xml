@@ -16,20 +16,28 @@ namespace Saga.Core.Services
                 new XAttribute(XNamespace.Xmlns + "now", XmlConverterConstants.AmendmentNamespace),
                 new XAttribute(XNamespace.Xmlns + "gd", XmlConverterConstants.GuidNamespace.NamespaceName));
 
-            var actElement = Element(XmlConverterConstants.Act);
+            // Tekst jednolity ustawy: korzeniem jest obwieszczenie, a ogłaszany akt stoi w nim jako osobny
+            // element z własną strefą tytułową (ADR-0031).
+            var announced = AnnouncedStatute(document);
+            var actElement = Element(announced is null ? XmlConverterConstants.Act : XmlConverterConstants.Announcements.Element);
             rootElement.Add(actElement);
 
             PrepareMetadata(document, actElement);
-            PrepareHeading(document, actElement);
+            PrepareHeading(document, actElement, withIssuer: announced is not null);
+
+            var body = announced is null ? actElement : AnnouncedActElement(announced);
 
             foreach (var part in document.Parts)
-                actElement.Add(SystematizingUnitXmlConverter.ActLevel(part));
+                body.Add(SystematizingUnitXmlConverter.ActLevel(part));
 
             if (document.Signature is { } signature)
                 actElement.Add(SignatureXmlConverter.ToXml(signature));
 
+            if (body != actElement)
+                actElement.Add(body);
+
             foreach (var annex in document.Annexes)
-                actElement.Add(AnnexXmlConverter.ToXml(annex));
+                body.Add(AnnexXmlConverter.ToXml(annex));
 
             FootnoteXmlConverter.Embed(actElement, document);
             InlineTextXml.EmbedSuperscripts(actElement);
@@ -47,16 +55,42 @@ namespace Saga.Core.Services
         /// Strefa tytułowa: rodzaj aktu, data i przedmiot jak w akcie. Wiersz nierozpoznany nie jest
         /// emitowany — schemat go wymaga, więc brak widać w walidacji, zamiast zgadywać treść.
         /// </summary>
-        private static void PrepareHeading(LegalDocument document, XElement actElement)
+        private static void PrepareHeading(LegalDocument document, XElement actElement, bool withIssuer)
         {
             if (document.KindLine.Length > 0)
                 actElement.Add(Element(XmlConverterConstants.ActHeading.Kind, document.KindLine));
+            if (withIssuer && document.IssuerLine.Length > 0)
+                actElement.Add(Element(XmlConverterConstants.Announcements.Author, document.IssuerLine));
             if (document.DateLine.Length > 0)
                 actElement.Add(Element(XmlConverterConstants.ActHeading.Date, document.DateLine));
             if (document.Subject.Length > 0)
                 actElement.Add(Element(XmlConverterConstants.ActHeading.Subject, document.Subject));
         }
 
+
+        /// <summary>
+        /// Obwieszczenie, które ogłasza w załączniku ustawę; null dla aktu ogłoszonego wprost i dla obwieszczeń
+        /// ogłaszających inne akty (rozporządzenia nie są jeszcze budowane).
+        /// </summary>
+        private static Announcement? AnnouncedStatute(LegalDocument document) =>
+            document.Announcement is { } announcement
+            && Classify.Document.ZtpPatterns.StatuteHeaderPattern.IsMatch(FootnoteMarkers.Remove(announcement.ActKindLine))
+                ? announcement
+                : null;
+
+        private static XElement AnnouncedActElement(Announcement announcement)
+        {
+            var act = Element(XmlConverterConstants.Act);
+            if (announcement.AttachedTo.Length > 0)
+                act.Add(Element(XmlConverterConstants.Attachments.AttachedTo, announcement.AttachedTo));
+            if (announcement.ActKindLine.Length > 0)
+                act.Add(Element(XmlConverterConstants.ActHeading.Kind, announcement.ActKindLine));
+            if (announcement.ActDateLine.Length > 0)
+                act.Add(Element(XmlConverterConstants.ActHeading.Date, announcement.ActDateLine));
+            if (announcement.ActSubject.Length > 0)
+                act.Add(Element(XmlConverterConstants.ActHeading.Subject, announcement.ActSubject));
+            return act;
+        }
 
         private static void PrepareMetadata(LegalDocument document, XElement rootElement)
         {

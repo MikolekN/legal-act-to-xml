@@ -26,7 +26,7 @@ namespace Saga.Core.Services.Converters
         internal const string SchemaFile = "schemaPL.xsd";
 
         /// <summary>Nagłówek aktu — poza walidacją treści (<see cref="ValidateActBody"/>).</summary>
-        private static readonly HashSet<string> ActHeader = ["metadane", "oznaczenie", "rodzaj-aktu", "data", "tytul"];
+        private static readonly HashSet<string> ActHeader = ["metadane", "oznaczenie", "rodzaj-aktu", "autor-aktu", "data", "tytul"];
 
         private static readonly Regex Quoted = new("'[^']*'", RegexOptions.Compiled);
 

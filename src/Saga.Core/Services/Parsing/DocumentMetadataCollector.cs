@@ -26,6 +26,7 @@ namespace Saga.Core.Services.Parsing
     {
         private readonly List<string> _titleParts = new();
         private string _kindLine = string.Empty;
+        private string _issuerLine = string.Empty;
         private string _dateLine = string.Empty;
         private string _subject = string.Empty;
         private DateTime? _actDate;
@@ -70,6 +71,8 @@ namespace Saga.Core.Services.Parsing
             if (IsIssuingOrgan(t))
             {
                 _titleParts.Add(t);
+                if (_issuerLine.Length == 0)
+                    _issuerLine = t;
                 return true;
             }
 
@@ -114,8 +117,20 @@ namespace Saga.Core.Services.Parsing
                 document.ActDate = _actDate;
 
             if (document.KindLine.Length == 0) document.KindLine = _kindLine;
+            if (document.IssuerLine.Length == 0) document.IssuerLine = _issuerLine;
             if (document.DateLine.Length == 0) document.DateLine = _dateLine;
             if (document.Subject.Length == 0) document.Subject = _subject;
+        }
+
+        /// <summary>
+        /// Zapisuje zebraną strefę tytułową jako nagłówek aktu ogłaszanego w załączniku do obwieszczenia —
+        /// nagłówek dokumentu pozostaje nagłówkiem obwieszczenia.
+        /// </summary>
+        public void ApplyTo(Announcement announcement)
+        {
+            announcement.ActKindLine = _kindLine;
+            announcement.ActDateLine = _dateLine;
+            announcement.ActSubject = _subject;
         }
 
         private void TryCaptureDate(string day, string month, string year)

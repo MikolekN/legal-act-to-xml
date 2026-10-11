@@ -1,4 +1,6 @@
+using System.Xml.Linq;
 using Saga.Core.Ingest;
+using Saga.Core.Services;
 using Saga.Core.Services.Parsing;
 using Saga.Model;
 
@@ -77,6 +79,87 @@ namespace Saga.Core.Tests
             // Obwieszczenie innego rodzaju (bez „Załącznik do obwieszczenia") nie ma granicy — nic się nie zmienia.
             Assert.Equal(-1, AnnouncementBoundary.Find(ConsolidatedText.Take(8).Select(line => Block(line)).ToList()));
             Assert.Equal(8, AnnouncementBoundary.Find(ConsolidatedText.Select(line => Block(line)).ToList()));
+        }
+
+        // ============================================================
+        // Korzeń „obwieszczenie" z aktem osadzonym (ADR-0031)
+        // ============================================================
+
+        [Fact]
+        public void AnnouncedAct_KeepsItsOwnHeading()
+        {
+            var announcement = Parse(ConsolidatedText).Announcement!;
+
+            Assert.StartsWith("Załącznik do obwieszczenia Marszałka Sejmu", announcement.AttachedTo);
+            Assert.Equal("USTAWA", announcement.ActKindLine);
+            Assert.Equal("z dnia 11 sierpnia 2001 r.", announcement.ActDateLine);
+            Assert.Equal("o odbudowie obiektów budowlanych", announcement.ActSubject);
+        }
+
+        private static string[] ChildNames(XElement element) =>
+            element.Elements().Select(child => child.Name.LocalName).ToArray();
+
+        [Fact]
+        public void ConsolidatedStatute_IsExportedUnderTheAnnouncement()
+        {
+            var xml = LegalDocumentConverter.Convert(Parse(ConsolidatedText));
+
+            var announcement = Assert.Single(xml.Elements());
+            Assert.Equal("obwieszczenie", announcement.Name.LocalName);
+            Assert.Equal(new[] { "metadane", "rodzaj-aktu", "autor-aktu", "data", "tytul", "ustawa" }, ChildNames(announcement));
+            Assert.Equal("Obwieszczenie", announcement.Elements().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
+            Assert.Equal("Marszałka Sejmu Rzeczypospolitej Polskiej",
+                announcement.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
+
+            // Akt ogłaszany w załączniku ma własną strefę tytułową i tylko własne artykuły.
+            var act = announcement.Elements().Single(e => e.Name.LocalName == "ustawa");
+            Assert.Equal(new[] { "zalacznik-do", "rodzaj-aktu", "data", "tytul", "artykul", "artykul" }, ChildNames(act));
+            Assert.Equal("USTAWA", act.Elements().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
+            Assert.Equal("o odbudowie obiektów budowlanych", act.Elements().Single(e => e.Name.LocalName == "tytul").Value);
+        }
+
+        [Fact]
+        public void ActAnnouncedDirectly_KeepsTheActAsTheRoot()
+        {
+            var xml = LegalDocumentConverter.Convert(Parse(ConsolidatedText.Skip(9)));
+
+            Assert.Equal("ustawa", Assert.Single(xml.Elements()).Name.LocalName);
+        }
+
+        [Fact]
+        public void AnnouncementOfAnotherKindOfAct_KeepsTheLegacyRoot()
+        {
+            // Tekst jednolity rozporządzenia: jednostek „§" potok jeszcze nie buduje, więc korzeń zostaje bez zmian.
+            var lines = ConsolidatedText.Take(9).Concat(
+            [
+                "ROZPORZĄDZENIE", "MINISTRA FINANSÓW", "z dnia 11 maja 2017 r.", "w sprawie osób prawnych",
+                "§ 1. Rozporządzenie określa wykaz osób prawnych.",
+            ]);
+
+            var xml = LegalDocumentConverter.Convert(Parse(lines));
+
+            Assert.Equal("ustawa", Assert.Single(xml.Elements()).Name.LocalName);
+        }
+
+        [SchemaPlFact]
+        public void ConsolidatedStatute_IsSchemaValid_InItsBody()
+        {
+            var xml = LegalDocumentConverter.Convert(Parse(ConsolidatedText));
+
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
+        }
+
+        [Theory]
+        [InlineData("o Policji")]
+        [InlineData("o Państwowej Straży Pożarnej[1)]")]
+        [InlineData("Kodeks cywilny[1)]")]
+        [InlineData("Prawo restrukturyzacyjne")]
+        public void AnnouncedActSubject_MayStartWithAProperName(string subject)
+        {
+            var lines = ConsolidatedText.ToArray();
+            lines[11] = subject;
+
+            Assert.Equal(subject, Parse(lines).Announcement!.ActSubject);
         }
     }
 }

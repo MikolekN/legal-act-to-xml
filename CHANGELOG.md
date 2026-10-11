@@ -281,6 +281,15 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Miara pokrycia tekstu a cudzysłów `ˮ`**: U+02EE jest w Unicode literą, więc miara brała go za treść i trzy
   akapity ustaw z cytatem zamkniętym tym znakiem uchodziły za zgubione; cudzysłowy z `QuotationMarks` nie są treścią.
 
+- **Tekst jednolity ustawy pod korzeniem `obwieszczenie`** (ADR-0031): eksport tekstu jednolitego ma korzeń
+  `obwieszczenie` ze strefą tytułową obwieszczenia (`rodzaj-aktu`, `autor-aktu`, `data`, `tytul`), a ogłaszana
+  ustawa stoi w nim jako `ustawa` z własną strefą tytułową (`zalacznik-do`, `rodzaj-aktu`, `data`, `tytul`),
+  jednostkami i załącznikami — jak w przykładzie autorów schematu. Zmienia korzeń 419 dokumentów korpusu; liczba
+  dokumentów zgodnych ze schematem bez zmian (651 z 2321, tak samo wg libxml2), a odnośnik przy tytule ogłaszanego
+  aktu trafia do `tytul`. Tekst jednolity rozporządzenia, uchwały i zarządzenia zostaje przy dotychczasowym korzeniu.
+  Przedmiot aktu zaczynający się nazwą własną („o Policji", „o Państwowej Straży Pożarnej") jest rozpoznawany —
+  wcześniej taki tytuł ginął (49 tekstów jednolitych).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

@@ -178,6 +178,15 @@ namespace Saga.Core.Services.Parsing
             context.AnnouncementBlocks.Add(block);
         }
 
+        /// <summary>
+        /// Wiersz „Załącznik do obwieszczenia …": koniec obwieszczenia, początek aktu, który ono ogłasza.
+        /// </summary>
+        public void BeginAnnouncedAct(DocumentBlock block, ParsingContext context)
+        {
+            RegisterFootnotes(block, context);
+            context.BeginAnnouncedAct(block.Text.CollapseWhitespace().Trim());
+        }
+
         // Treść odnośników leży poza treścią aktu; znacznik odwołania zostaje w tekście bloku.
         private static void RegisterFootnotes(DocumentBlock block, ParsingContext context)
         {
@@ -200,10 +209,19 @@ namespace Saga.Core.Services.Parsing
             }
 
             // Zapisz metadane aktu zebrane ze strefy tytułowej (rodzaj/data/przedmiot → Title/ActDate).
-            context.Metadata.ApplyTo(context.Document);
+            // W tekście jednolitym nagłówkiem dokumentu jest nagłówek obwieszczenia, a strefa tytułowa
+            // zebrana za granicą należy do ogłaszanego aktu.
+            (context.AnnouncementMetadata ?? context.Metadata).ApplyTo(context.Document);
 
             context.Document.Annexes = AnnexBuilder.Build(context.AnnexBlocks);
-            context.Document.Announcement = AnnouncementBoundary.Build(context.AnnouncementBlocks);
+
+            if (context.AnnouncementMetadata is not null)
+            {
+                var announcement = AnnouncementBoundary.Build(context.AnnouncementBlocks);
+                announcement.AttachedTo = context.AnnouncedActAttachedTo;
+                context.Metadata.ApplyTo(announcement);
+                context.Document.Announcement = announcement;
+            }
 
             SystematizingUnitValidator.Validate(context.Document);
 
