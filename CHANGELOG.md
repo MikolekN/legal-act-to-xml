@@ -523,6 +523,17 @@ a wersjonowanie zgodne z Semantic Versioning.
   Rzeczypospolitej Polskiej") — pisownię potwierdza miejsce w dokumencie (`AnnouncementBoundary`). Zdanie
   zaczynające się tym słowem nagłówkiem nie jest.
   - W korpusie: jeden tekst jednolity odzyskuje obwieszczenie (punkty, przytoczony przepis, podpis).
+- **Zwrot zmiany brzmienia, który niczego nie zapowiada** ([ADR-0045](docs/adr/0045-zwrot-zmiany-brzmienia-zapowiada-tresc-gdy-zostawia-ja-otwarta.md)):
+  przepis podający brzmienie w tym samym akapicie („posługuje się nazwą w brzmieniu: Polish Air Navigation Services
+  Agency", „ślubowanie w brzmieniu: „Ślubuję …"", wzór z cytowanymi słowami „otrzymuje brzmienie: …") nie jest
+  komendą nowelizacyjną. Wyzwalacz treści cytowanej uzbraja tylko zwrot kończący akapit albo cytat otwarty za nim
+  i niedomknięty (`AmendmentFinalizer.LeavesWordingOpen`). Przedtem taki przepis otwierał cytat, który — zwłaszcza
+  w dokumencie bez stylów — połykał dalszą część aktu.
+  - W korpusie: 5 dokumentów ze stylami (rozporządzenie odzyskuje dziesięć paragrafów i załącznik); bez stylów
+    zgodność struktury tekstów jednolitych 99,55 % → 99,81 % jednostek.
+- **Miara zgodności bez stylów liczy wszystkie jednostki** (`CorpusValidator --styleless-parity`,
+  `--compare-reference`): także paragraf aktu wykonawczego, jednostki spoza ZTP (`nie-ztp-*`), punkty obwieszczenia
+  i preambułę. Przedtem miara ich nie widziała i zawyżała wynik rozporządzeń (97,96 % → rzeczywiste 97,22 %).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

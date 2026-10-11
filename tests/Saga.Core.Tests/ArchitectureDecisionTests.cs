@@ -1355,6 +1355,20 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0045: zwrot zmiany brzmienia zapowiada treść tylko wtedy, gdy zostawia ją otwartą
+        // ============================================================
+
+        [Theory]
+        [InlineData("2) w art. 5 ust. 2 otrzymuje brzmienie:", true)]
+        [InlineData("ust. 2 otrzymuje brzmienie: „2. Agencja jest państwową osobą prawną,", true)]
+        [InlineData("5. Agencja posługuje się nazwą w brzmieniu: Polish Air Navigation Services Agency (PANSA).", false)]
+        [InlineData("3. Farmaceuta składa ślubowanie w brzmieniu: „Ślubuję uroczyście.”.", false)]
+        public void Adr0045_ModificationPhrase_ArmsTheTrigger_OnlyWhenTheWordingIsLeftOpen(string text, bool expected)
+        {
+            Assert.Equal(expected, AmendmentFinalizer.LeavesWordingOpen(text));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

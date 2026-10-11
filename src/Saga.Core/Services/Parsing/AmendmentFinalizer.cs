@@ -59,6 +59,40 @@ namespace Saga.Core.Services.Parsing
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// Czy zwrot zmiany brzmienia zostawia brzmienie otwarte na kolejne akapity. Komenda kończy się
+        /// dwukropkiem, a nowe brzmienie stoi za nią w cudzysłowie (§ 85–89 ZTP): zwrot na końcu akapitu
+        /// („… otrzymuje brzmienie:") albo cytat otwarty za nim i niedomknięty w tym akapicie zapowiadają treść
+        /// w kolejnych akapitach. Zwrot, po którym brzmienie mieści się w tym samym akapicie („… posługuje się
+        /// nazwą w brzmieniu: Polish Air Navigation Services Agency", „… rotę ślubowania w brzmieniu: „Ślubuję
+        /// …"."), niczego za sobą nie otwiera — bez tego rozróżnienia zwykły przepis z takim zwrotem połykał
+        /// dalszą część aktu jako treść cytowaną.
+        /// </summary>
+        internal static bool LeavesWordingOpen(string text)
+        {
+            var phrases = ModificationPattern.Matches(text);
+            if (phrases.Count == 0)
+                return false;
+
+            var rest = text[(phrases[^1].Index + phrases[^1].Length)..];
+            if (string.IsNullOrWhiteSpace(rest))
+                return true;
+
+            var open = 0;
+            var straight = 0;
+            foreach (var character in rest)
+            {
+                if (character == QuotationMarks.Opening)
+                    open++;
+                else if (QuotationMarks.IsClosing(character) && open > 0)
+                    open--;
+                else if (character == QuotationMarks.Straight)
+                    straight++;
+            }
+
+            return open > 0 || straight % 2 == 1;
+        }
+
+        /// <summary>
         /// Zwrot zmiany brzmienia na końcu przepisu, ale bez dwukropka („ust. 1 otrzymuje brzmienie") —
         /// usterka zapisu; komendą czyni go dopiero cudzysłów otwierający następnego bloku.
         /// </summary>

@@ -366,8 +366,9 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
-            // Zmiana brzmienia / dodanie — trigger dla kolejnych akapitów
-            if (AmendmentFinalizer.ModificationPattern.IsMatch(text))
+            // Zmiana brzmienia / dodanie — trigger dla kolejnych akapitów, o ile zwrot zostawia brzmienie
+            // otwarte: przepis, który podaje brzmienie w tym samym akapicie, niczego za sobą nie zapowiada.
+            if (AmendmentFinalizer.LeavesWordingOpen(text))
                 ArmTrigger(context, text);
         }
 

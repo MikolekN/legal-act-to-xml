@@ -37,12 +37,20 @@ internal static class ReferenceStructureComparison
         "dzial", "dzial-n", "rozdzial", "rozdzial-n", "oddzial", "oddzial-n",
     ];
 
+    // Jednostka podstawowa aktu wykonawczego („paragraf"), jednostki obwieszczenia i preambuła liczą się tak samo
+    // jak jednostki ustawy; warianty spoza ZTP („nie-ztp-*") rozpoznaje przedrostek (IsEditorial).
     private static readonly HashSet<string> EditorialElements =
     [
-        "artykul", "artykul-kodeksu", "ustep", "ustep-n", "paragraf-kodeksu", "paragraf-kodeksu-n", "punkt", "litera",
-        "tiret", "podw-tiret", "potr-tiret", "poczw-tiret", "piec-tiret",
-        "czesc-wspolna-punkt", "czesc-wspolna-litera", "czesc-wspolna-tiret",
+        "artykul", "artykul-kodeksu", "paragraf", "ustep", "ustep-n", "paragraf-kodeksu", "paragraf-kodeksu-n",
+        "punkt", "litera", "tiret", "podw-tiret", "potr-tiret", "poczw-tiret", "piec-tiret",
+        "czesc-wspolna-punkt", "czesc-wspolna-litera", "czesc-wspolna-tiret", "czesc-wspolna-podw-tiret",
+        "punkt-OTJ", "podpunkt-OTJ", "czesc-wspolna-podpunkt-OTJ", "preambula",
     ];
+
+    private const string NonZtpPrefix = "nie-ztp-";
+
+    private static bool IsEditorial(string name) =>
+        EditorialElements.Contains(name) || name.StartsWith(NonZtpPrefix, StringComparison.Ordinal);
 
     private static readonly Regex Whitespace = new(@"\s+", RegexOptions.Compiled);
 
@@ -103,7 +111,7 @@ internal static class ReferenceStructureComparison
                 var childPath = name == "cytat-strukt" ? "" : path;
 
                 // „tytul" bez eId to tytuł aktu, nie jednostka; tytuł-jednostka pod księgą ma eId.
-                var isUnit = SystematizingElements.Contains(name) || EditorialElements.Contains(name)
+                var isUnit = SystematizingElements.Contains(name) || IsEditorial(name)
                     || (name == "tytul" && child.Attribute("eId") != null);
                 if (isUnit)
                 {
