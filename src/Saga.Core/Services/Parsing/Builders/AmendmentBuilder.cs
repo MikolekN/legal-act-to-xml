@@ -306,6 +306,10 @@ namespace Saga.Core.Services.Parsing.Builders
             if (formula is null && FormulaLegend.TryAbsorb(unit, text, leading))
                 return;
 
+            // Dalszy ciąg zdania wprowadzenia za wyliczeniem — część wspólna pisana bez myślnika (ADR-0046).
+            if (formula is null && TryCloseEnumerationWithoutDash(text, content))
+                return;
+
             unit.Continuation.Add(new ContentBlock { Text = text.Trim(), Formula = formula });
         }
 
@@ -665,6 +669,50 @@ namespace Saga.Core.Services.Parsing.Builders
             if (parent != null)
                 ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
                     "Część wspólna rozpoznana bez stylu: ostatni element wyliczenia nie ma znaku końcowego (§ 57 ust. 3 ZTP).");
+            return true;
+        }
+
+        /// <summary>
+        /// Część wspólna bez myślnika i bez stylu w treści cytowanej — ta sama reguła co w treści aktu
+        /// (<c>StructureProcessor.TryCloseEnumerationWithoutDash</c>, ADR-0046): akapit małą literą tuż za pozycją
+        /// wyliczenia zakończoną przecinkiem albo bez znaku końcowego ciągnie zdanie wprowadzenia.
+        /// </summary>
+        private bool TryCloseEnumerationWithoutDash(string text, AmendmentContent content)
+        {
+            var paragraph = text.TrimStart();
+            if (paragraph.Length == 0 || !char.IsLower(paragraph[0]))
+                return false;
+
+            BaseEntity lastItem;
+            BaseEntity? parent;
+            UnitType itemType;
+            if (_currentLetter is { Tirets.Count: 0 })
+                (lastItem, parent, itemType) = (_currentLetter, _currentPoint, UnitType.Letter);
+            else if (_currentLetter is null && _currentPoint is { Letters.Count: 0 })
+                (lastItem, parent, itemType) = (_currentPoint, _currentParagraph, UnitType.Point);
+            else
+                return false;
+
+            var item = lastItem.ContentText.TrimEnd();
+            if (lastItem.Continuation.Count > 0 || item.Length == 0
+                || !(item[^1] == ',' || CommonPartPlacement.LeavesEnumerationOpen(item))
+                || (parent is IHasCommonParts closed && closed.CommonParts.Any(CommonPartPlacement.IsClosing)))
+                return false;
+
+            var commonPart = new CommonPart(CommonPartType.WrapUp, parent?.Id ?? string.Empty, text.Trim())
+            {
+                Parent = parent,
+                ListItemType = itemType,
+            };
+
+            if (parent is IHasCommonParts host)
+                host.CommonParts.Add(commonPart);
+            else
+                content.CommonParts.Add(commonPart);
+
+            if (parent != null)
+                ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
+                    "Część wspólna rozpoznana bez stylu i bez myślnika: akapit małą literą tuż za pozycją wyliczenia.");
             return true;
         }
 

@@ -541,6 +541,8 @@ a wersjonowanie zgodne z Semantic Versioning.
   dalszą treścią ostatniej pozycji.
   - W korpusie: 10 dokumentów ze stylami (11 akapitów); bez stylów w pełni zgodnych z wynikiem stylowym jest
     591 zamiast 562 tekstów jednolitych.
+  - Ta sama reguła obowiązuje w treści cytowanej w nowelizacji (`AmendmentBuilder`) — nowe brzmienie ustępu
+    z wyliczeniem i częścią wspólną bez myślnika. W korpusie bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

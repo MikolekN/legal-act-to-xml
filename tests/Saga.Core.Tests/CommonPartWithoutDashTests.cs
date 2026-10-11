@@ -130,6 +130,26 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void LowercaseParagraphAfterAnItem_ClosesTheEnumeration_AlsoInQuotedContent()
+        {
+            // Jedna reguła dla treści aktu i treści cytowanej: nowe brzmienie ustępu z wyliczeniem i częścią wspólną.
+            var document = Parse(
+                Text("Art. 1. W ustawie z dnia 1 lutego 2021 r. o gruntach (Dz. U. poz. 200) w art. 5 ust. 2 otrzymuje brzmienie:"),
+                Text("„2. W przypadku:"),
+                Text("1) zaniechania użytkowania gruntów,"),
+                Text("2) niewykonania rekultywacji gruntów w wyznaczonym terminie,"),
+                Text("stosuje się przepisy niniejszej ustawy.”."),
+                Text("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."));
+
+            var quoted = Assert.Single(document.Articles.First().Paragraphs.Single().Amendment!.Content!.Paragraphs);
+            Assert.Equal(2, quoted.Points.Count);
+            Assert.StartsWith("stosuje się przepisy niniejszej ustawy.",
+                Assert.Single(quoted.CommonParts, part => part.Type == CommonPartType.WrapUp).ContentText);
+            Assert.All(quoted.Points, point => Assert.Empty(point.Continuation));
+            Assert.Equal(2, document.Articles.Count());
+        }
+
+        [Fact]
         public void StyledParagraphThatClosesNothing_IsFurtherContent_NotDropped()
         {
             // Styl mówi „część wspólna punktów", ale ustęp nie ma punktów: akapit nie ginie.
