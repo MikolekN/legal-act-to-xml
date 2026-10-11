@@ -326,6 +326,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   Ustawa o zmianie kodeksu pozostaje `ustawa`, tak samo kodeks bez jednostek systematyzacyjnych (artykuł wprost
   w `kodeks` ma w schemacie inną budowę).
 
+- **Cytowany paragraf w rozporządzeniu zmieniającym**: treść „§ 5 otrzymuje brzmienie: „§ 5. 1. …"" jest
+  jednostką podstawową (`paragraf`) z ustępami, tak jak poza cytatem — wcześniej wychodziła jako `paragraf-kodeksu`,
+  a oznaczenie pierwszego ustępu („1.") zostawało zdaniem treści. W korpusie: 364 cytowane paragrafy w 180
+  rozporządzeniach, 144 odzyskane ustępy; zgodność ze schematem bez zmian (1648 z 2321, tak samo wg libxml2).
+  W ustawie zmieniającej kodeks cytowany „§ 2." pozostaje paragrafem kodeksu.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

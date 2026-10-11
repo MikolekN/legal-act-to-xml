@@ -222,6 +222,84 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Cytowany paragraf w rozporządzeniu zmieniającym
+        // ============================================================
+
+        private static readonly string[] AmendingRegulation =
+        [
+            "ROZPORZĄDZENIE",
+            "MINISTRA FINANSÓW",
+            "z dnia 5 marca 2025 r.",
+            "zmieniające rozporządzenie w sprawie wzoru zgłoszenia",
+            "Na podstawie art. 12 ust. 3 ustawy z dnia 1 stycznia 2020 r. o zgłoszeniach (Dz. U. poz. 1) zarządza się, co następuje:",
+            "§ 1. W rozporządzeniu Ministra Finansów z dnia 1 lutego 2021 r. w sprawie wzoru zgłoszenia (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+            "1) § 5 otrzymuje brzmienie:",
+            "„§ 5. 1. Zgłoszenie składa się w postaci elektronicznej.",
+            "2. Zgłoszenie zawiera:",
+            "1) imię i nazwisko;",
+            "2) adres.”;",
+            "2) § 8 otrzymuje brzmienie:",
+            "„§ 8. Organ potwierdza przyjęcie zgłoszenia.”.",
+            "§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+        ];
+
+        [Fact]
+        public void QuotedSection_IsTheBasicUnit_WithItsParagraphs()
+        {
+            var points = Parse(AmendingRegulation).Articles.First().Paragraphs[0].Points;
+
+            var quoted = Assert.Single(points[0].Amendment!.Content!.Articles);
+            Assert.True(quoted.IsSection);
+            Assert.Equal("5", quoted.Number?.Value);
+            Assert.Equal(new[] { "1", "2" }, quoted.Paragraphs.Select(p => p.Number?.Value));
+            Assert.Equal(2, quoted.Paragraphs[1].Points.Count);
+            Assert.All(quoted.Paragraphs, p => Assert.NotEqual(Saga.Model.EditorialUnits.Paragraph.CodeParagraphRole, p.Role));
+            Assert.Empty(points[0].Amendment!.Content!.Paragraphs);
+
+            // Paragraf bez ustępów: treść w ustępie niejawnym, jak w artykule.
+            var single = Assert.Single(points[1].Amendment!.Content!.Articles);
+            Assert.True(single.IsSection);
+            Assert.True(Assert.Single(single.Paragraphs).IsImplicit);
+        }
+
+        [Fact]
+        public void QuotedSection_IsExportedAsASection()
+        {
+            var quotes = Export(AmendingRegulation).Descendants().Where(e => e.Name.LocalName == "cytat-strukt").ToList();
+
+            Assert.Equal(2, quotes.Count);
+            Assert.All(quotes, quote => Assert.Equal(new[] { "paragraf" }, ChildNames(quote)));
+            Assert.Equal(new[] { "nr", "ustep", "ustep" }, ChildNames(quotes[0].Elements().Single()));
+            Assert.DoesNotContain(quotes.Descendants(), e => e.Name.LocalName.Contains("paragraf-kodeksu"));
+        }
+
+        [Fact]
+        public void QuotedSectionInAStatute_StaysACodeParagraph()
+        {
+            // Ustawa zmieniająca kodeks cytuje „§ 2." jako paragraf kodeksu — rozstrzyga rodzaj aktu zmieniającego.
+            var document = Parse(
+            [
+                "USTAWA",
+                "z dnia 5 marca 2025 r.",
+                "o zmianie ustawy – Kodeks karny",
+                "Art. 1. W ustawie z dnia 6 czerwca 1997 r. – Kodeks karny (Dz. U. z 2024 r. poz. 17) w art. 1 § 2 otrzymuje brzmienie:",
+                "„§ 2. Nie stanowi przestępstwa czyn zabroniony, którego społeczna szkodliwość jest znikoma.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ]);
+
+            var content = document.Articles.First().Paragraphs[0].Amendment!.Content!;
+
+            Assert.Empty(content.Articles);
+            Assert.Equal(Saga.Model.EditorialUnits.Paragraph.CodeParagraphRole, Assert.Single(content.Paragraphs).Role);
+        }
+
+        [SchemaPlFact]
+        public void AmendingRegulation_IsSchemaValid_InItsBody()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(Export(AmendingRegulation)));
+        }
+
+        // ============================================================
         // Tekst jednolity rozporządzenia
         // ============================================================
 

@@ -1094,7 +1094,10 @@ aktu), a `ArticleBuilder` buduje `Article` z `IsSection` — tym samym potokiem 
 W eksporcie to `paragraf` pod korzeniem `rozporzadzenie` / `uchwala` / `zarzadzenie` (`ActKindXml.RootElement`),
 ze strefą tytułową `rodzaj-aktu`, `autor-aktu` (`LegalDocument.IssuerLine`), `data`, `tytul`, `podstawa-prawna`
 (`LegalDocument.LegalBasis`). W ustawie „§" zostaje paragrafem kodeksu
-([ADR-0034](adr/0034-paragraf-jest-jednostka-podstawowa-aktu-wykonawczego.md)).
+([ADR-0034](adr/0034-paragraf-jest-jednostka-podstawowa-aktu-wykonawczego.md)). To samo rozstrzygnięcie
+obowiązuje w treści cytowanej: `AmendmentStateManager.Flush` przekazuje rodzaj aktu przez
+`AmendmentBuildInput.SectionIsBasicUnit`, a `AmendmentBuilder` buduje z cytowanego „§ 5. 1. …" `Article`
+z `IsSection` i ustępami — w ustawie zmieniającej kodeks cytowany „§ 2." pozostaje paragrafem kodeksu.
 
 **Korzeń eksportu.** `LegalDocumentConverter.Convert` pisze `ustawa`, `kodeks` (ustawa o tytule „Kodeks …",
 której artykuły stoją w jednostkach systematyzacyjnych) albo korzeń aktu opartego na paragrafach, a dla tekstu

@@ -8,12 +8,15 @@ using Serilog;
 namespace Saga.Core.Services.Parsing.Builders
 {
     /// <summary>
-    /// Wejście dla budowania treści nowelizacji z zebranych akapitów.
+    /// Wejście dla budowania treści nowelizacji z zebranych akapitów. <paramref name="SectionIsBasicUnit"/>
+    /// mówi, że akt zmieniający jest oparty na paragrafach (ADR-0034) — cytowane „§ N." jest wtedy
+    /// jednostką podstawową, nie paragrafem kodeksu.
     /// </summary>
     public sealed record AmendmentBuildInput(
         IReadOnlyList<CollectedAmendmentParagraph> Paragraphs,
         StructuralAmendmentReference? Target,
-        AmendmentOperationType OperationType);
+        AmendmentOperationType OperationType,
+        bool SectionIsBasicUnit = false);
 
     /// <summary>
     /// Typ klasyfikacji akapitu w treści nowelizacji.
@@ -61,6 +64,9 @@ namespace Saga.Core.Services.Parsing.Builders
         private readonly List<BaseEntity> _openUnits = new();
         private ISystematizingUnit? _pendingHeading;
 
+        // Akt zmieniający oparty na paragrafach: cytowane „§ N." to jednostka podstawowa (ADR-0034).
+        private bool _sectionIsBasicUnit;
+
         /// <summary>
         /// Buduje AmendmentContent z listy zebranych akapitów nowelizacji.
         /// Klasyfikuje każdy akapit, buduje encje i organizuje je hierarchicznie.
@@ -77,8 +83,9 @@ namespace Saga.Core.Services.Parsing.Builders
             }
 
             ResetState();
+            _sectionIsBasicUnit = input.SectionIsBasicUnit;
 
-            content.ObjectType = DetermineObjectType(input.Paragraphs);
+            content.ObjectType = DetermineObjectType(input.Paragraphs, _sectionIsBasicUnit);
 
             foreach (var para in input.Paragraphs)
             {
@@ -100,14 +107,15 @@ namespace Saga.Core.Services.Parsing.Builders
         /// Klasyfikuje pojedynczy akapit nowelizacji na podstawie AmendmentStyleInfo
         /// (priorytet) lub wzorców tekstowych (fallback).
         /// </summary>
-        internal static AmendmentEntityKind ClassifyAmendmentParagraph(CollectedAmendmentParagraph para)
-            => ClassifyWithStyleOverride(para).Kind;
+        internal static AmendmentEntityKind ClassifyAmendmentParagraph(
+            CollectedAmendmentParagraph para, bool sectionIsBasicUnit = false)
+            => ClassifyWithStyleOverride(para, sectionIsBasicUnit).Kind;
 
         /// <summary>Klasyfikacja akapitu nowelizacji wraz z rodzajem odczytanym ze stylu.</summary>
         private static (AmendmentEntityKind Kind, AmendmentEntityKind? OverriddenStyleKind) ClassifyWithStyleOverride(
-            CollectedAmendmentParagraph para)
+            CollectedAmendmentParagraph para, bool sectionIsBasicUnit)
         {
-            var byText = ClassifyByText(para.Text);
+            var byText = ClassifyByText(para.Text, sectionIsBasicUnit);
 
             // Priorytet 1: dekodowanie z metadanych stylu
             if (para.StyleInfo != null)
@@ -131,10 +139,15 @@ namespace Saga.Core.Services.Parsing.Builders
                  or AmendmentEntityKind.Letter
                  or AmendmentEntityKind.Tiret;
 
-        /// <summary>Klasyfikacja akapitu wyłącznie na podstawie wzorców tekstowych (regex).</summary>
-        private static AmendmentEntityKind ClassifyByText(string text)
+        /// <summary>
+        /// Klasyfikacja akapitu wyłącznie na podstawie wzorców tekstowych (regex). W akcie opartym na
+        /// paragrafach „§ N." otwiera jednostkę podstawową — tak samo jak poza cytatem (ADR-0034).
+        /// </summary>
+        private static AmendmentEntityKind ClassifyByText(string text, bool sectionIsBasicUnit)
         {
             if (ParagraphClassifier.IsArticleByText(text))
+                return AmendmentEntityKind.Article;
+            if (sectionIsBasicUnit && ParagraphClassifier.SectionUnitPattern.IsMatch(text))
                 return AmendmentEntityKind.Article;
             if (ParagraphClassifier.IsParagraphByText(text))
                 return AmendmentEntityKind.Paragraph;
@@ -176,12 +189,12 @@ namespace Saga.Core.Services.Parsing.Builders
         /// sklasyfikowanego akapitu w buforze.
         /// </summary>
         internal static AmendmentObjectType DetermineObjectType(
-            IReadOnlyList<CollectedAmendmentParagraph> paragraphs)
+            IReadOnlyList<CollectedAmendmentParagraph> paragraphs, bool sectionIsBasicUnit = false)
         {
             // Tabela nie rozstrzyga rodzaju cytowanej jednostki — rozstrzyga pierwszy akapit.
             foreach (var para in paragraphs.Where(p => p.Table is null))
             {
-                var kind = ClassifyAmendmentParagraph(para);
+                var kind = ClassifyAmendmentParagraph(para, sectionIsBasicUnit);
                 return kind switch
                 {
                     AmendmentEntityKind.Article => AmendmentObjectType.Article,
@@ -211,7 +224,7 @@ namespace Saga.Core.Services.Parsing.Builders
             if (TryEnterSystematizingUnit(para.Text, content))
                 return;
 
-            var (entityKind, overriddenStyleKind) = ClassifyWithStyleOverride(para);
+            var (entityKind, overriddenStyleKind) = ClassifyWithStyleOverride(para, _sectionIsBasicUnit);
 
             // Tytuł jednostki (§ 62 ust. 2 ZTP): pierwszy akapit po oznaczeniu, jeśli nie jest jednostką redakcyjną.
             if (_pendingHeading is { } titled)
@@ -316,7 +329,8 @@ namespace Saga.Core.Services.Parsing.Builders
             var article = new Article
             {
                 ContentText = text,
-                Number = ParsingFactories.ParseArticleNumber(text)
+                Number = ParsingFactories.ParseArticleNumber(text),
+                IsSection = ParagraphClassifier.SectionUnitPattern.IsMatch(text),
             };
 
             var articleTail = ParsingFactories.GetArticleTail(text);

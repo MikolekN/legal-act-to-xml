@@ -204,7 +204,8 @@ namespace Saga.Core.Services.Parsing
             var buildInput = new AmendmentBuildInput(
                 collector.Paragraphs,
                 collector.Targets.FirstOrDefault(),
-                AmendmentOperationType.Modification);
+                AmendmentOperationType.Modification,
+                context.SectionIsBasicUnit);
 
             var content = _amendmentBuilder.Build(buildInput);
 
