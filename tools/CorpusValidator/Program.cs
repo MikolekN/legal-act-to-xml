@@ -119,6 +119,11 @@ if (args.Length > 2 && args[0] == "--styleless-parity")
 if (args.Length > 2 && args[0] == "--text-coverage")
     return CorpusValidator.TextCoverageReport.Run(args[1], args[2]);
 
+// Równania Worda: ile ich jest i czy konwersja OMML → MathML daje wyrażenia zgodne ze schematem.
+//   dotnet run --project tools/CorpusValidator -- --equations <root> <katalog-wyjsciowy>
+if (args.Length > 2 && args[0] == "--equations")
+    return CorpusValidator.EquationsReport.Run(args[1], args[2]);
+
 if (args.Length > 0 && args[0] == "--entry-into-force")
 {
     var eifRoot = args.Length > 1 ? args[1] : "documents";

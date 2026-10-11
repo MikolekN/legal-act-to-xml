@@ -401,6 +401,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   - W korpusie: 26 dokumentów, 293 akapity na swoim miejscu (43 bloki tekstu przed cytatem mniej), 2 kolejne
     przytoczenia zbudowane jako jednostki; zgodność ze schematem i pokrycie tekstu bez zmian.
 
+- **Konwersja równań Worda do MathML** (`OfficeMathMl`) — fundament pod `wzor-mat`: indeksy, ułamek (zwykły,
+  ukośny, w wierszu), nawiasy ze znakami równania, operator z granicami, pierwiastek, akcent, macierz i układ
+  równań; tekst przebiegu jako identyfikatory, liczby i znaki działań. Eksport jeszcze z niej nie korzysta.
+  - Nowa miara `CorpusValidator --equations <root> <katalog>`: liczba równań (wzór w osobnym akapicie / symbol
+    w zdaniu), zgodność MathML ze schematem, konstrukcje OMML bez odwzorowania. W korpusie: 1206 równań w 56
+    dokumentach (207 wzorów, 999 symboli), wszystkie zgodne ze schematem, żadnej konstrukcji bez odwzorowania.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

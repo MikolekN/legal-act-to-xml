@@ -544,6 +544,7 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | Klasa | Rola |
 |---|---|
 | **`ParagraphExtensions`** | Metody rozszerzające `Paragraph` (OpenXml) — bezpieczne pobieranie `StyleId` z null-checkiem na `ParagraphProperties`; `GetFullText` składa tekst akapitu z przebiegów i równań w kolejności dokumentu. |
+| **`OfficeMathMl`** | Równanie Worda (`m:oMath`) jako MathML prezentacyjny (`math` z `msub`, `msup`, `mfrac`, `mrow` z nawiasami, `munderover`, `msqrt`/`mroot`, `mtable`); tekst przebiegu dzieli na `mi`, `mn`, `mo`, przebieg tekstu zwykłego to `mtext`. Wszystkie 1206 równań korpusu dają wyrażenie zgodne ze schematem (miara `CorpusValidator --equations`). Eksport jeszcze z niego nie korzysta. |
 | **`OfficeMathText`** | Równanie Worda (`m:oMath`) jako tekst w zapisie liniowym: `E_i`, `x^2`, `a/b`, nawiasy z właściwości równania, operator z granicami (`∑_(i=u)^j`), pierwiastek (`√x`, `√(8&x)`) — [ADR-0037](adr/0037-rownanie-worda-wchodzi-do-tekstu-w-zapisie-liniowym.md). |
 | **`StringExtensions`** | Metody rozszerzające `string` — `CollapseWhitespace()` dla treści jednostek (odstępy zwinięte, półpauza zostaje) i `Sanitize()` dla rozpoznawania rodzaju aktu i nagłówka publikatora (dodatkowo półpauza → dywiz). |
 | **`PolishDates`** | Nazwy miesięcy i parsowanie dat w formie długiej („1 stycznia 2025 r."). Metody `Try*` nie rzucają — data niemożliwa („31 lutego") zwraca `false`. Alternatywa miesięcy jest `const`, bo leksykon jest zamknięty. |
@@ -908,6 +909,7 @@ src/Saga.Core/
 │   ├── ParsingException.cs          # Wyjątek bazowy parsowania
 │   └── UnsupportedDocumentFormatException.cs  # Nierozpoznany format wejścia
 ├── Helpers/
+│   ├── OfficeMathMl.cs              # Równanie Worda (m:oMath) jako MathML prezentacyjny
 │   ├── OfficeMathText.cs            # Równanie Worda (m:oMath) jako tekst w zapisie liniowym
 │   ├── ParagraphExtensions.cs       # Bezpieczne StyleId() z null-check; GetFullText() z obsługą superscriptu i równań
 │   ├── StringExtensions.cs          # CollapseWhitespace(), Sanitize()
