@@ -53,7 +53,8 @@ namespace Saga.Core.Services.Converters
                     new XAttribute("actKind", announcement.ActKindLine),
                     new XAttribute("actDate", announcement.ActDateLine),
                     new XAttribute("actSubject", announcement.ActSubject),
-                    announcement.Content.Select(SerializeContentBlock)));
+                    announcement.Content.Select(SerializeContentBlock),
+                    announcement.Points.Select(SerializeParagraph)));
 
             return ToCanonicalString(root);
         }

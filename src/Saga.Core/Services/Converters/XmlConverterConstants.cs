@@ -20,6 +20,9 @@ namespace Saga.Core.Services.Converters
         {
             internal const string Element = "obwieszczenie";
             internal const string Author = "autor-aktu";
+            internal const string Point = "punkt-OTJ";
+            internal const string SubPoint = "podpunkt-OTJ";
+            internal const string SubPointCommonPart = "czesc-wspolna-podpunkt-OTJ";
         }
 
         /// <summary>Strefa tytułowa aktu: rodzaj, data i przedmiot — zaraz po metadanych.</summary>

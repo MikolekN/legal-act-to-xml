@@ -290,6 +290,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   Przedmiot aktu zaczynający się nazwą własną („o Policji", „o Państwowej Straży Pożarnej") jest rozpoznawany —
   wcześniej taki tytuł ginął (49 tekstów jednolitych).
 
+- **Jednostki obwieszczenia tekstu jednolitego** (ADR-0032): punkty obwieszczenia („1. Na podstawie …"), podpunkty
+  („1) ustawą …") i część wspólna podpunktów są jednostkami — w eksporcie `punkt-OTJ`, `podpunkt-OTJ`
+  i `czesc-wspolna-podpunkt-OTJ` z adresami liczonymi od obwieszczenia (`DU/2025/1094__pkt_1__ppkt_2`; nowy skrót
+  `ppkt`), bez dat. Przytoczony przepis („…, który stanowi: „Art. 57. …"") jest dalszą treścią jednostki, za którą
+  stoi, a formuła podpisu pod obwieszczeniem — podpisem dokumentu (`organ-podpisujacy`, `osoba`, organ w metadanych).
+  W 419 tekstach jednolitych: 854 punkty, 1441 podpunktów, 181 części wspólnych. Pokrycie tekstu tekstów
+  jednolitych: 91,1 % akapitów (88,0 % po wydzieleniu obwieszczenia, 90,3 % przed nim); liczba dokumentów zgodnych
+  ze schematem bez zmian (651 z 2321, tak samo wg libxml2).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

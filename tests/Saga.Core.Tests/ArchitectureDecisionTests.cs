@@ -492,6 +492,7 @@ namespace Saga.Core.Tests
             ["poczwórny tiret"] = "cztir",
             ["pięciokrotny tiret"] = "pitir",
             ["załącznik"] = "zal",
+            ["podpunkt obwieszczenia"] = "ppkt",
         };
 
         [Fact]
@@ -519,6 +520,7 @@ namespace Saga.Core.Tests
                 ["poczwórny tiret"] = Tiret.PrefixForDepth(4),
                 ["pięciokrotny tiret"] = Tiret.PrefixForDepth(5),
                 ["załącznik"] = Annex.EIdPrefix,
+                ["podpunkt obwieszczenia"] = Announcement.SubPointEIdPrefix,
             };
 
             Assert.Equal(LevelTypeTable, actual);
@@ -1152,6 +1154,49 @@ namespace Saga.Core.Tests
             Assert.Equal(
                 new[] { "zalacznik-do", "rodzaj-aktu", "data", "tytul", "artykul" },
                 act.Elements().Select(element => element.Name.LocalName));
+        }
+
+        // ============================================================
+        // ADR-0032: jednostki obwieszczenia adresowane od obwieszczenia
+        // ============================================================
+
+        [Fact]
+        public void Adr0032_AnnouncementUnits_AreAddressedFromTheAnnouncement()
+        {
+            // Punkt i podpunkt obwieszczenia nie są ustępem ani punktem ogłaszanego aktu: mają własne elementy
+            // i adresy bez segmentu aktu, a przytoczony „Art. 57." z „1)" w środku nie staje się jednostką.
+            string[] lines =
+            [
+                "Obwieszczenie",
+                "Marszałka Sejmu Rzeczypospolitej Polskiej",
+                "z dnia 6 sierpnia 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
+                "1. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje:",
+                "1) art. 57 ustawy z dnia 1 października 2024 r. o zmianie ustawy (Dz. U. poz. 1473), który stanowi:",
+                "„Art. 57. Przepisy stosuje się do:",
+                "1) odbudowy,",
+                "2) remontu.”;",
+                "2) art. 9 ustawy z dnia 9 maja 2025 r. o zmianie ustawy (Dz. U. poz. 680), który stanowi:",
+                "„Art. 9. Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.”.",
+                "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
+                "USTAWA",
+                "z dnia 11 sierpnia 2001 r.",
+                "o odbudowie obiektów budowlanych",
+                "Art. 1. Ustawa reguluje zasady odbudowy.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var point = Assert.Single(document.Announcement!.Points);
+            Assert.Equal("pkt_1", point.Id);
+            Assert.Equal(new[] { "pkt_1__ppkt_1", "pkt_1__ppkt_2" }, point.Points.Select(subPoint => subPoint.Id));
+            Assert.Equal(3, point.Points[0].Continuation.Count);
+
+            var exported = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(element => element.Name.LocalName is "punkt-OTJ" or "podpunkt-OTJ")
+                .Select(element => $"{element.Name.LocalName} {element.Attribute("eId")?.Value}");
+            Assert.Equal(new[] { "punkt-OTJ pkt_1", "podpunkt-OTJ pkt_1__ppkt_1", "podpunkt-OTJ pkt_1__ppkt_2" }, exported);
         }
 
         private static DocumentClassificationResult Classify(byte[] docx)

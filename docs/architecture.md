@@ -421,6 +421,7 @@ Stan mutowalny przechowujący bieżącą pozycję w drzewie:
 | **`ActSignatureParser`** | Rozpoznaje formułę podpisu za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda") — organ, inicjały, nazwisko. Formuła, po której stoi kolejny artykuł, podpisem aktu nie jest. |
 | **`AnnexBuilder`** | Składa załączniki z bloków zebranych za nagłówkiem „Załącznik(i) do ustawy z dnia …" (`ParsingContext.AnnexBlocks`): wskazanie aktu z wierszem „(Dz. U. …)", oznaczenie w osobnym wierszu (ze znacznikiem odnośnika albo dopiskiem „(uchylony)"), tytuł (styl tytułu albo wyśrodkowany pierwszy wiersz), treść. Treści nie rozkłada na jednostki — załącznik nie przechodzi przez klasyfikator akapitów. |
 | **`AnnouncementBoundary`** | Tekst jednolity: dokument zaczyna się nagłówkiem obwieszczenia, a ogłaszany akt — wierszem „Załącznik do obwieszczenia …" ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md)). Bloki sprzed tego wiersza omijają potok aktu (`ParserOrchestrator.CollectAnnouncementBlock`): wiersze nagłówka czyta kolektor metadanych, reszta trafia do `LegalDocument.Announcement` (akapity i tabele). Na granicy kolektor jest wymieniany (`ParsingContext.BeginAnnouncedAct`), więc strefa tytułowa ogłaszanego aktu („USTAWA", data, przedmiot) trafia do `Announcement`, a nagłówkiem dokumentu pozostaje nagłówek obwieszczenia. |
+| **`AnnouncementUnits`** | Jednostki obwieszczenia z samej treści, poza potokiem aktu ([ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)): „N." to punkt (`Paragraph` z `EIdPrefix` `pkt`), „N)" pod punktem — podpunkt (`Point` z `ppkt`), akapit tuż za ostatnim podpunktem bez znaku końcowego — część wspólna podpunktów. Przytoczenie (od cudzysłowu otwierającego do domknięcia) i tabela są dalszą treścią jednostki, za którą stoją; formuła podpisu trafia do `LegalDocument.Signature`. |
 | **`ContentTables`** | Składa `ContentTable` z bloków jednej tabeli źródłowej według `DocumentBlock.TableCell`; dalszy ciąg komórki scalonej w pionie nie jest osobną komórką |
 | **`AnnexUnits`** | Wyliczenie w treści załącznika jako jednostki redakcyjne: akapity przechodzą przez potok aktu pod artykułem zastępczym (niejawnym, z `AddressAnchor` = adres załącznika), a ustęp z oznaczeniem rzymskim („I.") powstaje tu wprost. Zwraca jednostki tylko wtedy, gdy cała treść jest wyliczeniem i potok niczego nie pominął — [ADR-0028](adr/0028-wyliczenie-w-zalaczniku-buduje-potok-aktu.md) |
 | **Dalsza treść jednostki** (`StructureProcessor.HandleUnknown`, `ParserOrchestrator.FlushTable`) | Akapit, którego potok nie rozpoznał, trafia do `Continuation` najgłębszej otwartej jednostki (`StructureProcessor.DeepestUnit`); bloki tabeli stojącej w treści przepisu omijają klasyfikację, są zbierane w `ParsingContext.TableBlocks` i na końcu tabeli stają się jej `ContentTable`. Tabela zaczęta w treści nowelizacji (`ParsingContext.TableInAmendment`) jest treścią cytowaną: `AmendmentStateManager.CollectTable` dokłada ją do kolektora, a `AmendmentBuilder` przypina do jednostki, za którą stoi, albo — gdy cytat nie ma jednostek — do `AmendmentContent.Tables` |
@@ -963,6 +964,7 @@ src/Saga.Core/
     │   ├── ActSignatureParser.cs      # Formuła podpisu za ostatnim przepisem
     │   ├── AnnexBuilder.cs            # Załączniki z bloków za nagłówkiem załącznika
     │   ├── AnnouncementBoundary.cs    # Granica obwieszczenia i ogłaszanego aktu (tekst jednolity)
+    │   ├── AnnouncementUnits.cs       # Punkty i podpunkty obwieszczenia, przytoczenia, podpis
     │   ├── AnnexUnits.cs              # Wyliczenie w załączniku jako jednostki (potok aktu pod artykułem zastępczym)
     │   ├── ContentTables.cs           # Tabela treści z bloków tabeli źródłowej
     │   ├── JournalHeaderParser.cs    # Metadane publikatora z nagłówka strony (akty ogłoszone)
@@ -1087,8 +1089,10 @@ w [docs/adr/](adr/README.md). Tutaj tylko skrót z odesłaniem; ta sekcja nie je
 ### Rozstrzygnięcia bez osobnego ADR
 
 **Korzeń eksportu.** `LegalDocumentConverter.Convert` pisze `ustawa`, a dla tekstu jednolitego ustawy —
-`obwieszczenie` (z `autor-aktu`) i w nim `ustawa` ze strefą tytułową ogłaszanego aktu (`zalacznik-do`,
-`rodzaj-aktu`, `data`, `tytul`), jednostkami i załącznikami ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md)).
+`obwieszczenie` (z `autor-aktu`), w nim punkty obwieszczenia (`AnnouncementXmlConverter`: `punkt-OTJ`,
+`podpunkt-OTJ`, `czesc-wspolna-podpunkt-OTJ`), podpis i `ustawa` ze strefą tytułową ogłaszanego aktu (`zalacznik-do`,
+`rodzaj-aktu`, `data`, `tytul`), jednostkami i załącznikami ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md),
+[ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)).
 
 **Pierwszy nagłówek rodzaju aktu wygrywa.** Załącznik do obwieszczenia o tekście jednolitym zawiera
 własną linię „USTAWA", więc sygnały tytułowe liczone są tylko ze strefy tytułowej (pierwsze bloki),

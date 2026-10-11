@@ -217,7 +217,7 @@ namespace Saga.Core.Services.Parsing
 
             if (context.AnnouncementMetadata is not null)
             {
-                var announcement = AnnouncementBoundary.Build(context.AnnouncementBlocks);
+                var announcement = AnnouncementUnits.Build(context.AnnouncementBlocks, context.Document);
                 announcement.AttachedTo = context.AnnouncedActAttachedTo;
                 context.Metadata.ApplyTo(announcement);
                 context.Document.Announcement = announcement;

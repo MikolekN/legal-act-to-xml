@@ -25,12 +25,17 @@ namespace Saga.Core.Services
             PrepareMetadata(document, actElement);
             PrepareHeading(document, actElement, withIssuer: announced is not null);
 
+            if (announced is not null)
+                actElement.Add(AnnouncementXmlConverter.Points(announced));
+
             var body = announced is null ? actElement : AnnouncedActElement(announced);
 
             foreach (var part in document.Parts)
                 body.Add(SystematizingUnitXmlConverter.ActLevel(part));
 
-            if (document.Signature is { } signature)
+            // Podpis pod obwieszczeniem, którego aktu eksport nie niesie (tekst jednolity rozporządzenia), nie ma
+            // gdzie stanąć: dotychczasowy korzeń nie jest obwieszczeniem.
+            if (document.Signature is { } signature && (announced is not null || document.Announcement is null))
                 actElement.Add(SignatureXmlConverter.ToXml(signature));
 
             if (body != actElement)

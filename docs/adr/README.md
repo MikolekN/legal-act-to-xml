@@ -50,5 +50,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0029](0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md) | Akapit bez oznaczenia i tabela w treści przepisu są dalszą treścią jednostki, za którą stoją (`BaseEntity.Continuation` → `fragment`, `tabela`); komórki tabeli nie przechodzą przez rozpoznawanie jednostek | Accepted | 2026-10-10 |
 | [0030](0030-warianty-cudzyslowu-rozpoznaje-jedno-zrodlo.md) | Warianty cudzysłowu (`„`, `”`, `“`, `ˮ`, `"`) trzyma wyłącznie `QuotationMarks`; tekstu się nie normalizuje — eksport niesie znak ze źródła | Accepted | 2026-10-10 |
 | [0031](0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md) | Tekst jednolity dzieli się na wierszu „Załącznik do obwieszczenia …": treść przed nim to obwieszczenie (`LegalDocument.Announcement`), nie ogłaszany akt; tekst jednolity ustawy eksportuje się pod korzeniem `obwieszczenie` z aktem osadzonym | Accepted | 2026-10-11 |
+| [0032](0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md) | Jednostki obwieszczenia tekstu jednolitego buduje `AnnouncementUnits` poza potokiem aktu i adresuje od obwieszczenia: punkt `pkt_1`, podpunkt `pkt_1__ppkt_2` (rozszerzenie tabeli ADR-0014 o `ppkt`); przytoczenie jest dalszą treścią jednostki | Accepted | 2026-10-11 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

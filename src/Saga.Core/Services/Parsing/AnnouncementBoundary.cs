@@ -1,7 +1,6 @@
 using System.Text.RegularExpressions;
 using Saga.Core.Ingest;
 using Saga.Core.Services.Classify.Document;
-using Saga.Model;
 
 namespace Saga.Core.Services.Parsing
 {
@@ -42,27 +41,6 @@ namespace Saga.Core.Services.Parsing
             }
 
             return -1;
-        }
-
-        /// <summary>Treść obwieszczenia z zebranych bloków: akapity i tabele w kolejności dokumentu.</summary>
-        internal static Announcement Build(IReadOnlyList<DocumentBlock> blocks)
-        {
-            var announcement = new Announcement();
-            for (var i = 0; i < blocks.Count; i++)
-            {
-                if (blocks[i].TableCell is { } cell)
-                {
-                    var run = blocks.Skip(i).TakeWhile(b => b.TableCell?.Table == cell.Table).ToList();
-                    i += run.Count - 1;
-                    announcement.Content.Add(new ContentBlock { Table = ContentTables.FromBlocks(run) });
-                    continue;
-                }
-
-                if (!blocks[i].IsEmpty)
-                    announcement.Content.Add(new ContentBlock { Text = blocks[i].Text.CollapseWhitespace().Trim() });
-            }
-
-            return announcement;
         }
     }
 }

@@ -320,6 +320,7 @@ Dla odesłań korzystających ze skrótów wprowadzonych w danym akcie.
 | `chapter` | Rozdział | `rozdz` |
 | `subchapter` | Oddział | `oddz` |
 | `attachment` | Załącznik | `zal` |
+| `announcementSubPoint` | Podpunkt obwieszczenia tekstu jednolitego (punkt obwieszczenia ma `pkt`) | `ppkt` |
 
 ### AliasType
 
@@ -1015,4 +1016,5 @@ Tabela konwersji dla przyszłej integracji z systemem eId WordParsera. Prefiksy 
 | `division` | `dzial` | tak (`Division.EIdPrefix`) |
 | `chapter` | `rozdz` | tak (`Chapter.EIdPrefix`) |
 | `subchapter` | `oddz` | tak (`Subchapter.EIdPrefix`) |
-| `attachment` | `zal` | nie (nowy) |
+| `attachment` | `zal` | tak (`Annex.EIdPrefix`) |
+| `announcementSubPoint` | `ppkt` | tak (`Announcement.SubPointEIdPrefix`, ADR-0032) |

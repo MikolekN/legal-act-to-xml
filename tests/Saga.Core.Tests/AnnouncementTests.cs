@@ -14,15 +14,19 @@ namespace Saga.Core.Tests
     {
         private static DocumentBlock Block(string text, string? style = null) => new() { Text = text, StyleId = style };
 
-        // Układ szczotki RCL (336586_2987956): nagłówek, punkty obwieszczenia, przytoczony przepis, podpis, akt.
+        // Układ szczotki RCL (336586_2987956): nagłówek, punkty obwieszczenia z podpunktami, przytoczony przepis,
+        // podpis, akt.
         private static readonly string[] ConsolidatedText =
         [
             "Obwieszczenie",
             "Marszałka Sejmu Rzeczypospolitej Polskiej",
             "z dnia 6 sierpnia 2025 r.",
             "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
-            "1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych.",
-            "2. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 57 ustawy z dnia 1 października 2024 r. o zmianie ustawy (Dz. U. poz. 1473), który stanowi:",
+            "1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych, z uwzględnieniem zmian wprowadzonych:",
+            "1) ustawą z dnia 1 października 2024 r. o zmianie ustawy o odbudowie (Dz. U. poz. 1473),",
+            "2) ustawą z dnia 9 maja 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 680)",
+            "oraz zmian wynikających z przepisów ogłoszonych przed dniem 6 sierpnia 2025 r.",
+            "2. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 57 ustawy z dnia 1 października 2024 r. o zmianie ustawy o odbudowie (Dz. U. poz. 1473), który stanowi:",
             "„Art. 57. Przepisy ustawy zmienianej w art. 10 stosuje się również do odbudowy.”",
             "Marszałek Sejmu: S. Hołownia",
             "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
@@ -33,10 +37,17 @@ namespace Saga.Core.Tests
             "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
         ];
 
+        private const int ActStart = 11;
+        private const int ActSubjectLine = 14;
+
         private static LegalDocument Parse(IEnumerable<string> lines) =>
             LegalDocumentParser.Parse(
                 lines.Select(line => Block(line)).ToList(),
                 new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+        // ============================================================
+        // Granica obwieszczenia i ogłaszanego aktu
+        // ============================================================
 
         [Fact]
         public void ContentBeforeTheAnnexedAct_BelongsToTheAnnouncement()
@@ -45,12 +56,7 @@ namespace Saga.Core.Tests
 
             // Przytoczony „Art. 57." nie jest artykułem ogłaszanego aktu.
             Assert.Equal(new[] { "1", "2" }, document.Articles.Select(a => a.Number?.Value));
-
-            var announcement = Assert.IsType<Announcement>(document.Announcement);
-            Assert.Equal(4, announcement.Content.Count);
-            Assert.StartsWith("1. Na podstawie art. 16", announcement.Content[0].Text);
-            Assert.StartsWith("„Art. 57.", announcement.Content[2].Text);
-            Assert.Equal("Marszałek Sejmu: S. Hołownia", announcement.Content[3].Text);
+            Assert.NotNull(document.Announcement);
         }
 
         [Fact]
@@ -59,6 +65,7 @@ namespace Saga.Core.Tests
             var document = Parse(ConsolidatedText);
 
             Assert.Equal("Obwieszczenie", document.KindLine);
+            Assert.Equal("Marszałka Sejmu Rzeczypospolitej Polskiej", document.IssuerLine);
             Assert.Equal("z dnia 6 sierpnia 2025 r.", document.DateLine);
             Assert.Equal(new DateTime(2025, 8, 6), document.ActDate);
             Assert.StartsWith("w sprawie ogłoszenia jednolitego tekstu", document.Subject);
@@ -67,7 +74,7 @@ namespace Saga.Core.Tests
         [Fact]
         public void ActAnnouncedDirectly_HasNoAnnouncement()
         {
-            var document = Parse(ConsolidatedText.Skip(9));
+            var document = Parse(ConsolidatedText.Skip(ActStart + 1));
 
             Assert.Null(document.Announcement);
             Assert.Equal(2, document.Articles.Count());
@@ -77,8 +84,61 @@ namespace Saga.Core.Tests
         public void AnnouncementWithoutAnAnnexedAct_IsLeftToTheActPipeline()
         {
             // Obwieszczenie innego rodzaju (bez „Załącznik do obwieszczenia") nie ma granicy — nic się nie zmienia.
-            Assert.Equal(-1, AnnouncementBoundary.Find(ConsolidatedText.Take(8).Select(line => Block(line)).ToList()));
-            Assert.Equal(8, AnnouncementBoundary.Find(ConsolidatedText.Select(line => Block(line)).ToList()));
+            Assert.Equal(-1, AnnouncementBoundary.Find(ConsolidatedText.Take(ActStart).Select(line => Block(line)).ToList()));
+            Assert.Equal(ActStart, AnnouncementBoundary.Find(ConsolidatedText.Select(line => Block(line)).ToList()));
+        }
+
+        // ============================================================
+        // Jednostki obwieszczenia
+        // ============================================================
+
+        [Fact]
+        public void AnnouncementPoints_HoldSubPointsAndTheirCommonPart()
+        {
+            var announcement = Parse(ConsolidatedText).Announcement!;
+
+            Assert.Empty(announcement.Content);
+            Assert.Equal(new[] { "pkt_1", "pkt_2" }, announcement.Points.Select(p => p.Id));
+
+            var first = announcement.Points[0];
+            Assert.StartsWith("Na podstawie art. 16", first.ContentText);
+            Assert.Equal(new[] { "pkt_1__ppkt_1", "pkt_1__ppkt_2" }, first.Points.Select(p => p.Id));
+            Assert.StartsWith("ustawą z dnia 1 października 2024 r.", first.Points[0].ContentText);
+
+            var commonPart = Assert.Single(first.CommonParts, part => part.Type == CommonPartType.WrapUp);
+            Assert.StartsWith("oraz zmian wynikających", commonPart.ContentText);
+        }
+
+        [Fact]
+        public void QuotedProvision_ContinuesThePointItStandsAfter()
+        {
+            var second = Parse(ConsolidatedText).Announcement!.Points[1];
+
+            Assert.Empty(second.Points);
+            Assert.StartsWith("„Art. 57.", Assert.Single(second.Continuation).Text);
+        }
+
+        [Fact]
+        public void QuotedProvisionOfSeveralParagraphs_StaysOneQuotation()
+        {
+            // Przytoczenie otwarte cudzysłowem ciągnie się do jego domknięcia — „1)" w środku nie jest podpunktem.
+            var lines = ConsolidatedText.ToList();
+            lines[9] = "„Art. 57. Przepisy stosuje się do:";
+            lines.InsertRange(10, ["1) odbudowy,", "2) remontu.”"]);
+
+            var second = Parse(lines).Announcement!.Points[1];
+
+            Assert.Empty(second.Points);
+            Assert.Equal(new[] { "„Art. 57. Przepisy stosuje się do:", "1) odbudowy,", "2) remontu.”" }, second.Continuation.Select(c => c.Text));
+        }
+
+        [Fact]
+        public void SignatureUnderTheAnnouncement_IsTheSignatureOfTheDocument()
+        {
+            var signature = Parse(ConsolidatedText).Signature!;
+
+            Assert.Equal("Marszałek Sejmu", signature.Authority);
+            Assert.Equal("Hołownia", signature.Surname);
         }
 
         // ============================================================
@@ -99,6 +159,9 @@ namespace Saga.Core.Tests
         private static string[] ChildNames(XElement element) =>
             element.Elements().Select(child => child.Name.LocalName).ToArray();
 
+        private static XElement Child(XElement element, string name) =>
+            element.Elements().First(child => child.Name.LocalName == name);
+
         [Fact]
         public void ConsolidatedStatute_IsExportedUnderTheAnnouncement()
         {
@@ -106,22 +169,45 @@ namespace Saga.Core.Tests
 
             var announcement = Assert.Single(xml.Elements());
             Assert.Equal("obwieszczenie", announcement.Name.LocalName);
-            Assert.Equal(new[] { "metadane", "rodzaj-aktu", "autor-aktu", "data", "tytul", "ustawa" }, ChildNames(announcement));
-            Assert.Equal("Obwieszczenie", announcement.Elements().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
-            Assert.Equal("Marszałka Sejmu Rzeczypospolitej Polskiej",
-                announcement.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
+            Assert.Equal(
+                new[] { "metadane", "rodzaj-aktu", "autor-aktu", "data", "tytul", "punkt-OTJ", "punkt-OTJ", "organ-podpisujacy", "ustawa" },
+                ChildNames(announcement));
+            Assert.Equal("Obwieszczenie", Child(announcement, "rodzaj-aktu").Value);
+            Assert.Equal("Marszałka Sejmu Rzeczypospolitej Polskiej", Child(announcement, "autor-aktu").Value);
 
             // Akt ogłaszany w załączniku ma własną strefę tytułową i tylko własne artykuły.
-            var act = announcement.Elements().Single(e => e.Name.LocalName == "ustawa");
+            var act = Child(announcement, "ustawa");
             Assert.Equal(new[] { "zalacznik-do", "rodzaj-aktu", "data", "tytul", "artykul", "artykul" }, ChildNames(act));
-            Assert.Equal("USTAWA", act.Elements().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
-            Assert.Equal("o odbudowie obiektów budowlanych", act.Elements().Single(e => e.Name.LocalName == "tytul").Value);
+            Assert.Equal("USTAWA", Child(act, "rodzaj-aktu").Value);
+            Assert.Equal("o odbudowie obiektów budowlanych", Child(act, "tytul").Value);
+        }
+
+        [Fact]
+        public void AnnouncementPoints_AreExportedWithAddressesOfTheAnnouncement()
+        {
+            var announcement = LegalDocumentConverter.Convert(Parse(ConsolidatedText)).Elements().Single();
+
+            var first = Child(announcement, "punkt-OTJ");
+            Assert.Equal(new[] { "nr", "p", "podpunkt-OTJ", "podpunkt-OTJ", "czesc-wspolna-podpunkt-OTJ" }, ChildNames(first));
+            Assert.Equal("pkt_1", first.Attribute("eId")!.Value);
+            Assert.Equal(
+                new[] { "pkt_1__ppkt_1", "pkt_1__ppkt_2", "pkt_1__czw" },
+                first.Elements().Skip(2).Select(e => e.Attribute("eId")!.Value));
+
+            // Przytoczony przepis stoi za zdaniami punktu jako jego dalsza treść.
+            var second = announcement.Elements().Where(e => e.Name.LocalName == "punkt-OTJ").ElementAt(1);
+            Assert.Equal(new[] { "nr", "p", "fragment" }, ChildNames(second));
+
+            // Jednostki obwieszczenia nie są przepisami aktu — nie niosą dat.
+            Assert.DoesNotContain(
+                announcement.Elements().Where(e => e.Name.LocalName == "punkt-OTJ").DescendantsAndSelf(),
+                e => e.Attribute("wejscie-w-zycie") != null || e.Attribute("okres") != null);
         }
 
         [Fact]
         public void ActAnnouncedDirectly_KeepsTheActAsTheRoot()
         {
-            var xml = LegalDocumentConverter.Convert(Parse(ConsolidatedText.Skip(9)));
+            var xml = LegalDocumentConverter.Convert(Parse(ConsolidatedText.Skip(ActStart + 1)));
 
             Assert.Equal("ustawa", Assert.Single(xml.Elements()).Name.LocalName);
         }
@@ -130,7 +216,7 @@ namespace Saga.Core.Tests
         public void AnnouncementOfAnotherKindOfAct_KeepsTheLegacyRoot()
         {
             // Tekst jednolity rozporządzenia: jednostek „§" potok jeszcze nie buduje, więc korzeń zostaje bez zmian.
-            var lines = ConsolidatedText.Take(9).Concat(
+            var lines = ConsolidatedText.Take(ActStart + 1).Concat(
             [
                 "ROZPORZĄDZENIE", "MINISTRA FINANSÓW", "z dnia 11 maja 2017 r.", "w sprawie osób prawnych",
                 "§ 1. Rozporządzenie określa wykaz osób prawnych.",
@@ -138,7 +224,10 @@ namespace Saga.Core.Tests
 
             var xml = LegalDocumentConverter.Convert(Parse(lines));
 
-            Assert.Equal("ustawa", Assert.Single(xml.Elements()).Name.LocalName);
+            // Treść obwieszczenia i jego podpis są w modelu; eksport ich nie niesie, dopóki korzeń nie jest obwieszczeniem.
+            var root = Assert.Single(xml.Elements());
+            Assert.Equal("ustawa", root.Name.LocalName);
+            Assert.Equal(new[] { "metadane", "rodzaj-aktu", "data", "tytul" }, ChildNames(root));
         }
 
         [SchemaPlFact]
@@ -157,7 +246,7 @@ namespace Saga.Core.Tests
         public void AnnouncedActSubject_MayStartWithAProperName(string subject)
         {
             var lines = ConsolidatedText.ToArray();
-            lines[11] = subject;
+            lines[ActSubjectLine] = subject;
 
             Assert.Equal(subject, Parse(lines).Announcement!.ActSubject);
         }
