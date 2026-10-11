@@ -264,6 +264,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   deklaracji i sam zgłasza powtórzoną wartość atrybutu. Zgodnych w całości: ustawy ogłoszone 239 → 240 z 241,
   teksty jednolite 402 → 410 z 460; eksport bez zmian.
 
+- **Jednostki załącznika bez odwołania do grupy czasowej**: jednostki i zdania pod `segment-zalacznika` niosą
+  `wejscie-w-zycie`, ale już nie `okres` — tak jak w przykładzie autorów schematu. Element w treści dowolnej nie ma
+  deklaracji, więc jego `okres` nie ma dla walidatora wartości i Xerces zgłaszał niespełnione odwołanie
+  `AktOkresJednostki`. Zmienia eksport 8 dokumentów (387 elementów); przykład DU/2026/252 zgadza się teraz we
+  wszystkich datach i okresach (2207 z 2207, było 2166), a eksport tego aktu przyjmują .NET, libxml2 i Xerces.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

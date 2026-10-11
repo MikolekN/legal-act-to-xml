@@ -61,6 +61,12 @@ namespace Saga.Core.Services.Converters
                     || LifecycleEvents.GroupFor(events, dates.Entry, dates.Retroactive) is not { } group)
                     continue;
 
+                // Treść załącznika niesie datę, ale nie odwołanie do grupy czasowej — jak w przykładzie autorów
+                // schematu. Jednostka pod treścią dowolną nie ma deklaracji, więc jej „okres" nie ma dla
+                // walidatora wartości i odwołanie zostawałoby niespełnione.
+                if (IsAnnexContent(element))
+                    continue;
+
                 if (!groups.Contains(group))
                     groups.Add(group);
 
@@ -73,6 +79,9 @@ namespace Saga.Core.Services.Converters
             foreach (var group in groups)
                 temporal.Add(GroupElement(group, isMain: group == main));
         }
+
+        private static bool IsAnnexContent(XElement element) =>
+            element.Ancestors().Any(ancestor => ancestor.Name.LocalName == XmlConverterConstants.Attachments.Segment);
 
         private static XElement GroupElement(TimeGroup group, bool isMain)
         {

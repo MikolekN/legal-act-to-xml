@@ -274,6 +274,11 @@ namespace Saga.Core.Tests
 
             // Jednostki załącznika wchodzą w życie z aktem (ogłoszenie 2 marca 2026 r., 14 dni).
             Assert.All(paragraphs.Concat(points), unit => Assert.Equal("2026-03-17", Attr(unit, "wejscie-w-zycie")));
+
+            // Niosą datę, ale nie odwołanie do grupy czasowej — jak w przykładzie autorów schematu;
+            // jednostki aktu mają jedno i drugie.
+            Assert.DoesNotContain(segment.DescendantsAndSelf(), element => element.Attribute("okres") != null);
+            Assert.All(Named(segment.AncestorsAndSelf().Last(), "artykul"), article => Assert.NotNull(article.Attribute("okres")));
         }
 
         [SchemaPlFact]
