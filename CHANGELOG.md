@@ -534,6 +534,13 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Miara zgodności bez stylów liczy wszystkie jednostki** (`CorpusValidator --styleless-parity`,
   `--compare-reference`): także paragraf aktu wykonawczego, jednostki spoza ZTP (`nie-ztp-*`), punkty obwieszczenia
   i preambułę. Przedtem miara ich nie widziała i zawyżała wynik rozporządzeń (97,96 % → rzeczywiste 97,22 %).
+- **Część wspólna bez stylu i bez myślnika** ([ADR-0046](docs/adr/0046-akapit-mala-litera-za-pozycja-wyliczenia-jest-czescia-wspolna.md)):
+  akapit bez oznaczenia zaczynający się małą literą, tuż za pozycją wyliczenia zakończoną przecinkiem albo bez
+  znaku końcowego, zamyka wyliczenie jako część wspólna („… 2) niewykonania rekultywacji gruntów," i w nowym wierszu
+  „stosuje się przepisy niniejszej ustawy."). Przedtem rozpoznawał ją tylko styl akapitu; bez niego akapit był
+  dalszą treścią ostatniej pozycji.
+  - W korpusie: 10 dokumentów ze stylami (11 akapitów); bez stylów w pełni zgodnych z wynikiem stylowym jest
+    591 zamiast 562 tekstów jednolitych.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

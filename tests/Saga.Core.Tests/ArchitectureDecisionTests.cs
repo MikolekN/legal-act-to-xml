@@ -1369,6 +1369,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0046: akapit małą literą za pozycją wyliczenia jest częścią wspólną
+        // ============================================================
+
+        [Theory]
+        [InlineData("2) niewykonania rekultywacji gruntów,", "stosuje się przepisy niniejszej ustawy.", true)]
+        [InlineData("2) niewykonania rekultywacji gruntów", "stosuje się przepisy niniejszej ustawy.", true)]
+        // Nowe zdanie albo pozycja domknięta średnikiem: dalsza treść pozycji (ADR-0029).
+        [InlineData("2) niewykonania rekultywacji gruntów,", "Przepisy stosuje się odpowiednio.", false)]
+        [InlineData("2) niewykonania rekultywacji gruntów;", "stosuje się przepisy niniejszej ustawy.", false)]
+        public void Adr0046_LowercaseParagraphRightAfterAnItem_ClosesTheEnumeration(string lastItem, string next, bool closes)
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o gruntach",
+                "Art. 1. 1. W przypadku:", "1) zaniechania użytkowania gruntów,", lastItem, next,
+                "2. Opłaty wnosi się na rachunek urzędu.",
+            ];
+            var paragraph = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!.Articles.Single().Paragraphs.First();
+
+            Assert.Equal(closes, paragraph.CommonParts.Any(part => part.Type == CommonPartType.WrapUp));
+            Assert.Equal(closes ? 0 : 1, paragraph.Points.Last().Continuation.Count);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

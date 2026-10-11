@@ -69,6 +69,66 @@ namespace Saga.Core.Tests
             Assert.Equal(2, paragraph.Points.Count);
         }
 
+        // ============================================================
+        // Bez stylu (ADR-0046): mała litera tuż za pozycją wyliczenia
+        // ============================================================
+
+        [Theory]
+        // Korpus: 275050_2461922 — pozycje zakończone przecinkami, część wspólna bez myślnika (starsze akty).
+        [InlineData("2) niewykonania rekultywacji gruntów w wyznaczonym terminie,")]
+        // § 57 ust. 3 ZTP: ostatnia pozycja bez znaku końcowego.
+        [InlineData("2) niewykonania rekultywacji gruntów w wyznaczonym terminie")]
+        public void LowercaseParagraphAfterAnItem_ClosesTheEnumeration_WithoutStyleOrDash(string lastItem)
+        {
+            var paragraph = FirstParagraph(Parse(
+                Text("Art. 1. 1. W przypadku:"),
+                Text("1) zaniechania użytkowania gruntów,"),
+                Text(lastItem),
+                Text("stosuje się przepisy niniejszej ustawy."),
+                Text("2. Opłaty wnosi się na rachunek urzędu.")));
+
+            Assert.Equal(2, paragraph.Points.Count);
+            Assert.Equal("stosuje się przepisy niniejszej ustawy.",
+                Assert.Single(paragraph.CommonParts, part => part.Type == CommonPartType.WrapUp).ContentText);
+            Assert.All(paragraph.Points, point => Assert.Empty(point.Continuation));
+        }
+
+        [Theory]
+        // Wielka litera: nowe zdanie, nie dalszy ciąg wprowadzenia.
+        [InlineData("2) niewykonania rekultywacji gruntów,", "Przepisy stosuje się odpowiednio.")]
+        // Pozycja zakończona średnikiem albo kropką: kontekst nie rozstrzyga, czyje zdanie ciągnie akapit.
+        [InlineData("2) niewykonania rekultywacji gruntów;", "stosuje się przepisy niniejszej ustawy.")]
+        [InlineData("2) niewykonania rekultywacji gruntów.", "stosuje się przepisy niniejszej ustawy.")]
+        public void OtherParagraphsAfterAnItem_StayItsFurtherContent(string lastItem, string next)
+        {
+            var paragraph = FirstParagraph(Parse(
+                Text("Art. 1. 1. W przypadku:"),
+                Text("1) zaniechania użytkowania gruntów,"),
+                Text(lastItem),
+                Text(next),
+                Text("2. Opłaty wnosi się na rachunek urzędu.")));
+
+            Assert.DoesNotContain(paragraph.CommonParts, part => part.Type == CommonPartType.WrapUp);
+            Assert.Equal(next, Assert.Single(paragraph.Points.Last().Continuation).Text);
+        }
+
+        [Fact]
+        public void LowercaseParagraphAfterLetters_ClosesTheLetters()
+        {
+            var paragraph = FirstParagraph(Parse(
+                Text("Art. 1. 1. Do zadań służby należy:"),
+                Text("1) rozpoznawanie przestępstw:"),
+                Text("a) przeciwko pokojowi,"),
+                Text("b) przeciwko obronności,"),
+                Text("jak również ujawnianie mienia zagrożonego przepadkiem;"),
+                Text("2) współdziałanie z innymi organami.")));
+
+            var point = paragraph.Points.First();
+            Assert.Equal("jak również ujawnianie mienia zagrożonego przepadkiem;",
+                Assert.Single(point.CommonParts, part => part.Type == CommonPartType.WrapUp).ContentText);
+            Assert.Equal(2, paragraph.Points.Count);
+        }
+
         [Fact]
         public void StyledParagraphThatClosesNothing_IsFurtherContent_NotDropped()
         {

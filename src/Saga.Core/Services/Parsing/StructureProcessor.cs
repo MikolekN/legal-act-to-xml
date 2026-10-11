@@ -137,6 +137,48 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Część wspólna bez myślnika i bez stylu: akapit bez oznaczenia, zaczynający się małą literą, tuż za
+        /// pozycją wyliczenia zakończoną przecinkiem albo bez znaku końcowego. Mała litera znaczy dalszy ciąg
+        /// zdania, a pozycja z przecinkiem (albo bez znaku — § 57 ust. 3 ZTP) jest domkniętym członem wyliczenia,
+        /// więc akapit ciągnie zdanie wprowadzenia: „… w przypadku: 1) urlopu bezpłatnego, 2) aresztowania,"
+        /// i w nowym wierszu „ulega proporcjonalnemu obniżeniu". Po pozycji zakończonej średnikiem, kropką albo
+        /// dwukropkiem kontekst tego nie rozstrzyga — akapit zostaje dalszą treścią pozycji.
+        /// </summary>
+        private static bool TryCloseEnumerationWithoutDash(ParsingContext context, string text)
+        {
+            var paragraph = text.TrimStart();
+            if (paragraph.Length == 0 || !char.IsLower(paragraph[0]))
+                return false;
+
+            BaseEntity? lastItem;
+            BaseEntity? parent;
+            if (context.CurrentLetter is { Tirets.Count: 0 } letter)
+            {
+                lastItem = letter;
+                parent = context.CurrentPoint;
+            }
+            else if (context.CurrentLetter is null && context.CurrentPoint is { Letters.Count: 0 } point)
+            {
+                lastItem = point;
+                parent = context.CurrentParagraph;
+            }
+            else
+            {
+                return false;
+            }
+
+            var item = lastItem.ContentText.TrimEnd();
+            if (parent is null || lastItem.Continuation.Count > 0 || item.Length == 0
+                || !(item[^1] == ',' || CommonPartPlacement.LeavesEnumerationOpen(item))
+                || !ParsingFactories.AttachWrapUpCommonPart(parent, text))
+                return false;
+
+            ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
+                "Część wspólna rozpoznana bez stylu i bez myślnika: akapit małą literą tuż za pozycją wyliczenia.");
+            return true;
+        }
+
+        /// <summary>
         /// Myślnik pod ustępem bez otwartego wyliczenia. Wyliczenie tiretów otwiera wprowadzenie zakończone
         /// dwukropkiem (§ 56 ZTP); bez niego akapit zaczynający się od myślnika nie jest tiretem pod dostawionym
         /// punktem i literą, tylko dalszym ciągiem przepisu: domyka urwane zdanie („Za niewykonanie obowiązku …"
@@ -566,6 +608,10 @@ namespace Saga.Core.Services.Parsing
             {
                 // Wprowadzenie i opisy symboli tuż za wzorem należą do wzoru.
                 if (FormulaLegend.TryAbsorb(deepest, text, SymbolOf(context.CurrentSymbol)))
+                    return;
+
+                // Dalszy ciąg zdania wprowadzenia za wyliczeniem — część wspólna pisana bez myślnika.
+                if (TryCloseEnumerationWithoutDash(context, text))
                     return;
 
                 deepest.Continuation.Add(new ContentBlock { Text = text });

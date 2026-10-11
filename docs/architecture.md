@@ -819,6 +819,9 @@ Encje implicit:
   myślnika na początku — styl i miejsce to dwa zgodne sygnały (`StructureProcessor.TryHandleWrapUp`); kolejny taki
   akapit za wyliczeniem już zamkniętym jest dalszą treścią części wspólnej (`fragment` w `czesc-wspolna-*`),
   a akapit, który niczego nie zamyka, przechodzi drogą akapitu bez oznaczenia — nic nie ginie
+- Bez stylu i bez myślnika część wspólną rozpoznaje treść i miejsce: akapit małą literą tuż za pozycją wyliczenia
+  zakończoną przecinkiem albo bez znaku końcowego (`StructureProcessor.TryCloseEnumerationWithoutDash`) —
+  [ADR-0046](adr/0046-akapit-mala-litera-za-pozycja-wyliczenia-jest-czescia-wspolna.md)
 - Akapit ustawy stojący za przedmiotem aktu, przed pierwszą jednostką (także systematyzacyjną), jest preambułą
   (`StructureProcessor.TryAddToPreamble` → `LegalDocument.Preamble`); akt wykonawczy ma w tym miejscu podstawę
   prawną, a akapit z numerem albo adnotacja w nawiasie preambułą nie są
