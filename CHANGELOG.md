@@ -394,6 +394,13 @@ a wersjonowanie zgodne z Semantic Versioning.
     w całości 1677 → 1685 z 2321 (tak samo wg libxml2, żaden zgodny nie odpadł); zgubionych akapitów w tekstach
     jednolitych 1402 → 1215, w rozporządzeniach 154 → 127. Eksport nie pisze jeszcze `wzor-mat` (MathML).
 
+- **Akapit bez oznaczenia w treści cytowanej**: wzór, wiersz legendy i każdy inny akapit bez oznaczenia stojący
+  za cytowaną jednostką jest jej dalszą treścią (`fragment` w tej jednostce) — jak poza cytatem (ADR-0029) i jak
+  tabela w cytacie. Wcześniej taki akapit trafiał do tekstu cytatu **przed** jego jednostkami. Bez jednostki przed
+  sobą pozostaje tekstem cytowanym wprost. Ta sama reguła obowiązuje w przytoczeniach obwieszczenia.
+  - W korpusie: 26 dokumentów, 293 akapity na swoim miejscu (43 bloki tekstu przed cytatem mniej), 2 kolejne
+    przytoczenia zbudowane jako jednostki; zgodność ze schematem i pokrycie tekstu bez zmian.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

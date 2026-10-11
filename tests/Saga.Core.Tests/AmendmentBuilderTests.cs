@@ -441,8 +441,39 @@ namespace Saga.Core.Tests
                 null,
                 AmendmentOperationType.Modification));
 
-            Assert.Equal("21a", Assert.Single(content.Articles).Number?.Value);
-            Assert.Equal("Ioze=(Ie∙Uoze)+Ib", content.PlainText);
+            // Wzór jest dalszą treścią jednostki, za którą stoi — nie tekstem cytatu przed jego jednostkami.
+            var article = Assert.Single(content.Articles);
+            Assert.Equal("21a", article.Number?.Value);
+            Assert.Equal("Ioze=(Ie∙Uoze)+Ib", Assert.Single(article.Paragraphs[0].Continuation).Text);
+            Assert.Null(content.PlainText);
+        }
+
+        [Fact]
+        public void UnmarkedParagraphs_ContinueTheUnitTheyFollow_OrAreQuotedTextWhenThereIsNone()
+        {
+            // ADR-0029 w treści cytowanej: akapit bez oznaczenia należy do najgłębszej otwartej jednostki.
+            var content = new AmendmentBuilder().Build(new AmendmentBuildInput(
+                [
+                    new CollectedAmendmentParagraph("2. Wysokość opłaty oblicza się według wzoru:", null, null),
+                    new CollectedAmendmentParagraph("O=S∙W", null, null),
+                    new CollectedAmendmentParagraph("1) dla osób fizycznych:", null, null),
+                    new CollectedAmendmentParagraph("stawkę podstawową,", null, null),
+                ],
+                null,
+                AmendmentOperationType.Modification));
+
+            var paragraph = Assert.Single(content.Paragraphs);
+            Assert.Equal("O=S∙W", Assert.Single(paragraph.Continuation).Text);
+            Assert.Equal("stawkę podstawową,", Assert.Single(Assert.Single(paragraph.Points).Continuation).Text);
+            Assert.Null(content.PlainText);
+
+            // Bez jednostki przed sobą akapit jest tekstem cytowanym wprost („zdanie pierwsze otrzymuje brzmienie:").
+            var sentence = new AmendmentBuilder().Build(new AmendmentBuildInput(
+                [new CollectedAmendmentParagraph("Opłatę wnosi się w terminie 14 dni.", null, null)],
+                null,
+                AmendmentOperationType.Modification));
+
+            Assert.Equal("Opłatę wnosi się w terminie 14 dni.", sentence.PlainText);
         }
 
         [Fact]

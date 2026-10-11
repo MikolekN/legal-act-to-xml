@@ -179,14 +179,30 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void QuotationWithAParagraphOutsideItsUnits_StaysText()
+        public void QuotationWithAParagraphBeforeItsUnits_StaysText()
         {
-            string[] quoted = ["„Art. 57. Przepisy stosuje się do odbudowy.", "Wyjaśnienie bez oznaczenia jednostki.”"];
+            // Akapit przed pierwszą jednostką nie należy do żadnej z nich — przytoczenia nie da się zbudować w całości.
+            string[] quoted = ["„Uwaga wstępna bez oznaczenia jednostki.", "Art. 57. Przepisy stosuje się do odbudowy.”"];
 
             var blocks = Parse(WithQuotation(quoted)).Announcement!.Points[1].Continuation;
 
             Assert.All(blocks, block => Assert.Null(block.Quotation));
             Assert.Equal(quoted, blocks.Select(block => block.Text));
+        }
+
+        [Fact]
+        public void UnmarkedParagraphInAQuotedArticle_ContinuesItsUnit()
+        {
+            // Akapit bez oznaczenia za jednostką jest jej dalszą treścią (ADR-0029), także w przytoczeniu.
+            var lines = WithQuotation("„Art. 57. Kwotę oblicza się według wzoru:", "K=A∙W", "gdzie K oznacza wysokość kary.”");
+
+            var article = Assert.Single(Assert.Single(Parse(lines).Announcement!.Points[1].Continuation).Quotation!.Content.Articles);
+            Assert.Equal(new[] { "K=A∙W", "gdzie K oznacza wysokość kary." }, article.Paragraphs[0].Continuation.Select(block => block.Text));
+
+            var quoted = LegalDocumentConverter.Convert(Parse(lines)).Descendants().Single(e => e.Name.LocalName == "tresc-strukt");
+            Assert.Equal(
+                new[] { "K=A∙W", "gdzie K oznacza wysokość kary." },
+                quoted.Descendants().Where(e => e.Name.LocalName == "fragment").Select(e => e.Value));
         }
 
         [Fact]

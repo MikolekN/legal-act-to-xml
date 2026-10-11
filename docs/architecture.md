@@ -476,7 +476,7 @@ Pattern: `IEntityBuilder<TInput, TResult>` — wspólny kontrakt.
 | `PointBuilder` | `PointBuildInput(...)` | `Point` | Tworzy punkt; `EnsureForLetter()` tworzy implicit punkt jeśli brak |
 | `LetterBuilder` | `LetterBuildInput(...)` | `Letter` | Tworzy literę; `EnsureForTiret()` tworzy implicit literę jeśli brak |
 | `TiretBuilder` | `TiretBuildInput(...)` | `Tiret` | Tworzy tiret z indeksem sekwencyjnym |
-| `AmendmentBuilder` | `AmendmentCollector` | `AmendmentContent` | Buduje hierarchiczną treść nowelizacji z zebranych akapitów |
+| `AmendmentBuilder` | `AmendmentCollector` | `AmendmentContent` | Buduje hierarchiczną treść nowelizacji z zebranych akapitów; akapit bez oznaczenia i tabela są dalszą treścią jednostki, za którą stoją (`Continuation`, [ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)), a bez jednostki przed sobą — tekstem albo tabelą cytowaną wprost; artykuł wymaga oznaczenia w treści (sam styl go nie czyni) |
 
 Poza wzorcem `IEntityBuilder<TInput, TResult>` (jednostki redakcyjne) w tym samym katalogu żyje:
 

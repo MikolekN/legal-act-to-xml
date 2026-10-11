@@ -262,6 +262,20 @@ namespace Saga.Core.Services.Parsing.Builders
         }
 
         /// <summary>
+        /// Akapit bez oznaczenia w treści cytowanej: dalsza treść jednostki, za którą stoi (ADR-0029) — wzór,
+        /// wiersz legendy, zdanie w nowym wierszu. Gdy cytat nie ma jeszcze żadnej jednostki, jest tekstem
+        /// cytowanym wprost („zdanie pierwsze otrzymuje brzmienie: „…"").
+        /// </summary>
+        private void AttachText(string text, AmendmentContent content)
+        {
+            var unit = (BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? _currentParagraph;
+            if (unit is null)
+                AppendPlainText(content, text);
+            else
+                unit.Continuation.Add(new ContentBlock { Text = text.Trim() });
+        }
+
+        /// <summary>
         /// Encja zbudowana przez ostatnie wywołanie <see cref="BuildByKind"/> dla danego rodzaju.
         /// </summary>
         private BaseEntity? LastBuiltEntity(AmendmentEntityKind kind, AmendmentContent content) => kind switch
@@ -318,7 +332,7 @@ namespace Saga.Core.Services.Parsing.Builders
                     if (para.StyleInfo?.TargetKind == AmendmentTargetKind.PenalSanction && TryContinueWithSanction(para.Text))
                         break;
 
-                    AppendPlainText(content, para.Text);
+                    AttachText(para.Text, content);
                     Log.Debug("AmendmentBuilder: akapit niesklasyfikowany, dodano jako tekst: {Text}",
                         para.Text.Length > 60 ? para.Text[..60] + "..." : para.Text);
                     break;
