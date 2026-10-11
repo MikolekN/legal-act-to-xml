@@ -1286,6 +1286,39 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0038: wzór w osobnym akapicie to wzor-mat z MathML
+        // ============================================================
+
+        [Fact]
+        public void Adr0038_FormulaParagraph_IsExportedAsWzorMat_NotAsAUnitOrAFragment()
+        {
+            // Wzór nie ma oznaczenia: nawet w stylu ustępu jest dalszą treścią jednostki, za którą stoi,
+            // i wychodzi raz — jako wzor-mat z wyrażeniem MathML, nie jako tekst.
+            const string mathMl =
+                "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>K</mi><mo>=</mo><mi>A</mi></math>";
+            DocumentBlock[] blocks =
+            [
+                new() { Text = "USTAWA" },
+                new() { Text = "z dnia 14 czerwca 2024 r." },
+                new() { Text = "o opłatach" },
+                new() { Text = "Art. 1. 1. Wysokość kary oblicza się według wzoru:" },
+                new() { Text = "K=A", StyleId = "USTustnpkodeksu", FormulaMathMl = mathMl },
+                new() { Text = "2. Karę uiszcza się w terminie 14 dni." },
+            ];
+            var document = LegalDocumentParser.Parse(blocks.ToList(), new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var article = document.Articles.Single();
+            Assert.Equal(new[] { "1", "2" }, article.Paragraphs.Select(paragraph => paragraph.Number?.Value));
+            var formula = Assert.Single(article.Paragraphs[0].Continuation);
+            Assert.Equal("K=A", formula.Text);
+            Assert.Equal(mathMl, formula.Formula!.MathMl);
+
+            var first = LegalDocumentConverter.Convert(document).Descendants().First(e => e.Name.LocalName == "ustep");
+            Assert.Equal(new[] { "nr", "p", "wzor-mat" }, first.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal("math", first.Elements().Last().Elements().Single().Elements().Single().Name.LocalName);
+        }
+
+        // ============================================================
         // ADR-0033: tekst jednolity ma zdarzenie ujednolicenia, nie wejścia w życie
         // ============================================================
 

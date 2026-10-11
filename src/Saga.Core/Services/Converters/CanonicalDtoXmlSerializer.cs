@@ -97,7 +97,7 @@ namespace Saga.Core.Services.Converters
                     cell.ColumnSpan > 1 ? new XAttribute("columnSpan", cell.ColumnSpan) : null,
                     cell.RowSpan > 1 ? new XAttribute("rowSpan", cell.RowSpan) : null,
                     cell.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph)))))))
-            : new XElement("paragraph", block.Text);
+            : new XElement(block.Formula is null ? "paragraph" : "formula", block.Text);
 
         private static XElement SerializePart(Part part)
         {

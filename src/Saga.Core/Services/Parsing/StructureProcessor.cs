@@ -440,6 +440,13 @@ namespace Saga.Core.Services.Parsing
 
         private void HandleUnknown(ParsingContext context, string text, string? sourceStyleId, BlockLayoutInfo? layout)
         {
+            // Wzór w osobnym akapicie jest dalszą treścią jednostki, za którą stoi — bez wnioskowania z tekstu.
+            if (context.CurrentFormula is { } mathMl && DeepestUnit(context) is { } formulaOwner)
+            {
+                formulaOwner.Continuation.Add(new ContentBlock { Text = text, Formula = new ContentFormula { MathMl = mathMl } });
+                return;
+            }
+
             // Krok 1: wywnioskuj z treści (ochrona przed edge cases LayeredClassifier)
             if (context.CurrentArticle != null)
             {

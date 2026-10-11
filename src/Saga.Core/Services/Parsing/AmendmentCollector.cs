@@ -16,6 +16,9 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Tabela stojąca w tym miejscu treści cytowanej; pozycja z tabelą nie niesie tekstu.</summary>
         public ContentTable? Table { get; init; }
+
+        /// <summary>MathML akapitu będącego wzorem; tekst pozycji to jego zapis liniowy.</summary>
+        public string? FormulaMathMl { get; init; }
     }
 
     /// <summary>
@@ -94,10 +97,11 @@ namespace Saga.Core.Services.Parsing
         /// Dodaje akapit do bufora nowelizacji.
         /// Dekoduje metadane stylu przez <see cref="AmendmentStyleDecoder"/>.
         /// </summary>
-        public void AddParagraph(string text, string? styleId)
+        /// <param name="formulaMathMl">MathML akapitu, gdy jest wzorem.</param>
+        public void AddParagraph(string text, string? styleId, string? formulaMathMl = null)
         {
             var styleInfo = AmendmentStyleDecoder.DecodeByStyleId(styleId);
-            _paragraphs.Add(new CollectedAmendmentParagraph(text, styleId, styleInfo));
+            _paragraphs.Add(new CollectedAmendmentParagraph(text, styleId, styleInfo) { FormulaMathMl = formulaMathMl });
 
             // Bilans cudzysłowów — tylko dla zbierania bezstylowego. Rozbraja wyłącznie styl ZNACZĄCY
             // (nowelizacyjny Z/* lub rozpoznany styl ustawy matki) — domyślny styl edytora

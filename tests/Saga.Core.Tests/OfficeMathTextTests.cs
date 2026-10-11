@@ -52,7 +52,8 @@ namespace Saga.Core.Tests
 
         [Theory]
         // Znaki nawiasu z właściwości; brak właściwości to nawias okrągły, pusty znak — brak nawiasu.
-        [InlineData("<m:d><m:dPr><m:begChr m:val=\"[\"/><m:endChr m:val=\"]\"/></m:dPr><m:e>{a}</m:e></m:d>", "[a]")]
+        // Nawias kwadratowy wychodzi znakami „［ ］" — zwykły jest w tekście bloku kanałem indeksu górnego.
+        [InlineData("<m:d><m:dPr><m:begChr m:val=\"[\"/><m:endChr m:val=\"]\"/></m:dPr><m:e>{a}</m:e></m:d>", "［a］")]
         [InlineData("<m:d><m:dPr><m:begChr m:val=\"\"/><m:endChr m:val=\"\"/></m:dPr><m:e>{a}</m:e></m:d>", "a")]
         [InlineData("<m:d><m:e>{a}</m:e><m:e>{b}</m:e></m:d>", "(a|b)")]
         public void Delimiter_UsesItsOwnCharacters(string omml, string expected)
@@ -73,6 +74,19 @@ namespace Saga.Core.Tests
         public void OperatorsAndRoots_KeepTheirLimitsAndDegree(string omml, string expected)
         {
             Assert.Equal(expected, Math(Expand(omml)));
+        }
+
+        [Fact]
+        public void SquareBracketsOfAnEquation_AreNotReadAsAFootnoteMarker()
+        {
+            // Korpus: 300744_2694324 — „KMOG = [(CC – CCW)× Wcw + (CM/12 …)]" dawało odwołanie do odnośnika 12.
+            var text = Text(
+                W("według wzoru ") +
+                "<m:oMath><m:d><m:dPr><m:begChr m:val=\"[\"/><m:endChr m:val=\"]\"/></m:dPr><m:e>" +
+                R("(CM/12)") + "</m:e></m:d></m:oMath>");
+
+            Assert.Equal("według wzoru ［(CM/12)］", text);
+            Assert.DoesNotMatch(Saga.Core.Services.FootnoteMarkers.Reference, text);
         }
 
         [Fact]

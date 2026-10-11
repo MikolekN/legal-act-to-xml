@@ -61,6 +61,12 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public bool SectionIsBasicUnit { get; init; }
 
+        /// <summary>
+        /// MathML bloku przetwarzanego w tej chwili, gdy blok jest wzorem (<see cref="Ingest.DocumentBlock.FormulaMathMl"/>);
+        /// trafia do dalszej treści jednostki razem z zapisem liniowym.
+        /// </summary>
+        public string? CurrentFormula { get; set; }
+
         /// <summary>Bloki treści obwieszczenia tekstu jednolitego — sprzed aktu ogłaszanego w załączniku.</summary>
         public List<DocumentBlock> AnnouncementBlocks { get; } = new();
 

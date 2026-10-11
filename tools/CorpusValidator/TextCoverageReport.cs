@@ -171,6 +171,12 @@ internal static class TextCoverageReport
                 // Znacznik odnośnika bywa w eksporcie zwykłym tekstem (w cytacie należy do aktu zmienianego).
                 if (node is XText text)
                     AppendLettersAndDigits(FootnoteMarker.Replace(text.Value, ""), sb);
+                else if (node is XElement { Name.LocalName: "mroot" } root && root.Elements().Count() == 2)
+                {
+                    // Pierwiastek w MathML ma stopień za wyrażeniem; w tekście źródła (zapis liniowy) — przed nim.
+                    Append(root.Elements().Last(), sb);
+                    Append(root.Elements().First(), sb);
+                }
                 else if (node is XElement child && !OutsideTheText.Contains(child.Name.LocalName))
                     Append(child, sb);
             }

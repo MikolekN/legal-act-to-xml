@@ -196,8 +196,8 @@ namespace Saga.Core.Services.Parsing.Builders
         internal static AmendmentObjectType DetermineObjectType(
             IReadOnlyList<CollectedAmendmentParagraph> paragraphs, bool sectionIsBasicUnit = false)
         {
-            // Tabela nie rozstrzyga rodzaju cytowanej jednostki — rozstrzyga pierwszy akapit.
-            foreach (var para in paragraphs.Where(p => p.Table is null))
+            // Tabela ani wzór nie rozstrzygają rodzaju cytowanej jednostki — rozstrzyga pierwszy akapit z oznaczeniem.
+            foreach (var para in paragraphs.Where(p => p.Table is null && p.FormulaMathMl is null))
             {
                 var kind = ClassifyAmendmentParagraph(para, sectionIsBasicUnit);
                 return kind switch
@@ -223,6 +223,13 @@ namespace Saga.Core.Services.Parsing.Builders
             if (para.Table is { } table)
             {
                 AttachTable(table, content);
+                return;
+            }
+
+            // Wzór nie ma oznaczenia, więc jednostką nie jest — także gdy złożono go stylem jednostki.
+            if (para.FormulaMathMl is { } mathMl)
+            {
+                AttachText(para.Text, content, new ContentFormula { MathMl = mathMl });
                 return;
             }
 
@@ -266,13 +273,13 @@ namespace Saga.Core.Services.Parsing.Builders
         /// wiersz legendy, zdanie w nowym wierszu. Gdy cytat nie ma jeszcze żadnej jednostki, jest tekstem
         /// cytowanym wprost („zdanie pierwsze otrzymuje brzmienie: „…"").
         /// </summary>
-        private void AttachText(string text, AmendmentContent content)
+        private void AttachText(string text, AmendmentContent content, ContentFormula? formula = null)
         {
             var unit = (BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? _currentParagraph;
             if (unit is null)
                 AppendPlainText(content, text);
             else
-                unit.Continuation.Add(new ContentBlock { Text = text.Trim() });
+                unit.Continuation.Add(new ContentBlock { Text = text.Trim(), Formula = formula });
         }
 
         /// <summary>

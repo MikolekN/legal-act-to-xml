@@ -50,6 +50,8 @@ namespace Saga.Core.Services.Parsing
             if (block.Role is BlockRole.FootnoteText or BlockRole.JournalHeader)
                 return;
 
+            context.CurrentFormula = block.FormulaMathMl;
+
             // Załącznik stoi za ostatnim artykułem i ma własną treść (tabele, wykazy, nawet „Rozdział 1") —
             // nie jest częścią struktury aktu. Zbierany jest w całości, z pustymi komórkami tabel.
             if (context.InAnnex)
@@ -99,6 +101,10 @@ namespace Saga.Core.Services.Parsing
 
             RegisterFootnotes(block, context);
 
+            // Wzór nie ma oznaczenia, więc jednostką nie jest — także gdy złożono go stylem jednostki.
+            if (block.FormulaMathMl is not null && classification.Kind != ParagraphKind.Unknown)
+                classification = WithoutUnitKind(classification);
+
             if (IsMisstyledActUnit(context, classification, text))
                 classification = AsActContent(classification);
 
@@ -118,6 +124,15 @@ namespace Saga.Core.Services.Parsing
             && text is not [QuotationMarks.Opening or QuotationMarks.Straight, ..]
             && (StructureProcessor.IsSystematizing(classification.Kind)
                 || (context.PendingHeadingUnit != null && classification.Kind is ParagraphKind.Unknown or ParagraphKind.UnitHeading));
+
+        private static ClassificationResult WithoutUnitKind(ClassificationResult classification) => new()
+        {
+            Kind = ParagraphKind.Unknown,
+            Confidence = classification.Confidence,
+            IsAmendmentContent = classification.IsAmendmentContent,
+            StyleType = classification.StyleType,
+            Penalties = classification.Penalties,
+        };
 
         private static ClassificationResult AsActContent(ClassificationResult classification) => new()
         {

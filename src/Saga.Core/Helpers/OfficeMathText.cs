@@ -8,6 +8,9 @@ namespace Saga.Core.Helpers
     /// ułamek „a/b", nawiasy i znaki działań tak, jak stoją w równaniu („I_oze=(I_e∙U_oze)+I_b").
     /// Argument złożony z więcej niż jednego wyrazu stoi w nawiasie („x^(n+1)", „(a+b)/c").
     /// Zapis liniowy nie zastępuje wzoru w MathML — pilnuje, żeby treść równania nie znikała z tekstu.
+    ///
+    /// Nawias kwadratowy równania wychodzi znakami „［" i „］": zwykły „[x]" jest w tekście bloku kanałem
+    /// indeksu górnego i znacznika odnośnika, więc „[(CM/12)]" stawałoby się odwołaniem do odnośnika 12.
     /// </summary>
     internal static class OfficeMathText
     {
@@ -19,7 +22,11 @@ namespace Saga.Core.Helpers
         internal static bool IsMath(OpenXmlElement element) => Is(element, "oMath");
 
         /// <summary>Treść równania w zapisie liniowym.</summary>
-        internal static string Linear(OpenXmlElement math) => string.Concat(math.ChildElements.Select(Part));
+        internal static string Linear(OpenXmlElement math) =>
+            OutsideTheSuperscriptChannel(string.Concat(math.ChildElements.Select(Part)));
+
+        private static string OutsideTheSuperscriptChannel(string text) =>
+            text.Replace('[', '\uFF3B').Replace(']', '\uFF3D');
 
         private static string Part(OpenXmlElement element)
         {

@@ -30,6 +30,57 @@ namespace Saga.Core.Helpers
             return root;
         }
 
+        private const string WordNamespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+
+        /// <summary>
+        /// MathML akapitu, który jest wzorem: składa się z samych równań, a poza nimi stoi co najwyżej
+        /// interpunkcja zdania, w którym wzór występuje („C_s=C_0-PI/I ,"). Każde równanie akapitu to jeden
+        /// wiersz wzoru. Akapit z tekstem obok równania (wiersz legendy, zdanie z symbolem) wzorem nie jest.
+        /// </summary>
+        internal static XElement? FormulaOf(OpenXmlElement paragraph)
+        {
+            var lines = new List<List<XElement>>();
+
+            foreach (var element in paragraph.Descendants())
+            {
+                if (element.Ancestors().TakeWhile(ancestor => ancestor != paragraph).Any(OfficeMathText.IsMath))
+                    continue;
+
+                if (OfficeMathText.IsMath(element))
+                {
+                    lines.Add(Children(element));
+                    continue;
+                }
+
+                if (element.NamespaceUri != WordNamespace || element.LocalName != "r")
+                    continue;
+
+                // Przebieg zwykłego tekstu: odstęp nic nie znaczy, interpunkcja należy do wzoru, reszta to tekst.
+                if (element.ChildElements.Any(child => child.LocalName is "footnoteReference" or "sym"))
+                    return null;
+
+                var text = string.Concat(element.ChildElements.Where(child => child.LocalName == "t").Select(child => child.InnerText)).Trim();
+                if (text.Length == 0)
+                    continue;
+
+                if (lines.Count == 0 || !text.All(character => character is ',' or ';' or '.' or ':'))
+                    return null;
+
+                lines[^1].Add(El("mo", text));
+            }
+
+            lines.RemoveAll(line => line.Count == 0);
+            if (lines.Count == 0)
+                return null;
+
+            var math = new XElement(Mml + "math", new XAttribute("display", "block"));
+            if (lines.Count == 1)
+                math.Add(lines[0]);
+            else
+                math.Add(El("mtable", lines.Select(line => El("mtr", El("mtd", line)))));
+            return math;
+        }
+
         private static List<XElement> Children(OpenXmlElement element) => element.ChildElements.SelectMany(Part).ToList();
 
         private static IEnumerable<XElement> Part(OpenXmlElement element)

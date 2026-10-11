@@ -36,6 +36,12 @@ namespace Saga.Core.Ingest
         /// <summary>Komórka tabeli, w której stoi blok; null dla akapitu poza tabelą i dla formatów bez tabel.</summary>
         public BlockTableCell? TableCell { get; init; }
 
+        /// <summary>
+        /// MathML akapitu złożonego z samego równania (wzór w osobnym akapicie); null dla akapitu z tekstem
+        /// i dla formatów bez równań. <see cref="Text"/> niesie wtedy zapis liniowy tego wzoru.
+        /// </summary>
+        public string? FormulaMathMl { get; init; }
+
         public bool IsEmpty => string.IsNullOrWhiteSpace(Text);
     }
 

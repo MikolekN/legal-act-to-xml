@@ -408,6 +408,16 @@ a wersjonowanie zgodne z Semantic Versioning.
     w zdaniu), zgodność MathML ze schematem, konstrukcje OMML bez odwzorowania. W korpusie: 1206 równań w 56
     dokumentach (207 wzorów, 999 symboli), wszystkie zgodne ze schematem, żadnej konstrukcji bez odwzorowania.
 
+- **Wzór jako `wzor-mat`** ([ADR-0038](docs/adr/0038-wzor-w-osobnym-akapicie-to-wzor-mat-z-mathml.md)): akapit
+  złożony z samego równania Worda jest wzorem — dalszą treścią jednostki, za którą stoi, z wyrażeniem w MathML
+  (`ContentBlock.Formula`, `DocumentBlock.FormulaMathMl`); eksport pisze `wzor-mat` → `wzor` → `mml:math` tuż za
+  `p` jednostki, także w treści cytowanej. Wzór złożony stylem ustępu albo punktu nie jest już jednostką.
+  - Nawias kwadratowy równania w zapisie liniowym to znaki „［ ］" — zwykły `[x]` jest kanałem indeksu górnego
+    i znacznika odnośnika (wzór „[(CM/12)]" dostawał odwołanie do odnośnika 12).
+  - W korpusie: 189 wzorów w 45 dokumentach (183 `fragment` mniej), 14 jednostek `nie-ztp-*` mniej, 8 fałszywych
+    odwołań do odnośników i 12 fałszywych `sup` mniej; zgodność ze schematem (1685 z 2321, tak samo wg libxml2)
+    i pokrycie tekstu bez zmian. Legenda wzoru zostaje na razie jako `fragment`.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

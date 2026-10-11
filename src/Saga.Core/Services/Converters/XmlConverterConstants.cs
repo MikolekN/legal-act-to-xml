@@ -402,6 +402,14 @@ namespace Saga.Core.Services.Converters
             internal const string Label = "label";
             internal const string TextSection = "p";
             internal const string ContinuationFragment = "fragment";
+
+            /// <summary>Wzór matematyczny w osobnym akapicie.</summary>
+            internal static class Formula
+            {
+                internal const string Element = "wzor-mat";
+                internal const string Expression = "wzor";
+                internal const string MathMlPrefix = "mml";
+            }
             internal const string Superscript = "sup";
             internal const string eId = "eId";
             internal static readonly XName GUID = GuidNamespace + "GUID";
