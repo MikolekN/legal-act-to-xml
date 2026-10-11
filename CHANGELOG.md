@@ -384,6 +384,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   bez odstępu przed dniem („z dnia17 marca 2025 r.") jest datą aktu. Zgodnych ze schematem w całości: 1677 z 2321
   (obwieszczenia 600 z 708; tak samo wg libxml2).
 
+- **Równania Worda w tekście** ([ADR-0037](docs/adr/0037-rownanie-worda-wchodzi-do-tekstu-w-zapisie-liniowym.md)):
+  treść równania (`m:oMath`) wchodzi do tekstu akapitu w zapisie liniowym — „I_oze=(I_e∙U_oze)+I_b",
+  „WYD_(n-1)", „(a+b)/c" — w miejscu, w którym stoi. Wcześniej znikała: zdanie zostawało z dziurą („kwoty wydatków ,
+  o której mowa"), a wiersz legendy bez symbolu stawał się tiretem.
+  - Artykuł w treści cytowanej wymaga oznaczenia w treści — akapit w stylu artykułu bez „Art." (wzór) nie jest
+    już artykułem bez numeru.
+  - W korpusie: 1206 równań w 56 dokumentach; 319 fałszywych `nie-ztp-tiret` mniej; zgodnych ze schematem
+    w całości 1677 → 1685 z 2321 (tak samo wg libxml2, żaden zgodny nie odpadł); zgubionych akapitów w tekstach
+    jednolitych 1402 → 1215, w rozporządzeniach 154 → 127. Eksport nie pisze jeszcze `wzor-mat` (MathML).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

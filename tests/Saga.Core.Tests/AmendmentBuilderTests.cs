@@ -407,23 +407,42 @@ namespace Saga.Core.Tests
         // ============================================================
 
         [Theory]
-        [InlineData(AmendmentTargetKind.Article, AmendmentObjectType.Article)]
-        [InlineData(AmendmentTargetKind.Paragraph, AmendmentObjectType.Paragraph)]
-        [InlineData(AmendmentTargetKind.Point, AmendmentObjectType.Point)]
-        [InlineData(AmendmentTargetKind.Letter, AmendmentObjectType.Letter)]
-        [InlineData(AmendmentTargetKind.Tiret, AmendmentObjectType.Tiret)]
-        [InlineData(AmendmentTargetKind.CommonPart, AmendmentObjectType.CommonPart)]
+        // Artykuł wymaga oznaczenia w treści; pozostałe jednostki przyjmują sam styl.
+        [InlineData(AmendmentTargetKind.Article, "Art. 5. Treść.", AmendmentObjectType.Article)]
+        [InlineData(AmendmentTargetKind.Paragraph, "dummy", AmendmentObjectType.Paragraph)]
+        [InlineData(AmendmentTargetKind.Point, "dummy", AmendmentObjectType.Point)]
+        [InlineData(AmendmentTargetKind.Letter, "dummy", AmendmentObjectType.Letter)]
+        [InlineData(AmendmentTargetKind.Tiret, "dummy", AmendmentObjectType.Tiret)]
+        [InlineData(AmendmentTargetKind.CommonPart, "dummy", AmendmentObjectType.CommonPart)]
         public void DetermineObjectType_BasedOnFirstParagraph(
-            AmendmentTargetKind targetKind, AmendmentObjectType expected)
+            AmendmentTargetKind targetKind, string text, AmendmentObjectType expected)
         {
             var paragraphs = new List<CollectedAmendmentParagraph>
             {
-                CreateParagraph("dummy", "style", targetKind)
+                CreateParagraph(text, "style", targetKind)
             };
 
             var result = AmendmentBuilder.DetermineObjectType(paragraphs);
 
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void ArticleStyleWithoutADesignation_IsNotAnArticle()
+        {
+            // Korpus: 318581_2836177 — wzór „I_oze=(I_e∙U_oze)+I_b" złożony stylem artykułu w treści cytowanej.
+            // Sam styl artykułu nie czyni (jak poza cytatem): powstawałby artykuł bez numeru.
+            var formula = CreateParagraph("Ioze=(Ie∙Uoze)+Ib", "ZARTzmartartykuempunktem", AmendmentTargetKind.Article);
+
+            Assert.Equal(AmendmentEntityKind.Unknown, AmendmentBuilder.ClassifyAmendmentParagraph(formula));
+
+            var content = new AmendmentBuilder().Build(new AmendmentBuildInput(
+                [CreateParagraph("Art. 21a. Ilość energii oblicza się według wzoru:", "ZARTzmartartykuempunktem", AmendmentTargetKind.Article), formula],
+                null,
+                AmendmentOperationType.Modification));
+
+            Assert.Equal("21a", Assert.Single(content.Articles).Number?.Value);
+            Assert.Equal("Ioze=(Ie∙Uoze)+Ib", content.PlainText);
         }
 
         [Fact]

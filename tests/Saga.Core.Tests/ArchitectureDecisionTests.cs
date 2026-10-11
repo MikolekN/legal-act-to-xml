@@ -1264,6 +1264,28 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0037: równanie Worda wchodzi do tekstu w zapisie liniowym
+        // ============================================================
+
+        [Fact]
+        public void Adr0037_Equation_IsPartOfTheParagraphText_InLinearForm()
+        {
+            // Treść równania nie może zniknąć z tekstu: zdanie zostawałoby z dziurą, a wiersz legendy bez symbolu
+            // zaczynałby się od myślnika i stawał tiretem.
+            const string namespaces =
+                "xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" " +
+                "xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\"";
+            var paragraph = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(
+                $"<w:p {namespaces}>" +
+                "<w:r><w:t xml:space=\"preserve\">kwotę wydatków </w:t></w:r>" +
+                "<m:oMath><m:sSub><m:e><m:r><m:t>WYD</m:t></m:r></m:e><m:sub><m:r><m:t>n-1</m:t></m:r></m:sub></m:sSub></m:oMath>" +
+                "<w:r><w:t>, o której mowa w art. 112aa</w:t></w:r>" +
+                "</w:p>");
+
+            Assert.Equal("kwotę wydatków WYD_(n-1), o której mowa w art. 112aa", paragraph.GetFullText());
+        }
+
+        // ============================================================
         // ADR-0033: tekst jednolity ma zdarzenie ujednolicenia, nie wejścia w życie
         // ============================================================
 

@@ -125,6 +125,11 @@ namespace Saga.Core.Services.Parsing.Builders
                 if (IsStructural(byStyle) && IsStructural(byText) && byText != byStyle)
                     return (byText, byStyle);
 
+                // Artykuł wymaga oznaczenia w treści — sam styl go nie czyni, tak jak poza cytatem: akapit
+                // w stylu artykułu bez „Art." (wzór, dalszy akapit) jest tekstem, nie artykułem bez numeru.
+                if (byStyle == AmendmentEntityKind.Article && byText == AmendmentEntityKind.Unknown)
+                    return (AmendmentEntityKind.Unknown, null);
+
                 return (byStyle, null);
             }
 

@@ -1,5 +1,6 @@
 using System.Text;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Saga.Core.Helpers;
 
 namespace Saga.Core
 {
@@ -25,6 +26,8 @@ namespace Saga.Core
         /// - NoBreakHyphen (w:noBreakHyphen) → łącznik; Break / CarriageReturn (w:br, w:cr) → odstęp
         /// - Tekst w indeksie gornym (styl IGindeksgrny, Odwoanieprzypisudolnego
         ///   lub VerticalAlignment=Superscript) jest ujmowany w nawiasy [ ].
+        /// - Równanie Worda (m:oMath) wchodzi do tekstu w zapisie liniowym (<see cref="OfficeMathText"/>),
+        ///   w miejscu, w którym stoi w akapicie — symbol otwierający wiersz legendy nie znika.
         /// </summary>
         /// <param name="footnoteNumbers">Numer przypisu, pod którym stoi w akcie, dla każdego w:id.</param>
         public static string GetFullText(this Paragraph paragraph, IReadOnlyDictionary<long, int>? footnoteNumbers = null)
@@ -32,8 +35,22 @@ namespace Saga.Core
             var sb = new StringBuilder();
             var superscript = new StringBuilder();
 
-            foreach (var run in paragraph.Descendants<Run>())
+            foreach (var element in paragraph.Descendants())
             {
+                // Wnętrze równania czyta OfficeMathText — jego części nie są osobnymi źródłami tekstu.
+                if (element.Ancestors().TakeWhile(ancestor => ancestor != paragraph).Any(OfficeMathText.IsMath))
+                    continue;
+
+                if (OfficeMathText.IsMath(element))
+                {
+                    FlushSuperscript(sb, superscript);
+                    sb.Append(OfficeMathText.Linear(element));
+                    continue;
+                }
+
+                if (element is not Run run)
+                    continue;
+
                 var text = RunText(run, footnoteNumbers);
 
                 // Przebieg bez tekstu (znaczniki pola: odnośnik wstawiony polem NOTEREF) nie rozcina indeksu
