@@ -55,6 +55,9 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Bloki od nagłówka załącznika do końca dokumentu; załączniki składa z nich <c>AnnexBuilder</c>.</summary>
         public List<DocumentBlock> AnnexBlocks { get; } = new();
 
+        /// <summary>Bloki treści obwieszczenia tekstu jednolitego — sprzed aktu ogłaszanego w załączniku.</summary>
+        public List<DocumentBlock> AnnouncementBlocks { get; } = new();
+
         /// <summary>
         /// Bloki tabeli stojącej w treści aktu, zbierane do jej końca; tabela trafia wtedy do dalszej treści
         /// jednostki, w której stoi.

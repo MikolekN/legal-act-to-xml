@@ -159,6 +159,25 @@ namespace Saga.Core.Services.Parsing
             RegisterFootnotes(block, context);
         }
 
+        /// <summary>
+        /// Blok obwieszczenia tekstu jednolitego, sprzed aktu ogłaszanego w załączniku. Wiersze nagłówka (rodzaj,
+        /// organ, data, przedmiot) czyta kolektor metadanych; reszta jest treścią obwieszczenia i nie przechodzi
+        /// przez rozpoznawanie jednostek aktu — przytoczony tam „Art. 57." nie jest artykułem ogłaszanego aktu.
+        /// </summary>
+        public void CollectAnnouncementBlock(DocumentBlock block, ParsingContext context)
+        {
+            if (block.Role is BlockRole.FootnoteText or BlockRole.JournalHeader)
+                return;
+
+            RegisterFootnotes(block, context);
+
+            if (block.TableCell is null
+                && (block.IsEmpty || context.Metadata.Observe(block.Text.CollapseWhitespace().Trim())))
+                return;
+
+            context.AnnouncementBlocks.Add(block);
+        }
+
         // Treść odnośników leży poza treścią aktu; znacznik odwołania zostaje w tekście bloku.
         private static void RegisterFootnotes(DocumentBlock block, ParsingContext context)
         {
@@ -184,6 +203,7 @@ namespace Saga.Core.Services.Parsing
             context.Metadata.ApplyTo(context.Document);
 
             context.Document.Annexes = AnnexBuilder.Build(context.AnnexBlocks);
+            context.Document.Announcement = AnnouncementBoundary.Build(context.AnnouncementBlocks);
 
             SystematizingUnitValidator.Validate(context.Document);
 

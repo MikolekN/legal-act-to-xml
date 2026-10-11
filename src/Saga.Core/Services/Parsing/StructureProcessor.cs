@@ -522,8 +522,6 @@ namespace Saga.Core.Services.Parsing
         // Style strefy tytułowej aktu i wskazania załącznika.
         private static readonly string[] ActHeadingStyles = ["OZNRODZAKTU", "DATAAKTU", "TYTUAKTU", "TEKSTZa"];
 
-        private static readonly Regex AnnouncementAnnexHeader = new(@"^Załącznik\s+do\s+obwieszczenia\b", RegexOptions.Compiled);
-
         /// <summary>
         /// Wiersz strefy tytułowej aktu w środku dokumentu: tekst jednolity zaczyna się za przepisami
         /// obwieszczenia („Załącznik do obwieszczenia…", „USTAWA", „z dnia …", tytuł). To początek innego aktu,
@@ -531,7 +529,7 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         private static bool IsActHeadingLine(string text, string? styleId) =>
             (styleId is not null && ActHeadingStyles.Any(prefix => styleId.StartsWith(prefix, StringComparison.Ordinal)))
-            || AnnouncementAnnexHeader.IsMatch(text)
+            || AnnouncementBoundary.AnnexHeader.IsMatch(text)
             || ZtpPatterns.StatuteHeaderPattern.IsMatch(text)
             || ZtpPatterns.RegulationHeaderPattern.IsMatch(text)
             || ZtpPatterns.AnnouncementHeaderPattern.IsMatch(text)

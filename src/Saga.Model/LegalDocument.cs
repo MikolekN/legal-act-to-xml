@@ -128,6 +128,12 @@ namespace Saga.Model
         public List<Annex> Annexes { get; set; } = new();
 
         /// <summary>
+        /// Treść obwieszczenia, gdy dokument jest obwieszczeniem ogłaszającym akt w załączniku (tekst jednolity);
+        /// null dla aktu ogłoszonego wprost.
+        /// </summary>
+        public Announcement? Announcement { get; set; }
+
+        /// <summary>
         /// Części aktu w kolejności (kodeksy mają ich kilka). Pierwsza zawsze istnieje i zawiera minimalną
         /// pełną hierarchię od Części do Oddziału; jednostki obecne w tekście mają IsImplicit = false.
         /// </summary>

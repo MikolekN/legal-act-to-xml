@@ -112,14 +112,22 @@ namespace Saga.Core
             var context = new ParsingContext(document, subchapter);
             var orchestrator = new ParserOrchestrator();
 
-            foreach (var block in blocks)
+            // Tekst jednolity: bloki sprzed wiersza „Załącznik do obwieszczenia …" są treścią obwieszczenia,
+            // nie aktu, który ono ogłasza.
+            var actStart = AnnouncementBoundary.Find(blocks);
+
+            for (var i = 0; i < blocks.Count; i++)
             {
                 // Parytet z klasyfikatorem (Normalize): null-element listy jest pomijany,
                 // a nie wysadza potoku — publiczne Parse(blocks) przyjmuje listy budowane ręcznie.
-                if (block is null)
+                if (blocks[i] is not { } block)
                     continue;
 
-                orchestrator.ProcessBlock(block, context);
+                if (i < actStart)
+                    orchestrator.CollectAnnouncementBlock(block, context);
+                else
+                    orchestrator.ProcessBlock(block, context);
+
                 observeBlock?.Invoke(block, context);
             }
 

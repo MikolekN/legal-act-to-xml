@@ -184,10 +184,11 @@ internal static class TextCoverageReport
         return sb.ToString();
     }
 
+    // Cudzysłów zamykający bywa zapisany literą modyfikującą (U+02EE) — to nadal cudzysłów, nie treść.
     private static void AppendLettersAndDigits(string text, StringBuilder sb)
     {
         foreach (var c in text)
-            if (char.IsLetterOrDigit(c))
+            if (char.IsLetterOrDigit(c) && !QuotationMarks.Any.Contains(c))
                 sb.Append(char.ToLowerInvariant(c));
     }
 

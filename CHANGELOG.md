@@ -270,6 +270,17 @@ a wersjonowanie zgodne z Semantic Versioning.
   `AktOkresJednostki`. Zmienia eksport 8 dokumentów (387 elementów); przykład DU/2026/252 zgadza się teraz we
   wszystkich datach i okresach (2207 z 2207, było 2166), a eksport tego aktu przyjmują .NET, libxml2 i Xerces.
 
+- **Obwieszczenie tekstu jednolitego w modelu**: treść sprzed wiersza „Załącznik do obwieszczenia …" — punkty
+  obwieszczenia, przytoczone przepisy, podpis — należy do obwieszczenia (`LegalDocument.Announcement`), a nie do
+  aktu, który ono ogłasza. Wcześniej przytoczone przepisy budowały się jak artykuły ogłaszanego aktu: w 420
+  tekstach jednolitych znika 2216 obcych artykułów (z ustępami i punktami), 690 cytatów nowelizacyjnych, 523
+  jednostki `nie-ztp-*` i 289 zdarzeń cyklu życia wyprowadzonych z cudzych przepisów końcowych. Granica jest
+  w korpusie jednoznaczna: każde z 728 obwieszczeń tekstu jednolitego ma ten wiersz dokładnie raz. **Eksport nie
+  niesie jeszcze treści obwieszczenia** (korzeń `obwieszczenie` — w backlogu), więc pokrycie tekstu tekstów
+  jednolitych spada przejściowo z 90,3 % do 88,0 % akapitów; liczba dokumentów zgodnych ze schematem bez zmian.
+- **Miara pokrycia tekstu a cudzysłów `ˮ`**: U+02EE jest w Unicode literą, więc miara brała go za treść i trzy
+  akapity ustaw z cytatem zamkniętym tym znakiem uchodziły za zgubione; cudzysłowy z `QuotationMarks` nie są treścią.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

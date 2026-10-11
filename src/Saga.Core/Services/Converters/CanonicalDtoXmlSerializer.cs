@@ -47,6 +47,9 @@ namespace Saga.Core.Services.Converters
             foreach (var annex in document.Annexes)
                 root.Add(SerializeAnnex(annex));
 
+            if (document.Announcement is { } announcement)
+                root.Add(new XElement("announcement", announcement.Content.Select(SerializeContentBlock)));
+
             return ToCanonicalString(root);
         }
 
