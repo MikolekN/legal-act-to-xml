@@ -120,6 +120,34 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SectionSignAfterSection_InSectionBasedAct_IsTheNextMainUnit()
+        {
+            // „§ 6 i § 7" w rozporządzeniu: drugi „§" stoi obok pierwszego, nie pod nim.
+            var cursor = new UnitPathCursor { SectionSignIsBasicUnit = true };
+            foreach (var token in UnitReferenceTokenizer.Tokenize("§ 6 § 7"))
+            {
+                if (token.Kind == UnitTokenKind.UnitKeyword)
+                    cursor.Announce(token);
+                else
+                    cursor.Step(cursor.BeginStep()!.Value, token.Text);
+            }
+
+            Assert.Equal("art_7", cursor.Path.ToString());
+        }
+
+        [Fact]
+        public void StartingAt_InheritedSection_InSectionBasedAct_KeepsSectionSignTheMainUnit()
+        {
+            // „W § 5 wprowadza się następujące zmiany:" — odziedziczona jednostka główna jest paragrafem.
+            var cursor = UnitPathCursor.StartingAt(new StructuralReference { Article = "5" }, sectionSignIsBasicUnit: true);
+            cursor.Announce(UnitReferenceTokenizer.Tokenize("§").Single());
+
+            cursor.Step(cursor.BeginStep()!.Value, "5a");
+
+            Assert.Equal("art_5a", cursor.Path.ToString());
+        }
+
+        [Fact]
         public void StartingAt_InheritedTiret_LetsDoubleTiretDescend()
         {
             // „podwójne tiret drugie" pod odziedziczonym tiretem pierwszym — ścieżka tiretu z kontekstu.

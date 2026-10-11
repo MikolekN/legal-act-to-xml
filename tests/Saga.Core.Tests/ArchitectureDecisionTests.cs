@@ -623,6 +623,22 @@ namespace Saga.Core.Tests
             Assert.DoesNotContain(Read(LegalActType.AmendingStatute), path => path.StartsWith("art_", StringComparison.Ordinal));
         }
 
+        [Fact]
+        public void Adr0035_SectionSignAfterASection_IsTheNextSection()
+        {
+            // O znaczeniu kolejnego „§" rozstrzyga to, czym wprowadzono jednostkę główną ścieżki:
+            // po paragrafie rozporządzenia — kolejny paragraf, po jawnym artykule — paragraf kodeksu.
+            static string[] Read(string text, bool sectionBased) =>
+                UnitAddressReader.Read(text, null, sectionBased).Select(address => address.Start.ToString()).ToArray();
+
+            Assert.Equal(new[] { "art_6", "art_7" }, Read("§ 6 i § 7 otrzymują brzmienie:", sectionBased: true));
+            Assert.Equal(new[] { "art_3" }, Read("po § 3 dodaje się § 3a i § 3b w brzmieniu:", sectionBased: true));
+            Assert.Equal(new[] { "art_5__par_2" }, Read("w art. 5 § 2 otrzymuje brzmienie:", sectionBased: true));
+            Assert.Equal(
+                new[] { "art_5__par_2", "art_5__par_3" },
+                Read("w art. 5 § 2 i § 3 otrzymują brzmienie:", sectionBased: false));
+        }
+
         // ============================================================
         // ADR-0016: wyliczenie celów to osobne komendy, element-do-eId — tylko przedział
         // ============================================================

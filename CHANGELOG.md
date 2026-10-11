@@ -332,6 +332,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   rozporządzeniach, 144 odzyskane ustępy; zgodność ze schematem bez zmian (1648 z 2321, tak samo wg libxml2).
   W ustawie zmieniającej kodeks cytowany „§ 2." pozostaje paragrafem kodeksu.
 
+- **„§" po paragrafie w rozporządzeniu** ([ADR-0035](docs/adr/0035-paragraf-po-paragrafie-to-kolejny-paragraf.md)):
+  w powołaniu „§ 6 i § 7", „po § 3 dodaje się § 3a i § 3b", „w § 6a, w § 12, w § 14 w ust. 1" kolejny „§" jest
+  następnym paragrafem, a nie paragrafem kodeksu pod poprzednim. Cele komend z adresem `art_3__par_3a` w
+  rozporządzeniach: 208 → 6 (zostają jawne „art. … § …"); wyliczone paragrafy dostają osobne cytaty, każdy ze swoją
+  treścią. Ta sama reguła czyta klauzulę wejścia w życie — „z wyjątkiem § 1 pkt 4, § 3 i § 4" przestaje gubić
+  § 3 i § 4 (w korpusie jeden akt, 5 jednostek z poprawioną datą). Zgodność ze schematem bez zmian.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

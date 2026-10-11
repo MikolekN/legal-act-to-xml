@@ -293,6 +293,21 @@ namespace Saga.Core.Tests
             Assert.Equal(Saga.Model.EditorialUnits.Paragraph.CodeParagraphRole, Assert.Single(content.Paragraphs).Role);
         }
 
+        [Fact]
+        public void SectionsAddedAfterASection_AreOneQuotationAfterThatSection()
+        {
+            var lines = AmendingRegulation.ToList();
+            var index = lines.IndexOf("2) § 8 otrzymuje brzmienie:");
+            lines[index] = "2) po § 7 dodaje się § 7a i § 7b w brzmieniu:";
+            lines[index + 1] = "„§ 7a. Organ potwierdza przyjęcie zgłoszenia.";
+            lines.Insert(index + 2, "§ 7b. Potwierdzenie doręcza się niezwłocznie.”.");
+
+            var amendment = Parse(lines).Articles.First().Paragraphs[0].Points[1].Amendment!;
+
+            Assert.Equal(new[] { "art_7" }, amendment.Targets.Select(target => target.ToString()));
+            Assert.Equal(new[] { "7a", "7b" }, amendment.Content!.Articles.Select(unit => unit.Number?.Value));
+        }
+
         [SchemaPlFact]
         public void AmendingRegulation_IsSchemaValid_InItsBody()
         {

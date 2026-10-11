@@ -30,7 +30,8 @@ namespace Saga.Core.Services.UnitReferences
     /// oznaczeń z jednym słowem kluczowym, więc kontekst ustala się raz i podaje do każdego
     /// oznaczenia osobno.
     /// </summary>
-    internal readonly record struct UnitStepContext(UnitLevel Level, bool ExplicitKeyword, int TiretDepth, bool CodeParagraph);
+    internal readonly record struct UnitStepContext(
+        UnitLevel Level, bool ExplicitKeyword, int TiretDepth, bool CodeParagraph, bool SectionUnit = false);
 
     /// <summary>Wynik kroku: czy się udał i co zrobić z poprzednim kandydatem.</summary>
     internal readonly record struct UnitStep(UnitStepStatus Status, PendingDisposition Previous)
@@ -46,6 +47,10 @@ namespace Saga.Core.Services.UnitReferences
         private UnitLevel _pendingLevel = UnitLevel.None;
         private int _pendingTiretDepth = 1;
         private bool _pendingCodeParagraph;
+        private bool _pendingSectionUnit;
+
+        // Jednostkę główną ścieżki wprowadził „§" (akt oparty na paragrafach) — kolejny „§" to jej rodzeństwo.
+        private bool _articleIsSection;
         internal StructuralReference Path { get; private set; } = new();
 
         /// <summary>Poziom ostatnio zastosowanego oznaczenia.</summary>
@@ -61,10 +66,13 @@ namespace Saga.Core.Services.UnitReferences
         /// następujące zmiany: 1) w § 2 …"). Dzięki temu „§" pod odziedziczonym artykułem to paragraf kodeksu,
         /// a „podwójne tiret" schodzi pod odziedziczony tiret. Poziomu kontekst nie ustala: pierwsze
         /// oznaczenie potrzebuje słowa kluczowego, więc gołe „4" z daty nie staje się jednostką kontekstu.
+        /// W akcie opartym na paragrafach odziedziczona jednostka główna jest paragrafem („W § 5 wprowadza się
+        /// następujące zmiany:"), więc „§" pod nią wskazuje kolejny paragraf, nie paragraf kodeksu.
         /// </summary>
         internal static UnitPathCursor StartingAt(StructuralReference context, bool sectionSignIsBasicUnit = false)
         {
             var cursor = new UnitPathCursor { Path = context.Clone(), SectionSignIsBasicUnit = sectionSignIsBasicUnit };
+            cursor._articleIsSection = sectionSignIsBasicUnit && context.Article is not null;
             if (context.Tiret is { } tiret)
                 cursor._tiretPath.AddRange(tiret.Split('.', StringSplitOptions.RemoveEmptyEntries));
             if (context.Systematizing is { } systematizing)
@@ -77,8 +85,11 @@ namespace Saga.Core.Services.UnitReferences
         internal void Announce(UnitToken keyword)
         {
             // „§" po artykule to zawsze paragraf kodeksu — podjednostka, nie jednostka główna;
-            // samodzielny „§" jest jednostką główną tylko w akcie opartym na paragrafach.
-            _pendingCodeParagraph = keyword.IsSectionSign && (Path.Article is not null || !SectionSignIsBasicUnit);
+            // samodzielny „§" jest jednostką główną tylko w akcie opartym na paragrafach, a „§" po takiej
+            // jednostce („§ 6 i § 7", „po § 3 dodaje się § 3a") — kolejną jednostką główną (ADR-0034).
+            var underArticle = Path.Article is not null && !_articleIsSection;
+            _pendingCodeParagraph = keyword.IsSectionSign && (underArticle || !SectionSignIsBasicUnit);
+            _pendingSectionUnit = keyword.IsSectionSign && !_pendingCodeParagraph;
             _pendingLevel = _pendingCodeParagraph ? UnitLevel.Paragraph : keyword.Level;
             _pendingTiretDepth = keyword.TiretDepth;
         }
@@ -92,11 +103,13 @@ namespace Saga.Core.Services.UnitReferences
 
             var explicitKeyword = _pendingLevel != UnitLevel.None;
             var codeParagraph = explicitKeyword ? _pendingCodeParagraph : Path.ParagraphIsCodeParagraph;
+            var sectionUnit = explicitKeyword ? _pendingSectionUnit : _articleIsSection;
 
-            var context = new UnitStepContext(level, explicitKeyword, _pendingTiretDepth, codeParagraph);
+            var context = new UnitStepContext(level, explicitKeyword, _pendingTiretDepth, codeParagraph, sectionUnit);
             _pendingLevel = UnitLevel.None;
             _pendingTiretDepth = 1;
             _pendingCodeParagraph = false;
+            _pendingSectionUnit = false;
             return context;
         }
 
@@ -148,7 +161,11 @@ namespace Saga.Core.Services.UnitReferences
 
                 _tiretPath.Clear();
                 if (context.Level == UnitLevel.Article)
+                {
                     _systematizingPath.Clear();
+                    _articleIsSection = context.SectionUnit;
+                }
+
                 Path = context.Level switch
                 {
                     UnitLevel.Article => Path.WithArticle(designation),

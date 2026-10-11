@@ -73,6 +73,39 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ReadAmendmentTargets_SectionAddedAfterASection_TargetsTheSectionBefore()
+        {
+            // Korpus: 321948_2991133 — dodawane paragrafy są przedmiotem komendy, nie paragrafami kodeksu pod celem.
+            var target = SingleTarget("po § 3 dodaje się § 3a i § 3b w brzmieniu:", sectionSignIsBasicUnit: true);
+
+            Assert.Equal("art_3", target.ToString());
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_EnumeratedSections_AreSeparateTargets()
+        {
+            // Korpus: 289896_2764903 i 335954_3006176.
+            Assert.Equal(new[] { "art_6", "art_7" },
+                _service.ReadAmendmentTargets(null, "§ 6 i § 7 otrzymują brzmienie:", sectionSignIsBasicUnit: true)
+                    .Select(target => target.ToString()));
+
+            Assert.Equal(new[] { "art_6a", "art_12", "art_14__ust_1", "art_14a__ust_1" },
+                _service.ReadAmendmentTargets(
+                        null,
+                        "w § 6a, w § 12, w § 14 w ust. 1 i w § 14a w ust. 1 wyrazy „W latach” zastępuje się wyrazami „Do dnia”;",
+                        sectionSignIsBasicUnit: true)
+                    .Select(target => target.ToString()));
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_SectionSignAfterExplicitArticle_InSectionBasedAct_StaysACodeParagraph()
+        {
+            var target = SingleTarget("w art. 5 § 2 otrzymuje brzmienie:", sectionSignIsBasicUnit: true);
+
+            Assert.Equal("art_5__par_2", target.ToString());
+        }
+
+        [Fact]
         public void ReadAmendmentTargets_SectionSignWithoutArticle_InStatute_IsNotGuessed()
         {
             // Korpus: 311010_2798032. W ustawie „§" to paragraf kodeksu, a bez artykułu adres jest niepełny —
