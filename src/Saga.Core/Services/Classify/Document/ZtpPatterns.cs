@@ -81,9 +81,12 @@ namespace Saga.Core.Services.Classify.Document
         internal static readonly Regex MarshalOfSejmIssuerPattern = new(
             @"^Marszałka\s+Sejmu\s+Rzeczypospolitej\s+Polskiej\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        /// <summary>§ 17: data aktu (miesiąc słownie). Dopuszcza końcowy odnośnik [N)]/[N] (TJ często opatruje datę przypisem).</summary>
+        /// <summary>
+        /// § 17: data aktu (miesiąc słownie). Dopuszcza końcowy odnośnik [N)]/[N] (TJ często opatruje datę przypisem)
+        /// i brak odstępu przed dniem („z dnia17 marca 2025 r." — literówka szczotki).
+        /// </summary>
         internal static readonly Regex ActDateLinePattern = new(
-            @"^z\s+dnia\s+(?<day>\d{1,2})\s+(?<month>" + PolishDates.MonthAlternation + @")\s+(?<year>\d{4})\s*r\.(?:\s*\[\d+\)?\])?$",
+            @"^z\s+dnia\s*(?<day>\d{1,2})\s+(?<month>" + PolishDates.MonthAlternation + @")\s+(?<year>\d{4})\s*r\.(?:\s*\[\d+\)?\])?$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>

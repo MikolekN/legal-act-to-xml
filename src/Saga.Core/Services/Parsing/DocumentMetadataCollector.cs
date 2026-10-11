@@ -25,12 +25,13 @@ namespace Saga.Core.Services.Parsing
     ///
     /// Wiersz rozpoznaje wzorzec tekstowy; gdy tekst nie ma wzorcowej postaci („rozporządzenie" małymi literami,
     /// „ROZPORZĄDZENIE MINISTRA zDROWIA", tytuł „uchylające …"), rozstrzyga drugi sygnał: styl wiersza
-    /// (<c>OZNRODZAKTU…</c>, <c>TYTUAKTU…</c>) albo miejsce — pierwszy wiersz aktu ogłaszanego w załączniku
+    /// (<c>OZNRODZAKTU…</c>, <c>TEKSTOBWIESZCZENIE…</c>, <c>TYTUAKTU…</c>) albo miejsce — pierwszy wiersz aktu ogłaszanego w załączniku
     /// do obwieszczenia (<see cref="ExpectKindFirst"/>). Sam styl bez słowa rodzaju nagłówka nie czyni.
     /// </summary>
     public sealed class DocumentMetadataCollector
     {
-        private const string KindLineStyle = "OZNRODZAKTU";
+        // Wiersz rodzaju aktu i wiersz rodzaju obwieszczenia tekstu jednolitego („Obwieszczenie", organ).
+        private static readonly string[] KindLineStyles = ["OZNRODZAKTU", "TEKSTOBWIESZCZENIE"];
         private const string SubjectStyle = "TYTUAKTU";
 
         /// <summary>
@@ -191,7 +192,7 @@ namespace Saga.Core.Services.Parsing
         /// sygnał: styl wiersza rodzaju albo miejsce pierwszego wiersza aktu ogłaszanego w załączniku.
         /// </summary>
         private static bool IsKindBySecondSignal(string line, string? styleId, bool expectedHere) =>
-            (expectedHere || HasStyle(styleId, KindLineStyle))
+            (expectedHere || KindLineStyles.Any(style => HasStyle(styleId, style)))
             && ZtpPatterns.ActKindKeywordPattern.IsMatch(FootnoteMarkers.Remove(line));
 
         private static bool HasStyle(string? styleId, string prefix) =>

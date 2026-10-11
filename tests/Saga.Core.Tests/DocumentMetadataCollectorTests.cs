@@ -241,6 +241,34 @@ namespace Saga.Core.Tests
             Assert.Equal(new DateTime(2025, 8, 18), document.ActDate);
         }
 
+        [Fact]
+        public void AnnouncementKindLineWithALowercaseOrganWord_IsRecognisedByTheAnnouncementStyle()
+        {
+            // Korpus: 329084_2934669 — „marszałka" małą literą nie mieści się we wzorcu nagłówka obwieszczenia.
+            var collector = new DocumentMetadataCollector();
+
+            Assert.True(collector.Observe(
+                "Obwieszczenie marszałka Sejmu Rzeczypospolitej Polskiej", "TEKSTOBWIESZCZENIENAZWAORGANUWYDAJCEGOOTJ"));
+            Assert.True(collector.Observe("z dnia 11 czerwca 2025 r."));
+            Assert.True(collector.Observe("w sprawie ogłoszenia jednolitego tekstu ustawy o znakach Sił Zbrojnych"));
+
+            var document = Applied(collector);
+            Assert.Equal("marszałka Sejmu Rzeczypospolitej Polskiej", document.IssuerLine);
+            Assert.Equal(new DateTime(2025, 6, 11), document.ActDate);
+        }
+
+        [Fact]
+        public void DateWithoutASpaceBeforeTheDay_IsStillTheDate()
+        {
+            // Korpus: 315207_2847476 — „z dnia17 marca 2025 r.".
+            var collector = new DocumentMetadataCollector();
+            collector.Observe("Obwieszczenie");
+            collector.Observe("Prezesa Rady Ministrów");
+
+            Assert.True(collector.Observe("z dnia17 marca 2025 r."));
+            Assert.Equal(new DateTime(2025, 3, 17), Applied(collector).ActDate);
+        }
+
         [Theory]
         // Słowo rodzaju bez drugiego sygnału to może być proza.
         [InlineData("rozporządzenie", null)]

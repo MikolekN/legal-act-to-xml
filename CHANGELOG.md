@@ -379,6 +379,11 @@ a wersjonowanie zgodne z Semantic Versioning.
     1648 → 1675 z 2321 (tak samo wg libxml2; żaden wcześniej zgodny nie przestał nim być) — obwieszczenia 598
     z 708, rozporządzenia 836 z 1067; treść aktu zgodna w 1998 z 2017.
 
+- **Strefa tytułowa — dwa ostatnie przypadki**: wiersz rodzaju obwieszczenia z organem małą literą
+  („Obwieszczenie marszałka Sejmu Rzeczypospolitej Polskiej") rozpoznaje styl wiersza obwieszczenia, a data
+  bez odstępu przed dniem („z dnia17 marca 2025 r.") jest datą aktu. Zgodnych ze schematem w całości: 1677 z 2321
+  (obwieszczenia 600 z 708; tak samo wg libxml2).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.
