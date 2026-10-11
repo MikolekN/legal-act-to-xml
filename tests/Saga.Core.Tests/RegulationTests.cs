@@ -222,6 +222,92 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Załączniki aktu wykonawczego
+        // ============================================================
+
+        private static IEnumerable<string> WithAnnex(params string[] annex) =>
+            Regulation.Append("Minister Finansów: A. Domański").Concat(annex);
+
+        [Theory]
+        // Między rodzajem aktu a datą stoi organ, a w uchwale i zarządzeniu także numer.
+        [InlineData("Załącznik do rozporządzenia Ministra Finansów z dnia 11 maja 2017 r. (Dz. U. poz. 950)")]
+        [InlineData("Załącznik do rozporządzenia Ministra Rodziny, Pracy i Polityki Społecznej z dnia 11 maja 2017 r. (Dz. U. poz. 950)")]
+        [InlineData("Załącznik do uchwały nr 113 Rady Ministrów z dnia 25 lipca 2017 r. (M.P. poz. 994)")]
+        [InlineData("Załącznik do zarządzenia nr 81 Prezesa Rady Ministrów z dnia 24 lipca 2017 r. (M.P. poz. 756)")]
+        public void AnnexHeaderOfASectionBasedAct_NamesItsIssuer(string header)
+        {
+            var document = Parse(WithAnnex(header, "WYKAZ OSÓB PRAWNYCH", "Spółka Alfa", "Fundacja Beta"));
+
+            var annex = Assert.Single(document.Annexes);
+            Assert.Equal(header, Assert.Single(annex.AttachedTo));
+            Assert.Equal(new[] { "WYKAZ OSÓB PRAWNYCH", "Spółka Alfa", "Fundacja Beta" }, annex.Content.Select(block => block.Text));
+
+            // Treść załącznika nie trafia do ostatniego paragrafu.
+            var last = document.Articles.Last();
+            Assert.Equal("3", last.Number?.Value);
+            Assert.Empty(last.Paragraphs.SelectMany(paragraph => paragraph.Continuation));
+            Assert.Single(last.Paragraphs);
+        }
+
+        [Fact]
+        public void AnnexesOfARegulation_UnderACommonHeading_StartAtTheirDesignations()
+        {
+            var document = Parse(WithAnnex(
+                "Załączniki do rozporządzenia Ministra Finansów z dnia 11 maja 2017 r. (Dz. U. poz. 950)",
+                "Załącznik nr 1",
+                "WYKAZ SPÓŁEK",
+                "Spółka Alfa",
+                "Załącznik nr 2",
+                "WYKAZ FUNDACJI",
+                "Fundacja Beta"));
+
+            Assert.Equal(new[] { "1", "2" }, document.Annexes.Select(annex => annex.Number));
+            Assert.Equal(new[] { "Spółka Alfa", "Fundacja Beta" }, document.Annexes.Select(annex => annex.Content.Last().Text));
+        }
+
+        [Fact]
+        public void SentenceAboutAnAnnex_IsNotAnAnnexHeader()
+        {
+            // Bez daty aktu wiersz nie wskazuje załącznika — to treść przepisu.
+            var lines = Regulation.ToList();
+            lines.Insert(lines.Count - 1, "Załącznik do rozporządzenia określa wzór wniosku.");
+
+            var document = Parse(lines);
+
+            Assert.Empty(document.Annexes);
+            Assert.Equal(new[] { "1", "2", "3" }, document.Articles.Select(unit => unit.Number?.Value));
+        }
+
+        [Fact]
+        public void AnnexOfARegulation_IsExportedAfterTheSignature()
+        {
+            var act = Export(WithAnnex(
+                "Załącznik do rozporządzenia Ministra Finansów z dnia 11 maja 2017 r. (Dz. U. poz. 950)",
+                "WYKAZ OSÓB PRAWNYCH",
+                "Spółka Alfa"));
+
+            Assert.Equal(
+                new[] { "paragraf", "paragraf", "paragraf", "organ-podpisujacy", "zalacznik" },
+                ChildNames(act).SkipWhile(name => name != "paragraf"));
+            var annex = act.Elements().Single(e => e.Name.LocalName == "zalacznik");
+            Assert.Equal(new[] { "zalacznik-do", "segment-zalacznika" }, ChildNames(annex));
+            Assert.StartsWith("Załącznik do rozporządzenia Ministra Finansów", annex.Elements().First().Value);
+        }
+
+        [SchemaPlFact]
+        public void RegulationWithAnAnnex_IsSchemaValid_AsAWhole()
+        {
+            var act = Export(
+                WithAnnex(
+                    "Załącznik do rozporządzenia Ministra Finansów z dnia 11 maja 2017 r. (Dz. U. poz. 950)",
+                    "WYKAZ OSÓB PRAWNYCH",
+                    "Spółka Alfa"),
+                withJournalHeader: true);
+
+            Assert.Empty(SchemaPl.Validator.Validate(act.Parent!));
+        }
+
+        // ============================================================
         // Cytowany paragraf w rozporządzeniu zmieniającym
         // ============================================================
 

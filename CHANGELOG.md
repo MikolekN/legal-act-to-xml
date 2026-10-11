@@ -426,6 +426,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   - W korpusie: 148 wprowadzeń i 725 opisów symboli (356 z MathML) w 40 dokumentach, 873 `fragment` mniej;
     zgodność ze schematem (1685 z 2321, tak samo wg libxml2) i pokrycie tekstu bez zmian.
 
+- **Załączniki aktów wykonawczych**: nagłówek załącznika rozporządzenia, uchwały i zarządzenia ma między rodzajem
+  aktu a datą organ (i numer): „Załącznik do rozporządzenia Ministra Finansów z dnia …", „Załącznik do uchwały
+  nr 113 Rady Ministrów z dnia …". Wcześniej rozpoznawany był tylko zapis ustawowy („do ustawy z dnia"), więc treść
+  załącznika — tabele, wzory formularzy, wykazy — trafiała do ostatniego paragrafu aktu jako jego jednostki
+  i dalsza treść.
+  - W korpusie: 815 załączników w 477 dokumentach (465 rozporządzeń); spod ostatniego paragrafu znika 2350
+    `fragment`, 1337 punktów, 858 ustępów, 506 tiretów, 505 liter i 183 paragrafy, które były treścią załączników;
+    jednostek `nie-ztp-*` 1787 → 1362. Pokrycie tekstu: rozporządzenia 127 → 15 zgubionych akapitów (99,97 %),
+    teksty jednolite 1215 → 1136. Zgodność ze schematem bez zmian (1685 z 2321, tak samo wg libxml2).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

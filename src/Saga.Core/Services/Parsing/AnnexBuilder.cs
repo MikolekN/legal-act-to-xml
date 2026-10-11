@@ -12,9 +12,11 @@ namespace Saga.Core.Services.Parsing
     internal static class AnnexBuilder
     {
         // „Załącznik do ustawy z dnia…", „Załączniki do ustawy…", „Załącznik nr 2 do ustawy…" — nie
-        // „Załącznik do obwieszczenia", który w tekście jednolitym otwiera sam akt.
+        // „Załącznik do obwieszczenia", który w tekście jednolitym otwiera sam akt. Akt wykonawczy ma między
+        // rodzajem a datą organ, a uchwała i zarządzenie także numer („Załącznik do rozporządzenia Ministra
+        // Finansów z dnia…", „Załącznik do uchwały nr 113 Rady Ministrów z dnia…"); wskazanie nie sięga za nawias.
         internal static readonly Regex AttachedTo = new(
-            @"^Załącznik(?<plural>i)?(?:\s+nr\s+(?<number>\d+[a-z]*))?\s+do\s+(?:ustawy|rozporządzenia)\s+z\s+dnia\b",
+            @"^Załącznik(?<plural>i)?(?:\s+nr\s+(?<number>\d+[a-z]*))?\s+do\s+(?:ustawy|rozporządzenia|uchwały|zarządzenia)\b[^()]{0,120}?\bz\s+dnia\b",
             RegexOptions.Compiled);
 
         // „Załącznik nr 4a" w osobnym wierszu; za numerem najwyżej znacznik odnośnika („Załącznik nr 2[5)]")
