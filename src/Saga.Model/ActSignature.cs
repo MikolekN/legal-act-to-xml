@@ -16,6 +16,12 @@ namespace Saga.Model
         /// <summary>Organ podpisujący („Prezydent Rzeczypospolitej Polskiej").</summary>
         public string Authority { get; set; } = string.Empty;
 
+        /// <summary>
+        /// W czyim imieniu podpisano, gdy nie podpisuje sam organ: „wz." (w zastępstwie) albo „z up."
+        /// (z upoważnienia) — tak jak stoi w akcie; null, gdy podpisuje organ.
+        /// </summary>
+        public string? Capacity { get; set; }
+
         /// <summary>Imię albo inicjały („A.", „J. K.").</summary>
         public string GivenName { get; set; } = string.Empty;
 

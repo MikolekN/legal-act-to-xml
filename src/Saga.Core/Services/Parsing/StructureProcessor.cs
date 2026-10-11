@@ -250,6 +250,7 @@ namespace Saga.Core.Services.Parsing
                 // Podpis zamyka akt: formuła, po której stoi kolejny artykuł, nim nie jest
                 // (podpis pod obwieszczeniem przed tekstem jednolitym).
                 context.Document.Signature = null;
+                context.Document.CoSignatures.Clear();
 
                 var result = _articleBuilder.Build(new ArticleBuildInput(context.Subchapter, text));
                 ValidationReporter.AddClassificationWarning(result.Article, classification, "ART");
@@ -489,9 +490,13 @@ namespace Saga.Core.Services.Parsing
             }
 
             // Formuła podpisu za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda").
+            // Akt wydany wspólnie ma ich kilka — pierwsza jest podpisem aktu, kolejne stoją za nią.
             if (ActSignatureParser.TryParse(text) is { } signature)
             {
-                context.Document.Signature = signature;
+                if (context.Document.Signature is null)
+                    context.Document.Signature = signature;
+                else
+                    context.Document.CoSignatures.Add(signature);
                 return;
             }
 

@@ -46,7 +46,10 @@ namespace Saga.Core.Services
             // Podpis pod obwieszczeniem, którego aktu eksport nie niesie (tekst jednolity rozporządzenia), nie ma
             // gdzie stanąć: dotychczasowy korzeń nie jest obwieszczeniem.
             if (document.Signature is { } signature && (announced is not null || document.Announcement is null))
+            {
                 actElement.Add(SignatureXmlConverter.ToXml(signature));
+                actElement.Add(document.CoSignatures.Select(SignatureXmlConverter.ToXml));
+            }
 
             if (body != actElement)
                 actElement.Add(body);
@@ -197,7 +200,10 @@ namespace Saga.Core.Services
             organy.Add(organ);
 
             if (document.Signature is { } signature)
+            {
                 organy.Add(SignatureXmlConverter.ToAuthority(signature));
+                organy.Add(document.CoSignatures.Select(SignatureXmlConverter.ToAuthority));
+            }
 
             metaElement.Add(organy);
 

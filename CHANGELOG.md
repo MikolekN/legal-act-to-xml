@@ -360,6 +360,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   i rocznika. W korpusie: 23 przytoczenia z uchwał i zarządzeń w 11 obwieszczeniach zyskują prefiks aktu
   przytaczanego (1593 z 1625 przytoczeń z prefiksem). Zgodność ze schematem bez zmian.
 
+- **Podpis w zastępstwie i podpisy aktu wydanego wspólnie**: formuła „Minister Finansów: wz. J. Neneman"
+  i „Minister Obrony Narodowej: z up. P. Bejda" jest podpisem aktu (`ActSignature.Capacity` niesie skrót, eksport
+  pisze go przed osobą), tak samo organ z przecinkiem w nazwie („Minister Rodziny, Pracy i Polityki Społecznej").
+  Akt wydany wspólnie zachowuje każdą formułę (`LegalDocument.CoSignatures`) — wcześniej druga nadpisywała pierwszą.
+  - W korpusie: 545 dokumentów (głównie rozporządzenia) zyskuje `organ-podpisujacy`, 583 organy podpisujące
+    w metadanych; 539 formuł przestaje być `fragment` pod ostatnią jednostką, 8 nadpisywanych wraca do eksportu.
+    Zgodność ze schematem bez zmian (1648 z 2321, tak samo wg libxml2).
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

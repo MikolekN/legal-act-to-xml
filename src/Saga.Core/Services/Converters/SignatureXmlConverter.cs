@@ -6,14 +6,14 @@ namespace Saga.Core.Services.Converters
 {
     /// <summary>
     /// Podpis aktu: formuła za ostatnim przepisem (<c>organ-podpisujacy</c> z osobą) i organ podpisujący
-    /// w metadanych. Organ i osoba wychodzą tak, jak stoją w akcie.
+    /// w metadanych. Organ i osoba wychodzą tak, jak stoją w akcie — także „wz." i „z up." przed osobą.
     /// </summary>
     internal static class SignatureXmlConverter
     {
         /// <summary>„Prezydent Rzeczypospolitej Polskiej: A. Duda" jako tekst z wyróżnioną osobą.</summary>
         internal static XElement ToXml(ActSignature signature) =>
             Element(XmlConverterConstants.Signatures.SigningAuthority,
-                signature.Authority + ": ",
+                signature.Authority + ": " + (signature.Capacity is { Length: > 0 } capacity ? capacity + " " : string.Empty),
                 Person(XmlConverterConstants.Signatures.Person, signature,
                     new XAttribute(XmlConverterConstants.Signatures.Signing, true),
                     new XAttribute(XmlConverterConstants.Signatures.PersonGUID, signature.PersonGuid.ToString())));

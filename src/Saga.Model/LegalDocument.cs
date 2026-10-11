@@ -132,6 +132,12 @@ namespace Saga.Model
         public ActSignature? Signature { get; set; }
 
         /// <summary>
+        /// Kolejne formuły podpisu pod aktem wydanym wspólnie („Minister Infrastruktury: …", „Minister Spraw
+        /// Wewnętrznych i Administracji: …") — w kolejności z aktu, za <see cref="Signature"/>.
+        /// </summary>
+        public List<ActSignature> CoSignatures { get; set; } = new();
+
+        /// <summary>
         /// Odnośniki aktu w kolejności odwołań. Miejsce odwołania niesie tekst jednostki (znacznik „[N)]").
         /// </summary>
         public List<Footnote> Footnotes { get; } = new();

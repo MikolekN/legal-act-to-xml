@@ -41,6 +41,8 @@ namespace Saga.Core.Services.Converters
             if (document.Signature is { } signature)
                 root.Add(new XElement("signature",
                     new XAttribute("authority", signature.Authority),
+                    signature.Capacity is { } capacity ? new XAttribute("capacity", capacity) : null,
+                    document.CoSignatures.Count > 0 ? new XAttribute("coSignatures", document.CoSignatures.Count) : null,
                     new XAttribute("givenName", signature.GivenName),
                     new XAttribute("surname", signature.Surname)));
 
