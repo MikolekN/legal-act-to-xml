@@ -57,6 +57,29 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Czy blok zaczyna się od cudzysłowu otwierającego — początek treści cytowanej.</summary>
         public static bool OpensQuote(string text) => OpeningQuoteAtStart.IsMatch(text);
 
+        /// <summary>
+        /// Czy blok zamyka cytat, którego otwarcia nie widać: kończy się cudzysłowem zamykającym i ma w sobie
+        /// więcej zamknięć niż otwarć. Wyrażenie w cudzysłowie wewnątrz bloku („zwany dalej „ministrem".")
+        /// jest sparowane i cytatu nie zamyka.
+        /// </summary>
+        public static bool ClosesUnopenedQuote(string text)
+        {
+            var trimmed = text.TrimEnd();
+            if (!ClosingQuoteAtEnd.IsMatch(trimmed))
+                return false;
+
+            var open = 0;
+            foreach (var character in trimmed)
+            {
+                if (character == QuotationMarks.Opening)
+                    open++;
+                else if (QuotationMarks.IsClosing(character))
+                    open--;
+            }
+
+            return open < 0;
+        }
+
         private static bool EndsWithStraightQuote(string trimmed) => StraightQuoteAtEnd.IsMatch(trimmed);
 
         private bool _first = true;

@@ -584,6 +584,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   poziomem tiretu takim, jak je zapisano. Dotąd było przycinane do trzech poziomów — tylu, ile stylów tiretu ma
   szablon — i czwarty poziom stawał się kolejnym tiretem trzeciego. Limit zostaje tylko dla głębokości
   wnioskowanej z wcięcia.
+- **Treść cytowana bez cudzysłowu otwierającego nie połyka reszty aktu** ([ADR-0048](docs/adr/0048-tresc-cytowana-bez-cudzyslowu-konczy-kolejny-artykul-aktu-zmieniajacego.md)):
+  w dokumencie bez stylów treść nowelizacji, której cudzysłów otwierający zgubiono, kończy kolejny artykuł aktu
+  zmieniającego (numer o jeden większy od artykułu z komendą), formuła podpisu albo cudzysłów zamykający bez
+  otwarcia. Przedtem trwała do końca dokumentu, a dalsze artykuły ustawy zmieniającej stawały się cytowanymi.
+  - W korpusie ze stylami bez zmian; bez stylów zgodność struktury rozporządzeń 97,22 % → 97,31 %.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

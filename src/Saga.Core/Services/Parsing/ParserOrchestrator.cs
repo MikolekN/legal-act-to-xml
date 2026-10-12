@@ -407,12 +407,24 @@ namespace Saga.Core.Services.Parsing
                 }
             }
 
+            // Treść cytowana bez stylu i bez cudzysłowu otwierającego nie ma granicy, którą dałoby się śledzić.
+            // Kończy ją to, co do aktu zmienianego należeć nie może (ADR-0048).
+            var untracked = wasInsideAmendment && context.InsideAmendment && !classification.IsAmendmentContent
+                && string.IsNullOrEmpty(styleId) && !quoteTracker.IsArmed;
+            if (untracked && EndsUntrackedQuotation(context, classification, text))
+            {
+                _amendmentManager.Flush(context);
+                context.InsideAmendment = false;
+            }
+
             if (classification.IsAmendmentContent || context.InsideAmendment)
             {
                 _amendmentManager.Collect(context, text, styleId);
 
                 // Bilans cudzyslowow domknal cytowana tresc („…") — koniec nowelizacji bez stylow (§ 94 ZTP).
-                if (quoteTracker.ClosureReached)
+                // Cudzysłów zamykający bez otwarcia domyka treść, której otwarcia zabrakło w źródle.
+                var untrackedContent = string.IsNullOrEmpty(styleId) && !classification.IsAmendmentContent && !quoteTracker.IsArmed;
+                if (quoteTracker.ClosureReached || (untrackedContent && QuoteBalanceTracker.ClosesUnopenedQuote(text)))
                 {
                     _amendmentManager.Flush(context);
                     context.InsideAmendment = false;
@@ -420,6 +432,28 @@ namespace Saga.Core.Services.Parsing
                 return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Czy akapit kończy treść cytowaną, której cudzysłowu nie da się śledzić: jest kolejnym artykułem aktu
+        /// zmieniającego (numer o jeden większy od artykułu z komendą, bez cudzysłowu otwierającego) albo formułą
+        /// podpisu. Artykuł cytowany ma numer z aktu zmienianego; zbieżność z kolejnym numerem aktu
+        /// zmieniającego jest możliwa, ale bez cudzysłowów i stylów nic jej nie rozstrzyga — a alternatywą jest
+        /// połknięcie reszty aktu.
+        /// </summary>
+        private static bool EndsUntrackedQuotation(ParsingContext context, ClassificationResult classification, string text)
+        {
+            if (QuoteBalanceTracker.OpensQuote(text))
+                return false;
+
+            if (ActSignatureParser.TryParse(text) is not null)
+                return true;
+
+            if (classification.Kind != ParagraphKind.Article || context.CurrentArticle?.Number is not { } current)
+                return false;
+
+            return ParsingFactories.ParseArticleNumber(text) is { LexicalPart.Length: 0 } next
+                && next.NumericPart == current.NumericPart + 1;
         }
     }
 }

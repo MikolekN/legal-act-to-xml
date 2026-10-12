@@ -1421,6 +1421,30 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0048: treść cytowaną bez cudzysłowu kończy kolejny artykuł aktu zmieniającego
+        // ============================================================
+
+        [Fact]
+        public void Adr0048_QuotedContentWithoutQuotesOrStyles_DoesNotSwallowTheNextArticleOfTheAmendingAct()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) po art. 15 dodaje się art. 15a w brzmieniu:",
+                "Art. 15a. Opłatę wnosi się w terminie 14 dni.",
+                "Art. 2. W ustawie z dnia 3 marca 2022 r. o podatkach (Dz. U. poz. 300) uchyla się art. 7.",
+                "Art. 3. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Artykuł cytowany (15a) zostaje w treści nowelizacji; art. 2 i 3 są artykułami ustawy zmieniającej.
+            Assert.Equal(new[] { "1", "2", "3" }, document.Articles.Select(article => article.Number?.Value));
+            Assert.Equal("15a", document.Articles.First().Paragraphs.Single().Amendment!.Content!.Articles.Single().Number?.Value);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

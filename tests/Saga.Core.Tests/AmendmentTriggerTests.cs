@@ -66,6 +66,71 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "1", "2", "3" }, document.Articles.Select(article => article.Number?.Value));
         }
 
+        // ============================================================
+        // Treść cytowana bez cudzysłowu otwierającego i bez stylów (ADR-0048)
+        // ============================================================
+
+        private const string Command =
+            "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w art. 5 ust. 2 otrzymuje brzmienie:";
+
+        [Theory]
+        // Cudzysłów otwierający zgubiony w źródle; zamykający jest.
+        [InlineData("2. Opłatę wnosi się w terminie 14 dni.”.")]
+        // Oba zgubione.
+        [InlineData("2. Opłatę wnosi się w terminie 14 dni.")]
+        public void QuotedContentWithoutAnOpeningQuote_EndsBeforeTheNextArticleOfTheAmendingAct(string quoted)
+        {
+            var document = Parse(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                Command,
+                quoted,
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+            // Przedtem art. 2 ustawy zmieniającej stawał się artykułem cytowanym, a ustawa miała jeden artykuł.
+            Assert.Equal(new[] { "1", "2" }, document.Articles.Select(article => article.Number?.Value));
+            var content = document.Articles.First().Paragraphs.Single().Amendment!.Content!;
+            Assert.Single(content.Paragraphs);
+            Assert.Empty(content.Articles);
+        }
+
+        [Fact]
+        public void QuotedContentWithoutQuotes_EndsBeforeTheSignature()
+        {
+            var document = Parse(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                Command,
+                "2. Opłatę wnosi się w terminie 14 dni.",
+                "Prezydent Rzeczypospolitej Polskiej: A. Duda");
+
+            Assert.Equal("Duda", document.Signature?.Surname);
+            Assert.Single(document.Articles.Single().Paragraphs.Single().Amendment!.Content!.Paragraphs);
+        }
+
+        [Fact]
+        public void QuotedArticleWithAnotherNumber_StaysQuoted_WhenQuotesAreMissing()
+        {
+            // Artykuł cytowany ma numer z aktu zmienianego; treść kończy dopiero kolejny artykuł aktu zmieniającego.
+            var document = Parse(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) po art. 15 dodaje się art. 15a i 15b w brzmieniu:",
+                "Art. 15a. Opłatę wnosi się w terminie 14 dni.",
+                "Art. 15b. Opłaty nie zwraca się.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+            Assert.Equal(new[] { "1", "2" }, document.Articles.Select(article => article.Number?.Value));
+            Assert.Equal(2, document.Articles.First().Paragraphs.Single().Amendment!.Content!.Articles.Count);
+        }
+
+        [Theory]
+        [InlineData("2. Opłatę wnosi się w terminie 14 dni.”.", true)]
+        [InlineData("Opłatę wnosi minister, zwany dalej „ministrem”.", false)]
+        [InlineData("2. Opłatę wnosi się w terminie 14 dni.", false)]
+        [InlineData("„2. Opłatę wnosi się w terminie 14 dni.”.", false)]
+        public void ClosingQuoteWithoutItsOpening_ClosesAQuotationWhoseOpeningIsMissing(string text, bool expected)
+        {
+            Assert.Equal(expected, QuoteBalanceTracker.ClosesUnopenedQuote(text));
+        }
+
         [Fact]
         public void CommandEndingWithTheColon_StillTakesItsQuotedContent()
         {
