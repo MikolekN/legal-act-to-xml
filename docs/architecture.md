@@ -180,8 +180,9 @@ Rozpoznanie i budowa:
   (rozdział rzymski, sufiks wersalikiem, dział arabski, „IvA") jest tolerowany z komunikatem `Info`.
 - **Tytuł** to pierwszy akapit po oznaczeniu: ze stylu `*_PRZEDM` albo bez stylu — akapit od wielkiej litery,
   który nie kończy się jak zdanie ani wprowadzenie do wyliczenia (kropka, dwukropek, średnik, przecinek);
-  długość nie rozstrzyga. „(uchylony)" też. Tytuł złamany na kilka bloków dokleja się tylko, gdy kolejny blok
-  zaczyna się małą literą.
+  długość nie rozstrzyga. Miejsce tytułu zajmuje też adnotacja tekstu jednolitego o uchyleniu — akapit w nawiasie
+  kończący się słowem „uchylony" albo „pominięty" („(uchylony)", „(zawierający art. 19–21 – uchylony)").
+  Tytuł złamany na kilka bloków dokleja się tylko, gdy kolejny blok zaczyna się małą literą.
 - **Części nazwane** („CZĘŚĆ OGÓLNA", „TYTUŁ WSTĘPNY") z zamkniętej listy dostają eId tymczasowy
   `czesc_TMP1`. Taka część zaraz po oznaczeniu niższej jednostki jest jej tytułem (KC, KKS).
 - **Wiele części**: `LegalDocument.Parts`; część, której nie da się przejąć, staje obok jako

@@ -696,9 +696,13 @@ namespace Saga.Core.Services.Parsing
         private static bool IsUnknownOrHeading(ParagraphKind kind) =>
             kind is ParagraphKind.Unknown or ParagraphKind.UnitHeading;
 
-        /// <summary>„(uchylony)" w miejscu tytułu jednostki uchylonej w tekście jednolitym (§ 106 ZTP).</summary>
+        /// <summary>
+        /// Adnotacja w miejscu tytułu jednostki uchylonej w tekście jednolitym (§ 106 ZTP): cały akapit w nawiasie
+        /// kończący się słowem „uchylony" albo „pominięty" — samo „(uchylony)" albo z zakresem jednostki
+        /// („(zawierający art. 19–21 – uchylony)").
+        /// </summary>
         private static readonly Regex RepealedUnitMarker = new(
-            @"^\(\s*(?:uchylon[yae]|pominięt[yae])\s*\)(?:\[[^\]]*\])?\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            @"^\((?:[^()]*\b)?(?:uchylon[yae]|pominięt[yae])\s*\)(?:\[[^\]]*\])?\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
         /// Tytuł ze stylu szablonu: styl tytułu jednostki albo — dla części i księgi — ten sam styl

@@ -560,6 +560,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   długości tytułów w korpusie i gubił długie tytuły rozdziałów aktów wykonawczych; dwukropek na końcu nie chronił
   dotąd przed wzięciem wprowadzenia do wyliczenia za tytuł.
   - W korpusie: 9 dokumentów, 22 tytuły rozdziałów odzyskane; żaden dotychczasowy tytuł nie zniknął.
+- **Adnotacja o uchyleniu w miejscu tytułu jednostki**: akapit w nawiasie kończący się słowem „uchylony" albo
+  „pominięty", stojący tuż za oznaczeniem jednostki systematyzacyjnej, zajmuje miejsce jej tytułu także wtedy, gdy
+  podaje zakres („(zawierający art. 19–21 – uchylony)") — dotąd rozpoznawane było samo „(uchylony)", a dłuższa
+  adnotacja ginęła albo doklejała się do poprzedniego przepisu.
+  - W korpusie: 22 adnotacje w 5 tekstach jednolitych; zgubionych akapitów w tekstach jednolitych 62 → 40.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

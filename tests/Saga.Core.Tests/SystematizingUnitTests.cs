@@ -429,6 +429,37 @@ namespace Saga.Core.Tests
             Assert.Equal(string.Empty, chapter.Heading);
         }
 
+        [Theory]
+        [InlineData("(uchylony)")]
+        // Korpus: 317037_2830281 — adnotacja z zakresem uchylonej jednostki stoi w miejscu jej tytułu.
+        [InlineData("(zawierający art. 19–21 – uchylony)")]
+        [InlineData("(zawierający art. 392–393[20] – uchylony)")]
+        [InlineData("(pominięty)")]
+        public void RepealNoteAfterTheDesignation_StandsInPlaceOfTheTitle(string note)
+        {
+            var orch = new ParserOrchestrator();
+            var ctx = ConnectedContext();
+            Feed(orch, ctx, "Rozdział 1", "Przepisy ogolne", "Art. 1. Przepis.", "Rozdział 2", note, "Rozdział 3", "Przepisy koncowe", "Art. 22. Przepis.");
+
+            var chapters = ctx.Document.RootPart.Books[0].Titles[0].Divisions[0].Chapters;
+            Assert.Equal(new[] { "Przepisy ogolne", note, "Przepisy koncowe" }, chapters.Select(chapter => chapter.Heading));
+
+            // Adnotacja nie przykleja się do ostatniego przepisu poprzedniego rozdziału.
+            Assert.All(ctx.Document.Articles, article => Assert.Empty(article.Paragraphs.Single().Continuation));
+        }
+
+        [Fact]
+        public void ParenthesisedTextThatIsNotARepealNote_IsNotTakenForOne()
+        {
+            // Nawias z innym tekstem po oznaczeniu nie jest adnotacją o uchyleniu — przechodzi zwykłą drogą tytułu.
+            var orch = new ParserOrchestrator();
+            var ctx = ConnectedContext();
+            Feed(orch, ctx, "Rozdział 1", "(tekst jednolity)", "Art. 1. Przepis.");
+
+            var chapter = ctx.Document.RootPart.Books[0].Titles[0].Divisions[0].Chapters[0];
+            Assert.Equal(string.Empty, chapter.Heading);
+        }
+
         [Fact]
         public void LongUnstyledTitle_IsStillTheTitleOfTheChapter()
         {
