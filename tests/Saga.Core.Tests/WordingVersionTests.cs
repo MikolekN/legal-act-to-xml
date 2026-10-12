@@ -16,7 +16,8 @@ namespace Saga.Core.Tests
         private const string ChangedOn2026 =
             "W brzmieniu ustalonym przez art. 1 pkt 1 ustawy z dnia 9 maja 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 680); wejdzie w życie z dniem 1 stycznia 2026 r.";
 
-        private const string ChangeEvent = "zdarz_wejscie_2026-01-01_DU-2025-1094_odczytane";
+        // Zdarzenie należy do aktu, który zmianę wprowadza (ADR-0063) — tu ustawy z Dz. U. z 2025 r. poz. 680.
+        private const string ChangeEvent = "zdarz_wejscie_2026-01-01_DU-2025-680_odczytane";
 
         private static DocumentBlock Block(string text, params (string Symbol, string Text)[] footnotes) => new()
         {
@@ -319,7 +320,7 @@ namespace Saga.Core.Tests
                 Block("Art. 2. 1.[1)] Odbudowę prowadzi się na wniosek.", ("1", "Dodany przez art. 21 pkt 1 ustawy z dnia 18 października 2024 r. o udziale w Systemie Wjazdu/Wyjazdu (Dz. U. poz. 1688), która wejdzie w życie z dniem określonym w decyzji Komisji Europejskiej.")),
                 Block("2.[2)] Wniosek składa się w systemie.", ("2", "Dodany przez art. 21 pkt 2 ustawy, o której mowa w odnośniku 1."))));
 
-            const string undated = "zdarz_wejscie_odn-1_DU-2025-1094_odczytane";
+            const string undated = "zdarz_wejscie_odn-1_DU-2024-1688_odczytane";
             var change = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "Zdarzenie" && e.Attribute("rodzaj")!.Value == "wejscie-w-zycie");
             Assert.Equal(undated, change.Attribute("id")!.Value);
             Assert.Equal("z dniem określonym w decyzji Komisji Europejskiej", change.Attribute("warunek")!.Value);
@@ -488,7 +489,7 @@ namespace Saga.Core.Tests
                 Block("2) (uchylony)[2)]", ("2", "Przez art. 1 pkt 2 ustawy z dnia 9 maja 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 680); wejdzie w życie z dniem 1 stycznia 2026 r.")),
                 Block("3) podpis.")));
 
-            const string repeal = "zdarz_uchylenie_2026-01-01_DU-2025-1094_odczytane";
+            const string repeal = "zdarz_uchylenie_2026-01-01_DU-2025-680_odczytane";
             var change = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "Zdarzenie" && e.Attribute("rodzaj")!.Value == "uchylenie");
             Assert.Equal(repeal, change.Attribute("id")!.Value);
 
@@ -512,7 +513,7 @@ namespace Saga.Core.Tests
                 Block("2.[1)] Wniosek składa się w systemie.", ("1", "Dodany przez art. 4 pkt 28 ustawy z dnia 9 maja 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 680); wejdzie w życie z dniem wdrożenia rozwiązań technicznych."))));
 
             // Granica istnieje, dnia nie znamy: zdarzenie bez daty, z terminem przeniesionym dosłownie.
-            const string undated = "zdarz_wejscie_odn-1_DU-2025-1094_odczytane";
+            const string undated = "zdarz_wejscie_odn-1_DU-2025-680_odczytane";
             var change = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "Zdarzenie" && e.Attribute("id")!.Value == undated);
             Assert.Null(change.Attribute("data"));
             Assert.Equal("z dniem wdrożenia rozwiązań technicznych", change.Attribute("warunek")?.Value);
@@ -536,6 +537,113 @@ namespace Saga.Core.Tests
             var xml = LegalDocumentConverter.Convert(document);
             Assert.DoesNotContain(xml.Descendants(), e => e.Attribute("okres") is not null || e.Attribute("obowiazuje-do") is not null);
             Assert.Single(xml.Descendants(), e => e.Name.LocalName == "Zdarzenie");
+        }
+
+        // ============================================================
+        // Akt, który zmianę wprowadza (ADR-0063)
+        // ============================================================
+
+        private static List<XElement> ChangeEvents(XElement xml) =>
+            xml.Descendants().Where(e => e.Name.LocalName == "Zdarzenie" && e.Attribute("rodzaj")!.Value != "ujednolicenie").ToList();
+
+        [Fact]
+        public void BothWordings_NameTheAmendingActAndItsProvision()
+        {
+            var paragraphs = ParagraphsOf(ParagraphPrintedTwice(), "2");
+
+            // Rocznik bierze się z daty aktu (§ 158 ust. 7 ZTP): „ustawy z dnia 9 maja 2025 r. … (Dz. U. poz. 680)".
+            Assert.All(paragraphs.Take(2), paragraph =>
+            {
+                Assert.Equal("DU/2025/680", paragraph.Version!.ChangeAct);
+                Assert.Equal("art. 1 pkt 1", paragraph.Version.ChangeProvision);
+            });
+        }
+
+        [Fact]
+        public void ChangeEvent_NamesItsSourceBasisAndEvidence()
+        {
+            var change = Assert.Single(ChangeEvents(LegalDocumentConverter.Convert(ParagraphPrintedTwice())));
+
+            Assert.Equal(ChangeEvent, change.Attribute("id")!.Value);
+            Assert.EndsWith("/eli/DU/2025/680", change.Attribute("zrodlo")!.Value);
+            Assert.Equal("art. 1 pkt 1", change.Attribute("podstawa")!.Value);
+            Assert.Equal(Act + "odn_2", change.Attribute("dowod")!.Value);
+        }
+
+        [Fact]
+        public void ChangesOfTwoActsOnOneDay_AreTwoEvents()
+        {
+            var xml = LegalDocumentConverter.Convert(Parse(
+                Block("Art. 2. 1. Odbudowę prowadzi się na wniosek."),
+                Block("1a.[1)] Odbudowę zabytku prowadzi się z urzędu.", ("1", "Dodany przez art. 1 pkt 3 ustawy z dnia 9 maja 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 680); wejdzie w życie z dniem 1 stycznia 2026 r.")),
+                Block("1b.[2)] Odbudowę pomnika prowadzi wojewoda.", ("2", "Dodany przez art. 7 ustawy z dnia 20 czerwca 2025 r. o ochronie zabytków (Dz. U. poz. 900); wejdzie w życie z dniem 1 stycznia 2026 r."))));
+
+            Assert.Equal(
+                new[] { "zdarz_wejscie_2026-01-01_DU-2025-680_odczytane", "zdarz_wejscie_2026-01-01_DU-2025-900_odczytane" },
+                ChangeEvents(xml).Select(change => change.Attribute("id")!.Value));
+            Assert.Equal(new[] { "art. 1 pkt 3", "art. 7" }, ChangeEvents(xml).Select(change => change.Attribute("podstawa")!.Value));
+        }
+
+        [Fact]
+        public void ActNamedElsewhere_IsReadWhereTheReferenceLeads()
+        {
+            // Odnośnik zmiany nazywa akt odesłaniem; publikator w jego dalszej części należy do innego aktu.
+            var paragraphs = ParagraphsOf(Parse(
+                Block("Art. 2. 1. Odbudowę prowadzi się na wniosek."),
+                Block("1a.[1)] Odbudowę zabytku prowadzi się z urzędu.", ("1", ActEnteringIn2026)),
+                Block("1b.[2)] Odbudowę pomnika prowadzi wojewoda.", ("2", "Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1; wejdzie w życie z dniem 1 marca 2026 r. zgodnie z komunikatem ogłoszonym na podstawie ustawy z dnia 3 lutego 2020 r. o komunikatach (Dz. U. poz. 77)."))), "2");
+
+            Assert.Equal("DU/2025/818", paragraphs[1].Version!.ChangeAct);
+            Assert.Equal("DU/2025/818", paragraphs[2].Version!.ChangeAct);
+            Assert.Equal("art. 5 pkt 2", paragraphs[2].Version!.ChangeProvision);
+            Assert.Equal(new DateTime(2026, 3, 1), paragraphs[2].Version!.ChangeDate);
+        }
+
+        [Fact]
+        public void EventOfSeveralProvisions_NamesThemAll()
+        {
+            // Dowodem zdarzenia jest odnośnik, w którym stoi termin; podstawą — każdy przepis, który na ten termin czeka.
+            var xml = LegalDocumentConverter.Convert(Parse(
+                Block("Art. 2. 1. Odbudowę prowadzi się na wniosek."),
+                Block("1a.[1)] Odbudowę zabytku prowadzi się z urzędu.", ("1", ActEnteringIn2026)),
+                Block("1b.[2)] Odbudowę pomnika prowadzi wojewoda.", ("2", "Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1."))));
+
+            var change = Assert.Single(ChangeEvents(xml));
+            Assert.Equal("zdarz_wejscie_2026-02-15_DU-2025-818_odczytane", change.Attribute("id")!.Value);
+            Assert.Equal(Act + "odn_1", change.Attribute("dowod")!.Value);
+            Assert.Equal("art. 5 pkt 1; art. 5 pkt 2", change.Attribute("podstawa")!.Value);
+        }
+
+        [Fact]
+        public void ChangeWhoseActIsNotNamed_StaysWithTheDocumentItWasReadIn()
+        {
+            // Odnośnik odsyła po akt do odnośnika, którego w dokumencie nie ma.
+            var xml = LegalDocumentConverter.Convert(Parse(
+                Block("Art. 2. 1.[1)] Odbudowę prowadzi się na wniosek.", ("1", Until2)),
+                Block("1.[2)] Odbudowę prowadzi się z urzędu.", ("2", "Ze zmianą wprowadzoną przez art. 2 pkt 3 ustawy, o której mowa w odnośniku 5.")),
+                Block("2. Wniosek składa się do wojewody.")));
+
+            var change = Assert.Single(ChangeEvents(xml));
+            Assert.Equal("zdarz_wejscie_odn-2_DU-2025-1094_odczytane", change.Attribute("id")!.Value);
+            Assert.Null(change.Attribute("zrodlo"));
+            Assert.Equal("art. 2 pkt 3", change.Attribute("podstawa")!.Value);
+        }
+
+        [Theory]
+        // Dalsze pozycje to zmiany aktu, nie miejsce jego ogłoszenia.
+        [InlineData("ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych (Dz. U. poz. 2320, z 2021 r. poz. 72, 802 i 1135)", "DU/2020/2320")]
+        [InlineData("ustawy z dnia 11 sierpnia 2001 r. o odbudowie (Dz. U. z 2024 r. poz. 1100 i 1473)", "DU/2024/1100")]
+        [InlineData("uchwały z dnia 5 marca 2024 r. w sprawie regulaminu (M.P. poz. 210)", "MP/2024/210")]
+        public void FirstActOfAJournalReference_IsItsFirstWrittenPosition(string text, string expected)
+        {
+            Assert.Equal(expected, JournalReferenceService.ReadFirstAct(text)?.GetELIStrings().Single());
+        }
+
+        [Fact]
+        public void JournalWithoutAYearOrAnActDate_NamesNoAct()
+        {
+            Assert.Null(JournalReferenceService.ReadFirstAct("zgodnie z komunikatem (Dz. U. poz. 77)"));
+            Assert.Null(JournalReferenceService.ReadFirstAct("zgodnie z komunikatem"));
         }
 
         [SchemaPlFact]

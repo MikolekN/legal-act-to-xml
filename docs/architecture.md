@@ -1155,7 +1155,9 @@ Jednostka drukowana dwa razy — w brzmieniu obowiązującym i przyszłym (§ 10
 (`WordingVersions.Assign` → `BaseEntity.Version`): obie kopie mają to samo eId i różny `okres`, a zmiana jest
 jednym zdarzeniem, które zamyka jedną grupę czasową i otwiera drugą ([ADR-0060](adr/0060-jednostka-drukowana-dwa-razy-to-dwie-wersje-rozrozniane-okresem.md)).
 Termin zmiany stoi w jej odnośniku albo — gdy ten nazywa akt zmieniający odesłaniem — przy pełnej nazwie aktu
-w innym odnośniku ([ADR-0062](adr/0062-termin-zmiany-zapisany-przy-akcie-zmieniajacym-obejmuje-jego-zmiany.md)).
+w innym odnośniku ([ADR-0062](adr/0062-termin-zmiany-zapisany-przy-akcie-zmieniajacym-obejmuje-jego-zmiany.md)). Zdarzenie należy do aktu, który zmianę wprowadza:
+jego adres stoi w identyfikatorze zdarzenia i w `zrodlo`, a `podstawa` wymienia przepisy sprawcze
+([ADR-0063](adr/0063-zdarzenie-zmiany-nalezy-do-aktu-ktory-ja-wprowadza.md)).
 
 **Pierwszy nagłówek rodzaju aktu wygrywa.** Załącznik do obwieszczenia o tekście jednolitym zawiera
 własną linię „USTAWA", więc sygnały tytułowe liczone są tylko ze strefy tytułowej (pierwsze bloki),

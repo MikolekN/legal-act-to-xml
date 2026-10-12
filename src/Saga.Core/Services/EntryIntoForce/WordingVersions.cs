@@ -66,6 +66,20 @@ namespace Saga.Core.Services.EntryIntoForce
             @",\s+któr[aey]\s+wesz(?:ła|ło|ły)\s+w\s+życie\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// Akt zmieniający nazwany w pełni — datą i publikatorem: „ustawy z dnia 14 kwietnia 2023 r. o zmianie
+        /// ustawy … (Dz. U. poz. 818)".
+        /// </summary>
+        private static readonly Regex ActNamedInFull = new(
+            @"\b(?:ustawy|rozporządzenia)\b[^()]{0,400}?\bz\s+dnia\s+\d{1,2}\s+\p{L}+\s+\d{4}\s*r\.[^()]{0,400}?\((?:Dz\.\s*U\.|M\.\s?P\.)[^()]*\)",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>Przepis aktu zmieniającego: to, co stoi między „przez" a nazwą aktu („art. 2 pkt 1 lit. c").</summary>
+        private static readonly Regex ChangingProvision = new(
+            @"\bprzez\s+(?<provision>[^;()]+?)\s+(?:ustawy|rozporządzenia)\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        private static readonly Regex Whitespace = new(@"\s+", RegexOptions.Compiled);
+
+        /// <summary>
         /// Termin wejścia w życie: dzień albo — gdy odnośnik dnia nie podaje — proza, może pusta; i odnośnik,
         /// w którym go zapisano.
         /// </summary>
@@ -86,6 +100,9 @@ namespace Saga.Core.Services.EntryIntoForce
 
             /// <summary>Oznaczenie odnośnika, w którym nazwano akt zmieniający.</summary>
             internal string? ActFootnote { get; init; }
+
+            /// <summary>Akt zmieniający w zapisie adresu publikacyjnego; null, gdy nie nazwano go publikatorem.</summary>
+            internal string? Act { get; init; }
             internal required bool Repealed { get; init; }
             internal WordingVersion? Version { get; set; }
         }
@@ -156,18 +173,24 @@ namespace Saga.Core.Services.EntryIntoForce
 
                         footnote ??= resolver.Repeated(number.Groups["no"].Value);
                         var note = footnote is null ? string.Empty : string.Join(" ", footnote.Paragraphs);
+                        var elsewhere = ActNamedElsewhere.Match(note);
                         var act = footnote is not null
-                            && ActNamedElsewhere.Match(note) is { Success: true } elsewhere
+                            && elsewhere.Success
                             && printed.TryGetValue((footnote.Run, elsewhere.Groups["no"].Value), out var named)
                             && named != footnote
                                 ? named
                                 : null;
+                        var actNote = act is null ? null : string.Join(" ", act.Paragraphs);
                         marked[unit] = Describe(new Marked
                         {
                             Footnote = footnote?.Symbol ?? number.Groups["no"].Value,
                             Note = note,
-                            ActNote = act is null ? null : string.Join(" ", act.Paragraphs),
+                            ActNote = actNote,
                             ActFootnote = act?.Symbol,
+
+                            // Akt nazwany odesłaniem czyta się tam, dokąd odesłanie prowadzi — nigdy z innych
+                            // publikatorów tego samego odnośnika.
+                            Act = elsewhere.Success ? ActNamedIn(actNote) : ActNamedIn(note),
                             Repealed = leading.Groups["repealed"].Success,
                         });
                     }
@@ -204,6 +227,8 @@ namespace Saga.Core.Services.EntryIntoForce
                     current.ChangeDate = change.ChangeDate;
                     current.ChangeTerm = change.ChangeTerm;
                     current.TermFootnote = change.TermFootnote;
+                    current.ChangeAct = change.ChangeAct;
+                    current.ChangeProvision = change.ChangeProvision;
                     current.ChangeRepeals = change.ChangeRepeals;
                 }
             }
@@ -243,8 +268,18 @@ namespace Saga.Core.Services.EntryIntoForce
                 ChangeDate = term?.Day,
                 ChangeTerm = term?.Day is null && term?.Prose is { Length: > 0 } prose ? prose : null,
                 TermFootnote = term?.Footnote ?? string.Empty,
+                ChangeAct = own.Act,
+                ChangeProvision = ChangingProvision.Match(own.Note) is { Success: true } named
+                    ? Whitespace.Replace(named.Groups["provision"].Value, " ").Trim()
+                    : null,
             };
         }
+
+        /// <summary>Adres publikacyjny aktu nazwanego w odnośniku datą i publikatorem; null, gdy takiego nie ma.</summary>
+        private static string? ActNamedIn(string? note) =>
+            note is not null && ActNamedInFull.Match(note) is { Success: true } named
+                ? JournalReferenceService.ReadFirstAct(named.Value)?.GetELIStrings().FirstOrDefault()
+                : null;
 
         /// <summary>
         /// Termin, w którym zmiana wejdzie w życie; null, gdy odnośnik o przyszłym wejściu w życie nie mówi.

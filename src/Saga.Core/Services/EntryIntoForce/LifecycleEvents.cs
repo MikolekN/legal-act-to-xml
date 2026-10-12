@@ -45,6 +45,15 @@ namespace Saga.Core.Services.EntryIntoForce
         /// <summary>Numer odnośnika tekstu jednolitego, z którego zdarzenie odczytano; null dla zdarzeń z klauzuli.</summary>
         internal string? EvidenceFootnote { get; init; }
 
+        /// <summary>Akt, który zdarzenie sprawia, gdy jest nim inny akt niż ten dokument („DU/2023/818").</summary>
+        internal string? CausingAct { get; init; }
+
+        /// <summary>
+        /// Przepisy aktu zmieniającego, które zdarzenie sprawiają, tak jak nazywają je odnośniki
+        /// („art. 2 pkt 1 lit. a; art. 2 pkt 1 lit. c").
+        /// </summary>
+        internal string? CausingProvision { get; init; }
+
         /// <summary>Jednostki objęte zdarzeniem na mocy wyjątku.</summary>
         internal List<ScopedUnitReference> Targets { get; } = [];
 
@@ -98,14 +107,19 @@ namespace Saga.Core.Services.EntryIntoForce
                 }
 
                 // Zmiany, na które czekają jednostki drukowane w dwóch wersjach (ADR-0060) — w kolejności
-                // dokumentu, więc dowodem zdarzenia z kilku odnośników jest pierwszy z nich.
+                // dokumentu, więc dowodem zdarzenia z kilku odnośników jest pierwszy z nich. Zdarzenie zbiera
+                // zwykle kilka przepisów aktu zmieniającego; podstawą są wszystkie, w kolejności dokumentu (ADR-0063).
                 consolidated.AddRange(document.Articles
                     .SelectMany(article => EditorialUnitWalker.SelfAndDescendants(article, includeAmendmentContent: false))
                     .Select(unit => unit.Version)
                     .OfType<WordingVersion>()
                     .Where(version => version.ChangeFootnote.Length > 0)
-                    .Select(version => ChangeEvent(version, journal))
-                    .DistinctBy(change => change.Id)
+                    .Distinct()
+                    .GroupBy(version => ChangeEvent(version, journal, provision: null).Id)
+                    .Select(changes => ChangeEvent(
+                        changes.First(),
+                        journal,
+                        string.Join("; ", changes.Select(version => version.ChangeProvision).OfType<string>().Distinct())))
                     .OrderBy(change => change.Undated).ThenBy(change => change.Date));
                 return consolidated;
             }
@@ -173,15 +187,14 @@ namespace Saga.Core.Services.EntryIntoForce
         }
 
         /// <summary>
-        /// Zmiana jednostki tekstu jednolitego: jej wejście w życie albo — gdy jednostkę uchyla — uchylenie. Zmiany
-        /// tego samego rodzaju i dnia to jedno zdarzenie; zmiana bez dnia ma w miejscu daty rozróżnik — numer
-        /// odnośnika, który ją opisuje.
+        /// Zmiana jednostki tekstu jednolitego: jej wejście w życie albo — gdy jednostkę uchyla — uchylenie.
+        /// Zdarzenie należy do aktu, który zmianę wprowadza (ADR-0063): zmiany tego samego rodzaju, dnia i aktu to
+        /// jedno zdarzenie; zmiana bez dnia ma w miejscu daty rozróżnik — numer odnośnika, w którym stoi jej termin.
+        /// Gdy aktu zmieniającego nie nazwano publikatorem, w polu aktu zostaje dokument, w którym zdarzenie odczytano.
         /// </summary>
-        private static LifecycleEvent ChangeEvent(WordingVersion version, string? journal)
+        private static LifecycleEvent ChangeEvent(WordingVersion version, string? journal, string? provision)
         {
-            // Zdarzenie odczytano tam, gdzie stoi jego termin — także wtedy, gdy to odnośnik nazywający akt
-            // zmieniający, a nie odnośnik samej zmiany. Zmiany o wspólnym terminie bez dnia są jednym zdarzeniem.
-            var evidence = version.TermFootnote.Length > 0 ? version.TermFootnote : version.ChangeFootnote;
+            var evidence = Evidence(version);
             var kind = version.ChangeRepeals ? LifecycleEventKind.Repeal : LifecycleEventKind.EntryIntoForce;
             var stamp = version.ChangeDate is { } day
                 ? day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)
@@ -189,15 +202,24 @@ namespace Saga.Core.Services.EntryIntoForce
 
             return new LifecycleEvent
             {
-                Id = EventId(kind, stamp, journal, fromFormula: false),
+                Id = EventId(kind, stamp, version.ChangeAct?.Replace('/', '-') ?? journal, fromFormula: false),
                 Kind = kind,
                 Date = version.ChangeDate ?? default,
                 Undated = version.ChangeDate is null,
                 FromFormula = false,
                 Condition = version.ChangeDate is null ? version.ChangeTerm : null,
                 EvidenceFootnote = evidence,
+                CausingAct = version.ChangeAct,
+                CausingProvision = provision,
             };
         }
+
+        /// <summary>
+        /// Odnośnik, z którego zdarzenie odczytano: ten, w którym stoi jego termin — także wtedy, gdy to odnośnik
+        /// nazywający akt zmieniający, a nie odnośnik samej zmiany.
+        /// </summary>
+        private static string Evidence(WordingVersion version) =>
+            version.TermFootnote.Length > 0 ? version.TermFootnote : version.ChangeFootnote;
 
         /// <summary>
         /// Grupa czasowa wersji jednostki tekstu jednolitego: przyszła obowiązuje OD zdarzenia zmiany, obowiązująca
@@ -208,7 +230,7 @@ namespace Saga.Core.Services.EntryIntoForce
             if (version.ChangeFootnote.Length == 0)
                 return null;
 
-            var change = ChangeEvent(version, JournalKey(document.SourceJournal)).Id;
+            var change = ChangeEvent(version, JournalKey(document.SourceJournal), provision: null).Id;
             return version.Kind == WordingVersionKind.Future
                 ? new TimeGroup($"okr_obowiazywanie.{change}.x", change, null)
                 : new TimeGroup($"okr_obowiazywanie.x.{change}", null, null) { UntilEventId = change };

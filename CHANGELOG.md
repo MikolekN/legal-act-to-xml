@@ -694,6 +694,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   Jednostka dodana takim aktem jest rozpoznawana jako brzmienie przyszłe, a zmiany jednego aktu czekają na jedno
   zdarzenie. Model: `WordingVersion.TermFootnote`.
   - W korpusie zmienia się 35 tekstów jednolitych. Zdarzeń zmiany bez dnia i bez terminu zostaje 7 (było 123), z dniem jest 149 (było 140), a wszystkich 255 (było 362) — zmiany jednego aktu czekają na jedno zdarzenie. Okres wersji niesie 3218 jednostek (było 2904): doszły jednostki dodane albo zmienione aktem, którego termin stoi w innym odnośniku; dzień wejścia w życie ma 1867 jednostek przyszłych (było 1366), `obowiazuje-do` — 738 (było 514). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory); treść bez zmian.
+- **Akt, który wprowadza zmianę** ([ADR-0063](docs/adr/0063-zdarzenie-zmiany-nalezy-do-aktu-ktory-ja-wprowadza.md)): zdarzenie zmiany w tekście jednolitym
+  nazywa akt zmieniający — w identyfikatorze (`zdarz_uchylenie_2026-04-18_DU-2015-1634_odczytane`, jak w dokumentacji
+  schematu) i w `zrodlo` — oraz przepisy sprawcze w `podstawa`. Akt czyta się z odnośnika, który nazywa go datą
+  i publikatorem, także przez odesłanie „ustawy, o której mowa w odnośniku …". Model: `WordingVersion.ChangeAct`,
+  `WordingVersion.ChangeProvision`.
+  - W korpusie zmienia się 107 tekstów jednolitych — identyfikatory zdarzeń i grup oraz `okres` jednostek. Z 268 zdarzeń zmiany 238 nazywa akt sprawczy (`zrodlo`), a 30 zostaje przy dokumencie; `podstawa` ma 254 zdarzenia (160 — jeden przepis, 71 — od dwóch do pięciu, 23 — więcej, najwięcej 50). Zdarzeń jest o 13 więcej niż przedtem (255): zmiany dwóch aktów tego samego dnia to dwa zdarzenia. Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory); treść bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

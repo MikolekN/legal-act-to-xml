@@ -1837,7 +1837,7 @@ namespace Saga.Core.Tests
             // To samo eId, różny okres — a koniec jednego i początek drugiego to to samo zdarzenie.
             var exported = LegalDocumentConverter.Convert(document).Descendants().Where(e => e.Name.LocalName == "ustep").ToList();
             Assert.Single(exported.Select(e => e.Attribute("eId")!.Value).Distinct());
-            const string change = "zdarz_wejscie_2026-01-01_DU-2025-1094_odczytane";
+            const string change = "zdarz_wejscie_2026-01-01_DU-2025-680_odczytane";
             Assert.Equal(
                 new[] { $"okr_obowiazywanie.x.{change}", $"okr_obowiazywanie.{change}.x" },
                 exported.Select(e => e.Attribute("okres")?.Value));
@@ -1916,6 +1916,47 @@ namespace Saga.Core.Tests
             Assert.Equal("1", VersionOf("3")?.TermFootnote);
             Assert.Equal(new DateTime(2027, 1, 1), VersionOf("4")?.ChangeDate);
             Assert.Null(VersionOf("5"));
+        }
+
+        // ============================================================
+        // ADR-0063: zdarzenie zmiany należy do aktu, który ją wprowadza
+        // ============================================================
+
+        [Fact]
+        public void Adr0063_ChangeEvent_BelongsToTheActThatMakesTheChange()
+        {
+            DocumentBlock Line(string text, params BlockFootnote[] footnotes) => new() { Text = text, Footnotes = footnotes };
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 11 sierpnia 2025 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 1094", Role = BlockRole.JournalHeader },
+                Line("Obwieszczenie"),
+                Line("Marszałka Sejmu Rzeczypospolitej Polskiej"),
+                Line("z dnia 6 sierpnia 2025 r."),
+                Line("w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych"),
+                Line("1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych (Dz. U. z 2024 r. poz. 1100)."),
+                Line("Marszałek Sejmu: S. Hołownia"),
+                Line("Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)"),
+                Line("USTAWA"),
+                Line("z dnia 11 sierpnia 2001 r."),
+                Line("o odbudowie obiektów budowlanych"),
+                Line("Art. 1. Ustawa reguluje zasady odbudowy."),
+                Line("Art. 2.[1)] Odbudowę zabytku prowadzi się z urzędu.",
+                    new BlockFootnote("1", ["Dodany przez art. 5 pkt 1 ustawy z dnia 14 kwietnia 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 818), która wejdzie w życie z dniem 15 lutego 2026 r."])),
+                Line("Art. 3.[2)] Odbudowę pomnika prowadzi wojewoda.",
+                    new BlockFootnote("2", ["Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1."])),
+                Line("Art. 4. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var change = Assert.Single(LegalDocumentConverter.Convert(document).Descendants(),
+                e => e.Name.LocalName == "Zdarzenie" && e.Attribute("rodzaj")!.Value == "wejscie-w-zycie");
+
+            // W polu aktu stoi ustawa zmieniająca (Dz. U. z 2025 r. poz. 818), nie tekst jednolity (poz. 1094).
+            Assert.Equal("zdarz_wejscie_2026-02-15_DU-2025-818_odczytane", change.Attribute("id")!.Value);
+            Assert.EndsWith("/eli/DU/2025/818", change.Attribute("zrodlo")!.Value);
+            Assert.Equal("art. 5 pkt 1; art. 5 pkt 2", change.Attribute("podstawa")!.Value);
         }
 
         // ============================================================

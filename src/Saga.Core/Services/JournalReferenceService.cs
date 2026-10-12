@@ -61,6 +61,33 @@ namespace Saga.Core.Services
         }
 
         /// <summary>
+        /// Akt nazwany w tekście jako pierwszy: dziennik, rocznik i pierwsza wypisana pozycja. Dalsze pozycje
+        /// („(Dz. U. poz. 2320, z 2021 r. poz. 72 i 802)") to zmiany tego aktu, nie jego miejsce ogłoszenia.
+        /// Null, gdy tekst nie podaje publikatora albo nie da się ustalić rocznika.
+        /// </summary>
+        internal static JournalInfo? ReadFirstAct(string text)
+        {
+            if (JournalRegex.Match(text) is not { Success: true } journal
+                || FirstNumber.Match(journal.Groups["positions"].Value) is not { Success: true } position)
+            {
+                return null;
+            }
+
+            int? written = journal.Groups["year"].Success ? int.Parse(journal.Groups["year"].Value) : null;
+            return (written ?? YearOfActDateBefore(text, journal.Index)) is { } year
+                ? new JournalInfo
+                {
+                    Publisher = journal.Groups["monitor"].Success ? PublisherType.MonitorPolski : PublisherType.DziennikUstaw,
+                    Year = year,
+                    Positions = [int.Parse(position.Value)],
+                    SourceString = journal.Groups["source"].Value,
+                }
+                : null;
+        }
+
+        private static readonly Regex FirstNumber = new(@"\d+", RegexOptions.Compiled);
+
+        /// <summary>
         /// Publikatory (Dz. U., M.P.) wymienione w tekście, z pozycjami scalonymi w obrębie dziennika i rocznika.
         /// </summary>
         internal static List<JournalInfo> ReadJournals(string text)

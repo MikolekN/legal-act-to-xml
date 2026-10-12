@@ -1,6 +1,6 @@
 # ADR-0060: Jednostka drukowana w tekście jednolitym dwa razy to dwie wersje czasowe — to samo eId, różny okres
 
-- Status: Accepted (dzień zmiany nazwany przy akcie zmieniającym, w innym odnośniku, jest już czytany — [ADR-0062](0062-termin-zmiany-zapisany-przy-akcie-zmieniajacym-obejmuje-jego-zmiany.md))
+- Status: Accepted (dzień zmiany nazwany przy akcie zmieniającym, w innym odnośniku, jest już czytany — [ADR-0062](0062-termin-zmiany-zapisany-przy-akcie-zmieniajacym-obejmuje-jego-zmiany.md); pole aktu w identyfikatorze zdarzenia niesie akt zmieniający — [ADR-0063](0063-zdarzenie-zmiany-nalezy-do-aktu-ktory-ja-wprowadza.md))
 - Data: 2026-10-12
 
 ## Kontekst

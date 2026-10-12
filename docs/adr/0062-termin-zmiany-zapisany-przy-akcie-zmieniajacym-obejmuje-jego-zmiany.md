@@ -1,6 +1,6 @@
 # ADR-0062: Termin zmiany zapisany przy akcie zmieniającym obejmuje zmiany, które nazywają ten akt odesłaniem
 
-- Status: Accepted
+- Status: Accepted (akt zmieniający i przepis sprawczy są już eksportowane — [ADR-0063](0063-zdarzenie-zmiany-nalezy-do-aktu-ktory-ja-wprowadza.md))
 - Data: 2026-10-12
 
 ## Kontekst

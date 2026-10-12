@@ -46,6 +46,18 @@ namespace Saga.Model
         public string TermFootnote { get; set; } = string.Empty;
 
         /// <summary>
+        /// Akt, który zmianę wprowadza, w zapisie adresu publikacyjnego („DU/2023/818"). Null, gdy odnośnik aktu
+        /// nie nazywa publikatorem — ani sam, ani przez odnośnik, do którego odsyła.
+        /// </summary>
+        public string? ChangeAct { get; set; }
+
+        /// <summary>
+        /// Przepis aktu zmieniającego, który zmianę wprowadza — tak, jak nazywa go odnośnik zmiany
+        /// („art. 2 pkt 1 lit. c"). Tekst, nie adres.
+        /// </summary>
+        public string? ChangeProvision { get; set; }
+
+        /// <summary>
         /// Czy zmiana uchyla jednostkę: wersją przyszłą jest wtedy „(uchylony)", a obowiązująca kończy się
         /// uchyleniem.
         /// </summary>

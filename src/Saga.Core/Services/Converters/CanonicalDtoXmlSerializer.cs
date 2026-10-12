@@ -425,6 +425,10 @@ namespace Saga.Core.Services.Converters
                     el.Add(new XAttribute("changeTerm", term));
                 if (version.TermFootnote.Length > 0 && version.TermFootnote != version.ChangeFootnote)
                     el.Add(new XAttribute("termFootnote", version.TermFootnote));
+                if (version.ChangeAct is { } act)
+                    el.Add(new XAttribute("changeAct", act));
+                if (version.ChangeProvision is { } provision)
+                    el.Add(new XAttribute("changeProvision", provision));
                 if (version.ChangeRepeals)
                     el.Add(new XAttribute("changeRepeals", true));
             }

@@ -157,10 +157,14 @@ namespace Saga.Core.Services.Converters
             if (lifecycleEvent.Condition is { Length: > 0 } condition)
                 element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Condition, condition));
 
-            // Zdarzenie odczytane z odnośnika tekstu jednolitego: dowodem jest ten odnośnik. Przepis sprawczy
-            // i akt, który zmianę wprowadza, leżą w grafie odnośników — poza tym odczytem.
+            // Zdarzenie odczytane z odnośników tekstu jednolitego: dowodem jest odnośnik, w którym stoi jego
+            // termin, podstawą — przepisy, które zmianę wprowadzają, a źródłem — akt, do którego należą (ADR-0063).
             if (lifecycleEvent.EvidenceFootnote is { } footnote)
             {
+                if (lifecycleEvent.CausingProvision is { Length: > 0 } provision)
+                    element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Basis, provision));
+                if (lifecycleEvent.CausingAct is { } act)
+                    element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Source, XmlConverterConstants.ELIUrl + "eli/" + act));
                 element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Evidence,
                     $"{StructuralReference.FootnotePrefix}_{footnote}"));
                 return element;
