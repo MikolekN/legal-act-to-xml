@@ -82,7 +82,11 @@ namespace Saga.Core.Services.Converters
                 for (var i = 0; i < commands.Count; i++)
                 {
                     if (i == 0)
+                    {
                         AddPlainTextContent(amendment, commands[i], sentence, blocks);
+                        AddQuotedFootnote(amendment, commands[i], sentence, blocks);
+                    }
+
                     AddStructuredContentItems(amendment, commands[i], paired[i], sentence, blocks);
                     if (i == 0)
                         AddTables(amendment, commands[i], sentence, blocks);
@@ -308,6 +312,37 @@ namespace Saga.Core.Services.Converters
             }
 
             zdanie.AddFirst(instructions);
+        }
+
+        /// <summary>
+        /// Odnośnik będący treścią nowelizacji: cytat strukturalny z <c>odnosnik-cyt</c> pod adresem <c>odn_N</c>.
+        /// Znacznik stoi w treści indeksem górnym — schemat nie wydziela numeru cytowanego odnośnika (ADR-0059).
+        /// </summary>
+        private static void AddQuotedFootnote(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks)
+        {
+            if (amendment.Content?.Footnote is not { } footnote)
+                return;
+
+            var paragraph = Element(XmlConverterConstants.Contents.TextSection);
+            var order = 0;
+            foreach (var text in footnote.Paragraphs.SelectMany(ParsingFactories.SplitIntoSentences))
+                paragraph.Add(SentenceContext.ToXml(text: text.Text, number: ++order));
+            if (!paragraph.HasElements)
+                paragraph.Add(SentenceContext.ToXml(text: string.Empty));
+
+            paragraph.Elements().First().AddFirst(
+                Element(XmlConverterConstants.Contents.Superscript, footnote.Symbol + ")"), new XText(" "));
+
+            var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
+            ApplyAttributes(citation, amendment, command, isStructural: true);
+            citation.Add(Element(XmlConverterConstants.Contents.Odnosnik.QuotedElement,
+                new XAttribute(XmlConverterConstants.Contents.eId, EIdSegment.Of(StructuralReference.FootnotePrefix, footnote.Symbol)),
+                new XAttribute(XmlConverterConstants.Contents.GUID, footnote.Guid.ToString()),
+                paragraph));
+
+            if (sentence is XElement zdanie)
+                zdanie.Add(citation);
+            blocks.Add(citation);
         }
 
         private static void AddPlainTextContent(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks)

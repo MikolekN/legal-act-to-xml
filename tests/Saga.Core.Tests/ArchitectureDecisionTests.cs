@@ -1769,6 +1769,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0059: odnośnik jako przedmiot komendy jest cytowanym odnośnikiem
+        // ============================================================
+
+        [Fact]
+        public void Adr0059_FootnoteNamedByTheCommand_IsAQuotedFootnote()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) odnośnik nr 1 do tytułu ustawy otrzymuje brzmienie:",
+                "„1) Niniejsza ustawa:",
+                "1) wdraża dyrektywę 2022/2555;",
+                "2) służy stosowaniu rozporządzenia 2024/1366.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Treść zaczyna się jak punkt i ma wyliczenie, ale jest odnośnikiem — tak mówi komenda.
+            var content = document.Articles.First().Paragraphs.Single().Amendment!.Content!;
+            Assert.Equal(3, content.Footnote?.Paragraphs.Count);
+            Assert.Empty(content.Points);
+
+            var citation = Assert.Single(LegalDocumentConverter.Convert(document).Descendants(), e => e.Name.LocalName == "cytat-strukt");
+            Assert.Equal("DU/2021/200__odn_1", citation.Attribute("element-eId")?.Value);
+            Assert.Equal("odnosnik-cyt", citation.Elements().Single().Name.LocalName);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

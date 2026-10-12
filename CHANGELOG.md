@@ -669,6 +669,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   `now:dodaj-po`, każda z adresem załącznika aktu zmienianego i zmieniającego. Przedtem przepis nie dawał żadnej
   nowelizacji. Model: `Amendment.AnnexInstructions`.
   - W korpusie przybywa 86 instrukcji `now:zastap` (55 plików) i 20 `now:dodaj-po` (18 plików) — 91 zdań; poza tym eksport się nie zmienia, zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory). W przykładzie autorów schematu DU/2026/252 wszystkie trzy instrukcje załączników są takie same jak nasze, atrybut w atrybut; komendy zgodne z tym przykładem: 336 z 345.
+- **Cytowany odnośnik** ([ADR-0059](docs/adr/0059-odnosnik-jako-przedmiot-komendy-jest-cytowanym-odnosnikiem.md)): „odnośnik nr 1 do tytułu ustawy otrzymuje
+  brzmienie:" i „dodaje się odnośnik nr 2 w brzmieniu:" dają cytat strukturalny z `odnosnik-cyt` pod adresem `odn_N`
+  — jak w przykładach autorów schematu. Treść odnośnika nie jest już budowana jako punkty (zaczyna się znacznikiem
+  „1)") ani eksportowana jako tekst bez adresu. Model: `AmendmentContent.Footnote`, `StructuralReference.Footnote`.
+  - W korpusie 40 cytowanych odnośników w 28 plikach wychodzi jako `odnosnik-cyt`: 27 było tekstem cytowanym bez adresu, 13 — jednostkami (znika 17 błędnych punktów i liter aktu zmienianego). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory), pokrycie tekstu bez zmian. W przykładzie autorów schematu DU/2026/252 oba cytowane odnośniki są takie same jak nasze; komendy zgodne: 338 z 345, a pozostałe 7 wymaga wiedzy spoza aktu zmieniającego.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

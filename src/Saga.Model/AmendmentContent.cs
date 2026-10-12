@@ -66,6 +66,12 @@ namespace Saga.Model
         public bool PlainTextIsSentences { get; set; }
 
         /// <summary>
+        /// Odnośnik (przypis) będący treścią nowelizacji — „odnośnik nr 1 do tytułu ustawy otrzymuje brzmienie:".
+        /// Jego akapity nie są jednostkami aktu, choć zaczynają się jak punkt („1) Niniejsza ustawa …").
+        /// </summary>
+        public Footnote? Footnote { get; set; }
+
+        /// <summary>
         /// Tabele cytowane wprost — treść nowelizacji, która jest tabelą albo jej wierszami („po lp. 2a dodaje
         /// się lp. 2b w brzmieniu:" i wiersz tabeli). Tabela stojąca w cytowanej jednostce należy do jej dalszej
         /// treści (<see cref="BaseEntity.Continuation"/>), nie tutaj.

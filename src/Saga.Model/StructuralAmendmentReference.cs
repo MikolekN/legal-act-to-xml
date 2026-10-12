@@ -56,6 +56,9 @@ namespace Saga.Model
         public string? Tiret { get; set; }
         public string? Sentence { get; set; }
 
+        /// <summary>Numer odnośnika (przypisu), gdy adres wskazuje odnośnik aktu, a nie jednostkę („odn_1").</summary>
+        public string? Footnote { get; set; }
+
         /// <summary>Ustawia artykuł i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithArticle(string value) =>
             new() { Article = value };
@@ -84,8 +87,11 @@ namespace Saga.Model
         public StructuralReference WithSentence(string value) =>
             new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = value };
 
+        /// <summary>Skrót odnośnika w adresie (<c>odn_1</c>).</summary>
+        public const string FootnotePrefix = "odn";
+
         public StructuralReference Clone() =>
-            new() { Systematizing = Systematizing, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence };
+            new() { Systematizing = Systematizing, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence, Footnote = Footnote };
 
         public override string ToString()
         {
@@ -99,6 +105,7 @@ namespace Saga.Model
             if (Letter != null) parts.Add(EIdSegment.Of("lit", Letter));
             if (Tiret != null) parts.AddRange(TiretSegments(Tiret));
             if (Sentence != null) parts.Add(EIdSegment.Of("zdn", Sentence));
+            if (Footnote != null) parts.Add(EIdSegment.Of(FootnotePrefix, Footnote));
 
             return EIdSegment.Join(parts);
         }

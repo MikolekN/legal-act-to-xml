@@ -16,7 +16,14 @@ namespace Saga.Core.Services.Parsing
         AmendmentCollector Collector,
         ParsingContext Context,
         AmendmentOperationType? ForcedOperationType = null,
-        IReadOnlyList<TextChange>? TextChanges = null);
+        IReadOnlyList<TextChange>? TextChanges = null)
+    {
+        /// <summary>
+        /// Cele ustalone przez wywołującego zamiast odczytanych z adresu jednostek — gdy przedmiotem komendy
+        /// nie jest jednostka (odnośnik). Pusta lista: cel nieznany.
+        /// </summary>
+        public IReadOnlyList<StructuralAmendmentReference>? Targets { get; init; }
+    }
 
     /// <summary>
     /// Serwis finalizujący nowelizację (Faza 3).
@@ -154,7 +161,10 @@ namespace Saga.Core.Services.Parsing
                 amendment.AnnexInstructions.AddRange(pendingAnnexes);
 
             // 3. Połącz z celem nowelizacji (StructuralAmendmentReference)
-            LinkTargets(amendment, collector, context);
+            if (input.Targets is { } givenTargets)
+                amendment.Targets.AddRange(givenTargets);
+            else
+                LinkTargets(amendment, collector, context);
 
             // 3a. Uzupełnij cel z komendy tekstowej — źródło o niższym priorytecie niż mapa stylów;
             //     dokłada tylko to, czego adres celu nie wskazał (tiret), i ostrzega o fragmencie zdania.
@@ -437,6 +447,7 @@ namespace Saga.Core.Services.Parsing
             }
 
             existing.PlainTextIsSentences |= added.PlainTextIsSentences;
+            existing.Footnote ??= added.Footnote;
             existing.SystematizingUnits.AddRange(added.SystematizingUnits);
             existing.Articles.AddRange(added.Articles);
             existing.Paragraphs.AddRange(added.Paragraphs);
@@ -516,6 +527,7 @@ namespace Saga.Core.Services.Parsing
                 && content.Tirets.Count == 0
                 && content.CommonParts.Count == 0
                 && content.Tables.Count == 0
+                && content.Footnote is null
                 && string.IsNullOrEmpty(content.PlainText);
         }
     }

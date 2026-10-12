@@ -413,6 +413,9 @@ namespace Saga.Core.Services.Converters
             {
                 internal const string Element = "odnosnik";
                 internal const string ReferenceElement = "odsylacz-do-odnosnika";
+
+                /// <summary>Odnośnik cytowany w nowelizacji.</summary>
+                internal const string QuotedElement = "odnosnik-cyt";
                 internal const string IdAttribute = "id-odnosnika";
                 internal const string SymbolAttribute = "symbol";
             }

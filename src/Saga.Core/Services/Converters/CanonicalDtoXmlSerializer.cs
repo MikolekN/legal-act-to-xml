@@ -342,6 +342,12 @@ namespace Saga.Core.Services.Converters
                     content.PlainText));
             }
 
+            if (content.Footnote is { } footnote)
+            {
+                el.Add(new XElement("footnote", new XAttribute("symbol", footnote.Symbol),
+                    footnote.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph))));
+            }
+
             foreach (var unit in content.SystematizingUnits)
                 el.Add(unit switch
                 {

@@ -116,6 +116,9 @@ namespace Saga.Core.Tests
             if (amendment.Content == null)
                 return;
 
+            if (amendment.Content.Footnote is { } footnote)
+                sb.AppendLine($"{indent}  footnote {footnote.Symbol} | {string.Join(" ¶ ", footnote.Paragraphs)}");
+
             if (!string.IsNullOrEmpty(amendment.Content.PlainText))
                 sb.AppendLine($"{indent}  plaintext | {amendment.Content.PlainText}");
 

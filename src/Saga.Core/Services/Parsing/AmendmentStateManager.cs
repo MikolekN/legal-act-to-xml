@@ -211,17 +211,29 @@ namespace Saga.Core.Services.Parsing
                 AmendmentOperationType.Modification,
                 context.SectionIsBasicUnit);
 
-            var content = _amendmentBuilder.Build(buildInput);
+            // Odnośnik jako przedmiot komendy: jego treść nie przechodzi przez rozpoznawanie jednostek (ADR-0059).
+            var footnote = QuotedFootnoteReader.Read(collector.Owner?.ContentText);
+            var quoteAtTheMarker = false;
+            var content = footnote is null
+                ? _amendmentBuilder.Build(buildInput)
+                : new AmendmentContent
+                {
+                    ObjectType = AmendmentObjectType.None,
+                    Footnote = QuotedFootnoteReader.Build(footnote, collector.Paragraphs, out quoteAtTheMarker),
+                };
 
             // Faza 3: finalizacja — detekcja operacji, linkowanie celów/JournalInfo,
             // przypisanie do właściciela, walidacja
-            var finalizerInput = new AmendmentFinalizerInput(content, collector, context);
+            var finalizerInput = new AmendmentFinalizerInput(content, collector, context)
+            {
+                Targets = footnote is null ? null : QuotedFootnoteReader.Target(footnote, collector.Owner?.ContentText) is { } target ? [target] : [],
+            };
             var amendment = _amendmentFinalizer.Finalize(finalizerInput);
 
             if (amendment != null)
             {
                 amendment.TrailingPunctuation = quotes.Punctuation;
-                amendment.HasOpeningQuote = quotes.HasOpening;
+                amendment.HasOpeningQuote = quotes.HasOpening || quoteAtTheMarker;
                 amendment.HasClosingQuote = quotes.HasClosing;
             }
 
