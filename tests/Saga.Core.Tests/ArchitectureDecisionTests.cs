@@ -1876,6 +1876,49 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0062: termin zmiany zapisany przy akcie zmieniającym
+        // ============================================================
+
+        [Fact]
+        public void Adr0062_ChangeNamingItsActElsewhere_TakesTheTermOfThatAct()
+        {
+            DocumentBlock Line(string text, params BlockFootnote[] footnotes) => new() { Text = text, Footnotes = footnotes };
+            var blocks = new List<DocumentBlock>
+            {
+                Line("Obwieszczenie"),
+                Line("Marszałka Sejmu Rzeczypospolitej Polskiej"),
+                Line("z dnia 6 sierpnia 2025 r."),
+                Line("w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych"),
+                Line("1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych (Dz. U. z 2024 r. poz. 1100)."),
+                Line("Marszałek Sejmu: S. Hołownia"),
+                Line("Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)"),
+                Line("USTAWA"),
+                Line("z dnia 11 sierpnia 2001 r."),
+                Line("o odbudowie obiektów budowlanych"),
+                Line("Art. 1. Ustawa reguluje zasady odbudowy."),
+                // Akt nazwany w pełni, z dniem wejścia w życie CAŁEGO aktu …
+                Line("Art. 2.[1)] Odbudowę zabytku prowadzi się z urzędu.",
+                    new BlockFootnote("1", ["Dodany przez art. 5 pkt 1 ustawy z dnia 14 kwietnia 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 818), która wejdzie w życie z dniem 15 lutego 2026 r."])),
+                // … i zmiana, która nazywa go odesłaniem, bez własnego terminu.
+                Line("Art. 3.[2)] Odbudowę pomnika prowadzi wojewoda.",
+                    new BlockFootnote("2", ["Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1."])),
+                // Termin po średniku należy do przepisu, przy którym stoi — nie przechodzi dalej.
+                Line("Art. 4.[3)] Odbudowę mostu prowadzi starosta.",
+                    new BlockFootnote("3", ["Dodany przez art. 1 ustawy z dnia 9 maja 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 680); wejdzie w życie z dniem 1 stycznia 2027 r."])),
+                Line("Art. 5.[4)] Odbudowę drogi prowadzi zarządca.",
+                    new BlockFootnote("4", ["Dodany przez art. 2 ustawy, o której mowa w odnośniku 3."])),
+                Line("Art. 6. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            WordingVersion? VersionOf(string article) => document.Articles.Single(a => a.Number?.Value == article).Version;
+
+            Assert.Equal(new DateTime(2026, 2, 15), VersionOf("3")?.ChangeDate);
+            Assert.Equal("1", VersionOf("3")?.TermFootnote);
+            Assert.Equal(new DateTime(2027, 1, 1), VersionOf("4")?.ChangeDate);
+            Assert.Null(VersionOf("5"));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

@@ -48,12 +48,44 @@ namespace Saga.Core.Services.EntryIntoForce
 
         private static readonly Regex MarkerNumber = new(@"(?<no>\d+)\)", RegexOptions.Compiled);
 
+        /// <summary>
+        /// Akt zmieniający nazwany odesłaniem (§ 106 ZTP): „przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 3".
+        /// </summary>
+        private static readonly Regex ActNamedElsewhere = new(
+            @"\b(?:ustawy|rozporządzenia)\s*,\s+o\s+któr(?:ej|ym)\s+mowa\s+w\s+odnośniku\s+(?<no>\d+)",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Wejście w życie aktu, nie pojedynczego przepisu: „ustawy z dnia … (Dz. U. poz. 818), która wejdzie
+        /// w życie z dniem …". Zdanie po średniku („…; wejdzie w życie …") mówi o przepisie, przy którym stoi.
+        /// </summary>
+        private static readonly Regex ActEntersLater = new(
+            @",\s+któr[aey]\s+wejd(?:zie|ą)\s+w\s+życie\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        private static readonly Regex ActEntered = new(
+            @",\s+któr[aey]\s+wesz(?:ła|ło|ły)\s+w\s+życie\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Termin wejścia w życie: dzień albo — gdy odnośnik dnia nie podaje — proza, może pusta; i odnośnik,
+        /// w którym go zapisano.
+        /// </summary>
+        private sealed record Term(DateTime? Day, string? Prose, string Footnote);
+
         /// <summary>Odnośnik stojący przy jednostce i to, co mówi o jej wersji.</summary>
         private sealed class Marked
         {
             /// <summary>Oznaczenie odnośnika jak w akcie; numer ze znacznika, gdy odnośnika pod nim nie ma.</summary>
             internal required string Footnote { get; init; }
             internal required string Note { get; init; }
+
+            /// <summary>
+            /// Treść odnośnika, w którym nazwano akt zmieniający („ustawy, o której mowa w odnośniku 3"); null, gdy
+            /// odnośnik nazywa akt sam albo wskazanego odnośnika nie ma.
+            /// </summary>
+            internal string? ActNote { get; init; }
+
+            /// <summary>Oznaczenie odnośnika, w którym nazwano akt zmieniający.</summary>
+            internal string? ActFootnote { get; init; }
             internal required bool Repealed { get; init; }
             internal WordingVersion? Version { get; set; }
         }
@@ -75,6 +107,11 @@ namespace Saga.Core.Services.EntryIntoForce
         {
             var resolver = new FootnoteResolver(document.Footnotes);
             var marked = new Dictionary<BaseEntity, Marked>();
+
+            // Odnośnik powołuje inny oznaczeniem drukowanym, a to powtarza się między ciągami numeracji (ADR-0061).
+            var printed = new Dictionary<(int Run, string Symbol), Footnote>();
+            foreach (var footnote in document.Footnotes)
+                printed.TryAdd((footnote.Run, footnote.Symbol), footnote);
             foreach (var article in document.Articles)
                 Walk(article);
             return marked;
@@ -118,10 +155,19 @@ namespace Saga.Core.Services.EntryIntoForce
                             continue;
 
                         footnote ??= resolver.Repeated(number.Groups["no"].Value);
+                        var note = footnote is null ? string.Empty : string.Join(" ", footnote.Paragraphs);
+                        var act = footnote is not null
+                            && ActNamedElsewhere.Match(note) is { Success: true } elsewhere
+                            && printed.TryGetValue((footnote.Run, elsewhere.Groups["no"].Value), out var named)
+                            && named != footnote
+                                ? named
+                                : null;
                         marked[unit] = Describe(new Marked
                         {
                             Footnote = footnote?.Symbol ?? number.Groups["no"].Value,
-                            Note = footnote is null ? string.Empty : string.Join(" ", footnote.Paragraphs),
+                            Note = note,
+                            ActNote = act is null ? null : string.Join(" ", act.Paragraphs),
+                            ActFootnote = act?.Symbol,
                             Repealed = leading.Groups["repealed"].Success,
                         });
                     }
@@ -157,6 +203,7 @@ namespace Saga.Core.Services.EntryIntoForce
                     current.ChangeFootnote = change.ChangeFootnote;
                     current.ChangeDate = change.ChangeDate;
                     current.ChangeTerm = change.ChangeTerm;
+                    current.TermFootnote = change.TermFootnote;
                     current.ChangeRepeals = change.ChangeRepeals;
                 }
             }
@@ -179,7 +226,7 @@ namespace Saga.Core.Services.EntryIntoForce
         {
             if (CurrentNote.IsMatch(own.Note))
                 own.Version = new WordingVersion { Kind = WordingVersionKind.Current };
-            else if ((ChangeNote.IsMatch(own.Note) || OwnEntryNote.IsMatch(own.Note)) && NotYetInForce.IsMatch(own.Note))
+            else if ((ChangeNote.IsMatch(own.Note) || OwnEntryNote.IsMatch(own.Note)) && TermOf(own) is not null)
                 own.Version = Future(own);
 
             return own;
@@ -187,32 +234,43 @@ namespace Saga.Core.Services.EntryIntoForce
 
         private static WordingVersion Future(Marked own)
         {
-            var version = new WordingVersion
+            var term = TermOf(own);
+            return new WordingVersion
             {
                 Kind = WordingVersionKind.Future,
                 ChangeFootnote = own.Footnote,
                 ChangeRepeals = own.Repealed,
+                ChangeDate = term?.Day,
+                ChangeTerm = term?.Day is null && term?.Prose is { Length: > 0 } prose ? prose : null,
+                TermFootnote = term?.Footnote ?? string.Empty,
             };
+        }
 
-            // Termin stoi w zdaniu za „wejdzie w życie": dzień albo proza, którą przenosimy dosłownie.
-            var sentence = ParsingFactories.SplitIntoSentences(own.Note)
+        /// <summary>
+        /// Termin, w którym zmiana wejdzie w życie; null, gdy odnośnik o przyszłym wejściu w życie nie mówi.
+        /// Odnośnik podaje go sam („…; wejdzie w życie z dniem …") albo zostawia aktowi zmieniającemu, nazwanemu
+        /// w innym odnośniku razem z dniem, w którym cały ten akt wejdzie w życie.
+        /// </summary>
+        private static Term? TermOf(Marked own) =>
+            TermAfter(NotYetInForce, own.Note, own.Footnote)
+            ?? (own is { ActNote: { } act, ActFootnote: { } footnote } && !ActEntered.IsMatch(act) && ActEntersLater.Matches(act).Count == 1
+                ? TermAfter(ActEntersLater, act, footnote)
+                : null);
+
+        /// <summary>Termin stojący w zdaniu za „wejdzie w życie": dzień albo proza przenoszona dosłownie.</summary>
+        private static Term? TermAfter(Regex entersLater, string note, string footnote)
+        {
+            var sentence = ParsingFactories.SplitIntoSentences(note)
                 .Select(part => part.Text)
-                .FirstOrDefault(NotYetInForce.IsMatch);
+                .FirstOrDefault(entersLater.IsMatch);
             if (sentence is null)
-                return version;
+                return null;
 
-            var term = sentence[(NotYetInForce.Match(sentence).Index + NotYetInForce.Match(sentence).Length)..];
-            if (OnDay.Match(term) is { Success: true } day && PolishDates.TryParseLongDate(day.Groups["date"].Value, out var date))
-            {
-                version.ChangeDate = date;
-            }
-            else
-            {
-                var prose = term.Split(';')[0].Trim().TrimEnd('.').Trim();
-                version.ChangeTerm = prose.Length > 0 ? prose : null;
-            }
-
-            return version;
+            var match = entersLater.Match(sentence);
+            var term = sentence[(match.Index + match.Length)..];
+            return OnDay.Match(term) is { Success: true } day && PolishDates.TryParseLongDate(day.Groups["date"].Value, out var date)
+                ? new Term(date, null, footnote)
+                : new Term(null, term.Split(';')[0].Trim().TrimEnd('.').Trim(), footnote);
         }
     }
 }

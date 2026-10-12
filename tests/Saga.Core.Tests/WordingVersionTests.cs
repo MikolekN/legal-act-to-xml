@@ -250,6 +250,122 @@ namespace Saga.Core.Tests
             Assert.Equal(new DateTime(2026, 9, 1), paragraphs[1].Version!.ChangeDate);
         }
 
+        // ============================================================
+        // Termin zmiany zapisany przy akcie zmieniającym, w innym odnośniku
+        // ============================================================
+
+        private const string ActEnteringIn2026 =
+            "Dodany przez art. 5 pkt 1 ustawy z dnia 14 kwietnia 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 818), która wejdzie w życie z dniem 15 lutego 2026 r.";
+
+        [Fact]
+        public void ChangeByAnActNamedInAnotherFootnote_TakesTheDayThatActEntersIntoForce()
+        {
+            // Korpus: 275043_2474596 — odnośnik nazywa akt odesłaniem, a dzień stoi tam, gdzie akt nazwano w pełni.
+            var paragraphs = ParagraphsOf(Parse(
+                Block("Art. 2. 1. Odbudowę prowadzi się na wniosek."),
+                Block("1a.[1)] Odbudowę zabytku prowadzi się z urzędu.", ("1", ActEnteringIn2026)),
+                Block("1b.[2)] Odbudowę pomnika prowadzi wojewoda.", ("2", "Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1."))), "2");
+
+            Assert.Null(paragraphs[0].Version);
+            Assert.All(paragraphs.Skip(1), paragraph =>
+            {
+                Assert.Equal(WordingVersionKind.Future, paragraph.Version!.Kind);
+                Assert.Equal(new DateTime(2026, 2, 15), paragraph.Version.ChangeDate);
+            });
+
+            // Dwie zmiany tego samego dnia to jedno zdarzenie; dowodem jest pierwszy odnośnik.
+            var change = Assert.Single(LegalDocumentConverter.Convert(Parse(
+                Block("Art. 2. 1. Odbudowę prowadzi się na wniosek."),
+                Block("1a.[1)] Odbudowę zabytku prowadzi się z urzędu.", ("1", ActEnteringIn2026)),
+                Block("1b.[2)] Odbudowę pomnika prowadzi wojewoda.", ("2", "Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1.")))).Descendants(),
+                e => e.Name.LocalName == "Zdarzenie" && e.Attribute("rodzaj")!.Value == "wejscie-w-zycie");
+            Assert.Equal("2026-02-15", change.Attribute("data")!.Value);
+            Assert.Equal(Act + "odn_1", change.Attribute("dowod")!.Value);
+        }
+
+        [Fact]
+        public void SecondCopyNamingTheActElsewhere_GetsItsDay()
+        {
+            // Korpus: 299137_2675687, art. 32 ust. 1 pkt 1 — brzmienie przyszłe odsyła po akt, a z nim po dzień.
+            var paragraphs = ParagraphsOf(Parse(
+                Block("Art. 2. 1.[1)] Odbudowę prowadzi się na wniosek.", ("1", "W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2.")),
+                Block("1.[2)] Odbudowę prowadzi się z urzędu.", ("2", "W brzmieniu ustalonym przez art. 5 pkt 3 ustawy, o której mowa w odnośniku 3.")),
+                Block("2.[3)] Wniosek składa się w systemie.", ("3", ActEnteringIn2026))), "2");
+
+            Assert.Equal(new DateTime(2026, 2, 15), paragraphs[1].Version!.ChangeDate);
+            Assert.Equal(new DateTime(2026, 2, 15), paragraphs[0].Version!.ChangeDate);
+        }
+
+        [Fact]
+        public void ActNamedElsewhere_WithATermInProse_GivesTheTermVerbatim()
+        {
+            // Korpus: 315429_2819212 — akt wejdzie w życie w dniu, którego odnośnik nie podaje.
+            var paragraphs = ParagraphsOf(Parse(
+                Block("Art. 2. 1.[1)] Odbudowę prowadzi się na wniosek.", ("1", "Dodany przez art. 21 pkt 1 ustawy z dnia 18 października 2024 r. o udziale w Systemie Wjazdu/Wyjazdu (Dz. U. poz. 1688), która wejdzie w życie z dniem określonym w decyzji Komisji Europejskiej.")),
+                Block("2.[2)] Wniosek składa się w systemie.", ("2", "Dodany przez art. 21 pkt 2 ustawy, o której mowa w odnośniku 1."))), "2");
+
+            Assert.Null(paragraphs[1].Version!.ChangeDate);
+            Assert.Equal("z dniem określonym w decyzji Komisji Europejskiej", paragraphs[1].Version!.ChangeTerm);
+
+            // Termin zapisano raz — przy akcie; obie zmiany czekają na to samo zdarzenie.
+            Assert.Equal("1", paragraphs[1].Version!.TermFootnote);
+            Assert.Equal("2", paragraphs[1].Version!.ChangeFootnote);
+        }
+
+        [Fact]
+        public void ChangesWaitingForTheSameUndatedEntryOfAnAct_ShareOneEvent()
+        {
+            var xml = LegalDocumentConverter.Convert(Parse(
+                Block("Art. 2. 1.[1)] Odbudowę prowadzi się na wniosek.", ("1", "Dodany przez art. 21 pkt 1 ustawy z dnia 18 października 2024 r. o udziale w Systemie Wjazdu/Wyjazdu (Dz. U. poz. 1688), która wejdzie w życie z dniem określonym w decyzji Komisji Europejskiej.")),
+                Block("2.[2)] Wniosek składa się w systemie.", ("2", "Dodany przez art. 21 pkt 2 ustawy, o której mowa w odnośniku 1."))));
+
+            const string undated = "zdarz_wejscie_odn-1_DU-2025-1094_odczytane";
+            var change = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "Zdarzenie" && e.Attribute("rodzaj")!.Value == "wejscie-w-zycie");
+            Assert.Equal(undated, change.Attribute("id")!.Value);
+            Assert.Equal("z dniem określonym w decyzji Komisji Europejskiej", change.Attribute("warunek")!.Value);
+            Assert.Equal(Act + "odn_1", change.Attribute("dowod")!.Value);
+            Assert.All(new[] { "art_2__ust_1", "art_2__ust_2" }, eId =>
+                Assert.Equal($"okr_obowiazywanie.{undated}.x", Assert.Single(Units(xml, eId)).Attribute("okres")?.Value));
+        }
+
+        [Theory]
+        // Akt, który już wszedł w życie, wersji przyszłej nie tworzy.
+        [InlineData("Dodany przez art. 5 pkt 1 ustawy z dnia 14 kwietnia 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 818), która weszła w życie z dniem 15 lipca 2025 r.")]
+        // Zdanie po średniku mówi o przepisie, przy którym stoi odnośnik — nie o całym akcie.
+        [InlineData("Dodany przez art. 5 pkt 1 ustawy z dnia 14 kwietnia 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 818); wejdzie w życie z dniem 15 lutego 2026 r.")]
+        public void ActNamedElsewhere_WithoutItsOwnFutureEntry_DoesNotMakeAVersion(string actNote)
+        {
+            var paragraphs = ParagraphsOf(Parse(
+                Block("Art. 2. 1. Odbudowę prowadzi się na wniosek."),
+                Block("Art. 3.[1)] Odbudowę zabytku prowadzi się z urzędu.", ("1", actNote)),
+                Block("Art. 4.[2)] Odbudowę pomnika prowadzi wojewoda.", ("2", "Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1."))), "4");
+
+            Assert.All(paragraphs, paragraph => Assert.Null(paragraph.Version));
+        }
+
+        [Fact]
+        public void FootnoteNamingTheAct_IsLookedUpInTheSameNumberingRun()
+        {
+            // Odnośnik obwieszczenia ma to samo oznaczenie „1)" co pierwszy odnośnik ogłaszanego aktu (ADR-0061).
+            var document = Parse(consolidated: true,
+                atTheIssuer: new BlockFootnote("1", ["Marszałek ogłasza tekst jednolity ustawy, która wejdzie w życie z dniem 1 stycznia 2030 r."]),
+                [
+                    Block("Art. 2. 1. Odbudowę prowadzi się na wniosek."),
+                    new DocumentBlock
+                    {
+                        Text = "1a.[100001)] Odbudowę zabytku prowadzi się z urzędu.",
+                        Footnotes = [new BlockFootnote("1", [ActEnteringIn2026]) { Marker = "100001", Run = 1 }],
+                    },
+                    new DocumentBlock
+                    {
+                        Text = "1b.[100002)] Odbudowę pomnika prowadzi wojewoda.",
+                        Footnotes = [new BlockFootnote("2", ["Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1."]) { Marker = "100002", Run = 1 }],
+                    },
+                ]);
+
+            Assert.Equal(new DateTime(2026, 2, 15), ParagraphsOf(document, "2")[2].Version!.ChangeDate);
+        }
+
         [Fact]
         public void TermWrittenInProse_IsKeptVerbatim()
         {

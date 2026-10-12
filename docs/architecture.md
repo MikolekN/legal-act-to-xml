@@ -1154,6 +1154,8 @@ w dniu ogłoszenia obwieszczenia, a jednostki drukowane raz nie niosą dat ([ADR
 Jednostka drukowana dwa razy — w brzmieniu obowiązującym i przyszłym (§ 106a ZTP) — dostaje wersję czasową
 (`WordingVersions.Assign` → `BaseEntity.Version`): obie kopie mają to samo eId i różny `okres`, a zmiana jest
 jednym zdarzeniem, które zamyka jedną grupę czasową i otwiera drugą ([ADR-0060](adr/0060-jednostka-drukowana-dwa-razy-to-dwie-wersje-rozrozniane-okresem.md)).
+Termin zmiany stoi w jej odnośniku albo — gdy ten nazywa akt zmieniający odesłaniem — przy pełnej nazwie aktu
+w innym odnośniku ([ADR-0062](adr/0062-termin-zmiany-zapisany-przy-akcie-zmieniajacym-obejmuje-jego-zmiany.md)).
 
 **Pierwszy nagłówek rodzaju aktu wygrywa.** Załącznik do obwieszczenia o tekście jednolitym zawiera
 własną linię „USTAWA", więc sygnały tytułowe liczone są tylko ze strefy tytułowej (pierwsze bloki),

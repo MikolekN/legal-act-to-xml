@@ -39,6 +39,13 @@ namespace Saga.Model
         public string? ChangeTerm { get; set; }
 
         /// <summary>
+        /// Numer odnośnika, w którym zapisano termin wejścia w życie zmiany. Zwykle to <see cref="ChangeFootnote"/>;
+        /// inny, gdy odnośnik zmiany nazywa akt zmieniający odesłaniem („ustawy, o której mowa w odnośniku 3"),
+        /// a termin stoi tam, gdzie akt nazwano w pełni. Pusty, gdy terminu nie podano.
+        /// </summary>
+        public string TermFootnote { get; set; } = string.Empty;
+
+        /// <summary>
         /// Czy zmiana uchyla jednostkę: wersją przyszłą jest wtedy „(uchylony)", a obowiązująca kończy się
         /// uchyleniem.
         /// </summary>

@@ -688,6 +688,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   drukowanym) wskazuje odnośnik swojej sekcji, a znacznik wpisany tekstem nie przejmuje odnośnika dalszej sekcji.
   Model: `Footnote.Marker`, `Footnote.Run`; wspólne rozstrzyganie znacznika: `FootnoteResolver`.
   - W korpusie zmienia się 225 z 2321 dokumentów — te, w których odnośniki stoją w więcej niż jednej sekcji: 3284 odnośniki w 223 plikach dostają oznaczenie jak w akcie. 115 odsyłaczy, które wskazywały odnośnik innej sekcji albo odnośnik przejęty przez znacznik wpisany tekstem (przytoczony odnośnik aktu zmieniającego, objaśnienie pod tabelą), wychodzi indeksem górnym, 9 powtórzonych znaczników zyskuje odsyłacz, a przejęte odnośniki wracają na swoje miejsce (2 dotąd nieosadzone). Wersje czasowe ([ADR-0060](docs/adr/0060-jednostka-drukowana-dwa-razy-to-dwie-wersje-rozrozniane-okresem.md)): okres rozróżnia 479 z 591 jednostek o powtórzonym eId (było 477), `obowiazuje-do` niesie 514 jednostek (było 501). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory), pokrycie tekstu bez zmian.
+- **Termin zmiany zapisany przy akcie zmieniającym** ([ADR-0062](docs/adr/0062-termin-zmiany-zapisany-przy-akcie-zmieniajacym-obejmuje-jego-zmiany.md)): odnośnik tekstu
+  jednolitego, który nazywa akt odesłaniem („Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 3"),
+  bierze termin tego aktu z odnośnika, w którym akt nazwano w pełni („…, która wejdzie w życie z dniem …").
+  Jednostka dodana takim aktem jest rozpoznawana jako brzmienie przyszłe, a zmiany jednego aktu czekają na jedno
+  zdarzenie. Model: `WordingVersion.TermFootnote`.
+  - W korpusie zmienia się 35 tekstów jednolitych. Zdarzeń zmiany bez dnia i bez terminu zostaje 7 (było 123), z dniem jest 149 (było 140), a wszystkich 255 (było 362) — zmiany jednego aktu czekają na jedno zdarzenie. Okres wersji niesie 3218 jednostek (było 2904): doszły jednostki dodane albo zmienione aktem, którego termin stoi w innym odnośniku; dzień wejścia w życie ma 1867 jednostek przyszłych (było 1366), `obowiazuje-do` — 738 (było 514). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory); treść bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

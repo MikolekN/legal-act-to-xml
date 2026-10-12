@@ -179,10 +179,13 @@ namespace Saga.Core.Services.EntryIntoForce
         /// </summary>
         private static LifecycleEvent ChangeEvent(WordingVersion version, string? journal)
         {
+            // Zdarzenie odczytano tam, gdzie stoi jego termin — także wtedy, gdy to odnośnik nazywający akt
+            // zmieniający, a nie odnośnik samej zmiany. Zmiany o wspólnym terminie bez dnia są jednym zdarzeniem.
+            var evidence = version.TermFootnote.Length > 0 ? version.TermFootnote : version.ChangeFootnote;
             var kind = version.ChangeRepeals ? LifecycleEventKind.Repeal : LifecycleEventKind.EntryIntoForce;
             var stamp = version.ChangeDate is { } day
                 ? day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)
-                : $"odn-{version.ChangeFootnote}";
+                : $"odn-{evidence}";
 
             return new LifecycleEvent
             {
@@ -192,7 +195,7 @@ namespace Saga.Core.Services.EntryIntoForce
                 Undated = version.ChangeDate is null,
                 FromFormula = false,
                 Condition = version.ChangeDate is null ? version.ChangeTerm : null,
-                EvidenceFootnote = version.ChangeFootnote,
+                EvidenceFootnote = evidence,
             };
         }
 

@@ -423,6 +423,8 @@ namespace Saga.Core.Services.Converters
                     el.Add(new XAttribute("changeDate", changed.ToString("yyyy-MM-dd")));
                 if (version.ChangeTerm is { } term)
                     el.Add(new XAttribute("changeTerm", term));
+                if (version.TermFootnote.Length > 0 && version.TermFootnote != version.ChangeFootnote)
+                    el.Add(new XAttribute("termFootnote", version.TermFootnote));
                 if (version.ChangeRepeals)
                     el.Add(new XAttribute("changeRepeals", true));
             }
