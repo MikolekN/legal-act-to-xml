@@ -21,7 +21,9 @@ namespace CorpusValidator;
 ///      na rodzaje (odstępy, myślniki, cudzysłowy, indeks górny, inne),
 ///   6. dane czasowe w metadanych — zdarzenia z podstawą i dowodem, jednostki wyjątków z zakresem,
 ///      grupy czasowe,
-///   7. załączniki — każdy element załącznika z umiejscowieniem, scaleniami komórek i własnym tekstem.
+///   7. załączniki — każdy element załącznika z umiejscowieniem, scaleniami komórek i własnym tekstem,
+///   8. komendy nowelizacyjne — cytaty i instrukcje przepisów aktu: jednostka, element, funkcja, cel,
+///      rodzaj treści cytatu oraz tekst zastępowany i zastępujący.
 ///
 /// Adresy porównywane są z prefiksem aktu („DU/2024/928__art_1", w cytacie prefiks aktu zmienianego).
 /// Z porównania wyłączone są atrybuty GUID.
@@ -90,7 +92,8 @@ internal static class ReferenceStructureComparison
         var report = Report(docxPath, referencePath, reference, actual)
             + SentenceReport(Sentences(referenceRoot), Sentences(ours))
             + LifecycleReport(LifecycleLines(referenceRoot), LifecycleLines(ours))
-            + AnnexReport(AnnexLines(referenceRoot), AnnexLines(ours));
+            + AnnexReport(AnnexLines(referenceRoot), AnnexLines(ours))
+            + CommandReport(CommandLines(referenceRoot), CommandLines(ours));
         File.WriteAllText(Path.Combine(outputDirectory, "comparison.txt"), report);
         Console.WriteLine(report);
         return 0;
@@ -379,6 +382,65 @@ internal static class ReferenceStructureComparison
 
         W();
         W($"--- Załączniki (elementy z umiejscowieniem i tekstem): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
+        WriteDiff(W, reference, actual, 40);
+        return sb.ToString();
+    }
+
+    // ============================================================
+    // 8. Komendy nowelizacyjne
+    // ============================================================
+
+    private static readonly HashSet<string> CommandElements =
+    [
+        "cytat-strukt", "cytat-w-tekscie",
+        "uchyl", "uchyl-akt", "dodaj-po", "zastap", "zastap-numer", "zamien-tekst", "dodaj-ustep", "dodaj-paragraf", "usun-ustep",
+    ];
+
+    /// <summary>
+    /// Komendy nowelizacyjne przepisów aktu jako wiersze: jednostka, w której komenda stoi, element (cytat albo
+    /// instrukcja), funkcja, cel z końcem przedziału, elementy treści cytatu, a przy zmianie w tekście — tekst
+    /// zastępowany, zastępujący i wystąpienie. Komendy stojące w treści cytowanej należą do aktu zmienianego
+    /// i są pomijane. Położenie komendy w zdaniu nie bierze udziału: przykłady autorów schematu stawiają instrukcję
+    /// raz przed tekstem zdania, raz za nim.
+    /// </summary>
+    internal static List<string> CommandLines(XElement root) => root.Descendants()
+        .Where(e => CommandElements.Contains(e.Name.LocalName) && !e.Ancestors().Any(a => a.Name.LocalName == "cytat-strukt"))
+        .Select(command =>
+        {
+            string Attribute(string name) =>
+                command.Attributes().FirstOrDefault(a => a.Name.LocalName == name)?.Value ?? "";
+
+            var owner = command.Ancestors().Select(EId).FirstOrDefault(id => id.Length > 0) ?? "";
+            var line = new StringBuilder($"{owner} > {command.Name.LocalName}");
+
+            if (Attribute("funkcja").Length > 0)
+                line.Append($" funkcja={Attribute("funkcja")}");
+            line.Append($" cel={Attribute("element-eId")}");
+            if (Attribute("element-do-eId").Length > 0)
+                line.Append($" do={Attribute("element-do-eId")}");
+
+            var content = command.Elements().Select(e => e.Name.LocalName).Distinct().ToList();
+            if (content.Count > 0)
+                line.Append($" treść={string.Join(",", content)}");
+
+            if (command.Name.LocalName == "zamien-tekst")
+            {
+                line.Append($" „{Normalize(Attribute("stary-tekst"))}” → „{Normalize(Attribute("nowy-tekst"))}”");
+                if (Attribute("wystapienie").Length > 0)
+                    line.Append($" wystapienie={Attribute("wystapienie")}");
+            }
+
+            return line.ToString();
+        })
+        .ToList();
+
+    private static string CommandReport(List<string> reference, List<string> actual)
+    {
+        var sb = new StringBuilder();
+        void W(string line = "") => sb.AppendLine(line);
+
+        W();
+        W($"--- Komendy nowelizacyjne (jednostka, element, funkcja, cel, treść): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
         WriteDiff(W, reference, actual, 40);
         return sb.ToString();
     }

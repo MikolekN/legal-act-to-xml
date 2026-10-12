@@ -649,6 +649,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   schematu. Przedtem celem była jednostka dodawana („dodaj po ust. 6"), a kilka jednostek dodawanych jedną komendą
   dawało przedział albo osobne cytaty. Komenda z miejscem („po ust. 5 dodaje się ust. 5a") zostaje przy `dodaj-po`.
   - W korpusie zmienia się 487 zdań w 183 plikach: cytatów z funkcją `dodaj-w` jest 554 (było 94), a kilka jednostek dodawanych jedną komendą stoi w jednym cytacie (75 cytatów mniej). Zgodnych ze schematem jest nadal 1937 z 2321. Komendy zgodne z przykładami autorów schematu co do jednostki, elementu, funkcji i celu: DU/2026/26 — 102 z 103 (było 99), DU/2026/252 — 337 z 344 (było 315).
+- **Miara komend nowelizacyjnych wobec przykładów** (`CorpusValidator --compare-reference`): nowa sekcja zestawia
+  cytaty i instrukcje przepisów aktu z plikiem referencyjnym — jednostka, element, funkcja, cel, rodzaj treści
+  cytatu, a przy zmianie w tekście tekst zastępowany, zastępujący i wystąpienie. Położenie instrukcji w zdaniu nie
+  bierze udziału (przykłady nie są w tym zgodne między sobą).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
