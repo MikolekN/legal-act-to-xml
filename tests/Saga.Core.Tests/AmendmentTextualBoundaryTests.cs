@@ -267,10 +267,10 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void WordDeletionCommand_DoesNotBecomeFalseUnitRepeal()
+        public void WordDeletionCommand_IsATextChange_NotAUnitRepeal()
         {
             // § 87 ust. 3 pkt 3: „skreśla się wyrazy „X"" usuwa WYRAZY, nie jednostkę — nie może
-            // stworzyć fałszywego uchylenia art. 5; ślad zostaje jako Warning, tekst werbatim.
+            // stworzyć fałszywego uchylenia art. 5. Jest zmianą w tekście: wyrazy zastępuje się niczym.
             var (orch, ctx) = NewPipeline();
 
             Feed(orch, ctx,
@@ -279,9 +279,12 @@ namespace Saga.Core.Tests
             orch.Finalize(ctx);
 
             var point = ctx.Document.Articles.First().Paragraphs[0].Points.Single();
-            Assert.Null(point.Amendment);
-            Assert.Contains(point.ValidationMessages,
-                m => m.Level == ValidationLevel.Warning && m.Message.Contains("wyrazowa"));
+            Assert.Equal(AmendmentOperationType.Modification, point.Amendment?.OperationType);
+
+            var change = Assert.Single(point.Amendment!.TextChanges);
+            Assert.Equal("po zasięgnięciu opinii", change.OldText);
+            Assert.Equal(string.Empty, change.NewText);
+            Assert.DoesNotContain(point.ValidationMessages, m => m.Message.Contains("wyrazowa"));
         }
 
         [Fact]
@@ -433,7 +436,10 @@ namespace Saga.Core.Tests
             var points = ctx.Document.Articles.First().Paragraphs[0].Points;
             Assert.Equal(new[] { "1", "2" }, points.Select(p => p.Number?.Value));
             Assert.Equal("3", Assert.Single(points[0].Amendment!.Content!.Points).Number?.Value);
-            Assert.Null(points[1].Amendment);
+
+            // Skreślenie wyrazów jest zmianą w tekście, nie uchyleniem jednostki.
+            Assert.Equal(AmendmentOperationType.Modification, points[1].Amendment?.OperationType);
+            Assert.Equal("albo upoważniony", points[1].Amendment!.TextChanges.Single().OldText);
         }
 
         [Fact]

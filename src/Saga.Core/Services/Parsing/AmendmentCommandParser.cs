@@ -23,6 +23,11 @@ namespace Saga.Core.Services.Parsing
         /// zastępuje się nimi samymi razem z dodanymi.
         /// </summary>
         AddWords,
+        /// <summary>
+        /// „skreśla się wyrazy „X"" — skreślenie wyrazów (komenda kompletna w jednym akapicie). Zmiana w tekście:
+        /// wyrazy wskazane zastępuje się niczym.
+        /// </summary>
+        DeleteWords,
     }
 
     /// <summary>
@@ -39,14 +44,21 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Oznaczenie jednostki-przedmiotu komendy (np. „7a", „2", „b"); null gdy nierozpoznane.</summary>
         public string? TargetNumber { get; init; }
 
-        /// <summary>ReplaceWords: brzmienie zastępowane (stare wyrazy). AddWords: wyrazy, przy których się dodaje.</summary>
+        /// <summary>
+        /// ReplaceWords: brzmienie zastępowane (stare wyrazy). AddWords: wyrazy, przy których się dodaje.
+        /// DeleteWords: wyrazy skreślane.
+        /// </summary>
         public string? OldWording { get; init; }
 
-        /// <summary>ReplaceWords: brzmienie zastępujące (nowe wyrazy). AddWords: wyrazy wskazane razem z dodanymi.</summary>
+        /// <summary>
+        /// ReplaceWords: brzmienie zastępujące (nowe wyrazy). AddWords: wyrazy wskazane razem z dodanymi.
+        /// DeleteWords: puste.
+        /// </summary>
         public string? NewWording { get; init; }
 
         /// <summary>Czy komenda jest zmianą w tekście jednostki (wyrazów), a nie zmianą jednostki.</summary>
-        public bool ChangesText => Kind is AmendmentCommandKind.ReplaceWords or AmendmentCommandKind.AddWords;
+        public bool ChangesText => Kind is AmendmentCommandKind.ReplaceWords or AmendmentCommandKind.AddWords
+            or AmendmentCommandKind.DeleteWords;
 
         /// <summary>Pełny dopasowany tekst komendy (do wycinania przy analizie komend złożonych).</summary>
         public string? MatchedCommandText { get; init; }
@@ -91,6 +103,10 @@ namespace Saga.Core.Services.Parsing
             @"uchyla\s+się\s+" + UnitToken,
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        /// <summary>Wyrazy w cudzysłowie, bez cudzysłowu wewnątrz.</summary>
+        private static readonly string QuotedWords =
+            $@"[{QuotationMarks.OpeningOrStraight}](?<words>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]";
+
         /// <summary>
         /// „wyrazy „X" zastępuje się wyrazami „Y"" (§ 87 ZTP) — komenda kompletna w akapicie,
         /// bez cytowanego bloku po niej. Stare/nowe brzmienie w grupach old/new.
@@ -115,6 +131,16 @@ namespace Saga.Core.Services.Parsing
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// „skreśla się wyrazy „X"" (§ 87 ZTP) — komenda kompletna w akapicie. Kolejne wyrazy w cudzysłowie
+        /// dołączone spójnikiem („skreśla się wyrazy „X" oraz „Y"") to kolejne skreślenia.
+        /// </summary>
+        internal static readonly Regex DeleteWordsPattern = new(
+            $@"skreśla\s+się\s+wyraz(?:y)?\s+{QuotedWords}(?<more>\s+(?:oraz|i)\s+{QuotedWords})*",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        private static readonly Regex QuotedWordsPattern = new(QuotedWords, RegexOptions.Compiled);
+
+        /// <summary>
         /// Rozpoznaje komendę nowelizacyjną w treści akapitu. Zwraca null, gdy akapit nie zawiera
         /// żadnej znanej komendy. Kolejność: ReplaceWords → Repeal → Add → Change (komenda „dodaje się …
         /// w brzmieniu:" zawiera też frazę zmiany, więc Add musi być sprawdzone przed Change).
@@ -124,45 +150,10 @@ namespace Saga.Core.Services.Parsing
             if (string.IsNullOrWhiteSpace(text))
                 return null;
 
-            var rw = ReplaceWordsPattern.Match(text);
-            if (rw.Success)
-            {
-                // Jednostka-przedmiot zamiany wyrazów (jeśli wskazana przed komendą, np. „w art. 3 wyrazy …").
-                var unitBefore = LastUnitBefore(text, rw.Index);
-                return new AmendmentCommand
-                {
-                    Kind = AmendmentCommandKind.ReplaceWords,
-                    TargetKind = unitBefore?.Kind ?? AmendmentTargetKind.Unknown,
-                    TargetNumber = unitBefore?.Number,
-                    TargetOrdinalValue = OrdinalValue(unitBefore?.Number),
-                    OldWording = rw.Groups["old"].Value,
-                    NewWording = rw.Groups["new"].Value,
-                    MatchedCommandText = rw.Value,
-                };
-            }
-
-            var aw = AddWordsPattern.Match(text);
-            if (aw.Success)
-            {
-                var unitBefore = LastUnitBefore(text, aw.Index);
-                var anchor = aw.Groups["anchor"].Value.Trim();
-                var added = aw.Groups["added"].Value.Trim();
-                if (aw.Groups["comma"].Success)
-                    added = ", " + added;
-
-                return new AmendmentCommand
-                {
-                    Kind = AmendmentCommandKind.AddWords,
-                    TargetKind = unitBefore?.Kind ?? AmendmentTargetKind.Unknown,
-                    TargetNumber = unitBefore?.Number,
-                    TargetOrdinalValue = OrdinalValue(unitBefore?.Number),
-                    OldWording = anchor,
-                    NewWording = aw.Groups["side"].Value.Equals("przed", StringComparison.OrdinalIgnoreCase)
-                        ? JoinWords(added, anchor)
-                        : JoinWords(anchor, added),
-                    MatchedCommandText = aw.Value,
-                };
-            }
+            // Zmiana w tekście (zamiana, dodanie, skreślenie wyrazów) przed komendami o jednostkach: czasownik
+            // w cytowanych wyrazach („wyrazy „uchyla się" zastępuje się…") nie może udawać komendy.
+            if (TextChangeCommands(text) is [var textChange, ..])
+                return textChange;
 
             var repeal = RepealCommandPattern.Match(text);
             if (repeal.Success)
@@ -177,6 +168,79 @@ namespace Saga.Core.Services.Parsing
                 return Build(AmendmentCommandKind.Change, change);
 
             return null;
+        }
+
+        /// <summary>
+        /// Wszystkie zmiany w tekście zapisane w akapicie — zamiany, dodania i skreślenia wyrazów — w kolejności,
+        /// w jakiej stoją („wyrazy „A" zastępuje się wyrazami „B" oraz po wyrazach „C" dodaje się wyrazy „D"").
+        /// </summary>
+        public static IReadOnlyList<AmendmentCommand> TextChangeCommands(string? text)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return [];
+
+            var spans = new List<(int Index, int End, IReadOnlyList<AmendmentCommand> Commands)>();
+
+            foreach (Match match in ReplaceWordsPattern.Matches(text))
+            {
+                spans.Add((match.Index, match.Index + match.Length, [TextChange(text, match,
+                    AmendmentCommandKind.ReplaceWords, match.Groups["old"].Value, match.Groups["new"].Value)]));
+            }
+
+            foreach (Match match in AddWordsPattern.Matches(text))
+            {
+                var anchor = match.Groups["anchor"].Value.Trim();
+                var added = match.Groups["added"].Value.Trim();
+                if (match.Groups["comma"].Success)
+                    added = ", " + added;
+
+                var before = match.Groups["side"].Value.Equals("przed", StringComparison.OrdinalIgnoreCase);
+                spans.Add((match.Index, match.Index + match.Length, [TextChange(text, match,
+                    AmendmentCommandKind.AddWords, anchor, before ? JoinWords(added, anchor) : JoinWords(anchor, added))]));
+            }
+
+            foreach (Match match in DeleteWordsPattern.Matches(text))
+            {
+                // Każde wyrazy w cudzysłowie to osobne skreślenie; tekst komendy niesie pierwsze z nich.
+                var deletions = QuotedWordsPattern.Matches(match.Value)
+                    .Select((words, index) =>
+                    {
+                        var command = TextChange(text, match, AmendmentCommandKind.DeleteWords, words.Groups["words"].Value, string.Empty);
+                        return index == 0 ? command : command with { MatchedCommandText = null };
+                    })
+                    .ToList();
+                spans.Add((match.Index, match.Index + match.Length, deletions));
+            }
+
+            // Komendy nie nachodzą na siebie; gdyby wzorce się zazębiły, zostaje ta, która zaczyna się wcześniej.
+            var commands = new List<AmendmentCommand>();
+            var matchedUntil = -1;
+            foreach (var span in spans.OrderBy(span => span.Index))
+            {
+                if (span.Index < matchedUntil)
+                    continue;
+
+                commands.AddRange(span.Commands);
+                matchedUntil = span.End;
+            }
+
+            return commands;
+        }
+
+        private static AmendmentCommand TextChange(string text, Match match, AmendmentCommandKind kind, string old, string @new)
+        {
+            // Jednostka wskazana przed komendą („w art. 3 wyrazy …").
+            var unitBefore = LastUnitBefore(text, match.Index);
+            return new AmendmentCommand
+            {
+                Kind = kind,
+                TargetKind = unitBefore?.Kind ?? AmendmentTargetKind.Unknown,
+                TargetNumber = unitBefore?.Number,
+                TargetOrdinalValue = OrdinalValue(unitBefore?.Number),
+                OldWording = old,
+                NewWording = @new,
+                MatchedCommandText = match.Value,
+            };
         }
 
         /// <summary>

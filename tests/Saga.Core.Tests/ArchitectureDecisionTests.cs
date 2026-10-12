@@ -1595,6 +1595,31 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0053: skreślenie wyrazów to zamiana na pusty tekst; każda zmiana zdania ma instrukcję
+        // ============================================================
+
+        [Fact]
+        public void Adr0053_DeletedWordsAndEveryTextChangeOfTheSentence_AreInstructions()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w art. 2 skreśla się wyrazy „na piśmie” i po wyrazie „pracodawcy” dodaje się wyrazy „w postaci papierowej”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var instructions = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "zamien-tekst")
+                .Select(e => (e.Attribute("stary-tekst")?.Value, e.Attribute("nowy-tekst")?.Value))
+                .ToList();
+
+            Assert.Equal([("na piśmie", ""), ("pracodawcy", "pracodawcy w postaci papierowej")], instructions);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

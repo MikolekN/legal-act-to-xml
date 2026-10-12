@@ -309,20 +309,32 @@ namespace Saga.Core.Services.Parsing
             // przeinaczyć operacji na Repeal. Komendę zamiany wycina się z tekstu, a POZOSTAŁOŚĆ bada
             // na obecność innych komend (prawdziwa komenda złożona) — te wygrywają jako operacja
             // strukturalna (model ma jedną nowelizację na encję), z Warningiem dla audytu.
-            var replaceCommand = AmendmentCommandParser.Parse(text) is { ChangesText: true } cmd
-                ? cmd : null;
-            var structuralText = replaceCommand?.MatchedCommandText != null
-                ? text.Replace(replaceCommand.MatchedCommandText, " ")
-                : text;
+            var textChanges = AmendmentCommandParser.TextChangeCommands(text);
+            var structuralText = text;
+            foreach (var command in textChanges)
+            {
+                if (command.MatchedCommandText is { } matched)
+                    structuralText = structuralText.Replace(matched, " ");
+            }
 
-            if (replaceCommand != null)
+            if (textChanges.Count > 0)
             {
                 bool hasStructuralCommand = AmendmentFinalizer.RepealPattern.IsMatch(structuralText)
                     || AmendmentFinalizer.ModificationPattern.IsMatch(structuralText);
 
                 if (!hasStructuralCommand)
                 {
-                    HandleReplaceWords(context, replaceCommand);
+                    HandleTextChanges(context, textChanges);
+
+                    // Reszta zdania bywa zmianą w tekście, której zapisać się nie da („…i dodaje się od nowego
+                    // wiersza wyrazy „Y"") — rozpoznane zmiany zostają, a ślad zostawia ostrzeżenie.
+                    if (WordLevelCommandPattern.IsMatch(structuralText) && GetOwner(context) is { } partlyMapped)
+                    {
+                        ValidationReporter.AddValidationMessage(partlyMapped, ValidationLevel.Warning,
+                            "Komenda wyrazowa (skreślenie/dodanie wyrazów) — nieodwzorowana jako obiekt nowelizacji; " +
+                            "treść komendy zachowana werbatim.");
+                    }
+
                     return;
                 }
 
@@ -404,13 +416,14 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Zamiana wyrazów (§ 87-88 ZTP): komenda kompletna w jednym akapicie (bez cytowanego bloku
-        /// po niej) → natychmiastowa nowelizacja ze zmianą w tekście (<see cref="TextChange"/>: wyrazy
-        /// zastępowane i zastępujące, werbatim), bez treści cytowanej (ADR-0052).
+        /// Zmiany w tekście (§ 87-88 ZTP: zamiana, dodanie, skreślenie wyrazów): komendy kompletne w jednym
+        /// akapicie (bez cytowanego bloku po nich) → natychmiastowa nowelizacja ze zmianami w tekście
+        /// (<see cref="TextChange"/>: wyrazy zastępowane i zastępujące, werbatim), w kolejności zapisu, bez treści
+        /// cytowanej (ADR-0052).
         /// Operacja WYMUSZONA na Modification — DetectOperationType na tekście właściciela mógłby
         /// zostać przeinaczony przez czasowniki wewnątrz cytowanych wyrazów („dodaje się"/„uchyla się").
         /// </summary>
-        private void HandleReplaceWords(ParsingContext context, AmendmentCommand command)
+        private void HandleTextChanges(ParsingContext context, IReadOnlyList<AmendmentCommand> commands)
         {
             var owner = GetOwner(context);
             if (owner == null)
@@ -432,13 +445,15 @@ namespace Saga.Core.Services.Parsing
 
             var content = new AmendmentContent { ObjectType = AmendmentObjectType.None };
             // Odstęp tuż za cudzysłowem otwierającym („„ , o którym mowa"") jest zabiegiem składu, nie tekstem.
-            var change = new TextChange
-            {
-                OldText = (command.OldWording ?? string.Empty).Trim(),
-                NewText = (command.NewWording ?? string.Empty).Trim(),
-            };
+            var changes = commands
+                .Select(command => new TextChange
+                {
+                    OldText = (command.OldWording ?? string.Empty).Trim(),
+                    NewText = (command.NewWording ?? string.Empty).Trim(),
+                })
+                .ToList();
             _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(content, collector, context,
-                AmendmentOperationType.Modification, [change]));
+                AmendmentOperationType.Modification, changes));
 
             collector.Reset();
         }

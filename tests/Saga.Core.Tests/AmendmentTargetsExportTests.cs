@@ -238,12 +238,58 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void DeletedWords_StillHaveNoInstruction_AndSaySo()
+        public void DeletedWords_AreAnInstructionWithAnEmptyNewText()
         {
-            // Skreślenie wyrazów czeka na własną postać w eksporcie; do tego czasu zostaje ostrzeżenie.
-            var (xml, context) = Convert("1) w art. 5 skreśla się wyrazy „w terminie 14 dni”;");
+            // Przykład autorów schematu (DU/2026/252): „skreśla się wyrazy „X"" → stary-tekst="X", nowy-tekst="".
+            var (xml, context) = Convert("1) w art. 5 w ust. 3 skreśla się wyrazy „lub ministra właściwego do spraw informatyzacji”;");
 
-            Assert.Empty(Commands(xml));
+            var instruction = Assert.Single(Commands(xml));
+            Assert.Equal("zamien-tekst", instruction.Name.LocalName);
+            Assert.Equal("lub ministra właściwego do spraw informatyzacji", Attr(instruction, "stary-tekst"));
+            Assert.Equal(string.Empty, Attr(instruction, "nowy-tekst"));
+            Assert.Equal("art_5__ust_3", Attr(instruction, "element-eId"));
+
+            var owner = context.Document.Articles.First().Paragraphs[0].Points.Single();
+            Assert.DoesNotContain(owner.ValidationMessages, m => m.Message.Contains("nieodwzorowana", StringComparison.Ordinal));
+        }
+
+        [Fact]
+        public void EveryTextChangeOfTheSentence_GetsItsInstruction_InTheOrderWritten()
+        {
+            // Przykład autorów schematu (DU/2026/26): zamiana i dodanie wyrazów w jednym zdaniu.
+            var (xml, _) = Convert(
+                "1) w art. 69 wyrazy „art. 63–68” zastępuje się wyrazami „art. 63–68f” oraz po wyrazach „art. 61b ust. 6” dodaje się wyrazy „i art. 68g”.");
+
+            var instructions = Commands(xml);
+
+            Assert.Equal(new[] { "art. 63–68", "art. 61b ust. 6" }, instructions.Select(i => Attr(i, "stary-tekst")));
+            Assert.Equal(new[] { "art. 63–68f", "art. 61b ust. 6 i art. 68g" }, instructions.Select(i => Attr(i, "nowy-tekst")));
+            Assert.All(instructions, i => Assert.Equal("art_69", Attr(i, "element-eId")));
+            Assert.Equal(2, instructions.Select(i => Attr(i, "nowGUID")).Distinct().Count());
+        }
+
+        [Fact]
+        public void SeveralDeletedPhrases_AreSeparateInstructions()
+        {
+            // Korpus: „w § 6 w ust. 1 w pkt 5 skreśla się wyrazy „jarząbków," oraz „i łysek"".
+            var (xml, _) = Convert("1) w art. 6 w ust. 1 w pkt 5 skreśla się wyrazy „jarząbków,” oraz „i łysek”.");
+
+            var instructions = Commands(xml);
+
+            Assert.Equal(new[] { "jarząbków,", "i łysek" }, instructions.Select(i => Attr(i, "stary-tekst")));
+            Assert.All(instructions, i => Assert.Equal(string.Empty, Attr(i, "nowy-tekst")));
+        }
+
+        [Fact]
+        public void TextChangeThatCannotBeWritten_LeavesAWarningBesideTheRecognisedOnes()
+        {
+            // Skreślenie jest rozpoznane; dodanie „w to miejsce" nie ma wskazanych wyrazów, przy których stoi.
+            var (xml, context) = Convert(
+                "1) w art. 7 po wyrazach „Dysponent Funduszu umarza” skreśla się wyraz „pożyczkę” i dodaje się wyrazy „należność z tytułu pożyczki”,");
+
+            var instruction = Assert.Single(Commands(xml));
+            Assert.Equal("pożyczkę", Attr(instruction, "stary-tekst"));
+
             var owner = context.Document.Articles.First().Paragraphs[0].Points.Single();
             Assert.Contains(owner.ValidationMessages, m => m.Message.Contains("nieodwzorowana", StringComparison.Ordinal));
         }

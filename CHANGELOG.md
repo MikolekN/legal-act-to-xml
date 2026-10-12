@@ -622,6 +622,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   dokłada przecinek; dodane wyrazy zaczynające się znakiem przestankowym stoją bez odstępu
   (`AmendmentCommandParser.JoinWords`). Przedtem komenda nie dawała żadnej instrukcji, tylko ostrzeżenie.
   - W korpusie przybywa 512 instrukcji `now:zamien-tekst` w 119 plikach; poza tym eksport się nie zmienia, a zgodnych ze schematem jest nadal 1937 z 2321. W przykładzie autorów schematu DU/2026/252 mamy teraz 66 z 83 instrukcji i każda z 39 naszych różnych par (`stary-tekst`, `nowy-tekst`) ma tam odpowiednik.
+- **Skreślenie wyrazów jako zmiana w tekście i wszystkie zmiany jednego zdania**
+  ([ADR-0053](docs/adr/0053-skreslenie-wyrazow-to-zamiana-na-pusty-tekst.md)): „skreśla się wyrazy „X"" wychodzi instrukcją `now:zamien-tekst` z pustym
+  `nowy-tekst` (przedtem: żadnej instrukcji, tylko ostrzeżenie), a zdanie z kilkoma zmianami w tekście („wyrazy
+  „A" zastępuje się wyrazami „B" oraz po wyrazach „C" dodaje się wyrazy „D"") daje instrukcję dla każdej,
+  w kolejności zapisu (przedtem: tylko dla pierwszej).
+  - W korpusie przybywa 379 instrukcji `now:zamien-tekst` w 127 plikach; poza tym eksport się nie zmienia, a zgodnych ze schematem jest nadal 1937 z 2321. Przykłady autorów schematu: DU/2026/26 — 7 z 9 instrukcji, DU/2026/252 — 70 z 83; poza dwoma skreśleniami (inna postać w DU/2026/26, dodany odstęp w DU/2026/252) każda nasza para (`stary-tekst`, `nowy-tekst`) ma w przykładzie odpowiednik.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

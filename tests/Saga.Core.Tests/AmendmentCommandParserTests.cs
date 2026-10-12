@@ -114,6 +114,46 @@ namespace Saga.Core.Tests
             Assert.NotEqual(AmendmentCommandKind.AddWords, AmendmentCommandParser.Parse(text)?.Kind);
         }
 
+        // ============================================================
+        // Skreślenie wyrazów i wszystkie zmiany w tekście jednego akapitu
+        // ============================================================
+
+        [Fact]
+        public void DeleteWordsCommand_IsATextChangeToNothing()
+        {
+            var cmd = AmendmentCommandParser.Parse("w art. 15 w ust. 2 skreśla się wyrazy „oraz informacje o zdarzeniach”;");
+
+            Assert.Equal(AmendmentCommandKind.DeleteWords, cmd!.Kind);
+            Assert.True(cmd.ChangesText);
+            Assert.Equal("oraz informacje o zdarzeniach", cmd.OldWording);
+            Assert.Equal(string.Empty, cmd.NewWording);
+            Assert.Equal(AmendmentTargetKind.Paragraph, cmd.TargetKind);
+        }
+
+        [Fact]
+        public void TextChangeCommands_ReturnsEveryChangeInTheOrderWritten()
+        {
+            var commands = AmendmentCommandParser.TextChangeCommands(
+                "w § 2 skreśla się wyrazy „na piśmie” i po wyrazie „pracodawcy” dodaje się wyrazy „w postaci papierowej”, " +
+                "a wyraz „niezwłocznie” zastępuje się wyrazami „w terminie 7 dni”;");
+
+            Assert.Equal(
+                new[] { AmendmentCommandKind.DeleteWords, AmendmentCommandKind.AddWords, AmendmentCommandKind.ReplaceWords },
+                commands.Select(c => c.Kind));
+            Assert.Equal(new[] { "na piśmie", "pracodawcy", "niezwłocznie" }, commands.Select(c => c.OldWording));
+            Assert.Equal(new[] { "", "pracodawcy w postaci papierowej", "w terminie 7 dni" }, commands.Select(c => c.NewWording));
+        }
+
+        [Theory]
+        // Komendy o jednostkach nie są zmianami w tekście.
+        [InlineData("w art. 5 uchyla się ust. 2;")]
+        [InlineData("po art. 5 dodaje się art. 5a w brzmieniu:")]
+        [InlineData("skreśla się zdanie drugie;")]
+        public void TextChangeCommands_AreEmptyForCommandsAboutUnits(string text)
+        {
+            Assert.Empty(AmendmentCommandParser.TextChangeCommands(text));
+        }
+
         [Theory]
         [InlineData("Funduszu", "na wypłatę", "Funduszu na wypłatę")]
         [InlineData("Finansowego", ",", "Finansowego,")]
