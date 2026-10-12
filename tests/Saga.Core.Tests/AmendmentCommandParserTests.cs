@@ -71,6 +71,61 @@ namespace Saga.Core.Tests
             Assert.Equal("1", cmd.TargetNumber);
         }
 
+        // ============================================================
+        // Dodanie wyrazów przy wskazanych — zmiana w tekście jak zamiana wyrazów
+        // ============================================================
+
+        [Theory]
+        // Wyrazy wskazane zastępuje się nimi samymi razem z dodanymi (jak w przykładach autorów schematu).
+        [InlineData("w art. 69 po wyrazach „art. 61b ust. 6” dodaje się wyrazy „i art. 68g”.", "art. 61b ust. 6", "art. 61b ust. 6 i art. 68g")]
+        [InlineData("w § 2 w ust. 1 po wyrazie „przedsiębiorcy” dodaje się wyraz „krajowemu”;", "przedsiębiorcy", "przedsiębiorcy krajowemu")]
+        // Dodane wyrazy zaczynają się przecinkiem — bez odstępu przed nim, także gdy w cudzysłowie go wstawiono.
+        [InlineData("w ust. 3 po wyrazie „wniosek” dodaje się wyrazy „ , o którym mowa w art. 3 ust. 1,”;", "wniosek", "wniosek, o którym mowa w art. 3 ust. 1,")]
+        // „Dodaje się przecinek i wyrazy" — przecinek stoi przed dodanymi wyrazami.
+        [InlineData("w pkt 2 po wyrazach „ministra właściwego do spraw informatyzacji” dodaje się przecinek i wyrazy „CSIRT sektorowymi”;", "ministra właściwego do spraw informatyzacji", "ministra właściwego do spraw informatyzacji, CSIRT sektorowymi")]
+        // „Przed wyrazami" — dodane stoją pierwsze.
+        [InlineData("w ust. 1 przed wyrazem „artystyczne” dodaje się wyraz „kształcenie”,", "artystyczne", "kształcenie artystyczne")]
+        public void AddWordsCommand_IsATextChangeFromTheIndicatedWordsToThemWithTheAddedOnes(string text, string old, string @new)
+        {
+            var cmd = AmendmentCommandParser.Parse(text);
+
+            Assert.Equal(AmendmentCommandKind.AddWords, cmd!.Kind);
+            Assert.True(cmd.ChangesText);
+            Assert.Equal(old, cmd.OldWording);
+            Assert.Equal(@new, cmd.NewWording);
+        }
+
+        [Fact]
+        public void AddWordsCommand_KeepsTheUnitIndicatedBeforeIt()
+        {
+            var cmd = AmendmentCommandParser.Parse("w art. 9 w ust. 4 po wyrazach „w terminie” dodaje się wyrazy „14 dni”;");
+
+            Assert.Equal(AmendmentTargetKind.Paragraph, cmd!.TargetKind);
+            Assert.Equal("4", cmd.TargetNumber);
+        }
+
+        [Theory]
+        // Nowego wiersza zamianą tekstu zapisać się nie da.
+        [InlineData("w ust. 2 po wyrazach „w terminie” dodaje się od nowego wiersza wyrazy „14 dni”;")]
+        // Bez wskazanych wyrazów nie ma czego zastąpić („na końcu dodaje się wyrazy").
+        [InlineData("w pkt 4 na końcu dodaje się wyrazy „ , lub”;")]
+        public void AddedWordsWithoutAPlaceInTheText_AreNotATextChange(string text)
+        {
+            Assert.NotEqual(AmendmentCommandKind.AddWords, AmendmentCommandParser.Parse(text)?.Kind);
+        }
+
+        [Theory]
+        [InlineData("Funduszu", "na wypłatę", "Funduszu na wypłatę")]
+        [InlineData("Finansowego", ",", "Finansowego,")]
+        [InlineData("ust. 1", "; ust. 2", "ust. 1; ust. 2")]
+        [InlineData("(", "w tym", "(w tym")]
+        [InlineData("art. 5", ")", "art. 5)")]
+        [InlineData("", "tekst", "tekst")]
+        public void JoinWords_PutsASpaceUnlessPunctuationMeetsTheWord(string left, string right, string expected)
+        {
+            Assert.Equal(expected, AmendmentCommandParser.JoinWords(left, right));
+        }
+
         [Fact]
         public void ReplaceWordsCommand_SingularForm_IsRecognized()
         {

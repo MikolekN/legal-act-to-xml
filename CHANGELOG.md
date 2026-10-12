@@ -615,6 +615,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Model: `Amendment.TextChanges` (`TextChange`: `OldText`, `NewText`); zmiana wyrazów nie ma treści cytowanej
     (`Content.PlainText` nie powtarza już nowych wyrazów).
   - W korpusie 1481 cytatów `cytat-w-tekscie` w 307 plikach staje się instrukcjami `now:zamien-tekst`; poza tym eksport się nie zmienia, a zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory). W przykładach autorów schematu każda nasza para (`stary-tekst`, `nowy-tekst`) ma odpowiednik: DU/2026/26 — 5 z 5 (przykład ma 9 instrukcji), DU/2026/252 — 35 z 35 różnych par (przykład ma 83 instrukcje); brakujące to postaci jeszcze nieobsługiwane. Indeks górny w wyrazach stoi w atrybucie zapisem kanonicznym („art. 406[1]"), bo atrybut nie niesie znaczników (5 w korpusie).
+- **Dodanie wyrazów jako zmiana w tekście** ([ADR-0052](docs/adr/0052-zmiana-wyrazow-jest-instrukcja-zamien-tekst.md)): „po wyrazach „X" dodaje się
+  wyrazy „Y"" i „przed wyrazami „X" dodaje się wyrazy „Y"" wychodzą instrukcją `now:zamien-tekst`, w której
+  wyrazy wskazane zastępuje się nimi samymi razem z dodanymi (`stary-tekst="X"`, `nowy-tekst="X Y"`) — schemat nie
+  ma osobnej instrukcji dodania wyrazów, a tak zapisują to przykłady jego autorów. „Dodaje się przecinek i wyrazy"
+  dokłada przecinek; dodane wyrazy zaczynające się znakiem przestankowym stoją bez odstępu
+  (`AmendmentCommandParser.JoinWords`). Przedtem komenda nie dawała żadnej instrukcji, tylko ostrzeżenie.
+  - W korpusie przybywa 512 instrukcji `now:zamien-tekst` w 119 plikach; poza tym eksport się nie zmienia, a zgodnych ze schematem jest nadal 1937 z 2321. W przykładzie autorów schematu DU/2026/252 mamy teraz 66 z 83 instrukcji i każda z 39 naszych różnych par (`stary-tekst`, `nowy-tekst`) ma tam odpowiednik.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

@@ -17,6 +17,12 @@ namespace Saga.Core.Services.Parsing
         Repeal,
         /// <summary>„wyrazy „X" zastępuje się wyrazami „Y"" — zamiana wyrazów (komenda kompletna w jednym akapicie).</summary>
         ReplaceWords,
+        /// <summary>
+        /// „po wyrazach „X" dodaje się wyrazy „Y"" albo „przed wyrazami „X" …" — dodanie wyrazów przy wskazanych
+        /// (komenda kompletna w jednym akapicie). Jest zmianą w tekście jak zamiana wyrazów: wyrazy wskazane
+        /// zastępuje się nimi samymi razem z dodanymi.
+        /// </summary>
+        AddWords,
     }
 
     /// <summary>
@@ -33,11 +39,14 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Oznaczenie jednostki-przedmiotu komendy (np. „7a", „2", „b"); null gdy nierozpoznane.</summary>
         public string? TargetNumber { get; init; }
 
-        /// <summary>ReplaceWords: brzmienie zastępowane (stare wyrazy).</summary>
+        /// <summary>ReplaceWords: brzmienie zastępowane (stare wyrazy). AddWords: wyrazy, przy których się dodaje.</summary>
         public string? OldWording { get; init; }
 
-        /// <summary>ReplaceWords: brzmienie zastępujące (nowe wyrazy).</summary>
+        /// <summary>ReplaceWords: brzmienie zastępujące (nowe wyrazy). AddWords: wyrazy wskazane razem z dodanymi.</summary>
         public string? NewWording { get; init; }
+
+        /// <summary>Czy komenda jest zmianą w tekście jednostki (wyrazów), a nie zmianą jednostki.</summary>
+        public bool ChangesText => Kind is AmendmentCommandKind.ReplaceWords or AmendmentCommandKind.AddWords;
 
         /// <summary>Pełny dopasowany tekst komendy (do wycinania przy analizie komend złożonych).</summary>
         public string? MatchedCommandText { get; init; }
@@ -95,6 +104,17 @@ namespace Saga.Core.Services.Parsing
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// „po wyrazach „X" dodaje się wyrazy „Y"" i „przed wyrazami „X" dodaje się wyrazy „Y"" (§ 87 ZTP) —
+        /// komenda kompletna w akapicie. Wstawka „przecinek i" („dodaje się przecinek i wyrazy „Y"") dokłada
+        /// przecinek przed dodanymi wyrazami. Dodanie „od nowego wiersza" nie pasuje: nie da się go zapisać
+        /// zamianą tekstu.
+        /// </summary>
+        internal static readonly Regex AddWordsPattern = new(
+            $@"(?<side>po|przed)\s+wyraz(?:ach|ie|ami|em)\s+[{QuotationMarks.OpeningOrStraight}](?<anchor>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]\s+dodaje\s+się\s+"
+            + $@"(?<comma>przecinek\s+(?:i|oraz)\s+)?wyraz(?:y|em)?\s+[{QuotationMarks.OpeningOrStraight}](?<added>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
         /// Rozpoznaje komendę nowelizacyjną w treści akapitu. Zwraca null, gdy akapit nie zawiera
         /// żadnej znanej komendy. Kolejność: ReplaceWords → Repeal → Add → Change (komenda „dodaje się …
         /// w brzmieniu:" zawiera też frazę zmiany, więc Add musi być sprawdzone przed Change).
@@ -121,6 +141,29 @@ namespace Saga.Core.Services.Parsing
                 };
             }
 
+            var aw = AddWordsPattern.Match(text);
+            if (aw.Success)
+            {
+                var unitBefore = LastUnitBefore(text, aw.Index);
+                var anchor = aw.Groups["anchor"].Value.Trim();
+                var added = aw.Groups["added"].Value.Trim();
+                if (aw.Groups["comma"].Success)
+                    added = ", " + added;
+
+                return new AmendmentCommand
+                {
+                    Kind = AmendmentCommandKind.AddWords,
+                    TargetKind = unitBefore?.Kind ?? AmendmentTargetKind.Unknown,
+                    TargetNumber = unitBefore?.Number,
+                    TargetOrdinalValue = OrdinalValue(unitBefore?.Number),
+                    OldWording = anchor,
+                    NewWording = aw.Groups["side"].Value.Equals("przed", StringComparison.OrdinalIgnoreCase)
+                        ? JoinWords(added, anchor)
+                        : JoinWords(anchor, added),
+                    MatchedCommandText = aw.Value,
+                };
+            }
+
             var repeal = RepealCommandPattern.Match(text);
             if (repeal.Success)
                 return Build(AmendmentCommandKind.Repeal, repeal);
@@ -134,6 +177,20 @@ namespace Saga.Core.Services.Parsing
                 return Build(AmendmentCommandKind.Change, change);
 
             return null;
+        }
+
+        /// <summary>
+        /// Składa wyrazy stojące obok siebie w tekście: odstęp między nimi, chyba że drugie zaczynają się znakiem
+        /// przestankowym albo nawiasem zamykającym („Funduszu" + „, o którym mowa" → „Funduszu, o którym mowa"),
+        /// albo pierwsze kończą się nawiasem otwierającym.
+        /// </summary>
+        internal static string JoinWords(string left, string right)
+        {
+            if (left.Length == 0 || right.Length == 0)
+                return left + right;
+
+            var glued = right[0] is ',' or '.' or ';' or ':' or ')' or ']' || left[^1] is '(' or '[';
+            return glued ? left + right : left + " " + right;
         }
 
         /// <summary>

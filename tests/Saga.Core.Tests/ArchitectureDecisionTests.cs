@@ -1572,6 +1572,28 @@ namespace Saga.Core.Tests
             Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
         }
 
+        [Fact]
+        public void Adr0052_AddedWords_ReplaceTheIndicatedWordsWithThemAndTheAddedOnes()
+        {
+            // Schemat nie ma instrukcji dodania wyrazów: dodanie zapisuje się zamianą wyrazów wskazanych na te same
+            // wyrazy razem z dodanymi — jak w przykładach autorów schematu.
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w art. 69 po wyrazach „art. 61b ust. 6” dodaje się wyrazy „i art. 68g”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var change = Assert.Single(document.Articles.First().Paragraphs.Single().Amendment!.TextChanges);
+            Assert.Equal(("art. 61b ust. 6", "art. 61b ust. 6 i art. 68g"), (change.OldText, change.NewText));
+
+            var instruction = Assert.Single(LegalDocumentConverter.Convert(document).Descendants(), e => e.Name.LocalName == "zamien-tekst");
+            Assert.Equal("art. 61b ust. 6 i art. 68g", instruction.Attribute("nowy-tekst")?.Value);
+        }
+
         // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================

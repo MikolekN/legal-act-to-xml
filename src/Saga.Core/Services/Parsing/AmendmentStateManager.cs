@@ -130,7 +130,8 @@ namespace Saga.Core.Services.Parsing
             // nowy punkt ustawy matki z taką komendą również zamyka bieżącą nowelizację (symetria z DetectTrigger).
             return AmendmentFinalizer.ModificationPattern.IsMatch(text) ||
                 AmendmentFinalizer.RepealPattern.IsMatch(text) ||
-                AmendmentCommandParser.ReplaceWordsPattern.IsMatch(text);
+                AmendmentCommandParser.ReplaceWordsPattern.IsMatch(text) ||
+                AmendmentCommandParser.AddWordsPattern.IsMatch(text);
         }
 
         /// <summary>
@@ -308,7 +309,7 @@ namespace Saga.Core.Services.Parsing
             // przeinaczyć operacji na Repeal. Komendę zamiany wycina się z tekstu, a POZOSTAŁOŚĆ bada
             // na obecność innych komend (prawdziwa komenda złożona) — te wygrywają jako operacja
             // strukturalna (model ma jedną nowelizację na encję), z Warningiem dla audytu.
-            var replaceCommand = AmendmentCommandParser.Parse(text) is { Kind: AmendmentCommandKind.ReplaceWords } cmd
+            var replaceCommand = AmendmentCommandParser.Parse(text) is { ChangesText: true } cmd
                 ? cmd : null;
             var structuralText = replaceCommand?.MatchedCommandText != null
                 ? text.Replace(replaceCommand.MatchedCommandText, " ")

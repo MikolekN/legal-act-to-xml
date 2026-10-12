@@ -220,6 +220,35 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void AddedWords_AreAnInstructionReplacingTheIndicatedWordsWithThemAndTheAddedOnes()
+        {
+            // Przykład autorów schematu (DU/2026/26): „po wyrazach „art. 61b ust. 6" dodaje się wyrazy „i art. 68g"".
+            var (xml, context) = Convert("1) w art. 69 po wyrazach „art. 61b ust. 6” dodaje się wyrazy „i art. 68g”;");
+
+            var instruction = Assert.Single(Commands(xml));
+            Assert.Equal("zamien-tekst", instruction.Name.LocalName);
+            Assert.Equal("art. 61b ust. 6", Attr(instruction, "stary-tekst"));
+            Assert.Equal("art. 61b ust. 6 i art. 68g", Attr(instruction, "nowy-tekst"));
+            Assert.Equal("art_69", Attr(instruction, "element-eId"));
+
+            // Komenda ma już odwzorowanie w modelu — nie zostawia ostrzeżenia o komendzie nieodwzorowanej.
+            var owner = context.Document.Articles.First().Paragraphs[0].Points.Single();
+            Assert.Equal(AmendmentOperationType.Modification, owner.Amendment?.OperationType);
+            Assert.DoesNotContain(owner.ValidationMessages, m => m.Message.Contains("nieodwzorowana", StringComparison.Ordinal));
+        }
+
+        [Fact]
+        public void DeletedWords_StillHaveNoInstruction_AndSaySo()
+        {
+            // Skreślenie wyrazów czeka na własną postać w eksporcie; do tego czasu zostaje ostrzeżenie.
+            var (xml, context) = Convert("1) w art. 5 skreśla się wyrazy „w terminie 14 dni”;");
+
+            Assert.Empty(Commands(xml));
+            var owner = context.Document.Articles.First().Paragraphs[0].Points.Single();
+            Assert.Contains(owner.ValidationMessages, m => m.Message.Contains("nieodwzorowana", StringComparison.Ordinal));
+        }
+
+        [Fact]
         public void ReplacedWords_CarryNoSpaceFromInsideTheQuotationMarks()
         {
             // Korpus: 361913_3209300 — odstęp za cudzysłowem otwierającym oddziela go od przecinka w składzie.
