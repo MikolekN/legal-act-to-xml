@@ -36,6 +36,8 @@ namespace Saga.Core.Services.Converters
             foreach (var footnote in document.Footnotes)
                 root.Add(new XElement("footnote",
                     new XAttribute("symbol", footnote.Symbol),
+                    footnote.Marker != footnote.Symbol ? new XAttribute("marker", footnote.Marker) : null,
+                    footnote.Run != 0 ? new XAttribute("run", footnote.Run) : null,
                     footnote.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph))));
 
             if (document.Signature is { } signature)

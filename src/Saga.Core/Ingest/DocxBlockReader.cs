@@ -166,17 +166,20 @@ namespace Saga.Core.Ingest
         /// </summary>
         internal static DocumentBlock ToBlock(
             Word.Paragraph paragraph, int? blockIndex, DocxFootnotes? footnotes = null, DocxTables? tables = null)
-            => new()
+        {
+            var referenced = footnotes?.ReferencedBy(paragraph) ?? [];
+            return new()
             {
-                Text = paragraph.GetFullText(footnotes?.Numbers),
+                Text = DocxFootnotes.WithBareReferencesAsPrinted(paragraph.GetFullText(footnotes?.Numbers), referenced),
                 FormulaMathMl = Helpers.OfficeMathMl.FormulaOf(paragraph)?.ToString(System.Xml.Linq.SaveOptions.DisableFormatting),
                 LeadingSymbol = Helpers.OfficeMathMl.LeadingSymbolOf(paragraph),
-                Footnotes = footnotes?.ReferencedBy(paragraph) ?? [],
+                Footnotes = referenced,
                 TableCell = tables?.CellOf(paragraph),
                 StyleId = paragraph.StyleId(),
                 Layout = ExtractLayout(paragraph),
                 Source = new BlockSourceLocation { BlockIndex = blockIndex },
             };
+        }
 
         // ============================================================
         // Ekstrakcja metadanych układu

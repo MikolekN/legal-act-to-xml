@@ -1844,6 +1844,38 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0061: oznaczenie odnośnika jak w akcie, znacznik jednoznaczny
+        // ============================================================
+
+        [Fact]
+        public void Adr0061_FootnoteCarriesThePrintedSymbol_AndItsMarkerStaysUnique()
+        {
+            // Obwieszczenie ma własny odnośnik, a ogłaszany akt numeruje odnośniki od nowa — w pliku to dwie sekcje.
+            var docx = DocxFixtures.WithFootnoteSections(
+                ["Minister kieruje działem.", "Niniejsza ustawa wdraża dyrektywę.", "Zmiany ogłoszono osobno."],
+                new DocxFixtures.FootnoteSection(Restart: true, Format: null, "Obwieszczenie", "Ministra Finansów{1}"),
+                new DocxFixtures.FootnoteSection(Restart: true, Format: null,
+                    "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                    "Art. 1. 1. {2} Ustawa określa zasady ochrony.{3}",
+                    "2. {1)} Przepisy stosuje się odpowiednio.",
+                    "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."));
+            using var stream = new MemoryStream(docx);
+            var document = LegalDocumentParser.Parse(stream, "akt.docx", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Oznaczenie jak w akcie: „1)" pada dwa razy. Znacznik rozróżnia je numerem, którego akt nie zapisze.
+            Assert.Equal(new[] { "1", "1", "2" }, document.Footnotes.Select(f => f.Symbol));
+            Assert.Equal(3, document.Footnotes.Select(f => f.Marker).Distinct().Count());
+
+            // Powtórzone „1)" w ustawie wskazuje jej odnośnik, nie odnośnik obwieszczenia.
+            var xml = LegalDocumentConverter.Convert(document);
+            var repeated = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "odsylacz-do-odnosnika");
+            var target = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "odnosnik"
+                && e.Attribute("id-odnosnika")!.Value == repeated.Attribute("id-odnosnika")!.Value);
+            Assert.Contains("dyrektywę", target.Value);
+            Assert.Equal("1", target.Attribute("symbol")!.Value);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

@@ -1,6 +1,6 @@
 # ADR-0026: Treść odnośnika żyje w rejestrze dokumentu, a jego miejsce — w tekście jednostki
 
-- Status: Accepted (znacznik bez odnośnika tego aktu nie zostaje już tekstem — uściśla to [ADR-0047](0047-znacznik-bez-odnosnika-tego-aktu-wychodzi-indeksem-gornym.md))
+- Status: Accepted (znacznik bez odnośnika tego aktu nie zostaje już tekstem — uściśla to [ADR-0047](0047-znacznik-bez-odnosnika-tego-aktu-wychodzi-indeksem-gornym.md); numer znacznika a oznaczenie odnośnika: [ADR-0061](0061-odnosnik-ma-oznaczenie-jak-w-akcie-a-znacznik-numer-jednoznaczny.md))
 - Data: 2026-10-10
 
 ## Kontekst

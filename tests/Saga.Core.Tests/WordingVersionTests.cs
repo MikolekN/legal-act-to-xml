@@ -24,7 +24,9 @@ namespace Saga.Core.Tests
             Footnotes = footnotes.Select(footnote => new BlockFootnote(footnote.Symbol, [footnote.Text])).ToList(),
         };
 
-        private static LegalDocument Parse(bool consolidated, params DocumentBlock[] body)
+        private static LegalDocument Parse(bool consolidated, params DocumentBlock[] body) => Parse(consolidated, atTheIssuer: null, body);
+
+        private static LegalDocument Parse(bool consolidated, BlockFootnote? atTheIssuer, DocumentBlock[] body)
         {
             var blocks = new List<DocumentBlock>
             {
@@ -35,10 +37,12 @@ namespace Saga.Core.Tests
 
             if (consolidated)
             {
+                blocks.Add(Block("Obwieszczenie"));
+                blocks.Add(atTheIssuer is null
+                    ? Block("Marszałka Sejmu Rzeczypospolitej Polskiej")
+                    : new DocumentBlock { Text = $"Marszałka Sejmu Rzeczypospolitej Polskiej[{atTheIssuer.Marker})]", Footnotes = [atTheIssuer] });
                 blocks.AddRange(new[]
                 {
-                    "Obwieszczenie",
-                    "Marszałka Sejmu Rzeczypospolitej Polskiej",
                     "z dnia 6 sierpnia 2025 r.",
                     "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
                     "1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych (Dz. U. z 2024 r. poz. 1100).",
@@ -110,6 +114,39 @@ namespace Saga.Core.Tests
                 new[] { WordingVersionKind.Current, WordingVersionKind.Future, WordingVersionKind.Current, WordingVersionKind.Future },
                 paragraphs.Select(p => p.Version!.Kind));
             Assert.All(paragraphs, p => Assert.Equal("2", p.Version!.ChangeFootnote));
+        }
+
+        [Fact]
+        public void RepeatedMarker_InADocumentThatRestartsFootnoteNumbering_IsReadByItsPrintedNumber()
+        {
+            // Korpus: 329304_2949179 — obwieszczenie ma własny odnośnik („a)"), a ogłaszany akt numeruje odnośniki
+            // od nowa. Powtórzony znacznik jest w pliku tekstem i niesie numer drukowany.
+            var document = Parse(consolidated: true,
+                atTheIssuer: new BlockFootnote("a", ["Marszałek ogłasza tekst jednolity."]) { Marker = "1" },
+                [
+                    new DocumentBlock
+                    {
+                        Text = "Art. 2. 1.[100001)] Odbudowę prowadzi się na wniosek.",
+                        Footnotes = [new BlockFootnote("1", [Until2]) { Marker = "100001", Run = 1 }],
+                    },
+                    new DocumentBlock
+                    {
+                        Text = "1.[100002)] Odbudowę prowadzi się na wniosek albo z urzędu.",
+                        Footnotes = [new BlockFootnote("2", [ChangedOn2026]) { Marker = "100002", Run = 1 }],
+                    },
+                    Block("2.[1)] Wniosek składa się do wojewody."),
+                    Block("2.[2)] Wniosek składa się do starosty."),
+                ]);
+
+            var paragraphs = ParagraphsOf(document, "2");
+            Assert.Equal(
+                new WordingVersionKind?[] { WordingVersionKind.Current, WordingVersionKind.Future, WordingVersionKind.Current, WordingVersionKind.Future },
+                paragraphs.Select(p => p.Version?.Kind));
+
+            // Zmianę nazywa oznaczenie odnośnika jak w akcie — „2)", nie numer kolejny w dokumencie.
+            Assert.All(paragraphs, p => Assert.Equal("2", p.Version!.ChangeFootnote));
+            var change = Assert.Single(LegalDocumentConverter.Convert(document).Descendants(), e => e.Attribute("dowod") is not null);
+            Assert.Equal(Act + "odn_2", change.Attribute("dowod")!.Value);
         }
 
         [Fact]

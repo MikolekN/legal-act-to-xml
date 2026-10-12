@@ -255,7 +255,15 @@ namespace Saga.Core.Services.Parsing
         private static void RegisterFootnotes(DocumentBlock block, ParsingContext context)
         {
             foreach (var footnote in block.Footnotes)
-                context.Document.Footnotes.Add(new Saga.Model.Footnote { Symbol = footnote.Symbol, Paragraphs = [.. footnote.Paragraphs] });
+            {
+                context.Document.Footnotes.Add(new Saga.Model.Footnote
+                {
+                    Symbol = footnote.Symbol,
+                    Marker = footnote.Marker,
+                    Run = footnote.Run,
+                    Paragraphs = [.. footnote.Paragraphs],
+                });
+            }
         }
 
         /// <summary>

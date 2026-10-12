@@ -681,6 +681,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   trafia do `warunek`. Jednostki niosą projekcje `obowiazuje-do` / `wejscie-w-zycie`, a uchylana —
   `stan-jednostki="uchylony"`. Model: `BaseEntity.Version` (`WordingVersion`).
   - W korpusie zmienia się 112 z 728 tekstów jednolitych — wyłącznie atrybuty czasu jednostek i dane czasowe (607 grup czasowych, 362 zdarzenia: 140 z dniem, 99 z terminem zapisanym prozą, 123 bez dnia; 501 jednostek z `obowiazuje-do`, 96 ze `stan-jednostki`). Z 591 jednostek o powtórzonym eId 477 rozróżnia okres. Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory); treść bez zmian.
+- **Oznaczenie odnośnika jak w akcie** ([ADR-0061](docs/adr/0061-odnosnik-ma-oznaczenie-jak-w-akcie-a-znacznik-numer-jednoznaczny.md)): numeracja odnośników wznawiana
+  od sekcji dokumentu (`w:footnotePr/w:numRestart`) i jej zapis (`w:numFmt`) są odczytywane — odnośnik „1)"
+  załącznika nie wychodzi już jako „12)", a odnośnik obwieszczenia jako „a)". `symbol` niesie oznaczenie,
+  `id-odnosnika` — numer jednoznaczny w dokumencie. Powtórzony znacznik (w pliku zwykły tekst z numerem
+  drukowanym) wskazuje odnośnik swojej sekcji, a znacznik wpisany tekstem nie przejmuje odnośnika dalszej sekcji.
+  Model: `Footnote.Marker`, `Footnote.Run`; wspólne rozstrzyganie znacznika: `FootnoteResolver`.
+  - W korpusie zmienia się 225 z 2321 dokumentów — te, w których odnośniki stoją w więcej niż jednej sekcji: 3284 odnośniki w 223 plikach dostają oznaczenie jak w akcie. 115 odsyłaczy, które wskazywały odnośnik innej sekcji albo odnośnik przejęty przez znacznik wpisany tekstem (przytoczony odnośnik aktu zmieniającego, objaśnienie pod tabelą), wychodzi indeksem górnym, 9 powtórzonych znaczników zyskuje odsyłacz, a przejęte odnośniki wracają na swoje miejsce (2 dotąd nieosadzone). Wersje czasowe ([ADR-0060](docs/adr/0060-jednostka-drukowana-dwa-razy-to-dwie-wersje-rozrozniane-okresem.md)): okres rozróżnia 479 z 591 jednostek o powtórzonym eId (było 477), `obowiazuje-do` niesie 514 jednostek (było 501). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory), pokrycie tekstu bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

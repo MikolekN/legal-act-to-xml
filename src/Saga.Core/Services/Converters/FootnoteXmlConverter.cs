@@ -26,31 +26,6 @@ namespace Saga.Core.Services.Converters
             XmlConverterConstants.Contents.Citation.Text.Element,
         ];
 
-        /// <summary>Odnośniki czekające na swój znacznik oraz te już osadzone.</summary>
-        private sealed class Registry(IEnumerable<Footnote> footnotes)
-        {
-            private readonly Dictionary<string, Footnote> _pending = footnotes
-                .GroupBy(footnote => footnote.Symbol)
-                .ToDictionary(group => group.Key, group => group.First());
-
-            private readonly HashSet<string> _embedded = [];
-            private int _last;
-
-            // Odwołania stoją w akcie w kolejności numerów, więc znacznik z numerem nie większym od
-            // ostatnio osadzonego nie otwiera nowego odnośnika.
-            internal Footnote? Take(string symbol)
-            {
-                if (!int.TryParse(symbol, out var number) || number <= _last || !_pending.Remove(symbol, out var footnote))
-                    return null;
-
-                _last = number;
-                _embedded.Add(symbol);
-                return footnote;
-            }
-
-            internal bool IsEmbedded(string symbol) => _embedded.Contains(symbol);
-        }
-
         /// <summary>
         /// Przechodzi treść aktu w kolejności dokumentu i podstawia odnośniki pod ich znaczniki. Każdy odnośnik
         /// trafia pod pierwszy znacznik ze swoim numerem; odnośnik, którego znacznik stoi poza zdaniem i tytułem
@@ -58,7 +33,7 @@ namespace Saga.Core.Services.Converters
         /// </summary>
         internal static void Embed(XElement actElement, LegalDocument document)
         {
-            var registry = new Registry(document.Footnotes);
+            var registry = new FootnoteResolver(document.Footnotes);
             foreach (var text in InlineTextXml.Texts(actElement))
             {
                 if (!Marker.IsMatch(text.Value))
@@ -73,7 +48,7 @@ namespace Saga.Core.Services.Converters
         /// <summary>Tekst bez znaczników odnośników — do pól, które niosą sam tytuł.</summary>
         internal static string WithoutMarkers(string text) => MarkerWithLeadingSpace.Replace(text, string.Empty).TrimEnd();
 
-        private static IEnumerable<XNode> Render(string value, Registry registry, bool allowRepeats)
+        private static IEnumerable<XNode> Render(string value, FootnoteResolver registry, bool allowRepeats)
         {
             var nodes = new List<XNode>();
             var cursor = 0;
@@ -83,7 +58,7 @@ namespace Saga.Core.Services.Converters
                 // nawias kwadratowy z innym tekstem zostaje tekstem.
                 var inside = RenderMarker(marker.Value, registry, allowRepeats)
                     ?? (FootnoteMarkers.Bare.IsMatch(marker.Value[1..^1])
-                        ? [Element(XmlConverterConstants.Contents.Superscript, marker.Value[1..^1].Trim())]
+                        ? [Element(XmlConverterConstants.Contents.Superscript, registry.AsPrinted(marker.Value[1..^1].Trim()))]
                         : null);
                 if (inside is null)
                     continue;
@@ -103,7 +78,7 @@ namespace Saga.Core.Services.Converters
         /// Zawartość jednego znacznika: odnośnik albo odsyłacz za każdy rozpoznany numer, a to, co stoi między
         /// numerami („, "), w indeksie górnym jak w akcie. Null, gdy żaden numer nie jest odnośnikiem tego aktu.
         /// </summary>
-        private static List<XNode>? RenderMarker(string marker, Registry registry, bool allowRepeats)
+        private static List<XNode>? RenderMarker(string marker, FootnoteResolver registry, bool allowRepeats)
         {
             var inner = marker[1..^1];
             var nodes = new List<XNode>();
@@ -113,13 +88,13 @@ namespace Saga.Core.Services.Converters
             {
                 var symbol = number.Groups["number"].Value;
                 XElement? element =
-                    registry.Take(symbol) is { } footnote ? ToXml(footnote)
-                    : allowRepeats && registry.IsEmbedded(symbol) ? ToReference(symbol)
+                    registry.First(symbol) is { } footnote ? ToXml(footnote)
+                    : allowRepeats && registry.Repeated(symbol) is { } repeated ? ToReference(repeated)
                     : null;
                 if (element is null)
                     continue;
 
-                AddSuperscript(nodes, inner[cursor..number.Index]);
+                AddSuperscript(nodes, registry.AsPrinted(inner[cursor..number.Index]));
                 nodes.Add(element);
                 cursor = number.Index + number.Length;
             }
@@ -127,7 +102,7 @@ namespace Saga.Core.Services.Converters
             if (cursor == 0)
                 return null;
 
-            AddSuperscript(nodes, inner[cursor..]);
+            AddSuperscript(nodes, registry.AsPrinted(inner[cursor..]));
             return nodes;
         }
 
@@ -144,7 +119,7 @@ namespace Saga.Core.Services.Converters
         private static XElement ToXml(Footnote footnote)
         {
             var element = Element(XmlConverterConstants.Contents.Odnosnik.Element,
-                new XAttribute(XmlConverterConstants.Contents.Odnosnik.IdAttribute, footnote.Symbol),
+                new XAttribute(XmlConverterConstants.Contents.Odnosnik.IdAttribute, footnote.Marker),
                 new XAttribute(XmlConverterConstants.Contents.Odnosnik.SymbolAttribute, footnote.Symbol),
                 new XAttribute(XmlConverterConstants.Contents.GUID, footnote.Guid.ToString()));
 
@@ -159,9 +134,9 @@ namespace Saga.Core.Services.Converters
         }
 
         /// <summary>Kolejne odwołanie do odnośnika osadzonego wcześniej (w tekstach jednolitych częste).</summary>
-        private static XElement ToReference(string symbol) =>
+        private static XElement ToReference(Footnote footnote) =>
             Element(XmlConverterConstants.Contents.Odnosnik.ReferenceElement,
-                new XAttribute(XmlConverterConstants.Contents.Odnosnik.IdAttribute, symbol),
-                new XAttribute(XmlConverterConstants.Contents.Odnosnik.SymbolAttribute, symbol));
+                new XAttribute(XmlConverterConstants.Contents.Odnosnik.IdAttribute, footnote.Marker),
+                new XAttribute(XmlConverterConstants.Contents.Odnosnik.SymbolAttribute, footnote.Symbol));
     }
 }

@@ -155,13 +155,54 @@ namespace Saga.Core.Tests
         /// górnym („{, }" między dwoma odwołaniami). Identyfikatory <c>w:id</c> zaczynają się od 2:
         /// wcześniejsze Word oddaje separatorom, więc id NIE jest numerem przypisu.
         /// </summary>
-        internal static byte[] WithFootnotes(IReadOnlyList<string> footnotes, params string[] bodyLines)
+        internal static byte[] WithFootnotes(IReadOnlyList<string> footnotes, params string[] bodyLines) =>
+            WithFootnotes(footnotes, new Word.Body(bodyLines.Select(FootnotedParagraph).ToArray<OpenXmlElement>()));
+
+        /// <summary>
+        /// Sekcja dokumentu z własnymi ustawieniami przypisów: czy wznawia numerację i jakim zapisem ją prowadzi
+        /// (null = liczby). Wiersze jak w <see cref="WithFootnotes(IReadOnlyList{string}, string[])"/>.
+        /// </summary>
+        internal sealed record FootnoteSection(bool Restart, Word.NumberFormatValues? Format, params string[] Lines);
+
+        /// <summary>
+        /// Dokument z przypisami w kilku sekcjach. Sekcję kończy jej ostatni akapit (niesie <c>w:sectPr</c>),
+        /// a ostatnią — <c>w:sectPr</c> treści, tak jak zapisuje to Word.
+        /// </summary>
+        internal static byte[] WithFootnoteSections(IReadOnlyList<string> footnotes, params FootnoteSection[] sections)
+        {
+            var body = new Word.Body();
+            for (var i = 0; i < sections.Length; i++)
+            {
+                var paragraphs = sections[i].Lines.Select(FootnotedParagraph).ToList();
+                var end = new Word.SectionProperties(FootnoteSettings(sections[i]));
+                if (i < sections.Length - 1)
+                    paragraphs[^1].PrependChild(new Word.ParagraphProperties(end));
+
+                body.Append(paragraphs);
+                if (i == sections.Length - 1)
+                    body.AppendChild(end);
+            }
+
+            return WithFootnotes(footnotes, body);
+        }
+
+        private static Word.FootnoteProperties FootnoteSettings(FootnoteSection section)
+        {
+            var settings = new Word.FootnoteProperties();
+            if (section.Format is { } format)
+                settings.AppendChild(new Word.NumberingFormat { Val = format });
+            if (section.Restart)
+                settings.AppendChild(new Word.NumberingRestart { Val = Word.RestartNumberValues.EachSection });
+            return settings;
+        }
+
+        private static byte[] WithFootnotes(IReadOnlyList<string> footnotes, Word.Body body)
         {
             using var stream = new MemoryStream();
             using (var document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
                 var main = document.AddMainDocumentPart();
-                main.Document = new Word.Document(new Word.Body(bodyLines.Select(FootnotedParagraph).ToArray<OpenXmlElement>()));
+                main.Document = new Word.Document(body);
 
                 var part = main.AddNewPart<FootnotesPart>();
                 part.Footnotes = new Word.Footnotes(

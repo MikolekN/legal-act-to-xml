@@ -46,9 +46,12 @@ namespace Saga.Core.Services.EntryIntoForce
         private static readonly Regex OnDay = new(
             @"^\s*z\s+dniem\s+(?<date>\d{1,2}\s+\p{L}+\s+\d{4})\s*r\.", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        private static readonly Regex MarkerNumber = new(@"(?<no>\d+)\)", RegexOptions.Compiled);
+
         /// <summary>Odnośnik stojący przy jednostce i to, co mówi o jej wersji.</summary>
         private sealed class Marked
         {
+            /// <summary>Oznaczenie odnośnika jak w akcie; numer ze znacznika, gdy odnośnika pod nim nie ma.</summary>
             internal required string Footnote { get; init; }
             internal required string Note { get; init; }
             internal required bool Repealed { get; init; }
@@ -61,29 +64,76 @@ namespace Saga.Core.Services.EntryIntoForce
             if (document.Announcement is not { IsConsolidatedText: true } || document.Footnotes.Count == 0)
                 return;
 
-            var notes = document.Footnotes
-                .GroupBy(footnote => footnote.Symbol)
-                .ToDictionary(group => group.Key, group => string.Join(" ", group.First().Paragraphs));
-
-            AssignAmong(document.Articles.Cast<BaseEntity>().ToList(), notes, inherited: null, inheritedMarker: null);
+            AssignAmong(document.Articles.Cast<BaseEntity>().ToList(), ReadMarkers(document), inherited: null);
         }
 
-        private static void AssignAmong(
-            List<BaseEntity> siblings, Dictionary<string, string> notes, WordingVersion? inherited, string? inheritedMarker)
+        /// <summary>
+        /// Odnośniki stojące zaraz za oznaczeniami jednostek. Znaczniki czyta się w kolejności dokumentu, bo dopiero
+        /// ona mówi, który odnośnik stoi za numerem (<see cref="FootnoteResolver"/>).
+        /// </summary>
+        private static Dictionary<BaseEntity, Marked> ReadMarkers(LegalDocument document)
         {
-            // Jednostka bez własnego odnośnika dzieli wersję jednostki nadrzędnej. Znacznik artykułu stoi też na
-            // początku jego pierwszego ustępu („Art. 5.[7)] 1. …") — to ten sam odnośnik, nie osobna wersja ustępu.
+            var resolver = new FootnoteResolver(document.Footnotes);
             var marked = new Dictionary<BaseEntity, Marked>();
-            foreach (var unit in siblings)
-            {
-                unit.Version = inherited;
-                if (Read(unit, notes) is not { } own || own.Footnote == inheritedMarker)
-                    continue;
+            foreach (var article in document.Articles)
+                Walk(article);
+            return marked;
 
-                marked[unit] = own;
-                if (own.Version is not null)
-                    unit.Version = own.Version;
+            void Walk(BaseEntity unit)
+            {
+                // Kolejność dokumentu: część wspólna zamykająca wyliczenie stoi po jego pozycjach.
+                var children = EditorialUnitWalker.Children(unit, includeAmendmentContent: false)
+                    .OrderBy(child => child is CommonPart { Type: CommonPartType.WrapUp })
+                    .ToList();
+                if (unit is not Article)
+                {
+                    Read(unit, unit.ContentText ?? string.Empty);
+                    children.ForEach(Walk);
+                    return;
+                }
+
+                // Treść artykułu powtarza treść jego pierwszego ustępu razem ze znacznikami, więc czyta się je raz
+                // — przy ustępie. Znacznik stojący zaraz za oznaczeniem artykułu („Art. 5.[7)] 1. …") mówi
+                // o artykule, choć otwiera też tekst ustępu.
+                children.ForEach(Walk);
+                var text = unit.ContentText ?? string.Empty;
+                var tail = ParagraphClassifier.ArticleTailCapture.Match(text.Trim()) is { Success: true } match ? match.Groups[1].Value : text;
+                if (!OwnMarker.IsMatch(tail))
+                    return;
+
+                if (children.FirstOrDefault() is { } opening && marked.Remove(opening, out var own))
+                    marked[unit] = own;
             }
+
+            void Read(BaseEntity unit, string text)
+            {
+                var leading = OwnMarker.Match(text);
+                foreach (Match marker in FootnoteMarkers.Reference.Matches(text))
+                {
+                    foreach (Match number in MarkerNumber.Matches(marker.Value))
+                    {
+                        var footnote = resolver.First(number.Groups["no"].Value);
+                        var isLeading = leading.Success && marker.Index + number.Groups["no"].Index == leading.Groups["no"].Index;
+                        if (!isLeading)
+                            continue;
+
+                        footnote ??= resolver.Repeated(number.Groups["no"].Value);
+                        marked[unit] = Describe(new Marked
+                        {
+                            Footnote = footnote?.Symbol ?? number.Groups["no"].Value,
+                            Note = footnote is null ? string.Empty : string.Join(" ", footnote.Paragraphs),
+                            Repealed = leading.Groups["repealed"].Success,
+                        });
+                    }
+                }
+            }
+        }
+
+        private static void AssignAmong(List<BaseEntity> siblings, Dictionary<BaseEntity, Marked> marked, WordingVersion? inherited)
+        {
+            // Jednostka bez własnego odnośnika dzieli wersję jednostki nadrzędnej.
+            foreach (var unit in siblings)
+                unit.Version = marked.GetValueOrDefault(unit)?.Version ?? inherited;
 
             // Druga jednostka o tym samym oznaczeniu, z własnym odnośnikiem, jest brzmieniem przyszłym — także gdy
             // jej odnośnik nie mówi o wejściu w życie („W brzmieniu ustalonym przez art. 2 ustawy, o której mowa
@@ -115,7 +165,7 @@ namespace Saga.Core.Services.EntryIntoForce
             {
                 var children = EditorialUnitWalker.Children(unit, includeAmendmentContent: false).ToList();
                 if (children.Count > 0)
-                    AssignAmong(children, notes, unit.Version, marked.TryGetValue(unit, out var own) ? own.Footnote : inheritedMarker);
+                    AssignAmong(children, marked, unit.Version);
             }
         }
 
@@ -124,35 +174,15 @@ namespace Saga.Core.Services.EntryIntoForce
             && left.Number is { Designation.Length: > 0 } number
             && number.Designation == right.Number?.Designation;
 
-        /// <summary>Odnośnik stojący zaraz za oznaczeniem jednostki i wersja, którą sam zapisuje; null, gdy go nie ma.</summary>
-        private static Marked? Read(BaseEntity unit, Dictionary<string, string> notes)
+        /// <summary>Wersja, którą odnośnik sam zapisuje; druga kopia jednostki dostaje ją z układu.</summary>
+        private static Marked Describe(Marked own)
         {
-            if (OwnMarker.Match(TextAfterDesignation(unit)) is not { Success: true } marker)
-                return null;
-
-            var note = notes.GetValueOrDefault(marker.Groups["no"].Value) ?? string.Empty;
-            var own = new Marked
-            {
-                Footnote = marker.Groups["no"].Value,
-                Note = note,
-                Repealed = marker.Groups["repealed"].Success,
-            };
-
-            if (CurrentNote.IsMatch(note))
+            if (CurrentNote.IsMatch(own.Note))
                 own.Version = new WordingVersion { Kind = WordingVersionKind.Current };
-            else if ((ChangeNote.IsMatch(note) || OwnEntryNote.IsMatch(note)) && NotYetInForce.IsMatch(note))
+            else if ((ChangeNote.IsMatch(own.Note) || OwnEntryNote.IsMatch(own.Note)) && NotYetInForce.IsMatch(own.Note))
                 own.Version = Future(own);
 
             return own;
-        }
-
-        /// <summary>Treść artykułu niesie jego oznaczenie („Art. 5.[7)] …"); treść pozostałych jednostek — nie.</summary>
-        private static string TextAfterDesignation(BaseEntity unit)
-        {
-            var text = unit.ContentText ?? string.Empty;
-            return unit is Article && ParagraphClassifier.ArticleTailCapture.Match(text.Trim()) is { Success: true } tail
-                ? tail.Groups[1].Value
-                : text;
         }
 
         private static WordingVersion Future(Marked own)

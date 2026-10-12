@@ -54,6 +54,16 @@ namespace Saga.Core.Ingest
     /// <summary>Symbol otwierający akapit: zapis liniowy (początek <see cref="DocumentBlock.Text"/>) i MathML.</summary>
     public sealed record BlockSymbol(string Text, string MathMl);
 
-    /// <summary>Przypis w reprezentacji pośredniej: numer, pod którym stoi w akcie, i akapity jego treści.</summary>
-    public sealed record BlockFootnote(string Symbol, IReadOnlyList<string> Paragraphs);
+    /// <summary>Przypis w reprezentacji pośredniej: oznaczenie, pod którym stoi w akcie, i akapity jego treści.</summary>
+    public sealed record BlockFootnote(string Symbol, IReadOnlyList<string> Paragraphs)
+    {
+        /// <summary>
+        /// Numer, pod którym znacznik stoi w <see cref="DocumentBlock.Text"/> — jednoznaczny w dokumencie.
+        /// Różni się od oznaczenia, gdy sekcja dokumentu wznawia numerację przypisów albo zmienia jej zapis.
+        /// </summary>
+        public string Marker { get; init; } = Symbol;
+
+        /// <summary>Ciąg numeracji (sekcja dokumentu), w którym przypis stoi.</summary>
+        public int Run { get; init; }
+    }
 }
