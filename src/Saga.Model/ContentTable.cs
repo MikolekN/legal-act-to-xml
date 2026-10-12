@@ -8,6 +8,11 @@ namespace Saga.Model
     public class ContentTable
     {
         public List<ContentTableRow> Rows { get; set; } = new();
+
+        /// <summary>
+        /// Objaśnienia drukowane pod tabelą (legenda skrótów i symboli użytych w komórkach), akapit po akapicie.
+        /// </summary>
+        public List<string> Description { get; set; } = new();
     }
 
     public class ContentTableRow

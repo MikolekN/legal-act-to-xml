@@ -267,6 +267,147 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "art_1", "art_2" }, document.Articles.Select(a => a.Id));
         }
 
+        // ============================================================
+        // Cudzysłowy cytowanej tabeli w jej komórkach — bez stylów
+        // ============================================================
+
+        private const string ChangesInAnAnnex =
+            "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w załączniku wprowadza się następujące zmiany:";
+
+        private const string EntryIntoForce = "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.";
+
+        private static string Act(params string[] body) =>
+            P("USTAWA") + P("z dnia 14 czerwca 2024 r.") + P("o zmianie ustawy o opłatach") + string.Concat(body);
+
+        private static string Table(params string[] rows) => "<w:tbl>" + string.Concat(rows) + "</w:tbl>";
+
+        [Theory]
+        // Cytowaną tabelę zamyka cudzysłów w dodatkowej komórce jej ostatniego wiersza, razem z interpunkcją komendy.
+        [InlineData("”,")]
+        [InlineData("”;")]
+        public void QuotationClosedInTheLastCellOfATable_EndsAtTheTable(string closing)
+        {
+            var document = ParseBody(Act(
+                P(ChangesInAnAnnex),
+                P("1) po tabeli 1 dodaje się tabelę 1a w brzmieniu:"),
+                P("„Tabela 1a. Stawki opłat"),
+                Table(Row(Cell("Bielizna"), Cell("282"), Cell("")), Row(Cell("Ogółem"), Cell("1 307"), Cell(closing))),
+                P("2) tytuł tabeli 4 otrzymuje brzmienie:"),
+                P("„Tabela 4. Stawki dla komendanta”."),
+                P(EntryIntoForce)));
+
+            // Przedtem tabela nie liczyła się w bilansie cudzysłowów: cytat się nie domykał i „2)" było treścią cytowaną.
+            var points = document.Articles.First().Paragraphs.Single().Points;
+            Assert.Equal(new[] { "art_1__pkt_1", "art_1__pkt_2" }, points.Select(p => p.Id));
+            Assert.Equal(new[] { "art_1", "art_2" }, document.Articles.Select(a => a.Id));
+
+            var content = points[0].Amendment!.Content!;
+            Assert.Single(content.Tables);
+            Assert.Equal("Tabela 1a. Stawki opłat", content.PlainText);
+            Assert.Equal("Tabela 4. Stawki dla komendanta", points[1].Amendment!.Content!.PlainText);
+        }
+
+        [Fact]
+        public void QuotationClosedInTheLastCellWithAFullStop_EndsWithoutAWarning()
+        {
+            var document = ParseBody(Act(
+                P(ChangesInAnAnnex),
+                P("1) po tabeli 1 dodaje się tabelę 1a w brzmieniu:"),
+                P("„Tabela 1a. Stawki opłat"),
+                Table(Row(Cell("Ogółem"), Cell("1 307"), Cell("”."))),
+                P(EntryIntoForce)));
+
+            Assert.Equal(new[] { "art_1", "art_2" }, document.Articles.Select(a => a.Id));
+
+            // Cytat domknął cudzysłów tabeli — nie trzeba go było odtwarzać ponownym przebiegiem (ADR-0049).
+            var point = document.Articles.First().Paragraphs.Single().Points.Single();
+            Assert.Single(point.Amendment!.Content!.Tables);
+            Assert.DoesNotContain(point.ValidationMessages, message => message.Message.Contains("niedomknięty"));
+        }
+
+        // Cudzysłów otwierający stoi w pierwszej komórce tabeli, a zamyka go objaśnienie pod tabelą.
+        private static LegalDocument ParseTableWithANote() => ParseBody(Act(
+            P(ChangesInAnAnnex),
+            P("1) w pkt 2 tabela otrzymuje brzmienie:"),
+            Table(Row(Cell("„"), Cell("Lp."), Cell("Temat")), Row(Cell(""), Cell("1"), Cell("Szkolenie*"))),
+            P("* Jedna godzina równa się 60 minutom.”,"),
+            P("2) uchyla się pkt 7."),
+            P(EntryIntoForce)));
+
+        [Fact]
+        public void TableOpeningAQuotation_IsFollowedByTheNoteThatClosesIt()
+        {
+            var document = ParseTableWithANote();
+
+            var points = document.Articles.First().Paragraphs.Single().Points;
+            Assert.Equal(new[] { "art_1__pkt_1", "art_1__pkt_2" }, points.Select(p => p.Id));
+
+            // Przedtem cytat kończył się z tabelą, a objaśnienie stawało się dalszą treścią przepisu zmieniającego.
+            // Akapit za tabelą cytowaną wprost jest objaśnieniem pod tą tabelą, nie osobnym tekstem cytowanym.
+            var content = points[0].Amendment!.Content!;
+            Assert.Equal(new[] { "* Jedna godzina równa się 60 minutom." }, content.Tables.Single().Description);
+            Assert.Null(content.PlainText);
+            Assert.Empty(points[0].Continuation);
+            Assert.Equal(",", points[0].Amendment!.TrailingPunctuation);
+        }
+
+        [Fact]
+        public void NoteUnderAQuotedTable_IsExportedAsItsDescription()
+        {
+            var xml = LegalDocumentConverter.Convert(ParseTableWithANote());
+
+            // Jeden cytat strukturalny: tabela, a w niej — za wierszami — objaśnienie.
+            var citation = Single(xml, "cytat-strukt");
+            var table = citation.Elements().Single();
+            Assert.Equal(new[] { "tbody", "opis-tabeli" }, ChildNames(table));
+            Assert.Equal("* Jedna godzina równa się 60 minutom.", table.Elements().Last().Value);
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
+
+            // Interpunkcja komendy stoi za cytatem, w zdaniu przepisu zmieniającego.
+            Assert.EndsWith(",", citation.Parent!.Value);
+        }
+
+        [SchemaPlFact]
+        public void QuotedTableWithADescription_IsSchemaValid_InTheActBody()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(ParseTableWithANote()).Elements().First()));
+        }
+
+        [Fact]
+        public void PairedQuotationInACell_DoesNotCloseTheQuotation()
+        {
+            var document = ParseBody(Act(
+                P(ChangesInAnAnnex),
+                P("1) po tabeli 1 dodaje się tabelę 1a w brzmieniu:"),
+                P("„Tabela 1a. Formy prawne"),
+                Table(Row(Cell("1"), Cell("„spółka akcyjna”"))),
+                P("Objaśnienie: forma prawna według rejestru.”,"),
+                P("2) uchyla się lp. 7."),
+                P(EntryIntoForce)));
+
+            var points = document.Articles.First().Paragraphs.Single().Points;
+            Assert.Equal(new[] { "art_1__pkt_1", "art_1__pkt_2" }, points.Select(p => p.Id));
+            var content = points[0].Amendment!.Content!;
+            Assert.Equal("Tabela 1a. Formy prawne", content.PlainText);
+            Assert.Equal(new[] { "Objaśnienie: forma prawna według rejestru." }, content.Tables.Single().Description);
+        }
+
+        [Fact]
+        public void TableThatOpensAndClosesItsQuotation_IsTheWholeQuotedContent()
+        {
+            var document = ParseBody(Act(
+                P(ChangesInAnAnnex),
+                P("1) w pkt 2 tabela otrzymuje brzmienie:"),
+                Table(Row(Cell("„Lp."), Cell("Temat")), Row(Cell("1"), Cell("Szkolenie”;"))),
+                P("2) uchyla się pkt 7."),
+                P(EntryIntoForce)));
+
+            var points = document.Articles.First().Paragraphs.Single().Points;
+            Assert.Equal(new[] { "art_1__pkt_1", "art_1__pkt_2" }, points.Select(p => p.Id));
+            Assert.Single(points[0].Amendment!.Content!.Tables);
+            Assert.Null(points[1].Amendment?.Content);
+        }
+
         [SchemaPlFact]
         public void AmendmentWithAQuotedTable_IsSchemaValid_InTheActBody()
         {

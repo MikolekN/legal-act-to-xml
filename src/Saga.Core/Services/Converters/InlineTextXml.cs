@@ -34,6 +34,7 @@ namespace Saga.Core.Services.Converters
             XmlConverterConstants.Table.Enumeration2,
             XmlConverterConstants.Table.Enumeration3,
             XmlConverterConstants.Table.Enumeration4,
+            XmlConverterConstants.Table.Description,
         ];
 
         // Indeks górny w kanale tekstowym: nawias tuż za literą albo cyfrą — „477[9]", „2[1a]", „m[2]".

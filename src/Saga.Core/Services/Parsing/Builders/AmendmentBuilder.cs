@@ -290,14 +290,18 @@ namespace Saga.Core.Services.Parsing.Builders
         /// <summary>
         /// Akapit bez oznaczenia w treści cytowanej: dalsza treść jednostki, za którą stoi (ADR-0029) — wzór,
         /// wiersz legendy, zdanie w nowym wierszu. Gdy cytat nie ma jeszcze żadnej jednostki, jest tekstem
-        /// cytowanym wprost („zdanie pierwsze otrzymuje brzmienie: „…"").
+        /// cytowanym wprost („zdanie pierwsze otrzymuje brzmienie: „…""), a za tabelą cytowaną wprost —
+        /// objaśnieniem pod tą tabelą (ADR-0050).
         /// </summary>
         private void AttachText(string text, AmendmentContent content, ContentFormula? formula = null, Ingest.BlockSymbol? symbol = null)
         {
             var unit = (BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? _currentParagraph;
             if (unit is null)
             {
-                AppendPlainText(content, text);
+                if (content.Tables.Count > 0)
+                    content.Tables[^1].Description.Add(text);
+                else
+                    AppendPlainText(content, text);
                 return;
             }
 

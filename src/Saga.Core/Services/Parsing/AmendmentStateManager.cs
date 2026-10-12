@@ -154,8 +154,10 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Zbiera tabelę stojącą w treści nowelizacji. Tabela tuż po komendzie („…w brzmieniu:") jest całą
-        /// treścią cytowaną: nie ma cudzysłowu, który by ją zamknął, więc nowelizację zamyka koniec tabeli.
-        /// Tabela w środku treści cytowanej należy do jednostki, za którą stoi — zbieranie trwa.
+        /// treścią cytowaną i nowelizację zamyka jej koniec — chyba że sama otwiera cudzysłów i go nie zamyka:
+        /// cytat biegnie wtedy dalej (objaśnienia pod tabelą) aż do cudzysłowu zamykającego.
+        /// Tabela w środku treści cytowanej należy do jednostki, za którą stoi — zbieranie trwa, dopóki
+        /// cudzysłów w jej ostatniej komórce nie domknie cytatu.
         /// </summary>
         public void CollectTable(ParsingContext context, ContentTable table)
         {
@@ -172,7 +174,8 @@ namespace Saga.Core.Services.Parsing
             collector.AddTable(table);
             context.AmendmentTriggerDetected = false;
 
-            if (opensQuotedContent)
+            var quotes = collector.QuoteTracker;
+            if (quotes.ClosureReached || (opensQuotedContent && !quotes.IsInsideQuote))
             {
                 Flush(context);
                 context.InsideAmendment = false;

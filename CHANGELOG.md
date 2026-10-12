@@ -595,6 +595,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   a cytat kończy się przed artykułem, od którego numeracja aktu zmieniającego biegnie dalej. Artykuł o tym samym
   numerze w cytacie kilku artykułów zostaje treścią cytowaną. Jednostka z komendą zachowuje ostrzeżenie.
   - W korpusie ze stylami bez zmian (0 z 2321 dokumentów). Bez stylów jedno rozporządzenie (dwa pliki) odzyskuje końcowy „§ 2"; cytat nie domykał się tam, bo cudzysłów zamykający cytowaną tabelę stoi w jej ostatniej komórce, a tabela nie bierze udziału w bilansie cudzysłowów (zgodność struktury rozporządzeń 97,31 % → 97,32 %).
+- **Cudzysłowy cytowanej tabeli liczą się w bilansie cytatu** ([ADR-0050](docs/adr/0050-cudzyslowy-cytowanej-tabeli-licza-sie-w-bilansie-cytatu.md)):
+  cytowaną tabelę zamyka cudzysłów w jej ostatniej komórce („”,"), a tabela, która cudzysłów otwiera i go nie
+  zamyka, nie kończy cytatu — biegnie on dalej, do cudzysłowu zamykającego. Przedtem tabela w bilansie się nie
+  liczyła: bez stylów cytat nie domykał się i wchłaniał kolejne jednostki aktu zmieniającego.
+  - **Objaśnienie pod cytowaną tabelą** (`ContentTable.Description`, w eksporcie `opis-tabeli`): akapit bez
+    oznaczenia za tabelą cytowaną wprost należy do niej. Przedtem wypadał z cytatu jako `fragment` przepisu
+    zmieniającego, z osieroconym cudzysłowem zamykającym.
+  - W korpusie ze stylami zmienia się jedno rozporządzenie (dwa pliki): 18 objaśnień pod cytowanymi tabelami przechodzi z `fragment` przepisu zmieniającego do `opis-tabeli`; zgodnych ze schematem jest nadal 1937 z 2321, pokrycie tekstu bez zmian. Bez stylów zgodność struktury rozporządzeń rośnie z 97,32 % do 97,35 %: rozporządzenie z cudzysłowem zamykającym w komórce tabeli (dwa pliki) nie gubi już jednostek aktu zmieniającego.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

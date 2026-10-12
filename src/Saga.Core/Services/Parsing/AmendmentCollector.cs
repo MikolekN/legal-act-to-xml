@@ -135,14 +135,22 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Dodaje tabelę do bufora nowelizacji, w miejscu, w którym stoi w treści cytowanej. Tabela nie bierze
-        /// udziału w bilansie cudzysłowów — jej granice wyznacza ona sama.
+        /// Dodaje tabelę do bufora nowelizacji, w miejscu, w którym stoi w treści cytowanej. Cudzysłowy w jej
+        /// komórkach liczą się w bilansie jak w akapicie: cytowaną tabelę otwiera się i zamyka także w niej
+        /// samej — cudzysłowem w pierwszej komórce albo w ostatniej, razem z interpunkcją komendy („…",).
+        /// Dla bilansu tabela jest jednym blokiem.
         /// </summary>
         public void AddTable(ContentTable table)
         {
             _paragraphs.Add(new CollectedAmendmentParagraph(string.Empty, null, null) { Table = table });
+            QuoteTracker.Observe(TextOf(table), hasStyle: false);
             Log.Debug("AmendmentCollector: dodano tabelę #{Index} ({Rows} wierszy)", _paragraphs.Count, table.Rows.Count);
         }
+
+        private static string TextOf(ContentTable table) => string.Join(
+            "\n",
+            table.Rows.SelectMany(row => row.Cells).SelectMany(cell => cell.Paragraphs)
+                .Where(text => !string.IsNullOrWhiteSpace(text)));
 
         /// <summary>
         /// Resetuje kolektor do stanu poczatkowego.

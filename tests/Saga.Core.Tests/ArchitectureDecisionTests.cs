@@ -1471,6 +1471,43 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0050: cudzysłowy cytowanej tabeli liczą się w bilansie cytatu
+        // ============================================================
+
+        [Fact]
+        public void Adr0050_QuotationMarksOfAQuotedTable_CountInTheBalance()
+        {
+            static DocumentBlock Text(string text) => new() { Text = text };
+            static DocumentBlock Cell(int table, int row, int column, string text) =>
+                new() { Text = text, TableCell = new BlockTableCell { Table = table, Row = row, Column = column } };
+
+            DocumentBlock[] blocks =
+            [
+                Text("USTAWA"), Text("z dnia 14 czerwca 2024 r."), Text("o zmianie ustawy o opłatach"),
+                Text("Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w załączniku wprowadza się następujące zmiany:"),
+                // Cytat zamyka cudzysłów w ostatniej komórce tabeli.
+                Text("1) po tabeli 1 dodaje się tabelę 1a w brzmieniu:"),
+                Text("„Tabela 1a. Stawki opłat"),
+                Cell(0, 0, 0, "Ogółem"), Cell(0, 0, 1, "1 307"), Cell(0, 0, 2, "”,"),
+                // Tabela otwiera cudzysłów, a zamyka go objaśnienie pod nią.
+                Text("2) w pkt 2 tabela otrzymuje brzmienie:"),
+                Cell(1, 0, 0, "„"), Cell(1, 0, 1, "Szkolenie*"),
+                Text("* Jedna godzina równa się 60 minutom.”;"),
+                Text("3) uchyla się pkt 7."),
+                Text("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            ];
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var points = document.Articles.First().Paragraphs.Single().Points;
+            Assert.Equal(new[] { "1", "2", "3" }, points.Select(point => point.Number?.Value));
+            Assert.Equal(new[] { "1", "2" }, document.Articles.Select(article => article.Number?.Value));
+
+            // Akapit za tabelą cytowaną wprost jest jej objaśnieniem.
+            var table = Assert.Single(points[1].Amendment!.Content!.Tables);
+            Assert.Equal(new[] { "* Jedna godzina równa się 60 minutom." }, table.Description);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

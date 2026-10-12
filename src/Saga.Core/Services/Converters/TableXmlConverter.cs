@@ -38,8 +38,14 @@ namespace Saga.Core.Services.Converters
             if (rows.Count == 0)
                 return null;
 
-            return Element(XmlConverterConstants.Table.Element, Guid(),
+            var element = Element(XmlConverterConstants.Table.Element, Guid(),
                 Element(XmlConverterConstants.Table.Body, rows));
+
+            // Schemat ma na objaśnienia jeden element, więc akapity legendy stoją w nim jeden za drugim.
+            if (table.Description.Count > 0)
+                element.Add(Element(XmlConverterConstants.Table.Description, string.Join(" ", table.Description)));
+
+            return element;
         }
 
         private static XElement ToRow(ContentTableRow row)

@@ -59,6 +59,9 @@ namespace Saga.Core.Services.Converters
             internal const string TitleElement = "tytul-tabeli";
             internal const string Element = "tabela";
             internal const string Body = "tbody";
+
+            /// <summary>Legenda/objaśnienie drukowane pod tabelą.</summary>
+            internal const string Description = "opis-tabeli";
             internal const string Row = "tr";
             internal const string Cell = "td";
             internal const string StyleAttribute = "style";

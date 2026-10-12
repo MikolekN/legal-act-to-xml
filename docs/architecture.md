@@ -40,7 +40,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje) |
 | `ActSignature.cs` | Formuła podpisu zamykająca akt: organ, osoba i ewentualne „wz." / „z up." (`Capacity`), jak stoją w akcie (`LegalDocument.Signature`; kolejne formuły aktu wydanego wspólnie — `LegalDocument.CoSignatures`) |
 | `Annex.cs` | Załącznik aktu (`LegalDocument.Annexes`): wskazanie aktu, oznaczenie i numer (eId `zal_1`; bez numeru — bez eId), tytuł, treść w kolejności dokumentu (`AnnexBlock`: akapit, tabela albo jednostka redakcyjna) |
-| `ContentTable.cs` | Tabela w treści: wiersze (znacznik wiersza nagłówka) i komórki ze scaleniami i akapitami |
+| `ContentTable.cs` | Tabela w treści: wiersze (znacznik wiersza nagłówka), komórki ze scaleniami i akapitami oraz objaśnienia pod tabelą (`Description`, w eksporcie `opis-tabeli`) |
 | `Footnote.cs` | Odnośnik (przypis): numer jak w akcie i akapity treści; rejestr w `LegalDocument.Footnotes`, miejsce odwołania niesie znacznik `[N)]` w tekście jednostki — [ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md) |
 | `CommonPartType.cs` | Enum: `Intro` / `WrapUp` |
 | `LegalActType.cs` | Enum rodzaju aktu: `Statute`, `Bill`, `Regulation`, `Code`, `Ordinance`, `RegulatoryImpactAssessment`, `AmendingStatute`, `Announcement`, `Resolution`, `ExecutiveOrder`, `LocalLegalAct` |
@@ -480,7 +480,7 @@ Pattern: `IEntityBuilder<TInput, TResult>` — wspólny kontrakt.
 | `PointBuilder` | `PointBuildInput(...)` | `Point` | Tworzy punkt; `EnsureForLetter()` tworzy implicit punkt jeśli brak |
 | `LetterBuilder` | `LetterBuildInput(...)` | `Letter` | Tworzy literę; `EnsureForTiret()` tworzy implicit literę jeśli brak |
 | `TiretBuilder` | `TiretBuildInput(...)` | `Tiret` | Tworzy tiret z indeksem sekwencyjnym |
-| `AmendmentBuilder` | `AmendmentCollector` | `AmendmentContent` | Buduje hierarchiczną treść nowelizacji z zebranych akapitów; akapit bez oznaczenia i tabela są dalszą treścią jednostki, za którą stoją (`Continuation`, [ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)), a bez jednostki przed sobą — tekstem albo tabelą cytowaną wprost; artykuł wymaga oznaczenia w treści (sam styl go nie czyni), a akapit w stylu innej jednostki bez oznaczenia jest dalszą treścią jednostki przed nim (ADR-0039) |
+| `AmendmentBuilder` | `AmendmentCollector` | `AmendmentContent` | Buduje hierarchiczną treść nowelizacji z zebranych akapitów; akapit bez oznaczenia i tabela są dalszą treścią jednostki, za którą stoją (`Continuation`, [ADR-0029](adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)), a bez jednostki przed sobą — tekstem albo tabelą cytowaną wprost (akapit za taką tabelą jest jej objaśnieniem, a cudzysłowy w jej komórkach liczą się w bilansie cytatu — [ADR-0050](adr/0050-cudzyslowy-cytowanej-tabeli-licza-sie-w-bilansie-cytatu.md)); artykuł wymaga oznaczenia w treści (sam styl go nie czyni), a akapit w stylu innej jednostki bez oznaczenia jest dalszą treścią jednostki przed nim (ADR-0039) |
 
 Poza wzorcem `IEntityBuilder<TInput, TResult>` (jednostki redakcyjne) w tym samym katalogu żyje:
 

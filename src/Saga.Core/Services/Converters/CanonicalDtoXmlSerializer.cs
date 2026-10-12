@@ -91,12 +91,14 @@ namespace Saga.Core.Services.Converters
             : SerializeTextOrTable(block);
 
         private static XElement SerializeTextOrTable(ContentBlock block) => block.Table is { } table
-            ? new XElement("table", table.Rows.Select(row => new XElement("row",
-                row.IsHeader ? new XAttribute("header", true) : null,
-                row.Cells.Select(cell => new XElement("cell",
-                    cell.ColumnSpan > 1 ? new XAttribute("columnSpan", cell.ColumnSpan) : null,
-                    cell.RowSpan > 1 ? new XAttribute("rowSpan", cell.RowSpan) : null,
-                    cell.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph)))))))
+            ? new XElement("table",
+                table.Rows.Select(row => new XElement("row",
+                    row.IsHeader ? new XAttribute("header", true) : null,
+                    row.Cells.Select(cell => new XElement("cell",
+                        cell.ColumnSpan > 1 ? new XAttribute("columnSpan", cell.ColumnSpan) : null,
+                        cell.RowSpan > 1 ? new XAttribute("rowSpan", cell.RowSpan) : null,
+                        cell.Paragraphs.Select(paragraph => new XElement("paragraph", paragraph)))))),
+                table.Description.Select(paragraph => new XElement("description", paragraph)))
             : new XElement(block.Formula is null ? "paragraph" : "formula", block.Text);
 
         private static XElement SerializePart(Part part)
