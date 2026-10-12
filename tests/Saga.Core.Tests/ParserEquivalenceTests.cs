@@ -241,7 +241,7 @@ namespace Saga.Core.Tests
             // a końcowy artykuł aktu zmieniającego NIE został połknięty do treści nowelizacji.
             Assert.Contains("AMENDMENT Modification obj=Article", docxDescription);
             Assert.Contains("AMENDMENT Repeal", docxDescription);
-            Assert.Contains("plaintext | siedmiu dni", docxDescription);
+            Assert.Contains("textchange | trzech dni → siedmiu dni", docxDescription);
             Assert.Equal(2, docxModel.Articles.Count());
             Assert.Equal(2, txtModel.Articles.Count());
         }

@@ -404,7 +404,8 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Zamiana wyrazów (§ 87-88 ZTP): komenda kompletna w jednym akapicie (bez cytowanego bloku
-        /// po niej) → natychmiastowa nowelizacja z nowym brzmieniem wyrazów jako treścią (werbatim).
+        /// po niej) → natychmiastowa nowelizacja ze zmianą w tekście (<see cref="TextChange"/>: wyrazy
+        /// zastępowane i zastępujące, werbatim), bez treści cytowanej (ADR-0052).
         /// Operacja WYMUSZONA na Modification — DetectOperationType na tekście właściciela mógłby
         /// zostać przeinaczony przez czasowniki wewnątrz cytowanych wyrazów („dodaje się"/„uchyla się").
         /// </summary>
@@ -428,20 +429,15 @@ namespace Saga.Core.Services.Parsing
             var targets = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid);
             collector.Begin(owner, targets);
 
-            var content = new AmendmentContent
+            var content = new AmendmentContent { ObjectType = AmendmentObjectType.None };
+            // Odstęp tuż za cudzysłowem otwierającym („„ , o którym mowa"") jest zabiegiem składu, nie tekstem.
+            var change = new TextChange
             {
-                ObjectType = AmendmentObjectType.None,
-                PlainText = command.NewWording,
+                OldText = (command.OldWording ?? string.Empty).Trim(),
+                NewText = (command.NewWording ?? string.Empty).Trim(),
             };
-            var amendment = _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(content, collector, context,
-                AmendmentOperationType.Modification));
-
-            // Nowe wyrazy stoją w komendzie w cudzysłowie („…” zastępuje się wyrazami „…”).
-            if (amendment != null)
-            {
-                amendment.HasOpeningQuote = true;
-                amendment.HasClosingQuote = true;
-            }
+            _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(content, collector, context,
+                AmendmentOperationType.Modification, [change]));
 
             collector.Reset();
         }

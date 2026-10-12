@@ -299,6 +299,9 @@ namespace Saga.Core.Services.Converters
                 el.Add(targetEl);
             }
 
+            foreach (var change in amendment.TextChanges)
+                el.Add(new XElement("textChange", new XAttribute("old", change.OldText), new XAttribute("new", change.NewText)));
+
             if (amendment.Content != null)
                 el.Add(SerializeAmendmentContent(amendment.Content));
 

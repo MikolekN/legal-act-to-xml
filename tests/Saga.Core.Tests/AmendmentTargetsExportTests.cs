@@ -31,7 +31,7 @@ namespace Saga.Core.Tests
 
         private static List<XElement> Commands(XDocument xml) =>
             xml.Descendants()
-               .Where(e => e.Name.LocalName is "cytat-strukt" or "cytat-w-tekscie" or "uchyl")
+               .Where(e => e.Name.LocalName is "cytat-strukt" or "cytat-w-tekscie" or "uchyl" or "zamien-tekst")
                .ToList();
 
         // Po nazwie lokalnej — atrybuty GUID stoją w przestrzeni „gd".
@@ -138,7 +138,9 @@ namespace Saga.Core.Tests
             var commands = Commands(xml);
 
             Assert.Equal(new[] { "art_4__ust_1", "art_4__ust_8" }, commands.Select(c => Attr(c, "element-eId")));
-            Assert.All(commands, c => Assert.Equal("szkolnictwa wyższego", c.Value));
+            Assert.All(commands, c => Assert.Equal("zamien-tekst", c.Name.LocalName));
+            Assert.All(commands, c => Assert.Equal("rozwoju regionalnego", Attr(c, "stary-tekst")));
+            Assert.All(commands, c => Assert.Equal("szkolnictwa wyższego", Attr(c, "nowy-tekst")));
             Assert.NotEqual(Attr(commands[0], "nowGUID"), Attr(commands[1], "nowGUID"));
         }
 
@@ -171,7 +173,7 @@ namespace Saga.Core.Tests
                 "b) wyrazy „pkt 11 i 12” zastępuje się wyrazami „pkt 11-12”;");
 
             var perLetter = Commands(xml)
-                .GroupBy(c => c.Value)
+                .GroupBy(c => Attr(c, "nowy-tekst"))
                 .Select(group => group.Select(c => Attr(c, "element-eId")).ToArray())
                 .ToList();
 
@@ -196,15 +198,36 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void ReplacedWords_AreQuotedOnBothEnds_ByTheAttribute()
+        public void ReplacedWords_AreAnInstructionBeforeTheSentenceText_NotACitation()
         {
-            // Jak w przykładach autorów schematu: cudzysłowy w atrybucie („oba"), nie w treści cytatu.
+            // Jak w przykładach autorów schematu (DU/2026/26): zmiana wyrazów nie przytacza brzmienia jednostki,
+            // więc jest instrukcją „now:zamien-tekst" z wyrazami zastępowanymi i zastępującymi, przed tekstem zdania.
             var (xml, _) = Convert("1) w art. 5 wyrazy „organ właściwy” zastępuje się wyrazami „organ nadzoru”;");
 
-            var citation = Assert.Single(Commands(xml));
-            Assert.Equal("cytat-w-tekscie", citation.Name.LocalName);
-            Assert.Equal("oba", Attr(citation, "cudzyslowy"));
-            Assert.Equal("organ nadzoru", citation.Value);
+            var instruction = Assert.Single(Commands(xml));
+            Assert.Equal("zamien-tekst", instruction.Name.LocalName);
+            Assert.Equal(XmlConverterConstants.AmendmentNamespace, instruction.Name.NamespaceName);
+            Assert.Equal("organ właściwy", Attr(instruction, "stary-tekst"));
+            Assert.Equal("organ nadzoru", Attr(instruction, "nowy-tekst"));
+            Assert.Equal("art_5", Attr(instruction, "element-eId"));
+            Assert.NotNull(Attr(instruction, "akt"));
+            Assert.True(instruction.IsEmpty);
+
+            // Zdanie zachowuje swój tekst w całości, z cudzysłowami; instrukcja stoi przed nim.
+            var sentence = instruction.Parent!;
+            Assert.Same(instruction, sentence.FirstNode);
+            Assert.Equal("w art. 5 wyrazy „organ właściwy” zastępuje się wyrazami „organ nadzoru”;", sentence.Value);
+        }
+
+        [Fact]
+        public void ReplacedWords_CarryNoSpaceFromInsideTheQuotationMarks()
+        {
+            // Korpus: 361913_3209300 — odstęp za cudzysłowem otwierającym oddziela go od przecinka w składzie.
+            var (xml, _) = Convert("1) w art. 5 wyrazy „ , o którym mowa w ust. 4” zastępuje się wyrazami „ kluczowym”;");
+
+            var instruction = Assert.Single(Commands(xml));
+            Assert.Equal(", o którym mowa w ust. 4", Attr(instruction, "stary-tekst"));
+            Assert.Equal("kluczowym", Attr(instruction, "nowy-tekst"));
         }
 
         [Fact]

@@ -30,6 +30,12 @@ namespace Saga.Model
         public AmendmentContent? Content { get; set; }
 
         /// <summary>
+        /// Zmiany w tekście jednostek wskazanych celem, bez przytoczenia ich brzmienia („wyrazy „X" zastępuje się
+        /// wyrazami „Y""). Każda dotyczy wszystkich celów nowelizacji; treści cytowanej zmiana wyrazów nie ma.
+        /// </summary>
+        public List<TextChange> TextChanges { get; set; } = new();
+
+        /// <summary>
         /// Informacja o ustawie, której dotyczy nowelizacja (rok i lista pozycji publikatora).
         /// </summary>
         public JournalInfo TargetLegalAct { get; set; } = new();

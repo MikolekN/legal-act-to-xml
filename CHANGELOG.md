@@ -608,6 +608,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   `cudzyslowy="oba"`, a interpunkcja komendy stoi za cytatem. Kolumna, w której nie było nic oprócz cudzysłowu,
   znika razem z nim. Wyrażenie w cudzysłowie zamknięte w tej samej komórce zostaje treścią tabeli.
   - W korpusie zmieniają się dwa rozporządzenia (cztery pliki): z cytowanych tabel znika 346 komórek kolumn, w których stał wyłącznie cudzysłów, a cytaty dostają w eksporcie cudzysłów otwierający albo zamykający, którego dotąd nie miały. Zgodnych ze schematem jest nadal 1937 z 2321, pokrycie tekstu bez zmian; żadna inna tabela korpusu się nie zmienia.
+- **Zmiana wyrazów jako instrukcja `now:zamien-tekst`** ([ADR-0052](docs/adr/0052-zmiana-wyrazow-jest-instrukcja-zamien-tekst.md)):
+  „wyrazy „X" zastępuje się wyrazami „Y"" wychodzi instrukcją z wyrazami zastępowanymi i zastępującymi
+  (`stary-tekst`, `nowy-tekst`), przed tekstem zdania — jak w przykładach autorów schematu. Przedtem był to
+  `cytat-w-tekscie` z samymi nowymi wyrazami; wyrazów zastępowanych nie było ani w modelu, ani w eksporcie.
+  - Model: `Amendment.TextChanges` (`TextChange`: `OldText`, `NewText`); zmiana wyrazów nie ma treści cytowanej
+    (`Content.PlainText` nie powtarza już nowych wyrazów).
+  - W korpusie 1481 cytatów `cytat-w-tekscie` w 307 plikach staje się instrukcjami `now:zamien-tekst`; poza tym eksport się nie zmienia, a zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory). W przykładach autorów schematu każda nasza para (`stary-tekst`, `nowy-tekst`) ma odpowiednik: DU/2026/26 — 5 z 5 (przykład ma 9 instrukcji), DU/2026/252 — 35 z 35 różnych par (przykład ma 83 instrukcje); brakujące to postaci jeszcze nieobsługiwane. Indeks górny w wyrazach stoi w atrybucie zapisem kanonicznym („art. 406[1]"), bo atrybut nie niesie znaczników (5 w korpusie).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

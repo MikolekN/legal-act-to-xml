@@ -15,7 +15,8 @@ namespace Saga.Core.Services.Parsing
         AmendmentContent Content,
         AmendmentCollector Collector,
         ParsingContext Context,
-        AmendmentOperationType? ForcedOperationType = null);
+        AmendmentOperationType? ForcedOperationType = null,
+        IReadOnlyList<TextChange>? TextChanges = null);
 
     /// <summary>
     /// Serwis finalizujący nowelizację (Faza 3).
@@ -131,6 +132,7 @@ namespace Saga.Core.Services.Parsing
                 OperationType = operationType,
                 Content = operationType == AmendmentOperationType.Repeal ? null : content
             };
+            amendment.TextChanges.AddRange(input.TextChanges ?? []);
 
             // 3. Połącz z celem nowelizacji (StructuralAmendmentReference)
             LinkTargets(amendment, collector, context);
@@ -392,6 +394,7 @@ namespace Saga.Core.Services.Parsing
             if (hasAmendments.Amendment is { Content: { } existing } && amendment.Content is { } added)
             {
                 Append(existing, added);
+                hasAmendments.Amendment.TextChanges.AddRange(amendment.TextChanges);
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
                     "Druga treść cytowana pod tą samą jednostką — dołączona do pierwszej nowelizacji.");
                 return true;
@@ -460,8 +463,8 @@ namespace Saga.Core.Services.Parsing
                     $"{amendment.OperationType} bez treści — brak akapitów nowelizacji.");
             }
 
-            // Treść bez żadnych jednostek redakcyjnych (oprócz PlainText)
-            if (amendment.Content != null && IsContentEmpty(amendment.Content))
+            // Treść bez żadnych jednostek redakcyjnych (oprócz PlainText); zmiana wyrazów treści cytowanej nie ma.
+            if (amendment.Content != null && amendment.TextChanges.Count == 0 && IsContentEmpty(amendment.Content))
             {
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Info,
                     "Treść nowelizacji nie zawiera jednostek redakcyjnych (tylko tekst/brak treści).");

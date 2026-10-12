@@ -397,6 +397,8 @@ namespace Saga.Core.Services.Converters
                 internal const string ReplaceUnits = "zastap";
                 internal const string ReplaceNumber = "zastap-numer";
                 internal const string ReplaceText = "zamien-tekst";
+                internal const string OldTextAttribute = "stary-tekst";
+                internal const string NewTextAttribute = "nowy-tekst";
             }
 
             internal static class Odnosnik

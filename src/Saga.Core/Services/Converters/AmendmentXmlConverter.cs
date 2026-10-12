@@ -47,6 +47,8 @@ namespace Saga.Core.Services.Converters
                 return;
             }
 
+            AddTextChangeInstructions(amendment, commands, sentence);
+
             if (amendment.Content is null)
                 return;
 
@@ -199,6 +201,36 @@ namespace Saga.Core.Services.Converters
             uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
 
             zdanie.Add(uchyl);
+        }
+
+        /// <summary>
+        /// Zmiana wyrazów nie przytacza brzmienia jednostki, więc nie jest cytatem: wychodzi instrukcją
+        /// <c>now:zamien-tekst</c> — po jednej na każdy cel i każdą zmianę — przed tekstem zdania, jak
+        /// w przykładach autorów schematu (ADR-0052).
+        /// </summary>
+        private static void AddTextChangeInstructions(Amendment amendment, List<Command> commands, XNode? sentence)
+        {
+            if (amendment.TextChanges.Count == 0 || sentence is not XElement zdanie)
+                return;
+
+            XNamespace now = XmlConverterConstants.AmendmentNamespace;
+            var instructions = new List<XElement>();
+
+            foreach (var command in commands)
+            {
+                foreach (var change in amendment.TextChanges)
+                {
+                    var instruction = new XElement(now + XmlConverterConstants.Contents.Instruction.ReplaceText,
+                        new XAttribute(XmlConverterConstants.Contents.Instruction.OldTextAttribute, change.OldText),
+                        new XAttribute(XmlConverterConstants.Contents.Instruction.NewTextAttribute, change.NewText));
+                    AddTargetAttributes(instruction, command.Target);
+                    instruction.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
+                    instruction.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
+                    instructions.Add(instruction);
+                }
+            }
+
+            zdanie.AddFirst(instructions);
         }
 
         private static void AddPlainTextContent(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks)

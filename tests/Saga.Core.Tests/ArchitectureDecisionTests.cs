@@ -1541,6 +1541,38 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0052: zmiana wyrazów jest instrukcją „now:zamien-tekst", nie cytatem
+        // ============================================================
+
+        [Fact]
+        public void Adr0052_WordReplacement_IsAnInstructionWithBothWordings()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w art. 9 w ust. 1 wyrazy „trzech dni” zastępuje się wyrazami „siedmiu dni”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Model niesie wyrazy zastępowane i zastępujące; treści cytowanej zmiana wyrazów nie ma.
+            var amendment = document.Articles.First().Paragraphs.Single().Amendment!;
+            var change = Assert.Single(amendment.TextChanges);
+            Assert.Equal(("trzech dni", "siedmiu dni"), (change.OldText, change.NewText));
+            Assert.Null(amendment.Content?.PlainText);
+
+            var xml = LegalDocumentConverter.Convert(document);
+            var instruction = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "zamien-tekst");
+            Assert.Equal("trzech dni", instruction.Attribute("stary-tekst")?.Value);
+            Assert.Equal("siedmiu dni", instruction.Attribute("nowy-tekst")?.Value);
+            Assert.Equal("DU/2021/200__art_9__ust_1", instruction.Attribute("element-eId")?.Value);
+            Assert.Same(instruction, instruction.Parent!.FirstNode);
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

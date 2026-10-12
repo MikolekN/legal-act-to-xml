@@ -146,7 +146,12 @@ namespace Saga.Core.Tests
             var replaceAmendment = points[0].Amendment;
             Assert.NotNull(replaceAmendment);
             Assert.Equal(AmendmentOperationType.Modification, replaceAmendment!.OperationType);
-            Assert.Equal("siedmiu dni", replaceAmendment.Content?.PlainText);
+
+            // Zmiana wyrazów niesie wyrazy zastępowane i zastępujące; treści cytowanej nie ma.
+            var change = Assert.Single(replaceAmendment.TextChanges);
+            Assert.Equal("trzech dni", change.OldText);
+            Assert.Equal("siedmiu dni", change.NewText);
+            Assert.Null(replaceAmendment.Content?.PlainText);
             Assert.False(ctx.InsideAmendment);
 
             // Cel z referencji strukturalnej triggera (art. 9 ust. 1).
@@ -214,7 +219,9 @@ namespace Saga.Core.Tests
             var point = ctx.Document.Articles.First().Paragraphs[0].Points.Single();
             Assert.NotNull(point.Amendment);
             Assert.Equal(AmendmentOperationType.Modification, point.Amendment!.OperationType);
-            Assert.Equal("traci moc", point.Amendment.Content?.PlainText);
+            var change = Assert.Single(point.Amendment.TextChanges);
+            Assert.Equal("uchyla się", change.OldText);
+            Assert.Equal("traci moc", change.NewText);
         }
 
         [Fact]
@@ -509,7 +516,7 @@ namespace Saga.Core.Tests
             var points = ctx.Document.Articles.First().Paragraphs[0].Points;
             Assert.Equal(2, points.Count);
             Assert.NotNull(points[0].Amendment);
-            Assert.Equal("siedmiu dni", points[1].Amendment?.Content?.PlainText);
+            Assert.Equal("siedmiu dni", points[1].Amendment?.TextChanges.Single().NewText);
         }
 
         [Fact]

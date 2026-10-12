@@ -32,7 +32,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `BaseEntity.cs` | Abstrakcyjna klasa bazowa z wspólnymi właściwościami (Guid, Number, ContentText, Parent, eId) |
 | `LegalDocument.cs` | Korzeń modelu — wrapper całego aktu prawnego z metadanymi, hierarchią i `Classification` (`DocumentClassificationResult?`, ustawiane po budowie modelu); preambuła ustawy — akapity między tytułem a pierwszą jednostką (`Preamble`, eksport `preambula`) |
 | `EntityNumber.cs` | Model numeru encji z rozbiciem na: `NumericPart`, `LexicalPart`, `Superscript` |
-| `Amendment.cs` | Model nowelizacji (typ operacji, treść, cel, data wejścia w życie) |
+| `Amendment.cs` | Model nowelizacji (typ operacji, treść, cel, data wejścia w życie); zmiany w tekście bez przytoczenia brzmienia (`TextChanges` — `TextChange`: wyrazy zastępowane i zastępujące, w eksporcie `now:zamien-tekst`, [ADR-0052](adr/0052-zmiana-wyrazow-jest-instrukcja-zamien-tekst.md)) |
 | `AmendmentContent.cs` | Treść nowelizacji — hierarchiczny fragment aktu (artykuły, ustępy, punkty...) |
 | `StructuralAmendmentReference.cs` | Cel nowelizacji — ścieżka strukturalna do zmienianej jednostki, dla przedziału także jego koniec (`RangeEnd`) |
 | `TextSegment.cs` / `TextSegmentType.cs` | Segmenty tekstu (zdania) wewnątrz jednostek redakcyjnych |

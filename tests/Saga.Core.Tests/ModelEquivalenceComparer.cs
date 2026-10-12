@@ -104,6 +104,9 @@ namespace Saga.Core.Tests
             sb.AppendLine($"{indent}AMENDMENT {amendment.OperationType} obj={amendment.Content?.ObjectType.ToString() ?? "brak"} " +
                 $"targets=[{targets}] journal={journalDesc} effective={effective}");
 
+            foreach (var change in amendment.TextChanges)
+                sb.AppendLine($"{indent}  textchange | {change.OldText} → {change.NewText}");
+
             if (amendment.Content == null)
                 return;
 
