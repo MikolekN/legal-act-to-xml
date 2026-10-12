@@ -354,10 +354,11 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void AnnouncementWithAnAnnexThatIsNotAnAct_KeepsTheLegacyRoot()
+        public void AnnouncedActWhoseKindIsNotNamed_IsAnotherLegalAct_AndTheAnnouncementStays()
         {
-            // Załącznik do obwieszczenia bywa wykazem, nie aktem: nie ma rodzaju, którym dałoby się nazwać
-            // osadzony element, więc eksport nie udaje, że go zbudował.
+            // Obwieszczenie zapowiada tekst jednolity, ale załącznik nie zaczyna się nagłówkiem rodzaju aktu.
+            // Obwieszczenie nie znika przez to z eksportu: jego punkty i podpis wychodzą, a to, co ogłasza,
+            // stoi pod elementem aktu bez nazwanego rodzaju.
             var lines = ConsolidatedText.Take(ActStart + 1).Concat(
             [
                 "WYKAZ ZAREJESTROWANYCH KANCELARII",
@@ -366,10 +367,46 @@ namespace Saga.Core.Tests
 
             var xml = LegalDocumentConverter.Convert(Parse(lines));
 
-            // Treść obwieszczenia i jego podpis są w modelu; eksport ich nie niesie, dopóki korzeń nie jest obwieszczeniem.
             var root = Assert.Single(xml.Elements());
-            Assert.Equal("ustawa", root.Name.LocalName);
-            Assert.Equal(new[] { "metadane", "rodzaj-aktu", "data", "tytul" }, ChildNames(root));
+            Assert.Equal("obwieszczenie", root.Name.LocalName);
+            Assert.Equal(2, root.Elements().Count(e => e.Name.LocalName == "punkt-OTJ"));
+            Assert.Single(root.Elements(), e => e.Name.LocalName == "organ-podpisujacy");
+            var act = Assert.Single(root.Elements(), e => e.Name.LocalName == "inny-akt-prawny");
+            Assert.Equal("zalacznik-do", act.Elements().First().Name.LocalName);
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "ustawa");
+        }
+
+        [Fact]
+        public void AnnouncedResolutionBuiltOfArticles_IsAResolution_NotAStatute()
+        {
+            // Korpus: 349310_3127449 — Regulamin Senatu: uchwała zbudowana z artykułów. Schemat przewiduje
+            // w uchwale paragrafy, ale o elemencie rozstrzyga rodzaj aktu; przedtem obwieszczenie znikało,
+            // a uchwała wychodziła jako ustawa.
+            string[] lines =
+            [
+                "OBWIESZCZENIE",
+                "MARSZAŁKA SENATU RZECZYPOSPOLITEJ POLSKIEJ",
+                "z dnia 20 listopada 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu uchwały Senatu Rzeczypospolitej Polskiej – Regulamin Senatu",
+                "1. Na podstawie art. 16 ust. 3 pkt 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się jednolity tekst uchwały.",
+                "Marszałek Senatu: M. Kidawa-Błońska",
+                "Załącznik do obwieszczenia Marszałka Senatu Rzeczypospolitej Polskiej z dnia 20 listopada 2025 r. (M.P. poz. 1251)",
+                "UCHWAŁA",
+                "SENATU RZECZYPOSPOLITEJ POLSKIEJ",
+                "z dnia 23 listopada 1990 r.",
+                "Regulamin Senatu",
+                "Art. 1. Senat działa na podstawie Konstytucji.",
+                "Art. 2. Senat obraduje na posiedzeniach.",
+            ];
+
+            var document = Parse(lines);
+            var root = Assert.Single(LegalDocumentConverter.Convert(document).Elements());
+
+            Assert.Equal("obwieszczenie", root.Name.LocalName);
+            Assert.Single(root.Elements(), e => e.Name.LocalName == "punkt-OTJ");
+            var act = Assert.Single(root.Elements(), e => e.Name.LocalName == "uchwala");
+            Assert.Equal(2, act.Elements().Count(e => e.Name.LocalName == "artykul"));
+            Assert.All(document.Articles, article => Assert.False(article.IsSection));
         }
 
         [SchemaPlFact]

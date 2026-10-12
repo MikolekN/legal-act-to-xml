@@ -573,6 +573,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   - W korpusie: 58 tytułów w 50 dokumentach ze stylami (wiersze bez stylu tytułu); bez stylów wyliczenia
     w załącznikach odzyskują 397 jednostek — zgodność struktury tekstów jednolitych 99,83 % → 99,90 %, ustaw
     99,67 % → 99,80 %.
+- **Akt ogłaszany w obwieszczeniu nazywa jego rodzaj, a obwieszczenie nie znika**: element aktu ogłaszanego
+  w załączniku wynika z rodzaju nazwanego jego nagłówkiem (`ustawa`, `kodeks`, `rozporzadzenie`, `uchwala`,
+  `zarzadzenie`), a gdy nagłówek rodzaju nie nazywa — `inny-akt-prawny`. Nie zależy już od tego, czy akt ma jednostki
+  „§": uchwała zbudowana z artykułów (regulamin izby) jest uchwałą. Przedtem w takim dokumencie eksport wracał do
+  korzenia `ustawa`, gubiąc całe obwieszczenie (punkty, przytoczone przepisy, podpis).
+  - W korpusie: jeden tekst jednolity (Regulamin Senatu) odzyskuje obwieszczenie; zgubionych akapitów w tekstach
+    jednolitych 40 → 18. Zgodność ze schematem bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

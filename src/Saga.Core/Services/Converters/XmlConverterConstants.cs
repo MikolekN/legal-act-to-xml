@@ -24,6 +24,9 @@ namespace Saga.Core.Services.Converters
             internal const string Regulation = "rozporzadzenie";
             internal const string Resolution = "uchwala";
             internal const string Order = "zarzadzenie";
+
+            /// <summary>Akt ogłaszany w obwieszczeniu, którego rodzaju nagłówek nie nazywa.</summary>
+            internal const string OtherAct = "inny-akt-prawny";
             internal const string LegalBasis = "podstawa-prawna";
             internal const string Section = "paragraf";
         }

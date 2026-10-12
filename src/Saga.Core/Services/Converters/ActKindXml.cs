@@ -69,27 +69,28 @@ namespace Saga.Core.Services.Converters
         internal static bool IsSectionBased(string actElement) =>
             actElement is XmlConverterConstants.SectionBasedActs.Regulation
                 or XmlConverterConstants.SectionBasedActs.Resolution
-                or XmlConverterConstants.SectionBasedActs.Order;
+                or XmlConverterConstants.SectionBasedActs.Order
+                or XmlConverterConstants.SectionBasedActs.OtherAct;
 
         /// <summary>
-        /// Element aktu ogłaszanego w załączniku do obwieszczenia — z jego własnego nagłówka i jednostek;
-        /// null, gdy rodzaju nie da się nazwać albo akt oparty na paragrafach nie ma żadnej jednostki „§".
+        /// Element aktu ogłaszanego w załączniku do obwieszczenia — według rodzaju nazwanego jego własnym
+        /// nagłówkiem; gdy nagłówek rodzaju nie nazywa — <c>inny-akt-prawny</c>. Null tylko wtedy, gdy dokument
+        /// aktu w załączniku nie ogłasza. O elemencie rozstrzyga rodzaj aktu, nie budowa jego jednostek: uchwała
+        /// zbudowana z artykułów (regulamin izby) jest uchwałą, choć schemat przewiduje w niej paragrafy —
+        /// obwieszczenie nie może przez to zniknąć z eksportu, a akt wyjść jako ustawa.
         /// </summary>
         internal static string? AnnouncedActElement(LegalDocument document)
         {
-            var kind = ZtpPatterns.KindOfHeading(FootnoteMarkers.Remove(document.Announcement?.ActKindLine ?? string.Empty));
-            if (kind == LegalActType.Statute)
-                return StatuteElement(document.Announcement!.ActSubject, document);
-
-            if (!document.Articles.Any(article => article.IsSection))
+            if (document.Announcement is not { AnnouncesAct: true } announcement)
                 return null;
 
-            return kind switch
+            return ZtpPatterns.KindOfHeading(FootnoteMarkers.Remove(announcement.ActKindLine)) switch
             {
+                LegalActType.Statute => StatuteElement(announcement.ActSubject, document),
                 LegalActType.Regulation => XmlConverterConstants.SectionBasedActs.Regulation,
                 LegalActType.Resolution => XmlConverterConstants.SectionBasedActs.Resolution,
                 LegalActType.ExecutiveOrder => XmlConverterConstants.SectionBasedActs.Order,
-                _ => null,
+                _ => XmlConverterConstants.SectionBasedActs.OtherAct,
             };
         }
 
