@@ -15,6 +15,25 @@ namespace Saga.Core.Services.Converters
     {
         internal static void Apply(XElement element, IEntersIntoForce? entity)
         {
+            // Wersja czasowa jednostki tekstu jednolitego: „okres" dopisuje przebieg grup czasowych, tu stają
+            // projekcje okresu na daty i stan jednostki (ADR-0060). Jednostka uchylana nie „wchodzi w życie" —
+            // jej wersję przyszłą opisują okres i stan.
+            if (entity is BaseEntity { Version: { } version })
+            {
+                element.AddAnnotation(version);
+                var future = version.Kind == WordingVersionKind.Future;
+                if (version.ChangeDate is { } day && !(future && version.ChangeRepeals))
+                {
+                    element.Add(new XAttribute(
+                        future ? XmlConverterConstants.Contents.EntryIntoForce : XmlConverterConstants.Contents.InForceUntil,
+                        day.ToString("yyyy-MM-dd")));
+                }
+
+                if (future && version.ChangeRepeals && version.ChangeFootnote.Length > 0)
+                    element.Add(new XAttribute(XmlConverterConstants.Contents.UnitState, XmlConverterConstants.Contents.UnitStateRepealed));
+                return;
+            }
+
             if (GoverningDate.Text(entity) is not { } entryDate)
                 return;
 

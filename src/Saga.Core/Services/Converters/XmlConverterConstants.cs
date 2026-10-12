@@ -161,6 +161,7 @@ namespace Saga.Core.Services.Converters
                 internal const string KindEntryIntoForce = "wejscie-w-zycie";
                 internal const string KindRetroactivity = "stosowanie-z-moca-wsteczna";
                 internal const string KindConsolidation = "ujednolicenie";
+                internal const string KindRepeal = "uchylenie";
                 internal const string Origin = "pochodzenie";
                 internal const string OriginComputed = "domyslne-z-aktu";
                 internal const string OriginRead = "odczytane";
@@ -445,6 +446,11 @@ namespace Saga.Core.Services.Converters
             internal const string RepeatedCommonPart = "nie-ztp-wielokrotna-czesc-wspolna";
 
             internal const string EntryIntoForce = "wejscie-w-zycie";
+
+            /// <summary>Dzień, od którego jednostka w tym brzmieniu już nie obowiązuje (przedział półotwarty).</summary>
+            internal const string InForceUntil = "obowiazuje-do";
+            internal const string UnitState = "stan-jednostki";
+            internal const string UnitStateRepealed = "uchylony";
             internal const string UnitStatus = "status-jednostki";
             internal const string Opinions = "opinie";
             internal const string Formatting = "akapit";

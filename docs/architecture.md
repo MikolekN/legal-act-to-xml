@@ -1149,8 +1149,11 @@ jednolitego —
 `uchwala` / `zarzadzenie` — `ActKindXml.AnnouncedActElement`) z własną strefą tytułową (`zalacznik-do`,
 `rodzaj-aktu`, `data`, `tytul`), jednostkami i załącznikami ([ADR-0031](adr/0031-tekst-jednolity-pod-korzeniem-obwieszczenie.md),
 [ADR-0032](adr/0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md)).
-Tekst jednolity nie czyta klauzuli wejścia w życie: `LifecycleEvents.Of` daje mu jedno zdarzenie `ujednolicenie`
-w dniu ogłoszenia obwieszczenia, a jednostki nie niosą dat ([ADR-0033](adr/0033-tekst-jednolity-ma-zdarzenie-ujednolicenia.md)).
+Tekst jednolity nie czyta klauzuli wejścia w życie: `LifecycleEvents.Of` daje mu zdarzenie `ujednolicenie`
+w dniu ogłoszenia obwieszczenia, a jednostki drukowane raz nie niosą dat ([ADR-0033](adr/0033-tekst-jednolity-ma-zdarzenie-ujednolicenia.md)).
+Jednostka drukowana dwa razy — w brzmieniu obowiązującym i przyszłym (§ 106a ZTP) — dostaje wersję czasową
+(`WordingVersions.Assign` → `BaseEntity.Version`): obie kopie mają to samo eId i różny `okres`, a zmiana jest
+jednym zdarzeniem, które zamyka jedną grupę czasową i otwiera drugą ([ADR-0060](adr/0060-jednostka-drukowana-dwa-razy-to-dwie-wersje-rozrozniane-okresem.md)).
 
 **Pierwszy nagłówek rodzaju aktu wygrywa.** Załącznik do obwieszczenia o tekście jednolitym zawiera
 własną linię „USTAWA", więc sygnały tytułowe liczone są tylko ze strefy tytułowej (pierwsze bloki),

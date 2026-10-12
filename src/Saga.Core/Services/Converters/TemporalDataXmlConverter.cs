@@ -57,6 +57,22 @@ namespace Saga.Core.Services.Converters
 
             foreach (var element in act.Descendants())
             {
+                // Wersja czasowa jednostki: okres ograniczony zdarzeniem zmiany, przed projekcjami na daty.
+                if (element.Annotation<WordingVersion>() is { } version && !IsAnnexContent(element)
+                    && LifecycleEvents.GroupFor(version, document) is { } versionGroup)
+                {
+                    if (!groups.Contains(versionGroup))
+                        groups.Add(versionGroup);
+
+                    var projections = element.Attributes()
+                        .Where(a => a.Name.LocalName is XmlConverterConstants.Contents.EntryIntoForce
+                            or XmlConverterConstants.Contents.InForceUntil or XmlConverterConstants.Contents.UnitState)
+                        .ToList();
+                    projections.ForEach(a => a.Remove());
+                    element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Period, versionGroup.Id), projections);
+                    continue;
+                }
+
                 if (element.Annotation<UnitDates>() is not { } dates
                     || LifecycleEvents.GroupFor(events, dates.Entry, dates.Retroactive) is not { } group)
                     continue;
@@ -104,6 +120,12 @@ namespace Saga.Core.Services.Converters
                     new XAttribute(XmlConverterConstants.Metadata.Temporal.Kind, XmlConverterConstants.Metadata.Temporal.IntervalInForce),
                     new XAttribute(XmlConverterConstants.Metadata.Temporal.IntervalFrom, entry)));
 
+            // Brzmienie obowiązujące do zdarzenia: początek otwarty, koniec wskazuje zdarzenie zmiany.
+            if (group.UntilEventId is { } closing)
+                element.Add(Element(XmlConverterConstants.Metadata.Temporal.Interval,
+                    new XAttribute(XmlConverterConstants.Metadata.Temporal.Kind, XmlConverterConstants.Metadata.Temporal.IntervalInForce),
+                    new XAttribute(XmlConverterConstants.Metadata.Temporal.IntervalTo, closing)));
+
             if (group.ConsolidationEventId is { } consolidation)
                 element.Add(Element(XmlConverterConstants.Metadata.Temporal.Interval,
                     new XAttribute(XmlConverterConstants.Metadata.Temporal.Kind, XmlConverterConstants.Metadata.Temporal.KindConsolidation),
@@ -120,16 +142,29 @@ namespace Saga.Core.Services.Converters
                 {
                     LifecycleEventKind.EntryIntoForce => XmlConverterConstants.Metadata.Temporal.KindEntryIntoForce,
                     LifecycleEventKind.Consolidation => XmlConverterConstants.Metadata.Temporal.KindConsolidation,
+                    LifecycleEventKind.Repeal => XmlConverterConstants.Metadata.Temporal.KindRepeal,
                     _ => XmlConverterConstants.Metadata.Temporal.KindRetroactivity,
                 }),
                 new XAttribute(XmlConverterConstants.Metadata.Temporal.Origin, lifecycleEvent.FromFormula
                     ? XmlConverterConstants.Metadata.Temporal.OriginComputed
-                    : XmlConverterConstants.Metadata.Temporal.OriginRead),
-                new XAttribute(XmlConverterConstants.Metadata.Temporal.Date,
+                    : XmlConverterConstants.Metadata.Temporal.OriginRead));
+
+            // Zdarzenie bez dnia zostaje bez daty: granica okresu istnieje, dnia akt nie podaje.
+            if (!lifecycleEvent.Undated)
+                element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Date,
                     lifecycleEvent.Date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)));
 
             if (lifecycleEvent.Condition is { Length: > 0 } condition)
                 element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Condition, condition));
+
+            // Zdarzenie odczytane z odnośnika tekstu jednolitego: dowodem jest ten odnośnik. Przepis sprawczy
+            // i akt, który zmianę wprowadza, leżą w grafie odnośników — poza tym odczytem.
+            if (lifecycleEvent.EvidenceFootnote is { } footnote)
+            {
+                element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Evidence,
+                    $"{StructuralReference.FootnotePrefix}_{footnote}"));
+                return element;
+            }
 
             // Podstawą i dowodem zdarzenia jest jednostka, która je zapisuje: pozycja wyliczenia wyjątków
             // („art. 43 pkt 2"), a dla reguły ogólnej i zdarzenia z kilku pozycji — klauzula. Klauzulę niesie bywa

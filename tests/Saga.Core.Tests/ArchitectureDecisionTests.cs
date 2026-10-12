@@ -1799,6 +1799,51 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0060: jednostka drukowana dwa razy to dwie wersje rozróżniane okresem
+        // ============================================================
+
+        [Fact]
+        public void Adr0060_UnitPrintedTwice_IsTwoWordingsToldApartByThePeriod()
+        {
+            DocumentBlock Line(string text, params BlockFootnote[] footnotes) => new() { Text = text, Footnotes = footnotes };
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 11 sierpnia 2025 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 1094", Role = BlockRole.JournalHeader },
+                Line("Obwieszczenie"),
+                Line("Marszałka Sejmu Rzeczypospolitej Polskiej"),
+                Line("z dnia 6 sierpnia 2025 r."),
+                Line("w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych"),
+                Line("1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych (Dz. U. z 2024 r. poz. 1100)."),
+                Line("Marszałek Sejmu: S. Hołownia"),
+                Line("Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)"),
+                Line("USTAWA"),
+                Line("z dnia 11 sierpnia 2001 r."),
+                Line("o odbudowie obiektów budowlanych"),
+                Line("Art. 1. 1.[1)] Odbudowę prowadzi się na wniosek.",
+                    new BlockFootnote("1", ["W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2."])),
+                Line("1.[2)] Odbudowę prowadzi się z urzędu.",
+                    new BlockFootnote("2", ["W brzmieniu ustalonym przez art. 1 pkt 1 ustawy z dnia 9 maja 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 680); wejdzie w życie z dniem 1 stycznia 2026 r."])),
+                Line("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var copies = document.Articles.First().Paragraphs;
+            Assert.Equal(
+                new WordingVersionKind?[] { WordingVersionKind.Current, WordingVersionKind.Future },
+                copies.Select(copy => copy.Version?.Kind));
+
+            // To samo eId, różny okres — a koniec jednego i początek drugiego to to samo zdarzenie.
+            var exported = LegalDocumentConverter.Convert(document).Descendants().Where(e => e.Name.LocalName == "ustep").ToList();
+            Assert.Single(exported.Select(e => e.Attribute("eId")!.Value).Distinct());
+            const string change = "zdarz_wejscie_2026-01-01_DU-2025-1094_odczytane";
+            Assert.Equal(
+                new[] { $"okr_obowiazywanie.x.{change}", $"okr_obowiazywanie.{change}.x" },
+                exported.Select(e => e.Attribute("okres")?.Value));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

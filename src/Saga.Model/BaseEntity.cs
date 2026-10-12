@@ -87,6 +87,12 @@ namespace Saga.Model
         public List<ValidationMessage> ValidationMessages { get; set; } = new();
 
         /// <summary>
+        /// Wersja czasowa jednostki w tekście jednolitym — brzmienie obowiązujące do wejścia w życie zmiany albo
+        /// przyszłe. Null dla jednostki drukowanej raz, czyli prawie zawsze.
+        /// </summary>
+        public WordingVersion? Version { get; set; }
+
+        /// <summary>
         /// Dalsza treść akapitu jednostki, w kolejności z aktu: akapity bez własnego oznaczenia i tabele stojące
         /// za jej zdaniami, a przed jednostkami podrzędnymi (schemat: <c>kontynuacja-akapitu</c>).
         /// </summary>

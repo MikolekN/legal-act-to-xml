@@ -10,8 +10,11 @@ namespace Saga.Core.Services.EntryIntoForce
         EntryIntoForce,
         Retroactivity,
 
-        /// <summary>Ujednolicenie: ogłoszenie tekstu jednolitego — jedyne zdarzenie takiego dokumentu.</summary>
+        /// <summary>Ujednolicenie: ogłoszenie tekstu jednolitego.</summary>
         Consolidation,
+
+        /// <summary>Uchylenie jednostki — w tekście jednolitym zmiana, po której jednostka to „(uchylony)".</summary>
+        Repeal,
     }
 
     /// <summary>
@@ -24,6 +27,12 @@ namespace Saga.Core.Services.EntryIntoForce
         internal required LifecycleEventKind Kind { get; init; }
         internal required DateTime Date { get; init; }
 
+        /// <summary>
+        /// Zdarzenie, którego dnia akt nie podaje („z dniem wdrożenia rozwiązań technicznych") — granica istnieje,
+        /// dnia nie znamy.
+        /// </summary>
+        internal bool Undated { get; init; }
+
         /// <summary>Data wyliczona z formuły względnej („po upływie 14 dni od dnia ogłoszenia"), nie podana wprost.</summary>
         internal required bool FromFormula { get; init; }
 
@@ -32,6 +41,9 @@ namespace Saga.Core.Services.EntryIntoForce
 
         /// <summary>Czy to zdarzenie reguły ogólnej.</summary>
         internal bool IsGeneral { get; set; }
+
+        /// <summary>Numer odnośnika tekstu jednolitego, z którego zdarzenie odczytano; null dla zdarzeń z klauzuli.</summary>
+        internal string? EvidenceFootnote { get; init; }
 
         /// <summary>Jednostki objęte zdarzeniem na mocy wyjątku.</summary>
         internal List<ScopedUnitReference> Targets { get; } = [];
@@ -51,7 +63,11 @@ namespace Saga.Core.Services.EntryIntoForce
     /// poprzedzony stosowaniem z mocą wsteczną, jeśli jednostka ją ma. Jednostka wskazuje grupę
     /// atrybutem <c>okres</c>.
     /// </summary>
-    internal sealed record TimeGroup(string Id, string? EntryEventId, string? RetroactiveEventId, string? ConsolidationEventId = null);
+    internal sealed record TimeGroup(string Id, string? EntryEventId, string? RetroactiveEventId, string? ConsolidationEventId = null)
+    {
+        /// <summary>Zdarzenie zamykające okres obowiązywania — przedział półotwarty [od, do).</summary>
+        internal string? UntilEventId { get; init; }
+    }
 
     /// <summary>
     /// Zdarzenia cyklu życia aktu odczytane z klauzuli wejścia w życie (ADR-0022): jedno na każdą różną
@@ -65,19 +81,33 @@ namespace Saga.Core.Services.EntryIntoForce
             var info = document.EntryIntoForce;
             var journal = JournalKey(document.SourceJournal);
 
-            // Tekst jednolity ma jedno zdarzenie — ujednolicenie w dniu ogłoszenia obwieszczenia.
+            // Tekst jednolity ma zdarzenie ujednolicenia — w dniu ogłoszenia obwieszczenia.
             if (document.Announcement is { IsConsolidatedText: true })
             {
-                return document.AnnouncementDate is { } announced
-                    ? [new LifecycleEvent
+                var consolidated = new List<LifecycleEvent>();
+                if (document.AnnouncementDate is { } announced)
+                {
+                    consolidated.Add(new LifecycleEvent
                     {
                         Id = EventId(LifecycleEventKind.Consolidation, announced, journal, fromFormula: true),
                         Kind = LifecycleEventKind.Consolidation,
                         Date = announced,
                         FromFormula = true,
                         IsGeneral = true,
-                    }]
-                    : [];
+                    });
+                }
+
+                // Zmiany, na które czekają jednostki drukowane w dwóch wersjach (ADR-0060) — w kolejności
+                // dokumentu, więc dowodem zdarzenia z kilku odnośników jest pierwszy z nich.
+                consolidated.AddRange(document.Articles
+                    .SelectMany(article => EditorialUnitWalker.SelfAndDescendants(article, includeAmendmentContent: false))
+                    .Select(unit => unit.Version)
+                    .OfType<WordingVersion>()
+                    .Where(version => version.ChangeFootnote.Length > 0)
+                    .Select(version => ChangeEvent(version, journal))
+                    .DistinctBy(change => change.Id)
+                    .OrderBy(change => change.Undated).ThenBy(change => change.Date));
+                return consolidated;
             }
 
             var events = new Dictionary<string, LifecycleEvent>(StringComparer.Ordinal);
@@ -127,7 +157,7 @@ namespace Saga.Core.Services.EntryIntoForce
         /// </summary>
         internal static TimeGroup? GroupFor(IReadOnlyList<LifecycleEvent> events, DateTime entry, DateTime retroactive)
         {
-            if (events is [{ Kind: LifecycleEventKind.Consolidation } consolidation])
+            if (events is [{ Kind: LifecycleEventKind.Consolidation } consolidation, ..])
                 return entry == default && retroactive == default ? ConsolidationGroup(consolidation) : null;
 
             var entryEvent = EventOn(events, LifecycleEventKind.EntryIntoForce, entry);
@@ -142,6 +172,45 @@ namespace Saga.Core.Services.EntryIntoForce
             };
         }
 
+        /// <summary>
+        /// Zmiana jednostki tekstu jednolitego: jej wejście w życie albo — gdy jednostkę uchyla — uchylenie. Zmiany
+        /// tego samego rodzaju i dnia to jedno zdarzenie; zmiana bez dnia ma w miejscu daty rozróżnik — numer
+        /// odnośnika, który ją opisuje.
+        /// </summary>
+        private static LifecycleEvent ChangeEvent(WordingVersion version, string? journal)
+        {
+            var kind = version.ChangeRepeals ? LifecycleEventKind.Repeal : LifecycleEventKind.EntryIntoForce;
+            var stamp = version.ChangeDate is { } day
+                ? day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)
+                : $"odn-{version.ChangeFootnote}";
+
+            return new LifecycleEvent
+            {
+                Id = EventId(kind, stamp, journal, fromFormula: false),
+                Kind = kind,
+                Date = version.ChangeDate ?? default,
+                Undated = version.ChangeDate is null,
+                FromFormula = false,
+                Condition = version.ChangeDate is null ? version.ChangeTerm : null,
+                EvidenceFootnote = version.ChangeFootnote,
+            };
+        }
+
+        /// <summary>
+        /// Grupa czasowa wersji jednostki tekstu jednolitego: przyszła obowiązuje OD zdarzenia zmiany, obowiązująca
+        /// — DO tego samego zdarzenia („x" w miejscu granicy otwartej). Null, gdy wersji nie powiązano ze zmianą.
+        /// </summary>
+        internal static TimeGroup? GroupFor(WordingVersion version, LegalDocument document)
+        {
+            if (version.ChangeFootnote.Length == 0)
+                return null;
+
+            var change = ChangeEvent(version, JournalKey(document.SourceJournal)).Id;
+            return version.Kind == WordingVersionKind.Future
+                ? new TimeGroup($"okr_obowiazywanie.{change}.x", change, null)
+                : new TimeGroup($"okr_obowiazywanie.x.{change}", null, null) { UntilEventId = change };
+        }
+
         /// <summary>Grupa tekstu jednolitego: „okr_ujednolicenie.&lt;zdarzenie&gt;", jak w przykładzie autorów schematu.</summary>
         private static TimeGroup ConsolidationGroup(LifecycleEvent consolidation) =>
             new($"okr_ujednolicenie.{consolidation.Id}", null, null, consolidation.Id);
@@ -153,7 +222,11 @@ namespace Saga.Core.Services.EntryIntoForce
                 : events.Where(e => e.Kind == kind && e.Date == date).OrderByDescending(e => e.IsGeneral).FirstOrDefault();
 
         /// <summary>Identyfikator zdarzenia jak w przykładach autorów schematu: „zdarz_wejscie_2024-09-25_DU-2024-928_domyslne".</summary>
-        internal static string EventId(LifecycleEventKind kind, DateTime date, string? journal, bool fromFormula)
+        internal static string EventId(LifecycleEventKind kind, DateTime date, string? journal, bool fromFormula) =>
+            EventId(kind, date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture), journal, fromFormula);
+
+        /// <summary>Identyfikator zdarzenia o podanym stemplu: dacie albo rozróżniku zdarzenia bez dnia.</summary>
+        private static string EventId(LifecycleEventKind kind, string stamp, string? journal, bool fromFormula)
         {
             var parts = new List<string>
             {
@@ -161,9 +234,10 @@ namespace Saga.Core.Services.EntryIntoForce
                 {
                     LifecycleEventKind.EntryIntoForce => "zdarz_wejscie",
                     LifecycleEventKind.Consolidation => "zdarz_ujednolicenie",
+                    LifecycleEventKind.Repeal => "zdarz_uchylenie",
                     _ => "zdarz_moc-wsteczna",
                 },
-                date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
+                stamp,
             };
             if (journal is not null)
                 parts.Add(journal);

@@ -674,6 +674,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   — jak w przykładach autorów schematu. Treść odnośnika nie jest już budowana jako punkty (zaczyna się znacznikiem
   „1)") ani eksportowana jako tekst bez adresu. Model: `AmendmentContent.Footnote`, `StructuralReference.Footnote`.
   - W korpusie 40 cytowanych odnośników w 28 plikach wychodzi jako `odnosnik-cyt`: 27 było tekstem cytowanym bez adresu, 13 — jednostkami (znika 17 błędnych punktów i liter aktu zmienianego). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory), pokrycie tekstu bez zmian. W przykładzie autorów schematu DU/2026/252 oba cytowane odnośniki są takie same jak nasze; komendy zgodne: 338 z 345, a pozostałe 7 wymaga wiedzy spoza aktu zmieniającego.
+- **Wersje czasowe jednostek tekstu jednolitego** ([ADR-0060](docs/adr/0060-jednostka-drukowana-dwa-razy-to-dwie-wersje-rozrozniane-okresem.md)): jednostka drukowana
+  dwa razy — w brzmieniu obowiązującym („W tym brzmieniu obowiązuje do wejścia w życie zmiany …") i przyszłym —
+  wychodzi z tym samym eId i różnym `okres`. Zmiana jest jednym zdarzeniem (`wejscie-w-zycie` albo `uchylenie`),
+  które zamyka jedną grupę czasową i otwiera drugą; zdarzenie bez dnia nie ma `data`, a termin zapisany prozą
+  trafia do `warunek`. Jednostki niosą projekcje `obowiazuje-do` / `wejscie-w-zycie`, a uchylana —
+  `stan-jednostki="uchylony"`. Model: `BaseEntity.Version` (`WordingVersion`).
+  - W korpusie zmienia się 112 z 728 tekstów jednolitych — wyłącznie atrybuty czasu jednostek i dane czasowe (607 grup czasowych, 362 zdarzenia: 140 z dniem, 99 z terminem zapisanym prozą, 123 bez dnia; 501 jednostek z `obowiazuje-do`, 96 ze `stan-jednostki`). Z 591 jednostek o powtórzonym eId 477 rozróżnia okres. Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory); treść bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

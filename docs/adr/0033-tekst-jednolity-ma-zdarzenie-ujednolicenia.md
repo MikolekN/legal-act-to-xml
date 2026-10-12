@@ -1,6 +1,6 @@
 # ADR-0033: Tekst jednolity ma jedno zdarzenie `ujednolicenie`, a jego jednostki nie niosą dat wejścia w życie
 
-- Status: Accepted
+- Status: Accepted (jednostki drukowane w dwóch wersjach niosą okres i mają własne zdarzenia — uściśla to [ADR-0060](0060-jednostka-drukowana-dwa-razy-to-dwie-wersje-rozrozniane-okresem.md))
 - Data: 2026-10-11
 
 ## Kontekst

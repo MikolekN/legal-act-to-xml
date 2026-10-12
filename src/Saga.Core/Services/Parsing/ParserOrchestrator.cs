@@ -318,6 +318,9 @@ namespace Saga.Core.Services.Parsing
             // nie obwieszczenia, z którego pochodzi data dokumentu (ADR-0033).
             if (context.Document.Announcement is not { IsConsolidatedText: true })
                 _entryIntoForce.Apply(context.Document);
+
+            // Tekst jednolity drukuje jednostkę dwa razy, gdy jej zmiana nie weszła jeszcze w życie (ADR-0060).
+            WordingVersions.Assign(context.Document);
         }
 
         // ============================================================

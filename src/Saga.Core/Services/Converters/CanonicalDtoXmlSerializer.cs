@@ -411,6 +411,19 @@ namespace Saga.Core.Services.Converters
                 el.Add(new XAttribute("effectiveDate", entity.EffectiveDate.ToString("yyyy-MM-dd")));
             if (entity.RetroactiveFrom != default)
                 el.Add(new XAttribute("retroactiveFrom", entity.RetroactiveFrom.ToString("yyyy-MM-dd")));
+
+            if (entity.Version is { } version)
+            {
+                el.Add(new XAttribute("version", version.Kind.ToString()));
+                if (version.ChangeFootnote.Length > 0)
+                    el.Add(new XAttribute("changeFootnote", version.ChangeFootnote));
+                if (version.ChangeDate is { } changed)
+                    el.Add(new XAttribute("changeDate", changed.ToString("yyyy-MM-dd")));
+                if (version.ChangeTerm is { } term)
+                    el.Add(new XAttribute("changeTerm", term));
+                if (version.ChangeRepeals)
+                    el.Add(new XAttribute("changeRepeals", true));
+            }
         }
 
         private static void AddContentAndDiagnostics(XElement el, BaseEntity entity)
