@@ -155,6 +155,10 @@ namespace Saga.Core.Services.Parsing
                 afterDot++;
             }
 
+            // Znacznik odnośnika przyklejony do końca zdania („… od dnia otrzymania wniosku.[7)] Brak zgody …")
+            // należy do zdania, które zamyka — w tekstach jednolitych tak stoi odnośnik o zmianie zdania.
+            afterDot += FootnoteMarkers.AttachedHere.Match(text, afterDot).Length;
+
             if (afterDot >= text.Length || !char.IsWhiteSpace(text[afterDot]))
             {
                 return false;

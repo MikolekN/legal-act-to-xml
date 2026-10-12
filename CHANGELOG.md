@@ -700,6 +700,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   i publikatorem, także przez odesłanie „ustawy, o której mowa w odnośniku …". Model: `WordingVersion.ChangeAct`,
   `WordingVersion.ChangeProvision`.
   - W korpusie zmienia się 107 tekstów jednolitych — identyfikatory zdarzeń i grup oraz `okres` jednostek. Z 268 zdarzeń zmiany 238 nazywa akt sprawczy (`zrodlo`), a 30 zostaje przy dokumencie; `podstawa` ma 254 zdarzenia (160 — jeden przepis, 71 — od dwóch do pięciu, 23 — więcej, najwięcej 50). Zdarzeń jest o 13 więcej niż przedtem (255): zmiany dwóch aktów tego samego dnia to dwa zdarzenia. Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory); treść bez zmian.
+- **Znacznik odnośnika za kropką kończy zdanie**: „… od dnia otrzymania wniosku.[7)] Brak zgody …" to dwa zdania
+  — znacznik przyklejony do kropki należy do zdania, które zamyka (w tekstach jednolitych tak stoi odnośnik o zmianie
+  zdania), więc `SplitIntoSentences` szuka odstępu dopiero za nim. Znacznik odsunięty odstępem i weta lewego
+  kontekstu (rok, skrót, publikator) rozstrzygają jak dotąd.
+  - W korpusie w 69 tekstach jednolitych przybywa 145 zdań, które były zlane z poprzednim; zgodnych ze schematem
+    jest nadal 1937 z 2321 (oba walidatory).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

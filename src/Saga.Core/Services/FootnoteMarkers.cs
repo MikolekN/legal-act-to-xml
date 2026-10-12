@@ -15,7 +15,12 @@ namespace Saga.Core.Services
         /// Znacznik w każdej postaci spotykanej w aktach: nawias z co najmniej jednym numerem odnośnika —
         /// także z interpunkcją wciągniętą do indeksu górnego („[1),]", „[13).]") i z kilkoma numerami.
         /// </summary>
-        internal static readonly Regex Reference = new(@"\[[^\[\]]*\d+\)[^\[\]]*\]", RegexOptions.Compiled);
+        internal const string ReferencePattern = @"\[[^\[\]]*\d+\)[^\[\]]*\]";
+
+        internal static readonly Regex Reference = new(ReferencePattern, RegexOptions.Compiled);
+
+        /// <summary>Znaczniki stojące jeden za drugim od wskazanego miejsca tekstu („.[7)][8)] ").</summary>
+        internal static readonly Regex AttachedHere = new(@"\G(?:" + ReferencePattern + ")+", RegexOptions.Compiled);
 
         /// <summary>
         /// Zawartość nawiasu będąca samym znacznikiem: numery odnośników z nawiasami, rozdzielone i zakończone
