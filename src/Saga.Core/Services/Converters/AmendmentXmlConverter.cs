@@ -310,12 +310,44 @@ namespace Saga.Core.Services.Converters
                     .ToList();
 
                 var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
-                ApplyAttributes(citation, amendment, command, isStructural: true);
+                ApplyAttributes(citation, amendment, command, isStructural: true,
+                    function: AddsInside(amendment, command, group.First())
+                        ? XmlConverterConstants.Contents.Citation.Quotation.Function.AddInside
+                        : null);
                 citation.Add(elements);
                 if (sentence is XElement zdanie)
                     zdanie.Add(citation);
                 blocks.Add(citation);
             }
+        }
+
+        /// <summary>
+        /// Czy jednostka jest dodawana W jednostce wskazanej komendą („w art. 13 dodaje się ust. 6" — cel to art. 13),
+        /// a nie PO niej („po ust. 5 dodaje się ust. 5a" — cel to ust. 5). Rozstrzyga poziom: cel, który nie sięga
+        /// poziomu jednostki dodawanej, jest jednostką nadrzędną (ADR-0055).
+        /// </summary>
+        private static bool AddsInside(Amendment amendment, Command command, BaseEntity unit)
+        {
+            if (amendment.OperationType != AmendmentOperationType.Insertion || command.Target?.Structure is not { } target)
+                return false;
+
+            if (unit is ISystematizingUnit)
+            {
+                var path = (target.Systematizing ?? string.Empty).Split(EIdSegment.Separator, StringSplitOptions.RemoveEmptyEntries);
+                return path.Length > 0 && target.Article is null && path.All(segment =>
+                    SystematizingHierarchy.LevelOfPrefix(segment.Split('_')[0]) is { } level
+                    && SystematizingHierarchy.Rank(level) < SystematizingHierarchy.Rank(unit));
+            }
+
+            return unit switch
+            {
+                Article => target.Article is null && !string.IsNullOrEmpty(target.Systematizing),
+                Paragraph => target is { Article: not null, Paragraph: null, Point: null, Letter: null, Tiret: null },
+                Point => target is { Point: null, Letter: null, Tiret: null } && (target.Article ?? target.Paragraph) is not null,
+                Letter => target is { Letter: null, Tiret: null } && (target.Article ?? target.Paragraph ?? target.Point) is not null,
+                Tiret => target.Tiret is null && (target.Article ?? target.Paragraph ?? target.Point ?? target.Letter) is not null,
+                _ => false,
+            };
         }
 
         private static XElement? BuildContentElement(BaseEntity entity) =>

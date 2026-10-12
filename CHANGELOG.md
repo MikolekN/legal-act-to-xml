@@ -644,6 +644,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   instrukcji.
   - W korpusie przybywa 28 instrukcji `now:zamien-tekst` w 23 plikach; poza tym eksport się nie zmienia, zgodnych
     ze schematem jest nadal 1937 z 2321.
+- **Komenda dodająca wskazuje miejsce dodania** ([ADR-0055](docs/adr/0055-dodanie-wskazuje-miejsce-nie-jednostke-dodawana.md)): „w art. 13 dodaje się
+  ust. 6 w brzmieniu:" wychodzi jako `funkcja="dodaj-w"` z art. 13 w `element-eId` — jak w przykładach autorów
+  schematu. Przedtem celem była jednostka dodawana („dodaj po ust. 6"), a kilka jednostek dodawanych jedną komendą
+  dawało przedział albo osobne cytaty. Komenda z miejscem („po ust. 5 dodaje się ust. 5a") zostaje przy `dodaj-po`.
+  - W korpusie zmienia się 487 zdań w 183 plikach: cytatów z funkcją `dodaj-w` jest 554 (było 94), a kilka jednostek dodawanych jedną komendą stoi w jednym cytacie (75 cytatów mniej). Zgodnych ze schematem jest nadal 1937 z 2321. Komendy zgodne z przykładami autorów schematu co do jednostki, elementu, funkcji i celu: DU/2026/26 — 102 z 103 (było 99), DU/2026/252 — 337 z 344 (było 315).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

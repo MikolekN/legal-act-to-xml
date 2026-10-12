@@ -1649,6 +1649,42 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0055: komenda dodająca wskazuje miejsce dodania, nie jednostkę dodawaną
+        // ============================================================
+
+        [Fact]
+        public void Adr0055_Addition_NamesThePlace_NotTheAddedUnit()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 13 dodaje się ust. 6 w brzmieniu:",
+                "„6. Opłatę wnosi się w terminie 14 dni.”;",
+                "2) w art. 14 po ust. 5 dodaje się ust. 5a w brzmieniu:",
+                "„5a. Opłaty nie zwraca się.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var citations = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "cytat-strukt")
+                .Select(e => (e.Attribute("funkcja")?.Value, e.Attribute("element-eId")?.Value, e.Elements().Single().Attribute("eId")?.Value))
+                .ToList();
+
+            Assert.Equal(
+                [
+                    // Bez miejsca: dodaje się W art. 13; jednostka dodawana ma własny adres, ale celem nie jest.
+                    ("dodaj-w", "DU/2021/200__art_13", "DU/2021/200__art_13__ust_6"),
+                    // Z miejscem: dodaje się PO ust. 5.
+                    ("dodaj-po", "DU/2021/200__art_14__ust_5", "DU/2021/200__art_14__ust_5a"),
+                ],
+                citations);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

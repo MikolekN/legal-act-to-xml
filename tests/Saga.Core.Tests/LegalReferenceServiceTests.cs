@@ -150,7 +150,7 @@ namespace Saga.Core.Tests
         {
             // Kontekst (artykuł z komendy nadrzędnej) uzupełnia tylko to, czego komenda nie mówi —
             // jawne „w art. 5" w adresie komendy wskazuje cel wprost (§ 89 ust. 2 ZTP).
-            var target = SingleTarget("w art. 5 ust. 2 dodaje się pkt 3", new StructuralReference { Article = "7" });
+            var target = SingleTarget("w art. 5 ust. 2 uchyla się pkt 3", new StructuralReference { Article = "7" });
 
             Assert.Equal("art_5__ust_2__pkt_3", target.ToString());
         }

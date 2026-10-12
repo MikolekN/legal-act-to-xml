@@ -30,6 +30,14 @@ namespace Saga.Core.Services.UnitReferences
             @"\b(?:dodaje|uchyla|skreśla|zastępuje)\s+się\b|\botrzymuj[eą]\s+brzmienie",
             RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
+        /// <summary>
+        /// „Dodaje się" — jednostki stojące za nim są dodawane, nie wskazywane. Miejsce dodania stoi przed
+        /// czasownikiem: jednostka, po której się dodaje („po ust. 5 dodaje się ust. 5a"), albo jednostka, w której
+        /// się dodaje („w art. 13 dodaje się ust. 6") (ADR-0055).
+        /// </summary>
+        private static readonly Regex AdditionVerb = new(
+            @"\bdodaje\s+się\b", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
         /// <summary>Cele wskazane w tekście komendy.</summary>
         internal static IReadOnlyList<UnitAddress> Read(
             string? text, StructuralReference? context = null, bool sectionSignIsBasicUnit = false)
@@ -46,6 +54,7 @@ namespace Saga.Core.Services.UnitReferences
 
             var join = EnumerationJoin.None;
             var commandVerb = false;
+            var addition = false;
 
             foreach (var token in UnitReferenceTokenizer.Tokenize(WithoutQuotedText(text), systematizing: true))
             {
@@ -62,6 +71,10 @@ namespace Saga.Core.Services.UnitReferences
                             : EnumerationJoin.Conjunction;
                         continue;
 
+                    case UnitTokenKind.Designation or UnitTokenKind.Range when inRun && addition:
+                        // Jednostka dodawana kończy adres: wskazane jest tylko to, co stało przed „dodaje się".
+                        return pending is null ? [] : Completed(targets, pending);
+
                     case UnitTokenKind.Designation or UnitTokenKind.Range when inRun:
                         break;
 
@@ -73,6 +86,7 @@ namespace Saga.Core.Services.UnitReferences
                         inRun = false;
                         join = EnumerationJoin.None;
                         commandVerb |= token.Kind == UnitTokenKind.Prose && CommandVerb.IsMatch(token.Text);
+                        addition |= token.Kind == UnitTokenKind.Prose && AdditionVerb.IsMatch(token.Text);
                         continue;
                 }
 

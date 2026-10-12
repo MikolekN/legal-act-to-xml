@@ -259,7 +259,9 @@ namespace Saga.Core.Services.Parsing
             if (command == null)
                 return;
 
-            if (command.TargetKind == AmendmentTargetKind.Tiret && command.TargetOrdinalValue is { } tiretNo)
+            // Tiret dodawane („dodaje się tiret piąte") nie jest celem — celem jest jednostka, w której się dodaje.
+            if (command.Kind != AmendmentCommandKind.Add
+                && command.TargetKind == AmendmentTargetKind.Tiret && command.TargetOrdinalValue is { } tiretNo)
             {
                 foreach (var target in amendment.Targets)
                 {

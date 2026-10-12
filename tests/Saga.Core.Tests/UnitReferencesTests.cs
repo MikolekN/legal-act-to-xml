@@ -261,7 +261,7 @@ namespace Saga.Core.Tests
         {
             // „rozporządzenia 2016/679" po artykule to proza — „2016" nie jest kolejnym artykułem,
             // więc nie domyka celu przed właściwym „pkt 3".
-            Assert.Equal(new[] { "art_5__pkt_3" }, Read("w art. 5 rozporządzenia 2016/679 dodaje się pkt 3"));
+            Assert.Equal(new[] { "art_5__pkt_3" }, Read("w art. 5 rozporządzenia 2016/679 uchyla się pkt 3"));
         }
 
         [Fact]
@@ -305,10 +305,35 @@ namespace Saga.Core.Tests
         public void Reader_KeepsSuperscriptDesignations()
         {
             // Korpus: indeks górny należy do oznaczenia (art. 328¹¹) — w odczycie i w eId (ADR-0019).
-            var address = UnitAddressReader.Read("w art. 328[11 ]dodaje się § 3 w brzmieniu:", null).Single();
+            var address = UnitAddressReader.Read("w art. 328[11 ]uchyla się § 3;", null).Single();
 
             Assert.Equal("328[11]", address.Start.Article);
             Assert.Equal("art_328[11]__par_3", address.Start.ToString());
+        }
+
+        // ============================================================
+        // Dodanie: jednostka dodawana nie jest celem (ADR-0055)
+        // ============================================================
+
+        [Theory]
+        // Miejsce dodania stoi przed czasownikiem: jednostka, W której się dodaje…
+        [InlineData("w art. 13 dodaje się ust. 6 w brzmieniu:", "art_13")]
+        [InlineData("w art. 26 w ust. 3 dodaje się pkt 17–23 w brzmieniu:", "art_26__ust_3")]
+        [InlineData("w art. 5 dodaje się ust. 6 i 7 w brzmieniu:", "art_5")]
+        [InlineData("w art. 328[11 ]dodaje się § 3 w brzmieniu:", "art_328[11]")]
+        // …albo jednostka, PO której się dodaje.
+        [InlineData("w art. 13 po ust. 5 dodaje się ust. 5a w brzmieniu:", "art_13__ust_5")]
+        [InlineData("w ust. 2 po pkt 6 dodaje się przecinek i pkt 7 w brzmieniu:", "ust_2__pkt_6")]
+        public void Reader_AddedUnit_IsNotTheTarget(string command, string expected)
+        {
+            Assert.Equal(new[] { expected }, Read(command));
+        }
+
+        [Fact]
+        public void Reader_AdditionWithoutAPlaceOfItsOwn_NamesNothing()
+        {
+            // „dodaje się ust. 6" pod komendą nadrzędną „w art. 13:" — miejsce dodania wynika z niej, nie z tej komendy.
+            Assert.Empty(Read("dodaje się ust. 6 w brzmieniu:", new StructuralReference { Article = "13" }));
         }
 
         // ============================================================

@@ -1,6 +1,6 @@
 # ADR-0016: Wyliczenie celów nowelizacji to osobne komendy; `element-do-eId` znaczy wyłącznie koniec przedziału
 
-- Status: Accepted
+- Status: Accepted (jednostki dodawane nie są celami — uściśla to [ADR-0055](0055-dodanie-wskazuje-miejsce-nie-jednostke-dodawana.md))
 - Data: 2026-09-23
 
 ## Kontekst

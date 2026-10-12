@@ -295,6 +295,78 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Dodanie w jednostce i po jednostce (ADR-0055)
+        // ============================================================
+
+        [Fact]
+        public void UnitAddedWithoutAnAnchor_IsAddedInsideTheUnitNamedBeforeTheCommand()
+        {
+            // Przykład autorów schematu (DU/2026/26): „w art. 13 dodaje się ust. 6 w brzmieniu:" → dodaj-w, art. 13.
+            var (xml, _) = Convert(
+                "1) w art. 13 dodaje się ust. 6 w brzmieniu:",
+                "„6. Opłatę wnosi się w terminie 14 dni.”;");
+
+            var citation = Assert.Single(Commands(xml));
+            Assert.Equal("dodaj-w", Attr(citation, "funkcja"));
+            Assert.Equal("art_13", Attr(citation, "element-eId"));
+            Assert.Null(Attr(citation, "element-do-eId"));
+
+            // Jednostka cytowana ma adres w akcie zmienianym — pod jednostką, w której ją dodano.
+            Assert.Equal(new[] { "art_13__ust_6" }, UnitIds(citation));
+        }
+
+        [Fact]
+        public void SeveralUnitsAddedWithoutAnAnchor_AreOneCommandOnTheirContainer()
+        {
+            // Przykład autorów schematu (DU/2026/252): „w art. 26 dodaje się ust. 12–16" → jeden cytat, dodaj-w art. 26.
+            var (xml, _) = Convert(
+                "1) w art. 26 dodaje się ust. 12 i 13 w brzmieniu:",
+                "„12. Pierwszy dodawany ustęp.",
+                "13. Drugi dodawany ustęp.”;");
+
+            var citation = Assert.Single(Commands(xml));
+            Assert.Equal(("dodaj-w", "art_26"), (Attr(citation, "funkcja"), Attr(citation, "element-eId")));
+            Assert.Equal(new[] { "art_26__ust_12", "art_26__ust_13" }, UnitIds(citation));
+        }
+
+        [Fact]
+        public void UnitAddedAfterAnotherOne_KeepsThatUnitAsItsAnchor()
+        {
+            var (xml, _) = Convert(
+                "1) w art. 13 po ust. 5 dodaje się ust. 5a w brzmieniu:",
+                "„5a. Opłaty nie zwraca się.”;");
+
+            var citation = Assert.Single(Commands(xml));
+            Assert.Equal(("dodaj-po", "art_13__ust_5"), (Attr(citation, "funkcja"), Attr(citation, "element-eId")));
+            Assert.Equal(new[] { "art_13__ust_5a" }, UnitIds(citation));
+        }
+
+        [Fact]
+        public void UnitAddedUnderAParentCommand_IsAddedInsideTheParentsUnit()
+        {
+            var (xml, _) = Convert(
+                "1) w art. 13:",
+                "a) dodaje się ust. 6 w brzmieniu:",
+                "„6. Opłatę wnosi się w terminie 14 dni.”;");
+
+            var citation = Assert.Single(Commands(xml));
+            Assert.Equal(("dodaj-w", "art_13"), (Attr(citation, "funkcja"), Attr(citation, "element-eId")));
+            Assert.Equal(new[] { "art_13__ust_6" }, UnitIds(citation));
+        }
+
+        [Fact]
+        public void PointAddedInAParagraph_IsAddedInsideIt()
+        {
+            var (xml, _) = Convert(
+                "1) w art. 45 w ust. 1 dodaje się pkt 7 w brzmieniu:",
+                "„7) inne podmioty.”;");
+
+            var citation = Assert.Single(Commands(xml));
+            Assert.Equal(("dodaj-w", "art_45__ust_1"), (Attr(citation, "funkcja"), Attr(citation, "element-eId")));
+            Assert.Equal(new[] { "art_45__ust_1__pkt_7" }, UnitIds(citation));
+        }
+
+        // ============================================================
         // Zamiana znaku kończącego jednostkę (ADR-0054)
         // ============================================================
 
