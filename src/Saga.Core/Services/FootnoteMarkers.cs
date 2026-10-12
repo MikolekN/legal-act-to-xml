@@ -17,6 +17,14 @@ namespace Saga.Core.Services
         /// </summary>
         internal static readonly Regex Reference = new(@"\[[^\[\]]*\d+\)[^\[\]]*\]", RegexOptions.Compiled);
 
+        /// <summary>
+        /// Zawartość nawiasu będąca samym znacznikiem: numery odnośników z nawiasami, rozdzielone i zakończone
+        /// najwyżej interpunkcją („1)", „1), 2)", „13)."). Nawias kwadratowy z innym tekstem („[D_2022 x (A + B)/n)]"
+        /// — wzór wpisany w treść) znacznikiem nie jest, choć pasuje do <see cref="Reference"/>.
+        /// </summary>
+        internal static readonly Regex Bare = new(
+            @"^\s*\d+[a-z]?\)(?:\s*[,;]?\s*\d+[a-z]?\))*\s*[.,;]?\s*$", RegexOptions.Compiled);
+
         // „[1 15)]": indeks górny oznaczenia i odnośnik sąsiadujące w DOCX zlewają się w jeden nawias.
         private static readonly Regex Marker = new(
             @"\[(?:(?<superscript>\d+[a-z]*)\s+)?[^\[\]]*\d+\)[^\[\]]*\]", RegexOptions.Compiled);

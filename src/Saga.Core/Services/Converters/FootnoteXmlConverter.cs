@@ -9,7 +9,9 @@ namespace Saga.Core.Services.Converters
     /// <summary>
     /// Osadza odnośniki w treści aktu: znacznik „[N)]" w zdaniu albo tytule staje się elementem
     /// <c>odnosnik</c> z treścią przypisu, w miejscu, w którym stoi w akcie. Kolejne odwołanie do tego samego
-    /// odnośnika to <c>odsylacz-do-odnosnika</c>.
+    /// odnośnika to <c>odsylacz-do-odnosnika</c>. Znacznik, za którym nie stoi odnośnik tego aktu (odnośnik
+    /// aktu cytowanego, objaśnienie wpisane akapitem pod tabelą), wychodzi tak, jak stoi w akcie — indeksem
+    /// górnym; zapis kanału tekstowego („[1)]") nie trafia do eksportu (ADR-0047).
     /// </summary>
     internal static class FootnoteXmlConverter
     {
@@ -56,9 +58,6 @@ namespace Saga.Core.Services.Converters
         /// </summary>
         internal static void Embed(XElement actElement, LegalDocument document)
         {
-            if (document.Footnotes.Count == 0)
-                return;
-
             var registry = new Registry(document.Footnotes);
             foreach (var text in InlineTextXml.Texts(actElement))
             {
@@ -80,7 +79,12 @@ namespace Saga.Core.Services.Converters
             var cursor = 0;
             foreach (Match marker in Marker.Matches(value))
             {
-                var inside = RenderMarker(marker.Value, registry, allowRepeats);
+                // Żaden numer nie jest odnośnikiem tego aktu: sam znacznik wychodzi indeksem górnym, jak w akcie;
+                // nawias kwadratowy z innym tekstem zostaje tekstem.
+                var inside = RenderMarker(marker.Value, registry, allowRepeats)
+                    ?? (FootnoteMarkers.Bare.IsMatch(marker.Value[1..^1])
+                        ? [Element(XmlConverterConstants.Contents.Superscript, marker.Value[1..^1].Trim())]
+                        : null);
                 if (inside is null)
                     continue;
 
@@ -97,8 +101,7 @@ namespace Saga.Core.Services.Converters
 
         /// <summary>
         /// Zawartość jednego znacznika: odnośnik albo odsyłacz za każdy rozpoznany numer, a to, co stoi między
-        /// numerami („, "), w indeksie górnym jak w akcie. Null, gdy żaden numer nie jest odnośnikiem tego aktu
-        /// — znacznik zostaje wtedy tekstem.
+        /// numerami („, "), w indeksie górnym jak w akcie. Null, gdy żaden numer nie jest odnośnikiem tego aktu.
         /// </summary>
         private static List<XNode>? RenderMarker(string marker, Registry registry, bool allowRepeats)
         {

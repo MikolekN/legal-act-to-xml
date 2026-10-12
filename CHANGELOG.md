@@ -543,6 +543,11 @@ a wersjonowanie zgodne z Semantic Versioning.
     591 zamiast 562 tekstów jednolitych.
   - Ta sama reguła obowiązuje w treści cytowanej w nowelizacji (`AmendmentBuilder`) — nowe brzmienie ustępu
     z wyliczeniem i częścią wspólną bez myślnika. W korpusie bez zmian.
+- **Znacznik odnośnika bez odnośnika wychodzi indeksem górnym** ([ADR-0047](docs/adr/0047-znacznik-bez-odnosnika-tego-aktu-wychodzi-indeksem-gornym.md)):
+  znacznik, za którym nie stoi odnośnik tego aktu — odnośnik aktu cytowanego, objaśnienie wpisane akapitem pod
+  tabelą — wychodzi jako `sup` („²⁾"), tak jak stoi w akcie. Przedtem eksport niósł zapis roboczy parsera („[2)]").
+  Nawias kwadratowy z innym tekstem (wzór wpisany w treść) pozostaje tekstem.
+  - W korpusie: 214 znaczników w 70 dokumentach; zgodność ze schematem i pokrycie tekstu bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

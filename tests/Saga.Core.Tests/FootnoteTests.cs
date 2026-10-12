@@ -91,9 +91,10 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void SuperscriptThatIsNotAFootnote_StaysText()
+        public void MarkerWithoutAFootnoteOfThisAct_IsASuperscript_NotAFootnote()
         {
-            // „[2)]" wpisane w treść (cytowany odnośnik innego aktu) nie ma przypisu w dokumencie.
+            // „²⁾" wpisane w treść (cytowany odnośnik innego aktu) nie ma przypisu w dokumencie: wychodzi tak,
+            // jak stoi w akcie — indeksem górnym, bez zapisu kanału tekstowego „[2)]" (ADR-0047).
             var document = Parse(
                 "USTAWA",
                 "z dnia 14 czerwca 2024 r.",
@@ -104,7 +105,40 @@ namespace Saga.Core.Tests
             var xml = LegalDocumentConverter.Convert(document);
 
             Assert.Single(Named(xml, "odnosnik"));
-            Assert.Contains("odnośnik [2)] otrzymuje", Named(xml, "artykul").First().Value);
+            var article = Named(xml, "artykul").First();
+            Assert.Equal("2)", Assert.Single(article.Descendants(), e => e.Name.LocalName == "sup").Value);
+            Assert.DoesNotContain("[", article.Value);
+            Assert.Contains("odnośnik 2) otrzymuje", article.Value);
+        }
+
+        [Theory]
+        [InlineData("1)", true)]
+        [InlineData("1), 2)", true)]
+        [InlineData("13).", true)]
+        [InlineData("3a)", true)]
+        // Nawias kwadratowy z innym tekstem pasuje do wzorca znacznika, ale znacznikiem nie jest.
+        [InlineData("D_2022-1,2 x ((D_2018 + D_2019)/n)", false)]
+        [InlineData("zł/GJ", false)]
+        [InlineData("1 15)", false)]
+        public void OnlyNumbersWithParentheses_AreABareMarker(string inside, bool expected)
+        {
+            Assert.Equal(expected, FootnoteMarkers.Bare.IsMatch(inside));
+        }
+
+        [Fact]
+        public void BracketedTextThatIsNotAMarker_StaysText()
+        {
+            // Korpus: 302298_2718166 — wzór wpisany w treść z nawiasem kwadratowym.
+            var xml = LegalDocumentConverter.Convert(Parse(
+                "USTAWA",
+                "z dnia 14 czerwca 2024 r.",
+                "o dotacjach",
+                "Art. 1. Kwotę oblicza się jako (S) = [D_2022 x ((D_2018 + D_2019)/n)] x 0,33.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."));
+
+            var article = Named(xml, "artykul").First();
+            Assert.Contains("[D_2022 x ((D_2018 + D_2019)/n)]", article.Value);
+            Assert.DoesNotContain(article.Descendants(), e => e.Name.LocalName == "sup");
         }
 
         [Fact]

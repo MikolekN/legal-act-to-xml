@@ -1395,6 +1395,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0047: znacznik bez odnośnika tego aktu wychodzi indeksem górnym
+        // ============================================================
+
+        [Fact]
+        public void Adr0047_MarkerWithoutAFootnote_IsExportedAsASuperscript_NeverAsTheChannelNotation()
+        {
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                new DocumentBlock { Text = "USTAWA" },
+                new DocumentBlock { Text = "z dnia 14 czerwca 2024 r." },
+                new DocumentBlock { Text = "o opłatach" },
+                new DocumentBlock { Text = "Art. 1. Odnośnik [3)] do tytułu ustawy otrzymuje nowe brzmienie, a kwotę liczy się jako [A x (B + C)]." },
+            });
+
+            var sentence = LegalDocumentConverter.Convert(document).Descendants().First(e => e.Name.LocalName == "zdanie");
+
+            // Sam znacznik: indeks górny z nawiasem znacznika. Nie odnośnik — rejestr dokumentu go nie zna.
+            Assert.Equal("3)", Assert.Single(sentence.Elements(), e => e.Name.LocalName == "sup").Value);
+            Assert.DoesNotContain(sentence.Elements(), e => e.Name.LocalName is "odnosnik" or "odsylacz-do-odnosnika");
+            Assert.DoesNotContain("[3)]", sentence.Value);
+
+            // Nawias kwadratowy z innym tekstem zostaje nawiasem.
+            Assert.Contains("[A x (B + C)]", sentence.Value);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

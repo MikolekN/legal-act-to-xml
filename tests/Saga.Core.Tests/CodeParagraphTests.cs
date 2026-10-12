@@ -433,7 +433,7 @@ namespace Saga.Core.Tests
             var xml = LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(new[]
             {
                 new DocumentBlock { Text = "Art. 1. W przypadku określonym w art. 477[9] § 3[1] ustawy sąd odrzuca odwołanie." },
-                new DocumentBlock { Text = "Art. 2. Powierzchnia użytkowa nie przekracza 25 m[2], a odnośnik [1)] zostaje tekstem." },
+                new DocumentBlock { Text = "Art. 2. Powierzchnia użytkowa nie przekracza 25 m[2], a odnośnik [1)] nie ma przypisu." },
             }));
 
             var sentences = xml.Descendants().Where(e => e.Name.LocalName == "zdanie").ToList();
@@ -442,9 +442,11 @@ namespace Saga.Core.Tests
             Assert.All(sentences[0].Elements(), e => Assert.Equal("sup", e.Name.LocalName));
             Assert.Equal("W przypadku określonym w art. 4779 § 31 ustawy sąd odrzuca odwołanie.", sentences[0].Value);
 
-            // Jednostka miary też ma indeks górny; znacznik odnośnika spoza rejestru nim nie jest.
-            Assert.Equal("2", Assert.Single(sentences[1].Elements()).Value);
-            Assert.Contains("odnośnik [1)] zostaje tekstem", sentences[1].Value);
+            // Jednostka miary też ma indeks górny; znacznik odnośnika spoza rejestru wychodzi tak samo, z nawiasem
+            // należącym do znacznika (ADR-0047).
+            Assert.Equal(new[] { "2", "1)" }, sentences[1].Elements().Select(e => e.Value));
+            Assert.All(sentences[1].Elements(), e => Assert.Equal("sup", e.Name.LocalName));
+            Assert.DoesNotContain("[", sentences[1].Value);
         }
 
         [Fact]

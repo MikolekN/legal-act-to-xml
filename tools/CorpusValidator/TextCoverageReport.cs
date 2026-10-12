@@ -177,6 +177,10 @@ internal static class TextCoverageReport
                     Append(root.Elements().Last(), sb);
                     Append(root.Elements().First(), sb);
                 }
+                else if (node is XElement { Name.LocalName: "sup" } superscript && FootnoteMarkers.Bare.IsMatch(superscript.Value))
+                {
+                    // Znacznik odnośnika bez odnośnika tego aktu wychodzi indeksem górnym; źródło liczy się bez znaczników.
+                }
                 else if (node is XElement child && !OutsideTheText.Contains(child.Name.LocalName))
                     Append(child, sb);
             }
