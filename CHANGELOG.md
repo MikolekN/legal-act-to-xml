@@ -603,6 +603,11 @@ a wersjonowanie zgodne z Semantic Versioning.
     oznaczenia za tabelą cytowaną wprost należy do niej. Przedtem wypadał z cytatu jako `fragment` przepisu
     zmieniającego, z osieroconym cudzysłowem zamykającym.
   - W korpusie ze stylami zmienia się jedno rozporządzenie (dwa pliki): 18 objaśnień pod cytowanymi tabelami przechodzi z `fragment` przepisu zmieniającego do `opis-tabeli`; zgodnych ze schematem jest nadal 1937 z 2321, pokrycie tekstu bez zmian. Bez stylów zgodność struktury rozporządzeń rośnie z 97,32 % do 97,35 %: rozporządzenie z cudzysłowem zamykającym w komórce tabeli (dwa pliki) nie gubi już jednostek aktu zmieniającego.
+- **Cudzysłów graniczny w komórce cytowanej tabeli należy do cytatu** ([ADR-0051](docs/adr/0051-cudzyslow-graniczny-w-komorce-tabeli-nalezy-do-cytatu.md)):
+  „„" w pierwszej i „”," w ostatniej komórce są zdejmowane z tabeli jak z akapitu — cytat ma w eksporcie
+  `cudzyslowy="oba"`, a interpunkcja komendy stoi za cytatem. Kolumna, w której nie było nic oprócz cudzysłowu,
+  znika razem z nim. Wyrażenie w cudzysłowie zamknięte w tej samej komórce zostaje treścią tabeli.
+  - W korpusie zmieniają się dwa rozporządzenia (cztery pliki): z cytowanych tabel znika 346 komórek kolumn, w których stał wyłącznie cudzysłów, a cytaty dostają w eksporcie cudzysłów otwierający albo zamykający, którego dotąd nie miały. Zgodnych ze schematem jest nadal 1937 z 2321, pokrycie tekstu bez zmian; żadna inna tabela korpusu się nie zmienia.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

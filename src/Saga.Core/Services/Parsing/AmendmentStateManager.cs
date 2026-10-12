@@ -241,18 +241,36 @@ namespace Saga.Core.Services.Parsing
         internal static QuoteBoundaries TrimQuoteBoundaries(AmendmentCollector collector) =>
             TrimQuoteBoundaries(collector.Paragraphs);
 
-        /// <summary>Zdejmuje graniczne cudzysłowy z pierwszego i ostatniego akapitu cytowanej treści.</summary>
+        /// <summary>
+        /// Zdejmuje graniczne cudzysłowy z pierwszego i ostatniego akapitu cytowanej treści, a gdy treść zaczyna
+        /// się albo kończy tabelą — z jej pierwszej i ostatniej komórki (<see cref="QuotedTableBoundaries"/>).
+        /// </summary>
         internal static QuoteBoundaries TrimQuoteBoundaries(IReadOnlyList<CollectedAmendmentParagraph> paragraphs)
         {
             if (paragraphs.Count == 0)
                 return default;
 
             var first = paragraphs[0];
-            var trimmedText = OpeningQuotePattern.Replace(first.Text, "", 1);
-            var hasOpening = trimmedText.Length != first.Text.Length;
-            first.Text = trimmedText;
+            bool hasOpening;
+            if (first.Table is { } openingTable)
+            {
+                hasOpening = QuotedTableBoundaries.TakeOpening(openingTable);
+            }
+            else
+            {
+                var trimmedText = OpeningQuotePattern.Replace(first.Text, "", 1);
+                hasOpening = trimmedText.Length != first.Text.Length;
+                first.Text = trimmedText;
+            }
 
             var last = paragraphs[^1];
+            if (last.Table is { } closingTable)
+            {
+                return QuotedTableBoundaries.TakeClosing(closingTable) is { } afterTable
+                    ? new QuoteBoundaries(hasOpening, true, afterTable.Length > 0 ? afterTable : null)
+                    : new QuoteBoundaries(hasOpening, false, null);
+            }
+
             var match = ClosingQuotePattern.Match(last.Text);
             if (!match.Success)
                 return new QuoteBoundaries(hasOpening, false, null);

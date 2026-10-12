@@ -1508,6 +1508,39 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0051: cudzysłów graniczny w komórce cytowanej tabeli należy do cytatu
+        // ============================================================
+
+        [Fact]
+        public void Adr0051_BoundaryQuotationMarkInACell_BelongsToTheQuotation()
+        {
+            static DocumentBlock Text(string text) => new() { Text = text };
+            static DocumentBlock Cell(int row, int column, string text) =>
+                new() { Text = text, TableCell = new BlockTableCell { Table = 0, Row = row, Column = column } };
+
+            DocumentBlock[] blocks =
+            [
+                Text("USTAWA"), Text("z dnia 14 czerwca 2024 r."), Text("o zmianie ustawy o opłatach"),
+                Text("Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w załączniku tabela otrzymuje brzmienie:"),
+                // Cudzysłowy stoją w dodatkowych kolumnach, pustych poza tą jedną komórką.
+                Cell(0, 0, "„"), Cell(0, 1, "Bielizna"), Cell(0, 2, "282"), Cell(0, 3, ""),
+                Cell(1, 0, ""), Cell(1, 1, "Ogółem „netto”"), Cell(1, 2, "1 307"), Cell(1, 3, "”."),
+                Text("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            ];
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var amendment = document.Articles.First().Paragraphs.Single().Amendment!;
+            Assert.True(amendment.HasOpeningQuote);
+            Assert.True(amendment.HasClosingQuote);
+            Assert.Equal(".", amendment.TrailingPunctuation);
+
+            // Tabela bez kolumn cudzysłowu; wyrażenie sparowane w komórce zostaje jej treścią.
+            var rows = amendment.Content!.Tables.Single().Rows;
+            Assert.Equal(new[] { "Bielizna", "282" }, rows[0].Cells.Select(cell => cell.Paragraphs.Single()));
+            Assert.Equal(new[] { "Ogółem „netto”", "1 307" }, rows[1].Cells.Select(cell => cell.Paragraphs.Single()));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

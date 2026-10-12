@@ -1,6 +1,7 @@
 using System.Xml.Linq;
 using Saga.Core.Ingest;
 using Saga.Core.Services;
+using Saga.Core.Services.Parsing;
 using Saga.Model;
 
 namespace Saga.Core.Tests
@@ -365,6 +366,130 @@ namespace Saga.Core.Tests
 
             // Interpunkcja komendy stoi za cytatem, w zdaniu przepisu zmieniającego.
             Assert.EndsWith(",", citation.Parent!.Value);
+        }
+
+        // ============================================================
+        // Cudzysłów graniczny cytatu w komórce tabeli należy do cytatu, nie do tabeli
+        // ============================================================
+
+        private static string[][] CellTexts(ContentTable table) =>
+            table.Rows.Select(row => row.Cells.Select(cell => string.Join(" ¶ ", cell.Paragraphs)).ToArray()).ToArray();
+
+        [Fact]
+        public void ClosingQuotationMarkInItsOwnColumn_IsTakenOffTheTableWithTheColumn()
+        {
+            var document = ParseBody(Act(
+                P(ChangesInAnAnnex),
+                P("1) po tabeli 1 dodaje się tabelę 1a w brzmieniu:"),
+                P("„Tabela 1a. Stawki opłat"),
+                Table(Row(Cell("Bielizna"), Cell("282"), Cell("")), Row(Cell("Ogółem"), Cell("1 307"), Cell("”,"))),
+                P("2) uchyla się lp. 7."),
+                P(EntryIntoForce)));
+
+            var amendment = document.Articles.First().Paragraphs.Single().Points[0].Amendment!;
+
+            // Kolumna, w której stał wyłącznie cudzysłów, nie jest kolumną tabeli.
+            Assert.Equal(
+                new[] { new[] { "Bielizna", "282" }, new[] { "Ogółem", "1 307" } },
+                CellTexts(amendment.Content!.Tables.Single()));
+            Assert.True(amendment.HasOpeningQuote);
+            Assert.True(amendment.HasClosingQuote);
+            Assert.Equal(",", amendment.TrailingPunctuation);
+        }
+
+        [Fact]
+        public void OpeningQuotationMarkInItsOwnColumn_IsTakenOffTheTableWithTheColumn()
+        {
+            var amendment = ParseTableWithANote().Articles.First().Paragraphs.Single().Points[0].Amendment!;
+
+            Assert.Equal(
+                new[] { new[] { "Lp.", "Temat" }, new[] { "1", "Szkolenie*" } },
+                CellTexts(amendment.Content!.Tables.Single()));
+            Assert.True(amendment.HasOpeningQuote);
+            Assert.True(amendment.HasClosingQuote);
+        }
+
+        [Fact]
+        public void QuotationMarksBesideTextInTheCells_AreTakenOffTheText()
+        {
+            var document = ParseBody(Act(
+                P(ChangesInAnAnnex),
+                P("1) w pkt 2 tabela otrzymuje brzmienie:"),
+                Table(Row(Cell("„Lp."), Cell("Temat")), Row(Cell("1"), Cell("Szkolenie”;"))),
+                P("2) uchyla się pkt 7."),
+                P(EntryIntoForce)));
+
+            var amendment = document.Articles.First().Paragraphs.Single().Points[0].Amendment!;
+
+            Assert.Equal(
+                new[] { new[] { "Lp.", "Temat" }, new[] { "1", "Szkolenie" } },
+                CellTexts(amendment.Content!.Tables.Single()));
+            Assert.True(amendment.HasOpeningQuote);
+            Assert.True(amendment.HasClosingQuote);
+            Assert.Equal(";", amendment.TrailingPunctuation);
+
+            var citation = Single(LegalDocumentConverter.Convert(document), "cytat-strukt");
+            Assert.Equal("oba", citation.Attribute("cudzyslowy")?.Value);
+            Assert.EndsWith(";", citation.Parent!.Value);
+        }
+
+        [Fact]
+        public void PairedQuotationInTheLastCell_StaysInTheTable()
+        {
+            // Wyrażenie w cudzysłowie zamknięte w tej samej komórce nie jest granicą cytatu.
+            var document = ParseBody(Act(
+                P(ChangesInAnAnnex),
+                P("1) w tabeli po lp. 2a dodaje się lp. 2b w brzmieniu:"),
+                Table(Row(Cell("2b."), Cell("forma prawna „spółka akcyjna”"))),
+                P("2) uchyla się lp. 7."),
+                P(EntryIntoForce)));
+
+            var amendment = document.Articles.First().Paragraphs.Single().Points[0].Amendment!;
+
+            Assert.Equal(
+                new[] { new[] { "2b.", "forma prawna „spółka akcyjna”" } },
+                CellTexts(amendment.Content!.Tables.Single()));
+            Assert.False(amendment.HasOpeningQuote);
+            Assert.False(amendment.HasClosingQuote);
+        }
+
+        private static ContentTable TableOf(params ContentTableCell[][] rows) =>
+            new() { Rows = rows.Select(cells => new ContentTableRow { Cells = [.. cells] }).ToList() };
+
+        private static ContentTableCell CellOf(string text, int rowSpan = 1) =>
+            new() { RowSpan = rowSpan, Paragraphs = text.Length == 0 ? [] : [text] };
+
+        [Fact]
+        public void ColumnOfTheQuotationMark_Stays_WhenItHoldsAnythingElse()
+        {
+            // Skrajna kolumna ma treść w innym wierszu — jest kolumną tabeli; znika tylko cudzysłów.
+            var table = TableOf(
+                [CellOf("Bielizna"), CellOf("uwaga")],
+                [CellOf("Ogółem"), CellOf("”.")]);
+
+            Assert.Equal(".", QuotedTableBoundaries.TakeClosing(table));
+            Assert.Equal(new[] { new[] { "Bielizna", "uwaga" }, new[] { "Ogółem", "" } }, CellTexts(table));
+        }
+
+        [Fact]
+        public void ColumnOfTheQuotationMark_Stays_WhenItsCellIsMerged()
+        {
+            var table = TableOf(
+                [CellOf("„", rowSpan: 2), CellOf("Lp.")],
+                [CellOf("1")]);
+
+            Assert.True(QuotedTableBoundaries.TakeOpening(table));
+            Assert.Equal(new[] { new[] { "", "Lp." }, new[] { "1" } }, CellTexts(table));
+        }
+
+        [Fact]
+        public void TableWithoutBoundaryMarks_IsLeftAsItIs()
+        {
+            var table = TableOf([CellOf("Lp."), CellOf("Temat")], [CellOf("1"), CellOf("Szkolenie")]);
+
+            Assert.False(QuotedTableBoundaries.TakeOpening(table));
+            Assert.Null(QuotedTableBoundaries.TakeClosing(table));
+            Assert.Equal(new[] { new[] { "Lp.", "Temat" }, new[] { "1", "Szkolenie" } }, CellTexts(table));
         }
 
         [SchemaPlFact]

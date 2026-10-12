@@ -1,6 +1,6 @@
 # ADR-0050: Cudzysłowy cytowanej tabeli liczą się w bilansie cytatu, a akapit za tabelą cytowaną wprost jest jej objaśnieniem
 
-- Status: Accepted
+- Status: Accepted (cudzysłów stojący w komórce, zostawiony tu w tabeli, zdejmuje z niej [ADR-0051](0051-cudzyslow-graniczny-w-komorce-tabeli-nalezy-do-cytatu.md))
 - Data: 2026-10-12
 
 ## Kontekst
