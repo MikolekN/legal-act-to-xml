@@ -211,6 +211,8 @@ namespace Saga.Core.Tests
         // Korpus: 329084_2934669 — organ małą literą w wierszu nagłówka; nagłówek poznaje się po miejscu.
         [InlineData("Obwieszczenie marszałka Sejmu Rzeczypospolitej Polskiej", true)]
         [InlineData("OBWIESZCZENIE MINISTRA FINANSÓW", true)]
+        // Długa nazwa organu nie czyni nagłówka zdaniem.
+        [InlineData("Obwieszczenie ministra właściwego do spraw budownictwa, planowania i zagospodarowania przestrzennego oraz mieszkalnictwa, ministra właściwego do spraw gospodarki oraz ministra właściwego do spraw klimatu", true)]
         // Zdanie zaczynające się tym słowem nagłówkiem nie jest.
         [InlineData("Obwieszczenie zostało wydane na podstawie odrębnych przepisów.", false)]
         public void FirstLineStartingWithTheKindWord_IsTheHeadingOfAnAnnouncement(string firstLine, bool expected)

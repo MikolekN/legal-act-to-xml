@@ -90,18 +90,15 @@ namespace Saga.Core.Services.Parsing
                 HasSections: sections && !articles);
         }
 
-        // Wiersz dłuższy niż nagłówek z nazwą organu jest już zdaniem.
-        private const int LongestHeading = 160;
-
         /// <summary>
         /// Nagłówek obwieszczenia w pierwszym wierszu treści dokumentu. Wzorcowa pisownia wystarcza sama;
         /// pisownię spoza wzorca („Obwieszczenie marszałka Sejmu Rzeczypospolitej Polskiej" — organ małą literą)
-        /// potwierdza miejsce: to pierwszy wiersz dokumentu, zaczyna się słowem rodzaju i nie jest zdaniem.
+        /// potwierdza miejsce: to pierwszy wiersz dokumentu, zaczyna się słowem rodzaju i nie jest zdaniem —
+        /// nagłówek nie ma kropki na końcu. Długość nie rozstrzyga: nazwa organu bywa dowolnie długa.
         /// </summary>
         private static bool IsAnnouncementHeading(string firstLine) =>
             ZtpPatterns.AnnouncementHeaderPattern.IsMatch(firstLine)
             || (ZtpPatterns.KindOfHeading(firstLine) == Saga.Model.LegalActType.Announcement
-                && firstLine.Length <= LongestHeading
                 && !firstLine.EndsWith('.'));
 
         private static readonly Regex SectionDesignation = new(@"^§\s*\d+[a-z]*\.", RegexOptions.Compiled);
