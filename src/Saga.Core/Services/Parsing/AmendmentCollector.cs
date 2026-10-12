@@ -62,6 +62,12 @@ namespace Saga.Core.Services.Parsing
         public QuoteBalanceTracker QuoteTracker { get; } = new();
 
         /// <summary>
+        /// Co w otwartym cytacie wygląda na dalszy ciąg aktu zmieniającego — do wskazania granicy cytatu,
+        /// który nie domknął się do końca dokumentu (ADR-0049); resetowany z kolektorem.
+        /// </summary>
+        public OpenQuotationTrail OpenQuotation { get; } = new();
+
+        /// <summary>
         /// Czy kolektor jest w trybie aktywnego zbierania
         /// (ma wlasciciela lub zebrane akapity).
         /// </summary>
@@ -151,6 +157,7 @@ namespace Saga.Core.Services.Parsing
             Owner = null;
             Targets = [];
             QuoteTracker.Reset();
+            OpenQuotation.Reset();
 
             if (count > 0)
             {

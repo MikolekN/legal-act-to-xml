@@ -77,6 +77,20 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Równanie otwierające przetwarzany blok (symbol wiersza legendy wzoru); null, gdy go nie ma.</summary>
         public Ingest.BlockSymbol? CurrentSymbol { get; set; }
 
+        /// <summary>
+        /// Akapity, przed którymi cytat nowelizacji kończy się mimo otwartego bilansu cudzysłowów — wskazane
+        /// przez przebieg, w którym cytat nie domknął się do końca dokumentu (ADR-0049).
+        /// </summary>
+        public IReadOnlySet<DocumentBlock> QuotationBreaks { get; init; } = NoQuotationBreaks;
+
+        /// <summary>
+        /// Akapit, przed którym powinien był się skończyć cytat otwarty do końca dokumentu; null, gdy takiego
+        /// cytatu nie ma albo nic w nim nie wygląda na dalszy ciąg aktu zmieniającego.
+        /// </summary>
+        public DocumentBlock? UnclosedQuotationBreak { get; set; }
+
+        private static readonly HashSet<DocumentBlock> NoQuotationBreaks = [];
+
         /// <summary>Bloki treści obwieszczenia tekstu jednolitego — sprzed aktu ogłaszanego w załączniku.</summary>
         public List<DocumentBlock> AnnouncementBlocks { get; } = new();
 

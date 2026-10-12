@@ -110,7 +110,7 @@ namespace Saga.Core.Services.Parsing
             if (IsMisstyledActUnit(context, classification, text))
                 classification = AsActContent(classification);
 
-            if (HandleAmendmentFlow(context, classification, text, styleId)) return;
+            if (HandleAmendmentFlow(context, classification, block, text, styleId)) return;
 
             // Akapit w stylu jednostki bez żadnego oznaczenia w treści jest dalszą treścią jednostki, za którą
             // stoi (ADR-0039). Granice nowelizacji rozstrzygnęła już klasyfikacja ze stylu — zmienia się tylko to,
@@ -268,6 +268,12 @@ namespace Saga.Core.Services.Parsing
 
             if (context.InsideAmendment || context.AmendmentCollector.IsCollecting)
             {
+                // Dokument skończył się w otwartym cytacie: cudzysłowu zamykającego zabrakło i cytat wchłonął
+                // resztę aktu. Ślad wskazuje akapit, przed którym powinien był się skończyć (ADR-0049).
+                var collector = context.AmendmentCollector;
+                if (collector.QuoteTracker.IsInsideQuote && context.CurrentArticle?.Number is { } owner)
+                    context.UnclosedQuotationBreak = collector.OpenQuotation.FindBreak(owner);
+
                 _amendmentManager.Flush(context);
                 context.InsideAmendment = false;
             }
@@ -370,6 +376,7 @@ namespace Saga.Core.Services.Parsing
         private bool HandleAmendmentFlow(
             ParsingContext context,
             ClassificationResult classification,
+            DocumentBlock block,
             string text,
             string? styleId)
         {
@@ -386,6 +393,14 @@ namespace Saga.Core.Services.Parsing
 
             if (wasInsideAmendment && !context.InsideAmendment)
                 _amendmentManager.Flush(context);
+
+            // Cytat, który w poprzednim przebiegu nie domknął się do końca dokumentu, kończy się przed akapitem
+            // wskazanym po tamtym przebiegu (ADR-0049).
+            if (wasInsideAmendment && context.InsideAmendment && context.QuotationBreaks.Contains(block))
+            {
+                _amendmentManager.Flush(context);
+                context.InsideAmendment = false;
+            }
 
             // Guard: ShouldExitForNewParentLawTrigger jest sensowne tylko gdy bylismy JUZ w nowelizacji
             // przed wywolaniem UpdateState. Jesli wlasnie weszlismy (wasInsideAmendment=false),
@@ -406,6 +421,9 @@ namespace Saga.Core.Services.Parsing
                     context.InsideAmendment = false;
                 }
             }
+
+            if (wasInsideAmendment && context.InsideAmendment && quoteTracker.IsInsideQuote)
+                NoteWhatMayContinueTheAct(context, classification, block, text);
 
             // Treść cytowana bez stylu i bez cudzysłowu otwierającego nie ma granicy, którą dałoby się śledzić.
             // Kończy ją to, co do aktu zmienianego należeć nie może (ADR-0048).
@@ -452,8 +470,25 @@ namespace Saga.Core.Services.Parsing
             if (classification.Kind != ParagraphKind.Article || context.CurrentArticle?.Number is not { } current)
                 return false;
 
-            return ParsingFactories.ParseArticleNumber(text) is { LexicalPart.Length: 0 } next
-                && next.NumericPart == current.NumericPart + 1;
+            return ParsingFactories.ParseArticleNumber(text) is { } next && OpenQuotationTrail.Follows(current, next);
+        }
+
+        /// <summary>
+        /// W otwartym cytacie odnotowuje akapity, które mogą być dalszym ciągiem aktu zmieniającego: oznaczone
+        /// jak artykuł i bez własnego cudzysłowu otwierającego albo formułę podpisu. Czy cytat rzeczywiście
+        /// wchłonął resztę aktu, okaże się na końcu dokumentu (ADR-0049).
+        /// </summary>
+        private static void NoteWhatMayContinueTheAct(
+            ParsingContext context, ClassificationResult classification, DocumentBlock block, string text)
+        {
+            if (QuoteBalanceTracker.OpensQuote(text))
+                return;
+
+            var collector = context.AmendmentCollector;
+            if (ActSignatureParser.TryParse(text) is not null)
+                collector.OpenQuotation.NoteSignature(block);
+            else if (classification.Kind == ParagraphKind.Article && ParsingFactories.ParseArticleNumber(text) is { } number)
+                collector.OpenQuotation.NoteArticle(block, number, collector.QuoteTracker.Depth);
         }
     }
 }

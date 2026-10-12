@@ -589,6 +589,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   zmieniającego (numer o jeden większy od artykułu z komendą), formuła podpisu albo cudzysłów zamykający bez
   otwarcia. Przedtem trwała do końca dokumentu, a dalsze artykuły ustawy zmieniającej stawały się cytowanymi.
   - W korpusie ze stylami bez zmian; bez stylów zgodność struktury rozporządzeń 97,22 % → 97,31 %.
+- **Cytat niedomknięty nie wchłania reszty aktu zmieniającego** ([ADR-0049](docs/adr/0049-cytat-niedomkniety-do-konca-dokumentu-konczy-ponowny-przebieg.md)):
+  gdy w dokumencie bez stylów zabraknie cudzysłowu zamykającego, cytat trwał do końca dokumentu — z przepisem
+  o wejściu w życie i podpisem w środku. Dokument, który kończy się w otwartym cytacie, buduje się teraz ponownie,
+  a cytat kończy się przed artykułem, od którego numeracja aktu zmieniającego biegnie dalej. Artykuł o tym samym
+  numerze w cytacie kilku artykułów zostaje treścią cytowaną. Jednostka z komendą zachowuje ostrzeżenie.
+  - W korpusie ze stylami bez zmian (0 z 2321 dokumentów). Bez stylów jedno rozporządzenie (dwa pliki) odzyskuje końcowy „§ 2"; cytat nie domykał się tam, bo cudzysłów zamykający cytowaną tabelę stoi w jej ostatniej komórce, a tabela nie bierze udziału w bilansie cudzysłowów (zgodność struktury rozporządzeń 97,31 % → 97,32 %).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

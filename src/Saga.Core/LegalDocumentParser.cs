@@ -103,6 +103,35 @@ namespace Saga.Core
             DocumentClassificationResult? classification = null,
             Action<DocumentBlock, ParsingContext>? observeBlock = null)
         {
+            // Cytat nowelizacji, którego nie domknięto, trwa do końca dokumentu i wchłania resztę aktu
+            // zmieniającego. Widać to dopiero na końcu, więc dokument buduje się wtedy ponownie, z granicą
+            // cytatu wskazaną z góry (ADR-0049). Każdy przebieg dokłada jedną nową granicę albo jest ostatni.
+            var quotationBreaks = new HashSet<DocumentBlock>(ReferenceEqualityComparer.Instance);
+            LegalDocument document;
+            DocumentBlock? unclosedBreak;
+            do
+            {
+                document = BuildDocument(blocks, classification, quotationBreaks, observeBlock: null, out unclosedBreak);
+            }
+            while (unclosedBreak is not null && quotationBreaks.Add(unclosedBreak));
+
+            // Obserwator widzi wyłącznie przebieg, z którego powstaje wynik.
+            return observeBlock is null
+                ? document
+                : BuildDocument(blocks, classification, quotationBreaks, observeBlock, out _);
+        }
+
+        /// <summary>
+        /// Jeden przebieg budowy modelu. <paramref name="unclosedQuotationBreak"/> to akapit, przed którym
+        /// powinien był się skończyć cytat otwarty do końca dokumentu; null, gdy przebieg jest ostateczny.
+        /// </summary>
+        private static LegalDocument BuildDocument(
+            IReadOnlyList<DocumentBlock> blocks,
+            DocumentClassificationResult? classification,
+            IReadOnlySet<DocumentBlock> quotationBreaks,
+            Action<DocumentBlock, ParsingContext>? observeBlock,
+            out DocumentBlock? unclosedQuotationBreak)
+        {
             var document = new LegalDocument { Classification = classification };
 
             JournalHeaderParser.Apply(blocks, document);
@@ -124,6 +153,7 @@ namespace Saga.Core
                     || Services.UnitReferences.SectionSignRole.IsSectionBased(layout.AnnouncedKind)
                     || (layout.IsPlainAnnouncement && layout.HasSections),
                 IsPlainAnnouncement = layout.IsPlainAnnouncement,
+                QuotationBreaks = quotationBreaks,
             };
             var orchestrator = new ParserOrchestrator();
 
@@ -159,6 +189,7 @@ namespace Saga.Core
             // kończy się wewnątrz treści nowelizacji
             orchestrator.Finalize(context);
 
+            unclosedQuotationBreak = context.UnclosedQuotationBreak;
             return document;
         }
 

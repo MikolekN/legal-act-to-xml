@@ -1,6 +1,6 @@
 # ADR-0048: Treść cytowaną bez cudzysłowu otwierającego i bez stylów kończy kolejny artykuł aktu zmieniającego albo formuła podpisu
 
-- Status: Accepted
+- Status: Accepted (cytat otwarty i niedomknięty, zostawiony tu bez rozwiązania, kończy [ADR-0049](0049-cytat-niedomkniety-do-konca-dokumentu-konczy-ponowny-przebieg.md))
 - Data: 2026-10-12
 
 ## Kontekst

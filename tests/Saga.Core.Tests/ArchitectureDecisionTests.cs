@@ -1445,6 +1445,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0049: cytat niedomknięty do końca dokumentu nie wchłania reszty aktu zmieniającego
+        // ============================================================
+
+        [Fact]
+        public void Adr0049_QuotationLeftOpenToTheEndOfTheDocument_EndsBeforeTheActsNextArticle()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) art. 1 i 2 otrzymują brzmienie:",
+                "„Art. 1. Ustawa określa opłaty.",
+                // Numer kolejny względem artykułu z komendą, ale treść cytowana: po nim stoi jeszcze raz art. 2.
+                "Art. 2. Opłatę wnosi się w terminie 14 dni.",
+                "Art. 2. W ustawie z dnia 3 marca 2022 r. o podatkach (Dz. U. poz. 300) uchyla się art. 7.",
+                "Art. 3. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            Assert.Equal(new[] { "1", "2", "3" }, document.Articles.Select(article => article.Number?.Value));
+            Assert.Equal(new[] { "1", "2" },
+                document.Articles.First().Paragraphs.Single().Amendment!.Content!.Articles.Select(article => article.Number?.Value));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 
