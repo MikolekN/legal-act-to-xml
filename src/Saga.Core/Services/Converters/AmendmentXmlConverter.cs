@@ -44,6 +44,7 @@ namespace Saga.Core.Services.Converters
             {
                 foreach (var command in commands)
                     AddRepealInstruction(amendment, command, sentence);
+                AddTextChangeInstructions(amendment, commands, sentence);
                 return;
             }
 
@@ -216,15 +217,26 @@ namespace Saga.Core.Services.Converters
             XNamespace now = XmlConverterConstants.AmendmentNamespace;
             var instructions = new List<XElement>();
 
-            foreach (var command in commands)
+            foreach (var change in amendment.TextChanges)
             {
-                foreach (var change in amendment.TextChanges)
+                // Zmiana z własnym celem (znak kończący jednostkę) nie dzieli go z resztą nowelizacji.
+                var targets = change.Targets.Count > 0
+                    ? change.Targets.Select(target => new Command(target, Guid.NewGuid())).ToList()
+                    : commands;
+
+                foreach (var command in targets)
                 {
                     var instruction = new XElement(now + XmlConverterConstants.Contents.Instruction.ReplaceText,
                         new XAttribute(XmlConverterConstants.Contents.Instruction.OldTextAttribute, change.OldText),
                         new XAttribute(XmlConverterConstants.Contents.Instruction.NewTextAttribute, change.NewText));
                     AddTargetAttributes(instruction, command.Target);
                     instruction.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
+                    if (change.Occurrence == TextOccurrence.Last)
+                    {
+                        instruction.Add(new XAttribute(now + XmlConverterConstants.Contents.Citation.Quotation.AppearanceAttribute,
+                            XmlConverterConstants.Contents.Instruction.LastOccurrence));
+                    }
+
                     instruction.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
                     instructions.Add(instruction);
                 }

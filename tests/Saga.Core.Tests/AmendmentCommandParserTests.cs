@@ -154,6 +154,39 @@ namespace Saga.Core.Tests
             Assert.Empty(AmendmentCommandParser.TextChangeCommands(text));
         }
 
+        // ============================================================
+        // Zamiana znaku kończącego jednostkę
+        // ============================================================
+
+        [Theory]
+        [InlineData("w art. 4 w pkt 20 kropkę zastępuje się średnikiem i dodaje się pkt 21 w brzmieniu:", ".", ";")]
+        [InlineData("w ust. 1 w pkt 2 w lit. b średnik zastępuje się przecinkiem i dodaje się lit. c w brzmieniu:", ";", ",")]
+        [InlineData("w art. 44 w ust. 4 w pkt 4 średnik zastępuje się kropką i uchyla się pkt 5;", ";", ".")]
+        [InlineData("w pkt 3 kropkę na końcu zastępuje się średnikiem;", ".", ";")]
+        [InlineData("w lit. g przecinek zastępuje się średnikiem i uchyla się lit. h;", ",", ";")]
+        // Wyrazy dodawane zaraz za nowym znakiem należą do tej samej zmiany.
+        [InlineData("w ust. 1 w pkt 3 kropkę na końcu zastępuje się przecinkiem i dodaje się wyrazy „z tym że opłaty nie pobiera się”;", ".", ", z tym że opłaty nie pobiera się")]
+        [InlineData("w ust. 2 w pkt 3 kropkę zastępuje się przecinkiem i dodaje się wyraz „lub” oraz dodaje się pkt 4 w brzmieniu:", ".", ", lub")]
+        public void ReplaceSignCommand_IsATextChangeOfTheSign(string text, string old, string @new)
+        {
+            var cmd = AmendmentCommandParser.TextChangeCommands(text).Single();
+
+            Assert.Equal(AmendmentCommandKind.ReplaceSign, cmd.Kind);
+            Assert.True(cmd.ChangesText);
+            Assert.Equal(old, cmd.OldWording);
+            Assert.Equal(@new, cmd.NewWording);
+        }
+
+        [Theory]
+        // Znak wskazany miejscem w tekście nie jest znakiem kończącym jednostkę.
+        [InlineData("w tiret pierwszym przecinek po wyrazach „środków publicznych” zastępuje się średnikiem;")]
+        // Zdanie o czym innym niż znak.
+        [InlineData("zezwolenie, o którym mowa w art. 34 ust. 1, zastępuje się decyzją o środowiskowych uwarunkowaniach.")]
+        public void ReplaceSignCommand_NeedsTheSignRightBeforeTheVerb(string text)
+        {
+            Assert.DoesNotContain(AmendmentCommandParser.TextChangeCommands(text), c => c.Kind == AmendmentCommandKind.ReplaceSign);
+        }
+
         [Theory]
         [InlineData("Funduszu", "na wypłatę", "Funduszu na wypłatę")]
         [InlineData("Finansowego", ",", "Finansowego,")]

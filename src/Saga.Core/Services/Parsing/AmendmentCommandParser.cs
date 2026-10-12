@@ -28,6 +28,11 @@ namespace Saga.Core.Services.Parsing
         /// wyrazy wskazane zastępuje się niczym.
         /// </summary>
         DeleteWords,
+        /// <summary>
+        /// „kropkę zastępuje się średnikiem" — zamiana znaku kończącego jednostkę, zwykle przed dodaniem albo
+        /// uchyleniem jednostki po niej. Zmiana w tekście: ostatnie wystąpienie znaku zastępuje się innym.
+        /// </summary>
+        ReplaceSign,
     }
 
     /// <summary>
@@ -58,7 +63,7 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Czy komenda jest zmianą w tekście jednostki (wyrazów), a nie zmianą jednostki.</summary>
         public bool ChangesText => Kind is AmendmentCommandKind.ReplaceWords or AmendmentCommandKind.AddWords
-            or AmendmentCommandKind.DeleteWords;
+            or AmendmentCommandKind.DeleteWords or AmendmentCommandKind.ReplaceSign;
 
         /// <summary>Pełny dopasowany tekst komendy (do wycinania przy analizie komend złożonych).</summary>
         public string? MatchedCommandText { get; init; }
@@ -141,6 +146,24 @@ namespace Saga.Core.Services.Parsing
         private static readonly Regex QuotedWordsPattern = new(QuotedWords, RegexOptions.Compiled);
 
         /// <summary>
+        /// „kropkę zastępuje się średnikiem", „średnik na końcu zastępuje się przecinkiem" — zamiana znaku
+        /// kończącego jednostkę. Wyrazy dodawane zaraz za nowym znakiem („… przecinkiem i dodaje się wyraz „lub"")
+        /// należą do tej samej zmiany. Znak wskazany miejscem w tekście („przecinek po wyrazach „X"") nie pasuje.
+        /// </summary>
+        internal static readonly Regex ReplaceSignPattern = new(
+            @"(?<old>kropkę|średnik|przecinek|dwukropek)(?:\s+na\s+końcu)?\s+zastępuje\s+się\s+(?<new>kropką|średnikiem|przecinkiem|dwukropkiem)"
+            + $@"(?:\s+i\s+dodaje(?:\s+się)?\s+wyraz(?:y)?\s+[{QuotationMarks.OpeningOrStraight}](?<added>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}])?",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        private static string SignOf(string name) => name.ToLowerInvariant() switch
+        {
+            "kropkę" or "kropką" => ".",
+            "średnik" or "średnikiem" => ";",
+            "przecinek" or "przecinkiem" => ",",
+            _ => ":",
+        };
+
+        /// <summary>
         /// Rozpoznaje komendę nowelizacyjną w treści akapitu. Zwraca null, gdy akapit nie zawiera
         /// żadnej znanej komendy. Kolejność: ReplaceWords → Repeal → Add → Change (komenda „dodaje się …
         /// w brzmieniu:" zawiera też frazę zmiany, więc Add musi być sprawdzone przed Change).
@@ -197,6 +220,14 @@ namespace Saga.Core.Services.Parsing
                 var before = match.Groups["side"].Value.Equals("przed", StringComparison.OrdinalIgnoreCase);
                 spans.Add((match.Index, match.Index + match.Length, [TextChange(text, match,
                     AmendmentCommandKind.AddWords, anchor, before ? JoinWords(added, anchor) : JoinWords(anchor, added))]));
+            }
+
+            foreach (Match match in ReplaceSignPattern.Matches(text))
+            {
+                var sign = SignOf(match.Groups["new"].Value);
+                var replacement = match.Groups["added"].Success ? JoinWords(sign, match.Groups["added"].Value.Trim()) : sign;
+                spans.Add((match.Index, match.Index + match.Length, [TextChange(text, match,
+                    AmendmentCommandKind.ReplaceSign, SignOf(match.Groups["old"].Value), replacement)]));
             }
 
             foreach (Match match in DeleteWordsPattern.Matches(text))

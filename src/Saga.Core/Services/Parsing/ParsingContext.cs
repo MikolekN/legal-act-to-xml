@@ -203,6 +203,13 @@ namespace Saga.Core.Services.Parsing
         public Dictionary<Guid, IReadOnlyList<StructuralAmendmentReference>> DetectedAmendmentTargets { get; } = new();
 
         /// <summary>
+        /// Zmiany w tekście zapisane w tym samym zdaniu co zmiana jednostki („w pkt 20 kropkę zastępuje się
+        /// średnikiem i dodaje się pkt 21 w brzmieniu:") — czekają na nowelizację tego przepisu, do której
+        /// dołączy je <see cref="AmendmentFinalizer"/>. Klucz: Guid przepisu zmieniającego.
+        /// </summary>
+        public Dictionary<Guid, List<TextChange>> PendingTextChanges { get; } = new();
+
+        /// <summary>
         /// Czy aktualnie przetwarza akapity bedace trescia nowelizacji.
         /// Ustawiane na true gdy:
         /// - napotkano akapit ze stylem Z/... (Z/UST, Z/ART, Z/PKT itd.)

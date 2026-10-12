@@ -300,7 +300,13 @@ namespace Saga.Core.Services.Converters
             }
 
             foreach (var change in amendment.TextChanges)
-                el.Add(new XElement("textChange", new XAttribute("old", change.OldText), new XAttribute("new", change.NewText)));
+            {
+                el.Add(new XElement("textChange",
+                    new XAttribute("old", change.OldText),
+                    new XAttribute("new", change.NewText),
+                    change.Occurrence == TextOccurrence.All ? null : new XAttribute("occurrence", change.Occurrence.ToString()),
+                    change.Targets.Select(target => new XElement("target", target.Structure.ToString()))));
+            }
 
             if (amendment.Content != null)
                 el.Add(SerializeAmendmentContent(amendment.Content));

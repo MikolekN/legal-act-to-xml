@@ -133,6 +133,8 @@ namespace Saga.Core.Services.Parsing
                 Content = operationType == AmendmentOperationType.Repeal ? null : content
             };
             amendment.TextChanges.AddRange(input.TextChanges ?? []);
+            if (context.PendingTextChanges.Remove(collector.Owner.Guid, out var pendingTextChanges))
+                amendment.TextChanges.AddRange(pendingTextChanges);
 
             // 3. Połącz z celem nowelizacji (StructuralAmendmentReference)
             LinkTargets(amendment, collector, context);

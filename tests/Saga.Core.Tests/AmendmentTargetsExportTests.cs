@@ -294,6 +294,81 @@ namespace Saga.Core.Tests
             Assert.Contains(owner.ValidationMessages, m => m.Message.Contains("nieodwzorowana", StringComparison.Ordinal));
         }
 
+        // ============================================================
+        // Zamiana znaku kończącego jednostkę (ADR-0054)
+        // ============================================================
+
+        [Fact]
+        public void SignReplacedBeforeAnAddedUnit_IsAnInstructionOnTheUnitBeforeTheSign()
+        {
+            // Przykład autorów schematu (DU/2026/26): „w art. 4 w pkt 20 kropkę zastępuje się średnikiem i dodaje
+            // się pkt 21 w brzmieniu:" — zamiana ostatniej kropki pkt 20 i dodanie pkt 21 po pkt 20.
+            var (xml, context) = Convert(
+                "1) w art. 4 w pkt 20 kropkę zastępuje się średnikiem i dodaje się pkt 21 w brzmieniu:",
+                "„21) osoba wykonująca zawód medyczny.”;");
+
+            var commands = Commands(xml);
+            Assert.Equal(new[] { "zamien-tekst", "cytat-strukt" }, commands.Select(c => c.Name.LocalName));
+
+            var sign = commands[0];
+            Assert.Equal(".", Attr(sign, "stary-tekst"));
+            Assert.Equal(";", Attr(sign, "nowy-tekst"));
+            Assert.Equal("art_4__pkt_20", Attr(sign, "element-eId"));
+            Assert.Equal("ostatnie", Attr(sign, "wystapienie"));
+            Assert.Equal(XmlConverterConstants.AmendmentNamespace, sign.Attributes().Single(a => a.Name.LocalName == "wystapienie").Name.NamespaceName);
+
+            Assert.Equal("art_4__pkt_20", Attr(commands[1], "element-eId"));
+            Assert.Equal("dodaj-po", Attr(commands[1], "funkcja"));
+            Assert.NotEqual(Attr(sign, "nowGUID"), Attr(commands[1], "nowGUID"));
+
+            // Zmiana w tekście siedzi w nowelizacji tego przepisu, z własnym celem.
+            var amendment = context.Document.Articles.First().Paragraphs[0].Points.Single().Amendment!;
+            var change = Assert.Single(amendment.TextChanges);
+            Assert.Equal(TextOccurrence.Last, change.Occurrence);
+            Assert.Equal("art_4__pkt_20", Assert.Single(change.Targets).Structure.ToString());
+        }
+
+        [Theory]
+        // Korpus: 308795_2759226, 310708_2773514, 320206_2951141. Znak zmienia się w jednostce sprzed komendy,
+        // a uchylana jest jednostka nazwana po niej — przedtem uchylenie wskazywało jednostkę, w której zmienia
+        // się znak.
+        [InlineData("1) w art. 44 w ust. 4 w pkt 4 średnik zastępuje się kropką i uchyla się pkt 5;", "art_44__ust_4__pkt_4", "art_44__ust_4__pkt_5", null)]
+        [InlineData("1) w art. 131 w ust. 2 w pkt 1 średnik zastępuje się kropką i uchyla się pkt 2–7;", "art_131__ust_2__pkt_1", "art_131__ust_2__pkt_2", "art_131__ust_2__pkt_7")]
+        [InlineData("1) w art. 4 w pkt 1 w lit. g przecinek zastępuje się średnikiem i uchyla się lit. h;", "art_4__pkt_1__lit_g", "art_4__pkt_1__lit_h", null)]
+        public void RepealAfterAReplacedSign_NamesTheUnitAfterTheCommand(string command, string signUnit, string repealed, string? repealedTo)
+        {
+            var (xml, _) = Convert(command);
+
+            var sign = Assert.Single(Commands(xml), c => c.Name.LocalName == "zamien-tekst");
+            Assert.Equal(signUnit, Attr(sign, "element-eId"));
+            Assert.Equal("ostatnie", Attr(sign, "wystapienie"));
+
+            var repeal = Assert.Single(Commands(xml), c => c.Name.LocalName == "uchyl");
+            Assert.Equal(repealed, Attr(repeal, "element-eId"));
+            Assert.Equal(repealedTo, Attr(repeal, "element-do-eId"));
+        }
+
+        [Fact]
+        public void SignReplacedOnItsOwn_IsATextChangeOfTheUnit()
+        {
+            var (xml, _) = Convert("1) w art. 12 w pkt 2 kropkę zastępuje się średnikiem;");
+
+            var sign = Assert.Single(Commands(xml));
+            Assert.Equal((".", ";", "art_12__pkt_2", "ostatnie"),
+                (Attr(sign, "stary-tekst"), Attr(sign, "nowy-tekst"), Attr(sign, "element-eId"), Attr(sign, "wystapienie")));
+        }
+
+        [Fact]
+        public void WordsAddedAfterTheNewSign_AreOneChangeWithIt()
+        {
+            // Korpus: 318167_2965687 — „kropkę na końcu zastępuje się przecinkiem i dodaje się wyrazy „z tym że …"".
+            var (xml, _) = Convert("1) w art. 9 w ust. 1 w pkt 3 kropkę na końcu zastępuje się przecinkiem i dodaje się wyrazy „z tym że opłaty nie pobiera się”;");
+
+            var sign = Assert.Single(Commands(xml));
+            Assert.Equal(".", Attr(sign, "stary-tekst"));
+            Assert.Equal(", z tym że opłaty nie pobiera się", Attr(sign, "nowy-tekst"));
+        }
+
         [Fact]
         public void ReplacedWords_CarryNoSpaceFromInsideTheQuotationMarks()
         {

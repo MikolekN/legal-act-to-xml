@@ -399,6 +399,7 @@ namespace Saga.Core.Services.Converters
                 internal const string ReplaceText = "zamien-tekst";
                 internal const string OldTextAttribute = "stary-tekst";
                 internal const string NewTextAttribute = "nowy-tekst";
+                internal const string LastOccurrence = "ostatnie";
             }
 
             internal static class Odnosnik

@@ -105,7 +105,7 @@ namespace Saga.Core.Tests
                 $"targets=[{targets}] journal={journalDesc} effective={effective}");
 
             foreach (var change in amendment.TextChanges)
-                sb.AppendLine($"{indent}  textchange | {change.OldText} → {change.NewText}");
+                sb.AppendLine($"{indent}  textchange {change.Occurrence} [{string.Join(", ", change.Targets)}] | {change.OldText} → {change.NewText}");
 
             if (amendment.Content == null)
                 return;

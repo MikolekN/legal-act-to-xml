@@ -1620,6 +1620,35 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0054: zamiana znaku kończącego jednostkę ma własny cel
+        // ============================================================
+
+        [Fact]
+        public void Adr0054_ReplacedSign_KeepsItsOwnUnit_AndTheRepealAfterItNamesTheNextOne()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w art. 44 w ust. 4 w pkt 4 średnik zastępuje się kropką i uchyla się pkt 5.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var xml = LegalDocumentConverter.Convert(document);
+            string? Unit(string instruction) => xml.Descendants().Single(e => e.Name.LocalName == instruction).Attribute("element-eId")?.Value;
+
+            // Znak zmienia się w pkt 4, a uchylany jest pkt 5 — nie odwrotnie i nie ten sam.
+            Assert.Equal("DU/2021/200__art_44__ust_4__pkt_4", Unit("zamien-tekst"));
+            Assert.Equal("DU/2021/200__art_44__ust_4__pkt_5", Unit("uchyl"));
+
+            var sign = xml.Descendants().Single(e => e.Name.LocalName == "zamien-tekst");
+            Assert.Equal((";", "."), (sign.Attribute("stary-tekst")?.Value, sign.Attribute("nowy-tekst")?.Value));
+            Assert.Equal("ostatnie", sign.Attributes().Single(a => a.Name.LocalName == "wystapienie").Value);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

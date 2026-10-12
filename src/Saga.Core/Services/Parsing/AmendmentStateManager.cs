@@ -341,9 +341,18 @@ namespace Saga.Core.Services.Parsing
                 var compoundOwner = GetOwner(context);
                 if (compoundOwner != null)
                 {
-                    ValidationReporter.AddValidationMessage(compoundOwner, ValidationLevel.Warning,
-                        "Komenda złożona: zamiana wyrazów połączona z inną komendą nowelizacyjną — " +
-                        "model reprezentuje tylko operację strukturalną; zamiana wyrazów pozostaje w treści komendy.");
+                    // Zamiana znaku kończącego jednostkę towarzyszy zmianie jednostki po niej — zostaje przy
+                    // nowelizacji tego przepisu. Zmiana wyrazów w komendzie złożonej nie ma jeszcze własnego celu.
+                    var signs = textChanges.Where(command => command.Kind == AmendmentCommandKind.ReplaceSign).ToList();
+                    if (signs.Count > 0)
+                        KeepSignChanges(context, compoundOwner, text, signs);
+
+                    if (signs.Count < textChanges.Count)
+                    {
+                        ValidationReporter.AddValidationMessage(compoundOwner, ValidationLevel.Warning,
+                            "Komenda złożona: zamiana wyrazów połączona z inną komendą nowelizacyjną — " +
+                            "model reprezentuje tylko operację strukturalną; zamiana wyrazów pozostaje w treści komendy.");
+                    }
                 }
             }
 
@@ -416,6 +425,48 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Zamiana znaku kończącego jednostkę w zdaniu, które zmienia też jednostkę po niej („w pkt 4 średnik
+        /// zastępuje się kropką i uchyla się pkt 5", „w pkt 20 kropkę zastępuje się średnikiem i dodaje się pkt 21
+        /// w brzmieniu:"). Znak zmienia się w jednostce wskazanej przed komendą, więc zmiana bierze ją za własny
+        /// cel i czeka na nowelizację tego przepisu. Uchylenie stojące za zamianą znaku dotyczy jednostki nazwanej
+        /// po niej — cele przepisu czyta się wtedy z dalszej części zdania, a nie z tej sprzed znaku.
+        /// </summary>
+        private static void KeepSignChanges(ParsingContext context, BaseEntity owner, string text, List<AmendmentCommand> signs)
+        {
+            var unitOfTheSign = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid) ?? [];
+
+            context.PendingTextChanges[owner.Guid] = signs
+                .Select(command => new TextChange
+                {
+                    OldText = command.OldWording ?? string.Empty,
+                    NewText = command.NewWording ?? string.Empty,
+                    Occurrence = TextOccurrence.Last,
+                    Targets = unitOfTheSign
+                        .Select(target => new StructuralAmendmentReference
+                        {
+                            Structure = target.Structure.Clone(),
+                            RangeEnd = target.RangeEnd?.Clone(),
+                            RawText = target.RawText,
+                        })
+                        .ToList(),
+                })
+                .ToList();
+
+            if (unitOfTheSign.Count == 0 || signs[^1].MatchedCommandText is not { } matched)
+                return;
+
+            var afterTheSign = text[(text.IndexOf(matched, StringComparison.Ordinal) + matched.Length)..];
+            if (!AmendmentFinalizer.RepealPattern.IsMatch(afterTheSign) || AmendmentFinalizer.ModificationPattern.IsMatch(afterTheSign))
+                return;
+
+            var repealed = context.ReferenceService.ReadAmendmentTargets(
+                unitOfTheSign[0].Structure, afterTheSign,
+                Services.UnitReferences.SectionSignRole.IsBasicUnit(context.Document.Classification));
+            if (repealed.Count > 0)
+                context.DetectedAmendmentTargets[owner.Guid] = repealed;
+        }
+
+        /// <summary>
         /// Zmiany w tekście (§ 87-88 ZTP: zamiana, dodanie, skreślenie wyrazów): komendy kompletne w jednym
         /// akapicie (bez cytowanego bloku po nich) → natychmiastowa nowelizacja ze zmianami w tekście
         /// (<see cref="TextChange"/>: wyrazy zastępowane i zastępujące, werbatim), w kolejności zapisu, bez treści
@@ -450,6 +501,7 @@ namespace Saga.Core.Services.Parsing
                 {
                     OldText = (command.OldWording ?? string.Empty).Trim(),
                     NewText = (command.NewWording ?? string.Empty).Trim(),
+                    Occurrence = command.Kind == AmendmentCommandKind.ReplaceSign ? TextOccurrence.Last : TextOccurrence.All,
                 })
                 .ToList();
             _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(content, collector, context,

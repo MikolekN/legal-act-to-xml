@@ -628,6 +628,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   „A" zastępuje się wyrazami „B" oraz po wyrazach „C" dodaje się wyrazy „D"") daje instrukcję dla każdej,
   w kolejności zapisu (przedtem: tylko dla pierwszej).
   - W korpusie przybywa 379 instrukcji `now:zamien-tekst` w 127 plikach; poza tym eksport się nie zmienia, a zgodnych ze schematem jest nadal 1937 z 2321. Przykłady autorów schematu: DU/2026/26 — 7 z 9 instrukcji, DU/2026/252 — 70 z 83; poza dwoma skreśleniami (inna postać w DU/2026/26, dodany odstęp w DU/2026/252) każda nasza para (`stary-tekst`, `nowy-tekst`) ma w przykładzie odpowiednik.
+- **Zamiana znaku kończącego jednostkę** ([ADR-0054](docs/adr/0054-zamiana-znaku-konczacego-jednostke-ma-wlasny-cel.md)): „w pkt 20 kropkę zastępuje się
+  średnikiem i dodaje się pkt 21 w brzmieniu:" daje instrukcję `now:zamien-tekst` (`stary-tekst="."`,
+  `nowy-tekst=";"`, `now:wystapienie="ostatnie"`) na jednostce sprzed znaku — obok cytatu z dodawaną jednostką,
+  jak w przykładach autorów schematu. Wyrazy dodawane zaraz za nowym znakiem należą do tej samej zmiany.
+  - **Naprawione uchylenie złej jednostki**: w zdaniu „w pkt 4 średnik zastępuje się kropką i uchyla się pkt 5"
+    `now:uchyl` wskazywał pkt 4 — jednostkę, w której zmienia się znak. Teraz wskazuje jednostkę nazwaną po
+    komendzie (pkt 5, także przedział „pkt 2–7").
+  - Model: `TextChange.Occurrence` (`TextOccurrence.Last`) i `TextChange.Targets` — własny cel zmiany, gdy jest
+    inny niż cele nowelizacji.
+  - W korpusie przybywa 463 instrukcji `now:zamien-tekst` w 196 plikach, a 20 zdań z uchyleniem za zamianą znaku wskazuje teraz jednostkę uchylaną (w tym przedziały „pkt 2–7"); poza tym eksport się nie zmienia, zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory). Przykłady autorów schematu: DU/2026/26 — wszystkie 7 różnych par (`stary-tekst`, `nowy-tekst`) i wszystkie 9 instrukcji mają u nas odpowiednik, DU/2026/252 — 81 instrukcji wobec 83.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
