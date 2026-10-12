@@ -40,6 +40,35 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void MarkerDeeperThanTheTemplateStyles_IsNestedAsWritten()
+        {
+            // Szablon ma style dla trzech poziomów tiretu, ale głębokość zapisana myślnikami stoi w samej treści —
+            // cztery myślniki to czwarty poziom, nie kolejny tiret trzeciego.
+            var document = Parse(
+                "Art. 1. Przepisy stosuje się do:",
+                "1) podmiotów:",
+                "a) publicznych:",
+                "– krajowych:",
+                "– – centralnych:",
+                "– – – naczelnych:",
+                "– – – – ministerstw,",
+                "– – – – urzędów centralnych,",
+                "– zagranicznych,",
+                "b) prywatnych;",
+                "2) osób fizycznych.");
+
+            var letter = document.Articles.First().Paragraphs.Single().Points[0].Letters[0];
+            var third = letter.Tirets[0].Tirets.Single().Tirets.Single();
+
+            Assert.Equal("naczelnych:", third.ContentText);
+            Assert.Equal(new[] { "ministerstw,", "urzędów centralnych," }, third.Tirets.Select(t => t.ContentText));
+            Assert.Equal(2, letter.Tirets.Count);
+
+            var xml = LegalDocumentConverter.Convert(document);
+            Assert.Equal(2, xml.Descendants().Count(e => e.Name.LocalName == "poczw-tiret"));
+        }
+
+        [Fact]
         public void DoubleTiret_IsNestedByItsMarker_WithoutStylesOrLayout()
         {
             var document = Parse(

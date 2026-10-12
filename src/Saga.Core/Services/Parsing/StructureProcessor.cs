@@ -847,7 +847,10 @@ namespace Saga.Core.Services.Parsing
         /// <summary>Tolerancja wciecia (twips, ~6 pt) przy porownywaniu poziomow tiretow (§ 58 ZTP).</summary>
         private const int TiretIndentTolerance = 120;
 
-        /// <summary>Maks. glebokosc tiretu odwzorowana w modelu/stylach (TIR/2TIR/3TIR).</summary>
+        /// <summary>
+        /// Najgłębszy poziom tiretu, jaki wolno WYWNIOSKOWAĆ z wcięcia — tyle poziomów mają style szablonu
+        /// (TIR/2TIR/3TIR). Głębokości zapisanej w treści („– – – –") ten limit nie dotyczy: stoi w samym tekście.
+        /// </summary>
         private const int MaxTiretDepth = 3;
 
         /// <summary>
@@ -859,9 +862,10 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         private static int GetTiretDepth(int writtenDepth, string? styleId, BlockLayoutInfo? layout, ParsingContext context)
         {
-            // Zagnieżdżenie zapisane znacznikiem („– –") stoi w treści — rozstrzyga przed stylem i wcięciem.
+            // Zagnieżdżenie zapisane znacznikiem („– –") stoi w treści — rozstrzyga przed stylem i wcięciem,
+            // bez limitu: tyle myślników, ile poziomów.
             if (writtenDepth > 1)
-                return System.Math.Min(writtenDepth, MaxTiretDepth);
+                return writtenDepth;
 
             if (!string.IsNullOrEmpty(styleId))
             {

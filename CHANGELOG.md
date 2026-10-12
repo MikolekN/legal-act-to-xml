@@ -580,6 +580,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   korzenia `ustawa`, gubiąc całe obwieszczenie (punkty, przytoczone przepisy, podpis).
   - W korpusie: jeden tekst jednolity (Regulamin Senatu) odzyskuje obwieszczenie; zgubionych akapitów w tekstach
     jednolitych 40 → 18. Zgodność ze schematem bez zmian.
+- **Głębokość tiretu zapisana myślnikami bez limitu szablonu**: zagnieżdżenie zapisane w treści („– – – –") jest
+  poziomem tiretu takim, jak je zapisano. Dotąd było przycinane do trzech poziomów — tylu, ile stylów tiretu ma
+  szablon — i czwarty poziom stawał się kolejnym tiretem trzeciego. Limit zostaje tylko dla głębokości
+  wnioskowanej z wcięcia.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
