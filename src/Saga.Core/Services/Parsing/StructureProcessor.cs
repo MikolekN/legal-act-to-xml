@@ -759,18 +759,10 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Czy akapit bez stylu, stojący tuż za oznaczeniem jednostki systematyzacyjnej, jest jej tytułem
-        /// (§ 60 i § 62 ust. 2 ZTP): zaczyna się wielką literą i nie kończy jak zdanie ani jak wprowadzenie do
-        /// wyliczenia — tytuł nie ma kropki, a dwukropek, średnik i przecinek na końcu znaczą treść przepisu.
-        /// Długość nie rozstrzyga: tytuł rozdziału aktu wykonawczego bywa dłuższy niż niejeden przepis.
+        /// Czy akapit bez stylu, stojący tuż za oznaczeniem jednostki systematyzacyjnej, jest jej tytułem —
+        /// rozstrzyga budowa tytułu (<see cref="TitleForm"/>), ta sama co dla tytułu załącznika.
         /// </summary>
-        private static bool IsHeadingCandidate(string text)
-        {
-            var t = text.Trim();
-            if (t.Length == 0 || !char.IsLetter(t[0]) || !char.IsUpper(t[0]))
-                return false;
-            return t[^1] is not ('.' or ':' or ';' or ',');
-        }
+        private static bool IsHeadingCandidate(string text) => TitleForm.Matches(text);
 
         /// <summary>
         /// Aktualizuje bieżącą pozycję strukturalną w kontekście na podstawie

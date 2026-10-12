@@ -240,7 +240,10 @@ namespace Saga.Core.Tests
 
             var annex = Assert.Single(document.Annexes);
             Assert.Equal(header, Assert.Single(annex.AttachedTo));
-            Assert.Equal(new[] { "WYKAZ OSÓB PRAWNYCH", "Spółka Alfa", "Fundacja Beta" }, annex.Content.Select(block => block.Text));
+
+            // Pierwszy wiersz o budowie tytułu jest tytułem załącznika także bez stylu i wyśrodkowania.
+            Assert.Equal("WYKAZ OSÓB PRAWNYCH", annex.Title);
+            Assert.Equal(new[] { "Spółka Alfa", "Fundacja Beta" }, annex.Content.Select(block => block.Text));
 
             // Treść załącznika nie trafia do ostatniego paragrafu.
             var last = document.Articles.Last();
@@ -290,7 +293,7 @@ namespace Saga.Core.Tests
                 new[] { "paragraf", "paragraf", "paragraf", "organ-podpisujacy", "zalacznik" },
                 ChildNames(act).SkipWhile(name => name != "paragraf"));
             var annex = act.Elements().Single(e => e.Name.LocalName == "zalacznik");
-            Assert.Equal(new[] { "zalacznik-do", "segment-zalacznika" }, ChildNames(annex));
+            Assert.Equal(new[] { "zalacznik-do", "tytul-zalacznika", "segment-zalacznika" }, ChildNames(annex));
             Assert.StartsWith("Załącznik do rozporządzenia Ministra Finansów", annex.Elements().First().Value);
         }
 

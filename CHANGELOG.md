@@ -565,6 +565,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   podaje zakres („(zawierający art. 19–21 – uchylony)") — dotąd rozpoznawane było samo „(uchylony)", a dłuższa
   adnotacja ginęła albo doklejała się do poprzedniego przepisu.
   - W korpusie: 22 adnotacje w 5 tekstach jednolitych; zgubionych akapitów w tekstach jednolitych 62 → 40.
+- **Tytuł załącznika bez stylu i bez wyśrodkowania**: pierwszy wiersz załącznika o budowie tytułu (wielka litera,
+  bez znaku końca zdania ani wprowadzenia do wyliczenia), który nie jest pozycją wyliczenia, jest jego tytułem —
+  ta sama reguła co dla tytułu jednostki systematyzacyjnej (`TitleForm`). Dotąd tytuł poznawał tylko styl albo
+  wyśrodkowanie, więc w dokumencie bez szablonu tytuł był akapitem treści, a wyliczenie za nim nie stawało się
+  jednostkami.
+  - W korpusie: 58 tytułów w 50 dokumentach ze stylami (wiersze bez stylu tytułu); bez stylów wyliczenia
+    w załącznikach odzyskują 397 jednostek — zgodność struktury tekstów jednolitych 99,83 % → 99,90 %, ustaw
+    99,67 % → 99,80 %.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

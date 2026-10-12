@@ -154,11 +154,20 @@ namespace Saga.Core.Services.Parsing
         }
 
         // Tytuł ma własny styl; bez niego tytułem jest pierwszy wiersz, jeśli jest wyśrodkowany (styl bywa
-        // pomylony — tytuł w stylu artykułu — układ zostaje). Dalsze wyśrodkowane wiersze to już treść:
-        // podpisy rysunków, nagłówki zestawień.
-        private static bool IsTitle(DocumentBlock block, bool isFirstLine) =>
-            TitleStyles.Any(style => HasStyle(block, style))
-            || (isFirstLine && block.Layout?.Alignment == BlockAlignment.Center);
+        // pomylony — tytuł w stylu artykułu — układ zostaje) albo ma budowę tytułu i nie jest pozycją wyliczenia
+        // (dokument bez szablonu nie niesie ani stylu, ani wyśrodkowania). Dalsze wyśrodkowane wiersze to już
+        // treść: podpisy rysunków, nagłówki zestawień.
+        private static bool IsTitle(DocumentBlock block, bool isFirstLine)
+        {
+            if (TitleStyles.Any(style => HasStyle(block, style)))
+                return true;
+            if (!isFirstLine)
+                return false;
+
+            var text = block.Text.CollapseWhitespace().Trim();
+            return block.Layout?.Alignment == BlockAlignment.Center
+                || (TitleForm.Matches(text) && !Classify.UnitDesignation.LooksDesignated(text));
+        }
 
         private static bool HasStyle(DocumentBlock block, string prefix) =>
             block.StyleId?.StartsWith(prefix, StringComparison.Ordinal) == true;

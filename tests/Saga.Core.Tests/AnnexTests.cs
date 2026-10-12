@@ -81,6 +81,50 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void FirstLineWithTheFormOfATitle_IsTheTitle_WithoutStyleOrCentering()
+        {
+            // Korpus: 292961_2706155 — dokument bez szablonu nie niesie stylu tytułu ani wyśrodkowania;
+            // o tytule rozstrzyga miejsce (pierwszy wiersz) i budowa, jak przy tytule rozdziału.
+            var document = Parse(
+                Block("Załączniki do ustawy z dnia 23 stycznia 2026 r. (Dz. U. poz. 252)"),
+                Block("Załącznik nr 1"),
+                Block("DROGI KRAJOWE, NA KTÓRYCH POBIERA SIĘ OPŁATĘ ELEKTRONICZNĄ"),
+                Block("1) autostrada A1 na odcinku Toruń – Gorzyczki;"),
+                Block("2) autostrada A2 na odcinkach:"),
+                Block("a) Modła Królewska – węzeł Konotopa,"),
+                Block("b) węzeł Lubelska – węzeł Kałuszyn."));
+
+            var annex = Assert.Single(document.Annexes);
+            Assert.Equal("DROGI KRAJOWE, NA KTÓRYCH POBIERA SIĘ OPŁATĘ ELEKTRONICZNĄ", annex.Title);
+
+            // Tytuł nie jest już akapitem treści, więc treść jest w całości wyliczeniem i staje się jednostkami.
+            Assert.All(annex.Content, block => Assert.NotNull(block.Unit));
+            var points = annex.Content
+                .Select(block => block.Unit).OfType<Saga.Model.EditorialUnits.Paragraph>()
+                .SelectMany(paragraph => paragraph.Points).ToList();
+            Assert.Equal(new[] { "zal_1__pkt_1", "zal_1__pkt_2" }, points.Select(point => point.Id));
+            Assert.Equal(2, points[1].Letters.Count);
+        }
+
+        [Theory]
+        // Zdanie, wprowadzenie do wyliczenia i pozycja wyliczenia tytułem nie są — zostają treścią.
+        [InlineData("Wykaz obejmuje sektory, o których mowa w art. 5.")]
+        [InlineData("Ilekroć w załączniku jest mowa o:")]
+        [InlineData("1) energia;")]
+        [InlineData("wykaz sektorów")]
+        public void FirstLineWithoutTheFormOfATitle_IsContent(string firstLine)
+        {
+            var document = Parse(
+                Block("Załącznik do ustawy z dnia 23 stycznia 2026 r. (Dz. U. poz. 252)"),
+                Block(firstLine),
+                Block("Energia"));
+
+            var annex = Assert.Single(document.Annexes);
+            Assert.Null(annex.Title);
+            Assert.Equal(firstLine, annex.Content.First().Text ?? annex.Content.First().Unit?.ContentText);
+        }
+
+        [Fact]
         public void CenteredLinesAfterTheTitle_AreContent()
         {
             // Załącznik z rysunkami: podpisy są wyśrodkowane jak tytuł, ale tytułem jest tylko pierwszy wiersz.
