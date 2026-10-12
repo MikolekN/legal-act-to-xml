@@ -443,6 +443,58 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Zdanie przytoczone w całości (ADR-0057)
+        // ============================================================
+
+        [Theory]
+        // Przykład autorów schematu (DU/2026/26): „w art. 126 zdanie pierwsze otrzymuje brzmienie:".
+        [InlineData("1) w art. 126 zdanie pierwsze otrzymuje brzmienie:")]
+        [InlineData("1) w art. 126 w ust. 2 dodaje się zdanie drugie w brzmieniu:")]
+        [InlineData("1) w art. 126 po zdaniu pierwszym dodaje się zdanie w brzmieniu:")]
+        public void QuotedSentence_IsExportedAsASentence(string command)
+        {
+            var (xml, context) = Convert(command, "„Osoba, która złożyła wniosek, jest obowiązana poddać się badaniom.”;");
+
+            var citation = Assert.Single(Commands(xml));
+            Assert.Equal("cytat-w-tekscie", citation.Name.LocalName);
+
+            var sentence = Assert.Single(citation.Elements());
+            Assert.Equal("zdanie", sentence.Name.LocalName);
+            Assert.Equal("1", Attr(sentence, "nr"));
+            Assert.Equal("Osoba, która złożyła wniosek, jest obowiązana poddać się badaniom.", sentence.Value);
+
+            Assert.True(context.Document.Articles.First().Paragraphs[0].Points.Single().Amendment!.Content!.PlainTextIsSentences);
+        }
+
+        [Fact]
+        public void SeveralQuotedSentences_AreNumberedInOrder()
+        {
+            var (xml, _) = Convert(
+                "1) w art. 5 w ust. 3 zdania pierwsze i drugie otrzymują brzmienie:",
+                "„Opłatę wnosi się w terminie 14 dni. Opłaty nie zwraca się.”;");
+
+            var sentences = Assert.Single(Commands(xml)).Elements().ToList();
+            Assert.Equal(new[] { "zdanie", "zdanie" }, sentences.Select(s => s.Name.LocalName));
+            Assert.Equal(new[] { "1", "2" }, sentences.Select(s => Attr(s, "nr")));
+            Assert.Equal(new[] { "Opłatę wnosi się w terminie 14 dni.", "Opłaty nie zwraca się." }, sentences.Select(s => s.Value.Trim()));
+        }
+
+        [Theory]
+        // Wprowadzenie do wyliczenia domykają dopiero jego pozycje — to fragment tekstu, nie zdanie.
+        [InlineData("1) w art. 5 wprowadzenie do wyliczenia otrzymuje brzmienie:", "„Organ właściwy:”;")]
+        // Tytuł zdaniem nie jest.
+        [InlineData("1) tytuł rozdziału 3 otrzymuje brzmienie:", "„Obowiązki podmiotów kluczowych”;")]
+        // „W zdaniu pierwszym" wskazuje miejsce, a przedmiotem komendy jest co innego.
+        [InlineData("1) w art. 5 w zdaniu pierwszym wprowadzenie do wyliczenia otrzymuje brzmienie:", "„Organ właściwy:”;")]
+        public void QuotedTextThatIsNotASentence_StaysAFragment(string command, string quoted)
+        {
+            var (xml, _) = Convert(command, quoted);
+
+            var citation = Assert.Single(Commands(xml), c => c.Name.LocalName == "cytat-w-tekscie");
+            Assert.Equal("tekst", Assert.Single(citation.Elements()).Name.LocalName);
+        }
+
+        // ============================================================
         // Zamiana znaku kończącego jednostkę (ADR-0054)
         // ============================================================
 

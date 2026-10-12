@@ -316,8 +316,18 @@ namespace Saga.Core.Services.Converters
 
         private static void AddTextCitation(Amendment amendment, Command command, XNode? sentence, string text, List<XElement> blocks)
         {
-            var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element,
-                Element(XmlConverterConstants.Contents.Citation.Text.Content, text));
+            // Zdanie przytoczone w całości wychodzi jako zdanie, nie jako fragment tekstu (ADR-0057).
+            var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element);
+            if (amendment.Content is { PlainTextIsSentences: true })
+            {
+                var number = 0;
+                foreach (var sentenceText in ParsingFactories.SplitIntoSentences(text))
+                    citation.Add(SentenceContext.ToXml(text: sentenceText.Text, number: ++number));
+            }
+
+            if (!citation.HasElements)
+                citation.Add(Element(XmlConverterConstants.Contents.Citation.Text.Content, text));
+
             ApplyAttributes(citation, amendment, command, isStructural: false);
             if (sentence is XElement zdanie)
                 zdanie.Add(citation);

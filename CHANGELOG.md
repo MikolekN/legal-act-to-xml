@@ -658,6 +658,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   (w kodeksie „jako § 1" → `now:dodaj-paragraf`), obok cytatu z dodawanym ustępem — także gdy przepis niczego nie
   dodaje („…jako ust. 1 i:"). Model: `Amendment.WrapsContentAs`, `Amendment.WrappedUnit`.
   - W korpusie przybywa 47 instrukcji `now:dodaj-ustep` (38 plików) i 6 `now:dodaj-paragraf` (5 plików) — wszystkie 53 zdania z tym zwrotem; poza tym eksport się nie zmienia, zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory). Komendy zgodne z przykładami autorów schematu (`CorpusValidator --compare-reference`): DU/2026/26 — 102 ze 105, DU/2026/252 — 333 z 345.
+- **Zdanie przytoczone w całości jako `zdanie`** ([ADR-0057](docs/adr/0057-zdanie-przytoczone-w-calosci-jest-zdaniem.md)): gdy przedmiotem komendy
+  jest zdanie („zdanie pierwsze otrzymuje brzmienie:", „dodaje się zdanie drugie w brzmieniu:"), `cytat-w-tekscie`
+  niesie elementy `zdanie` z numerami, jak w przykładzie autorów schematu. Wprowadzenie do wyliczenia, tytuł
+  i wyrazy zostają elementem `tekst`. Model: `AmendmentContent.PlainTextIsSentences`.
+  - W korpusie 115 cytatów tekstowych w 52 plikach niesie teraz `zdanie` zamiast `tekst` (116 zdań); poza tym eksport się nie zmienia, zgodnych ze schematem jest nadal 1937 z 2321. Przykłady autorów schematu: DU/2026/26 — komendy 103 ze 105, treść zdań 466 z 469; DU/2026/252 — komendy 333 z 345.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

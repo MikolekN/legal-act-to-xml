@@ -97,6 +97,16 @@ namespace Saga.Core.Services.Parsing
         /// Zwrot zmiany brzmienia na końcu przepisu, ale bez dwukropka („ust. 1 otrzymuje brzmienie") —
         /// usterka zapisu; komendą czyni go dopiero cudzysłów otwierający następnego bloku.
         /// </summary>
+        /// <summary>
+        /// Komenda, której przedmiotem jest zdanie („zdanie pierwsze otrzymuje brzmienie:", „dodaje się zdanie
+        /// drugie w brzmieniu:") — treść cytowana to wtedy całe zdania (ADR-0057). Miejscownik („w zdaniu
+        /// pierwszym …") przedmiotu nie nazywa. Wprowadzenie do wyliczenia zdaniem nie jest: kończy je dwukropek,
+        /// a domykają dopiero pozycje wyliczenia.
+        /// </summary>
+        internal static readonly Regex SentenceObjectPattern = new(
+            $@"\bzdani[ea]\b[^:{QuotationMarks.Any}]{{0,60}}?(?:otrzymuj[eą]\s+brzmienie|w\s+brzmieniu)\s*:\s*$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         internal static readonly Regex ModificationWithoutColonPattern = new(
             @"(?:otrzymuj[eą]\s+brzmienie|w\s+brzmieniu)\s*$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -132,6 +142,9 @@ namespace Saga.Core.Services.Parsing
                 OperationType = operationType,
                 Content = operationType == AmendmentOperationType.Repeal ? null : content
             };
+            if (amendment.Content is { PlainText.Length: > 0 } quoted)
+                quoted.PlainTextIsSentences = SentenceObjectPattern.IsMatch(collector.Owner.ContentText.TrimEnd());
+
             amendment.TextChanges.AddRange(input.TextChanges ?? []);
             if (context.PendingTextChanges.Remove(collector.Owner.Guid, out var pendingTextChanges))
                 amendment.TextChanges.AddRange(pendingTextChanges);
@@ -421,6 +434,7 @@ namespace Saga.Core.Services.Parsing
                     : existing.PlainText + Environment.NewLine + added.PlainText;
             }
 
+            existing.PlainTextIsSentences |= added.PlainTextIsSentences;
             existing.SystematizingUnits.AddRange(added.SystematizingUnits);
             existing.Articles.AddRange(added.Articles);
             existing.Paragraphs.AddRange(added.Paragraphs);

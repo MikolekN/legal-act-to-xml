@@ -1714,6 +1714,35 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0057: zdanie przytoczone w całości jest zdaniem; wprowadzenie do wyliczenia — fragmentem tekstu
+        // ============================================================
+
+        [Fact]
+        public void Adr0057_QuotedSentenceIsASentence_AnIntroductionIsNot()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 126 zdanie pierwsze otrzymuje brzmienie:",
+                "„Opłatę wnosi się w terminie 14 dni.”;",
+                "2) w art. 127 wprowadzenie do wyliczenia otrzymuje brzmienie:",
+                "„Opłaty nie pobiera się od:”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var contents = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "cytat-w-tekscie")
+                .Select(citation => citation.Elements().Single().Name.LocalName)
+                .ToList();
+
+            Assert.Equal(["zdanie", "tekst"], contents);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

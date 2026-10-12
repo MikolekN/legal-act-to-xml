@@ -60,6 +60,12 @@ namespace Saga.Model
         public string? PlainText { get; set; }
 
         /// <summary>
+        /// Czy <see cref="PlainText"/> to całe zdania — komenda zmienia albo dodaje zdanie („zdanie pierwsze
+        /// otrzymuje brzmienie:") — a nie wyrazy, tytuł, wprowadzenie do wyliczenia czy inny fragment tekstu.
+        /// </summary>
+        public bool PlainTextIsSentences { get; set; }
+
+        /// <summary>
         /// Tabele cytowane wprost — treść nowelizacji, która jest tabelą albo jej wierszami („po lp. 2a dodaje
         /// się lp. 2b w brzmieniu:" i wiersz tabeli). Tabela stojąca w cytowanej jednostce należy do jej dalszej
         /// treści (<see cref="BaseEntity.Continuation"/>), nie tutaj.

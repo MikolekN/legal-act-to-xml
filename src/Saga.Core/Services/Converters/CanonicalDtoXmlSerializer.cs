@@ -327,7 +327,11 @@ namespace Saga.Core.Services.Converters
                 new XAttribute("objectType", content.ObjectType.ToString()));
 
             if (!string.IsNullOrEmpty(content.PlainText))
-                el.Add(new XElement("plainText", content.PlainText));
+            {
+                el.Add(new XElement("plainText",
+                    content.PlainTextIsSentences ? new XAttribute("sentences", true) : null,
+                    content.PlainText));
+            }
 
             foreach (var unit in content.SystematizingUnits)
                 el.Add(unit switch
