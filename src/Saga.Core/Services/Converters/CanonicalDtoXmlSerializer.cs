@@ -287,6 +287,13 @@ namespace Saga.Core.Services.Converters
             if (amendment.RetroactiveFrom != default)
                 el.Add(new XAttribute("retroactiveFrom", amendment.RetroactiveFrom.ToString("yyyy-MM-dd")));
 
+            if (amendment.WrapsContentAs != ContentWrap.None)
+            {
+                el.Add(new XAttribute("wrapsContentAs", amendment.WrapsContentAs.ToString()));
+                if (amendment.WrappedUnit is { } wrapped)
+                    el.Add(new XAttribute("wrappedUnit", wrapped.Structure.ToString()));
+            }
+
             AddJournalElement(el, "targetAct", amendment.TargetLegalAct);
 
             foreach (var target in amendment.Targets)

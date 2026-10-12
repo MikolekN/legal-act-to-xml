@@ -135,6 +135,8 @@ namespace Saga.Core.Services.Parsing
             amendment.TextChanges.AddRange(input.TextChanges ?? []);
             if (context.PendingTextChanges.Remove(collector.Owner.Guid, out var pendingTextChanges))
                 amendment.TextChanges.AddRange(pendingTextChanges);
+            if (context.PendingContentWraps.Remove(collector.Owner.Guid, out var pendingWrap))
+                (amendment.WrapsContentAs, amendment.WrappedUnit) = pendingWrap;
 
             // 3. Połącz z celem nowelizacji (StructuralAmendmentReference)
             LinkTargets(amendment, collector, context);
@@ -399,6 +401,8 @@ namespace Saga.Core.Services.Parsing
             {
                 Append(existing, added);
                 hasAmendments.Amendment.TextChanges.AddRange(amendment.TextChanges);
+                if (amendment.WrapsContentAs != ContentWrap.None)
+                    (hasAmendments.Amendment.WrapsContentAs, hasAmendments.Amendment.WrappedUnit) = (amendment.WrapsContentAs, amendment.WrappedUnit);
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
                     "Druga treść cytowana pod tą samą jednostką — dołączona do pierwszej nowelizacji.");
                 return true;
@@ -468,7 +472,8 @@ namespace Saga.Core.Services.Parsing
             }
 
             // Treść bez żadnych jednostek redakcyjnych (oprócz PlainText); zmiana wyrazów treści cytowanej nie ma.
-            if (amendment.Content != null && amendment.TextChanges.Count == 0 && IsContentEmpty(amendment.Content))
+            if (amendment.Content != null && amendment.TextChanges.Count == 0
+                && amendment.WrapsContentAs == ContentWrap.None && IsContentEmpty(amendment.Content))
             {
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Info,
                     "Treść nowelizacji nie zawiera jednostek redakcyjnych (tylko tekst/brak treści).");

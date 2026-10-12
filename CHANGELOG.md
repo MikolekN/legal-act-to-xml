@@ -653,6 +653,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   cytaty i instrukcje przepisów aktu z plikiem referencyjnym — jednostka, element, funkcja, cel, rodzaj treści
   cytatu, a przy zmianie w tekście tekst zastępowany, zastępujący i wystąpienie. Położenie instrukcji w zdaniu nie
   bierze udziału (przykłady nie są w tym zgodne między sobą).
+- **Obudowanie dotychczasowej treści ustępem** ([ADR-0056](docs/adr/0056-obudowanie-dotychczasowej-tresci-jest-instrukcja-na-jednostce.md)): „w art. 24 dotychczasową
+  treść oznacza się jako ust. 1 i dodaje się ust. 2 w brzmieniu:" daje instrukcję `now:dodaj-ustep` na art. 24
+  (w kodeksie „jako § 1" → `now:dodaj-paragraf`), obok cytatu z dodawanym ustępem — także gdy przepis niczego nie
+  dodaje („…jako ust. 1 i:"). Model: `Amendment.WrapsContentAs`, `Amendment.WrappedUnit`.
+  - W korpusie przybywa 47 instrukcji `now:dodaj-ustep` (38 plików) i 6 `now:dodaj-paragraf` (5 plików) — wszystkie 53 zdania z tym zwrotem; poza tym eksport się nie zmienia, zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory). Komendy zgodne z przykładami autorów schematu (`CorpusValidator --compare-reference`): DU/2026/26 — 102 ze 105, DU/2026/252 — 333 z 345.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

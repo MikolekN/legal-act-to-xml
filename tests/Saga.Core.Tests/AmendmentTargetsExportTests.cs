@@ -31,7 +31,8 @@ namespace Saga.Core.Tests
 
         private static List<XElement> Commands(XDocument xml) =>
             xml.Descendants()
-               .Where(e => e.Name.LocalName is "cytat-strukt" or "cytat-w-tekscie" or "uchyl" or "zamien-tekst")
+               .Where(e => e.Name.LocalName is "cytat-strukt" or "cytat-w-tekscie" or "uchyl" or "zamien-tekst"
+                   or "dodaj-ustep" or "dodaj-paragraf")
                .ToList();
 
         // Po nazwie lokalnej — atrybuty GUID stoją w przestrzeni „gd".
@@ -364,6 +365,81 @@ namespace Saga.Core.Tests
             var citation = Assert.Single(Commands(xml));
             Assert.Equal(("dodaj-w", "art_45__ust_1"), (Attr(citation, "funkcja"), Attr(citation, "element-eId")));
             Assert.Equal(new[] { "art_45__ust_1__pkt_7" }, UnitIds(citation));
+        }
+
+        // ============================================================
+        // Obudowanie dotychczasowej treści ustępem albo paragrafem (ADR-0056)
+        // ============================================================
+
+        [Fact]
+        public void ExistingContentMarkedAsParagraphOne_IsAnInstructionOnTheArticle()
+        {
+            // Przykład autorów schematu (DU/2026/26): instrukcja na art. 24, a dodawany ust. 2 — po ust. 1.
+            var (xml, context) = Convert(
+                "1) w art. 24 dotychczasową treść oznacza się jako ust. 1 i dodaje się ust. 2 w brzmieniu:",
+                "„2. Orzeczenie lekarza orzecznika stanowi podstawę decyzji.”;");
+
+            var commands = Commands(xml);
+            Assert.Equal(new[] { "dodaj-ustep", "cytat-strukt" }, commands.Select(c => c.Name.LocalName));
+
+            var wrap = commands[0];
+            Assert.Equal(XmlConverterConstants.AmendmentNamespace, wrap.Name.NamespaceName);
+            Assert.Equal("art_24", Attr(wrap, "element-eId"));
+            Assert.NotNull(Attr(wrap, "akt"));
+            Assert.Same(wrap, wrap.Parent!.FirstNode);
+
+            Assert.Equal(("dodaj-po", "art_24__ust_1"), (Attr(commands[1], "funkcja"), Attr(commands[1], "element-eId")));
+            Assert.Equal(new[] { "art_24__ust_2" }, UnitIds(commands[1]));
+
+            var amendment = context.Document.Articles.First().Paragraphs[0].Points.Single().Amendment!;
+            Assert.Equal(ContentWrap.Paragraph, amendment.WrapsContentAs);
+            Assert.Equal("art_24", amendment.WrappedUnit?.Structure.ToString());
+        }
+
+        [Fact]
+        public void ExistingContentOfACodeArticleMarkedAsSectionOne_IsTheSectionInstruction()
+        {
+            var (xml, _) = Convert(
+                "1) w art. 5 dotychczasową treść oznacza się jako § 1 i dodaje się § 2 w brzmieniu:",
+                "„§ 2. Przepisu § 1 nie stosuje się do spółek.”;");
+
+            var wrap = Assert.Single(Commands(xml), c => c.Name.LocalName == "dodaj-paragraf");
+            Assert.Equal("art_5", Attr(wrap, "element-eId"));
+            Assert.DoesNotContain(Commands(xml), c => c.Name.LocalName == "dodaj-ustep");
+        }
+
+        [Fact]
+        public void ExistingContentMarkedAsParagraphOne_WithoutAnotherChange_IsAnAmendmentOfItsOwn()
+        {
+            // Przykład autorów schematu (DU/2026/252): „w art. 50 dotychczasową treść oznacza się jako ust. 1 i:"
+            // przed wyliczeniem dalszych zmian.
+            var (xml, context) = Convert(
+                "1) w art. 50 dotychczasową treść oznacza się jako ust. 1 i:",
+                "a) wyrazy „organ właściwy” zastępuje się wyrazami „organ nadzoru”,",
+                "b) dodaje się ust. 2 w brzmieniu:",
+                "„2. Organ nadzoru prowadzi rejestr.”;");
+
+            var wrap = Assert.Single(Commands(xml), c => c.Name.LocalName == "dodaj-ustep");
+            Assert.Equal("art_50", Attr(wrap, "element-eId"));
+
+            var point = context.Document.Articles.First().Paragraphs[0].Points.Single();
+            Assert.Equal(ContentWrap.Paragraph, point.Amendment?.WrapsContentAs);
+            Assert.DoesNotContain(point.ValidationMessages, m => m.Message.Contains("nie zawiera jednostek", StringComparison.Ordinal));
+
+            // Zmiany wyliczone pod spodem dotyczą już ustępu 1.
+            var replaced = Assert.Single(Commands(xml), c => c.Name.LocalName == "zamien-tekst");
+            Assert.Equal("art_50__ust_1", Attr(replaced, "element-eId"));
+        }
+
+        [Fact]
+        public void ProvisionThatWrapsNothing_HasNoWrapInstruction()
+        {
+            var (xml, context) = Convert(
+                "1) w art. 24 dodaje się ust. 2 w brzmieniu:",
+                "„2. Orzeczenie lekarza orzecznika stanowi podstawę decyzji.”;");
+
+            Assert.DoesNotContain(Commands(xml), c => c.Name.LocalName is "dodaj-ustep" or "dodaj-paragraf");
+            Assert.Equal(ContentWrap.None, context.Document.Articles.First().Paragraphs[0].Points.Single().Amendment!.WrapsContentAs);
         }
 
         // ============================================================

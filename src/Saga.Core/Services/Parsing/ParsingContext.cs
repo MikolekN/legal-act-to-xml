@@ -210,6 +210,13 @@ namespace Saga.Core.Services.Parsing
         public Dictionary<Guid, List<TextChange>> PendingTextChanges { get; } = new();
 
         /// <summary>
+        /// Obudowanie dotychczasowej treści jednostki zapisane w przepisie zmieniającym („dotychczasową treść
+        /// oznacza się jako ust. 1 i dodaje się ust. 2 w brzmieniu:") — czeka na nowelizację tego przepisu.
+        /// Klucz: Guid przepisu zmieniającego.
+        /// </summary>
+        public Dictionary<Guid, (ContentWrap As, StructuralAmendmentReference? Unit)> PendingContentWraps { get; } = new();
+
+        /// <summary>
         /// Czy aktualnie przetwarza akapity bedace trescia nowelizacji.
         /// Ustawiane na true gdy:
         /// - napotkano akapit ze stylem Z/... (Z/UST, Z/ART, Z/PKT itd.)

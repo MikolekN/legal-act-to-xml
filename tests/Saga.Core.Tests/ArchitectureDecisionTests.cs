@@ -1685,6 +1685,35 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0056: obudowanie dotychczasowej treści jest instrukcją na jednostce
+        // ============================================================
+
+        [Fact]
+        public void Adr0056_MarkingExistingContentAsParagraphOne_IsAnInstructionOnTheArticle()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w art. 24 dotychczasową treść oznacza się jako ust. 1 i dodaje się ust. 2 w brzmieniu:",
+                "„2. Opłaty nie zwraca się.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var xml = LegalDocumentConverter.Convert(document);
+
+            // Nowy poziom powstaje w art. 24; dodawany ust. 2 staje po ust. 1.
+            var wrap = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "dodaj-ustep");
+            Assert.Equal("DU/2021/200__art_24", wrap.Attribute("element-eId")?.Value);
+
+            var citation = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "cytat-strukt");
+            Assert.Equal(("dodaj-po", "DU/2021/200__art_24__ust_1"),
+                (citation.Attribute("funkcja")?.Value, citation.Attribute("element-eId")?.Value));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

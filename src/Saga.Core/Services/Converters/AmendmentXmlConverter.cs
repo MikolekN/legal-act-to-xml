@@ -40,6 +40,8 @@ namespace Saga.Core.Services.Converters
 
             var commands = Commands(amendment);
 
+            AddContentWrapInstruction(amendment, sentence);
+
             if (amendment.OperationType == AmendmentOperationType.Repeal)
             {
                 foreach (var command in commands)
@@ -202,6 +204,30 @@ namespace Saga.Core.Services.Converters
             uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
 
             zdanie.Add(uchyl);
+        }
+
+        /// <summary>
+        /// Obudowanie dotychczasowej treści jednostki ustępem albo paragrafem („dotychczasową treść oznacza się jako
+        /// ust. 1") — instrukcja <c>now:dodaj-ustep</c> / <c>now:dodaj-paragraf</c> na jednostce, w której powstaje
+        /// nowy poziom (ADR-0056). Schemat wymaga jej adresu, więc bez niego instrukcji nie ma.
+        /// </summary>
+        private static void AddContentWrapInstruction(Amendment amendment, XNode? sentence)
+        {
+            if (amendment.WrapsContentAs == ContentWrap.None || sentence is not XElement zdanie
+                || amendment.WrappedUnit?.Structure.ToString() is not { Length: > 0 } unit)
+            {
+                return;
+            }
+
+            XNamespace now = XmlConverterConstants.AmendmentNamespace;
+            var name = amendment.WrapsContentAs == ContentWrap.CodeParagraph
+                ? XmlConverterConstants.Contents.Instruction.WrapInSection
+                : XmlConverterConstants.Contents.Instruction.WrapInParagraph;
+
+            zdanie.AddFirst(new XElement(now + name,
+                new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, unit),
+                new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)),
+                new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, Guid.NewGuid().ToString())));
         }
 
         /// <summary>

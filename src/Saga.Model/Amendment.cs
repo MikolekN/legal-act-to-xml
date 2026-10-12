@@ -36,6 +36,15 @@ namespace Saga.Model
         public List<TextChange> TextChanges { get; set; } = new();
 
         /// <summary>
+        /// Czy nowelizacja obudowuje dotychczasową treść jednostki nowym poziomem struktury („dotychczasową treść
+        /// oznacza się jako ust. 1") i jakim. Jednostkę wskazuje <see cref="WrappedUnit"/>.
+        /// </summary>
+        public ContentWrap WrapsContentAs { get; set; }
+
+        /// <summary>Jednostka, której dotychczasowa treść staje się ustępem albo paragrafem 1.</summary>
+        public StructuralAmendmentReference? WrappedUnit { get; set; }
+
+        /// <summary>
         /// Informacja o ustawie, której dotyczy nowelizacja (rok i lista pozycji publikatora).
         /// </summary>
         public JournalInfo TargetLegalAct { get; set; } = new();

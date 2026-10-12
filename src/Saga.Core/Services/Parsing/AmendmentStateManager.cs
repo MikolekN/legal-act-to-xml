@@ -304,6 +304,65 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public void DetectTrigger(ParsingContext context, string text)
         {
+            NoteContentWrap(context, text);
+            DetectCommands(context, text);
+
+            // Obudowanie treści bez żadnej innej zmiany w tym przepisie („…oznacza się jako ust. 1 i:" przed
+            // wyliczeniem zmian) jest nowelizacją samo w sobie.
+            if (GetOwner(context) is { } owner && context.PendingContentWraps.ContainsKey(owner.Guid)
+                && !context.AmendmentTriggerDetected)
+            {
+                FinalizeWithoutContent(context, owner);
+            }
+        }
+
+        /// <summary>
+        /// „Dotychczasową treść oznacza się jako ust. 1" (w kodeksie: „jako § 1") — dotychczasowa treść jednostki
+        /// staje się jej pierwszym ustępem albo paragrafem (ADR-0056).
+        /// </summary>
+        private static readonly System.Text.RegularExpressions.Regex ContentWrapPattern = new(
+            @"dotychczasow(?:ą|e)\s+treść\s+oznacza\s+się\s+jako\s+(?<level>ust\.|§)\s*1\b",
+            System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Odnotowuje obudowanie dotychczasowej treści: dotyczy jednostki, w której powstaje ustęp 1 — celu przepisu
+        /// bez poziomu ustępu. Dołączy je nowelizacja tego przepisu (<see cref="AmendmentFinalizer"/>).
+        /// </summary>
+        private static void NoteContentWrap(ParsingContext context, string text)
+        {
+            var match = ContentWrapPattern.Match(text);
+            if (!match.Success || GetOwner(context) is not { } owner)
+                return;
+
+            StructuralAmendmentReference? unit = null;
+            if (context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid) is [var target, ..] && target.Structure.Article is not null)
+            {
+                unit = new StructuralAmendmentReference
+                {
+                    Structure = new StructuralReference { Article = target.Structure.Article, Systematizing = target.Structure.Systematizing },
+                    RawText = target.RawText,
+                };
+            }
+
+            var level = match.Groups["level"].Value == "§" ? ContentWrap.CodeParagraph : ContentWrap.Paragraph;
+            context.PendingContentWraps[owner.Guid] = (level, unit);
+        }
+
+        /// <summary>Nowelizacja bez treści cytowanej i bez zmian w tekście — niesie to, co na nią czekało.</summary>
+        private void FinalizeWithoutContent(ParsingContext context, BaseEntity owner)
+        {
+            var collector = context.AmendmentCollector;
+            if (collector.IsCollecting && collector.Count > 0)
+                Flush(context);
+
+            collector.Begin(owner, context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid));
+            _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(
+                new AmendmentContent { ObjectType = AmendmentObjectType.None }, collector, context, AmendmentOperationType.Modification));
+            collector.Reset();
+        }
+
+        private void DetectCommands(ParsingContext context, string text)
+        {
             // Zamiana wyrazów (§ 87-88 ZTP) analizowana PRZED uchyleniem: fraza „uchyla się" WEWNĄTRZ
             // cytowanych wyrazów komendy zamiany („wyrazy „uchyla się" zastępuje się…") nie może
             // przeinaczyć operacji na Repeal. Komendę zamiany wycina się z tekstu, a POZOSTAŁOŚĆ bada
