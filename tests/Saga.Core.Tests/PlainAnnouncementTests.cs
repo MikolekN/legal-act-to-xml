@@ -354,6 +354,50 @@ namespace Saga.Core.Tests
                 points[0].Elements().Where(e => e.Name.LocalName == "nie-ztp-litera").Select(letter => letter.Attribute("eId")?.Value));
         }
 
+        // Treść, której potok nie złoży w jeden przepis: cytat wieloakapitowy po zwrocie zmiany brzmienia
+        // (obwieszczenie o sprostowaniu błędów) otwiera nowelizację.
+        private static LegalDocument ThatCannotBeStructured() => Parse(
+            "Na podstawie art. 18b ustawy z dnia 14 kwietnia 2000 r. o umowach międzynarodowych (Dz. U. z 2020 r. poz. 127) " +
+            "obwieszcza się, że w tekście umowy:",
+            "1) przepis 1.8.6.2.1 otrzymuje brzmienie:",
+            "„Jeżeli właściwa władza zatwierdza jednostkę inspekcyjną, to akredytacja powinna być wyraźna.",
+            "Akredytacja powinna wyraźnie obejmować działania związane z zatwierdzeniem.”;",
+            "2) w przepisie 2.2.9.3 zamiast wyrazu „dopuszczenia” powinien być wyraz „zatwierdzenia”.",
+            Signature);
+
+        [Fact]
+        public void ContentThatCannotBeStructured_StaysInTheModelAsItsParagraphs()
+        {
+            var document = ThatCannotBeStructured();
+
+            Assert.Null(document.Announcement!.Body);
+            Assert.Equal(5, document.Announcement.Content.Count);
+            Assert.Equal("Koperski", document.Signature?.Surname);
+        }
+
+        [Fact]
+        public void Export_WritesContentThatCannotBeStructured_AsFlatContent_NotDroppingIt()
+        {
+            var root = LegalDocumentConverter.Convert(ThatCannotBeStructured()).Elements().Single();
+
+            var provision = root.Elements().Single(e => e.Name.LocalName == "nie-ztp-artykul");
+            Assert.Equal("jednostka-nieoznaczona", provision.Attribute("brak-eid")?.Value);
+            Assert.StartsWith("Na podstawie art. 18b", provision.Elements().Single(e => e.Name.LocalName == "p").Value);
+
+            // Struktury się nie zgaduje: pozostałe akapity są dalszą treścią, w kolejności dokumentu.
+            var further = provision.Elements().Where(e => e.Name.LocalName == "fragment").Select(e => e.Value).ToList();
+            Assert.Equal(4, further.Count);
+            Assert.StartsWith("1) przepis 1.8.6.2.1 otrzymuje brzmienie:", further[0]);
+            Assert.StartsWith("2) w przepisie 2.2.9.3", further[3]);
+            Assert.DoesNotContain(provision.Descendants(), e => e.Attribute("eId") is not null);
+        }
+
+        [SchemaPlFact]
+        public void AnnouncementWithContentThatCannotBeStructured_IsSchemaValid_AsAWhole()
+        {
+            Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(ThatCannotBeStructured())));
+        }
+
         [SchemaPlFact]
         public void AnnouncementWithAProvision_IsSchemaValid_AsAWhole()
         {

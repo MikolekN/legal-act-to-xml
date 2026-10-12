@@ -548,6 +548,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   tabelą — wychodzi jako `sup` („²⁾"), tak jak stoi w akcie. Przedtem eksport niósł zapis roboczy parsera („[2)]").
   Nawias kwadratowy z innym tekstem (wzór wpisany w treść) pozostaje tekstem.
   - W korpusie: 214 znaczników w 70 dokumentach; zgodność ze schematem i pokrycie tekstu bez zmian.
+- **Treść obwieszczenia, z której nie powstały jednostki, nie ginie**: akapity i tabele obwieszczenia, których potok
+  nie złożył w przepis (np. cytat wieloakapitowy w obwieszczeniu o sprostowaniu błędów) albo które stoją przed
+  pierwszym punktem, wychodzą jako przepis bez oznaczenia o płaskiej budowie — pierwszy akapit jest jego tekstem,
+  reszta dalszą treścią w kolejności dokumentu (`AnnouncementXmlConverter.LooseContent`). Struktury się tam nie
+  zgaduje; przedtem ta treść była w modelu, ale nie w eksporcie.
+  - W korpusie: jedno obwieszczenie (35 akapitów); pokrycie tekstu obwieszczeń 100 %.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

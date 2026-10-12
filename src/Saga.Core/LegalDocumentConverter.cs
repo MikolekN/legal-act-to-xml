@@ -49,6 +49,8 @@ namespace Saga.Core.Services
                 actElement.Add(AnnouncementXmlConverter.Points(announcement));
             if (announcement?.Body is { } announcementBody)
                 actElement.Add(AnnouncementXmlConverter.Body(announcementBody));
+            else if (announcement is not null)
+                actElement.Add(AnnouncementXmlConverter.LooseContent(announcement));
 
             var body = announced is null ? actElement : AnnouncedActElement(announced, announcedName!, document);
 

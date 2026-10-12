@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using Saga.Core.Services.Parsing;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
 using static Saga.Core.XLinqWrappers;
@@ -41,6 +42,23 @@ namespace Saga.Core.Services.Converters
 
             CommonPartXmlConverter.HandleCommonPart(body, element, context);
             return element;
+        }
+
+        /// <summary>
+        /// Treść obwieszczenia, z której nie powstały jednostki — akapity i tabele sprzed pierwszego punktu albo
+        /// treść, której potok nie złożył w przepis. Wychodzi jako przepis bez oznaczenia o płaskiej budowie:
+        /// pierwszy akapit jest jego tekstem, reszta dalszą treścią w kolejności dokumentu. Struktury się tu nie
+        /// zgaduje, ale nic z obwieszczenia nie ginie. Null, gdy treści nie ma albo nie zaczyna się akapitem.
+        /// </summary>
+        internal static XElement? LooseContent(Announcement announcement)
+        {
+            if (announcement.Content.FirstOrDefault()?.Text is not { Length: > 0 } lead)
+                return null;
+
+            var provision = new Paragraph { IsImplicit = true };
+            ParsingFactories.SetContentAndSegments(provision, lead);
+            provision.Continuation.AddRange(announcement.Content.Skip(1));
+            return Body(provision);
         }
 
         private static XElement Point(Paragraph point)
