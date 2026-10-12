@@ -111,7 +111,9 @@ namespace Saga.Core.Services.EntryIntoForce
                 // zwykle kilka przepisów aktu zmieniającego; podstawą są wszystkie, w kolejności dokumentu (ADR-0063).
                 consolidated.AddRange(document.Articles
                     .SelectMany(article => EditorialUnitWalker.SelfAndDescendants(article, includeAmendmentContent: false))
-                    .Select(unit => unit.Version)
+                    .SelectMany(unit => unit is IHasTextSegments sentences
+                        ? sentences.TextSegments.Select(sentence => sentence.Version).Prepend(unit.Version)
+                        : [unit.Version])
                     .OfType<WordingVersion>()
                     .Where(version => version.ChangeFootnote.Length > 0)
                     .Distinct()

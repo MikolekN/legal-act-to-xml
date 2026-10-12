@@ -414,24 +414,29 @@ namespace Saga.Core.Services.Converters
             if (entity.RetroactiveFrom != default)
                 el.Add(new XAttribute("retroactiveFrom", entity.RetroactiveFrom.ToString("yyyy-MM-dd")));
 
-            if (entity.Version is { } version)
-            {
-                el.Add(new XAttribute("version", version.Kind.ToString()));
-                if (version.ChangeFootnote.Length > 0)
-                    el.Add(new XAttribute("changeFootnote", version.ChangeFootnote));
-                if (version.ChangeDate is { } changed)
-                    el.Add(new XAttribute("changeDate", changed.ToString("yyyy-MM-dd")));
-                if (version.ChangeTerm is { } term)
-                    el.Add(new XAttribute("changeTerm", term));
-                if (version.TermFootnote.Length > 0 && version.TermFootnote != version.ChangeFootnote)
-                    el.Add(new XAttribute("termFootnote", version.TermFootnote));
-                if (version.ChangeAct is { } act)
-                    el.Add(new XAttribute("changeAct", act));
-                if (version.ChangeProvision is { } provision)
-                    el.Add(new XAttribute("changeProvision", provision));
-                if (version.ChangeRepeals)
-                    el.Add(new XAttribute("changeRepeals", true));
-            }
+            AddVersion(el, entity.Version);
+        }
+
+        private static void AddVersion(XElement el, WordingVersion? version)
+        {
+            if (version is null)
+                return;
+
+            el.Add(new XAttribute("version", version.Kind.ToString()));
+            if (version.ChangeFootnote.Length > 0)
+                el.Add(new XAttribute("changeFootnote", version.ChangeFootnote));
+            if (version.ChangeDate is { } changed)
+                el.Add(new XAttribute("changeDate", changed.ToString("yyyy-MM-dd")));
+            if (version.ChangeTerm is { } term)
+                el.Add(new XAttribute("changeTerm", term));
+            if (version.TermFootnote.Length > 0 && version.TermFootnote != version.ChangeFootnote)
+                el.Add(new XAttribute("termFootnote", version.TermFootnote));
+            if (version.ChangeAct is { } act)
+                el.Add(new XAttribute("changeAct", act));
+            if (version.ChangeProvision is { } provision)
+                el.Add(new XAttribute("changeProvision", provision));
+            if (version.ChangeRepeals)
+                el.Add(new XAttribute("changeRepeals", true));
         }
 
         private static void AddContentAndDiagnostics(XElement el, BaseEntity entity)
@@ -463,6 +468,7 @@ namespace Saga.Core.Services.Converters
                     segmentEl.Add(new XAttribute("effectiveDate", segment.EffectiveDate.ToString("yyyy-MM-dd")));
                 if (segment.RetroactiveFrom != default)
                     segmentEl.Add(new XAttribute("retroactiveFrom", segment.RetroactiveFrom.ToString("yyyy-MM-dd")));
+                AddVersion(segmentEl, segment.Version);
                 segmentEl.Add(segment.Text);
                 el.Add(segmentEl);
             }

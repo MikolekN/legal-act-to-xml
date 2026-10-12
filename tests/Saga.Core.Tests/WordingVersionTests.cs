@@ -646,6 +646,107 @@ namespace Saga.Core.Tests
             Assert.Null(JournalReferenceService.ReadFirstAct("zgodnie z komunikatem"));
         }
 
+        // ============================================================
+        // Zdanie w dwóch brzmieniach (ADR-0064)
+        // ============================================================
+
+        private const string SentenceUntil2 = "Zdanie drugie w tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2.";
+
+        private const string SentenceChangedIn2029 =
+            "Zdanie drugie w brzmieniu ustalonym przez art. 82 pkt 8 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych (Dz. U. poz. 2320); wejdzie w życie z dniem 1 października 2029 r.";
+
+        // Korpus: 307517_2786682, art. 130 — odnośnik o zdaniu stoi za zdaniem, a oba brzmienia jedno za drugim.
+        private static LegalDocument SentencePrintedTwice() => Parse(
+            new DocumentBlock
+            {
+                Text = "Art. 2. Pisma doręcza się za pokwitowaniem odbioru. Odbierający potwierdza odbiór podpisem.[1)] "
+                    + "Odbierający potwierdza odbiór czytelnym podpisem.[2)] Pokwitowanie zwraca się nadawcy.",
+                Footnotes = [new BlockFootnote("1", [SentenceUntil2]), new BlockFootnote("2", [SentenceChangedIn2029])],
+            });
+
+        private static List<TextSegment> SentencesOf(LegalDocument document, string article) =>
+            ParagraphsOf(document, article).Single().TextSegments;
+
+        [Fact]
+        public void SentencePrintedTwice_IsTwoWordingsOfOneSentence()
+        {
+            var sentences = SentencesOf(SentencePrintedTwice(), "2");
+
+            // Oba brzmienia niosą numer zdania drugiego; zdanie za nimi jest trzecie, nie czwarte.
+            Assert.Equal(new[] { 1, 2, 2, 3 }, sentences.Select(sentence => sentence.Order));
+            Assert.Equal(
+                new WordingVersionKind?[] { null, WordingVersionKind.Current, WordingVersionKind.Future, null },
+                sentences.Select(sentence => sentence.Version?.Kind));
+
+            Assert.All(sentences.Skip(1).Take(2), sentence =>
+            {
+                Assert.Equal("2", sentence.Version!.ChangeFootnote);
+                Assert.Equal(new DateTime(2029, 10, 1), sentence.Version.ChangeDate);
+                Assert.Equal("DU/2020/2320", sentence.Version.ChangeAct);
+            });
+
+            // Jednostka jako całość wersji nie ma — zmienia się jedno jej zdanie.
+            Assert.Null(ParagraphsOf(SentencePrintedTwice(), "2").Single().Version);
+        }
+
+        [Fact]
+        public void SentencePrintedTwice_IsExportedWithOneNumberAndTwoPeriods()
+        {
+            var xml = LegalDocumentConverter.Convert(SentencePrintedTwice());
+            const string change = "zdarz_wejscie_2029-10-01_DU-2020-2320_odczytane";
+
+            var sentences = xml.Descendants().Single(e => e.Attribute("eId")?.Value == Act + "art_2")
+                .Descendants().Where(e => e.Name.LocalName == "zdanie" && e.Ancestors().All(a => a.Name.LocalName != "odnosnik")).ToList();
+            Assert.Equal(new[] { "1", "2", "2", "3" }, sentences.Select(sentence => sentence.Attribute("nr")!.Value));
+            Assert.Equal(
+                new[] { null, $"okr_obowiazywanie.x.{change}", $"okr_obowiazywanie.{change}.x", null },
+                sentences.Select(sentence => sentence.Attribute("okres")?.Value));
+            Assert.Equal("2029-10-01", sentences[1].Attribute("obowiazuje-do")?.Value);
+            Assert.Equal("2029-10-01", sentences[2].Attribute("wejscie-w-zycie")?.Value);
+
+            var changeEvent = Assert.Single(ChangeEvents(xml));
+            Assert.Equal(change, changeEvent.Attribute("id")!.Value);
+            Assert.Equal("art. 82 pkt 8", changeEvent.Attribute("podstawa")!.Value);
+        }
+
+        [Fact]
+        public void SentencesAddedLater_AreFutureWordingsWithoutACurrentOne()
+        {
+            // Korpus: 275050_2461922 — „Zdanie trzecie i czwarte dodane przez …": znacznik stoi za każdym z nich.
+            var sentences = SentencesOf(Parse(
+                new DocumentBlock
+                {
+                    Text = "Art. 2. Wniosek składa się do wojewody. Wojewoda rozpatruje wniosek. Termin wynosi 60 dni.[1)] "
+                        + "Brak odpowiedzi uważa się za zgodę.[1)]",
+                    Footnotes = [new BlockFootnote("1", ["Zdanie trzecie i czwarte dodane przez art. 14 pkt 2 lit. b ustawy z dnia 7 lipca 2023 r. o zmianie ustawy o planowaniu (Dz. U. poz. 1688); wejdzie w życie z dniem 1 stycznia 2026 r."])],
+                }), "2");
+
+            Assert.Equal(new[] { 1, 2, 3, 4 }, sentences.Select(sentence => sentence.Order));
+            Assert.Equal(
+                new WordingVersionKind?[] { null, null, WordingVersionKind.Future, WordingVersionKind.Future },
+                sentences.Select(sentence => sentence.Version?.Kind));
+        }
+
+        [Fact]
+        public void FootnoteAboutTheUnit_AtTheEndOfASentence_IsNotAVersionOfThatSentence()
+        {
+            // Odnośnik bez podmiotu „Zdanie …" nie mówi o zdaniu, za którym stoi.
+            var sentences = SentencesOf(Parse(
+                new DocumentBlock
+                {
+                    Text = "Art. 2. Wniosek składa się do wojewody.[1)] Wojewoda rozpatruje wniosek.",
+                    Footnotes = [new BlockFootnote("1", [ChangedOn2026])],
+                }), "2");
+
+            Assert.All(sentences, sentence => Assert.Null(sentence.Version));
+        }
+
+        [SchemaPlFact]
+        public void SentenceInTwoWordings_IsSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(SentencePrintedTwice())));
+        }
+
         [SchemaPlFact]
         public void WordingVersions_AreSchemaValid()
         {

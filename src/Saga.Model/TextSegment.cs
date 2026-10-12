@@ -39,5 +39,11 @@ namespace Saga.Model
         /// Data mocy wstecznej segmentu.
         /// </summary>
         public DateTime RetroactiveFrom { get; set; }
+
+        /// <summary>
+        /// Wersja czasowa zdania w tekście jednolitym: zdanie drukowane dwa razy — w brzmieniu obowiązującym
+        /// i przyszłym — to dwa segmenty o tym samym <see cref="Order"/>. Null dla zdania drukowanego raz.
+        /// </summary>
+        public WordingVersion? Version { get; set; }
     }
 }

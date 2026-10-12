@@ -1960,6 +1960,48 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0064: zdanie w dwóch brzmieniach to dwa zdania o jednym numerze
+        // ============================================================
+
+        [Fact]
+        public void Adr0064_SentencePrintedTwice_IsOneSentenceInTwoWordings()
+        {
+            DocumentBlock Line(string text, params BlockFootnote[] footnotes) => new() { Text = text, Footnotes = footnotes };
+            var blocks = new List<DocumentBlock>
+            {
+                Line("Obwieszczenie"),
+                Line("Marszałka Sejmu Rzeczypospolitej Polskiej"),
+                Line("z dnia 6 sierpnia 2025 r."),
+                Line("w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych"),
+                Line("1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych (Dz. U. z 2024 r. poz. 1100)."),
+                Line("Marszałek Sejmu: S. Hołownia"),
+                Line("Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)"),
+                Line("USTAWA"),
+                Line("z dnia 11 sierpnia 2001 r."),
+                Line("o odbudowie obiektów budowlanych"),
+                Line("Art. 1. Pisma doręcza się za pokwitowaniem. Odbierający potwierdza odbiór podpisem.[1)] Odbierający potwierdza odbiór czytelnym podpisem.[2)] Pokwitowanie zwraca się nadawcy.",
+                    new BlockFootnote("1", ["Zdanie drugie w tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2."]),
+                    new BlockFootnote("2", ["Zdanie drugie w brzmieniu ustalonym przez art. 82 pkt 8 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych (Dz. U. poz. 2320); wejdzie w życie z dniem 1 października 2029 r."])),
+                Line("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Wersję niesie zdanie, nie jednostka; oba brzmienia mają numer zdania drugiego.
+            var paragraph = document.Articles.First().Paragraphs.Single();
+            Assert.Null(paragraph.Version);
+            Assert.Equal(new[] { 1, 2, 2, 3 }, paragraph.TextSegments.Select(sentence => sentence.Order));
+            Assert.Equal(
+                new WordingVersionKind?[] { null, WordingVersionKind.Current, WordingVersionKind.Future, null },
+                paragraph.TextSegments.Select(sentence => sentence.Version?.Kind));
+
+            var periods = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "zdanie" && e.Attribute("nr")!.Value == "2" && e.Attribute("okres") is not null)
+                .Select(e => e.Attribute("okres")!.Value)
+                .ToList();
+            Assert.Equal(2, periods.Distinct().Count());
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

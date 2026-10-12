@@ -49,6 +49,13 @@ namespace Saga.Core.Services.EntryIntoForce
         private static readonly Regex MarkerNumber = new(@"(?<no>\d+)\)", RegexOptions.Compiled);
 
         /// <summary>
+        /// Podmiot odnośnika o zdaniu: „Zdanie drugie w tym brzmieniu obowiązuje do …", „Zdanie trzecie i czwarte
+        /// dodane przez …". Reszta odnośnika ma te same wzory co odnośnik o całej jednostce.
+        /// </summary>
+        private static readonly Regex SentenceSubject = new(
+            @"^\s*Zdani[ea]\s+\p{L}+(?:\s+(?:i|oraz)\s+\p{L}+)*\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
         /// Akt zmieniający nazwany odesłaniem (§ 106 ZTP): „przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 3".
         /// </summary>
         private static readonly Regex ActNamedElsewhere = new(
@@ -162,40 +169,102 @@ namespace Saga.Core.Services.EntryIntoForce
             void Read(BaseEntity unit, string text)
             {
                 var leading = OwnMarker.Match(text);
+                var met = new List<(int End, Footnote? Footnote, string Number)>();
                 foreach (Match marker in FootnoteMarkers.Reference.Matches(text))
                 {
                     foreach (Match number in MarkerNumber.Matches(marker.Value))
                     {
-                        var footnote = resolver.First(number.Groups["no"].Value);
-                        var isLeading = leading.Success && marker.Index + number.Groups["no"].Index == leading.Groups["no"].Index;
-                        if (!isLeading)
-                            continue;
-
-                        footnote ??= resolver.Repeated(number.Groups["no"].Value);
-                        var note = footnote is null ? string.Empty : string.Join(" ", footnote.Paragraphs);
-                        var elsewhere = ActNamedElsewhere.Match(note);
-                        var act = footnote is not null
-                            && elsewhere.Success
-                            && printed.TryGetValue((footnote.Run, elsewhere.Groups["no"].Value), out var named)
-                            && named != footnote
-                                ? named
-                                : null;
-                        var actNote = act is null ? null : string.Join(" ", act.Paragraphs);
-                        marked[unit] = Describe(new Marked
-                        {
-                            Footnote = footnote?.Symbol ?? number.Groups["no"].Value,
-                            Note = note,
-                            ActNote = actNote,
-                            ActFootnote = act?.Symbol,
-
-                            // Akt nazwany odesłaniem czyta się tam, dokąd odesłanie prowadzi — nigdy z innych
-                            // publikatorów tego samego odnośnika.
-                            Act = elsewhere.Success ? ActNamedIn(actNote) : ActNamedIn(note),
-                            Repealed = leading.Groups["repealed"].Success,
-                        });
+                        var symbol = number.Groups["no"].Value;
+                        var footnote = resolver.First(symbol) ?? resolver.Repeated(symbol);
+                        met.Add((marker.Index + marker.Length, footnote, symbol));
+                        if (leading.Success && marker.Index + number.Groups["no"].Index == leading.Groups["no"].Index)
+                            marked[unit] = Describe(Mark(footnote, symbol, Note(footnote), leading.Groups["repealed"].Success));
                     }
                 }
+
+                if (unit is IHasTextSegments { TextSegments.Count: > 0 } sentences)
+                    ReadSentences(sentences.TextSegments, text, met);
             }
+
+            // Odnośnik o zdaniu stoi za zdaniem („… doręczenia.[26)]"), a zdanie w dwóch brzmieniach jest
+            // wydrukowane dwa razy, jedno za drugim (ADR-0064).
+            void ReadSentences(List<TextSegment> sentences, string text, List<(int End, Footnote? Footnote, string Number)> met)
+            {
+                var from = 0;
+                var repeated = 0;
+                Marked? previous = null;
+                foreach (var sentence in sentences)
+                {
+                    var own = OfSentence(sentence);
+                    if (own is not null && previous?.Version is { Kind: WordingVersionKind.Current } current)
+                    {
+                        own.Version ??= Future(own);
+                        if (own.Version is { Kind: WordingVersionKind.Future } change)
+                        {
+                            Close(current, change);
+
+                            // Drugie brzmienie tego samego zdania niesie jego numer; dalsze zdania liczą się dalej.
+                            repeated++;
+                        }
+                    }
+
+                    sentence.Order -= repeated;
+                    sentence.Version = own?.Version;
+                    previous = own;
+                }
+
+                Marked? OfSentence(TextSegment sentence)
+                {
+                    var at = text.IndexOf(sentence.Text, from, StringComparison.Ordinal);
+                    if (at < 0)
+                        return null;
+
+                    from = at + sentence.Text.Length;
+                    var closing = met.LastOrDefault(marker => marker.End == from);
+                    var note = Note(closing.Footnote);
+                    return closing.Number is not null && SentenceSubject.IsMatch(note)
+                        ? Describe(Mark(closing.Footnote, closing.Number, SentenceSubject.Replace(note, string.Empty, 1), repealed: false))
+                        : null;
+                }
+            }
+
+            string Note(Footnote? footnote) => footnote is null ? string.Empty : string.Join(" ", footnote.Paragraphs);
+
+            Marked Mark(Footnote? footnote, string number, string note, bool repealed)
+            {
+                var elsewhere = ActNamedElsewhere.Match(note);
+                var act = footnote is not null
+                    && elsewhere.Success
+                    && printed.TryGetValue((footnote.Run, elsewhere.Groups["no"].Value), out var named)
+                    && named != footnote
+                        ? named
+                        : null;
+                var actNote = act is null ? null : Note(act);
+                return new Marked
+                {
+                    Footnote = footnote?.Symbol ?? number,
+                    Note = note,
+                    ActNote = actNote,
+                    ActFootnote = act?.Symbol,
+
+                    // Akt nazwany odesłaniem czyta się tam, dokąd odesłanie prowadzi — nigdy z innych
+                    // publikatorów tego samego odnośnika.
+                    Act = elsewhere.Success ? ActNamedIn(actNote) : ActNamedIn(note),
+                    Repealed = repealed,
+                };
+            }
+        }
+
+        /// <summary>Brzmienie obowiązujące kończy się zdarzeniem, które otwiera brzmienie przyszłe.</summary>
+        private static void Close(WordingVersion current, WordingVersion change)
+        {
+            current.ChangeFootnote = change.ChangeFootnote;
+            current.ChangeDate = change.ChangeDate;
+            current.ChangeTerm = change.ChangeTerm;
+            current.TermFootnote = change.TermFootnote;
+            current.ChangeAct = change.ChangeAct;
+            current.ChangeProvision = change.ChangeProvision;
+            current.ChangeRepeals = change.ChangeRepeals;
         }
 
         private static void AssignAmong(List<BaseEntity> siblings, Dictionary<BaseEntity, Marked> marked, WordingVersion? inherited)
@@ -222,15 +291,7 @@ namespace Saga.Core.Services.EntryIntoForce
                     next.Version = second.Version = Future(second);
 
                 if (second.Version is { Kind: WordingVersionKind.Future } change)
-                {
-                    current.ChangeFootnote = change.ChangeFootnote;
-                    current.ChangeDate = change.ChangeDate;
-                    current.ChangeTerm = change.ChangeTerm;
-                    current.TermFootnote = change.TermFootnote;
-                    current.ChangeAct = change.ChangeAct;
-                    current.ChangeProvision = change.ChangeProvision;
-                    current.ChangeRepeals = change.ChangeRepeals;
-                }
+                    Close(current, change);
             }
 
             foreach (var unit in siblings)

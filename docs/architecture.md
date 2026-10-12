@@ -1158,6 +1158,8 @@ Termin zmiany stoi w jej odnośniku albo — gdy ten nazywa akt zmieniający ode
 w innym odnośniku ([ADR-0062](adr/0062-termin-zmiany-zapisany-przy-akcie-zmieniajacym-obejmuje-jego-zmiany.md)). Zdarzenie należy do aktu, który zmianę wprowadza:
 jego adres stoi w identyfikatorze zdarzenia i w `zrodlo`, a `podstawa` wymienia przepisy sprawcze
 ([ADR-0063](adr/0063-zdarzenie-zmiany-nalezy-do-aktu-ktory-ja-wprowadza.md)).
+Tak samo czytane jest zdanie wydrukowane w dwóch brzmieniach — wersję niesie zdanie (`TextSegment.Version`),
+a oba brzmienia mają jeden numer ([ADR-0064](adr/0064-zdanie-w-dwoch-brzmieniach-to-dwa-zdania-o-jednym-numerze.md)).
 
 **Pierwszy nagłówek rodzaju aktu wygrywa.** Załącznik do obwieszczenia o tekście jednolitym zawiera
 własną linię „USTAWA", więc sygnały tytułowe liczone są tylko ze strefy tytułowej (pierwsze bloki),

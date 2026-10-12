@@ -18,7 +18,7 @@ namespace Saga.Core.Services.Converters
             // Wersja czasowa jednostki tekstu jednolitego: „okres" dopisuje przebieg grup czasowych, tu stają
             // projekcje okresu na daty i stan jednostki (ADR-0060). Jednostka uchylana nie „wchodzi w życie" —
             // jej wersję przyszłą opisują okres i stan.
-            if (entity is BaseEntity { Version: { } version })
+            if (((entity as BaseEntity)?.Version ?? (entity as TextSegment)?.Version) is { } version)
             {
                 element.AddAnnotation(version);
                 var future = version.Kind == WordingVersionKind.Future;

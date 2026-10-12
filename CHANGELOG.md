@@ -706,6 +706,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   kontekstu (rok, skrót, publikator) rozstrzygają jak dotąd.
   - W korpusie w 69 tekstach jednolitych przybywa 145 zdań, które były zlane z poprzednim; zgodnych ze schematem
     jest nadal 1937 z 2321 (oba walidatory).
+- **Zdanie w dwóch brzmieniach** ([ADR-0064](docs/adr/0064-zdanie-w-dwoch-brzmieniach-to-dwa-zdania-o-jednym-numerze.md)): zdanie wydrukowane w tekście jednolitym
+  dwa razy („Zdanie drugie w tym brzmieniu obowiązuje do …" i „Zdanie drugie w brzmieniu ustalonym przez …") wychodzi
+  jako dwa `zdanie` o tym samym `nr` i różnym `okres`, z projekcjami `obowiazuje-do` / `wejscie-w-zycie`; zdania za nimi
+  nie dostają już numeru o jeden za wysokiego. Model: `TextSegment.Version`.
+  - W korpusie zmienia się 6 tekstów jednolitych: 21 zdań niesie okres brzmienia obowiązującego, a 23 — przyszłego (wcześniej żadne). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory); treść bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
