@@ -696,9 +696,6 @@ namespace Saga.Core.Services.Parsing
         private static bool IsUnknownOrHeading(ParagraphKind kind) =>
             kind is ParagraphKind.Unknown or ParagraphKind.UnitHeading;
 
-        /// <summary>Tytuł bez stylu dłuższy niż 99% tytułów w korpusie tekstów jednolitych (p99 = 183 znaki).</summary>
-        private const int MaxUnstyledHeadingLength = 200;
-
         /// <summary>„(uchylony)" w miejscu tytułu jednostki uchylonej w tekście jednolitym (§ 106 ZTP).</summary>
         private static readonly Regex RepealedUnitMarker = new(
             @"^\(\s*(?:uchylon[yae]|pominięt[yae])\s*\)(?:\[[^\]]*\])?\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -758,18 +755,17 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Czy akapit to prawdopodobny tytuł jednostki (§ 60): krótki, rozpoczyna się wielką literą
-        /// i NIE kończy się kropką (tytuł jednostki nie ma kropki końcowej; zdanie treści ma) — chroni
-        /// przed pochłonięciem realnej treści jako tytułu jednostki bez tytułu.
+        /// Czy akapit bez stylu, stojący tuż za oznaczeniem jednostki systematyzacyjnej, jest jej tytułem
+        /// (§ 60 i § 62 ust. 2 ZTP): zaczyna się wielką literą i nie kończy jak zdanie ani jak wprowadzenie do
+        /// wyliczenia — tytuł nie ma kropki, a dwukropek, średnik i przecinek na końcu znaczą treść przepisu.
+        /// Długość nie rozstrzyga: tytuł rozdziału aktu wykonawczego bywa dłuższy niż niejeden przepis.
         /// </summary>
         private static bool IsHeadingCandidate(string text)
         {
             var t = text.Trim();
-            if (t.Length == 0 || t.Length > MaxUnstyledHeadingLength)
+            if (t.Length == 0 || !char.IsLetter(t[0]) || !char.IsUpper(t[0]))
                 return false;
-            if (!char.IsLetter(t[0]) || !char.IsUpper(t[0]))
-                return false;
-            return t[^1] != '.';
+            return t[^1] is not ('.' or ':' or ';' or ',');
         }
 
         /// <summary>

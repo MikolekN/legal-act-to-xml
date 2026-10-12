@@ -178,9 +178,10 @@ Rozpoznanie i budowa:
   a style szablonu (`ROZDZ(ODDZ)_OZN`, `TYT(DZ)_OZN`, `CZ(KSIĘGA)`) wskazują rodzinę dwóch jednostek.
   Sam styl bez oznaczenia w treści nie tworzy jednostki (tabele, załączniki). Odczyt spoza § 62 ZTP
   (rozdział rzymski, sufiks wersalikiem, dział arabski, „IvA") jest tolerowany z komunikatem `Info`.
-- **Tytuł** to pierwszy akapit po oznaczeniu: ze stylu `*_PRZEDM` bez limitu długości, bez stylu —
-  krótki akapit od wielkiej litery bez kropki; „(uchylony)" też. Tytuł złamany na kilka bloków
-  dokleja się tylko, gdy kolejny blok zaczyna się małą literą.
+- **Tytuł** to pierwszy akapit po oznaczeniu: ze stylu `*_PRZEDM` albo bez stylu — akapit od wielkiej litery,
+  który nie kończy się jak zdanie ani wprowadzenie do wyliczenia (kropka, dwukropek, średnik, przecinek);
+  długość nie rozstrzyga. „(uchylony)" też. Tytuł złamany na kilka bloków dokleja się tylko, gdy kolejny blok
+  zaczyna się małą literą.
 - **Części nazwane** („CZĘŚĆ OGÓLNA", „TYTUŁ WSTĘPNY") z zamkniętej listy dostają eId tymczasowy
   `czesc_TMP1`. Taka część zaraz po oznaczeniu niższej jednostki jest jej tytułem (KC, KKS).
 - **Wiele części**: `LegalDocument.Parts`; część, której nie da się przejąć, staje obok jako

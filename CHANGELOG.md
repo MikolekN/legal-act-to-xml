@@ -554,6 +554,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   reszta dalszą treścią w kolejności dokumentu (`AnnouncementXmlConverter.LooseContent`). Struktury się tam nie
   zgaduje; przedtem ta treść była w modelu, ale nie w eksporcie.
   - W korpusie: jedno obwieszczenie (35 akapitów); pokrycie tekstu obwieszczeń 100 %.
+- **Tytuł jednostki systematyzacyjnej bez progu długości**: akapit bez stylu tuż za oznaczeniem („Rozdział 2") jest
+  tytułem jednostki, gdy zaczyna się wielką literą i nie kończy jak zdanie ani wprowadzenie do wyliczenia (kropka,
+  dwukropek, średnik, przecinek) — bez względu na długość. Dotychczasowy próg 200 znaków pochodził z rozkładu
+  długości tytułów w korpusie i gubił długie tytuły rozdziałów aktów wykonawczych; dwukropek na końcu nie chronił
+  dotąd przed wzięciem wprowadzenia do wyliczenia za tytuł.
+  - W korpusie: 9 dokumentów, 22 tytuły rozdziałów odzyskane; żaden dotychczasowy tytuł nie zniknął.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

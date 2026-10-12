@@ -429,6 +429,42 @@ namespace Saga.Core.Tests
             Assert.Equal(string.Empty, chapter.Heading);
         }
 
+        [Fact]
+        public void LongUnstyledTitle_IsStillTheTitleOfTheChapter()
+        {
+            // Korpus: 314725_2944776 — tytuł rozdziału rozporządzenia ma ponad 200 znaków. O tytule rozstrzyga
+            // miejsce i budowa (wielka litera, bez znaku końca zdania), nie długość: próg długości był dopasowany
+            // do korpusu i gubił takie tytuły.
+            const string title =
+                "Szczegółowe warunki uznawania kwalifikacji i uprawnień w celu uzyskania licencji pilota, dyspozytora " +
+                "lotniczego, nawigatora lotniczego, mechanika lotniczego obsługi technicznej oraz mechanika pokładowego, " +
+                "a także świadectwa kwalifikacji członka personelu lotniczego";
+            Assert.True(title.Length > 200);
+
+            var orch = new ParserOrchestrator();
+            var ctx = ConnectedContext();
+            Feed(orch, ctx, "Rozdział 2", title, "Art. 5. Przepis rozdzialu.");
+
+            var chapter = ctx.Document.RootPart.Books[0].Titles[0].Divisions[0].Chapters.Last();
+            Assert.Equal(title, chapter.Heading);
+            Assert.Equal("art_5", ctx.Document.Articles.Single().Id);
+        }
+
+        [Theory]
+        // Wprowadzenie do wyliczenia i urwany człon zdania to treść przepisu, nie tytuł.
+        [InlineData("Ilekroc w ustawie jest mowa o:")]
+        [InlineData("W sprawach nieuregulowanych stosuje sie przepisy odrebne,")]
+        [InlineData("Przepisy stosuje sie do postepowan wszczetych;")]
+        public void TitlelessChapter_DoesNotAbsorbUnfinishedContentAsHeading(string line)
+        {
+            var orch = new ParserOrchestrator();
+            var ctx = ConnectedContext();
+            Feed(orch, ctx, "Rozdział 1", line);
+
+            var chapter = ctx.Document.RootPart.Books[0].Titles[0].Divisions[0].Chapters[0];
+            Assert.Equal(string.Empty, chapter.Heading);
+        }
+
         private static bool IsSystematizing(ParagraphKind kind) => kind is
             ParagraphKind.PartUnit or ParagraphKind.BookUnit or ParagraphKind.TitleUnit or
             ParagraphKind.DivisionUnit or ParagraphKind.ChapterUnit or ParagraphKind.SubchapterUnit;
