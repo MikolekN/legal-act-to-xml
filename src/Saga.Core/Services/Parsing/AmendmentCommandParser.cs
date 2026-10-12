@@ -108,9 +108,15 @@ namespace Saga.Core.Services.Parsing
             @"uchyla\s+się\s+" + UnitToken,
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        /// <summary>Wyrazy w cudzysłowie, bez cudzysłowu wewnątrz.</summary>
-        private static readonly string QuotedWords =
-            $@"[{QuotationMarks.OpeningOrStraight}](?<words>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]";
+        /// <summary>
+        /// Wyrazy w cudzysłowie, pod grupą o podanej nazwie. W środku może stać wyrażenie w cudzysłowie
+        /// („zwanej dalej „ustawą","") — sparowane, o jeden poziom głębiej; wyrazy kończą się dopiero na cudzysłowie
+        /// zamykającym, który niczego wewnątrz nie zamyka.
+        /// </summary>
+        private static string Quoted(string group) =>
+            $@"[{QuotationMarks.OpeningOrStraight}](?<{group}>(?:[^{QuotationMarks.Any}]|{QuotationMarks.Opening}[^{QuotationMarks.Any}]*[{QuotationMarks.Closing}])*)[{QuotationMarks.ClosingOrStraight}]";
+
+        private static readonly string QuotedWords = Quoted("words");
 
         /// <summary>
         /// „wyrazy „X" zastępuje się wyrazami „Y"" (§ 87 ZTP) — komenda kompletna w akapicie,
@@ -120,8 +126,8 @@ namespace Saga.Core.Services.Parsing
         /// oraz proste cudzysłowy "…" jako ogranicznik brzmień (kanał TXT/PDF; Sanitize nie normalizuje cudzysłowów).
         /// </summary>
         internal static readonly Regex ReplaceWordsPattern = new(
-            $@"wyraz(?:y|ów|em)?\s+[{QuotationMarks.OpeningOrStraight}](?<old>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]\s+zastępuje\s+się\s+"
-            + $@"(?:[^{QuotationMarks.Any}]{{0,80}}?)wyraz(?:ami|em|y)?\s+[{QuotationMarks.OpeningOrStraight}](?<new>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]",
+            $@"wyraz(?:y|ów|em)?\s+{Quoted("old")}\s+zastępuje\s+się\s+"
+            + $@"(?:[^{QuotationMarks.Any}]{{0,80}}?)wyraz(?:ami|em|y)?\s+{Quoted("new")}",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
@@ -131,8 +137,8 @@ namespace Saga.Core.Services.Parsing
         /// zamianą tekstu.
         /// </summary>
         internal static readonly Regex AddWordsPattern = new(
-            $@"(?<side>po|przed)\s+wyraz(?:ach|ie|ami|em)\s+[{QuotationMarks.OpeningOrStraight}](?<anchor>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]\s+dodaje\s+się\s+"
-            + $@"(?<comma>przecinek\s+(?:i|oraz)\s+)?wyraz(?:y|em)?\s+[{QuotationMarks.OpeningOrStraight}](?<added>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}]",
+            $@"(?<side>po|przed)\s+wyraz(?:ach|ie|ami|em)\s+{Quoted("anchor")}\s+dodaje\s+się\s+"
+            + $@"(?<comma>przecinek\s+(?:i|oraz)\s+)?wyraz(?:y|em)?\s+{Quoted("added")}",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
@@ -152,7 +158,7 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         internal static readonly Regex ReplaceSignPattern = new(
             @"(?<old>kropkę|średnik|przecinek|dwukropek)(?:\s+na\s+końcu)?\s+zastępuje\s+się\s+(?<new>kropką|średnikiem|przecinkiem|dwukropkiem)"
-            + $@"(?:\s+i\s+dodaje(?:\s+się)?\s+wyraz(?:y)?\s+[{QuotationMarks.OpeningOrStraight}](?<added>[^{QuotationMarks.Any}]*)[{QuotationMarks.ClosingOrStraight}])?",
+            + $@"(?:\s+i\s+dodaje(?:\s+się)?\s+wyraz(?:y)?\s+{Quoted("added")})?",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private static string SignOf(string name) => name.ToLowerInvariant() switch

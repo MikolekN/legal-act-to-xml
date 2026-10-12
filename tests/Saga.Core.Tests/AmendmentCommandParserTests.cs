@@ -187,6 +187,42 @@ namespace Saga.Core.Tests
             Assert.DoesNotContain(AmendmentCommandParser.TextChangeCommands(text), c => c.Kind == AmendmentCommandKind.ReplaceSign);
         }
 
+        // ============================================================
+        // Wyrazy, które same zawierają wyrażenie w cudzysłowie
+        // ============================================================
+
+        [Theory]
+        // Korpus: 305667_2727772, 282142_2965493, 308909_2756164, 347307_3175441.
+        [InlineData("w ust. 5 wyrazy „umowy o warunkach, zwanej dalej „umową ramową”,” zastępuje się wyrazami „umowy ramowej”;",
+            "umowy o warunkach, zwanej dalej „umową ramową”,", "umowy ramowej")]
+        [InlineData("w § 1 po wyrazach „zwanej dalej „ustawą”,” dodaje się wyrazy „w sprawach należności pieniężnych”;",
+            "zwanej dalej „ustawą”,", "zwanej dalej „ustawą”, w sprawach należności pieniężnych")]
+        [InlineData("w art. 32 po wyrazach „(Dz. U. z 2022 r. poz. 311),” dodaje się wyrazy „zwany dalej „Zarządcą Rozliczeń”,”;",
+            "(Dz. U. z 2022 r. poz. 311),", "(Dz. U. z 2022 r. poz. 311), zwany dalej „Zarządcą Rozliczeń”,")]
+        // Odstępy przy cudzysłowach są zabiegiem składu („ „zarządcą rozliczeń" ").
+        [InlineData("we wprowadzeniu do wyliczenia po wyrazach „ „zarządcą rozliczeń” ” dodaje się wyrazy „ , do Funduszu”;",
+            "„zarządcą rozliczeń”", "„zarządcą rozliczeń”, do Funduszu")]
+        [InlineData("w § 57 w ust. 1 skreśla się wyrazy „ ; w ustawie określanej jako „kodeks” numer artykułu można oznaczyć cyframi rzymskimi”;",
+            "; w ustawie określanej jako „kodeks” numer artykułu można oznaczyć cyframi rzymskimi", "")]
+        public void WordingWithAQuotedExpressionInside_IsReadToItsOwnClosingMark(string text, string old, string @new)
+        {
+            var cmd = AmendmentCommandParser.TextChangeCommands(text).Single();
+
+            Assert.Equal(old, cmd.OldWording?.Trim());
+            Assert.Equal(@new, cmd.NewWording?.Trim());
+        }
+
+        [Fact]
+        public void TwoWordingsSideBySide_AreNotOneWordingWithAQuotedExpressionInside()
+        {
+            // Cudzysłów zamykający pierwsze wyrazy kończy je — kolejny otwierający zaczyna następne.
+            var commands = AmendmentCommandParser.TextChangeCommands(
+                "w ust. 3 wyraz „2024” zastępuje się wyrazem „2025” oraz wyraz „2026” zastępuje się wyrazem „2027”;");
+
+            Assert.Equal(new[] { "2024", "2026" }, commands.Select(c => c.OldWording));
+            Assert.Equal(new[] { "2025", "2027" }, commands.Select(c => c.NewWording));
+        }
+
         [Theory]
         [InlineData("Funduszu", "na wypłatę", "Funduszu na wypłatę")]
         [InlineData("Finansowego", ",", "Finansowego,")]

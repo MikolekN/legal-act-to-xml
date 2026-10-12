@@ -638,6 +638,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Model: `TextChange.Occurrence` (`TextOccurrence.Last`) i `TextChange.Targets` — własny cel zmiany, gdy jest
     inny niż cele nowelizacji.
   - W korpusie przybywa 463 instrukcji `now:zamien-tekst` w 196 plikach, a 20 zdań z uchyleniem za zamianą znaku wskazuje teraz jednostkę uchylaną (w tym przedziały „pkt 2–7"); poza tym eksport się nie zmienia, zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory). Przykłady autorów schematu: DU/2026/26 — wszystkie 7 różnych par (`stary-tekst`, `nowy-tekst`) i wszystkie 9 instrukcji mają u nas odpowiednik, DU/2026/252 — 81 instrukcji wobec 83.
+- **Wyrazy z wyrażeniem w cudzysłowie**: wyrazy zastępowane, dodawane i skreślane, które same zawierają
+  wyrażenie w cudzysłowie („po wyrazach „zwanej dalej „ustawą","" dodaje się wyrazy …"), są czytane do własnego
+  cudzysłowu zamykającego (`AmendmentCommandParser.Quoted`). Przedtem komenda z takim brzmieniem nie dawała żadnej
+  instrukcji.
+  - W korpusie przybywa 28 instrukcji `now:zamien-tekst` w 23 plikach; poza tym eksport się nie zmienia, zgodnych
+    ze schematem jest nadal 1937 z 2321.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
