@@ -663,6 +663,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   niesie elementy `zdanie` z numerami, jak w przykładzie autorów schematu. Wprowadzenie do wyliczenia, tytuł
   i wyrazy zostają elementem `tekst`. Model: `AmendmentContent.PlainTextIsSentences`.
   - W korpusie 115 cytatów tekstowych w 52 plikach niesie teraz `zdanie` zamiast `tekst` (116 zdań); poza tym eksport się nie zmienia, zgodnych ze schematem jest nadal 1937 z 2321. Przykłady autorów schematu: DU/2026/26 — komendy 103 ze 105, treść zdań 466 z 469; DU/2026/252 — komendy 333 z 345.
+- **Załącznik zmieniany odesłaniem do załącznika aktu zmieniającego** ([ADR-0058](docs/adr/0058-zalacznik-zmieniany-odeslaniem-jest-instrukcja-z-adresami-obu-zalacznikow.md)):
+  „załącznik nr 1 do rozporządzenia otrzymuje brzmienie określone w załączniku nr 2 do niniejszego rozporządzenia"
+  daje instrukcję `now:zastap`, a „dodaje się załączniki nr 3 i 4 … w brzmieniu określonym w załącznikach …" —
+  `now:dodaj-po`, każda z adresem załącznika aktu zmienianego i zmieniającego. Przedtem przepis nie dawał żadnej
+  nowelizacji. Model: `Amendment.AnnexInstructions`.
+  - W korpusie przybywa 86 instrukcji `now:zastap` (55 plików) i 20 `now:dodaj-po` (18 plików) — 91 zdań; poza tym eksport się nie zmienia, zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory). W przykładzie autorów schematu DU/2026/252 wszystkie trzy instrukcje załączników są takie same jak nasze, atrybut w atrybut; komendy zgodne z tym przykładem: 336 z 345.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

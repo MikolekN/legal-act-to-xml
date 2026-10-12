@@ -45,6 +45,12 @@ namespace Saga.Model
         public StructuralAmendmentReference? WrappedUnit { get; set; }
 
         /// <summary>
+        /// Załączniki zastępowane albo dodawane odesłaniem do załączników aktu zmieniającego („otrzymuje brzmienie
+        /// określone w załączniku do niniejszej ustawy").
+        /// </summary>
+        public List<AnnexInstruction> AnnexInstructions { get; set; } = new();
+
+        /// <summary>
         /// Informacja o ustawie, której dotyczy nowelizacja (rok i lista pozycji publikatora).
         /// </summary>
         public JournalInfo TargetLegalAct { get; set; } = new();

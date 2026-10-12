@@ -41,6 +41,7 @@ namespace Saga.Core.Services.Converters
             var commands = Commands(amendment);
 
             AddContentWrapInstruction(amendment, sentence);
+            AddAnnexInstructions(amendment, sentence);
 
             if (amendment.OperationType == AmendmentOperationType.Repeal)
             {
@@ -228,6 +229,44 @@ namespace Saga.Core.Services.Converters
                 new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, unit),
                 new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)),
                 new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, Guid.NewGuid().ToString())));
+        }
+
+        /// <summary>
+        /// Załączniki zmieniane odesłaniem do załączników aktu zmieniającego: <c>now:zastap</c> na każdy zastępowany
+        /// załącznik, <c>now:dodaj-po</c> na dodawane — z adresem załącznika aktu zmieniającego, który niesie nowe
+        /// brzmienie (ADR-0058). Akt zmieniający i prefiksy adresów uzupełnia <see cref="ActPrefixXml"/>.
+        /// </summary>
+        private static void AddAnnexInstructions(Amendment amendment, XNode? sentence)
+        {
+            if (amendment.AnnexInstructions.Count == 0 || sentence is not XElement zdanie)
+                return;
+
+            XNamespace now = XmlConverterConstants.AmendmentNamespace;
+            static string Annex(string number) => $"{XmlConverterConstants.Contents.Instruction.AnnexPrefix}_{number}";
+
+            var instructions = new List<XElement>();
+            foreach (var annex in amendment.AnnexInstructions)
+            {
+                var instruction = new XElement(now + (annex.Adds
+                        ? XmlConverterConstants.Contents.Instruction.AddAfter
+                        : XmlConverterConstants.Contents.Instruction.ReplaceUnits),
+                    new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
+
+                if (annex.Target is { } target)
+                    instruction.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, Annex(target)));
+
+                instruction.Add(new XAttribute(XmlConverterConstants.Contents.Instruction.AmendingActAttribute,
+                    XmlConverterConstants.ELIUrl + "eli/"));
+                if (annex.Source is { } source)
+                    instruction.Add(new XAttribute(XmlConverterConstants.Contents.Instruction.AmendingUnitAttribute, Annex(source)));
+                if (annex is { Adds: true, SourceTo: { } sourceTo })
+                    instruction.Add(new XAttribute(XmlConverterConstants.Contents.Instruction.AmendingUnitToAttribute, Annex(sourceTo)));
+
+                instruction.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, Guid.NewGuid().ToString()));
+                instructions.Add(instruction);
+            }
+
+            zdanie.AddFirst(instructions);
         }
 
         /// <summary>

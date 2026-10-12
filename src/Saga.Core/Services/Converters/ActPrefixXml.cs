@@ -53,6 +53,14 @@ namespace Saga.Core.Services.Converters
                         target.Value = amended + Separator + target.Value;
                     }
 
+                // Załącznik aktu zmieniającego, do którego odsyła instrukcja, ma adres w tym akcie.
+                if (own is not null && element.Attribute(XmlConverterConstants.Contents.Instruction.AmendingActAttribute) is { } amendingAct)
+                {
+                    amendingAct.Value = XmlConverterConstants.ELIUrl + "eli/" + own;
+                    Prefix(element.Attribute(XmlConverterConstants.Contents.Instruction.AmendingUnitAttribute), own);
+                    Prefix(element.Attribute(XmlConverterConstants.Contents.Instruction.AmendingUnitToAttribute), own);
+                }
+
                 if (element.Attribute(XmlConverterConstants.Contents.eId) is not { } eId)
                     continue;
 

@@ -305,12 +305,13 @@ namespace Saga.Core.Services.Parsing
         public void DetectTrigger(ParsingContext context, string text)
         {
             NoteContentWrap(context, text);
+            NoteAnnexInstructions(context, text);
             DetectCommands(context, text);
 
             // Obudowanie treści bez żadnej innej zmiany w tym przepisie („…oznacza się jako ust. 1 i:" przed
-            // wyliczeniem zmian) jest nowelizacją samo w sobie.
-            if (GetOwner(context) is { } owner && context.PendingContentWraps.ContainsKey(owner.Guid)
-                && !context.AmendmentTriggerDetected)
+            // wyliczeniem zmian) jest nowelizacją samo w sobie; tak samo zmiana załącznika odesłaniem.
+            if (GetOwner(context) is { } owner && !context.AmendmentTriggerDetected
+                && (context.PendingContentWraps.ContainsKey(owner.Guid) || context.PendingAnnexInstructions.ContainsKey(owner.Guid)))
             {
                 FinalizeWithoutContent(context, owner);
             }
@@ -346,6 +347,16 @@ namespace Saga.Core.Services.Parsing
 
             var level = match.Groups["level"].Value == "§" ? ContentWrap.CodeParagraph : ContentWrap.Paragraph;
             context.PendingContentWraps[owner.Guid] = (level, unit);
+        }
+
+        /// <summary>
+        /// Odnotowuje zmianę załączników zapisaną odesłaniem do załączników aktu zmieniającego
+        /// (<see cref="AnnexInstructionReader"/>) — dołączy ją nowelizacja tego przepisu.
+        /// </summary>
+        private static void NoteAnnexInstructions(ParsingContext context, string text)
+        {
+            if (GetOwner(context) is { } owner && AnnexInstructionReader.Read(text) is { Count: > 0 } instructions)
+                context.PendingAnnexInstructions[owner.Guid] = instructions;
         }
 
         /// <summary>Nowelizacja bez treści cytowanej i bez zmian w tekście — niesie to, co na nią czekało.</summary>

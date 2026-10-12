@@ -400,6 +400,13 @@ namespace Saga.Core.Services.Converters
                 internal const string OldTextAttribute = "stary-tekst";
                 internal const string NewTextAttribute = "nowy-tekst";
                 internal const string LastOccurrence = "ostatnie";
+
+                // Załącznik zmieniany odesłaniem do załącznika aktu zmieniającego.
+                internal const string AddAfter = "dodaj-po";
+                internal const string AmendingActAttribute = "akt-nowelizujacy";
+                internal const string AmendingUnitAttribute = "nowelizujacy-element-eId";
+                internal const string AmendingUnitToAttribute = "nowelizujacy-element-eId-do";
+                internal const string AnnexPrefix = "zal";
             }
 
             internal static class Odnosnik

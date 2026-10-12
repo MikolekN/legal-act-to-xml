@@ -150,6 +150,8 @@ namespace Saga.Core.Services.Parsing
                 amendment.TextChanges.AddRange(pendingTextChanges);
             if (context.PendingContentWraps.Remove(collector.Owner.Guid, out var pendingWrap))
                 (amendment.WrapsContentAs, amendment.WrappedUnit) = pendingWrap;
+            if (context.PendingAnnexInstructions.Remove(collector.Owner.Guid, out var pendingAnnexes))
+                amendment.AnnexInstructions.AddRange(pendingAnnexes);
 
             // 3. Połącz z celem nowelizacji (StructuralAmendmentReference)
             LinkTargets(amendment, collector, context);
@@ -455,8 +457,8 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         internal static void ValidateAmendment(Amendment amendment, BaseEntity owner)
         {
-            // Brak celów nowelizacji
-            if (amendment.Targets.Count == 0)
+            // Brak celów nowelizacji; załącznik zmieniany odesłaniem ma cel w instrukcji, nie w adresie jednostki.
+            if (amendment.Targets.Count == 0 && amendment.AnnexInstructions.Count == 0)
             {
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
                     "Nowelizacja bez wykrytego celu strukturalnego (brak referencji art./ust./pkt/lit.).");
@@ -486,7 +488,7 @@ namespace Saga.Core.Services.Parsing
             }
 
             // Treść bez żadnych jednostek redakcyjnych (oprócz PlainText); zmiana wyrazów treści cytowanej nie ma.
-            if (amendment.Content != null && amendment.TextChanges.Count == 0
+            if (amendment.Content != null && amendment.TextChanges.Count == 0 && amendment.AnnexInstructions.Count == 0
                 && amendment.WrapsContentAs == ContentWrap.None && IsContentEmpty(amendment.Content))
             {
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Info,

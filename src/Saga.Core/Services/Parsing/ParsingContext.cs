@@ -217,6 +217,12 @@ namespace Saga.Core.Services.Parsing
         public Dictionary<Guid, (ContentWrap As, StructuralAmendmentReference? Unit)> PendingContentWraps { get; } = new();
 
         /// <summary>
+        /// Zmiany załączników zapisane odesłaniem do załączników aktu zmieniającego — czekają na nowelizację
+        /// przepisu, który je zapisał. Klucz: Guid przepisu zmieniającego.
+        /// </summary>
+        public Dictionary<Guid, IReadOnlyList<AnnexInstruction>> PendingAnnexInstructions { get; } = new();
+
+        /// <summary>
         /// Czy aktualnie przetwarza akapity bedace trescia nowelizacji.
         /// Ustawiane na true gdy:
         /// - napotkano akapit ze stylem Z/... (Z/UST, Z/ART, Z/PKT itd.)

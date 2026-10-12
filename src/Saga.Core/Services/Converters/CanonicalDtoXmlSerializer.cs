@@ -294,6 +294,15 @@ namespace Saga.Core.Services.Converters
                     el.Add(new XAttribute("wrappedUnit", wrapped.Structure.ToString()));
             }
 
+            foreach (var annex in amendment.AnnexInstructions)
+            {
+                el.Add(new XElement("annex",
+                    new XAttribute("adds", annex.Adds),
+                    annex.Target is null ? null : new XAttribute("target", annex.Target),
+                    annex.Source is null ? null : new XAttribute("source", annex.Source),
+                    annex.SourceTo is null ? null : new XAttribute("sourceTo", annex.SourceTo)));
+            }
+
             AddJournalElement(el, "targetAct", amendment.TargetLegalAct);
 
             foreach (var target in amendment.Targets)

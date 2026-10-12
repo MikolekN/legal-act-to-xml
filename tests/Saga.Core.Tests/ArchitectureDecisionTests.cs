@@ -1743,6 +1743,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0058: załącznik zmieniany odesłaniem jest instrukcją z adresami obu załączników
+        // ============================================================
+
+        [Fact]
+        public void Adr0058_AnnexReplacedByReference_IsAnInstructionNamingBothAnnexes()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) załączniki nr 1 i 2 do ustawy otrzymują brzmienie określone w załącznikach nr 3 i 4 do niniejszej ustawy.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var instructions = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "zastap")
+                .Select(e => (e.Attribute("element-eId")?.Value, e.Attribute("nowelizujacy-element-eId")?.Value))
+                .ToList();
+
+            // Każdy załącznik aktu zmienianego dostaje brzmienie kolejnego załącznika aktu zmieniającego.
+            Assert.Equal([("DU/2021/200__zal_1", "zal_3"), ("DU/2021/200__zal_2", "zal_4")], instructions);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

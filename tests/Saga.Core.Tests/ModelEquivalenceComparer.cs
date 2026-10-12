@@ -107,6 +107,9 @@ namespace Saga.Core.Tests
             if (amendment.WrapsContentAs != ContentWrap.None)
                 sb.AppendLine($"{indent}  wraps {amendment.WrappedUnit?.Structure} as {amendment.WrapsContentAs}");
 
+            foreach (var annex in amendment.AnnexInstructions)
+                sb.AppendLine($"{indent}  annex {(annex.Adds ? "add after" : "replace")} {annex.Target} from {annex.Source}–{annex.SourceTo}");
+
             foreach (var change in amendment.TextChanges)
                 sb.AppendLine($"{indent}  textchange {change.Occurrence} [{string.Join(", ", change.Targets)}] | {change.OldText} → {change.NewText}");
 
