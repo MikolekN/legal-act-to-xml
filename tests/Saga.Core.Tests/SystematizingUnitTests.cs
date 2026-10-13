@@ -346,6 +346,58 @@ namespace Saga.Core.Tests
             Assert.Equal(title, unit.Heading);
         }
 
+        [Theory]
+        // Te same dwa przypadki: podtytuł nie należy do tytułu, ale też nie ginie — zostaje pod nim, w nagłówku.
+        [InlineData("DZIAŁ I", "TYTDZOZNoznaczenietytuulubdziau", "Właściwość sądu", "Przepis wstępny", "TYTDZPRZEDMprzedmiotregulacjitytuulubdziau")]
+        [InlineData("Rozdział 12", "ROZDZODDZOZNoznaczenierozdziauluboddziau", "Plany naprawy oraz wczesna interwencja, likwidacja i upadłość banku", "A. Plany naprawy", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau")]
+        // Akcyza (TJ 311012_2800574): tytuł rozdziału złamany na dwa akapity, drugi od wielkiej litery.
+        [InlineData("Rozdział 2", "ROZDZODDZOZNoznaczenierozdziauluboddziau", "Podatnik akcyzy.", "Właściwość organów podatkowych", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau")]
+        public void SubheadingStartingWithCapital_IsFurtherContentOfTheHeading(
+            string designation, string designationStyle, string title, string subheading, string headingStyle)
+        {
+            var document = ParseStyled(
+                (designation, designationStyle),
+                (title, headingStyle),
+                (subheading, headingStyle),
+                ("Art. 1. Treść.", "ARTartustawynprozporzdzenia"));
+
+            Assert.Equal(new[] { subheading }, ExplicitUnit(document).Continuation.Select(block => block.Text));
+
+            var header = Saga.Core.Services.LegalDocumentConverter.Convert(document).Descendants()
+                .Single(e => e.Name.LocalName.StartsWith("naglowek-", StringComparison.Ordinal));
+            Assert.Equal(new[] { "nr", "p", "specjalny" }, header.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal(title, header.Elements().Single(e => e.Name.LocalName == "p").Value);
+            Assert.Equal(subheading, header.Elements().Single(e => e.Name.LocalName == "specjalny").Value);
+        }
+
+        [Fact]
+        public void RepealAnnotationThatNamesNoUnit_UnderATitle_IsFurtherContentOfTheHeading()
+        {
+            // KPC (TJ 302049_2704309): „(Przepis wstępny – uchylone)" pod tytułem części — nie nazywa jednostki
+            // z oznaczeniem, więc zostaje w nagłówku części, pod którym stoi.
+            var document = ParseStyled(
+                ("CZĘŚĆ CZWARTA", "CZKSIGAoznaczenieiprzedmiotczcilubksigi"),
+                ("Przepisy z zakresu międzynarodowego postępowania cywilnego", "CZKSIGAoznaczenieiprzedmiotczcilubksigi"),
+                ("(Przepis wstępny – uchylone)", "UCHYLENIEWTJoznaczenieuchyleniawtekciejednolitym"),
+                ("Art. 1096. (uchylony)", "ARTartustawynprozporzdzenia"));
+
+            var part = ExplicitUnit(document);
+            Assert.Equal("Przepisy z zakresu międzynarodowego postępowania cywilnego", ((Saga.Model.SystematizingUnits.ISystematizingUnit)part).Heading);
+            Assert.Equal(new[] { "(Przepis wstępny – uchylone)" }, part.Continuation.Select(block => block.Text));
+        }
+
+        [SchemaPlFact]
+        public void FurtherContentOfAHeading_IsSchemaValid()
+        {
+            var document = ParseStyled(
+                ("Rozdział 12", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Plany naprawy oraz wczesna interwencja", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("A. Plany naprawy", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                ("Art. 1. Treść.", "ARTartustawynprozporzdzenia"));
+
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(Saga.Core.Services.LegalDocumentConverter.Convert(document).Elements().First()));
+        }
+
         private static BaseEntity ExplicitUnit(LegalDocument document)
         {
             BaseEntity unit = document.Articles.Single().Parent!;

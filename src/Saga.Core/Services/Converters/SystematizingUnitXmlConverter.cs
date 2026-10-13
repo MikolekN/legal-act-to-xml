@@ -60,7 +60,7 @@ namespace Saga.Core.Services.Converters
                     new XAttribute(XmlConverterConstants.Contents.eId, unit.Id),
                     new XAttribute(XmlConverterConstants.Contents.GUID, unit.Guid.ToString()));
                 UnitLifecycleXml.Apply(element, unit);
-                element.Add(Header(names.Header, unit.Number, systematizing.Heading));
+                element.Add(Header(names.Header, unit, systematizing.Heading));
             }
 
             foreach (var child in Children(unit))
@@ -71,9 +71,13 @@ namespace Saga.Core.Services.Converters
             return element;
         }
 
-        /// <summary>Nagłówek: oznaczenie jak w akcie (z indeksem górnym) i tytuł, jeśli jest.</summary>
-        private static XElement Header(string name, EntityNumber? number, string heading)
+        /// <summary>
+        /// Nagłówek: oznaczenie jak w akcie (z indeksem górnym), tytuł, jeśli jest, i dalsza treść nagłówka —
+        /// wiersze stojące pod tytułem, które nie są ani jego częścią, ani jednostką (ADR-0067).
+        /// </summary>
+        private static XElement Header(string name, BaseEntity unit, string heading)
         {
+            var number = unit.Number;
             var designation = number == null ? string.Empty : number.RawValue ?? number.Value;
             if (number != null && !string.IsNullOrEmpty(number.Superscript))
                 designation += $"[{number.Superscript}]";
@@ -81,6 +85,9 @@ namespace Saga.Core.Services.Converters
             var header = Element(name, Element(XmlConverterConstants.Contents.Num, designation));
             if (!string.IsNullOrWhiteSpace(heading))
                 header.Add(Element(XmlConverterConstants.Contents.TextSection, heading));
+
+            foreach (var further in unit.Continuation.Select(block => block.Text).OfType<string>().Where(text => text.Length > 0))
+                header.Add(Element(XmlConverterConstants.Contents.SpecialContent, further));
             return header;
         }
 

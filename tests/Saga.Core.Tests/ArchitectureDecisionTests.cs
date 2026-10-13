@@ -2079,6 +2079,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
+        // ============================================================
+
+        [Fact]
+        public void Adr0067_LineUnderTheTitleOfAUnit_IsFurtherContentOfItsHeading()
+        {
+            DocumentBlock Line(string text, string? style = null) => new() { Text = text, StyleId = style };
+            const string heading = "TYTDZPRZEDMprzedmiotregulacjitytuulubdziau";
+            var blocks = new List<DocumentBlock>
+            {
+                Line("USTAWA"), Line("z dnia 17 listopada 1964 r."), Line("Kodeks postępowania cywilnego"),
+                Line("DZIAŁ I", "TYTDZOZNoznaczenietytuulubdziau"),
+                Line("Właściwość sądu", heading),
+                Line("Przepis wstępny", heading),
+                Line("Art. 15. Sąd właściwy w chwili wniesienia pozwu pozostaje właściwy aż do ukończenia postępowania.", "ARTartustawynprozporzdzenia"),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Tytuł zostaje tytułem; wiersz pod nim nie ginie i nie staje się treścią art. 15.
+            var header = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "naglowek-dzialu");
+            Assert.Equal("Właściwość sądu", header.Elements().Single(e => e.Name.LocalName == "p").Value);
+            Assert.Equal("Przepis wstępny", header.Elements().Single(e => e.Name.LocalName == "specjalny").Value);
+            Assert.Empty(document.Articles.Single().Paragraphs.Single().Continuation);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

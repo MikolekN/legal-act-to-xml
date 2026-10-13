@@ -1,6 +1,6 @@
 # ADR-0066: Adnotacja tekstu jednolitego nazywająca uchyloną jednostkę systematyzacyjną jest nagłówkiem tej jednostki
 
-- Status: Accepted
+- Status: Accepted (adnotacja, która jednostki nie nazywa, zostaje w nagłówku jednostki, pod którą stoi — [ADR-0067](0067-wiersz-pod-tytulem-jednostki-jest-dalsza-trescia-naglowka.md))
 - Data: 2026-10-13
 
 ## Kontekst

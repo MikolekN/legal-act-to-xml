@@ -184,6 +184,8 @@ Rozpoznanie i budowa:
   kończący się słowem „uchylony" albo „pominięty" („(uchylony)", „(zawierający art. 19–21 – uchylony)").
   Adnotacja, która sama nazywa uchyloną jednostkę („(Rozdział 2 – uchylony)", „(oznaczenie oraz tytuł księgi
   pierwszej – uchylone)"), wprowadza tę jednostkę i jest jej nagłówkiem ([ADR-0066](adr/0066-adnotacja-nazywajaca-uchylona-jednostke-jest-jej-naglowkiem.md)).
+  Kolejny wiersz w stylu tytułu od wielkiej litery (nagłówek pośredni „Przepis wstępny") i adnotacja, która
+  jednostki nie nazywa, są dalszą treścią nagłówka — `specjalny` za jego `p` ([ADR-0067](adr/0067-wiersz-pod-tytulem-jednostki-jest-dalsza-trescia-naglowka.md)).
   Tytuł złamany na kilka bloków dokleja się tylko, gdy kolejny blok zaczyna się małą literą.
 - **Części nazwane** („CZĘŚĆ OGÓLNA", „TYTUŁ WSTĘPNY") z zamkniętej listy dostają eId tymczasowy
   `czesc_TMP1`. Taka część zaraz po oznaczeniu niższej jednostki jest jej tytułem (KC, KKS).

@@ -722,6 +722,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   jednostkę do układu aktu i są jej nagłówkiem. Przedtem ginęły (przed pierwszym artykułem jednostki nadrzędnej)
   albo wychodziły jako `fragment` poprzedniego artykułu.
   - W korpusie zmienia się 7 tekstów jednolitych: 20 adnotacji staje się nagłówkami jednostek (16 rozdziałów, 3 oddziały, 1 księga) — 9 z nich ginęło z eksportu, 11 wychodziło jako `fragment` artykułu, za którym stały. Zgubionych akapitów w tekstach jednolitych zostaje 9 (było 18). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
+- **Wiersz pod tytułem jednostki systematyzacyjnej** ([ADR-0067](docs/adr/0067-wiersz-pod-tytulem-jednostki-jest-dalsza-trescia-naglowka.md)): nagłówek pośredni
+  bez oznaczenia („Przepis wstępny", „A. Plany naprawy"), druga część tytułu w osobnym akapicie i adnotacja o uchyleniu,
+  która nie nazywa jednostki, zostają w nagłówku jednostki jako `specjalny`. Przedtem — stojąc przed pierwszym
+  przepisem jednostki — ginęły z eksportu.
+  - Miara pokrycia tekstu nie liczy już jako zgubionego artykułu zapisanego bez kropki („Art 64.").
+  - W korpusie zmienia się 5 tekstów jednolitych: 8 wierszy stojących pod tytułem jednostki wychodzi w jej nagłówku jako `specjalny`; 6 z nich ginęło z eksportu. Zgubionych akapitów zostaje w całym korpusie 3 (1 w tekście jednolitym uchwały, 2 w jednym rozporządzeniu) — przedtem 11, z czego 2 były artefaktem miary. Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

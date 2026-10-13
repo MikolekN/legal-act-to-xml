@@ -34,7 +34,7 @@ internal static class TextCoverageReport
     // Oznaczenie na początku akapitu — w eksporcie stoi w „nr", nie w tekście. Bywa ich kilka pod rząd
     // („Art. 5. 1. Treść").
     private static readonly Regex Designation = new(
-        @"^\s*[„""]?\s*(?:Art\.\s*\d+[a-zł]*(?:\[[^\]]*\])?\.?|§\s*\d+[a-zł]*(?:\[[^\]]*\])?\.?|\d+[a-zł]*(?:\[[^\]]*\])?[.)]|[a-zł]{1,3}\)|[IVXLCDM]+\.|[–-]+|(?:CZĘŚĆ|KSIĘGA|TYTUŁ|DZIAŁ|ROZDZIAŁ|ODDZIAŁ|Załącznik\s+nr)\s+\S+)\s*",
+        @"^\s*[„""]?\s*(?:Art\.?\s*\d+[a-zł]*(?:\[[^\]]*\])?\.?|§\s*\d+[a-zł]*(?:\[[^\]]*\])?\.?|\d+[a-zł]*(?:\[[^\]]*\])?[.)]|[a-zł]{1,3}\)|[IVXLCDM]+\.|[–-]+|(?:CZĘŚĆ|KSIĘGA|TYTUŁ|DZIAŁ|ROZDZIAŁ|ODDZIAŁ|Załącznik\s+nr)\s+\S+)\s*",
         RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
     private static readonly Regex FootnoteMarker = new(@"\[[^\[\]]*\d+\)[^\[\]]*\]", RegexOptions.Compiled);

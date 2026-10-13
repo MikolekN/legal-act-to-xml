@@ -426,6 +426,9 @@ namespace Saga.Core.Services.Converters
             internal const string TextSection = "p";
             internal const string ContinuationFragment = "fragment";
 
+            /// <summary>Treść wstawiona w ciągłość tekstu poza modelem jednostek — w nagłówku jednostki systematyzacyjnej.</summary>
+            internal const string SpecialContent = "specjalny";
+
             /// <summary>Wzór matematyczny w osobnym akapicie.</summary>
             internal static class Formula
             {

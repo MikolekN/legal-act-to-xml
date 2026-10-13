@@ -295,6 +295,7 @@ namespace Saga.Core.Services.Parsing
                 titled.Heading = $"{titled.Heading} {text.Trim()}";
                 return true;
             }
+            var headed = context.HeadingContinuationUnit;
             context.HeadingContinuationUnit = null;
 
             // Adnotacja tekstu jednolitego, która sama nazywa uchyloną jednostkę systematyzacyjną
@@ -302,6 +303,18 @@ namespace Saga.Core.Services.Parsing
             // Rozstrzyga treść, nie styl — akapit bywa złożony stylem oznaczenia rozdziału.
             if (TryEnterRepealedUnit(context, text))
                 return true;
+
+            // Kolejny wiersz w stylu tytułu albo adnotacja o uchyleniu, stojące pod tytułem jednostki, przed jej
+            // pierwszym przepisem: nagłówek pośredni bez oznaczenia („Przepis wstępny", „A. Plany naprawy"),
+            // nie ciąg dalszy tytułu i nie jednostka. Zostaje dalszą treścią nagłówka (ADR-0067).
+            if (headed is BaseEntity heading && context.PendingHeadingUnit is null
+                && (classification.Kind == ParagraphKind.UnitHeading
+                    || (IsUnknownOrHeading(classification.Kind) && RepealedUnitMarker.IsMatch(text.Trim()))))
+            {
+                heading.Continuation.Add(new ContentBlock { Text = text.Trim() });
+                context.HeadingContinuationUnit = headed;
+                return true;
+            }
 
             // Tytuł jednostki systematyzacyjnej (drugi wiersz wzorca dwuwierszowego, § 62 ust. 2):
             // pierwszy akapit po oznaczeniu, jeśli sam nie jest jednostką. Ze stylu tytułu — bez
@@ -313,8 +326,7 @@ namespace Saga.Core.Services.Parsing
                     || (IsUnknownOrHeading(classification.Kind) && (IsHeadingCandidate(text) || RepealedUnitMarker.IsMatch(text))))
                 {
                     pendingUnit.Heading = text.Trim();
-                    if (classification.Kind == ParagraphKind.UnitHeading)
-                        context.HeadingContinuationUnit = pendingUnit;
+                    context.HeadingContinuationUnit = pendingUnit;
                     return true;
                 }
                 // brak tytułu — kontynuuj normalną obsługę bieżącego akapitu
