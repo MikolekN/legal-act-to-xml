@@ -728,6 +728,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   przepisem jednostki — ginęły z eksportu.
   - Miara pokrycia tekstu nie liczy już jako zgubionego artykułu zapisanego bez kropki („Art 64.").
   - W korpusie zmienia się 5 tekstów jednolitych: 8 wierszy stojących pod tytułem jednostki wychodzi w jej nagłówku jako `specjalny`; 6 z nich ginęło z eksportu. Zgubionych akapitów zostaje w całym korpusie 3 (1 w tekście jednolitym uchwały, 2 w jednym rozporządzeniu) — przedtem 11, z czego 2 były artefaktem miary. Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
+- **Skreślenie znaku nie jest uchyleniem jednostki** ([ADR-0068](docs/adr/0068-skreslenie-znaku-jest-zmiana-w-tekscie-nie-uchyleniem-jednostki.md)): „skreśla się przecinek
+  i wyrazy „X"", „w pkt 8 skreśla się przecinek i uchyla się pkt 9–11", „w lit. c skreśla się średnik i dodaje się
+  część wspólną w brzmieniu:" dają instrukcję `now:zamien-tekst`. Przedtem całe zdanie było uchyleniem jednostki,
+  w której znak stoi, a treść dodawana za skreślonym znakiem ginęła z eksportu.
+  - O operacji na jednostce rozstrzyga zdanie bez zapisanych w nim zmian w tekście
+    (`AmendmentCommandParser.WithoutTextChanges`).
+  - W korpusie zmienia się 13 zdań w 10 plikach: przybywa 13 instrukcji `now:zamien-tekst`, znika 10 fałszywych `now:uchyl` jednostki, w której skreślano znak, 2 uchylenia wskazują teraz jednostkę uchylaną („pkt 9–11", „pkt 2"), a 2 cytowane części wspólne wracają do eksportu (jedno rozporządzenie w dwóch plikach). Zgubionych akapitów zostaje w całym korpusie 1 (przedtem 3). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

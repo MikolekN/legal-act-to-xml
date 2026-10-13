@@ -549,6 +549,46 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void DeletedSignWithWords_IsATextChange_NotARepealOfTheUnit()
+        {
+            // Korpus: 314558_2800589 — przedtem całe zdanie wychodziło jako uchylenie art. 16.
+            var (xml, _) = Convert("1) w art. 16 skreśla się przecinek i wyrazy „o której mowa w art. 11 ust. 2 pkt 8”;");
+
+            var change = Assert.Single(Commands(xml));
+            Assert.Equal("zamien-tekst", change.Name.LocalName);
+            Assert.Equal((", o której mowa w art. 11 ust. 2 pkt 8", "", "art_16"),
+                (Attr(change, "stary-tekst"), Attr(change, "nowy-tekst"), Attr(change, "element-eId")));
+        }
+
+        [Fact]
+        public void RepealAfterADeletedSign_NamesTheUnitAfterTheCommand()
+        {
+            // Korpus: 310239_2768075 — znak znika w pkt 8, uchylane są pkt 9–11.
+            var (xml, _) = Convert("1) w art. 14f w ust. 1 w pkt 8 skreśla się przecinek i uchyla się pkt 9–11;");
+
+            var sign = Assert.Single(Commands(xml), c => c.Name.LocalName == "zamien-tekst");
+            Assert.Equal((",", "", "art_14f__ust_1__pkt_8", "ostatnie"),
+                (Attr(sign, "stary-tekst"), Attr(sign, "nowy-tekst"), Attr(sign, "element-eId"), Attr(sign, "wystapienie")));
+
+            var repeal = Assert.Single(Commands(xml), c => c.Name.LocalName == "uchyl");
+            Assert.Equal(("art_14f__ust_1__pkt_9", "art_14f__ust_1__pkt_11"), (Attr(repeal, "element-eId"), Attr(repeal, "element-do-eId")));
+        }
+
+        [Fact]
+        public void ContentAddedAfterADeletedSign_IsNotLost()
+        {
+            // Korpus: 358922_3205674 — przedtem zdanie było uchyleniem lit. c, a cytowana część wspólna ginęła.
+            var (xml, _) = Convert(
+                "1) w art. 7 w ust. 2 w pkt 2 w lit. c skreśla się średnik i dodaje się część wspólną w brzmieniu:",
+                "„– w przypadku gdy wyposażanie pojazdu miało miejsce na terytorium Rzeczypospolitej Polskiej;”;");
+
+            Assert.DoesNotContain(Commands(xml), c => c.Name.LocalName == "uchyl");
+            var sign = Assert.Single(Commands(xml), c => c.Name.LocalName == "zamien-tekst");
+            Assert.Equal((";", "", "ostatnie"), (Attr(sign, "stary-tekst"), Attr(sign, "nowy-tekst"), Attr(sign, "wystapienie")));
+            Assert.Contains("w przypadku gdy wyposażanie pojazdu miało miejsce na terytorium Rzeczypospolitej Polskiej", xml.Root!.Value);
+        }
+
+        [Fact]
         public void SignReplacedOnItsOwn_IsATextChangeOfTheUnit()
         {
             var (xml, _) = Convert("1) w art. 12 w pkt 2 kropkę zastępuje się średnikiem;");

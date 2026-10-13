@@ -161,6 +161,17 @@ namespace Saga.Core.Services.Parsing
             + $@"(?:\s+i\s+dodaje(?:\s+się)?\s+wyraz(?:y)?\s+{Quoted("added")})?",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        /// <summary>
+        /// „skreśla się przecinek", „skreśla się przecinek i wyrazy „X"", „skreśla się przecinek i dodaje się wyrazy
+        /// „Y"" — skreślenie znaku: samego (znak kończący jednostkę), razem z wyrazami stojącymi za nim albo
+        /// zastąpionego wyrazami. To zmiana w tekście, nie uchylenie jednostki, choć zaczyna ją ten sam czasownik
+        /// (ADR-0068).
+        /// </summary>
+        internal static readonly Regex DeleteSignPattern = new(
+            @"skreśla\s+się\s+(?<old>kropkę|średnik|przecinek|dwukropek)(?:\s+na\s+końcu)?"
+            + $@"(?:\s+(?:i|oraz)\s+(?<adds>dodaje(?:\s+się)?\s+)?wyraz(?:y)?\s+{Quoted("words")})?",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         private static string SignOf(string name) => name.ToLowerInvariant() switch
         {
             "kropkę" or "kropką" => ".",
@@ -236,6 +247,18 @@ namespace Saga.Core.Services.Parsing
                     AmendmentCommandKind.ReplaceSign, SignOf(match.Groups["old"].Value), replacement)]));
             }
 
+            foreach (Match match in DeleteSignPattern.Matches(text))
+            {
+                var sign = SignOf(match.Groups["old"].Value);
+                var words = match.Groups["words"].Success ? match.Groups["words"].Value.Trim() : null;
+
+                // Znak skreślany razem z wyrazami stojącymi za nim to jedno skreślenie („, o której mowa w art. 11");
+                // znak skreślany sam albo zastępowany wyrazami jest znakiem kończącym jednostkę.
+                spans.Add((match.Index, match.Index + match.Length, [words is not null && !match.Groups["adds"].Success
+                    ? TextChange(text, match, AmendmentCommandKind.DeleteWords, JoinWords(sign, words), string.Empty)
+                    : TextChange(text, match, AmendmentCommandKind.ReplaceSign, sign, words ?? string.Empty)]));
+            }
+
             foreach (Match match in DeleteWordsPattern.Matches(text))
             {
                 // Każde wyrazy w cudzysłowie to osobne skreślenie; tekst komendy niesie pierwsze z nich.
@@ -262,6 +285,22 @@ namespace Saga.Core.Services.Parsing
             }
 
             return commands;
+        }
+
+        /// <summary>
+        /// Tekst przepisu bez zapisanych w nim zmian w tekście — to, co zostaje, mówi już tylko o jednostkach
+        /// („… i uchyla się pkt 5", „… i dodaje się pkt 4 w brzmieniu:"). Czasownik zmiany w tekście („skreśla się
+        /// przecinek") ani wyrazy w cudzysłowie nie mogą udawać komendy o jednostce.
+        /// </summary>
+        public static string WithoutTextChanges(string text, IReadOnlyList<AmendmentCommand>? textChanges = null)
+        {
+            foreach (var command in textChanges ?? TextChangeCommands(text))
+            {
+                if (command.MatchedCommandText is { } matched)
+                    text = text.Replace(matched, " ");
+            }
+
+            return text;
         }
 
         private static AmendmentCommand TextChange(string text, Match match, AmendmentCommandKind kind, string old, string @new)

@@ -141,7 +141,10 @@ namespace Saga.Core.Services.Parsing
 
             // 1. Typ operacji: wymuszony przez wywołującego (np. ReplaceWords — czasowniki wewnątrz
             //    cytowanych wyrazów nie mogą przeinaczyć operacji) albo wykryty z treści triggera.
-            var operationType = input.ForcedOperationType ?? DetectOperationType(collector.Owner.ContentText);
+            //    Zmiana w tekście zapisana w tym samym zdaniu („skreśla się średnik i dodaje się … w brzmieniu:")
+            //    o operacji na jednostce nie rozstrzyga — jej czasownik nie jest uchyleniem (ADR-0068).
+            var operationType = input.ForcedOperationType
+                ?? DetectOperationType(AmendmentCommandParser.WithoutTextChanges(collector.Owner.ContentText));
 
             // 2. Zbuduj obiekt Amendment
             var amendment = new Amendment

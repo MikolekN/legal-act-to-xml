@@ -2105,6 +2105,42 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0068: skreślenie znaku jest zmianą w tekście, nie uchyleniem jednostki
+        // ============================================================
+
+        [Fact]
+        public void Adr0068_DeletedSign_IsATextChange_AndTheUnitKeepsItsOwnOperation()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 16 skreśla się przecinek i wyrazy „o której mowa w art. 11”;",
+                "2) w art. 7 w ust. 2 w pkt 2 w lit. c skreśla się średnik i dodaje się część wspólną w brzmieniu:",
+                "„– w przypadku gdy wyposażanie pojazdu miało miejsce na terytorium Rzeczypospolitej Polskiej;”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var xml = LegalDocumentConverter.Convert(document);
+
+            // Czasownik „skreśla się" przy znaku nie uchyla jednostki, w której znak stoi.
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "uchyl");
+            var changes = xml.Descendants().Where(e => e.Name.LocalName == "zamien-tekst")
+                .Select(e => (e.Attribute("stary-tekst")?.Value, e.Attribute("nowy-tekst")?.Value, e.Attribute("element-eId")?.Value))
+                .ToList();
+            Assert.Equal(
+                [(", o której mowa w art. 11", "", "DU/2021/200__art_16"), (";", "", "DU/2021/200__art_7__ust_2__pkt_2__lit_c")],
+                changes);
+
+            // Treść dodawana za skreślonym znakiem zostaje — operację wyznacza „dodaje się", nie „skreśla się".
+            var quoted = xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt");
+            Assert.Contains("w przypadku gdy wyposażanie pojazdu miało miejsce", quoted.Value);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

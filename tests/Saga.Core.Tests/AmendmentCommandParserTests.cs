@@ -188,6 +188,38 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // Skreślenie znaku (ADR-0068)
+        // ============================================================
+
+        [Theory]
+        // Znak skreślany razem z wyrazami stojącymi za nim to jedno skreślenie. Korpus: 314558_2800589, 315504_2809593.
+        [InlineData("w art. 16 skreśla się przecinek i wyrazy „o której mowa w art. 11 ust. 2 pkt 8”;", AmendmentCommandKind.DeleteWords, ", o której mowa w art. 11 ust. 2 pkt 8", "")]
+        [InlineData("w art. 4 w ust. 1 po wyrazach „art. 156–158” skreśla się przecinek i wyrazy „art. 217”;", AmendmentCommandKind.DeleteWords, ", art. 217", "")]
+        // Znak skreślany sam jest znakiem kończącym jednostkę. Korpus: 310239_2768075, 358922_3205674.
+        [InlineData("w art. 14f w ust. 1 w pkt 8 skreśla się przecinek i uchyla się pkt 9–11;", AmendmentCommandKind.ReplaceSign, ",", "")]
+        [InlineData("w ust. 2 w pkt 2 w lit. c skreśla się średnik i dodaje się część wspólną w brzmieniu:", AmendmentCommandKind.ReplaceSign, ";", "")]
+        // Wyrazy dodawane w miejsce skreślonego znaku. Korpus: 361301_3194723.
+        [InlineData("w art. 50 w ust. 2 w pkt 4 w lit. a skreśla się przecinek i dodaje się wyrazy „– nie dotyczy osoby ubiegającej się o wymianę prawa jazdy”;", AmendmentCommandKind.ReplaceSign, ",", "– nie dotyczy osoby ubiegającej się o wymianę prawa jazdy")]
+        public void DeleteSignCommand_IsATextChange(string text, AmendmentCommandKind kind, string old, string @new)
+        {
+            var cmd = AmendmentCommandParser.TextChangeCommands(text).Single();
+
+            Assert.Equal(kind, cmd.Kind);
+            Assert.True(cmd.ChangesText);
+            Assert.Equal(old, cmd.OldWording);
+            Assert.Equal(@new, cmd.NewWording);
+        }
+
+        [Theory]
+        // Skreślenie jednostki to dawny zapis uchylenia — nie znak.
+        [InlineData("w art. 5 skreśla się ust. 3;")]
+        [InlineData("skreśla się art. 12;")]
+        public void DeletingAUnit_IsNotADeletedSign(string text)
+        {
+            Assert.Empty(AmendmentCommandParser.TextChangeCommands(text));
+        }
+
+        // ============================================================
         // Wyrazy, które same zawierają wyrażenie w cudzysłowie
         // ============================================================
 

@@ -1,6 +1,6 @@
 # ADR-0054: Zamiana znaku kończącego jednostkę jest zmianą w tekście z własnym celem, a uchylenie za nią dotyczy jednostki nazwanej po komendzie
 
-- Status: Accepted
+- Status: Accepted (skreślenie znaku — [ADR-0068](0068-skreslenie-znaku-jest-zmiana-w-tekscie-nie-uchyleniem-jednostki.md))
 - Data: 2026-10-12
 
 ## Kontekst

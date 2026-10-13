@@ -392,12 +392,7 @@ namespace Saga.Core.Services.Parsing
             // na obecność innych komend (prawdziwa komenda złożona) — te wygrywają jako operacja
             // strukturalna (model ma jedną nowelizację na encję), z Warningiem dla audytu.
             var textChanges = AmendmentCommandParser.TextChangeCommands(text);
-            var structuralText = text;
-            foreach (var command in textChanges)
-            {
-                if (command.MatchedCommandText is { } matched)
-                    structuralText = structuralText.Replace(matched, " ");
-            }
+            var structuralText = AmendmentCommandParser.WithoutTextChanges(text, textChanges);
 
             if (textChanges.Count > 0)
             {
