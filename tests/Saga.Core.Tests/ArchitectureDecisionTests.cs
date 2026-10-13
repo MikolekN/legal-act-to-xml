@@ -2002,6 +2002,52 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0065: drugie brzmienie w osobnym akapicie należy do tego samego fragmentu
+        // ============================================================
+
+        [Fact]
+        public void Adr0065_SecondWordingInASeparateParagraph_ReturnsToItsFragment()
+        {
+            DocumentBlock Line(string text, params BlockFootnote[] footnotes) => new() { Text = text, Footnotes = footnotes };
+            var blocks = new List<DocumentBlock>
+            {
+                Line("Obwieszczenie"),
+                Line("Marszałka Sejmu Rzeczypospolitej Polskiej"),
+                Line("z dnia 6 sierpnia 2025 r."),
+                Line("w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych"),
+                Line("1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych (Dz. U. z 2024 r. poz. 1100)."),
+                Line("Marszałek Sejmu: S. Hołownia"),
+                Line("Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)"),
+                Line("USTAWA"),
+                Line("z dnia 11 sierpnia 2001 r."),
+                Line("o odbudowie obiektów budowlanych"),
+                Line("Art. 1. 1. Organ może uzyskiwać dane przekazu określone w:[1)]",
+                    new BlockFootnote("1", ["Wprowadzenie do wyliczenia w tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2."])),
+                Line("Organ może uzyskiwać dane komunikatu określone w:[2)]",
+                    new BlockFootnote("2", ["Wprowadzenie do wyliczenia w brzmieniu ustalonym przez art. 33 pkt 1 ustawy z dnia 12 lipca 2024 r. – Przepisy wprowadzające (Dz. U. poz. 1222); wejdzie w życie z dniem 10 listopada 2026 r."])),
+                Line("1) art. 180c ustawy – Prawo telekomunikacyjne;"),
+                Line("2) art. 82 ustawy – Prawo pocztowe."),
+                Line("2. Dane udostępnia się nieodpłatnie."),
+                Line("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Drugi akapit nie jest dalszą treścią jednostki, tylko drugim brzmieniem jej zdania.
+            var paragraph = document.Articles.First().Paragraphs[0];
+            Assert.Empty(paragraph.Continuation);
+            Assert.Equal(new[] { 1, 1 }, paragraph.TextSegments.Select(sentence => sentence.Order));
+
+            // Wyliczenie jest jedno: oba brzmienia to fragment 1, punkty — fragmenty 2 i 3 tego samego zdania.
+            var unit = LegalDocumentConverter.Convert(document).Descendants().First(e => e.Name.LocalName == "ustep");
+            Assert.DoesNotContain(unit.Descendants(), e => e.Name.LocalName == "fragment");
+            Assert.Equal(
+                new[] { "1", "1", "2", "3" },
+                unit.Descendants()
+                    .Where(e => e.Name.LocalName == "zdanie" && e.Ancestors().All(a => a.Name.LocalName != "odnosnik"))
+                    .Select(e => e.Attribute("fragment")!.Value));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

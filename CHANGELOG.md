@@ -711,6 +711,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   jako dwa `zdanie` o tym samym `nr` i różnym `okres`, z projekcjami `obowiazuje-do` / `wejscie-w-zycie`; zdania za nimi
   nie dostają już numeru o jeden za wysokiego. Model: `TextSegment.Version`.
   - W korpusie zmienia się 6 tekstów jednolitych: 21 zdań niesie okres brzmienia obowiązującego, a 23 — przyszłego (wcześniej żadne). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory); treść bez zmian.
+- **Drugie brzmienie w osobnym akapicie** ([ADR-0065](docs/adr/0065-drugie-brzmienie-w-osobnym-akapicie-nalezy-do-tego-samego-fragmentu.md)): wprowadzenie do wyliczenia,
+  zdanie i część wspólna, których drugie brzmienie tekst jednolity drukuje osobnym akapitem, nie wychodzą już jako
+  `fragment`. Zdanie i wprowadzenie to dwa `zdanie` o jednym numerze (jedno wyliczenie pod oboma brzmieniami),
+  część wspólna — dwie części wspólne o tym samym eId i różnym `okres`.
+  - **Naprawiono:** eksport brał tylko pierwszą część wspólną zamykającą wyliczenie; kolejne ginęły z wyjścia.
+  - W korpusie zmienia się 17 dokumentów. W tekstach jednolitych 24 akapity wychodzące dotąd jako `fragment` stają się drugim brzmieniem: 16 — zdania jednostki (wprowadzenie do wyliczenia albo zdanie), 8 — części wspólnej. Eksport wszystkich części wspólnych zamykających wyliczenie przywraca też 8 akapitów cytowanych części wspólnych jednego rozporządzenia, które dotąd ginęły (pokrycie tekstu rozporządzeń: 2 zgubione akapity zamiast 10). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

@@ -13,14 +13,18 @@ namespace Saga.Core.Services.Converters
         /// <summary>Część wspólna zamykająca wyliczenie — po ostatniej pozycji, z eId gospodarza (ADR-0025).</summary>
         internal static void HandleCommonPart(IHasCommonParts entity, XElement element, SentenceContext? context, int? nesting = null)
         {
-            var wrapUp = entity.CommonParts.FirstOrDefault(cp => cp is { Type: CommonPartType.WrapUp, InterruptsAfter: null });
-            if (wrapUp == null)
-                return;
-
-            var commonPartElement = Element(GetCommonPartName(entity, nesting));
-            commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, wrapUp.Id));
-            Fill(commonPartElement, wrapUp, context);
-            element.Add(commonPartElement);
+            // Część wspólna wydrukowana w tekście jednolitym w dwóch brzmieniach to dwie części wspólne o tym
+            // samym eId (ADR-0065); drugie brzmienie jest tym samym fragmentem zdania co pierwsze.
+            CommonPart? previous = null;
+            foreach (var wrapUp in entity.CommonParts.Where(cp => cp is { Type: CommonPartType.WrapUp, InterruptsAfter: null }))
+            {
+                var commonPartElement = Element(GetCommonPartName(entity, nesting));
+                commonPartElement.Add(new XAttribute(XmlConverterConstants.Contents.eId, wrapUp.Id));
+                Fill(commonPartElement, wrapUp, context, sameFragment:
+                    previous is { Version.Kind: WordingVersionKind.Current } && wrapUp.Version is { Kind: WordingVersionKind.Future });
+                element.Add(commonPartElement);
+                previous = wrapUp;
+            }
         }
 
         /// <summary>
@@ -60,12 +64,13 @@ namespace Saga.Core.Services.Converters
         }
 
         // Tekst części wspólnej jest kolejnym fragmentem zdania otwartego wprowadzeniem do wyliczenia.
-        private static void Fill(XElement commonPartElement, CommonPart part, SentenceContext? context)
+        private static void Fill(XElement commonPartElement, CommonPart part, SentenceContext? context, bool sameFragment = false)
         {
             var textElement = Element(XmlConverterConstants.Contents.TextSection);
             if (context != null)
             {
-                context.CurrentFragment += 1;
+                if (!sameFragment)
+                    context.CurrentFragment += 1;
                 textElement.Add(SentenceContext.ToXml(context, part.ContentText, dated: part));
             }
             else

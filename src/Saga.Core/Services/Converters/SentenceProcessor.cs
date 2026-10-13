@@ -9,9 +9,18 @@ namespace Saga.Core.Services.Converters
         internal static SentenceContext? Process(List<TextSegment> textSegments, SentenceContext? previousSentenceContext, XElement textSectionElement)
         {
             SentenceContext? contextToPass = null;
+            Func<TextSegment, XElement>? likePrevious = null;
 
             for (int i = 0; i < textSegments.Count; i++)
             {
+                // Drugie brzmienie tego samego zdania (ADR-0064) wychodzi tak jak pierwsze: ten sam numer,
+                // ten sam fragment i to samo zdanie — także gdy otwiera wyliczenie.
+                if (i > 0 && likePrevious is not null && textSegments[i].Order == textSegments[i - 1].Order)
+                {
+                    textSectionElement.Add(likePrevious(textSegments[i]));
+                    continue;
+                }
+
                 /// <summary>
                 /// Processes text segments using boolean logic.
                 /// Inputs:
@@ -27,24 +36,30 @@ namespace Saga.Core.Services.Converters
                 var textSegment = textSegments[i];
                 var isContextExist = previousSentenceContext != null; // A
                 var isFirst = i == 0; // B
-                var isLast = i == textSegments.Count - 1; // C
+                var isLast = textSegments.Skip(i + 1).All(later => later.Order == textSegment.Order); // C
                 var isIntro = textSegment.Role == "ListIntro"; // D
 
                 if (isContextExist && isFirst && isLast && isIntro) // E!FG
                 {
-                    previousSentenceContext!.CurrentFragment += 1;
-                    textSectionElement.Add(SentenceContext.ToXml(context: previousSentenceContext, text: textSegment.Text, dated: textSegment));
-                    contextToPass = previousSentenceContext;
+                    var context = previousSentenceContext!;
+                    context.CurrentFragment += 1;
+                    likePrevious = segment => SentenceContext.ToXml(context: context, text: segment.Text, dated: segment);
+                    textSectionElement.Add(likePrevious(textSegment));
+                    contextToPass = context;
                 }
                 else if (isContextExist && isFirst && !isIntro) // E!F!G
                 {
-                    previousSentenceContext!.CurrentFragment += 1;
-                    textSectionElement.Add(SentenceContext.ToXml(context: previousSentenceContext, text: textSegment.Text, dated: textSegment));
+                    var context = previousSentenceContext!;
+                    context.CurrentFragment += 1;
+                    likePrevious = segment => SentenceContext.ToXml(context: context, text: segment.Text, dated: segment);
+                    textSectionElement.Add(likePrevious(textSegment));
                     contextToPass = null;
                 }
                 else if (!isIntro) // !E!F!G
                 {
-                    textSectionElement.Add(SentenceContext.ToXml(number: textSegment.Order, text: textSegment.Text, dated: textSegment));
+                    var guid = Guid.NewGuid().ToString();
+                    likePrevious = segment => SentenceContext.ToXml(number: segment.Order, text: segment.Text, guid: guid, dated: segment);
+                    textSectionElement.Add(likePrevious(textSegment));
                     contextToPass = null;
                 }
                 else if (isLast) // !EF!G
@@ -53,7 +68,8 @@ namespace Saga.Core.Services.Converters
                         currentFragment: 1,
                         referenceSentenceNumber: textSegment.Order,
                         referenceSentenceGUID: Guid.NewGuid().ToString());
-                    textSectionElement.Add(SentenceContext.ToXml(context: nextSentenceContext, text: textSegment.Text, dated: textSegment));
+                    likePrevious = segment => SentenceContext.ToXml(context: nextSentenceContext, text: segment.Text, dated: segment);
+                    textSectionElement.Add(likePrevious(textSegment));
                     contextToPass = nextSentenceContext;
                 }
                 else // a sentence that isn't last but is intro

@@ -1160,6 +1160,8 @@ jego adres stoi w identyfikatorze zdarzenia i w `zrodlo`, a `podstawa` wymienia 
 ([ADR-0063](adr/0063-zdarzenie-zmiany-nalezy-do-aktu-ktory-ja-wprowadza.md)).
 Tak samo czytane jest zdanie wydrukowane w dwóch brzmieniach — wersję niesie zdanie (`TextSegment.Version`),
 a oba brzmienia mają jeden numer ([ADR-0064](adr/0064-zdanie-w-dwoch-brzmieniach-to-dwa-zdania-o-jednym-numerze.md)).
+Drugie brzmienie wydrukowane osobnym akapitem (wprowadzenie do wyliczenia, zdanie, część wspólna) wraca do swojego
+fragmentu zamiast wychodzić jako `fragment` ([ADR-0065](adr/0065-drugie-brzmienie-w-osobnym-akapicie-nalezy-do-tego-samego-fragmentu.md)).
 
 **Pierwszy nagłówek rodzaju aktu wygrywa.** Załącznik do obwieszczenia o tekście jednolitym zawiera
 własną linię „USTAWA", więc sygnały tytułowe liczone są tylko ze strefy tytułowej (pierwsze bloki),

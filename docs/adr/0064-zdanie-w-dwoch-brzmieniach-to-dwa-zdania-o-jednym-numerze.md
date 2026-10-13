@@ -1,6 +1,6 @@
 # ADR-0064: Zdanie w dwóch brzmieniach to dwa zdania o jednym numerze i różnym okresie
 
-- Status: Accepted
+- Status: Accepted (drugie brzmienie w osobnym akapicie — także wprowadzenie do wyliczenia — czyta [ADR-0065](0065-drugie-brzmienie-w-osobnym-akapicie-nalezy-do-tego-samego-fragmentu.md))
 - Data: 2026-10-12
 
 ## Kontekst

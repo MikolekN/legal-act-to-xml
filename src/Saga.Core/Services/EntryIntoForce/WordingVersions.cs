@@ -50,10 +50,19 @@ namespace Saga.Core.Services.EntryIntoForce
 
         /// <summary>
         /// Podmiot odnośnika o zdaniu: „Zdanie drugie w tym brzmieniu obowiązuje do …", „Zdanie trzecie i czwarte
-        /// dodane przez …". Reszta odnośnika ma te same wzory co odnośnik o całej jednostce.
+        /// dodane przez …", a także „Wprowadzenie do wyliczenia …" — ono też jest zdaniem jednostki. Reszta
+        /// odnośnika ma te same wzory co odnośnik o całej jednostce.
         /// </summary>
         private static readonly Regex SentenceSubject = new(
-            @"^\s*Zdani[ea]\s+\p{L}+(?:\s+(?:i|oraz)\s+\p{L}+)*\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            @"^\s*(?:Zdani[ea]\s+\p{L}+(?:\s+(?:i|oraz)\s+\p{L}+)*|Wprowadzenie\s+do\s+wyliczenia)\s+",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>Podmiot odnośnika o części wspólnej wyliczenia: „Część wspólna w tym brzmieniu obowiązuje do …".</summary>
+        private static readonly Regex CommonPartSubject = new(
+            @"^\s*Część\s+wspólna\s+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>Znacznik spotkany w tekście: gdzie stoi jego numer, gdzie kończy się nawias i który to odnośnik.</summary>
+        private sealed record Met(int At, int End, Footnote? Footnote, string Number);
 
         /// <summary>
         /// Akt zmieniający nazwany odesłaniem (§ 106 ZTP): „przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 3".
@@ -168,27 +177,124 @@ namespace Saga.Core.Services.EntryIntoForce
 
             void Read(BaseEntity unit, string text)
             {
+                var met = MarkersIn(text);
                 var leading = OwnMarker.Match(text);
-                var met = new List<(int End, Footnote? Footnote, string Number)>();
-                foreach (Match marker in FootnoteMarkers.Reference.Matches(text))
+                if (leading.Success && met.FirstOrDefault(marker => marker.At == leading.Groups["no"].Index) is { } own)
+                    marked[unit] = Describe(Mark(own.Footnote, own.Number, Note(own.Footnote), leading.Groups["repealed"].Success));
+
+                // Dalsza treść jednostki stoi za jej tekstem, a przed jednostkami podrzędnymi — w tej kolejności
+                // padają jej znaczniki. Pierwszy akapit dalszej treści bywa drugim brzmieniem tego, co stoi
+                // przed nim: zdania, wprowadzenia do wyliczenia albo części wspólnej (ADR-0065).
+                var directlyAfter = true;
+                foreach (var block in unit.Continuation.ToList())
                 {
-                    foreach (Match number in MarkerNumber.Matches(marker.Value))
+                    if (block is { Text: { Length: > 0 } more, Table: null, Quotation: null })
                     {
-                        var symbol = number.Groups["no"].Value;
-                        var footnote = resolver.First(symbol) ?? resolver.Repeated(symbol);
-                        met.Add((marker.Index + marker.Length, footnote, symbol));
-                        if (leading.Success && marker.Index + number.Groups["no"].Index == leading.Groups["no"].Index)
-                            marked[unit] = Describe(Mark(footnote, symbol, Note(footnote), leading.Groups["repealed"].Success));
+                        var metMore = MarkersIn(more);
+                        if (directlyAfter && block.Formula is null)
+                        {
+                            if (unit is CommonPart { Type: CommonPartType.WrapUp } part)
+                                TakeSecondCommonPart(part, text, met, block, more, metMore);
+                            else if (unit is IHasTextSegments { TextSegments.Count: > 0 } holder)
+                                text = TakeSecondWording(unit, holder.TextSegments, text, met, block, more, metMore);
+                        }
                     }
+
+                    directlyAfter = false;
                 }
 
                 if (unit is IHasTextSegments { TextSegments.Count: > 0 } sentences)
                     ReadSentences(sentences.TextSegments, text, met);
             }
 
+            List<Met> MarkersIn(string text)
+            {
+                var met = new List<Met>();
+                foreach (Match marker in FootnoteMarkers.Reference.Matches(text))
+                {
+                    foreach (Match number in MarkerNumber.Matches(marker.Value))
+                    {
+                        var symbol = number.Groups["no"].Value;
+                        met.Add(new Met(
+                            marker.Index + number.Groups["no"].Index,
+                            marker.Index + marker.Length,
+                            resolver.First(symbol) ?? resolver.Repeated(symbol),
+                            symbol));
+                    }
+                }
+
+                return met;
+            }
+
+            // Akapit bez oznaczenia, stojący zaraz za tekstem jednostki, jest drugim brzmieniem jej ostatniego
+            // zdania, gdy oba kończą się odnośnikiem o zdaniu, a pierwszy mówi „obowiązuje do …". Jego zdania
+            // dołączają wtedy do zdań jednostki; wersje nada im odczyt zdań. Zwraca tekst, w którym te zdania stoją.
+            string TakeSecondWording(
+                BaseEntity unit, List<TextSegment> sentences, string text, List<Met> met, ContentBlock block, string more, List<Met> metMore)
+            {
+                var last = sentences[^1];
+                var ownNote = Note(met.LastOrDefault(marker => marker.End == text.TrimEnd().Length)?.Footnote);
+                if (!SentenceSubject.IsMatch(ownNote) || !CurrentNote.IsMatch(SentenceSubject.Replace(ownNote, string.Empty, 1)))
+                    return text;
+
+                // Wprowadzenie do wyliczenia jest jednym zdaniem — i takie musi być jego drugie brzmienie.
+                var added = ParsingFactories.SplitIntoSentences(more);
+                if (added.Count == 0 || (last.Role is not null && added.Count != 1))
+                    return text;
+
+                var end = more.IndexOf(added[0].Text, StringComparison.Ordinal) + added[0].Text.Length;
+                if (!SentenceSubject.IsMatch(Note(metMore.LastOrDefault(marker => marker.End == end)?.Footnote)))
+                    return text;
+
+                for (var k = 0; k < added.Count; k++)
+                    added[k].Order = last.Order + 1 + k;
+                added[^1].Role = last.Role;
+                sentences.AddRange(added);
+
+                var shift = text.Length + 1;
+                met.AddRange(metMore.Select(marker => marker with { At = marker.At + shift, End = marker.End + shift }));
+                unit.Continuation.Remove(block);
+                return text + " " + more;
+            }
+
+            // Część wspólna jest jednostką z adresem, więc jej drugie brzmienie jest drugą częścią wspólną
+            // tego samego wyliczenia — jak jednostka wydrukowana dwa razy (ADR-0060).
+            void TakeSecondCommonPart(CommonPart part, string text, List<Met> met, ContentBlock block, string more, List<Met> metMore)
+            {
+                var own = met.LastOrDefault(marker => marker.End == text.TrimEnd().Length);
+                var second = metMore.LastOrDefault(marker => marker.End == more.TrimEnd().Length);
+                if (own is null || second is null || part.Parent is not IHasCommonParts host)
+                    return;
+
+                var (ownNote, secondNote) = (Note(own.Footnote), Note(second.Footnote));
+                if (!CommonPartSubject.IsMatch(ownNote) || !CommonPartSubject.IsMatch(secondNote))
+                    return;
+
+                var current = Describe(Mark(own.Footnote, own.Number, CommonPartSubject.Replace(ownNote, string.Empty, 1), repealed: false));
+                if (current.Version is not { Kind: WordingVersionKind.Current } closing)
+                    return;
+
+                var change = Describe(Mark(second.Footnote, second.Number, CommonPartSubject.Replace(secondNote, string.Empty, 1), repealed: false));
+                change.Version ??= Future(change);
+                if (change.Version is not { Kind: WordingVersionKind.Future } opening)
+                    return;
+
+                Close(closing, opening);
+                var copy = new CommonPart(part.Type, part.ParentEId, more.Trim(), part.SourceSegmentOrder)
+                {
+                    Parent = part.Parent,
+                    InterruptsAfter = part.InterruptsAfter,
+                    ListItemType = part.ListItemType,
+                };
+                host.CommonParts.Insert(host.CommonParts.IndexOf(part) + 1, copy);
+                part.Continuation.Remove(block);
+                marked[part] = current;
+                marked[copy] = change;
+            }
+
             // Odnośnik o zdaniu stoi za zdaniem („… doręczenia.[26)]"), a zdanie w dwóch brzmieniach jest
             // wydrukowane dwa razy, jedno za drugim (ADR-0064).
-            void ReadSentences(List<TextSegment> sentences, string text, List<(int End, Footnote? Footnote, string Number)> met)
+            void ReadSentences(List<TextSegment> sentences, string text, List<Met> met)
             {
                 var from = 0;
                 var repeated = 0;
@@ -221,8 +327,8 @@ namespace Saga.Core.Services.EntryIntoForce
 
                     from = at + sentence.Text.Length;
                     var closing = met.LastOrDefault(marker => marker.End == from);
-                    var note = Note(closing.Footnote);
-                    return closing.Number is not null && SentenceSubject.IsMatch(note)
+                    var note = Note(closing?.Footnote);
+                    return closing is not null && SentenceSubject.IsMatch(note)
                         ? Describe(Mark(closing.Footnote, closing.Number, SentenceSubject.Replace(note, string.Empty, 1), repealed: false))
                         : null;
                 }

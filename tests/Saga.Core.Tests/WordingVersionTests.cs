@@ -741,6 +741,157 @@ namespace Saga.Core.Tests
             Assert.All(sentences, sentence => Assert.Null(sentence.Version));
         }
 
+        // ============================================================
+        // Drugie brzmienie w osobnym akapicie (ADR-0065)
+        // ============================================================
+
+        private const string ChangedBy1222 =
+            "ze zmianą wprowadzoną przez art. 33 pkt 1 lit. a ustawy z dnia 12 lipca 2024 r. – Przepisy wprowadzające ustawę – Prawo komunikacji elektronicznej (Dz. U. poz. 1222), która wejdzie w życie z dniem 10 listopada 2026 r.";
+
+        // Korpus: 299137_2675687, art. 32 ust. 1 — wprowadzenie do wyliczenia wydrukowane dwa razy, drugi raz
+        // osobnym akapitem bez oznaczenia; punkty stoją pod oboma brzmieniami.
+        private static LegalDocument IntroductionPrintedTwice() => Parse(
+            Block("Art. 2. 1. Organ może uzyskiwać dane przekazu telekomunikacyjnego określone w:[1)]",
+                ("1", "Wprowadzenie do wyliczenia w tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2.")),
+            Block("Organ może uzyskiwać dane komunikatu elektronicznego określone w:[2)]",
+                ("2", "Wprowadzenie do wyliczenia " + ChangedBy1222)),
+            Block("1) art. 180c ustawy – Prawo telekomunikacyjne;"),
+            Block("2) art. 82 ustawy – Prawo pocztowe."),
+            Block("2. Dane udostępnia się nieodpłatnie."));
+
+        [Fact]
+        public void IntroductionPrintedTwice_IsOneSentenceOfTheUnitInTwoWordings()
+        {
+            var paragraph = ParagraphsOf(IntroductionPrintedTwice(), "2")[0];
+
+            // Drugi akapit nie jest już „dalszą treścią" jednostki — to drugie brzmienie jej zdania.
+            Assert.Empty(paragraph.Continuation);
+            Assert.Equal(new[] { 1, 1 }, paragraph.TextSegments.Select(sentence => sentence.Order));
+            Assert.Equal(
+                new WordingVersionKind?[] { WordingVersionKind.Current, WordingVersionKind.Future },
+                paragraph.TextSegments.Select(sentence => sentence.Version?.Kind));
+            Assert.All(paragraph.TextSegments, sentence => Assert.Equal(new DateTime(2026, 11, 10), sentence.Version!.ChangeDate));
+
+            // Jednostka i jej punkty wersji nie mają.
+            Assert.Null(paragraph.Version);
+            Assert.Equal(2, paragraph.Points.Count);
+            Assert.All(paragraph.Points, point => Assert.Null(point.Version));
+        }
+
+        [Fact]
+        public void IntroductionPrintedTwice_OpensOneEnumerationInTheExport()
+        {
+            var xml = LegalDocumentConverter.Convert(IntroductionPrintedTwice());
+            var unit = Assert.Single(Units(xml, "art_2__ust_1"));
+
+            // Oba brzmienia to pierwszy fragment tego samego zdania; punkty są jego dalszymi fragmentami.
+            var sentences = unit.Descendants()
+                .Where(e => e.Name.LocalName == "zdanie" && e.Ancestors().All(a => a.Name.LocalName != "odnosnik"))
+                .ToList();
+            Assert.Equal(new[] { "1", "1", "1", "1" }, sentences.Select(sentence => sentence.Attribute("nr")!.Value));
+            Assert.Equal(new[] { "1", "1", "2", "3" }, sentences.Select(sentence => sentence.Attribute("fragment")!.Value));
+            Assert.Single(sentences.Select(sentence => sentence.Attributes().Single(a => a.Name.LocalName == "zdGUID").Value).Distinct());
+
+            const string change = "zdarz_wejscie_2026-11-10_DU-2024-1222_odczytane";
+            Assert.Equal(
+                new[] { $"okr_obowiazywanie.x.{change}", $"okr_obowiazywanie.{change}.x", null, null },
+                sentences.Select(sentence => sentence.Attribute("okres")?.Value));
+            Assert.DoesNotContain(unit.Descendants(), e => e.Name.LocalName == "fragment");
+        }
+
+        [Fact]
+        public void SentenceWhoseSecondWordingIsASeparateParagraph_IsReadLikeOneInLine()
+        {
+            // Korpus: 336501_2993884, art. 94 ust. 4c — nowe brzmienie zdania pierwszego stoi w osobnym akapicie,
+            // a za nim zdanie drugie, które się nie zmienia.
+            var paragraphs = ParagraphsOf(Parse(
+                Block("Art. 2. 1. Doręczenie zawiadomienia o uwzględnieniu korekty kończy kontrolę.[1)]",
+                    ("1", "Zdanie pierwsze w tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2.")),
+                Block("Doręczenie zawiadomienia o uwzględnieniu deklaracji lub korekty kończy kontrolę.[2)] W tym przypadku przepisów art. 82 nie stosuje się.",
+                    ("2", "Zdanie pierwsze w brzmieniu ustalonym przez art. 1 pkt 1 lit. b ustawy z dnia 9 maja 2025 r. o zmianie ustawy (Dz. U. poz. 680); wejdzie w życie z dniem 1 października 2026 r.")),
+                Block("2. Kontrolę wszczyna się z urzędu.")), "2");
+
+            Assert.Empty(paragraphs[0].Continuation);
+            Assert.Equal(new[] { 1, 1, 2 }, paragraphs[0].TextSegments.Select(sentence => sentence.Order));
+            Assert.Equal(
+                new WordingVersionKind?[] { WordingVersionKind.Current, WordingVersionKind.Future, null },
+                paragraphs[0].TextSegments.Select(sentence => sentence.Version?.Kind));
+            Assert.Equal("W tym przypadku przepisów art. 82 nie stosuje się.", paragraphs[0].TextSegments[2].Text);
+        }
+
+        private const string CommonPartStyle = "CZWSPPKTczwsplnapunktw";
+
+        // Korpus: 311012_2800574, art. 99a ust. 4 — część wspólna wydrukowana dwa razy.
+        private static LegalDocument CommonPartPrintedTwice() => Parse(
+            Block("Art. 2. 1. W przypadku:"),
+            Block("1) sprzedaży suszu tytoniowego,"),
+            Block("2) nabycia suszu tytoniowego"),
+            new DocumentBlock
+            {
+                Text = "– bez jego oznaczenia znakami akcyzy, stawka akcyzy wynosi 812 zł za każdy kilogram.[1)]",
+                StyleId = CommonPartStyle,
+                Footnotes = [new BlockFootnote("1", ["Część wspólna w tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2."])],
+            },
+            new DocumentBlock
+            {
+                Text = "– bez jego oznaczenia znakami akcyzy, stawka akcyzy wynosi 1336 zł za każdy kilogram.[2)]",
+                StyleId = CommonPartStyle,
+                Footnotes = [new BlockFootnote("2", ["Część wspólna w brzmieniu ustalonym przez art. 1 pkt 2 lit. b ustawy z dnia 9 maja 2025 r. o zmianie ustawy o podatku akcyzowym (Dz. U. poz. 680); wejdzie w życie z dniem 1 stycznia 2026 r."])],
+            });
+
+        [Fact]
+        public void CommonPartPrintedTwice_IsTwoCommonPartsOfOneEnumeration()
+        {
+            var paragraph = ParagraphsOf(CommonPartPrintedTwice(), "2").Single();
+            var closing = paragraph.CommonParts.Where(part => part.Type == CommonPartType.WrapUp).ToList();
+
+            Assert.Equal(
+                new WordingVersionKind?[] { WordingVersionKind.Current, WordingVersionKind.Future },
+                closing.Select(part => part.Version?.Kind));
+            Assert.Single(closing.Select(part => part.Id).Distinct());
+            Assert.All(closing, part => Assert.Empty(part.Continuation));
+            Assert.Contains("1336 zł", closing[1].ContentText);
+            Assert.All(closing, part => Assert.Equal(new DateTime(2026, 1, 1), part.Version!.ChangeDate));
+        }
+
+        [Fact]
+        public void CommonPartPrintedTwice_IsExportedTwiceUnderOneAddress()
+        {
+            var xml = LegalDocumentConverter.Convert(CommonPartPrintedTwice());
+            const string change = "zdarz_wejscie_2026-01-01_DU-2025-680_odczytane";
+
+            var parts = Units(xml, "art_2__ust_1__czw");
+            Assert.Equal(2, parts.Count);
+            Assert.All(parts, part => Assert.Equal("czesc-wspolna-punkt", part.Name.LocalName));
+            Assert.Equal(
+                new[] { $"okr_obowiazywanie.x.{change}", $"okr_obowiazywanie.{change}.x" },
+                parts.Select(part => part.Attribute("okres")?.Value));
+
+            // Oba brzmienia są tym samym fragmentem zdania otwartego wprowadzeniem do wyliczenia.
+            var fragments = parts.Select(part => part.Descendants().First(e => e.Name.LocalName == "zdanie").Attribute("fragment")!.Value).ToList();
+            Assert.Single(fragments.Distinct());
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "fragment");
+        }
+
+        [Fact]
+        public void ParagraphAfterTheUnitText_WithoutSuchFootnotes_StaysItsFurtherContent()
+        {
+            var paragraph = ParagraphsOf(Parse(
+                Block("Art. 2. 1. Organ może uzyskiwać dane określone w przepisach odrębnych.[1)]", ("1", ChangedOn2026)),
+                Block("Dane udostępnia się nieodpłatnie.[2)]", ("2", "Zmiany wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 100.")),
+                Block("2. Wniosek składa się do wojewody.")), "2")[0];
+
+            Assert.Single(paragraph.Continuation);
+            Assert.Single(paragraph.TextSegments);
+        }
+
+        [SchemaPlFact]
+        public void SecondWordingInASeparateParagraph_IsSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(IntroductionPrintedTwice())));
+            Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(CommonPartPrintedTwice())));
+        }
+
         [SchemaPlFact]
         public void SentenceInTwoWordings_IsSchemaValid()
         {
