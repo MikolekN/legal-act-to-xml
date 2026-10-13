@@ -109,6 +109,40 @@ namespace Saga.Core.Services.Parsing
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// Czasownik uchylenia w zwykłym znaczeniu: „uchyla się od wykonania obowiązku" (uchylać się od czegoś),
+        /// „skreśla się z listy studentów" (skreślić kogoś skądś), „nie uchyla się decyzji". W komendzie przedmiot
+        /// stoi zaraz za czasownikiem (§ 85 ust. 3 ZTP: „uchyla się art. …") — przyimek albo przeczenie znaczą, że
+        /// komendy tu nie ma (ADR-0069).
+        /// </summary>
+        private static readonly Regex RepealVerbInProse = new(
+            @"\bnie\s+(?:uchyla|skreśla)\s+się\b|\buchyla\s+się\s+(?:on[aoie]?\s+)?od\b|\bskreśla\s+się\s+ze?\b",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>Czy tekst zawiera czasownik uchylenia, który może być komendą — nie użyty w zwykłym znaczeniu.</summary>
+        internal static bool HasRepealVerb(string text) =>
+            AmendmentFinalizer.RepealPattern.IsMatch(RepealVerbInProse.Replace(text, " "));
+
+        /// <summary>
+        /// Czy przedmiotem czasownika uchylenia jest jednostka aktu z oznaczeniem, stojąca zaraz za nim:
+        /// „uchyla się ust. 3", „uchyla się zdanie drugie", „uchyla się drugie zdanie", „uchyla się rozdział 2a".
+        /// </summary>
+        internal static bool RepealsNamedUnit(string text)
+        {
+            text = RepealVerbInProse.Replace(text, " ");
+            foreach (Match verb in AmendmentFinalizer.RepealPattern.Matches(text))
+            {
+                var after = UnitReferenceTokenizer.Tokenize(text[(verb.Index + verb.Length)..], systematizing: true);
+                if (after is [{ Kind: UnitTokenKind.UnitKeyword }, { Kind: UnitTokenKind.Designation or UnitTokenKind.Range }, ..]
+                    or [{ Kind: UnitTokenKind.Designation }, { Kind: UnitTokenKind.UnitKeyword }, ..])
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Wyrazy w cudzysłowie, pod grupą o podanej nazwie. W środku może stać wyrażenie w cudzysłowie
         /// („zwanej dalej „ustawą","") — sparowane, o jeden poziom głębiej; wyrazy kończą się dopiero na cudzysłowie
         /// zamykającym, który niczego wewnątrz nie zamyka.

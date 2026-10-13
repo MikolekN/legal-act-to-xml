@@ -735,6 +735,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   - O operacji na jednostce rozstrzyga zdanie bez zapisanych w nim zmian w tekście
     (`AmendmentCommandParser.WithoutTextChanges`).
   - W korpusie zmienia się 13 zdań w 10 plikach: przybywa 13 instrukcji `now:zamien-tekst`, znika 10 fałszywych `now:uchyl` jednostki, w której skreślano znak, 2 uchylenia wskazują teraz jednostkę uchylaną („pkt 9–11", „pkt 2"), a 2 cytowane części wspólne wracają do eksportu (jedno rozporządzenie w dwóch plikach). Zgubionych akapitów zostaje w całym korpusie 1 (przedtem 3). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
+- **Czasownik uchylenia w przepisie merytorycznym nie jest komendą** ([ADR-0069](docs/adr/0069-czasownik-uchylenia-jest-komenda-w-artykule-zmieniajacym-albo-przy-jednostce.md)):
+  „kto uchyla się od wykonania obowiązku", „decyzję uchyla się, jeżeli…", „studenta skreśla się z listy studentów"
+  nie dają już instrukcji `now:uchyl`. Komendą czasownik jest w artykule zmieniającym inny akt albo wtedy, gdy zaraz
+  za nim stoi uchylana jednostka („uchyla się ust. 3").
+  - **Naprawione fałszywe uchylenie jednostki powołanej w przepisie**: „Uchyla się, z zastrzeżeniem ust. 2, przepisy
+    ustaw szczególnych…" wskazywało ust. 2 tego samego aktu.
+  - W korpusie znika 125 fałszywych `now:uchyl` w 55 tekstach jednolitych (m.in. 69 × „uchyla się od …", 21 × „skreśla się z/ze …", 16 w zdaniach stojących obok takiego zdania w tej samej jednostce); 89 z nich miało cel `UNKNOWN`, 36 wskazywało jednostkę tylko powołaną w przepisie. Żadna komenda aktu zmieniającego nie znika: instrukcji `now:uchyl` zostaje 1033 w 897 zdaniach. Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

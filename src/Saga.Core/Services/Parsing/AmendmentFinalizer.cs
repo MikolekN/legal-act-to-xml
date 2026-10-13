@@ -398,7 +398,7 @@ namespace Saga.Core.Services.Parsing
         /// <summary>
         /// Nawiguje w górę hierarchii encji, szukając artykułu nadrzędnego.
         /// </summary>
-        private static Article? FindParentArticle(BaseEntity? entity)
+        internal static Article? FindParentArticle(BaseEntity? entity)
         {
             var current = entity;
             while (current != null)

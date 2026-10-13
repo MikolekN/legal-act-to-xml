@@ -2141,6 +2141,39 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0069: czasownik uchylenia jest komendą w artykule zmieniającym albo przy jednostce
+        // ============================================================
+
+        [Fact]
+        public void Adr0069_RepealVerbInAnOrdinaryProvision_IsNotACommand()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o szkolnictwie wyższym",
+                "Art. 1. Studenta skreśla się z listy studentów w przypadku niepodjęcia studiów.",
+                "Art. 2. 1. Decyzję, o której mowa w ust. 2, uchyla się, jeżeli ustaną przyczyny jej wydania.",
+                "2. Kto uchyla się od wykonania decyzji, podlega karze grzywny.",
+                "Art. 3. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 3 uchyla się ust. 2;",
+                "2) w załączniku nr 1 skreśla się lp. 7.",
+                "Art. 4. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var repeals = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "uchyl")
+                .Select(e => (Sentence: e.Parent!.Value, Unit: e.Attribute("element-eId")?.Value))
+                .ToList();
+
+            // Przepisy merytoryczne nie niosą instrukcji; w artykule zmieniającym komendą jest każde uchylenie.
+            Assert.Equal(
+                [("w art. 3 uchyla się ust. 2;", "DU/2021/200__art_3__ust_2"), ("w załączniku nr 1 skreśla się lp. 7.", "UNKNOWN")],
+                repeals);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

@@ -396,7 +396,7 @@ namespace Saga.Core.Services.Parsing
 
             if (textChanges.Count > 0)
             {
-                bool hasStructuralCommand = AmendmentFinalizer.RepealPattern.IsMatch(structuralText)
+                bool hasStructuralCommand = IsRepealCommand(GetOwner(context), structuralText)
                     || AmendmentFinalizer.ModificationPattern.IsMatch(structuralText);
 
                 if (!hasStructuralCommand)
@@ -455,7 +455,7 @@ namespace Saga.Core.Services.Parsing
             }
 
             // Uchylenie — natychmiastowa nowelizacja bez treści (badane na tekście bez komendy zamiany).
-            if (AmendmentFinalizer.RepealPattern.IsMatch(structuralText))
+            if (IsRepealCommand(GetOwner(context), structuralText))
             {
                 var owner = GetOwner(context);
                 if (owner == null)
@@ -491,6 +491,18 @@ namespace Saga.Core.Services.Parsing
             if (AmendmentFinalizer.LeavesWordingOpen(text))
                 ArmTrigger(context, text);
         }
+
+        /// <summary>
+        /// Czy czasownik uchylenia jest w tym przepisie komendą. „Uchyla się" i „skreśla się" należą też do języka
+        /// przepisów merytorycznych („uchyla się od wykonania obowiązku", „decyzję uchyla się, jeżeli…", „skreśla się
+        /// z listy studentów"), więc sam czasownik nie wystarcza. Komendą jest w artykule zmieniającym inny akt
+        /// (<see cref="Article.IsAmending"/>) albo wtedy, gdy zaraz za nim stoi uchylana jednostka
+        /// („uchyla się ust. 3") (ADR-0069).
+        /// </summary>
+        private static bool IsRepealCommand(BaseEntity? owner, string structuralText) =>
+            AmendmentCommandParser.HasRepealVerb(structuralText)
+            && (AmendmentFinalizer.FindParentArticle(owner) is { IsAmending: true }
+                || AmendmentCommandParser.RepealsNamedUnit(structuralText));
 
         private static void ArmTrigger(ParsingContext context, string text)
         {
