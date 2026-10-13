@@ -54,6 +54,37 @@ namespace Saga.Core.Tests
             Assert.Empty(Problems(xml));
         }
 
+        [SchemaPlFact]
+        public void DesignationsWithPolishLetters_AreSchemaValid()
+        {
+            // Schemat od wersji 0.3.4 przyjmuje polskie litery w `nr` i w eId („art. 48ł", „lit. ł") — w Prawie
+            // bankowym art. 48ł stoi między art. 48l a art. 48m. Starsza kopia schematu ten test obleje.
+            // Literę „ł)" niesie styl litery — z samego tekstu literą nie jest (§ 56 ZTP).
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 24 czerwca 2024 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 928", Role = BlockRole.JournalHeader },
+                new() { Text = "USTAWA" }, new() { Text = "z dnia 14 czerwca 2024 r." }, new() { Text = "o działalności transgranicznej" },
+                new() { Text = "Art. 48l. Instytucja kredytowa prowadzi działalność przez oddział." },
+                new() { Text = "Art. 48ł. 1. Instytucja kredytowa może rozpocząć działalność transgraniczną:" },
+                new() { Text = "1) po otrzymaniu zawiadomienia zawierającego:" },
+                new() { Text = "l) nazwę instytucji," },
+                new() { Text = "ł) adres siedziby,", StyleId = "LIT" },
+                new() { Text = "m) rodzaj czynności;" },
+                new() { Text = "2) po upływie miesiąca od dnia zawiadomienia." },
+                new() { Text = "1ł. Przepis ust. 1 pkt 1 lit. ł stosuje się odpowiednio do oddziału." },
+                new() { Text = "Art. 48m. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia." },
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document;
+            var xml = LegalDocumentConverter.Convert(document!);
+
+            var addresses = xml.Descendants().Select(e => e.Attribute("eId")?.Value).OfType<string>().ToList();
+            Assert.Contains("DU/2024/928__art_48ł__ust_1__pkt_1__lit_ł", addresses);
+            Assert.Contains("DU/2024/928__art_48ł__ust_1ł", addresses);
+            Assert.Empty(Problems(xml));
+        }
+
         private static XElement ExportWithExceptionsAndRetroactivity() => Export(
             "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o systemie ubezpieczeń społecznych",
             "Art. 1. W ustawie z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350) wprowadza się następujące zmiany:",
