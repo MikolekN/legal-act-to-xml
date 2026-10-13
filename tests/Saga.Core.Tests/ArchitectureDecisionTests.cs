@@ -2174,6 +2174,41 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0070: uchylane zdanie jest adresowane zdaniem, nie jednostką
+        // ============================================================
+
+        [Fact]
+        public void Adr0070_RepealedSentence_IsAddressedBySentence_NotByItsUnit()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 76 w ust. 2 skreśla się zdanie drugie;",
+                "2) w art. 77 uchyla się ust. 3;",
+                "3) w art. 78 w ust. 4 w zdaniu drugim wyrazy „na piśmie” zastępuje się wyrazami „w postaci papierowej”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var instructions = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName is "uchyl" or "zamien-tekst")
+                .Select(e => (e.Name.LocalName, e.Attribute("element-eId")?.Value))
+                .ToList();
+
+            // Uchylenie zdania nie jest uchyleniem ustępu; zmiana w tekście zdania zostaje przy jednostce.
+            Assert.Equal(
+                [
+                    ("uchyl", "DU/2021/200__art_76__ust_2__zdn_2"),
+                    ("uchyl", "DU/2021/200__art_77__ust_3"),
+                    ("zamien-tekst", "DU/2021/200__art_78__ust_4"),
+                ],
+                instructions);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

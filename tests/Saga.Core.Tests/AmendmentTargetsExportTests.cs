@@ -549,6 +549,25 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void RepealedSentence_IsAddressedWithItsSentence_NotAsItsWholeUnit()
+        {
+            // Korpus: 308795_2759226 — przedtem `now:uchyl` wskazywał cały ust. 2.
+            var (xml, _) = Convert("1) w art. 76 w ust. 2 skreśla się zdanie drugie;");
+
+            var repeal = Assert.Single(Commands(xml));
+            Assert.Equal(("uchyl", "art_76__ust_2__zdn_2"), (repeal.Name.LocalName, Attr(repeal, "element-eId")));
+        }
+
+        [Fact]
+        public void RangeOfRepealedSentences_HasBothEnds()
+        {
+            var (xml, _) = Convert("1) w art. 76 w ust. 2 uchyla się zdania drugie–czwarte;");
+
+            var repeal = Assert.Single(Commands(xml));
+            Assert.Equal(("art_76__ust_2__zdn_2", "art_76__ust_2__zdn_4"), (Attr(repeal, "element-eId"), Attr(repeal, "element-do-eId")));
+        }
+
+        [Fact]
         public void DeletedSignWithWords_IsATextChange_NotARepealOfTheUnit()
         {
             // Korpus: 314558_2800589 — przedtem całe zdanie wychodziło jako uchylenie art. 16.

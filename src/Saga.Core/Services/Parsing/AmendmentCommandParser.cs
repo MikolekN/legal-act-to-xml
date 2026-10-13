@@ -124,22 +124,29 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Czy przedmiotem czasownika uchylenia jest jednostka aktu z oznaczeniem, stojąca zaraz za nim:
-        /// „uchyla się ust. 3", „uchyla się zdanie drugie", „uchyla się drugie zdanie", „uchyla się rozdział 2a".
+        /// „uchyla się ust. 3", „uchyla się zdanie drugie", „uchyla się drugie zdanie", „uchyla się rozdział 2a"
+        /// (szyk „drugie zdanie" sprowadza do zwykłego <see cref="UnitReferenceTokenizer"/>).
         /// </summary>
-        internal static bool RepealsNamedUnit(string text)
+        internal static bool RepealsNamedUnit(string text) => RepealedUnitLevels(text).Any();
+
+        /// <summary>
+        /// Czy uchylane jest zdanie jednostki („w ust. 2 skreśla się zdanie drugie", „uchyla się drugie zdanie") —
+        /// wtedy adres celu sięga zdania, a nie całej jednostki (ADR-0070).
+        /// </summary>
+        internal static bool RepealsSentence(string text) =>
+            AmendmentFinalizer.RepealPattern.IsMatch(text)
+            && RepealedUnitLevels(WithoutTextChanges(text)).Contains(UnitLevel.Sentence);
+
+        /// <summary>Poziomy jednostek stojących zaraz za czasownikiem uchylenia — przedmioty komendy.</summary>
+        private static IEnumerable<UnitLevel> RepealedUnitLevels(string text)
         {
             text = RepealVerbInProse.Replace(text, " ");
             foreach (Match verb in AmendmentFinalizer.RepealPattern.Matches(text))
             {
                 var after = UnitReferenceTokenizer.Tokenize(text[(verb.Index + verb.Length)..], systematizing: true);
-                if (after is [{ Kind: UnitTokenKind.UnitKeyword }, { Kind: UnitTokenKind.Designation or UnitTokenKind.Range }, ..]
-                    or [{ Kind: UnitTokenKind.Designation }, { Kind: UnitTokenKind.UnitKeyword }, ..])
-                {
-                    return true;
-                }
+                if (after is [{ Kind: UnitTokenKind.UnitKeyword } named, { Kind: UnitTokenKind.Designation or UnitTokenKind.Range }, ..])
+                    yield return named.Level;
             }
-
-            return false;
         }
 
         /// <summary>

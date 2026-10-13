@@ -31,6 +31,26 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void OrdinalBeforeTheSentenceKeyword_IsItsDesignation()
+        {
+            // „Drugie zdanie" to „zdanie drugie" — korpus: 347576_3084408 („w ust. 6 uchyla się drugie zdanie").
+            var tokens = UnitReferenceTokenizer.Tokenize("w ust. 6 uchyla się drugie zdanie,");
+
+            Assert.Equal(
+                new[] { "w", "ust.", "6", "uchyla się", "zdanie", "drugie", "," },
+                tokens.Select(t => t.Text).ToArray());
+        }
+
+        [Theory]
+        // Liczebnik należący do wcześniejszej jednostki zostaje przy niej; zdanie z własnym oznaczeniem też.
+        [InlineData("w lit. a tiret drugie zdanie pierwsze", new[] { "w", "lit.", "a", "tiret", "drugie", "zdanie", "pierwsze" })]
+        [InlineData("w ust. 2 zdanie drugie", new[] { "w", "ust.", "2", "zdanie", "drugie" })]
+        public void OrdinalOfAnotherUnit_StaysWhereItIs(string text, string[] expected)
+        {
+            Assert.Equal(expected, UnitReferenceTokenizer.Tokenize(text).Select(t => t.Text).ToArray());
+        }
+
+        [Fact]
         public void LetterW_RightAfterLitKeyword_StaysADesignation()
         {
             var tokens = UnitReferenceTokenizer.Tokenize("lit. w tiret pierwsze");

@@ -208,6 +208,47 @@ namespace Saga.Core.Tests
             Assert.Null(target.RangeEnd);
         }
 
+        [Theory]
+        // Korpus: 308795_2759226, 306779_2736407, 347576_3084408, 322711_2873777, 361298_3194530.
+        [InlineData("w art. 76 w ust. 2 skreśla się zdanie drugie,", "art_76__ust_2__zdn_2")]
+        [InlineData("w art. 10 w ust. 5 uchyla się zdanie drugie;", "art_10__ust_5__zdn_2")]
+        [InlineData("w art. 30 w ust. 6 uchyla się drugie zdanie,", "art_30__ust_6__zdn_2")]
+        [InlineData("w art. 27a uchyla się zdanie drugie;", "art_27a__zdn_2")]
+        [InlineData("w art. 361 w § 1 skreśla się zdanie drugie;", "art_361__par_1__zdn_2")]
+        public void ReadAmendmentTargets_RepealedSentence_KeepsItsSentence(string text, string expected)
+        {
+            // Uchylenie nie niesie treści — bez zdania w adresie wskazywałoby całą jednostkę (ADR-0070).
+            Assert.Equal(expected, SingleTarget(text).ToString());
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_RepealedSentences_AreATargetEach()
+        {
+            Assert.Equal(
+                new[] { "art_30__ust_1__zdn_2", "art_30__ust_1__zdn_3" },
+                Targets("w art. 30 w ust. 1 uchyla się zdania drugie i trzecie;"));
+        }
+
+        [Theory]
+        // Zmiana w tekście zdania dotyczy jednostki — jak w przykładach autorów schematu.
+        [InlineData("w art. 31 w ust. 4 w zdaniu drugim wyrazy „na piśmie” zastępuje się wyrazami „w postaci papierowej”;")]
+        [InlineData("w art. 31 w ust. 4 w zdaniu drugim skreśla się wyrazy „na piśmie”;")]
+        // Zdanie, po którym się dodaje, też nie jest uchylane.
+        [InlineData("w art. 31 w ust. 4 po zdaniu drugim dodaje się zdanie trzecie w brzmieniu:")]
+        public void ReadAmendmentTargets_SentenceThatIsNotRepealed_CollapsesIntoItsUnit(string text)
+        {
+            Assert.Equal("art_31__ust_4", SingleTarget(text).ToString());
+        }
+
+        [Fact]
+        public void ReadAmendmentTargets_RepealedSentenceWithoutAUnit_AddressesNoSentence()
+        {
+            // Korpus: 345251_3133174 — opis w załączniku; zdanie bez jednostki niczego nie adresuje.
+            var targets = Targets("w opisie koszuli specjalnej z krótkim rękawem skreśla się zdanie szóste,");
+
+            Assert.DoesNotContain(targets, target => target.Contains("zdn"));
+        }
+
         [Fact]
         public void GetContext_BuildsParentChainText()
         {

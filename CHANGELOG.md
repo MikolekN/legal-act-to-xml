@@ -742,6 +742,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   - **Naprawione fałszywe uchylenie jednostki powołanej w przepisie**: „Uchyla się, z zastrzeżeniem ust. 2, przepisy
     ustaw szczególnych…" wskazywało ust. 2 tego samego aktu.
   - W korpusie znika 125 fałszywych `now:uchyl` w 55 tekstach jednolitych (m.in. 69 × „uchyla się od …", 21 × „skreśla się z/ze …", 16 w zdaniach stojących obok takiego zdania w tej samej jednostce); 89 z nich miało cel `UNKNOWN`, 36 wskazywało jednostkę tylko powołaną w przepisie. Żadna komenda aktu zmieniającego nie znika: instrukcji `now:uchyl` zostaje 1033 w 897 zdaniach. Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
+- **Uchylenie zdania nie jest uchyleniem jednostki** ([ADR-0070](docs/adr/0070-uchylane-zdanie-jest-adresowane-zdaniem-nie-jednostka.md)): „w ust. 2 skreśla się
+  zdanie drugie" daje `now:uchyl` z adresem zdania (`…ust_2__zdn_2`). Przedtem instrukcja wskazywała cały ustęp.
+  - Szyk „uchyla się drugie zdanie" jest czytany jak „zdanie drugie" (`UnitReferenceTokenizer`).
+  - W korpusie zmienia się 28 zdań w 21 plikach: `now:uchyl`, który wskazywał całą jednostkę („w ust. 2 skreśla się zdanie drugie" → `…ust_2`), wskazuje teraz zdanie (`…ust_2__zdn_2`). Poza tym eksport się nie zmienia; zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

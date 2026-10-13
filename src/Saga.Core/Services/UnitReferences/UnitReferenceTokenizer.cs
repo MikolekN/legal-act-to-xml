@@ -171,6 +171,7 @@ namespace Saga.Core.Services.UnitReferences
                 AddProse(tokens, input[cursor..]);
 
             NormalizeLeadingMultiplicityOrdinal(tokens);
+            NormalizeLeadingSentenceOrdinal(tokens);
             DemotePrepositions(tokens);
             PromoteLetterI(tokens);
             PromoteRomanI(tokens);
@@ -259,6 +260,30 @@ namespace Saga.Core.Services.UnitReferences
                 var ordinal = tokens[i - 1];
                 tokens.RemoveAt(i - 1);
                 tokens.Insert(i, ordinal);
+            }
+        }
+
+        /// <summary>
+        /// „Drugie zdanie" to „zdanie drugie": liczebnik porządkowy stojący przed słowem „zdanie", które nie ma
+        /// własnego oznaczenia za sobą, jest jego oznaczeniem. Liczebnik należący do wcześniejszej jednostki
+        /// („tiret drugie zdanie pierwsze") zostaje przy niej.
+        /// </summary>
+        private static void NormalizeLeadingSentenceOrdinal(List<UnitToken> tokens)
+        {
+            for (var i = 1; i < tokens.Count; i++)
+            {
+                if (tokens[i] is not { Kind: UnitTokenKind.UnitKeyword, Level: UnitLevel.Sentence } ||
+                    tokens[i - 1] is not { Kind: UnitTokenKind.Designation } ordinal ||
+                    !PolishNumerals.TryParseOrdinal(ordinal.Text, out _))
+                    continue;
+
+                if (i + 1 < tokens.Count && IsDesignation(tokens[i + 1]))
+                    continue;
+
+                if (i >= 2 && tokens[i - 2].Kind == UnitTokenKind.UnitKeyword)
+                    continue;
+
+                (tokens[i - 1], tokens[i]) = (tokens[i], tokens[i - 1]);
             }
         }
 
