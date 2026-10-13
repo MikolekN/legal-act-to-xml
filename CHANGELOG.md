@@ -717,6 +717,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   część wspólna — dwie części wspólne o tym samym eId i różnym `okres`.
   - **Naprawiono:** eksport brał tylko pierwszą część wspólną zamykającą wyliczenie; kolejne ginęły z wyjścia.
   - W korpusie zmienia się 17 dokumentów. W tekstach jednolitych 24 akapity wychodzące dotąd jako `fragment` stają się drugim brzmieniem: 16 — zdania jednostki (wprowadzenie do wyliczenia albo zdanie), 8 — części wspólnej. Eksport wszystkich części wspólnych zamykających wyliczenie przywraca też 8 akapitów cytowanych części wspólnych jednego rozporządzenia, które dotąd ginęły (pokrycie tekstu rozporządzeń: 2 zgubione akapity zamiast 10). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
+- **Adnotacja nazywająca uchyloną jednostkę systematyzacyjną** ([ADR-0066](docs/adr/0066-adnotacja-nazywajaca-uchylona-jednostke-jest-jej-naglowkiem.md)):
+  „(Rozdział 2 – uchylony)", „(oznaczenie oraz tytuł księgi pierwszej – uchylone)" i podobne wprowadzają nazwaną
+  jednostkę do układu aktu i są jej nagłówkiem. Przedtem ginęły (przed pierwszym artykułem jednostki nadrzędnej)
+  albo wychodziły jako `fragment` poprzedniego artykułu.
+  - W korpusie zmienia się 7 tekstów jednolitych: 20 adnotacji staje się nagłówkami jednostek (16 rozdziałów, 3 oddziały, 1 księga) — 9 z nich ginęło z eksportu, 11 wychodziło jako `fragment` artykułu, za którym stały. Zgubionych akapitów w tekstach jednolitych zostaje 9 (było 18). Zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

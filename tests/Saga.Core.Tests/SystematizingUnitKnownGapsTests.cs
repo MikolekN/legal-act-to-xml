@@ -304,6 +304,101 @@ namespace Saga.Core.Tests
                 ExplicitUnits(document).Select(u => ((ISystematizingUnit)u).Heading));
         }
 
+        // ============================================================
+        // Adnotacja, która sama nazywa uchyloną jednostkę (ADR-0066)
+        // ============================================================
+
+        private const string RepealAnnotation = "UCHYLENIEWTJoznaczenieuchyleniawtekciejednolitym";
+
+        [Fact]
+        public void AnnotationNamingARepealedChapter_KeepsTheChapterInItsPlace()
+        {
+            // TJ 345462_3070068: po „Rozdział 1 / (uchylony)" stoi sama adnotacja — bez wiersza oznaczenia.
+            var document = Parse(
+                ("Rozdział 1", ChapterDesignation),
+                ("(uchylony)", RepealAnnotation),
+                ("(Rozdział 2 – uchylony)", ChapterDesignation),
+                ("Art. 36. Uprawnionym pracownikom przysługuje prawo do nabycia akcji.", ArticleStyle),
+                ("Rozdział 3", ChapterDesignation),
+                ("Przepisy końcowe", ChapterHeading),
+                ("Art. 40. Treść.", ArticleStyle));
+
+            var chapters = ExplicitUnits(document).OfType<Chapter>().ToList();
+            Assert.Equal(new[] { "rozdz_1", "rozdz_2", "rozdz_3" }, chapters.Select(chapter => chapter.Id));
+
+            // Adnotacja jest nagłówkiem nazwanej jednostki — jej tekst nie ginie.
+            Assert.Equal("(Rozdział 2 – uchylony)", chapters[1].Heading);
+            Assert.Equal("rozdz_2", ArticleNumbered(document, "36").Parent!.Parent!.Id);
+        }
+
+        [Fact]
+        public void AnnotationNamingARepealedBook_StandsBetweenThePartAndItsTitles()
+        {
+            // TJ 302049_2704309 (Kodeks postępowania cywilnego): oznaczenie i tytuł księgi uchylone, tytuły zostały.
+            var document = Parse(
+                ("CZĘŚĆ DRUGA", PartOrBook),
+                ("Postępowanie zabezpieczające", PartOrBook),
+                ("(oznaczenie oraz tytuł księgi pierwszej – uchylone)", RepealAnnotation),
+                ("TYTUŁ I", TitleDesignation),
+                ("Przepisy ogólne", TitleHeading),
+                ("Art. 730. W każdej sprawie cywilnej można żądać udzielenia zabezpieczenia.", ArticleStyle));
+
+            var units = ExplicitUnits(document).ToList();
+            Assert.Equal(new[] { typeof(Part), typeof(Book), typeof(Title) }, units.Select(unit => unit.GetType()));
+            Assert.Equal("(oznaczenie oraz tytuł księgi pierwszej – uchylone)", ((ISystematizingUnit)units[1]).Heading);
+            Assert.Equal("Postępowanie zabezpieczające", ((ISystematizingUnit)units[0]).Heading);
+            // Tytuł stoi pod księgą — tak jak w akcie, zanim uchylono jej oznaczenie i tytuł.
+            Assert.Same(units[1], units[2].Parent);
+            Assert.Same(units[0], units[1].Parent);
+        }
+
+        [Theory]
+        // TJ 320891_2890572, 348341_3096796, 317037_2830281 — nazwa jednostki w dopełniaczu, różny szyk.
+        [InlineData("(oznaczenie i tytuł oddziału 1 – uchylone)", typeof(Subchapter), "1")]
+        [InlineData("(oznaczenie rozdziału 4 i tytuł – uchylone)", typeof(Chapter), "4")]
+        [InlineData("(oznaczenie oraz tytuł rozdziału I – uchylone)", typeof(Chapter), "1")]
+        [InlineData("(Rozdział 2a – uchylony)", typeof(Chapter), "2a")]
+        public void AnnotationNamingARepealedUnit_IsThatUnit(string annotation, Type unitType, string number)
+        {
+            var document = Parse(
+                ("Dział trzynasty", TitleDesignation),
+                ("Odpowiedzialność za wykroczenia", TitleHeading),
+                (annotation, RepealAnnotation),
+                ("Art. 281. Kto, będąc pracodawcą, narusza przepisy, podlega karze grzywny.", ArticleStyle));
+
+            var repealed = Assert.Single(ExplicitUnits(document), unit => unit.GetType() == unitType);
+            Assert.Equal(number, repealed.Number?.Value);
+            Assert.Equal(annotation, ((ISystematizingUnit)repealed).Heading);
+        }
+
+        [Theory]
+        // Adnotacja o zawartości jednostki albo o czymś, co jednostką nie jest, jednostki nie nazywa.
+        [InlineData("(zawierający rozdziały 4 i 5 – uchylony)")]
+        [InlineData("(Przepis wstępny – uchylone)")]
+        [InlineData("(zawierający art. 19–21 – uchylony)")]
+        public void AnnotationThatNamesNoUnit_DoesNotMakeOne(string annotation)
+        {
+            var document = Parse(
+                ("Dział trzynasty", TitleDesignation),
+                ("Odpowiedzialność za wykroczenia", TitleHeading),
+                (annotation, RepealAnnotation),
+                ("Art. 281. Kto, będąc pracodawcą, narusza przepisy, podlega karze grzywny.", ArticleStyle));
+
+            Assert.IsType<Division>(Assert.Single(ExplicitUnits(document)));
+        }
+
+        [Fact]
+        public void AnnotationRightAfterTheDesignationOfTheSameUnit_StaysItsHeading()
+        {
+            var document = Parse(
+                ("Rozdział 2", ChapterDesignation),
+                ("(Rozdział 2 – uchylony)", RepealAnnotation),
+                ("Art. 36. Treść.", ArticleStyle));
+
+            var chapter = Assert.IsType<Chapter>(Assert.Single(ExplicitUnits(document)));
+            Assert.Equal("(Rozdział 2 – uchylony)", chapter.Heading);
+        }
+
         [Fact]
         public void ChaptersInTheActsAnnex_AreNotUnitsOfTheAct()
         {

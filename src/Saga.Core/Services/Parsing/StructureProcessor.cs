@@ -297,6 +297,12 @@ namespace Saga.Core.Services.Parsing
             }
             context.HeadingContinuationUnit = null;
 
+            // Adnotacja tekstu jednolitego, która sama nazywa uchyloną jednostkę systematyzacyjną
+            // („(Rozdział 2 – uchylony)"): jednostka zostaje w układzie aktu, adnotacja jest jej nagłówkiem.
+            // Rozstrzyga treść, nie styl — akapit bywa złożony stylem oznaczenia rozdziału.
+            if (TryEnterRepealedUnit(context, text))
+                return true;
+
             // Tytuł jednostki systematyzacyjnej (drugi wiersz wzorca dwuwierszowego, § 62 ust. 2):
             // pierwszy akapit po oznaczeniu, jeśli sam nie jest jednostką. Ze stylu tytułu — bez
             // heurystyki; bez stylu — gdy wygląda na tytuł.
@@ -757,6 +763,67 @@ namespace Saga.Core.Services.Parsing
                 Log.Information("Odczyt tolerancyjny oznaczenia „{Text}\": {Reason}", text, reason);
             }
         }
+
+        /// <summary>
+        /// Adnotacja tekstu jednolitego w miejscu nagłówka uchylonej jednostki systematyzacyjnej, która tę
+        /// jednostkę nazywa: „(Rozdział 2 – uchylony)", „(oznaczenie oraz tytuł księgi pierwszej – uchylone)"
+        /// (§ 106 ZTP). Wchodzi w nazwaną jednostkę i czyni adnotację jej nagłówkiem (ADR-0066). Adnotacja
+        /// o zawartości jednostki („(zawierający rozdziały 4 i 5 – uchylony)") jednostki nie nazywa.
+        /// </summary>
+        private bool TryEnterRepealedUnit(ParsingContext context, string text)
+        {
+            var annotation = text.Trim();
+            if (!RepealedUnitMarker.IsMatch(annotation))
+                return false;
+
+            var tokens = UnitReferenceTokenizer.Tokenize(annotation, systematizing: true);
+            for (var i = 0; i + 1 < tokens.Count; i++)
+            {
+                // Jednostka z oznaczeniem („księgi pierwszej"); przed nią stoi najwyżej „oznaczenie (oraz) tytuł".
+                if (tokens[i].Kind != UnitTokenKind.UnitKeyword || tokens[i + 1].Kind != UnitTokenKind.Designation)
+                    continue;
+
+                if (SystematizingKindOf(tokens[i].Level) is not { } kind || !tokens.Take(i).All(IsPartOfTheSubject)
+                    || ParagraphClassifier.ParseSystematizingDesignation(ParagraphClassifier.LevelOf(kind)!.Value, tokens[i + 1].Text) is not { } number)
+                {
+                    return false;
+                }
+
+                // Adnotacja stojąca zaraz za oznaczeniem tej samej jednostki jest jej tytułem — jak „(uchylony)".
+                if (context.PendingHeadingUnit is BaseEntity pending && pending.UnitType == ParagraphClassifier.LevelOf(kind)
+                    && pending.Number?.Value == number.Value)
+                {
+                    return false;
+                }
+
+                _systematizingUnitBuilder.Enter(context, kind, number);
+                if (context.PendingHeadingUnit is { } repealed)
+                    repealed.Heading = annotation;
+                context.PendingHeadingUnit = null;
+                return true;
+            }
+
+            return false;
+        }
+
+        private static bool IsPartOfTheSubject(UnitToken token) => token.Kind switch
+        {
+            UnitTokenKind.UnitKeyword or UnitTokenKind.Separator => true,
+            UnitTokenKind.Prose => token.Text.Trim('(', ' ').Equals("oznaczenie", StringComparison.OrdinalIgnoreCase)
+                || token.Text.Trim('(', ' ').Length == 0,
+            _ => false,
+        };
+
+        private static ParagraphKind? SystematizingKindOf(UnitLevel level) => level switch
+        {
+            UnitLevel.Part => ParagraphKind.PartUnit,
+            UnitLevel.Book => ParagraphKind.BookUnit,
+            UnitLevel.Title => ParagraphKind.TitleUnit,
+            UnitLevel.Division => ParagraphKind.DivisionUnit,
+            UnitLevel.Chapter => ParagraphKind.ChapterUnit,
+            UnitLevel.Subchapter => ParagraphKind.SubchapterUnit,
+            _ => null,
+        };
 
         /// <summary>
         /// Czy akapit bez stylu, stojący tuż za oznaczeniem jednostki systematyzacyjnej, jest jej tytułem —

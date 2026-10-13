@@ -2048,6 +2048,37 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0066: adnotacja nazywająca uchyloną jednostkę jest jej nagłówkiem
+        // ============================================================
+
+        [Fact]
+        public void Adr0066_AnnotationNamingARepealedUnit_IsTheHeadingOfThatUnit()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o odbudowie obiektów budowlanych",
+                "Rozdział 1",
+                "Przepisy ogólne",
+                "Art. 1. Ustawa reguluje zasady odbudowy.",
+                "(Rozdział 2 – uchylony)",
+                "Rozdział 3",
+                "Przepisy końcowe",
+                "Art. 9. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Rozdział 2 zostaje w układzie aktu, a adnotacja jest jego nagłówkiem — nie treścią art. 1.
+            var chapters = document.Articles.Select(article => article.Parent?.Parent).OfType<Chapter>().Distinct().ToList();
+            var xml = LegalDocumentConverter.Convert(document);
+            var headings = xml.Descendants().Where(e => e.Name.LocalName == "naglowek-rozdzialu").Select(e => e.Value).ToList();
+            Assert.Equal(new[] { "1Przepisy ogólne", "2(Rozdział 2 – uchylony)", "3Przepisy końcowe" }, headings);
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "fragment");
+            Assert.Equal(2, chapters.Count);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 
