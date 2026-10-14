@@ -109,16 +109,19 @@ namespace Saga.Core
             var quotationBreaks = new HashSet<DocumentBlock>(ReferenceEqualityComparer.Instance);
             LegalDocument document;
             DocumentBlock? unclosedBreak;
+            var publication = options?.Publication;
             do
             {
-                document = BuildDocument(blocks, classification, quotationBreaks, observeBlock: null, out unclosedBreak);
+                document = BuildDocument(blocks, classification, publication, quotationBreaks, observeBlock: null, out unclosedBreak);
             }
             while (unclosedBreak is not null && quotationBreaks.Add(unclosedBreak));
 
             // Obserwator widzi wyłącznie przebieg, z którego powstaje wynik.
-            return observeBlock is null
-                ? document
-                : BuildDocument(blocks, classification, quotationBreaks, observeBlock, out _);
+            if (observeBlock is not null)
+                document = BuildDocument(blocks, classification, publication, quotationBreaks, observeBlock, out _);
+
+            publication?.FillJournal(document);
+            return document;
         }
 
         /// <summary>
@@ -128,6 +131,7 @@ namespace Saga.Core
         private static LegalDocument BuildDocument(
             IReadOnlyList<DocumentBlock> blocks,
             DocumentClassificationResult? classification,
+            PublicationData? publication,
             IReadOnlySet<DocumentBlock> quotationBreaks,
             Action<DocumentBlock, ParsingContext>? observeBlock,
             out DocumentBlock? unclosedQuotationBreak)
@@ -135,6 +139,7 @@ namespace Saga.Core
             var document = new LegalDocument { Classification = classification };
 
             JournalHeaderParser.Apply(blocks, document);
+            publication?.FillAnnouncementDate(document);
 
             var subchapter = GetDefaultSubchapter(document);
 

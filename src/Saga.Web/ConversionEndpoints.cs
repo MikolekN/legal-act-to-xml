@@ -1,5 +1,6 @@
 using System.Text;
 using DocumentFormat.OpenXml.Packaging;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.OpenApi;
 using Saga.Core;
@@ -23,7 +24,7 @@ namespace Saga.Web
             (StatusCodes.Status200OK,
                 "XML aktu prawnego w załączniku (`Content-Disposition: attachment`)."),
             (StatusCodes.Status400BadRequest,
-                "Nie przesłano pliku albo dokument jest uszkodzony."),
+                "Nie przesłano pliku, dokument jest uszkodzony albo dane ogłoszenia są błędne."),
             (StatusCodes.Status413PayloadTooLarge,
                 UploadLimits.ExceededMessage),
             (StatusCodes.Status415UnsupportedMediaType,
@@ -76,14 +77,21 @@ namespace Saga.Web
             {
                 body.Description =
                     $"Dokument źródłowy w polu `documentFile` ({ServiceInfo.SupportedFormats}; "
-                    + $"do {UploadLimits.MaxSizeText}).";
+                    + $"do {UploadLimits.MaxSizeText}). Opcjonalnie dane ogłoszenia dokumentu, który ich nie niesie "
+                    + "(szczotka przed publikacją, akt bez nagłówka publikatora): `publisher` (DU albo MP), `year`, "
+                    + "`position`, `announcementDate` (RRRR-MM-DD). Uzupełniają tylko braki — dane z dokumentu wygrywają.";
                 body.Required = true;
             }
 
             return Task.CompletedTask;
         }
 
-        private static IResult Convert(IFormFile? documentFile)
+        private static IResult Convert(
+            IFormFile? documentFile,
+            [FromForm] string? publisher,
+            [FromForm] string? year,
+            [FromForm] string? position,
+            [FromForm] string? announcementDate)
         {
             if (documentFile is null || documentFile.Length == 0)
             {
@@ -91,12 +99,15 @@ namespace Saga.Web
                     StatusCodes.Status400BadRequest);
             }
 
+            if (!PublicationData.TryCreate(publisher, year, position, announcementDate, out var publication, out var error))
+                return Failure(error!, StatusCodes.Status400BadRequest, title: "Błędne dane ogłoszenia");
+
             try
             {
                 using Stream document = documentFile.OpenReadStream();
 
                 ParseResult result = LegalDocumentParser.Parse(document, documentFile.FileName,
-                    new ParseOptions { Policy = ParsePolicy.AlwaysParse });
+                    new ParseOptions { Policy = ParsePolicy.AlwaysParse, Publication = publication });
 
                 if (result.Document is null)
                 {

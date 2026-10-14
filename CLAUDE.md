@@ -66,10 +66,12 @@ tools/CorpusValidator (poza sln)  ──► src/Saga.Core ──► src/Saga.Mod
 
 - `Saga.Model` — czyste DTO, bez logiki biznesowej
 - `Saga.Core` — cała logika silnika parsowania; zależy od `DocumentFormat.OpenXml`, `Serilog` i `PdfPig` 0.1.15 (adapter PDF: `src/Saga.Core/Ingest/Pdf/` — `PdfBlockReader`, `PdfLineExtractor`, `PageArtifactFilter`)
-- `Saga.Cli` — konwerter wsadowy dokument→XML (`saga <plik|katalog> [--output <katalog>]`, katalog = wszystkie `*.docx` bez rekursji);
+- `Saga.Cli` — konwerter wsadowy dokument→XML (`saga <plik|katalog> [--output <katalog>]`, katalog = wszystkie `*.docx` bez rekursji;
+  dla jednego pliku dane ogłoszenia szczotki `--publisher/--year/--position/--announced`, ADR-0081);
   plik wykonywalny nazywa się `saga`. Pomija dokumenty nierozpoznane jako akty prawne
 - `Saga.Web` — **web API** (ASP.NET 10) z niej powstaje obraz kontenera.
-  Wystawia `POST /v1/convert` (eksport XML przez `LegalDocumentConverter`) i `GET /health` (sonda
+  Wystawia `POST /v1/convert` (eksport XML przez `LegalDocumentConverter`; opcjonalne pola danych ogłoszenia
+  `publisher`, `year`, `position`, `announcementDate` — ADR-0081) i `GET /health` (sonda
   dla platformy, celowo poza wersjonowaniem). Sondy idą za konwencją CAISE: `GET /` to sonda
   **życia** (proces odpowiada), a `GET /health` sonda **gotowości** — uruchamia kontrole
   zarejestrowane przez `AddHealthChecks()` w `Program.cs` i zwraca ich stan. `Unhealthy` daje 503,

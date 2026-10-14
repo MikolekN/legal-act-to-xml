@@ -2568,6 +2568,44 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0081: dane ogłoszenia od wywołującego uzupełniają tylko braki dokumentu
+        // ============================================================
+
+        [Fact]
+        public void Adr0081_GivenPublication_FillsOnlyWhatTheDocumentDoesNotState()
+        {
+            var given = new PublicationData
+            {
+                Publisher = PublisherType.DziennikUstaw,
+                Year = 2025,
+                Position = 999,
+                AnnouncementDate = new DateTime(2025, 12, 1),
+            };
+            LegalDocument Parse(byte[] docx)
+            {
+                using var stream = new MemoryStream(docx);
+                return LegalDocumentParser.Parse(stream, "ustawa.docx",
+                    new ParseOptions { Policy = ParsePolicy.AlwaysParse, Publication = given }).Document!;
+            }
+            string[] act =
+            [
+                "USTAWA", "z dnia 9 stycznia 2026 r.", "o rzemiośle", "Art. 1. Ustawa określa zasady wykonywania rzemiosła.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+
+            // Szczotka bez nagłówka publikatora bierze dane od wywołującego — także dzień, od którego liczy się
+            // wejście w życie.
+            var proof = Parse(DocxFixtures.WithoutHeader(act));
+            Assert.Equal([999], proof.SourceJournal.Positions);
+            Assert.Equal(new DateTime(2025, 12, 16), proof.Articles.First().EffectiveDate);
+
+            // Nagłówek publikatora wygrywa.
+            var announced = Parse(DocxFixtures.WithRclJournalHeader(act));
+            Assert.Equal([26], announced.SourceJournal.Positions);
+            Assert.Equal(new DateTime(2026, 1, 12), announced.AnnouncementDate);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

@@ -20,7 +20,8 @@ nie uzna za akt prawny, są pomijane i wykazane w podsumowaniu przebiegu.
 
 ### Saga.Web
 Web API (ASP.NET 10); z niego powstaje obraz kontenera. Przyjmuje upload DOCX (limit 64 MB)
-pod `POST /v1/convert` i odsyła XML aktu prawnego jako załącznik;
+pod `POST /v1/convert` i odsyła XML aktu prawnego jako załącznik (opcjonalnie z danymi ogłoszenia
+szczotki: `publisher`, `year`, `position`, `announcementDate`);
 `GET /health` jest sondą dla platformy wdrożeniowej. Błędy wracają jako `ProblemDetails`
 z `traceId`. Pod `/` stoi strona powitalna z odnośnikiem do dokumentacji API, którą serwuje
 Scalar pod `/scalar` (źródło: `/openapi/v1.json`).
@@ -37,6 +38,9 @@ dotnet test tests/Saga.Core.Tests/Saga.Core.Tests.csproj
 
 # Konwersja pojedynczego pliku do XML
 dotnet run --project src/Saga.Cli -- plik.docx --output wynik
+
+# Szczotka przed publikacją — dane ogłoszenia podane z ręki (dokument ich nie niesie)
+dotnet run --project src/Saga.Cli -- szczotka.docx --publisher DU --position 132 --announced 2026-02-04
 
 # Konwersja wsadowa całego katalogu (domyślnie *.docx, bez rekursji)
 dotnet run --project src/Saga.Cli -- katalog-z-ustawami --output katalog-xml

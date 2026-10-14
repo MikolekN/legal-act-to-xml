@@ -82,7 +82,8 @@ Silnik parsujący dokumenty DOCX/PDF (z warstwą tekstową)/TXT. Zależy od `Sag
 
 Konwerter wsadowy: `saga <plik|katalog> [--output <katalog>]`. Czyta wejście
 **read-only**, dla każdego dokumentu zapisuje XML z `LegalDocumentConverter` pod nazwą pliku
-źródłowego.
+źródłowego. Dla pojedynczego pliku przyjmuje dane ogłoszenia szczotki: `--publisher DU|MP`, `--year`,
+`--position`, `--announced RRRR-MM-DD` (`ParseOptions.Publication`, [ADR-0081](adr/0081-dane-ogloszenia-od-wywolujacego-uzupelniaja-tylko-braki-dokumentu.md)).
 
 Trzyma domyślną politykę `ParsePolicy.ParseWhenLegalAct`, więc dokument nierozpoznany jako akt
 prawny nie ma modelu i zostaje pominięty (z adnotacją i licznikiem w podsumowaniu). Wyjątek przy
@@ -94,7 +95,8 @@ ale część plików pominięto lub nie udało się przetworzyć.
 ### 2.4 `Saga.Web` — Web API (aktywne)
 
 ASP.NET 10 — usługa HTTP; web API repozytorium. Wystawia `POST /v1/convert` (dokument
-DOCX/PDF/TXT → XML aktu prawnego przez `LegalDocumentConverter`) oraz `GET /health` — sonda
+DOCX/PDF/TXT → XML aktu prawnego przez `LegalDocumentConverter`; opcjonalne pola formularza `publisher`, `year`,
+`position`, `announcementDate` uzupełniają dane ogłoszenia, których dokument nie niesie — [ADR-0081](adr/0081-dane-ogloszenia-od-wywolujacego-uzupelniaja-tylko-braki-dokumentu.md)) oraz `GET /health` — sonda
 celowo **poza** wersjonowaniem, bo ma przeżyć każdą zmianę kontraktu.
 
 Sondy idą za konwencją CAISE, która rozdziela życie od gotowości: `GET /` odpowiada za życie

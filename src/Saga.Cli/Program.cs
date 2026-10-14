@@ -40,6 +40,7 @@ namespace Saga.Cli
 
             string input = args[0];
             string outputDirectory = Directory.GetCurrentDirectory();
+            string? publisher = null, year = null, position = null, announced = null;
 
             for (int i = 1; i < args.Length; i++)
             {
@@ -54,6 +55,22 @@ namespace Saga.Cli
                         outputDirectory = args[i];
                         break;
 
+                    case "--publisher" or "--year" or "--position" or "--announced":
+                        string option = args[i];
+                        if (++i >= args.Length)
+                        {
+                            Console.Error.WriteLine($"Brak wartości po {option}.");
+                            return 1;
+                        }
+                        switch (option)
+                        {
+                            case "--publisher": publisher = args[i]; break;
+                            case "--year": year = args[i]; break;
+                            case "--position": position = args[i]; break;
+                            default: announced = args[i]; break;
+                        }
+                        break;
+
                     default:
                         Console.Error.WriteLine($"Nieznany argument: {args[i]}");
                         PrintUsage();
@@ -61,10 +78,23 @@ namespace Saga.Cli
                 }
             }
 
-            return Convert(input, outputDirectory);
+            if (!PublicationData.TryCreate(publisher, year, position, announced, out var publication, out var error))
+            {
+                Console.Error.WriteLine(error);
+                return 1;
+            }
+
+            // Dane ogłoszenia dotyczą jednego aktu — katalog dokumentów ich nie przyjmuje.
+            if (publication is not null && !File.Exists(input))
+            {
+                Console.Error.WriteLine("Dane ogłoszenia (--publisher, --year, --position, --announced) podaje się tylko dla jednego pliku.");
+                return 1;
+            }
+
+            return Convert(input, outputDirectory, new ParseOptions { Publication = publication });
         }
 
-        private static int Convert(string input, string outputDirectory)
+        private static int Convert(string input, string outputDirectory, ParseOptions options)
         {
             string[] files;
 
@@ -111,7 +141,7 @@ namespace Saga.Cli
 
                 try
                 {
-                    ParseResult result = LegalDocumentParser.Parse(filePath);
+                    ParseResult result = LegalDocumentParser.Parse(filePath, options);
 
                     if (result.Document is null)
                     {
@@ -169,13 +199,17 @@ namespace Saga.Cli
             Console.WriteLine();
             Console.WriteLine("Użycie:");
             Console.WriteLine("  saga <plik|katalog> [--output <katalog>]");
+            Console.WriteLine("  saga <plik> [--publisher DU|MP] [--year <rok>] [--position <pozycja>] [--announced <RRRR-MM-DD>]");
             Console.WriteLine();
             Console.WriteLine("Opcje:");
             Console.WriteLine($"  -o, --output   katalog wynikowy (domyślnie: bieżący katalog)");
+            Console.WriteLine("  --publisher    dziennik (DU albo MP), --year rocznik, --position pozycja, --announced dzień ogłoszenia —");
+            Console.WriteLine("                 dane ogłoszenia aktu, który ich nie niesie (szczotka); uzupełniają tylko braki dokumentu");
             Console.WriteLine();
             Console.WriteLine("Przykłady:");
             Console.WriteLine("  saga ustawa.docx --output wynik");
             Console.WriteLine(@"  saga C:\ustawy\2026 --output C:\xml\2026");
+            Console.WriteLine("  saga szczotka.docx --publisher DU --position 132 --announced 2026-02-04");
             Console.WriteLine();
             Console.WriteLine("Kody wyjścia: 0 = wszystko przekonwertowane; 1 = błąd wywołania lub wejścia/wyjścia;");
             Console.WriteLine("              2 = część plików pominięto lub nie udało się przetworzyć.");

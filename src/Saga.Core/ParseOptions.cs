@@ -28,5 +28,11 @@ namespace Saga.Core
 
         /// <summary>Wymuszony format źródłowy.</summary>
         public SourceFormat? ForcedFormat { get; init; }
+
+        /// <summary>
+        /// Dane ogłoszenia, których dokument nie niesie (szczotka przed publikacją, akt bez nagłówka publikatora);
+        /// uzupełniają tylko braki — dane z dokumentu wygrywają (ADR-0081).
+        /// </summary>
+        public PublicationData? Publication { get; init; }
     }
 }

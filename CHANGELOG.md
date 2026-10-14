@@ -35,6 +35,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   Kolejne odwołanie do tego samego odnośnika (częste w tekstach jednolitych) to `odsylacz-do-odnosnika`.
   Znaczniki `[N)]` znikają z treści zdań, tytułu i metadanych `Tytul` —
   [ADR-0026](docs/adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md).
+- **Dane ogłoszenia dla szczotki** ([ADR-0081](docs/adr/0081-dane-ogloszenia-od-wywolujacego-uzupelniaja-tylko-braki-dokumentu.md)): usługa przyjmuje pola formularza
+  `publisher` (DU/MP), `year`, `position`, `announcementDate` (RRRR-MM-DD), konsola — opcje `--publisher`, `--year`,
+  `--position`, `--announced`, biblioteka — `ParseOptions.Publication`. Uzupełniają dane ogłoszenia, których dokument
+  nie niesie (szczotka przed publikacją, akt bez nagłówka publikatora): eksport ma wtedy `Rok` i `Pozycja`, adresy
+  z prefiksem aktu i daty wejścia w życie liczone od dnia ogłoszenia. Dane z dokumentu wygrywają; błędna wartość to
+  odpowiedź 400 z opisem.
 
 ### Zmieniono
 - **eId jednostek redakcyjnych nie zawiera już ścieżki jednostek systematyzacyjnych**: artykuł
