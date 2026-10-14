@@ -618,5 +618,87 @@ namespace Saga.Core.Tests
         {
             Assert.Empty(SchemaPl.Validator.ValidateActBody(ExportWithTable().Elements().First()));
         }
+
+        // ============================================================
+        // Orientacja strony (ADR-0077)
+        // ============================================================
+
+        private const string PortraitPage = @"<w:pgSz w:w=""11906"" w:h=""16838""/>";
+        private const string LandscapePage = @"<w:pgSz w:w=""16838"" w:h=""11906"" w:orient=""landscape""/>";
+
+        /// <summary>
+        /// Załącznik ze wstępem na stronie pionowej i tabelą z objaśnieniem na poziomej — sekcję pionową kończy akapit
+        /// wstępu, poziomą — ustawienia sekcji treści, tak jak zapisuje to Word.
+        /// </summary>
+        private static LegalDocument ParseAnnexWithLandscapeTable(string firstPage = PortraitPage, string lastPage = LandscapePage)
+        {
+            var body = string.Concat(Act.Select(line => P(line))) +
+                P("Załącznik do ustawy z dnia 23 stycznia 2026 r.") +
+                P("SEKTORY KLUCZOWE", @"<w:jc w:val=""center""/>") +
+                P("Wykaz sektorów zawiera tabela.", $"<w:sectPr>{firstPage}</w:sectPr>") +
+                "<w:tbl>" + Row(Cell("Sektor"), Cell("Podsektor")) + Row(Cell("Energia"), Cell("gaz")) + "</w:tbl>" +
+                P("Objaśnienie pod tabelą.") +
+                $"<w:sectPr>{lastPage}</w:sectPr>";
+
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXml(body));
+            return LegalDocumentParser.Parse(stream, "ustawa.docx", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+        }
+
+        [Fact]
+        public void AnnexContent_KeepsTheOrientationOfItsPage()
+        {
+            var annex = Assert.Single(ParseAnnexWithLandscapeTable().Annexes);
+
+            Assert.Equal(new bool?[] { false, true, true }, annex.Content.Select(block => block.IsLandscape));
+        }
+
+        [Fact]
+        public void ChangeOfOrientation_StartsANewSegment_MarkedWithTheOrientationOfItsPages()
+        {
+            var segments = Named(LegalDocumentConverter.Convert(ParseAnnexWithLandscapeTable()), "segment-zalacznika");
+
+            Assert.Equal(new[] { "pionowa", "pozioma" }, segments.Select(segment => Attr(segment, "orientacja")));
+            Assert.Equal(new[] { "tekst-zwykly" }, ChildNames(segments[0]));
+            Assert.Equal(new[] { "tabela", "tekst-zwykly" }, ChildNames(segments[1]));
+        }
+
+        [Fact]
+        public void PageWiderThanTall_IsLandscape_WithoutTheOrientationAttribute()
+        {
+            var annex = Assert.Single(ParseAnnexWithLandscapeTable(lastPage: @"<w:pgSz w:w=""16838"" w:h=""11906""/>").Annexes);
+
+            Assert.Equal(new bool?[] { false, true, true }, annex.Content.Select(block => block.IsLandscape));
+        }
+
+        [Fact]
+        public void SectionsWithoutPageSize_LeaveTheOrientationUnknown_InOneSegment()
+        {
+            var segment = Assert.Single(Named(
+                LegalDocumentConverter.Convert(ParseAnnexWithLandscapeTable(firstPage: "", lastPage: "")), "segment-zalacznika"));
+
+            Assert.Null(Attr(segment, "orientacja"));
+            Assert.Equal(new[] { "tekst-zwykly", "tabela", "tekst-zwykly" }, ChildNames(segment));
+        }
+
+        [Fact]
+        public void AnnexFromASourceWithoutPageLayout_HasOneSegment_WithoutOrientation()
+        {
+            var document = Parse(
+                Block("Załącznik do ustawy z dnia 23 stycznia 2026 r.", AttachedToStyle),
+                Block("SEKTORY KLUCZOWE", TitleStyle),
+                Block("Wykaz sektorów zawiera tabela."),
+                Block("Objaśnienie pod tabelą."));
+
+            var segment = Assert.Single(Named(LegalDocumentConverter.Convert(document), "segment-zalacznika"));
+            Assert.Null(Attr(segment, "orientacja"));
+        }
+
+        [SchemaPlFact]
+        public void AnnexWithSegmentsOfBothOrientations_IsSchemaValid_InItsBody()
+        {
+            var xml = LegalDocumentConverter.Convert(ParseAnnexWithLandscapeTable());
+
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
+        }
     }
 }

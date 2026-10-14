@@ -2446,6 +2446,44 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0077: segment załącznika to ciąg treści na stronach jednej orientacji
+        // ============================================================
+
+        [Fact]
+        public void Adr0077_AnnexSegment_IsARunOfContentOnPagesOfOneOrientation_TakenFromTheSourceLayout()
+        {
+            static string P(string text, string section = "") =>
+                $"<w:p><w:pPr>{section}</w:pPr><w:r><w:t>{text}</w:t></w:r></w:p>";
+            var body = P("USTAWA") + P("z dnia 23 stycznia 2026 r.") + P("o sektorach") +
+                P("Art. 1. Sektory określa załącznik do ustawy.") +
+                P("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.") +
+                P("Załącznik do ustawy z dnia 23 stycznia 2026 r.") +
+                P("Wstęp na stronie pionowej.", @"<w:sectPr><w:pgSz w:w=""11906"" w:h=""16838""/></w:sectPr>") +
+                P("Zestawienie na stronie poziomej.") +
+                @"<w:sectPr><w:pgSz w:w=""16838"" w:h=""11906"" w:orient=""landscape""/></w:sectPr>";
+
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXml(body));
+            var document = LegalDocumentParser.Parse(stream, "ustawa.docx", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            var segments = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "segment-zalacznika").ToList();
+
+            // Orientacja pochodzi z układu strony źródła; jej zmiana zaczyna nowy segment.
+            Assert.Equal(new[] { "pionowa", "pozioma" }, segments.Select(segment => segment.Attribute("orientacja")?.Value));
+
+            // Źródło bez układu strony (bloki spoza DOCX) — jeden segment, bez orientacji.
+            var blocks = new[]
+            {
+                "USTAWA", "z dnia 23 stycznia 2026 r.", "o sektorach", "Art. 1. Sektory określa załącznik do ustawy.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+                "Załącznik do ustawy z dnia 23 stycznia 2026 r.", "Wstęp.", "Zestawienie.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList();
+            var withoutLayout = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            var segment = Assert.Single(LegalDocumentConverter.Convert(withoutLayout).Descendants(),
+                e => e.Name.LocalName == "segment-zalacznika");
+            Assert.Null(segment.Attribute("orientacja"));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

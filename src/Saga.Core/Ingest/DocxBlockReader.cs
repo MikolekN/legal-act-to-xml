@@ -90,12 +90,49 @@ namespace Saga.Core.Ingest
             var footnotes = DocxFootnotes.Read(mainPart);
             var tables = DocxTables.Read(mainPart.Document);
             var index = 0;
-            foreach (var paragraph in mainPart.Document.Descendants<Word.Paragraph>())
+            var paragraphs = mainPart.Document.Descendants<Word.Paragraph>().ToList();
+            var landscape = PageOrientation(mainPart.Document, paragraphs);
+            foreach (var paragraph in paragraphs)
             {
-                blocks.Add(ToBlock(paragraph, index++, footnotes, tables));
+                blocks.Add(ToBlock(paragraph, index, footnotes, tables) with { IsLandscape = landscape[index] });
+                index++;
             }
 
             return blocks;
+        }
+
+        /// <summary>
+        /// Orientacja strony każdego akapitu: sekcję zamyka akapit niosący <c>w:sectPr</c>, a ostatnią — <c>w:sectPr</c>
+        /// treści dokumentu. Strona jest pozioma, gdy sekcja mówi to wprost (<c>w:orient="landscape"</c>) albo jest
+        /// szersza niż wyższa; null, gdy sekcja rozmiaru strony nie podaje.
+        /// </summary>
+        private static bool?[] PageOrientation(Word.Document document, IReadOnlyList<Word.Paragraph> paragraphs)
+        {
+            var result = new bool?[paragraphs.Count];
+            var start = 0;
+            for (var i = 0; i < paragraphs.Count; i++)
+            {
+                if (paragraphs[i].ParagraphProperties?.SectionProperties is not { } ending)
+                    continue;
+
+                Array.Fill(result, IsLandscape(ending), start, i + 1 - start);
+                start = i + 1;
+            }
+
+            var last = IsLandscape(document.Body?.Elements<Word.SectionProperties>().LastOrDefault());
+            Array.Fill(result, last, start, paragraphs.Count - start);
+            return result;
+        }
+
+        private static bool? IsLandscape(Word.SectionProperties? section)
+        {
+            if (section?.GetFirstChild<Word.PageSize>() is not { } size)
+                return null;
+
+            if (size.Orient?.Value is { } orient)
+                return orient == Word.PageOrientationValues.Landscape;
+
+            return size.Width?.Value is { } width && size.Height?.Value is { } height ? width > height : null;
         }
 
         /// <summary>

@@ -777,6 +777,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   i „„Oświadczam, że: 1) … 2) …”" złożone stylem cytatu jest przytoczeniem pod punktem (`tresc-strukt`) — do domknięcia
   cudzysłowu, bez względu na style pozycji. Przedtem pozycje oświadczenia stawały się punktami aktu.
   - W korpusie zmienia się 11 tekstów jednolitych: 25 oświadczeń wychodzi jako `tresc-strukt`, a ich wiersz otwierający przestaje być `fragment` (28 akapitów). Powtórzonych eId w tekstach jednolitych jest 513 (było 559) — pozycje oświadczeń przestały być punktami aktu; nierozróżnionych okresem zostaje 34. Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory), pokrycie tekstu bez zmian. Bez stylów: 114 jednostek zgodnych więcej, żadna mniej; w pełni zgodnych tekstów jednolitych 628 z 728 (było 625).
+- **Orientacja stron załącznika** ([ADR-0077](docs/adr/0077-segment-zalacznika-to-ciag-stron-jednej-orientacji.md)): segment załącznika niesie `orientacja`
+  (`pionowa`, `pozioma`) z ustawień sekcji DOCX, a zmiana orientacji w załączniku zaczyna nowy segment. Źródło bez
+  układu strony (PDF, TXT) daje segment bez atrybutu.
+  - W korpusie wszystkie 722 segmenty załączników (432 dokumenty) niosą `orientacja`, 29 z nich `pozioma`; w 2 dokumentach załącznik dzieli się na trzy segmenty (pionowa — pozioma — pionowa: szeroka tabela w środku), przybywa 4 segmentów. Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory). Wobec przykładu DU/2026/252 zgadzają się trzy segmenty; czwarty jest w przykładzie bez atrybutu, u nas `pionowa` — jak strona źródła.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

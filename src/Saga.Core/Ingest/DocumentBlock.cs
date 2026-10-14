@@ -48,6 +48,12 @@ namespace Saga.Core.Ingest
         /// </summary>
         public BlockSymbol? LeadingSymbol { get; init; }
 
+        /// <summary>
+        /// Czy strona, na której stoi blok, jest pozioma — z ustawień sekcji DOCX (<c>w:pgSz</c>). Null, gdy źródło
+        /// układu strony nie podaje (PDF, TXT, sekcja bez rozmiaru strony).
+        /// </summary>
+        public bool? IsLandscape { get; init; }
+
         public bool IsEmpty => string.IsNullOrWhiteSpace(Text);
     }
 

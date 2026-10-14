@@ -30,11 +30,39 @@ namespace Saga.Core.Services.Converters
             if (annex.Title is { Length: > 0 } title)
                 element.Add(Element(XmlConverterConstants.Attachments.TitleElement, Guid(), title));
 
-            var content = annex.Content.SelectMany(ToContent).ToList();
-            if (content.Count > 0)
-                element.Add(Element(XmlConverterConstants.Attachments.Segment, Guid(), content));
+            // Segment załącznika to ciąg treści na stronach jednej orientacji — zmiana orientacji zaczyna nowy segment.
+            foreach (var run in Runs(annex.Content))
+            {
+                var content = run.SelectMany(ToContent).ToList();
+                if (content.Count == 0)
+                    continue;
+
+                var segment = Element(XmlConverterConstants.Attachments.Segment, Guid(), content);
+                if (run[0].IsLandscape is { } landscape)
+                    segment.Add(new XAttribute(XmlConverterConstants.Attachments.OrientationAttribute,
+                        landscape ? XmlConverterConstants.Attachments.OrientationLandscape : XmlConverterConstants.Attachments.OrientationPortrait));
+                element.Add(segment);
+            }
 
             return element;
+        }
+
+        private static IEnumerable<List<AnnexBlock>> Runs(IReadOnlyList<AnnexBlock> blocks)
+        {
+            var run = new List<AnnexBlock>();
+            foreach (var block in blocks)
+            {
+                if (run.Count > 0 && run[0].IsLandscape != block.IsLandscape)
+                {
+                    yield return run;
+                    run = [];
+                }
+
+                run.Add(block);
+            }
+
+            if (run.Count > 0)
+                yield return run;
         }
 
         private static IEnumerable<XElement> ToContent(AnnexBlock block)

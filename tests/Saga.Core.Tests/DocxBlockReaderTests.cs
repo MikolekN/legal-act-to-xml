@@ -440,6 +440,31 @@ namespace Saga.Core.Tests
 
         private static string Table(params string[] rows) => $"<w:tbl>{string.Concat(rows)}</w:tbl>";
 
+        [Fact]
+        public void Block_TakesThePageOrientationOfTheSectionItBelongsTo()
+        {
+            // Sekcję kończy akapit niosący ustawienia sekcji — należy do niej; ostatnią sekcję opisują ustawienia treści.
+            var body =
+                P("Art. 1. Treść na stronie pionowej.") +
+                @"<w:p><w:pPr><w:sectPr><w:pgSz w:w=""11906"" w:h=""16838""/></w:sectPr></w:pPr><w:r><w:t>Koniec sekcji pionowej.</w:t></w:r></w:p>" +
+                Table(Row(Cell("Komórka na stronie poziomej"))) +
+                P("Akapit na stronie poziomej.") +
+                @"<w:sectPr><w:pgSz w:w=""16838"" w:h=""11906"" w:orient=""landscape""/></w:sectPr>";
+
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXml(body));
+            var blocks = new DocxBlockReader().ReadBlocks(stream);
+
+            Assert.Equal(new bool?[] { false, false, true, true }, blocks.Select(block => block.IsLandscape));
+        }
+
+        [Fact]
+        public void Block_InASectionWithoutPageSize_HasNoOrientation()
+        {
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXml(P("Art. 1. Treść.") + "<w:sectPr/>"));
+
+            Assert.Null(Assert.Single(new DocxBlockReader().ReadBlocks(stream)).IsLandscape);
+        }
+
         /// <summary>Komórka tabeli każdego niepustego bloku, po jego tekście.</summary>
         private static Dictionary<string, BlockTableCell?> CellsByText(string bodyXml)
         {

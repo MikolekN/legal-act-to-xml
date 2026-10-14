@@ -63,7 +63,7 @@ namespace Saga.Core.Services.Parsing
                     var run = blocks.Skip(i).TakeWhile(b => b.TableCell?.Table == cell.Table).ToList();
                     i += run.Count - 1;
 
-                    Current().Content.Add(new AnnexBlock { Table = ContentTables.FromBlocks(run) });
+                    Current().Content.Add(new AnnexBlock { Table = ContentTables.FromBlocks(run), IsLandscape = run[0].IsLandscape });
                     attachedToOpen = titleOpen = false;
                     continue;
                 }
@@ -103,7 +103,7 @@ namespace Saga.Core.Services.Parsing
                     titleOpen = true;
 
                     if (designation.Groups["note"] is { Success: true } note)
-                        annex.Content.Add(new AnnexBlock { Text = note.Value });
+                        annex.Content.Add(new AnnexBlock { Text = note.Value, IsLandscape = block.IsLandscape });
 
                     continue;
                 }
@@ -116,7 +116,7 @@ namespace Saga.Core.Services.Parsing
                 }
 
                 titleOpen = false;
-                Current().Content.Add(new AnnexBlock { Text = text });
+                Current().Content.Add(new AnnexBlock { Text = text, IsLandscape = block.IsLandscape });
 
                 if (!paragraphs.TryGetValue(current!, out var collected))
                     paragraphs[current!] = collected = [];
@@ -149,8 +149,9 @@ namespace Saga.Core.Services.Parsing
             if (annex.Content.Count != blocks.Count || annex.Content.Any(block => block.Text is null))
                 return;
 
+            // Jednostki zastępują akapity całej treści — stoją na stronie pierwszego z nich.
             if (AnnexUnits.TryBuild(blocks, annex.Id) is { } units)
-                annex.Content = units.Select(unit => new AnnexBlock { Unit = unit }).ToList();
+                annex.Content = units.Select(unit => new AnnexBlock { Unit = unit, IsLandscape = blocks[0].IsLandscape }).ToList();
         }
 
         // Tytuł ma własny styl; bez niego tytułem jest pierwszy wiersz, jeśli jest wyśrodkowany (styl bywa

@@ -47,5 +47,8 @@ namespace Saga.Model
         /// Jej adres zaczyna się od adresu załącznika (<c>zal_4__ust_I</c>).
         /// </summary>
         public Paragraph? Unit { get; set; }
+
+        /// <summary>Czy element stoi na stronie poziomej; null, gdy źródło układu strony nie podaje.</summary>
+        public bool? IsLandscape { get; set; }
     }
 }
