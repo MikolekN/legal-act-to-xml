@@ -239,6 +239,16 @@ namespace Saga.Core.Services.Parsing
         public bool AmendmentTriggerDetected { get; set; }
 
         /// <summary>
+        /// Głębokość cudzysłowu przytoczenia otwartego akapitem pod przepisem, który niczego nie zmienia
+        /// („1) oświadczenie następującej treści:" i „„Oświadczam, że:"). Dopóki jest większa od zera, kolejne akapity —
+        /// w dowolnym stylu — należą do przytoczenia (ADR-0076).
+        /// </summary>
+        public int ProvisionQuoteDepth { get; set; }
+
+        /// <summary>Czy zbierana treść to przytoczenie otwarte pod przepisem (<see cref="ProvisionQuoteDepth"/>).</summary>
+        public bool InProvisionQuote { get; set; }
+
+        /// <summary>
         /// Bufor akapitow biezacej nowelizacji. Zbiera akapity od wejscia w tryb
         /// nowelizacji az do powrotu do stylu ustawy matki, po czym deleguje
         /// do AmendmentBuilder (iteracja 2).

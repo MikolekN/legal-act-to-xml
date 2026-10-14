@@ -773,6 +773,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   oznaczeniem artykułu — zaczyna przytoczenie, a ustęp należy do swojego artykułu w akcie przytaczanym. Przedtem akapit
   zostawał tekstem, a punkty i kolejne ustępy przytoczenia stawały się podpunktami i punktami obwieszczenia.
   - W korpusie zmienia się 45 tekstów jednolitych: przybywa 62 przytoczeń zbudowanych z jednostek (`tresc-strukt`), znika 75 akapitów zostawionych tekstem (`fragment`), 73 fałszywe podpunkty i 16 fałszywych punktów obwieszczenia (punkty i ustępy przytoczonego przepisu brane za jednostki obwieszczenia). Powtórzonych eId w tekstach jednolitych jest 559 (było 594). Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory), pokrycie tekstu bez zmian.
+- **Oświadczenie w stylu cytatu** ([ADR-0076](docs/adr/0076-cudzyslow-otwarty-pod-przepisem-trwa-do-domkniecia.md)): „1) oświadczenie następującej treści:"
+  i „„Oświadczam, że: 1) … 2) …”" złożone stylem cytatu jest przytoczeniem pod punktem (`tresc-strukt`) — do domknięcia
+  cudzysłowu, bez względu na style pozycji. Przedtem pozycje oświadczenia stawały się punktami aktu.
+  - W korpusie zmienia się 11 tekstów jednolitych: 25 oświadczeń wychodzi jako `tresc-strukt`, a ich wiersz otwierający przestaje być `fragment` (28 akapitów). Powtórzonych eId w tekstach jednolitych jest 513 (było 559) — pozycje oświadczeń przestały być punktami aktu; nierozróżnionych okresem zostaje 34. Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory), pokrycie tekstu bez zmian. Bez stylów: 114 jednostek zgodnych więcej, żadna mniej; w pełni zgodnych tekstów jednolitych 628 z 728 (było 625).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

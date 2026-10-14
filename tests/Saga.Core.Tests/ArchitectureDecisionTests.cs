@@ -2418,6 +2418,34 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0076: cudzysłów otwarty pod przepisem trwa do domknięcia, bez względu na style
+        // ============================================================
+
+        [Fact]
+        public void Adr0076_QuoteOpenedUnderAProvision_RunsToItsClosingMark_AndItsItemsAreNotUnitsOfTheAct()
+        {
+            DocumentBlock Line(string text, string? style = null) => new() { Text = text, StyleId = style };
+            const string quoteStyle = "CYTcytatnpprzysigi";
+            var blocks = new List<DocumentBlock>
+            {
+                Line("USTAWA"), Line("z dnia 14 czerwca 2024 r."), Line("o rejestrze wytwórców"),
+                Line("Art. 1. Wytwórca dołącza do wniosku:", "ARTartustawynprozporzdzenia"),
+                Line("1) oświadczenie następującej treści:", "PKTpunkt"),
+                Line("„Oświadczam, że:", quoteStyle),
+                Line("1) dane zawarte we wniosku są kompletne;", quoteStyle),
+                Line("2) znane mi są warunki działalności.”;", "LITlitera"),
+                Line("2) oświadczenie o niekaralności.", "PKTpunkt"),
+                Line("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", "ARTartustawynprozporzdzenia"),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Pozycje oświadczenia należą do przytoczenia — punktami aktu są tylko „1)" i „2)" art. 1.
+            var points = document.Articles.First().Paragraphs.Single().Points;
+            Assert.Equal(["oświadczenie następującej treści:", "oświadczenie o niekaralności."], points.Select(point => point.ContentText));
+            Assert.Single(points[0].Continuation, block => block.Quotation is not null);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

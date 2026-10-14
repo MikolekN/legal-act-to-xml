@@ -118,6 +118,68 @@ namespace Saga.Core.Tests
                 document.Articles.First().Paragraphs[0].Continuation.Select(block => block.Text));
         }
 
+        // Korpus: 329304_2949179 — oświadczenie w stylu cytatu, druga pozycja omyłkowo w stylu litery, a po nim kolejny
+        // punkt aktu. Przedtem pozycje oświadczenia były punktami aktu o adresach jego punktów (ADR-0076).
+        private static readonly DocumentBlock[] DeclarationInQuotationStyle =
+        [
+            Block("Art. 1. 1. Wytwórca dołącza do wniosku o wpis do rejestru wytwórców:", Article),
+            Block("1) oświadczenie następującej treści:", Point),
+            Block("„Oświadczam, że:", QuoteStyle),
+            Block("1) dane zawarte we wniosku są kompletne i zgodne z prawdą;", QuoteStyle),
+            Block("2) znane mi są warunki wykonywania działalności.”;", "LITlitera"),
+            Block("2) oświadczenie o niekaralności wytwórcy.", Point),
+            Block("2. Oświadczenia, o których mowa w ust. 1, powinny również zawierać podpis.", Paragraph),
+        ];
+
+        [Fact]
+        public void QuoteOpenedUnderTheProvision_RunsToItsClosingMark_WhateverTheStyles()
+        {
+            var (document, xml) = Export(false, DeclarationInQuotationStyle);
+
+            var paragraph = document.Articles.First().Paragraphs[0];
+            Assert.Equal(["1", "2"], paragraph.Points.Select(point => point.Number!.Value));
+            var quotation = Assert.Single(paragraph.Points[0].Continuation.Select(block => block.Quotation).OfType<Quotation>());
+            Assert.Equal("Oświadczam, że:", quotation.Content.PlainText);
+            Assert.Equal(["1", "2"], quotation.Content.Points.Select(point => point.Number!.Value));
+
+            Assert.Equal("oba", Assert.Single(Named(xml, "tresc-strukt")).Attribute("cudzyslowy")?.Value);
+            Assert.Equal(2, document.Articles.First().Paragraphs.Count);
+        }
+
+        [SchemaPlFact]
+        public void QuoteOpenedUnderTheProvision_IsSchemaValid()
+        {
+            var (_, xml) = Export(true, DeclarationInQuotationStyle);
+
+            Assert.Empty(SchemaPl.Validator.Validate(xml));
+        }
+
+        [Fact]
+        public void QuoteOpenedUnderTheProvision_WithoutStyles_IsQuotedContentToo()
+        {
+            var (document, _) = Export(false, DeclarationInQuotationStyle.Select(block => block with { StyleId = null }).ToArray());
+
+            var paragraph = document.Articles.First().Paragraphs[0];
+            Assert.Equal(["1", "2"], paragraph.Points.Select(point => point.Number!.Value));
+            Assert.Single(paragraph.Points[0].Continuation.Select(block => block.Quotation).OfType<Quotation>());
+        }
+
+        [Fact]
+        public void QuoteLeftOpenUnderTheProvision_EndsAtTheNextArticle()
+        {
+            // Cudzysłowu zamykającego zabrakło w źródle — przytoczenie nie przechodzi przez artykuły.
+            var (document, _) = Export(false,
+                Block("Art. 1. Przedsiębiorca składa oświadczenie następującej treści:", Article),
+                Block("„Oświadczam, że:", QuoteStyle),
+                Block("1) dane są kompletne;", QuoteStyle),
+                Block("2) znane mi są warunki działalności.", QuoteStyle),
+                Block("Art. 2. Oświadczenie składa się pod rygorem odpowiedzialności karnej.", Article));
+
+            Assert.Equal(["1", "2", "9"], document.Articles.Select(article => article.Number!.Value));
+            var quotation = Assert.Single(document.Articles.First().Paragraphs[0].Continuation.Select(block => block.Quotation).OfType<Quotation>());
+            Assert.False(quotation.HasClosingQuote);
+        }
+
         [Fact]
         public void QuotedContentUnderAnAmendingProvision_IsStillAnAmendment()
         {

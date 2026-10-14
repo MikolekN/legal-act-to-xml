@@ -458,7 +458,8 @@ namespace Saga.Core.Services.Parsing
                 // Bilans cudzyslowow domknal cytowana tresc („…") — koniec nowelizacji bez stylow (§ 94 ZTP).
                 // Cudzysłów zamykający bez otwarcia domyka treść, której otwarcia zabrakło w źródle.
                 var untrackedContent = string.IsNullOrEmpty(styleId) && !classification.IsAmendmentContent && !quoteTracker.IsArmed;
-                if (quoteTracker.ClosureReached || (untrackedContent && QuoteBalanceTracker.ClosesUnopenedQuote(text)))
+                if (quoteTracker.ClosureReached || (untrackedContent && QuoteBalanceTracker.ClosesUnopenedQuote(text))
+                    || (context.InProvisionQuote && context.ProvisionQuoteDepth == 0))
                 {
                     _amendmentManager.Flush(context);
                     context.InsideAmendment = false;

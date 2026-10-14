@@ -37,6 +37,29 @@ namespace Saga.Core.Services.Parsing
         public void UpdateState(ParsingContext context, ClassificationResult classification, string text)
         {
             // 1. Styl Z/... → zawsze nowelizacja
+            // 0. Przytoczenie otwarte pod przepisem, który niczego nie zmienia: trwa do domknięcia cudzysłowu, bez względu
+            //    na styl akapitów — kończy je najwyżej kolejny artykuł, bo cytat nie przechodzi przez artykuły (ADR-0076).
+            if (context.InProvisionQuote)
+            {
+                if (classification.Kind == ParagraphKind.Article && !QuoteBalanceTracker.OpensQuote(text))
+                {
+                    EndProvisionQuote(context);
+                    context.InsideAmendment = false;
+                    return;
+                }
+
+                context.ProvisionQuoteDepth = QuoteDepthAfter(context.ProvisionQuoteDepth, text);
+                return;
+            }
+
+            if (OpensProvisionQuote(context, text))
+            {
+                context.InsideAmendment = true;
+                context.InProvisionQuote = true;
+                context.ProvisionQuoteDepth = QuoteDepthAfter(0, text);
+                return;
+            }
+
             if (classification.IsAmendmentContent)
             {
                 context.InsideAmendment = true;
@@ -194,6 +217,7 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public void Flush(ParsingContext context)
         {
+            EndProvisionQuote(context);
             var collector = context.AmendmentCollector;
             if (!collector.IsCollecting || collector.Count == 0)
             {
@@ -404,6 +428,37 @@ namespace Saga.Core.Services.Parsing
                 if (text.Length > 0 && !FormulaLegend.TryAbsorb(unit, text, leading))
                     unit.Continuation.Add(new ContentBlock { Text = text });
             }
+        }
+
+        /// <summary>
+        /// Akapit otwiera przytoczenie pod przepisem: zaczyna się cudzysłowem, którego nie domyka, a przepis nad nim kończy
+        /// dwukropek i niczego nie zmienia („1) oświadczenie następującej treści:" i „„Oświadczam, że:") (ADR-0076).
+        /// </summary>
+        private static bool OpensProvisionQuote(ParsingContext context, string text) =>
+            !context.InsideAmendment && !context.AmendmentTriggerDetected && !context.AmendmentCollector.IsCollecting
+            && QuoteBalanceTracker.OpensQuote(text) && QuoteDepthAfter(0, text) > 0
+            && GetOwner(context) is { } provision && provision.ContentText.TrimEnd().EndsWith(':')
+            && !AmendsAnything(context, provision);
+
+        /// <summary>Głębokość cudzysłowu po akapicie: otwarcia minus zamknięcia, nie mniej niż zero.</summary>
+        private static int QuoteDepthAfter(int depth, string text)
+        {
+            foreach (var character in text)
+            {
+                if (character == QuotationMarks.Opening)
+                    depth++;
+                else if (QuotationMarks.IsClosing(character) && depth > 0)
+                    depth--;
+            }
+
+            return depth;
+        }
+
+        /// <summary>Kończy przytoczenie otwarte pod przepisem.</summary>
+        internal static void EndProvisionQuote(ParsingContext context)
+        {
+            context.InProvisionQuote = false;
+            context.ProvisionQuoteDepth = 0;
         }
 
         /// <summary>
