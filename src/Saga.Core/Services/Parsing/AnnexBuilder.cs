@@ -39,6 +39,11 @@ namespace Saga.Core.Services.Parsing
 
         private static readonly string[] TitleStyles = ["TYTZAL", "TYTTABELI"];
 
+        // Objaśnienie gwiazdki („*) Zgodnie z § 11 …", „*[)] Dotyczy położnych.", „**) …") — przypis wpisany akapitem,
+        // nie pozycja wyliczenia. Gwiazdka bywa z nawiasem w indeksie górnym.
+        private static readonly Regex AsteriskNote = new(
+            @"^\s*(?:\[\s*\*+\s*\)?\s*\]|\*+\s*(?:\[\s*\)\s*\]|\))?)\s*\S", RegexOptions.Compiled);
+
         /// <param name="ofAnnouncement">Załączniki obwieszczenia: wskazaniem jest „Załącznik do obwieszczenia …".</param>
         internal static List<Annex> Build(IReadOnlyList<DocumentBlock> blocks, bool ofAnnouncement = false)
         {
@@ -141,17 +146,29 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Załącznik, którego cała treść to akapity wyliczenia, dostaje zamiast nich jednostki. Treść z tabelą,
-        /// dopiskiem albo choć jednym akapitem spoza wyliczenia zostaje, jaka była.
+        /// Załącznik, którego cała treść to akapity wyliczenia, dostaje zamiast nich jednostki. Objaśnienia gwiazdek na
+        /// końcu treści („*) Zgodnie z § 11 …") do wyliczenia nie należą — zostają akapitami za jednostkami. Treść
+        /// z tabelą, dopiskiem albo choć jednym innym akapitem spoza wyliczenia zostaje, jaka była.
         /// </summary>
         private static void StructureContent(Annex annex, List<DocumentBlock> blocks)
         {
             if (annex.Content.Count != blocks.Count || annex.Content.Any(block => block.Text is null))
                 return;
 
-            // Jednostki zastępują akapity całej treści — stoją na stronie pierwszego z nich.
-            if (AnnexUnits.TryBuild(blocks, annex.Id) is { } units)
-                annex.Content = units.Select(unit => new AnnexBlock { Unit = unit, IsLandscape = blocks[0].IsLandscape }).ToList();
+            var notes = 0;
+            while (notes < blocks.Count && AsteriskNote.IsMatch(blocks[blocks.Count - 1 - notes].Text.CollapseWhitespace()))
+                notes++;
+            var enumeration = blocks.Take(blocks.Count - notes).ToList();
+            if (enumeration.Count == 0)
+                return;
+
+            // Jednostki zastępują akapity wyliczenia — stoją na stronie pierwszego z nich.
+            if (AnnexUnits.TryBuild(enumeration, annex.Id) is { } units)
+            {
+                annex.Content = units.Select(unit => new AnnexBlock { Unit = unit, IsLandscape = blocks[0].IsLandscape })
+                    .Concat(annex.Content.Skip(enumeration.Count))
+                    .ToList();
+            }
         }
 
         // Tytuł ma własny styl; bez niego tytułem jest pierwszy wiersz, jeśli jest wyśrodkowany (styl bywa

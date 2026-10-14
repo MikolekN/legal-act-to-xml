@@ -2655,6 +2655,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0083: objaśnienie gwiazdki nie jest pozycją wyliczenia, a jej znacznik jest indeksem górnym
+        // ============================================================
+
+        [Fact]
+        public void Adr0083_AsteriskNote_IsNotAnItemOfTheEnumeration_AndItsMarkerIsASuperscript()
+        {
+            DocumentBlock Line(string text, string? style = null) => new() { Text = text, StyleId = style };
+            var blocks = new List<DocumentBlock>
+            {
+                Line("USTAWA"), Line("z dnia 23 stycznia 2026 r."), Line("o drogach"),
+                Line("Art. 1. Drogi określa załącznik do ustawy."),
+                Line("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+                Line("Załączniki do ustawy z dnia 23 stycznia 2026 r."), Line("Załącznik nr 1"),
+                Line("DROGI KLASY A*[)]"),
+                Line("1) autostrada A1;", "PKTpunkt"), Line("2) autostrada A2.", "PKTpunkt"),
+                // Szablon składa objaśnienie stylem części wspólnej punktów.
+                Line("*[)]\tZgodnie z przepisami o drogach publicznych.", "CZWSPPKTczwsplnapunktw"),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var annex = Assert.Single(document.Annexes);
+            Assert.Equal(2, annex.Content.Count);
+            Assert.NotNull(annex.Content[0].Unit);
+            Assert.NotNull(annex.Content[1].Text);
+
+            var xml = LegalDocumentConverter.Convert(document);
+            Assert.DoesNotContain(xml.DescendantNodes().OfType<XText>(), text => text.Value.Contains("[)]"));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

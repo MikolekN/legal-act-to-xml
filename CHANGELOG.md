@@ -819,6 +819,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   („uchyla się art. 11a"), ma własną nowelizację — w eksporcie instrukcje w jego zdaniu. Przepis cytowany bez miejsca zmiany
   na początku zostaje tekstem.
   - W korpusie zmienia się 7 dokumentów: w cytowanych przepisach staje 40 instrukcji `now:zamien-tekst` i 7 `now:uchyl`. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory).
+- **Objaśnienia gwiazdek** ([ADR-0083](docs/adr/0083-objasnienie-gwiazdki-nie-jest-pozycja-wyliczenia-a-jej-znacznik-jest-indeksem-gornym.md)): akapit „*) Zgodnie z …" za wyliczeniem załącznika
+  zostaje akapitem za jednostkami — także bez stylów, gdzie przedtem psuł budowę całego wyliczenia — a znaczniki objaśnień
+  („(*)", „*)", „I)") wychodzą jako `sup`, nie w zapisie kanału tekstowego.
+  - W korpusie zmienia się 64 dokumenty: 509 znaczników objaśnień wychodzi jako `sup` zamiast zapisu kanału tekstowego („[(*)]”, „[*)]”, „[I)]”) i w jednym akcie dwa objaśnienia przestają być częścią wspólną punktów. Zgodność bez stylów: rozporządzenia 97,74 % → 98,11 % jednostek (brakujących 655 → 548). Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

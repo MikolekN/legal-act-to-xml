@@ -282,6 +282,51 @@ namespace Saga.Core.Tests
             Assert.All(Assert.Single(document.Annexes).Content, block => Assert.Null(block.Unit));
         }
 
+        // Korpus: 292961_2706155 — objaśnienie gwiazdki z tytułu stoi za wyliczeniem, w szablonie stylem części wspólnej.
+        private static DocumentBlock[] AnnexWithAnAsteriskNote(string? noteStyle) =>
+        [
+            Block("Załączniki do ustawy z dnia 23 stycznia 2026 r.", AttachedToStyle),
+            Block("Załącznik nr 1", DesignationStyle),
+            Block("DROGI KRAJOWE KLASY A I S*[)], NA KTÓRYCH POBIERA SIĘ OPŁATĘ", TitleStyle),
+            Block("1) autostrada A1 na odcinku Toruń – Gorzyczki;", "PKTpunkt"),
+            Block("2) autostrada A2 na odcinkach:", "PKTpunkt"),
+            Block("a) Modła Królewska – Konotopa,", "LITlitera"),
+            Block("b) Lubelska – Kałuszyn.", "LITlitera"),
+            Block("*[)]\tZgodnie z § 11 pkt 1 rozporządzenia w sprawie dróg publicznych.", noteStyle),
+        ];
+
+        [Theory]
+        [InlineData("CZWSPPKTczwsplnapunktw")]
+        [InlineData(null)]
+        public void AsteriskNoteAfterTheEnumeration_StaysText_AfterTheUnits(string? noteStyle)
+        {
+            var annex = Assert.Single(Parse(AnnexWithAnAsteriskNote(noteStyle)).Annexes);
+
+            Assert.Equal(2, annex.Content.Count);
+            Assert.Equal(["1", "2"], annex.Content[0].Unit!.Points.Select(point => point.Number!.Value));
+            Assert.DoesNotContain(annex.Content[0].Unit!.CommonParts, part => part.Type == CommonPartType.WrapUp);
+            Assert.StartsWith("*[)]", annex.Content[1].Text);
+        }
+
+        [Fact]
+        public void AsteriskMarkers_AreExportedAsSuperscripts_NotInTheTextChannelNotation()
+        {
+            var xml = LegalDocumentConverter.Convert(Parse(AnnexWithAnAsteriskNote(null)));
+            var annex = Assert.Single(Named(xml, "zalacznik"));
+
+            // „S*[)]" w tytule i „*[)]" przed objaśnieniem: gwiazdka zwykła, nawias w indeksie górnym.
+            Assert.DoesNotContain(annex.DescendantNodes().OfType<XText>(), text => text.Value.Contains("[)]"));
+            Assert.Equal([")", ")"], Named(annex, "sup").Select(sup => sup.Value));
+        }
+
+        [SchemaPlFact]
+        public void AnnexWithAnAsteriskNote_IsSchemaValid_InItsBody()
+        {
+            var xml = LegalDocumentConverter.Convert(Parse(AnnexWithAnAsteriskNote(null)));
+
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
+        }
+
         [Fact]
         public void AnnexUnits_AreExportedInTheSegment_WithTheDateOfTheAct()
         {
