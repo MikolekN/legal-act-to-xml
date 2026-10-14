@@ -196,7 +196,25 @@ namespace Saga.Core.Tests
             return settings;
         }
 
-        private static byte[] WithFootnotes(IReadOnlyList<string> footnotes, Word.Body body)
+        /// <summary>
+        /// Dokument z przypisami o treści podanej jako XML akapitów (<c>&lt;w:p&gt;…</c>, przestrzeń nazw jak w treści
+        /// <see cref="WithBodyXml"/>) — do treści, której nie zapisze jeden wiersz: kilka akapitów, style akapitów
+        /// przypisu, numer przypisu wpisany tekstem zamiast znaku odwołania. Wiersze treści aktu jak
+        /// w <see cref="WithFootnotes(IReadOnlyList{string}, string[])"/>.
+        /// </summary>
+        internal static byte[] WithFootnoteXml(IReadOnlyList<string> footnoteParagraphsXml, params string[] bodyLines) =>
+            WithFootnotes(
+                footnoteParagraphsXml.Select(xml => new Word.Footnote($"<w:footnote {WordNamespace}>{xml}</w:footnote>")).ToList(),
+                new Word.Body(bodyLines.Select(FootnotedParagraph).ToArray<OpenXmlElement>()));
+
+        private static byte[] WithFootnotes(IReadOnlyList<string> footnotes, Word.Body body) =>
+            WithFootnotes(footnotes.Select(text => new Word.Footnote(new Word.Paragraph(
+                new Word.ParagraphProperties(new Word.ParagraphStyleId { Val = "ODNONIKtreodnonika" }),
+                Superscript(new Word.FootnoteReferenceMark()),
+                Superscript(new Word.Text(")")),
+                new Word.Run(new Word.Text(text) { Space = SpaceProcessingModeValues.Preserve })))).ToList(), body);
+
+        private static byte[] WithFootnotes(IReadOnlyList<Word.Footnote> footnotes, Word.Body body)
         {
             using var stream = new MemoryStream();
             using (var document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
@@ -212,14 +230,8 @@ namespace Saga.Core.Tests
 
                 for (var i = 0; i < footnotes.Count; i++)
                 {
-                    part.Footnotes.AppendChild(new Word.Footnote(new Word.Paragraph(
-                        new Word.ParagraphProperties(new Word.ParagraphStyleId { Val = "ODNONIKtreodnonika" }),
-                        Superscript(new Word.FootnoteReferenceMark()),
-                        Superscript(new Word.Text(")")),
-                        new Word.Run(new Word.Text(footnotes[i]) { Space = SpaceProcessingModeValues.Preserve })))
-                    {
-                        Id = FootnoteId(i + 1),
-                    });
+                    footnotes[i].Id = FootnoteId(i + 1);
+                    part.Footnotes.AppendChild(footnotes[i]);
                 }
             }
 

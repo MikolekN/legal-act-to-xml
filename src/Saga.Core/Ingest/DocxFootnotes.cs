@@ -96,10 +96,13 @@ namespace Saga.Core.Ingest
                 if (footnote.Id?.Value is not { } id || !footnotes._numbers.ContainsKey(id))
                     continue;
 
-                footnotes._texts[id] = footnote.Descendants<Word.Paragraph>()
+                var texts = footnote.Descendants<Word.Paragraph>()
                     .Select(paragraph => WithoutOwnMark(paragraph.GetFullText(footnotes._numbers)))
                     .Where(text => text.Length > 0)
                     .ToList();
+                if (texts.Count > 0)
+                    texts[0] = WithoutTypedOwnNumber(texts[0], footnotes._designations[id].Symbol);
+                footnotes._texts[id] = texts;
             }
 
             return footnotes;
@@ -203,6 +206,15 @@ namespace Saga.Core.Ingest
             }
 
             return trimmed.Trim();
+        }
+
+        // Treść przypisu bywa otwarta jego numerem wpisanym tekstem w indeksie górnym („[1)]") zamiast znaku
+        // odwołania Worda — to też oznaczenie przypisu, nie jego treść. Tylko własne oznaczenie: inny numer
+        // w indeksie górnym na początku treści byłby odwołaniem do innego przypisu.
+        internal static string WithoutTypedOwnNumber(string text, string symbol)
+        {
+            var typed = "[" + symbol + ")]";
+            return text.StartsWith(typed, StringComparison.Ordinal) ? text[typed.Length..].TrimStart() : text;
         }
     }
 }

@@ -781,6 +781,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   (`pionowa`, `pozioma`) z ustawień sekcji DOCX, a zmiana orientacji w załączniku zaczyna nowy segment. Źródło bez
   układu strony (PDF, TXT) daje segment bez atrybutu.
   - W korpusie wszystkie 722 segmenty załączników (432 dokumenty) niosą `orientacja`, 29 z nich `pozioma`; w 2 dokumentach załącznik dzieli się na trzy segmenty (pionowa — pozioma — pionowa: szeroka tabela w środku), przybywa 4 segmentów. Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory). Wobec przykładu DU/2026/252 zgadzają się trzy segmenty; czwarty jest w przykładzie bez atrybutu, u nas `pionowa` — jak strona źródła.
+- **Numer przypisu wpisany tekstem nie jest jego treścią** (`DocxFootnotes.WithoutTypedOwnNumber`): treść przypisu
+  otwarta jego własnym numerem w indeksie górnym („[1)]\tNiniejsza ustawa …") zamiast znaku odwołania Worda traci ten
+  numer, jak przy znaku odwołania. Inny numer w indeksie górnym na początku treści zostaje — to odwołanie.
+  - W korpusie zmienia się 67 odnośników w 62 dokumentach (przy tytule, organie i w treści aktu). Zgodnych ze schematem
+    nadal 2278 z 2321.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

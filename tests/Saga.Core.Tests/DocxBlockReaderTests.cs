@@ -420,6 +420,25 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void FootnoteNumberTypedInSuperscript_IsNotItsContent()
+        {
+            // Korpus: 67 przypisów w 60 aktach — numer wpisany tekstem w stylu indeksu górnego zamiast znaku odwołania.
+            const string superscript = @"<w:rPr><w:rStyle w:val=""IGindeksgrny""/></w:rPr>";
+            var blocks = Read(DocxFixtures.WithFootnoteXml(
+                [
+                    $@"<w:p><w:r>{superscript}<w:t>1)</w:t></w:r><w:r><w:tab/><w:t>Niniejsza ustawa służy stosowaniu:</w:t></w:r></w:p>" +
+                    @"<w:p><w:r><w:t>1)</w:t></w:r><w:r><w:tab/><w:t>rozporządzenia nr 1;</w:t></w:r></w:p>",
+                    // Inny numer w indeksie górnym na początku treści to odwołanie, nie oznaczenie tego przypisu.
+                    $@"<w:p><w:r>{superscript}<w:t>7)</w:t></w:r><w:r><w:t xml:space=""preserve""> Zob. odnośnik 7.</w:t></w:r></w:p>",
+                ],
+                "o rolnictwie{1}{, }{2}"));
+
+            var footnotes = blocks[0].Footnotes;
+            Assert.Equal(["Niniejsza ustawa służy stosowaniu:", "1)\trozporządzenia nr 1;"], footnotes[0].Paragraphs);
+            Assert.Equal("[7)] Zob. odnośnik 7.", Assert.Single(footnotes[1].Paragraphs));
+        }
+
+        [Fact]
         public void DocumentWithoutFootnotes_HasNoneOnItsBlocks()
         {
             var blocks = Read(DocxFixtures.WithoutHeader("Art. 1. Ustawa określa zasady."));
