@@ -2544,6 +2544,30 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0080: komenda w załączniku wskazuje jednostki załącznika
+        // ============================================================
+
+        [Fact]
+        public void Adr0080_CommandInsideAnAnnex_AddressesTheAnnex_NotUnitsOfTheAct()
+        {
+            static string[] Read(string text, StructuralReference? context = null) =>
+                UnitAddressReader.Read(text, context).Select(address => address.Start.ToString()).ToArray();
+
+            Assert.Equal(["zal_1__ust_2__pkt_57"], Read("w załączniku nr 1 w ust. 2 po pkt 57 dodaje się pkt 57a w brzmieniu:"));
+
+            // Numeracja treści załącznika („pkt 1.4.1") i jednostka aktu, której w załączniku nie ma („§ 10"), to miejsce
+            // w treści załącznika: adres zatrzymuje się na najgłębszej znanej jednostce.
+            Assert.Equal(["zal_1"], Read("w pkt 1.4.1 zdanie pierwsze otrzymuje brzmienie:", new StructuralReference { Annex = "1" }));
+            Assert.Equal(["zal_36"], Read("w § 10 w ust. 2 pkt 9 otrzymuje brzmienie:", new StructuralReference { Annex = "36" }));
+
+            // Załącznik bez numeru nie ma adresu — jednostki pod nim też nie.
+            Assert.Equal([string.Empty], Read("w załączniku do rozporządzenia po pkt 4 dodaje się pkt 4a w brzmieniu:"));
+
+            // Wzmianka o załączniku miejscem komendy nie jest.
+            Assert.Equal(["art_5__ust_2"], Read("w art. 5 ust. 2 wyrazy, o których mowa w załączniku nr 1, skreśla się"));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

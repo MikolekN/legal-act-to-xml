@@ -113,6 +113,21 @@ namespace Saga.Core.Services.UnitReferences
             return context;
         }
 
+        /// <summary>
+        /// Miejsce w treści załącznika poza jego jednostkami („w tabeli nr 1", „w części II", „w pkt 1.4.1"): adresem
+        /// zostaje najgłębsza znana jednostka załącznika, a kolejne oznaczenia jednostek już go nie wydłużają — tylko
+        /// odróżniają cele od siebie (ADR-0080). Poza załącznikiem nic nie robi.
+        /// </summary>
+        internal bool EnterAnnexContent()
+        {
+            if (Path.Annex is null || Path.InAnnexContent)
+                return false;
+
+            Path = Path.Clone();
+            Path.AnnexContainer = Path.ToString();
+            return true;
+        }
+
         /// <summary>Przesuwa ścieżkę o jedno oznaczenie w zamrożonym kontekście.</summary>
         internal UnitStep Step(in UnitStepContext context, string designation)
         {
@@ -124,14 +139,27 @@ namespace Saga.Core.Services.UnitReferences
                 ? PendingDisposition.Drop
                 : PendingDisposition.Flush;
 
+
             if (context.Level == UnitLevel.Tiret)
             {
                 if (!TryApplyTiret(designation, context.ExplicitKeyword, context.TiretDepth))
                     return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
             }
+            else if (context.Level == UnitLevel.Annex)
+            {
+                if (!FitsLevel(context.Level, designation))
+                    return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
+
+                // Załącznik zaczyna ścieżkę od nowa: jednostki pod nim są jednostkami załącznika (ADR-0080).
+                _tiretPath.Clear();
+                _systematizingPath.Clear();
+                _articleIsSection = false;
+                Path = new StructuralReference { Annex = designation };
+            }
             else if (IsSystematizing(context.Level))
             {
-                if (SystematizingSegment(context.Level, designation) is not { } segment)
+                // „w części 1" pod załącznikiem to podział treści załącznika, nie część aktu.
+                if (Path.Annex is not null || SystematizingSegment(context.Level, designation) is not { } segment)
                     return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
 
                 var level = context.Level;
@@ -155,6 +183,11 @@ namespace Saga.Core.Services.UnitReferences
             {
                 if (!FitsLevel(context.Level, designation))
                     return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
+
+                // Jednostki załącznika zaczynają się od ustępu (ADR-0028): „§ 10" w załączniku to miejsce w jego treści —
+                // odróżnia cele („§ 107 i § 108"), ale adresu nie wydłuża (ADR-0080).
+                if (context.Level == UnitLevel.Article && Path.Annex is not null)
+                    EnterAnnexContent();
 
                 if (context.Level == UnitLevel.Paragraph && context.CodeParagraph && Path.Article is null)
                     return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
@@ -210,6 +243,8 @@ namespace Saga.Core.Services.UnitReferences
             UnitLevel.Article or UnitLevel.Paragraph or UnitLevel.Point =>
                 designation.Length > 0 && char.IsDigit(designation[0]),
             UnitLevel.Letter => designation.Length is 1 or 2 && designation.All(DesignationAlphabet.IsLowerLetter),
+            // Numer załącznika („nr 1", „nr 2a"); pusty — załącznik bez numeru (ADR-0080).
+            UnitLevel.Annex => designation.Length == 0 || char.IsDigit(designation[0]),
             _ => true,
         };
 

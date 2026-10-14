@@ -110,8 +110,10 @@ namespace Saga.Core.Services.Parsing
             if (level == 0)
                 return string.Empty;
 
+            // Jednostka dodawana w załączniku stoi pod jego adresem (zal_1__ust_2__pkt_57a, ADR-0080).
             return new StructuralReference
             {
+                Annex = target.Annex,
                 Article = target.Article,
                 Paragraph = level > 1 ? target.Paragraph : null,
                 ParagraphIsCodeParagraph = level > 1 && target.ParagraphIsCodeParagraph,

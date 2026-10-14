@@ -795,6 +795,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   brzmienie:", „akapity czwarty i piąty otrzymują brzmienie:" cytują tekst — nie część wspólną ze stylu, którym szablon
   składa cytowane zdania, i nie punkty z oznaczenia na początku akapitu tekstu załącznika.
   - W korpusie zmienia się 8 dokumentów (4 akty, każdy dwa razy): 100 cytatów wychodzi tekstem (`cytat-w-tekscie`) zamiast 122 cytatów strukturalnych z częścią wspólną, tiretem, punktem albo literą, których zmieniany akt nie ma. Zgodnych ze schematem nadal 2278 z 2321 (oba walidatory). Zgodność bez stylów: rozporządzenia 97,38 % → 97,76 % jednostek (w pełni zgodnych 1006 → 1012), ustawy w pełni zgodnych 210 → 211 — różnice znikają, bo mylił się przebieg ze stylami.
+- **Komenda w załączniku** ([ADR-0080](docs/adr/0080-komenda-w-zalaczniku-wskazuje-jednostki-zalacznika.md)): „w załączniku nr 1 w ust. 2 po pkt 57 dodaje się
+  pkt 57a" wskazuje `zal_1__ust_2__pkt_57`, a nie punkt aktu; numeracja treści załącznika („pkt 1.4.1", „lp. 1.54") nie
+  daje oznaczenia „1"; uchylenie wiersza tabeli załącznika nie wskazuje całego załącznika.
+  - W korpusie zmienia się 1010 adresów celu w 121 dokumentach: 85 wskazuje jednostki załącznika (`zal_2__ust_2__pkt_57`), 208 — załącznik albo jego najgłębszą znaną jednostkę jako miejsce zmiany w tekście (127 przedtem z adresem jednostki aktu, 81 bez adresu), a 717 adresów jednostek aktu, których komenda nie dotyczyła, staje się `UNKNOWN` (załącznik bez numeru, wiersze tabel, części i numeracja treści załącznika). Liczba instrukcji bez zmian; zgodnych ze schematem nadal 2278 z 2321 (oba walidatory).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

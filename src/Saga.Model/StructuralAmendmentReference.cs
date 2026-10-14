@@ -46,6 +46,24 @@ namespace Saga.Model
         /// </summary>
         public string? Systematizing { get; set; }
 
+        /// <summary>
+        /// Numer załącznika, gdy adres wskazuje miejsce w załączniku aktu („w załączniku nr 1 … w ust. 2"); jednostki pod
+        /// nim są jednostkami załącznika (ADR-0028). Pusty napis — załącznik bez numeru, którego adresu akt nie ma
+        /// (ADR-0024): taki adres, z jednostkami pod nim, niczego nie wskazuje (ADR-0080).
+        /// </summary>
+        public string? Annex { get; set; }
+
+        /// <summary>
+        /// Adres najgłębszej znanej jednostki załącznika, gdy wskazane miejsce leży w treści załącznika poza jego
+        /// jednostkami — w tabeli, w części, pod numeracją wielopoziomową („w tabeli nr 1", „w pkt 1.4.1"). Jednostki
+        /// pod tym miejscem nie są jednostkami załącznika: odróżniają cele od siebie, ale adresem jest ta jednostka
+        /// (ADR-0080).
+        /// </summary>
+        public string? AnnexContainer { get; set; }
+
+        /// <summary>Czy adres wskazuje miejsce w treści załącznika poza jego jednostkami.</summary>
+        public bool InAnnexContent => AnnexContainer is not null;
+
         public string? Article { get; set; }
         public string? Paragraph { get; set; }
 
@@ -61,43 +79,50 @@ namespace Saga.Model
 
         /// <summary>Ustawia artykuł i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithArticle(string value) =>
-            new() { Article = value };
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = value };
 
         /// <summary>Ustawia ustęp i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithParagraph(string value) =>
-            new() { Article = Article, Paragraph = value };
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = value };
 
         /// <summary>Ustawia paragraf kodeksu i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithCodeParagraph(string value) =>
-            new() { Article = Article, Paragraph = value, ParagraphIsCodeParagraph = true };
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = value, ParagraphIsCodeParagraph = true };
 
         /// <summary>Ustawia punkt i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithPoint(string value) =>
-            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = value };
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = value };
 
         /// <summary>Ustawia literę i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithLetter(string value) =>
-            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = value };
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = value };
 
         /// <summary>Ustawia tiret i zeruje zdanie.</summary>
         public StructuralReference WithTiret(string value) =>
-            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = value };
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = value };
 
         /// <summary>Ustawia zdanie, zachowując wszystkie poziomy nadrzędne.</summary>
         public StructuralReference WithSentence(string value) =>
-            new() { Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = value };
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = value };
 
         /// <summary>Skrót odnośnika w adresie (<c>odn_1</c>).</summary>
         public const string FootnotePrefix = "odn";
 
         public StructuralReference Clone() =>
-            new() { Systematizing = Systematizing, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence, Footnote = Footnote };
+            new() { Systematizing = Systematizing, Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence, Footnote = Footnote };
 
         public override string ToString()
         {
+            // Miejsce w załączniku bez numeru nie ma adresu — ani ono, ani jednostki pod nim.
+            if (Annex is { Length: 0 })
+                return string.Empty;
+            if (AnnexContainer is not null)
+                return AnnexContainer;
+
             var parts = new List<string>();
 
             if (Systematizing != null) parts.Add(Systematizing);
+            if (Annex != null) parts.Add(EIdSegment.Of(Saga.Model.Annex.EIdPrefix, Annex));
             if (Article != null) parts.Add(EIdSegment.Of("art", Article));
             if (Paragraph != null)
                 parts.Add(EIdSegment.Of(ParagraphIsCodeParagraph ? EditorialUnits.Paragraph.CodeParagraphRole : "ust", Paragraph));

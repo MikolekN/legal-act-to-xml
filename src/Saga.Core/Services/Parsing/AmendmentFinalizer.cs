@@ -172,6 +172,19 @@ namespace Saga.Core.Services.Parsing
             // 3a. Uzupełnij cel z komendy tekstowej — źródło o niższym priorytecie niż mapa stylów;
             //     dokłada tylko to, czego adres celu nie wskazał (tiret), i ostrzega o fragmencie zdania.
             EnrichTargetsFromCommand(amendment, collector);
+
+            // 3b. Sam załącznik albo miejsce w treści załącznika poza jego jednostkami jest celem tylko zmiany w tekście.
+            //     Jednostki, której numeracji treści załącznika nie da się odczytać („skreśla się lp. 7", „poz. A otrzymuje
+            //     brzmienie:"), taki adres nie wskazuje — uchylenie albo zastąpienie objęłoby więcej, niż zmienia (ADR-0080).
+            if (!ChangesTextOnly(amendment))
+            {
+                foreach (var target in amendment.Targets.Where(target => IsAnnexContainer(target.Structure)))
+                {
+                    target.Structure = new StructuralReference { Annex = string.Empty };
+                    target.RangeEnd = null;
+                }
+            }
+
             AmendmentTargetPairing.AnchorContentUnits(amendment);
 
             // 4. Połącz z JournalInfo (TargetLegalAct)
@@ -515,6 +528,26 @@ namespace Saga.Core.Services.Parsing
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Info,
                     "Nie wykryto publikatora (Dz.U.) aktu zmienianego dla tej nowelizacji.");
             }
+        }
+
+        /// <summary>Adres samego załącznika albo miejsca w treści załącznika poza jego jednostkami.</summary>
+        private static bool IsAnnexContainer(StructuralReference reference) =>
+            reference is { Annex.Length: > 0, InAnnexContent: true }
+                or { Annex.Length: > 0, Article: null, Paragraph: null, Point: null, Letter: null, Tiret: null };
+
+        /// <summary>
+        /// Zmiana w samym tekście: wyrazy (§ 87 ZTP) albo treść cytowana będąca tekstem — bez jednostek, tabel
+        /// i odnośnika, i nie uchylenie.
+        /// </summary>
+        private static bool ChangesTextOnly(Amendment amendment)
+        {
+            var content = amendment.Content;
+            var noUnits = content is null
+                || (content.SystematizingUnits.Count == 0 && content.Articles.Count == 0 && content.Paragraphs.Count == 0
+                    && content.Points.Count == 0 && content.Letters.Count == 0 && content.Tirets.Count == 0
+                    && content.CommonParts.Count == 0 && content.Tables.Count == 0 && content.Footnote is null);
+            return noUnits && (amendment.TextChanges.Count > 0
+                || (amendment.OperationType != AmendmentOperationType.Repeal && !string.IsNullOrEmpty(content?.PlainText)));
         }
 
         /// <summary>

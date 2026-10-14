@@ -7,18 +7,21 @@ namespace Saga.Core.Services.UnitReferences
     internal enum UnitLevel
     {
         None = 0,
-        Part = 1,
-        Book = 2,
-        Title = 3,
-        Division = 4,
-        Chapter = 5,
-        Subchapter = 6,
-        Article = 7,
-        Paragraph = 8,
-        Point = 9,
-        Letter = 10,
-        Tiret = 11,
-        Sentence = 12,
+
+        /// <summary>Załącznik aktu („w załączniku nr 1") — miejsce nad całą treścią aktu (ADR-0080).</summary>
+        Annex = 1,
+        Part = 2,
+        Book = 3,
+        Title = 4,
+        Division = 5,
+        Chapter = 6,
+        Subchapter = 7,
+        Article = 8,
+        Paragraph = 9,
+        Point = 10,
+        Letter = 11,
+        Tiret = 12,
+        Sentence = 13,
     }
 
     /// <summary>Rodzaj tokenu w powołaniu jednostek.</summary>
@@ -90,13 +93,22 @@ namespace Saga.Core.Services.UnitReferences
         /// </summary>
         internal static readonly string SystematizingKeywordPattern =
             @"\b(?:roz|od)?dzia(?:łu|łem|łów|łach|łami|ły|ł|le)\b|\btytu(?:łu|łem|łów|łach|ły|ł|le)\b" +
-            @"|\bczęś(?:ciach|ciami|ci|ć)\b|\bksię(?:gach|gami|ga|gi|dze|gę|gą)\b";
+            @"|\bczęś(?:ciach|ciami|ci|ć)\b(?!\s+wspóln)|\bksię(?:gach|gami|ga|gi|dze|gę|gą)\b";
+
+        /// <summary>
+        /// Miejsce w załączniku aktu — miejscownik („w załączniku nr 2", „w załącznikach", „w załączniku do
+        /// rozporządzenia"); „nr" należy do słowa kluczowego, za nim stoi oznaczenie (ADR-0080).
+        /// </summary>
+        private const string AnnexKeywordPattern = @"\bzałącznik(?:u|ach)\b(?:\s+nr\b)?";
 
         /// <summary>Oznaczenie rzymskie jednostki wyższej („dział VIa", „tytuł XIII") — wersaliki.</summary>
         private const string RomanDesignationPattern = @"(?-i:[IVXLC]+[a-z]?)\b";
 
-        /// <summary>Liczba z literami oznaczenia: „85c", „48ł".</summary>
-        private const string Number = @"\d+" + DesignationAlphabet.Letter + "*";
+        /// <summary>
+        /// Liczba z literami oznaczenia: „85c", „48ł". Nie część numeracji wielopoziomowej („pkt 1.4.1", „lp. 1.54" —
+        /// numeracja treści załącznika, nie oznaczenie jednostki, § 56 ZTP) i nie ogon oznaczenia literowego („B.W15").
+        /// </summary>
+        private const string Number = @"(?<![\p{L}\d])(?<!\d\.)\d+" + DesignationAlphabet.Letter + @"*(?!\.?\d)";
 
         /// <summary>Liczba z indeksem górnym: „125[1]", „130[1a]".</summary>
         private const string NumberWithSuperscript = Number + @"(?:\s*\[\s*" + Number + @"\s*\])?";
@@ -127,6 +139,11 @@ namespace Saga.Core.Services.UnitReferences
             SystematizingKeywordPattern + "|" + UnitKeywordPattern,
             NumberWithSuperscript + "|" + OrdinalWord + "|" + RomanDesignationPattern + "|" + LetterDesignation);
 
+        /// <summary>Wariant z miejscem w załączniku — dla celów nowelizacji (<see cref="UnitAddressReader"/>, ADR-0080).</summary>
+        private static readonly Regex AnnexTokenPattern = BuildTokenPattern(
+            AnnexKeywordPattern + "|" + SystematizingKeywordPattern + "|" + UnitKeywordPattern,
+            NumberWithSuperscript + "|" + OrdinalWord + "|" + RomanDesignationPattern + "|" + LetterDesignation);
+
         private static Regex BuildTokenPattern(string unitKeyword, string designation) => new(
             @"(?<prosescope>w\s+zakresie\s*,\s*w\s+jakim.*|w\s+jakim\s+dotycz\p{L}*.*)" +
             @"|(?<scope>w\s+zakresie|w\s+odniesieniu\s+do|w\s+stosunku\s+do)" +
@@ -147,8 +164,11 @@ namespace Saga.Core.Services.UnitReferences
             "w", "we", "po", "do", "od", "z", "ze", "na", "o",
         };
 
-        /// <summary>Rozbija tekst na tokeny; <paramref name="systematizing"/> — także jednostki systematyzacyjne.</summary>
-        internal static IReadOnlyList<UnitToken> Tokenize(string? text, bool systematizing = false)
+        /// <summary>
+        /// Rozbija tekst na tokeny; <paramref name="systematizing"/> — także jednostki systematyzacyjne,
+        /// <paramref name="annexes"/> — także miejsce w załączniku (z jednostkami systematyzacyjnymi).
+        /// </summary>
+        internal static IReadOnlyList<UnitToken> Tokenize(string? text, bool systematizing = false, bool annexes = false)
         {
             var tokens = new List<UnitToken>();
             if (string.IsNullOrWhiteSpace(text))
@@ -158,7 +178,8 @@ namespace Saga.Core.Services.UnitReferences
             var input = FootnoteMarkers.Blank(text.Trim());
             var cursor = 0;
 
-            foreach (Match match in (systematizing ? SystematizingTokenPattern : TokenPattern).Matches(input))
+            var pattern = annexes ? AnnexTokenPattern : systematizing ? SystematizingTokenPattern : TokenPattern;
+            foreach (Match match in pattern.Matches(input))
             {
                 if (match.Index > cursor)
                     AddProse(tokens, input[cursor..match.Index]);
@@ -343,6 +364,8 @@ namespace Saga.Core.Services.UnitReferences
         private static UnitLevel MapLevel(string keyword)
         {
             var k = keyword.ToLowerInvariant();
+            if (k.StartsWith("załącznik", StringComparison.Ordinal))
+                return UnitLevel.Annex;
             if (k.StartsWith("rozdzia", StringComparison.Ordinal))
                 return UnitLevel.Chapter;
             if (k.StartsWith("oddzia", StringComparison.Ordinal))

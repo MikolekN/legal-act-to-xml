@@ -359,7 +359,7 @@ namespace Saga.Core.Services.Converters
                 var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
                 ApplyAttributes(citation, amendment, command, isStructural: true,
                     function: replaces ? null : XmlConverterConstants.Contents.Citation.Quotation.Function.AddInside,
-                    address: replaces ? commonPart.Id : null);
+                    address: replaces && commonPart.AddressAnchor.Length > 0 ? commonPart.Id : null);
                 citation.Add(CommonPartXmlConverter.Quoted(commonPart));
                 if (sentence is XElement zdanie)
                     zdanie.Add(citation);
