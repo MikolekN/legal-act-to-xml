@@ -766,6 +766,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   za ostatnią literą ostatniego punktu zamyka całe wyliczenie punktów, gdy punkty przed ostatnim kończą się przecinkiem
   (§ 56 ust. 3 ZTP). Przedtem stawał się zawsze częścią wspólną liter.
   - Bez stylów: w pełni zgodnych tekstów jednolitych jest 625 z 728 (było 599), ustaw 210 z 242 (było 207); części wspólnych punktów gubionych bez stylów jest 281 (było 349), nadmiarowych części wspólnych liter — 39 (było 104). Ze stylami zmienia się 6 plików: 7 myślników bez stylu za ostatnią literą wychodzi jako część wspólna punktów, nie liter. Zgodnych ze schematem jest nadal 2278 z 2321.
+- **Pozycja zakończona spójnikiem prowadzi wyliczenie dalej** ([ADR-0074](docs/adr/0074-przecinek-po-punktach-zapowiada-czesc-wspolna-punktow.md)): tiret
+  „– … lub" w ostatnim punkcie nie poprzedza części wspólnej punktów — myślnik za nim to kolejne tiret
+  (`CommonPartPlacement.ClosesBeforeDash`). W korpusie bez zmian (zabezpieczenie reguły z ADR-0074).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

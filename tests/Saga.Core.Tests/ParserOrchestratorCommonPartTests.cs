@@ -149,6 +149,25 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ProcessParagraph_StylelessDashAfterATiretEndingWithAConjunction_DoesNotClosePoints()
+        {
+            // Punkty kończą się przecinkiem (ADR-0074), ale ostatnie tiret kończy spójnik — myślnik to kolejne tiret.
+            var orchestrator = new ParserOrchestrator();
+            var context = CreateContext();
+
+            orchestrator.ProcessParagraph(CreateParagraph("Art. 1. 1. Zwolnienie przysługuje:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("1) osobie, która ukończyła 26 lat,"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("2) osobie, która:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("a) prowadzi gospodarstwo:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("– rolne lub"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("– leśne"), context);
+
+            var paragraph = context.CurrentParagraph!;
+            Assert.DoesNotContain(paragraph.CommonParts, cp => cp.Type == CommonPartType.WrapUp);
+            Assert.Equal(2, paragraph.Points[1].Letters[0].Tirets.Count);
+        }
+
+        [Fact]
         public void ProcessParagraph_StylelessDashAfterPunctuatedPoint_IsNotWrapUp()
         {
             // Po elemencie zakończonym przecinkiem myślnik bywa w korpusie legendą wzoru („…wynosi 1,"

@@ -181,6 +181,19 @@ namespace Saga.Core.Tests
         }
 
         [Theory]
+        [InlineData("– utrzymanie lub wsparcie tego systemu lub", true)]
+        [InlineData("– osoby fizyczne oraz", true)]
+        [InlineData("– albo", true)]
+        [InlineData("– osoby prawne", false)]
+        [InlineData("– do kwoty 1000 zł,", false)]
+        [InlineData("– pracodawca", false)]
+        public void EnumerationItem_EndingWithAConjunction_ContinuesTheEnumeration(string item, bool expected)
+        {
+            Assert.Equal(expected, CommonPartPlacement.EndsWithConjunction(item));
+            Assert.Equal(!expected && CommonPartPlacement.LeavesEnumerationOpen(item), CommonPartPlacement.ClosesBeforeDash(item));
+        }
+
+        [Theory]
         [InlineData("2) utrudnia kontrolę", true)]
         [InlineData("2) wszczętych przed dniem 1 stycznia 2026 r.", true)]
         [InlineData("2) wszczętych przed dniem 1 stycznia 2026\u00A0r.", true)]

@@ -642,7 +642,7 @@ namespace Saga.Core.Services.Parsing.Builders
             BaseEntity? parent;
             UnitType itemType;
             var deepest = (BaseEntity?)_openTirets.LastOrDefault() ?? _currentLetter;
-            if (_currentLetter != null && deepest != null && CommonPartPlacement.LeavesEnumerationOpen(deepest.ContentText)
+            if (_currentLetter != null && deepest != null && CommonPartPlacement.ClosesBeforeDash(deepest.ContentText)
                 && CommonPartPlacement.PointsCloseWithCommonPart(_currentParagraph?.Points ?? content.Points))
             {
                 // Punkty przed ostatnim kończą się przecinkiem: myślnik zamyka punkty, nie litery (ADR-0074).

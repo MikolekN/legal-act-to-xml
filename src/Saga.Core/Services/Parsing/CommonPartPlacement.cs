@@ -80,6 +80,23 @@ namespace Saga.Core.Services.Parsing
             return last.ContentText;
         }
 
+        /// <summary>Spójnik na końcu pozycji („… tego systemu lub") — pozycja łączy się z następną.</summary>
+        private static readonly Regex ConjunctionAtEnd = new(
+            @"\b(?:lub|albo|oraz|i|a|bądź|ani|czy|także|względnie)$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Czy pozycja wyliczenia kończy się spójnikiem zamiast znaku — wyliczenie biegnie dalej, a myślnik za nią to
+        /// kolejna pozycja, nie część wspólna. Bez tej reguły tiret „– … lub" w ostatnim punkcie dawałoby z następnym
+        /// tiret część wspólną punktów (ADR-0074).
+        /// </summary>
+        internal static bool EndsWithConjunction(string itemText) => ConjunctionAtEnd.IsMatch(itemText.TrimEnd());
+
+        /// <summary>
+        /// Czy myślnik za pozycją może być częścią wspólną: pozycja nie ma znaku końcowego (§ 57 ust. 3 ZTP) i nie kończy
+        /// się spójnikiem, który zapowiada następną pozycję.
+        /// </summary>
+        internal static bool ClosesBeforeDash(string itemText) => LeavesEnumerationOpen(itemText) && !EndsWithConjunction(itemText);
+
         /// <summary>Skrót roku na końcu pozycji („… 2026 r.") — kropka skrótu, nie znak końca pozycji.</summary>
         private static readonly Regex YearAbbreviationAtEnd = new(@"\b\d{4}\s+r\.$", RegexOptions.Compiled);
 

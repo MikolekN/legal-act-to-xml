@@ -1,6 +1,6 @@
 # ADR-0074: Przecinek po punktach zapowiada część wspólną punktów — myślnik za ostatnią literą zamyka wtedy punkty
 
-- Status: Accepted
+- Status: Accepted (pozycja zakończona spójnikiem — „… lub", „… oraz" — prowadzi wyliczenie dalej i nie poprzedza części wspólnej: `CommonPartPlacement.ClosesBeforeDash`, strażnik `Adr0074_TiretEndingWithAConjunction_IsFollowedByATiret_NotByTheCommonPartOfThePoints`)
 - Data: 2026-10-14
 
 ## Kontekst

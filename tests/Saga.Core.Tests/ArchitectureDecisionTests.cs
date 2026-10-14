@@ -2349,6 +2349,32 @@ namespace Saga.Core.Tests
             Assert.Equal(expected, part.Name.LocalName);
         }
 
+        [Theory]
+        [InlineData("– rolne", "czesc-wspolna-punkt")]
+        [InlineData("– rolne lub", null)]
+        public void Adr0074_TiretEndingWithAConjunction_IsFollowedByATiret_NotByTheCommonPartOfThePoints(
+            string lastTiret, string? expected)
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zwolnieniach",
+                "Art. 1. Zwolnienie przysługuje:",
+                "1) osobie, która ukończyła 26 lat,",
+                "2) osobie, która:",
+                "a) prowadzi gospodarstwo:",
+                lastTiret,
+                "– leśne.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Bez spójnika myślnik za tiret ostatniego punktu zamyka punkty (ADR-0074); spójnik zapowiada kolejne tiret.
+            var xml = LegalDocumentConverter.Convert(document);
+            Assert.Equal(expected, xml.Descendants().SingleOrDefault(e => e.Name.LocalName.StartsWith("czesc-wspolna"))?.Name.LocalName);
+        }
+
         // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
