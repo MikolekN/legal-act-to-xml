@@ -1,6 +1,6 @@
 # ADR-0036: Artykuły przytoczone w obwieszczeniu są jednostkami w `tresc-strukt`, adresowanymi w akcie, z którego pochodzą; przytoczenie, którego nie da się tak zbudować w całości, zostaje tekstem
 
-- Status: Accepted (zastępuje rozstrzygnięcie [ADR-0032](0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md) o przytoczeniu jako dalszej treści)
+- Status: Accepted (zastępuje rozstrzygnięcie [ADR-0032](0032-podpunkt-obwieszczenia-ma-skrot-ppkt.md) o przytoczeniu jako dalszej treści) — Superseded in part by [ADR-0084](0084-przytoczony-przepis-zmieniajacy-jest-jednostka-z-wlasnymi-nowelizacjami.md) (przytoczony przepis zmieniający z własnym cytatem)
 - Data: 2026-10-11
 
 ## Kontekst

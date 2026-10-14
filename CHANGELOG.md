@@ -823,6 +823,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   zostaje akapitem za jednostkami — także bez stylów, gdzie przedtem psuł budowę całego wyliczenia — a znaczniki objaśnień
   („(*)", „*)", „I)") wychodzą jako `sup`, nie w zapisie kanału tekstowego.
   - W korpusie zmienia się 64 dokumenty: 509 znaczników objaśnień wychodzi jako `sup` zamiast zapisu kanału tekstowego („[(*)]”, „[*)]”, „[I)]”) i w jednym akcie dwa objaśnienia przestają być częścią wspólną punktów. Zgodność bez stylów: rozporządzenia 97,74 % → 98,11 % jednostek (brakujących 655 → 548). Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory).
+- **Przytoczone przepisy zmieniające** ([ADR-0084](docs/adr/0084-przytoczony-przepis-zmieniajacy-jest-jednostka-z-wlasnymi-nowelizacjami.md)): przytoczenie w obwieszczeniu tekstu
+  jednolitego, które cytuje przepis zmieniający z własnymi cytatami („art. 94–130 ustawy …, które stanowią: „Art. 94.
+  W ustawie … 1) w art. 10f ust. 5 otrzymuje brzmienie: „5. …""), wychodzi jednostkami w `tresc-strukt`, a cytaty —
+  jako nowelizacje przytoczonych przepisów. Komenda bez dwukropka, ze średnikiem albo z „brzmieniu" bez „w" też otwiera
+  cytat zagnieżdżony. W treści cytowanej wiersze cudzysłowu otwartego w środku akapitu („zastępuje się wyrazami „…:",
+  „1) …;", „2) … r”,") są dalszą treścią jego jednostki, nie jednostkami.
+  - W korpusie zmienia się 23 dokumenty. W 19 obwieszczeniach tekstu jednolitego przytoczenia przepisów zmieniających są jednostkami: 3102 akapity przestają być `fragment` (pod jednostkami obwieszczeń zostaje 734 w 72 dokumentach, przedtem 3836 w 90), a w przytoczonych przepisach staje 596 `cytat-strukt`, 33 `cytat-w-tekscie`, 152 `now:zamien-tekst` i 41 `now:uchyl`. W 4 aktach 30 wierszy cytowanych oświadczeń i wzorów przestaje być powtórzonymi jednostkami cytatu (drugi „pkt 1") i zostaje tekstem jednostki, która je przytacza. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu i zgodność bez stylów bez zmian (tyle samo brakujących i nadmiarowych jednostek).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

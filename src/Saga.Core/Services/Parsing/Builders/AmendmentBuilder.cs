@@ -92,6 +92,9 @@ namespace Saga.Core.Services.Parsing.Builders
             foreach (var item in NestedQuotes.Split(input.Paragraphs))
             {
                 ProcessAmendmentParagraph(item.Paragraph, content);
+                foreach (var line in item.Continued)
+                    AttachContinuedLine(line, content);
+
                 if (item.Nested.Count > 0)
                     AttachNestedAmendment(item.Nested, content);
                 else if (DeepestOpenUnit is IHasAmendments { Amendment: null } owner
@@ -283,6 +286,15 @@ namespace Saga.Core.Services.Parsing.Builders
                 content.Tables.Add(table);
             else
                 unit.Continuation.Add(new ContentBlock { Table = table });
+        }
+
+        /// <summary>Dalszy wiersz cudzysłowu otwartego w środku akapitu — dalsza treść jednostki, nie jednostka.</summary>
+        private void AttachContinuedLine(CollectedAmendmentParagraph line, AmendmentContent content)
+        {
+            if (line.Table is { } table)
+                AttachTable(table, content);
+            else
+                AttachText(line.Text, content, line.FormulaMathMl is { } mathMl ? new ContentFormula { MathMl = mathMl } : null, line.LeadingSymbol);
         }
 
         private bool HasOpenUnit => _currentLetter is not null || _currentPoint is not null || _currentParagraph is not null;

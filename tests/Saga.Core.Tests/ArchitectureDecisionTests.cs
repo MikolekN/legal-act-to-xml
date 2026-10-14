@@ -2685,6 +2685,60 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0084: przytoczony przepis zmieniający jest jednostką z własnymi nowelizacjami
+        // ============================================================
+
+        [Fact]
+        public void Adr0084_QuotedAmendingProvision_IsAUnitWithItsOwnAmendments()
+        {
+            static XElement Export(params string[] quoted)
+            {
+                string[] lines =
+                [
+                    "Obwieszczenie",
+                    "Marszałka Sejmu Rzeczypospolitej Polskiej",
+                    "z dnia 6 sierpnia 2025 r.",
+                    "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
+                    "1. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje:",
+                    "1) art. 57 ustawy z dnia 1 października 2024 r. o zmianie ustawy (Dz. U. poz. 1473), który stanowi:",
+                    .. quoted,
+                    "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
+                    "USTAWA",
+                    "z dnia 11 sierpnia 2001 r.",
+                    "o odbudowie obiektów budowlanych",
+                    "Art. 1. Ustawa reguluje zasady odbudowy.",
+                ];
+                var document = LegalDocumentParser.Parse(
+                    lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                    new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+                return LegalDocumentConverter.Convert(document).Elements().Single();
+            }
+
+            // Cytat za komendą przytoczonego przepisu jest jego nowelizacją, a przytoczenie — jednostkami.
+            var amending = Export(
+                "„Art. 57. W ustawie z dnia 7 września 1991 r. o systemie oświaty (Dz. U. z 2019 r. poz. 1481) w art. 90m ust. 2 otrzymuje brzmienie:",
+                "„2. Rada gminy może upoważnić kierownika ośrodka pomocy społecznej.”.”;");
+            var quoted = Assert.Single(amending.Descendants(), e => e.Name.LocalName == "tresc-strukt");
+            var nested = Assert.Single(quoted.Descendants(), e => e.Name.LocalName == "cytat-strukt");
+            Assert.Equal("DU/2019/1481__art_90m__ust_2", nested.Attribute("element-eId")!.Value);
+            Assert.DoesNotContain(amending.Descendants(), e => e.Name.LocalName == "fragment");
+
+            // Cytat bez komendy przed sobą nie jest ani jednostką, ani zmianą — przytoczenie zostaje tekstem.
+            var oath = Export("„Art. 57. Ślubowanie ma następujące brzmienie:", "„Ślubuję uroczyście.”.”;");
+            Assert.DoesNotContain(oath.Descendants(), e => e.Name.LocalName == "tresc-strukt");
+            Assert.Equal(2, oath.Descendants().Count(e => e.Name.LocalName == "fragment"));
+
+            // Wiersze cudzysłowu otwartego w środku akapitu są tekstem tego akapitu, nie jednostkami.
+            var words = Export(
+                "„Art. 57. W ustawie z dnia 17 grudnia 2021 r. o dodatku osłonowym (Dz. U. z 2023 r. poz. 759) w art. 4a w ust. 1 wyrazy „30 czerwca” zastępuje się wyrazami „w terminach:",
+                "1) do dnia 15 lipca – w 2024 r.;",
+                "2) do dnia 15 czerwca – w 2025 r”.”;");
+            var article = Assert.Single(Assert.Single(words.Descendants(), e => e.Name.LocalName == "tresc-strukt").Elements());
+            Assert.DoesNotContain(article.Descendants(), e => e.Name.LocalName == "punkt");
+            Assert.Equal(2, article.Descendants().Count(e => e.Name.LocalName == "fragment"));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

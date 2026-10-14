@@ -189,18 +189,19 @@ namespace Saga.Core.Services.Parsing
         /// <summary>
         /// Przytoczenie jako jednostki — tylko gdy składa się z całych artykułów (paragrafów aktu wykonawczego)
         /// i żaden akapit nie został poza nimi. Przytoczony ustęp albo punkt („„3. W przypadku …"") wymagałby
-        /// adresu z treści jednostki („art. 5 ust. 3 ustawy …"), więc zostaje tekstem. Tak samo przytoczony
-        /// przepis zmieniający z własnym cytatem („Art. 54. W ustawie … ust. 2 otrzymuje brzmienie: „2. …""):
-        /// cytowana w nim treść nie jest jednostką przytaczanego artykułu.
+        /// adresu z treści jednostki („art. 5 ust. 3 ustawy …"), więc zostaje tekstem. Przytoczony przepis zmieniający
+        /// z własnym cytatem („Art. 94. W ustawie … 1) w art. 10f ust. 5 otrzymuje brzmienie: „5. …"") ma ten cytat jako
+        /// swoją nowelizację, jak w nowelizacji nowelizacji (ADR-0082) — o ile cytat stoi za komendą przepisu; cytat
+        /// bez komendy przed sobą nie jest jednostką przytaczanego artykułu, więc przytoczenie zostaje tekstem.
         /// </summary>
         private static Quotation? BuildQuotation(IReadOnlyList<string> paragraphs, string ownerText, bool sectionIsBasicUnit)
         {
-            if (paragraphs.Skip(1).Any(QuoteBalanceTracker.OpensQuote))
-                return null;
-
             var collected = paragraphs.Select(text => new CollectedAmendmentParagraph(text, null, null)).ToList();
             var quotes = AmendmentStateManager.TrimQuoteBoundaries(collected);
             if (!quotes.HasOpening || !quotes.HasClosing)
+                return null;
+
+            if (NestedQuotes.Split(collected).Any(item => QuoteBalanceTracker.OpensQuote(item.Paragraph.Text)))
                 return null;
 
             var content = new AmendmentBuilder().Build(new AmendmentBuildInput(

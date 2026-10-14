@@ -45,6 +45,19 @@ namespace Saga.Core.Tests
             Assert.Single(items[0].Nested);
         }
 
+        [Theory]
+        // Korpus: 349921_3119995 — dwukropek pominięty albo zastąpiony średnikiem, zgubione „w".
+        [InlineData("– pkt 1 otrzymuje brzmienie")]
+        [InlineData("2) w art. 21 ust. 1 otrzymuje brzmienie;")]
+        [InlineData("Art. 99. W ustawie z dnia 8 maja 1997 r. o poręczeniach (Dz. U. z 2022 r. poz. 445) w art. 34g w ust. 3 po pkt 1a dodaje się pkt 1b brzmieniu:")]
+        [InlineData("2) po art. 5 dodaje się art. 5a w następującym brzmieniu:")]
+        public void CommandWithAMistakeInItsEnding_StillOpensTheNestedQuote(string command)
+        {
+            var items = NestedQuotes.Split([Line(command), Line("„1) podjęciu uchwały o przyjęciu programu;”;")]);
+
+            Assert.Single(Assert.Single(items).Nested);
+        }
+
         [Fact]
         public void QuotedWordsAndAQuoteWithoutACommand_AreNotNested()
         {
@@ -55,8 +68,41 @@ namespace Saga.Core.Tests
                 Line("„Ślubuję uroczyście.”.”;"),
             ]);
 
-            Assert.Equal(3, items.Count);
+            // Cudzysłów otwarty w środku punktu 2 domyka się w następnym akapicie — to dalszy wiersz punktu.
+            Assert.Equal(2, items.Count);
             Assert.All(items, item => Assert.Empty(item.Nested));
+            Assert.Equal(["„Ślubuję uroczyście.”.”;"], items[1].Continued.Select(line => line.Text));
+        }
+
+        [Fact]
+        public void LinesOfAQuoteOpenedInsideAParagraph_ContinueThatParagraph()
+        {
+            // Korpus: 355525_3152691 — nowe wyrazy na kilka wierszy.
+            var items = NestedQuotes.Split(
+            [
+                Line("a) w ust. 1 wyrazy „30 czerwca” zastępuje się wyrazami „ , a w przypadku dodatku za 2024 r.:"),
+                Line("1) do dnia 15 lipca – w 2024 r.;"),
+                Line("2) do dnia 15 czerwca – w latach 2025–2026 r”,"),
+                Line("b) uchyla się ust. 1a."),
+            ]);
+
+            Assert.Equal(2, items.Count);
+            Assert.Equal(2, items[0].Continued.Count);
+            Assert.Empty(items[1].Continued);
+        }
+
+        [Fact]
+        public void QuoteLeftOpenToTheEnd_TakesNoLines()
+        {
+            // Literówka: cudzysłów niedomknięty do końca treści nie wciąga dalszych jednostek.
+            var items = NestedQuotes.Split(
+            [
+                Line("a) w ust. 1 wyrazy „30 czerwca zastępuje się wyrazami „15 lipca”,"),
+                Line("b) uchyla się ust. 1a."),
+            ]);
+
+            Assert.Equal(2, items.Count);
+            Assert.All(items, item => Assert.Empty(item.Continued));
         }
 
         // ============================================================
@@ -179,6 +225,39 @@ namespace Saga.Core.Tests
 
             var quoted = points[0].Amendment!.Content!.Articles.Single();
             Assert.All(quoted.Paragraphs, paragraph => Assert.Null(paragraph.Amendment));
+        }
+
+        // Korpus: 355525_3152691 — cytowany przepis zmienia wyrazy na nowe, rozpisane na kilka wierszy.
+        private static readonly string[] QuotedWordsOverSeveralLines =
+        [
+            "Art. 1. W ustawie z dnia 7 lipca 2023 r. o zmianie ustawy o dodatku (Dz. U. poz. 1500) art. 6 otrzymuje brzmienie:",
+            "„Art. 6. W ustawie z dnia 17 grudnia 2021 r. o dodatku osłonowym (Dz. U. z 2023 r. poz. 759) wprowadza się następujące zmiany:",
+            "1) w art. 4a:",
+            "a) w ust. 1 wyrazy „30 czerwca” zastępuje się wyrazami „ , a w przypadku dodatku za 2024 r.:",
+            "1) do dnia 15 lipca – w 2024 r.;",
+            "2) do dnia 15 czerwca – w latach 2025–2026 r”,",
+            "b) uchyla się ust. 1a;",
+            "2) w art. 15 wyrazy „2024 r.” zastępuje się wyrazami „2025 r.”.”.",
+        ];
+
+        [Fact]
+        public void LinesOfNewWords_AreTheTextOfTheQuotedProvision_NotItsUnits()
+        {
+            var quoted = Parse(QuotedWordsOverSeveralLines).Articles.First().Paragraphs.Single().Amendment!.Content!.Articles.Single();
+            var points = quoted.Paragraphs.Single().Points;
+            var letters = points[0].Letters;
+
+            Assert.Equal(["1", "2"], points.Select(point => point.Number!.Value));
+            Assert.Equal(["a", "b"], letters.Select(letter => letter.Number!.Value));
+            Assert.Equal(["1) do dnia 15 lipca – w 2024 r.;", "2) do dnia 15 czerwca – w latach 2025–2026 r”,"],
+                letters[0].Continuation.Select(block => block.Text));
+        }
+
+        [SchemaPlFact]
+        public void QuotedWordsOverSeveralLines_AreSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(Parse(QuotedWordsOverSeveralLines)).Elements().First()));
         }
 
         [SchemaPlFact]

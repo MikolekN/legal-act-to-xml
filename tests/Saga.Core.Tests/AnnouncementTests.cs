@@ -225,15 +225,60 @@ namespace Saga.Core.Tests
                 quoted.Descendants().Where(e => e.Name.LocalName == "fragment").Select(e => e.Value));
         }
 
+        // Korpus: 349921_3119995 — przytoczone przepisy zmieniające z własnymi cytatami.
+        private static readonly string[] QuotedAmendingProvision =
+        [
+            "„Art. 54. W ustawie z dnia 7 września 1991 r. o systemie oświaty (Dz. U. z 2019 r. poz. 1481) w art. 90m ust. 2 otrzymuje brzmienie:",
+            "„2. Rada gminy może upoważnić kierownika ośrodka pomocy społecznej do prowadzenia postępowania.”.",
+            "Art. 55. W ustawie z dnia 8 marca 1990 r. o samorządzie gminnym (Dz. U. z 2022 r. poz. 559) wprowadza się następujące zmiany:",
+            "1) w art. 10f ust. 5 otrzymuje brzmienie:",
+            "„5. Strategia rozwoju gminy podlega aktualizacji.”;",
+            "2) w art. 74 uchyla się ust. 3.”",
+        ];
+
         [Fact]
-        public void QuotedAmendingProvisionWithItsOwnQuotation_StaysText()
+        public void QuotedAmendingProvisionWithItsOwnQuotation_HasItAsItsAmendment()
         {
-            // Cytowany w przepisie zmieniającym „2. …" nie jest ustępem przytaczanego artykułu (nowelizacja zagnieżdżona).
-            string[] quoted =
-            [
-                "„Art. 54. W ustawie z dnia 7 września 1991 r. o systemie oświaty (Dz. U. z 2019 r. poz. 1481) w art. 90m ust. 2 otrzymuje brzmienie:",
-                "„2. Rada gminy może upoważnić kierownika ośrodka pomocy społecznej do prowadzenia postępowania.”.”",
-            ];
+            // Cytowany w przepisie zmieniającym „2. …" nie jest ustępem przytaczanego artykułu, tylko treścią zmiany,
+            // którą ten przepis wprowadza (ADR-0082, ADR-0084).
+            var quotation = Assert.Single(Parse(WithQuotation(QuotedAmendingProvision)).Announcement!.Points[1].Continuation).Quotation!;
+
+            Assert.Equal(["54", "55"], quotation.Content.Articles.Select(article => article.Number!.Value));
+            var first = Assert.Single(quotation.Content.Articles[0].Paragraphs);
+            Assert.Equal("art_90m__ust_2", first.Amendment!.Targets.Single().Structure.ToString());
+            Assert.Equal([1481], first.Amendment.TargetLegalAct.Positions);
+            Assert.Equal("2", Assert.Single(first.Amendment.Content!.Paragraphs).Number!.Value);
+
+            var points = quotation.Content.Articles[1].Paragraphs.Single().Points;
+            Assert.Equal(AmendmentOperationType.Modification, points[0].Amendment!.OperationType);
+            Assert.Equal(AmendmentOperationType.Repeal, points[1].Amendment!.OperationType);
+        }
+
+        [Fact]
+        public void QuotedAmendingProvision_IsExportedWithItsAmendments_InTheQuotation()
+        {
+            var quoted = LegalDocumentConverter.Convert(Parse(WithQuotation(QuotedAmendingProvision)))
+                .Descendants().Single(e => e.Name.LocalName == "tresc-strukt");
+
+            // Przytoczony artykuł ma adres w akcie, z którego pochodzi; jego cytat — w akcie, który zmienia.
+            Assert.Equal("DU/2024/1473__art_54", quoted.Elements().First().Attribute("eId")!.Value);
+            var nested = quoted.Descendants().First(e => e.Name.LocalName == "cytat-strukt");
+            Assert.Equal("DU/2019/1481__art_90m__ust_2", nested.Attribute("element-eId")!.Value);
+            Assert.DoesNotContain(quoted.Descendants(), e => e.Name.LocalName == "fragment");
+        }
+
+        [SchemaPlFact]
+        public void QuotedAmendingProvision_IsSchemaValid_InItsBody()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(Parse(WithQuotation(QuotedAmendingProvision))).Elements().First()));
+        }
+
+        [Fact]
+        public void QuotationWithAQuoteThatNoCommandIntroduces_StaysText()
+        {
+            // Cytat w przytoczonym artykule bez komendy przed sobą (rota ślubowania) nie jest jego jednostką ani zmianą.
+            string[] quoted = ["„Art. 54. Ślubowanie ma następujące brzmienie:", "„Ślubuję uroczyście.”.”"];
 
             var blocks = Parse(WithQuotation(quoted)).Announcement!.Points[1].Continuation;
 
