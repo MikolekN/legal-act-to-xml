@@ -746,6 +746,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   zdanie drugie" daje `now:uchyl` z adresem zdania (`…ust_2__zdn_2`). Przedtem instrukcja wskazywała cały ustęp.
   - Szyk „uchyla się drugie zdanie" jest czytany jak „zdanie drugie" (`UnitReferenceTokenizer`).
   - W korpusie zmienia się 28 zdań w 21 plikach: `now:uchyl`, który wskazywał całą jednostkę („w ust. 2 skreśla się zdanie drugie" → `…ust_2`), wskazuje teraz zdanie (`…ust_2__zdn_2`). Poza tym eksport się nie zmienia; zgodnych ze schematem jest nadal 1937 z 2321 (oba walidatory).
+- **Tekst w cudzysłowie pod przepisem, który niczego nie zmienia** ([ADR-0071](docs/adr/0071-tresc-pod-przepisem-ktory-niczego-nie-zmienia-jest-jego-trescia.md)):
+  oświadczenie „następującej treści", tekst dołączany do protokołu i podobne przytoczenia wychodzą jako `tresc-strukt`
+  w zdaniu przepisu — z wierszem otwierającym („Oświadczam, że:") i punktami, bez eId — a nie jako nowelizacja
+  (`cytat-strukt funkcja="zastap"` z celem `UNKNOWN`). Wzory i objaśnienia złożone stylem zmiany pod takim przepisem
+  są jego dalszą treścią, w kolejności z aktu.
+  - Model: przytoczenie (`ContentBlock.Quotation`) wie, czy otwiera i zamyka cudzysłów (`Quotation.HasOpeningQuote`,
+    `HasClosingQuote`).
+  - W korpusie zmienia się 20 plików, wszystkie to teksty jednolite: znika 49 fałszywych cytatów nowelizacji (20 `cytat-strukt`, 29 `cytat-w-tekscie`), przybywa 30 `tresc-strukt` (13 z nich ma tylko cudzysłów otwierający — klauzula „Świadomy odpowiedzialności karnej…" bez wykrytego zamknięcia), 13 wierszy otwierających („Oświadczam, że:") przechodzi z `fragment` do swojego przytoczenia, a wzory i objaśnienia złożone stylem zmiany stają się dalszą treścią (+20 `fragment`, 5 `wzor-mat` z 21 opisami symboli). Zgodnych ze schematem jest nadal 1946 z 2321 (oba walidatory), pokrycie tekstu bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

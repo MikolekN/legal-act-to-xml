@@ -118,6 +118,22 @@ namespace Saga.Core.Services.Parsing
             @"\bnie\s+(?:uchyla|skreśla)\s+się\b|\buchyla\s+się\s+(?:on[aoie]?\s+)?od\b|\bskreśla\s+się\s+ze?\b",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        /// <summary>
+        /// Czasownik komendy zmieniającej („otrzymuje brzmienie", „dodaje się", „zastępuje się", „oznacza się jako")
+        /// albo zapowiedź zmian („wprowadza się następujące zmiany").
+        /// </summary>
+        private static readonly Regex ChangeVerb = new(
+            @"\botrzymuj[eą]\s+brzmienie\b|\b(?:dodaje|zastępuje)\s+się\b|\boznacza\s+się\s+jako\b"
+            + @"|\bwprowadza\s+się\s+(?:następując[eą]\s+)?zmian",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Czy przepis mówi o zmianie czegokolwiek — niesie czasownik komendy albo zapowiedź zmian. Przepis bez niego,
+        /// po którym stoi tekst w cudzysłowie („oświadczenie o następującej treści:"), niczego nie zmienia (ADR-0071).
+        /// </summary>
+        internal static bool HasChangeVerb(string? text) =>
+            !string.IsNullOrEmpty(text) && (ChangeVerb.IsMatch(text) || HasRepealVerb(text));
+
         /// <summary>Czy tekst zawiera czasownik uchylenia, który może być komendą — nie użyty w zwykłym znaczeniu.</summary>
         internal static bool HasRepealVerb(string text) =>
             AmendmentFinalizer.RepealPattern.IsMatch(RepealVerbInProse.Replace(text, " "));

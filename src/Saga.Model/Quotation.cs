@@ -3,9 +3,14 @@
 namespace Saga.Model
 {
     /// <summary>
-    /// Przytoczenie przepisów innego aktu w treści jednostki („…, który stanowi: „Art. 19. …"") — tak
-    /// obwieszczenie tekstu jednolitego podaje przepisy, których tekst jednolity nie obejmuje (§ 104 ZTP).
-    /// Przytoczone jednostki nie należą do aktu, w którym stoją: adresuje się je w akcie, z którego pochodzą.
+    /// Przytoczenie w treści jednostki — tekst w cudzysłowie, który nie jest nowelizacją:
+    /// <list type="bullet">
+    /// <item>przepisy innego aktu („…, który stanowi: „Art. 19. …"") — tak obwieszczenie tekstu jednolitego podaje
+    /// przepisy, których tekst jednolity nie obejmuje (§ 104 ZTP); przytoczone jednostki adresuje się w akcie,
+    /// z którego pochodzą;</item>
+    /// <item>tekst, którego brzmienie przepis ustala („oświadczenie o następującej treści: „…"", rota ślubowania) —
+    /// nie pochodzi z żadnego aktu, więc jego jednostki nie mają adresu (ADR-0071).</item>
+    /// </list>
     /// </summary>
     public class Quotation
     {
@@ -17,5 +22,11 @@ namespace Saga.Model
 
         /// <summary>Interpunkcja za zamykającym cudzysłowem — należy do zdania jednostki, nie do przytoczenia.</summary>
         public string? TrailingPunctuation { get; set; }
+
+        /// <summary>Czy treść otwiera cudzysłów. Przytoczenie przepisów w obwieszczeniu ma oba.</summary>
+        public bool HasOpeningQuote { get; set; } = true;
+
+        /// <summary>Czy treść zamyka cudzysłów.</summary>
+        public bool HasClosingQuote { get; set; } = true;
     }
 }

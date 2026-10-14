@@ -150,25 +150,26 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
-        // Druga treść cytowana pod tą samą jednostką
+        // Akapity w stylu zmiany pod przepisem, który niczego nie zmienia
         // ============================================================
 
         [Fact]
-        public void SecondQuotedContentUnderTheSameUnit_JoinsTheFirst()
+        public void LinesInAmendmentStyle_UnderAProvisionThatAmendsNothing_AreItsFurtherContent_InOrder()
         {
-            // Korpus: 352078_3158919 — akapity w stylu zmiany rozdzielone dalszą treścią jednostki. Jednostka
-            // niesie jedną nowelizację; druga treść nie może zastąpić pierwszej.
+            // Korpus: 352078_3158919 — wzór i jego objaśnienie złożone stylem zmiany, rozdzielone akapitem w stylu
+            // ustępu. Przepis niczego nie zmienia, więc to nie nowelizacja, tylko dalsza treść ustępu (ADR-0071) —
+            // w kolejności z aktu.
             var document = Parse(
-                Block("Art. 1. 1. Wysokość rekompensaty ustala się zgodnie z następującym wzorem:"),
+                Block("Art. 1. 1. Wysokość rekompensaty ustala się zgodnie z następującym wzorem:", "ARTartustawynprozporzdzenia"),
                 Block("R = (KF – KT) + KP", "ZFRAGzmfragmentunpzdaniaartykuempunktem"),
-                Block("gdzie:", "UST"),
+                Block("gdzie:", "USTustnpkodeksu"),
                 Block("KF – oznacza koszt faktyczny,", "ZFRAGzmfragmentunpzdaniaartykuempunktem"),
-                Block("2. Rekompensatę wypłaca się co miesiąc."));
+                Block("2. Rekompensatę wypłaca się co miesiąc.", "USTustnpkodeksu"));
 
             var first = document.Articles.Single().Paragraphs[0];
-            var text = first.Amendment!.Content!.PlainText!;
-            Assert.Contains("R = (KF – KT) + KP", text);
-            Assert.Contains("KF – oznacza koszt faktyczny,", text);
+            Assert.Null(first.Amendment);
+            Assert.Equal(["R = (KF – KT) + KP", "gdzie:", "KF – oznacza koszt faktyczny,"], first.Continuation.Select(block => block.Text));
+            Assert.Equal("2", document.Articles.Single().Paragraphs[1].Number!.Value);
         }
     }
 }

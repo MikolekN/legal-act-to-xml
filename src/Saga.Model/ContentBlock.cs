@@ -3,8 +3,7 @@
 namespace Saga.Model
 {
     /// <summary>
-    /// Element treści bez własnego oznaczenia: akapit tekstu, tabela albo przytoczenie przepisów innego
-    /// aktu — zawsze jedno z trojga. Stoi w dalszej treści jednostki (<see cref="BaseEntity.Continuation"/>)
+    /// Element treści bez własnego oznaczenia: akapit tekstu, tabela albo przytoczenie — zawsze jedno z trojga. Stoi w dalszej treści jednostki (<see cref="BaseEntity.Continuation"/>)
     /// i w treści załącznika. Akapit będący wzorem niesie obok tekstu (zapis liniowy) wyrażenie w MathML.
     /// </summary>
     public class ContentBlock
@@ -16,7 +15,10 @@ namespace Saga.Model
 
         public ContentTable? Table { get; set; }
 
-        /// <summary>Przytoczenie rozpoznane jako jednostki („…, który stanowi: „Art. 19. …"").</summary>
+        /// <summary>
+        /// Przytoczenie: przepisy innego aktu („…, który stanowi: „Art. 19. …"") albo tekst, którego brzmienie
+        /// przepis ustala („oświadczenie o następującej treści: „…"").
+        /// </summary>
         public Quotation? Quotation { get; set; }
     }
 }

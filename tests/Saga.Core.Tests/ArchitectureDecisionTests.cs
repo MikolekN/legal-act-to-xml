@@ -2209,6 +2209,38 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0071: treść pod przepisem, który niczego nie zmienia, jest treścią tego przepisu
+        // ============================================================
+
+        [Fact]
+        public void Adr0071_TextUnderAProvisionThatAmendsNothing_IsContentOfTheProvision()
+        {
+            DocumentBlock Line(string text, string? style = null) => new() { Text = text, StyleId = style };
+            const string quotedPoint = "ZPKTzmpktartykuempunktem";
+            var blocks = new List<DocumentBlock>
+            {
+                Line("USTAWA"), Line("z dnia 14 czerwca 2024 r."), Line("o ośrodkach szkolenia"),
+                Line("Art. 1. Przedsiębiorca składa oświadczenie następującej treści:", "ARTartustawynprozporzdzenia"),
+                Line("„1) dane zawarte we wniosku są kompletne;", quotedPoint),
+                Line("2) znane mi są warunki działalności.”.", quotedPoint),
+                Line("Art. 2. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w art. 5 pkt 3 otrzymuje brzmienie:", "ARTartustawynprozporzdzenia"),
+                Line("„3) opłatę wnosi się w terminie 14 dni;”.", quotedPoint),
+                Line("Art. 3. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", "ARTartustawynprozporzdzenia"),
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            var xml = LegalDocumentConverter.Convert(document);
+
+            // Oświadczenie jest treścią art. 1 — przytoczeniem bez instrukcji i bez adresów; zmiana w art. 2 — nowelizacją.
+            var quoted = xml.Descendants().Single(e => e.Name.LocalName == "tresc-strukt");
+            Assert.Contains("dane zawarte we wniosku są kompletne", quoted.Value);
+            Assert.All(quoted.Descendants(), e => Assert.Null(e.Attribute("eId")));
+            Assert.Null(document.Articles.First().Paragraphs.Single().Amendment);
+
+            var amendment = xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt");
+            Assert.Equal("DU/2021/200__art_5__pkt_3", amendment.Attribute("element-eId")?.Value);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

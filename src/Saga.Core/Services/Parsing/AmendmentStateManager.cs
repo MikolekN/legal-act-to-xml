@@ -202,6 +202,7 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
+            var closingText = collector.Paragraphs[^1] is { Table: null } closingParagraph ? closingParagraph.Text : null;
             var quotes = TrimQuoteBoundaries(collector);
 
             // Faza 2: budowanie treści nowelizacji
@@ -222,6 +223,18 @@ namespace Saga.Core.Services.Parsing
                     Footnote = QuotedFootnoteReader.Build(footnote, collector.Paragraphs, out quoteAtTheMarker),
                 };
 
+            // Tekst pod przepisem, który niczego nie zmienia („oświadczenie o następującej treści:", „według wzoru:"),
+            // jest treścią tego przepisu, nie nowelizacją (ADR-0071).
+            if (footnote is null && collector.Owner is { } provision && !AmendsAnything(context, provision)
+                && TryKeepAsContentOfTheProvision(provision, collector, content, quotes, closingText))
+            {
+                Log.Debug("Treść pod przepisem bez komendy — treść przepisu, nie nowelizacja (owner={OwnerId})", provision.Id);
+
+                collector.Reset();
+                context.AmendmentOwner = null;
+                return;
+            }
+
             // Faza 3: finalizacja — detekcja operacji, linkowanie celów/JournalInfo,
             // przypisanie do właściciela, walidacja
             var finalizerInput = new AmendmentFinalizerInput(content, collector, context)
@@ -239,6 +252,158 @@ namespace Saga.Core.Services.Parsing
 
             collector.Reset();
             context.AmendmentOwner = null;
+        }
+
+        /// <summary>
+        /// Czy przepis, pod którym zebrano treść cytowaną, cokolwiek zmienia: stoi w artykule zmieniającym inny akt
+        /// (<see cref="Article.IsAmending"/>), czekają na niego zmiany odczytane z jego tekstu albo on sam lub
+        /// przepis nad nim niesie czasownik komendy (<see cref="AmendmentCommandParser.HasChangeVerb"/>).
+        /// </summary>
+        private static bool AmendsAnything(ParsingContext context, BaseEntity owner)
+        {
+            if (AmendmentFinalizer.FindParentArticle(owner) is { IsAmending: true })
+                return true;
+
+            if (context.PendingTextChanges.ContainsKey(owner.Guid) || context.PendingContentWraps.ContainsKey(owner.Guid)
+                || context.PendingAnnexInstructions.ContainsKey(owner.Guid))
+            {
+                return true;
+            }
+
+            for (var unit = owner; unit is not null; unit = unit is Saga.Model.EditorialUnits.Article ? null : unit.Parent)
+            {
+                if (AmendmentCommandParser.HasChangeVerb(unit.ContentText))
+                    return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Treść zebrana pod przepisem, który niczego nie zmienia: tekst w cudzysłowie jest przytoczeniem
+        /// (<see cref="Quotation"/>), tekst bez cudzysłowu i bez jednostek — dalszą treścią przepisu. Jednostki bez
+        /// cudzysłowu zostają tym, czym były: tu nie wiadomo jeszcze, czy to jednostki aktu złożone stylem zmiany.
+        /// </summary>
+        private static bool TryKeepAsContentOfTheProvision(
+            BaseEntity provision, AmendmentCollector collector, AmendmentContent content, QuoteBoundaries quotes, string? closingText)
+        {
+            var opens = quotes.HasOpening;
+            var closes = quotes.HasClosing;
+            List<ContentBlock> opening = [];
+
+            if (closes && !opens)
+            {
+                if (closingText is not null && !ClosesAQuoteOpenedEarlier(closingText))
+                {
+                    // Cudzysłów na końcu, otwarty w tym samym akapicie („… do działania „n","), niczego nie zamyka.
+                    collector.Paragraphs[^1].Text = closingText;
+                    closes = false;
+                }
+                else
+                {
+                    // Cytat otwarty akapit wcześniej („„Oświadczam, że:" w stylu cytatu) — ten akapit do niego należy.
+                    opening = LinesOpeningTheQuote(provision);
+                    opens = opening.Count > 0;
+                }
+            }
+
+            if (!opens && !closes)
+            {
+                if (!IsTextOnly(content))
+                    return false;
+
+                AttachAsFurtherContent(provision, collector.Paragraphs);
+                return true;
+            }
+
+            if (opening.Count > 0)
+            {
+                provision.Continuation.RemoveRange(provision.Continuation.Count - opening.Count, opening.Count);
+                var lines = opening.Select(block => block.Text!).ToList();
+                lines[0] = OpeningQuotePattern.Replace(lines[0], "", 1);
+                if (!string.IsNullOrEmpty(content.PlainText))
+                    lines.Add(content.PlainText);
+                content.PlainText = string.Join(Environment.NewLine, lines);
+            }
+
+            provision.Continuation.Add(new ContentBlock
+            {
+                Quotation = new Quotation
+                {
+                    Content = content,
+                    TrailingPunctuation = closes ? quotes.Punctuation : null,
+                    HasOpeningQuote = opens,
+                    HasClosingQuote = closes,
+                },
+            });
+            return true;
+        }
+
+        /// <summary>Czy akapit zamyka więcej cudzysłowów, niż sam otwiera — domyka cytat zaczęty wcześniej.</summary>
+        private static bool ClosesAQuoteOpenedEarlier(string text)
+        {
+            var open = 0;
+            var straight = 0;
+            foreach (var character in text)
+            {
+                if (character == QuotationMarks.Opening)
+                    open++;
+                else if (QuotationMarks.IsClosing(character))
+                    open--;
+                else if (character == QuotationMarks.Straight)
+                    straight++;
+            }
+
+            return open < 0 || straight % 2 == 1;
+        }
+
+        /// <summary>
+        /// Końcowe akapity dalszej treści przepisu, z których pierwszy otwiera cudzysłów niedomknięty do ich końca.
+        /// </summary>
+        private static List<ContentBlock> LinesOpeningTheQuote(BaseEntity provision)
+        {
+            var blocks = provision.Continuation;
+            var start = blocks.Count;
+            while (start > 0 && blocks[start - 1] is { Text.Length: > 0, Formula: null, Table: null, Quotation: null })
+                start--;
+
+            for (var i = start; i < blocks.Count; i++)
+            {
+                if (!QuoteBalanceTracker.OpensQuote(blocks[i].Text!))
+                    continue;
+
+                var lines = blocks.GetRange(i, blocks.Count - i);
+                var open = lines.Sum(line => line.Text!.Count(c => c == QuotationMarks.Opening) - line.Text!.Count(QuotationMarks.IsClosing));
+                return open > 0 ? lines : [];
+            }
+
+            return [];
+        }
+
+        private static bool IsTextOnly(AmendmentContent content) =>
+            AmendmentTargetPairing.ContentUnits(content).Count == 0 && content.Tables.Count == 0 && content.CommonParts.Count == 0;
+
+        /// <summary>
+        /// Tekst bez cudzysłowu i bez jednostek pod przepisem, który niczego nie zmienia, to dalsza treść tego
+        /// przepisu — wzór, wiersz legendy, akapit — w kolejności z aktu, jak akapit bez stylu zmiany (ADR-0029).
+        /// </summary>
+        private static void AttachAsFurtherContent(BaseEntity unit, IReadOnlyList<CollectedAmendmentParagraph> paragraphs)
+        {
+            foreach (var paragraph in paragraphs)
+            {
+                var text = paragraph.Text.Trim();
+                if (paragraph.FormulaMathMl is { } mathMl)
+                {
+                    unit.Continuation.Add(new ContentBlock { Text = text, Formula = new ContentFormula { MathMl = mathMl } });
+                    continue;
+                }
+
+                var leading = paragraph.LeadingSymbol is { } symbol
+                    ? new FormulaSymbol { Symbol = symbol.Text, SymbolMathMl = symbol.MathMl }
+                    : null;
+                if (text.Length > 0 && !FormulaLegend.TryAbsorb(unit, text, leading))
+                    unit.Continuation.Add(new ContentBlock { Text = text });
+            }
         }
 
         /// <summary>

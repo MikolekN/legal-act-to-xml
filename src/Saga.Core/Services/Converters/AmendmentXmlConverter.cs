@@ -131,7 +131,7 @@ namespace Saga.Core.Services.Converters
             }
         }
 
-        private static string QuotationMarks(bool opens, bool closes) => (opens, closes) switch
+        internal static string QuotationMarks(bool opens, bool closes) => (opens, closes) switch
         {
             (true, true) => XmlConverterConstants.Contents.Citation.Quotation.QuotationBoth,
             (true, false) => XmlConverterConstants.Contents.Citation.Quotation.QuotationOpening,

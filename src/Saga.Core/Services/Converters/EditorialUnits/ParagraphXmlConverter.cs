@@ -37,6 +37,7 @@ namespace Saga.Core.Services.Converters
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(paragraph.TextSegments, previousSentenceContext, textSectionElement);
             AmendmentXmlConverter.ToXml(paragraph.Amendment, textSectionElement.LastNode);
+            QuotationXmlConverter.Append(paragraph, textSectionElement.LastNode);
             if (!string.IsNullOrEmpty(paragraph.ContentText))
             {
                 paragraphElement.Add(textSectionElement);
