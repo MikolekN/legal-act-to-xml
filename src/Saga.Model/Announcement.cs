@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Saga.Model.EditorialUnits;
 
@@ -46,6 +47,12 @@ namespace Saga.Model
 
         /// <summary>Przedmiot ogłaszanego aktu („o odbudowie obiektów budowlanych"); pusty, gdy nierozpoznany.</summary>
         public string ActSubject { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Dzień stanu prawnego tekstu jednolitego podany w obwieszczeniu („z uwzględnieniem stanu prawnego na dzień
+        /// 25 sierpnia 2026 r." — § 100a i § 104 ZTP); null, gdy obwieszczenie go nie podaje.
+        /// </summary>
+        public DateTime? LegalStateDate { get; set; }
 
         /// <summary>
         /// Punkty obwieszczenia („1. Na podstawie …") z podpunktami („1) ustawą …") i częścią wspólną podpunktów.

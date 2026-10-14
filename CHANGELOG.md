@@ -754,6 +754,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Model: przytoczenie (`ContentBlock.Quotation`) wie, czy otwiera i zamyka cudzysłów (`Quotation.HasOpeningQuote`,
     `HasClosingQuote`).
   - W korpusie zmienia się 20 plików, wszystkie to teksty jednolite: znika 49 fałszywych cytatów nowelizacji (20 `cytat-strukt`, 29 `cytat-w-tekscie`), przybywa 30 `tresc-strukt` (13 z nich ma tylko cudzysłów otwierający — klauzula „Świadomy odpowiedzialności karnej…" bez wykrytego zamknięcia), 13 wierszy otwierających („Oświadczam, że:") przechodzi z `fragment` do swojego przytoczenia, a wzory i objaśnienia złożone stylem zmiany stają się dalszą treścią (+20 `fragment`, 5 `wzor-mat` z 21 opisami symboli). Zgodnych ze schematem jest nadal 1946 z 2321 (oba walidatory), pokrycie tekstu bez zmian.
+- **Daty wersji tekstu jednolitego** ([ADR-0072](docs/adr/0072-wersja-tekstu-jednolitego-od-ujednolicenia-stan-prawny-z-obwieszczenia.md)): metadane tekstu jednolitego mają
+  `DataObowiazywaniaWersji` z `Od` wskazującym zdarzenie ujednolicenia, a — gdy obwieszczenie podaje „stan prawny na dzień …"
+  (wzór z § 104 ZTP) — także `DataStanuPrawnegoTJ` (`Announcement.LegalStateDate`), jak w przykładzie autorów schematu.
+  - W korpusie wszystkie 728 tekstów jednolitych dostaje `DataObowiazywaniaWersji` ze zdarzeniem ujednolicenia; `DataStanuPrawnegoTJ` — żaden (obwieszczenia według wcześniejszego wzoru, 2 z dniem wykropkowanym). Poza tym eksport się nie zmienia; zgodnych ze schematem jest nadal 1946 z 2321 (oba walidatory).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

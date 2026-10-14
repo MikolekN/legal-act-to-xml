@@ -486,7 +486,9 @@ namespace Saga.Core.Tests
         // Dane czasowe tekstu jednolitego (ADR-0033)
         // ============================================================
 
-        private static XElement ExportWithJournalHeader()
+        private static XElement ExportWithJournalHeader() => ExportWithJournalHeader(ConsolidatedText, out _);
+
+        private static XElement ExportWithJournalHeader(IEnumerable<string> lines, out LegalDocument document)
         {
             var blocks = new List<DocumentBlock>
             {
@@ -494,9 +496,64 @@ namespace Saga.Core.Tests
                 new() { Text = "Warszawa, dnia 11 sierpnia 2025 r.", Role = BlockRole.JournalHeader },
                 new() { Text = "Poz. 1094", Role = BlockRole.JournalHeader },
             };
-            blocks.AddRange(ConsolidatedText.Select(line => Block(line)));
-            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            blocks.AddRange(lines.Select(line => Block(line)));
+            document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
             return LegalDocumentConverter.Convert(document);
+        }
+
+        // Wzór obwieszczenia z § 104 ZTP: punkt 1 podaje dzień stanu prawnego tekstu jednolitego.
+        private static string[] WithLegalStateDay(string day)
+        {
+            var lines = ConsolidatedText.ToArray();
+            lines[4] = "1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się "
+                + "w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów "
+                + $"budowlanych (Dz. U. z 2024 r. poz. 1), z uwzględnieniem stanu prawnego na dzień {day} oraz zmian wprowadzonych:";
+            return lines;
+        }
+
+        private static XElement? Metadata(XElement xml, string name) =>
+            xml.Descendants().SingleOrDefault(e => e.Name.LocalName == name);
+
+        [Fact]
+        public void ConsolidatedTextVersion_IsValidFromTheConsolidationEvent()
+        {
+            // Jak w przykładzie autorów schematu (DU20261261_obw_tj.xml): wersja obowiązuje od ujednolicenia.
+            var xml = ExportWithJournalHeader();
+
+            var validity = Metadata(xml, "DataObowiazywaniaWersji")!;
+            Assert.Equal("zdarz_ujednolicenie_2025-08-11_DU-2025-1094_domyslne", validity.Elements().Single(e => e.Name.LocalName == "Od").Value);
+
+            // Obwieszczenie według wcześniejszego wzoru nie podaje dnia stanu prawnego — nie zgadujemy go.
+            Assert.Null(Metadata(xml, "DataStanuPrawnegoTJ"));
+        }
+
+        [Fact]
+        public void LegalStateDay_StatedInTheAnnouncement_IsTheLegalStateDate()
+        {
+            var xml = ExportWithJournalHeader(WithLegalStateDay("25 lipca 2025 r."), out var document);
+
+            Assert.Equal(new DateTime(2025, 7, 25), document.Announcement!.LegalStateDate);
+            Assert.Equal("2025-07-25", Metadata(xml, "DataStanuPrawnegoTJ")!.Value);
+
+            // Kolejność ze schematu: wersja, potem stan prawny.
+            var names = Metadata(xml, "DataObowiazywaniaWersji")!.Parent!.Elements().Select(e => e.Name.LocalName).ToList();
+            Assert.Equal(names.IndexOf("DataObowiazywaniaWersji") + 1, names.IndexOf("DataStanuPrawnegoTJ"));
+        }
+
+        [Fact]
+        public void LegalStateDay_LeftBlankInTheAnnouncement_IsNotADate()
+        {
+            // Korpus: 347307_3175441 — wzór z wykropkowanym dniem.
+            var xml = ExportWithJournalHeader(WithLegalStateDay("…"), out var document);
+
+            Assert.Null(document.Announcement!.LegalStateDate);
+            Assert.Null(Metadata(xml, "DataStanuPrawnegoTJ"));
+        }
+
+        [SchemaPlFact]
+        public void ConsolidatedStatute_WithLegalStateDay_IsSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.Validate(ExportWithJournalHeader(WithLegalStateDay("25 lipca 2025 r."), out _)));
         }
 
         [Fact]

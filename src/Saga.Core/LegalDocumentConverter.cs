@@ -212,13 +212,17 @@ namespace Saga.Core.Services
             if (TemporalDataXmlConverter.ToXml(document) is { } temporal)
                 metaElement.Add(temporal);
 
+            // Tekst jednolity: wersja od ujednolicenia, a stan prawny — z dnia podanego w obwieszczeniu (ADR-0072).
+            if (TemporalDataXmlConverter.VersionValidity(document) is { } validity)
+                metaElement.Add(validity);
+            if (document.Announcement is { IsConsolidatedText: true, LegalStateDate: { } legalState })
+                metaElement.Add(Element(XmlConverterConstants.Metadata.LegalStatusDateElement, legalState.ToString("yyyy-MM-dd")));
+
             // metaElement.Add(Element(XmlConverterConstants.Metadata.RepealDateElement, "xs:date"));
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.RepealDatePartialElement, "xs:date"));
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.ExpirationDateElement, "xs:date"));
-
-            // metaElement.Add(Element(XmlConverterConstants.Metadata.LegalStatusDateElement, "xs:date"));
 
             // metaElement.Add(Element(XmlConverterConstants.Metadata.ChangeDateElement, "xs:date"));
 

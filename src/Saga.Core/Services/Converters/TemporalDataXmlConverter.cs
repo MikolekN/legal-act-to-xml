@@ -24,6 +24,23 @@ namespace Saga.Core.Services.Converters
         private static readonly Regex WellFormedPrefix = new(
             $"^{EIdSegmentPattern}(?:__{EIdSegmentPattern})*(?=__|$)", RegexOptions.Compiled);
 
+        /// <summary>
+        /// Od kiedy obowiązuje wersja aktu zapisana w dokumencie: tekst jednolity — od zdarzenia ujednolicenia, jak
+        /// w przykładzie autorów schematu (ADR-0072). Null dla aktu, który nie jest tekstem jednolitym, i dla
+        /// tekstu jednolitego bez dnia ogłoszenia.
+        /// </summary>
+        internal static XElement? VersionValidity(LegalDocument document)
+        {
+            if (document.Announcement is not { IsConsolidatedText: true }
+                || LifecycleEvents.Of(document) is not [{ Kind: LifecycleEventKind.Consolidation } consolidation, ..])
+            {
+                return null;
+            }
+
+            return Element(XmlConverterConstants.Metadata.VersionValidityElement,
+                Element(XmlConverterConstants.Metadata.VersionValidFrom, consolidation.Id));
+        }
+
         /// <summary>Element <c>DaneCzasowe</c> albo null, gdy akt nie ma żadnej rozstrzygniętej daty.</summary>
         internal static XElement? ToXml(LegalDocument document)
         {

@@ -195,6 +195,8 @@ namespace Saga.Core.Services.Converters
             internal const string RepealDatePartialElement = "DataUchyleniaCzesciowa";
             internal const string ExpirationDateElement = "DataWygasniecia";
             internal const string LegalStatusDateElement = "DataStanuPrawnegoTJ";
+            internal const string VersionValidityElement = "DataObowiazywaniaWersji";
+            internal const string VersionValidFrom = "Od";
             internal const string ChangeDateElement = "DataOstatniejZmiany";
             internal const string StatusElement = "Status";
             internal const string InForceElement = "CzyObowiazuje";

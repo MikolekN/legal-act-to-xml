@@ -2241,6 +2241,41 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0072: wersja tekstu jednolitego od ujednolicenia, stan prawny z obwieszczenia
+        // ============================================================
+
+        [Fact]
+        public void Adr0072_ConsolidatedText_VersionRunsFromTheConsolidation_AndTheLegalStateIsTheStatedDay()
+        {
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 11 sierpnia 2025 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 1094", Role = BlockRole.JournalHeader },
+            };
+            string[] lines =
+            [
+                "Obwieszczenie", "Marszałka Sejmu Rzeczypospolitej Polskiej", "z dnia 6 sierpnia 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
+                "1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 11 sierpnia 2001 r. o odbudowie obiektów budowlanych (Dz. U. z 2024 r. poz. 1), z uwzględnieniem stanu prawnego na dzień 25 lipca 2025 r. oraz zmian wprowadzonych:",
+                "1) ustawą z dnia 9 maja 2025 r. o zmianie ustawy o odbudowie (Dz. U. poz. 680).",
+                "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
+                "USTAWA", "z dnia 11 sierpnia 2001 r.", "o odbudowie obiektów budowlanych",
+                "Art. 1. Ustawa reguluje zasady odbudowy.",
+            ];
+            blocks.AddRange(lines.Select(line => new DocumentBlock { Text = line }));
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            var xml = LegalDocumentConverter.Convert(document);
+            string Value(string name) => xml.Descendants().Single(e => e.Name.LocalName == name).Value;
+
+            // Wersja zapisana w tekście jednolitym obowiązuje od ujednolicenia; dzień stanu prawnego podaje obwieszczenie.
+            var consolidation = xml.Descendants().Single(e => e.Name.LocalName == "Zdarzenie");
+            Assert.Equal("ujednolicenie", consolidation.Attribute("rodzaj")!.Value);
+            Assert.Equal(consolidation.Attribute("id")!.Value, Value("Od"));
+            Assert.Equal("2025-07-25", Value("DataStanuPrawnegoTJ"));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

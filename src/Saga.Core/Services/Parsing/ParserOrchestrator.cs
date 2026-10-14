@@ -329,6 +329,9 @@ namespace Saga.Core.Services.Parsing
 
             // Tekst jednolity drukuje jednostkę dwa razy, gdy jej zmiana nie weszła jeszcze w życie (ADR-0060).
             WordingVersions.Assign(context.Document);
+
+            if (context.Document.Announcement is { IsConsolidatedText: true } consolidated)
+                consolidated.LegalStateDate = ConsolidatedTextState.Read(consolidated);
         }
 
         // ============================================================
