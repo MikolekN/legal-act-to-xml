@@ -94,6 +94,9 @@ namespace Saga.Core.Services.Parsing.Builders
                 ProcessAmendmentParagraph(item.Paragraph, content);
                 if (item.Nested.Count > 0)
                     AttachNestedAmendment(item.Nested, content);
+                else if (DeepestOpenUnit is IHasAmendments { Amendment: null } owner
+                    && NestedAmendment.Command((BaseEntity)owner, _sectionIsBasicUnit) is { } command)
+                    owner.Amendment = command;
             }
 
             Log.Information(

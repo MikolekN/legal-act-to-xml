@@ -814,6 +814,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   `cytat-strukt` w zdaniu cytowanego przepisu, z celem i aktem zmienianym czytanymi z cytatu. Przedtem jednostki cytatu
   wewnętrznego stawały przed przepisem jako jednostki cytatu zewnętrznego, z adresem aktu zmieniającego.
   - W korpusie zmienia się 11 dokumentów — wszystkie 9 ze stylami `ZZ/` i 2 bez nich: 23 cytaty zagnieżdżone wychodzą w zdaniu cytowanego przepisu, 15 punktów i 10 liter przestaje być `nie-ztp-*`, cytowany rozdział dostaje nagłówek; żadna komenda w cytacie nie zostaje bez swojej treści. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory), pokrycie tekstu bez zmian.
+- **Komendy bez cytatu w cytowanym przepisie** ([ADR-0082](docs/adr/0082-cytat-zagniezdzony-jest-nowelizacja-cytowanego-przepisu.md)): cytowany przepis ustawy
+  zmieniającej, który zmienia wyrazy („w art. 12 wyrazy „…” zastępuje się wyrazami „…”") albo uchyla nazwaną jednostkę
+  („uchyla się art. 11a"), ma własną nowelizację — w eksporcie instrukcje w jego zdaniu. Przepis cytowany bez miejsca zmiany
+  na początku zostaje tekstem.
+  - W korpusie zmienia się 7 dokumentów: w cytowanych przepisach staje 40 instrukcji `now:zamien-tekst` i 7 `now:uchyl`. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

@@ -2634,6 +2634,26 @@ namespace Saga.Core.Tests
             Assert.Equal("art_28a", quoted.Amendment.Targets.Single().Structure.ToString());
         }
 
+        [Fact]
+        public void Adr0082_QuotedProvisionThatChangesWordsOrRepeals_HasItsOwnAmendmentToo()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie niektórych ustaw",
+                "Art. 1. W ustawie z dnia 12 kwietnia 2024 r. o zmianie ustawy o rachunkowości (Dz. U. poz. 619) art. 2 otrzymuje brzmienie:",
+                "„Art. 2. W ustawie z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym (Dz. U. z 2024 r. poz. 979) wprowadza się następujące zmiany:",
+                "1) w art. 12 wyrazy „art. 40” zastępuje się wyrazami „art. 41”;",
+                "2) uchyla się art. 13.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var quoted = LegalDocumentParser.Parse(lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                    new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!
+                .Articles.First().Paragraphs.Single().Amendment!.Content!.Articles.Single().Paragraphs.Single().Points;
+
+            Assert.Single(quoted[0].Amendment!.TextChanges);
+            Assert.Equal(AmendmentOperationType.Repeal, quoted[1].Amendment!.OperationType);
+        }
+
         // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================

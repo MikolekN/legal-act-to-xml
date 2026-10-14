@@ -1,6 +1,6 @@
 # ADR-0082: Cytat zagnieżdżony jest nowelizacją cytowanego przepisu, nie dalszymi jednostkami cytatu zewnętrznego
 
-- Status: Accepted
+- Status: Accepted (uzupełnienie 2026-10-14: cytowany przepis bez cytatu — zmiana w tekście albo uchylenie nazwanej jednostki — też ma własną nowelizację, `NestedAmendment.Command`; patrz CHANGELOG)
 - Data: 2026-10-14
 
 ## Kontekst

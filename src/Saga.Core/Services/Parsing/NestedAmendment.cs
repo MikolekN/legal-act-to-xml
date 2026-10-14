@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Saga.Core.Services.Parsing.Builders;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
@@ -40,6 +41,52 @@ namespace Saga.Core.Services.Parsing
                 amendment.TargetLegalAct = act;
 
             AmendmentTargetPairing.AnchorContentUnits(amendment);
+            return amendment;
+        }
+
+        /// <summary>
+        /// Cytowany przepis, który zaczyna się miejscem zmiany („w art. 12 w ust. 4 …", „w pkt 2 po wyrazach …", „użyte
+        /// w art. 5 …"): przepis aktu zmieniającego, a nie treść zwykłego aktu.
+        /// </summary>
+        private static readonly Regex CommandLocation = new(
+            $@"^(?:użyt[eya]\s+w\b|(?:w|po|przed)\s+(?:{UnitReferences.UnitReferenceTokenizer.UnitKeywordPattern}|części\s+wspólnej|wprowadzeniu\s+do\s+wyliczenia|tytule|odnośniku))",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Komenda bez cytatu, którą jest cytowany przepis (ADR-0082): zmiany w tekście („w art. 12 wyrazy „art. 40”
+        /// zastępuje się wyrazami „art. 41”") albo uchylenie nazwanej jednostki („uchyla się art. 11a"). Null, gdy przepis
+        /// nie jest taką komendą — także gdy obok zmiany w tekście zmienia jednostkę, bo ta wymaga cytatu za nim.
+        /// </summary>
+        internal static Amendment? Command(BaseEntity owner, bool sectionIsBasicUnit)
+        {
+            var text = owner.ContentText.Trim();
+            var commands = AmendmentCommandParser.TextChangeCommands(text);
+            var structural = AmendmentCommandParser.WithoutTextChanges(text, commands);
+            if (AmendmentFinalizer.ModificationPattern.IsMatch(structural))
+                return null;
+
+            // Uchylenie jest komendą, gdy tuż za czasownikiem stoi uchylana jednostka (ADR-0069).
+            if (AmendmentCommandParser.RepealsNamedUnit(structural))
+                return Complete(new Amendment { OperationType = AmendmentOperationType.Repeal }, owner, sectionIsBasicUnit);
+
+            if (commands.Count == 0 || !CommandLocation.IsMatch(text) || AmendmentFinalizer.RepealPattern.IsMatch(structural))
+                return null;
+
+            var amendment = new Amendment { OperationType = AmendmentOperationType.Modification };
+            amendment.TextChanges.AddRange(commands.Select(command => new TextChange
+            {
+                OldText = (command.OldWording ?? string.Empty).Trim(),
+                NewText = (command.NewWording ?? string.Empty).Trim(),
+                Occurrence = command.Kind == AmendmentCommandKind.ReplaceSign ? TextOccurrence.Last : TextOccurrence.All,
+            }));
+            return Complete(amendment, owner, sectionIsBasicUnit);
+        }
+
+        private static Amendment Complete(Amendment amendment, BaseEntity owner, bool sectionIsBasicUnit)
+        {
+            amendment.Targets.AddRange(Targets(owner, sectionIsBasicUnit));
+            if (AmendedAct(owner) is { } act)
+                amendment.TargetLegalAct = act;
             return amendment;
         }
 

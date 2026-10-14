@@ -141,6 +141,53 @@ namespace Saga.Core.Tests
             Assert.Equal("d", Assert.Single(nested.Content!.Letters).Number!.Value);
         }
 
+        // Korpus: 309528_2762939 — ustawa zmienia przepis ustawy zmieniającej, który zmienia wyrazy i uchyla ustęp.
+        private static readonly string[] QuotedCommandsWithoutQuotes =
+        [
+            "Art. 1. W ustawie z dnia 12 kwietnia 2024 r. o zmianie ustawy o rachunkowości (Dz. U. poz. 619) art. 2 otrzymuje brzmienie:",
+            "„Art. 2. W ustawie z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym (Dz. U. z 2024 r. poz. 979) wprowadza się następujące zmiany:",
+            "1) w art. 12 w ust. 4 wyrazy „art. 40 pkt 2–5c” zastępuje się wyrazami „art. 40 pkt 2–5d”;",
+            "2) w art. 20 uchyla się ust. 3.”.",
+        ];
+
+        [Fact]
+        public void QuotedProvisionsThatChangeWordsOrRepeal_HaveTheirOwnAmendments()
+        {
+            var quoted = Parse(QuotedCommandsWithoutQuotes).Articles.First().Paragraphs.Single().Amendment!.Content!.Articles.Single();
+            var points = quoted.Paragraphs.Single().Points;
+
+            var words = points[0].Amendment!;
+            Assert.Equal(AmendmentOperationType.Modification, words.OperationType);
+            var change = Assert.Single(words.TextChanges);
+            Assert.Equal(("art. 40 pkt 2–5c", "art. 40 pkt 2–5d"), (change.OldText, change.NewText));
+            Assert.Equal("art_12__ust_4", words.Targets.Single().Structure.ToString());
+            Assert.Equal([979], words.TargetLegalAct.Positions);
+
+            var repeal = points[1].Amendment!;
+            Assert.Equal(AmendmentOperationType.Repeal, repeal.OperationType);
+            Assert.Equal("art_20__ust_3", repeal.Targets.Single().Structure.ToString());
+        }
+
+        [Fact]
+        public void QuotedProseWithoutACommandLocation_HasNoAmendment()
+        {
+            // Treść zwykłego aktu w cytacie — słowa „zastępuje się" nie czynią z niej komendy.
+            var points = Parse(
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) art. 5 otrzymuje brzmienie:",
+                "„Art. 5. Opłatę za wyrazy „pilne” zastępuje się opłatą dodatkową.”.").Articles.First().Paragraphs.Single().Points;
+
+            var quoted = points[0].Amendment!.Content!.Articles.Single();
+            Assert.All(quoted.Paragraphs, paragraph => Assert.Null(paragraph.Amendment));
+        }
+
+        [SchemaPlFact]
+        public void QuotedCommandsWithoutQuotes_AreSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(Parse(QuotedCommandsWithoutQuotes)).Elements().First()));
+        }
+
         [SchemaPlFact]
         public void NestedAmendment_IsSchemaValid()
         {
