@@ -287,6 +287,8 @@ namespace Saga.Core.Services.Parsing
                     Footnote = QuotedFootnoteReader.Build(footnote, collector.Paragraphs, out quoteAtTheMarker),
                 }
                 : QuotedTextSubject.Read(collector.Owner?.ContentText, collector.Paragraphs) ?? _amendmentBuilder.Build(buildInput);
+            if (footnote is null)
+                AmendmentBuilder.DemoteLoneCommonParts(content, collector.Owner?.ContentText);
 
             // Tekst pod przepisem, który niczego nie zmienia („oświadczenie o następującej treści:", „według wzoru:"),
             // jest treścią tego przepisu, nie nowelizacją (ADR-0071).

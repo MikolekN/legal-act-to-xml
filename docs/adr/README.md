@@ -104,5 +104,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0083](0083-objasnienie-gwiazdki-nie-jest-pozycja-wyliczenia-a-jej-znacznik-jest-indeksem-gornym.md) | Akapity objaśnień gwiazdki na końcu treści załącznika nie są pozycjami wyliczenia (zostają akapitami za jednostkami), a znacznik objaśnienia („(*)", „*)", „I)") wychodzi jako `sup` | Accepted | 2026-10-14 |
 | [0084](0084-przytoczony-przepis-zmieniajacy-jest-jednostka-z-wlasnymi-nowelizacjami.md) | Przytoczony przepis zmieniający z własnym cytatem jest jednostką z własnymi nowelizacjami (częściowo zastępuje ADR-0036); wiersze cudzysłowu otwartego w środku akapitu są tekstem tego akapitu, nie jednostkami | Accepted | 2026-10-14 |
 | [0085](0085-otwarty-cudzyslow-cytatu-przewaza-nad-stylem-ustawy-matki.md) | Dopóki cudzysłów zebranej treści cytowanej jest otwarty, akapit w stylu ustawy matki jest treścią cytowaną; cytat kończy akapit z komendą albo kolejna jednostka aktu zmieniającego | Accepted | 2026-10-14 |
+| [0086](0086-czesc-wspolna-bez-wyliczenia-i-bez-komendy-ktora-ja-nazywa-jest-tekstem-cytowanym.md) | Treść cytowana z samych części wspólnych, bez wyliczenia i pod komendą, która części wspólnej nie nazywa, jest tekstem cytowanym | Accepted | 2026-10-14 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

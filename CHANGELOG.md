@@ -857,6 +857,11 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Żądanie bez formularza nie daje 500**: `POST /v1/convert` bez ciała (albo bez typu treści) kończyło się błędem
   wiązania parametrów, który `UseExceptionHandler` zamieniał na 500. Teraz odpowiedź niesie kod z wyjątku (400) i polski
   opis: dokument trzeba wysłać formularzem `multipart/form-data` w polu `documentFile`.
+- **Część wspólna bez wyliczenia** ([ADR-0086](docs/adr/0086-czesc-wspolna-bez-wyliczenia-i-bez-komendy-ktora-ja-nazywa-jest-tekstem-cytowanym.md)): podpisy rysunków, tytuły tabel i podobne
+  akapity złożone stylem zmiany części wspólnej, pod komendą, która części wspólnej nie nazywa („rysunki 6.3.1.8
+  i 6.3.1.9 otrzymują brzmienie:"), są tekstem cytowanym — jeden `cytat-w-tekscie` zamiast osobnego `cytat-strukt` na
+  każdy akapit z adresem `…__czw`.
+  - W korpusie zmienia się 7 dokumentów: 121 części wspólnych bez wyliczenia (podpisy rysunków, tytuły tabel, pozycje efektów kształcenia „B.W15.") przestaje wychodzić osobnymi cytatami `cytat-strukt` — 54 cytaty tekstu zamiast 121 cytatów strukturalnych; w jednym tekście jednolitym znika fałszywa nowelizacja aktu przez samego siebie (część wspólna w stylu zmiany zostaje dalszą treścią punktu). Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu bez zmian. Zgodność bez stylów rozporządzeń 98,64 % → 99,04 % jednostek (brakujących 396 → 276; w pełni zgodnych 1013 → 1015 dokumentów).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

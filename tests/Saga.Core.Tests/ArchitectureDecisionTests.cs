@@ -2783,6 +2783,40 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0086: część wspólna bez wyliczenia i bez komendy, która ją nazywa, jest tekstem cytowanym
+        // ============================================================
+
+        [Fact]
+        public void Adr0086_CommonPartStyleWithoutAnEnumeration_IsQuotedText_UnlessTheCommandNamesACommonPart()
+        {
+            static XElement Export(string command, string quotedStyle, params string[] quoted)
+            {
+                var blocks = new List<DocumentBlock>
+                {
+                    new() { Text = "USTAWA" }, new() { Text = "z dnia 14 czerwca 2024 r." }, new() { Text = "o zmianie ustawy o drogach" },
+                    new() { Text = "Art. 1. W ustawie z dnia 1 lutego 2021 r. o drogach (Dz. U. poz. 200) wprowadza się następujące zmiany:", StyleId = "ARTartustawynprozporzdzenia" },
+                    new() { Text = command, StyleId = "PKTpunkt" },
+                };
+                blocks.AddRange(quoted.Select(text => new DocumentBlock { Text = text, StyleId = quotedStyle }));
+                blocks.Add(new() { Text = "2) uchyla się art. 7.", StyleId = "PKTpunkt" });
+                blocks.Add(new() { Text = "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", StyleId = "ARTartustawynprozporzdzenia" });
+                var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+                return LegalDocumentConverter.Convert(document);
+            }
+
+            const string commonPartStyle = "ZCZWSPPKTzmczciwsppktartykuempunktem";
+
+            // Podpis rysunku w stylu części wspólnej: komenda mówi o rysunku — tekst cytowany.
+            var caption = Export("1) w art. 5 rysunek 3 otrzymuje brzmienie:", commonPartStyle, "„Rys. 3. Tablica E-1a.”;");
+            Assert.DoesNotContain(caption.Descendants(), e => e.Name.LocalName.Contains("czesc-wspolna"));
+            Assert.Single(caption.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
+
+            // Komenda nazywa część wspólną — zostaje częścią wspólną.
+            var commonPart = Export("1) w art. 5 część wspólna otrzymuje brzmienie:", commonPartStyle, "„– wymierza się karę.”;");
+            Assert.Single(commonPart.Descendants(), e => e.Name.LocalName == "czesc-wspolna-punkt");
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

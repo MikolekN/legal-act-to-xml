@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Saga.Core.Helpers;
 using Saga.Core.Services.Classify;
 using Saga.Model;
@@ -886,6 +887,30 @@ namespace Saga.Core.Services.Parsing.Builders
         // ============================================================
         // Helpers
         // ============================================================
+
+        // Przedmiot komendy, którym jest część wspólna albo wprowadzenie do wyliczenia.
+        private static readonly Regex CommonPartSubject = new(
+            @"(?<![\p{L}])(?:częś\w*\s+wspóln|wprowadzeni\w*\s+do\s+wyliczenia)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Treść cytowana złożona z samych części wspólnych, bez wyliczenia, którego byłyby częścią, i pod komendą, która
+        /// części wspólnej nie nazywa („tytuł tabeli 1 otrzymuje brzmienie:", „rysunki 6.3.1.8 i 6.3.1.9 otrzymują
+        /// brzmienie:") — styl części wspólnej bez potwierdzenia w treści. Takie akapity są tekstem cytowanym.
+        /// </summary>
+        internal static void DemoteLoneCommonParts(AmendmentContent content, string? command)
+        {
+            if (content.CommonParts.Count == 0 || !string.IsNullOrEmpty(content.PlainText)
+                || content.Articles.Count > 0 || content.SystematizingUnits.Count > 0 || content.Paragraphs.Count > 0
+                || content.Points.Count > 0 || content.Letters.Count > 0 || content.Tirets.Count > 0
+                || content.CommonParts.Any(part => part.Continuation.Count > 0)
+                || (command is not null && CommonPartSubject.IsMatch(command)))
+                return;
+
+            foreach (var part in content.CommonParts)
+                AppendPlainText(content, part.ContentText);
+            content.CommonParts.Clear();
+            content.ObjectType = AmendmentObjectType.None;
+        }
 
         private static void AppendPlainText(AmendmentContent content, string text)
         {

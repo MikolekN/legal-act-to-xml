@@ -2,6 +2,7 @@ using Saga.Core.Helpers;
 using Saga.Core.Services.Parsing;
 using Saga.Core.Services.Parsing.Builders;
 using Saga.Model;
+using Saga.Model.EditorialUnits;
 
 namespace Saga.Core.Tests
 {
@@ -238,6 +239,46 @@ namespace Saga.Core.Tests
             Assert.Equal(2, content.Tirets.Count);
             Assert.Equal(["ujmuje się wszystkie dochody i wydatki na realizację zadań."],
                 content.Tirets[1].Continuation.Select(block => block.Text));
+        }
+
+        // ============================================================
+        // Część wspólna bez wyliczenia
+        // ============================================================
+
+        private static AmendmentContent LoneCommonParts() => new()
+        {
+            ObjectType = AmendmentObjectType.CommonPart,
+            CommonParts =
+            {
+                new CommonPart(CommonPartType.WrapUp, string.Empty, "Rys. 6.3.1.8. Tablica E-1a I"),
+                new CommonPart(CommonPartType.WrapUp, string.Empty, "Rys. 6.3.1.9. Tablica E-1a II"),
+            },
+        };
+
+        [Fact]
+        public void LoneCommonParts_UnderACommandNotNamingThem_AreQuotedText()
+        {
+            // Korpus: 329091_3181227 — podpisy rysunków złożone stylem części wspólnej.
+            var content = LoneCommonParts();
+
+            AmendmentBuilder.DemoteLoneCommonParts(content, "rysunki 6.3.1.8 i 6.3.1.9 otrzymują brzmienie:");
+
+            Assert.Empty(content.CommonParts);
+            Assert.Equal("Rys. 6.3.1.8. Tablica E-1a I" + Environment.NewLine + "Rys. 6.3.1.9. Tablica E-1a II", content.PlainText);
+            Assert.Equal(AmendmentObjectType.None, content.ObjectType);
+        }
+
+        [Theory]
+        [InlineData("w ust. 2 część wspólna otrzymuje brzmienie:")]
+        [InlineData("w pkt 3 wprowadzenie do wyliczenia otrzymuje brzmienie:")]
+        public void CommonParts_NamedByTheCommand_StayCommonParts(string command)
+        {
+            var content = LoneCommonParts();
+
+            AmendmentBuilder.DemoteLoneCommonParts(content, command);
+
+            Assert.Equal(2, content.CommonParts.Count);
+            Assert.Null(content.PlainText);
         }
 
         // ============================================================
