@@ -2739,6 +2739,50 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0085: otwarty cudzysłów cytatu przeważa nad stylem ustawy matki
+        // ============================================================
+
+        [Fact]
+        public void Adr0085_OpenQuote_OutweighsTheStyleOfTheAct_UntilACommandOrTheNextUnitOfTheAct()
+        {
+            static LegalDocument Parse(params DocumentBlock[] body)
+            {
+                DocumentBlock[] blocks =
+                [
+                    new() { Text = "USTAWA" }, new() { Text = "z dnia 14 czerwca 2024 r." }, new() { Text = "o zmianie ustawy o opłatach" },
+                    new() { Text = "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:", StyleId = "ARTartustawynprozporzdzenia" },
+                    .. body,
+                    new() { Text = "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", StyleId = "ARTartustawynprozporzdzenia" },
+                ];
+                return LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            }
+
+            static DocumentBlock Point(string text) => new() { Text = text, StyleId = "PKTpunkt" };
+
+            // Cytat złożony stylem punktu aktu: dopóki cudzysłów jest otwarty, to treść cytowana, nie ustępy artykułu 1.
+            var misstyled = Parse(
+                Point("1) w załączniku dodaje się wariant D w brzmieniu:"),
+                Point("„Wariant D"),
+                Point("1. Wykształcenie – co najmniej średnie."),
+                Point("2. Staż pracy – odbycie przygotowania zawodowego.”;"),
+                Point("2) uchyla się art. 7."));
+            var paragraph = Assert.Single(misstyled.Articles.First().Paragraphs);
+            Assert.True(paragraph.IsImplicit);
+            Assert.Equal(["1", "2"], paragraph.Points.Select(point => point.Number!.Value));
+
+            // Cytat bez cudzysłowu zamykającego (literówka) kończy kolejny punkt aktu, choćby bez własnej komendy.
+            var typo = Parse(
+                Point("1) art. 5 otrzymuje brzmienie:"),
+                new() { Text = "„Art. 5. Opłatę pobiera się raz w roku.", StyleId = "ZARTzmartartykuempunktem" },
+                Point("2) w art. 7:"),
+                new() { Text = "a) ust. 1 otrzymuje brzmienie:", StyleId = "LITlitera" },
+                new() { Text = "„1. Opłata wynosi 100 zł.”;", StyleId = "ZLITUSTzmustliter" });
+            var points = Assert.Single(typo.Articles.First().Paragraphs).Points;
+            Assert.Equal(["1", "2"], points.Select(point => point.Number!.Value));
+            Assert.Equal("a", Assert.Single(points[1].Letters).Number!.Value);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

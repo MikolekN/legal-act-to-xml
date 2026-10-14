@@ -103,6 +103,33 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Czy zebrana treść zaczyna się cudzysłowem, którego dotąd nie domknięto — bez względu na style akapitów
+        /// (<see cref="QuoteTracker"/> liczy bilans tylko przy zbieraniu bezstylowym).
+        /// </summary>
+        public bool LeavesQuoteOpen
+        {
+            get
+            {
+                if (_paragraphs.Count == 0 || _paragraphs[0].Table is not null || !QuoteBalanceTracker.OpensQuote(_paragraphs[0].Text))
+                    return false;
+
+                var depth = 0;
+                foreach (var paragraph in _paragraphs)
+                {
+                    foreach (var character in paragraph.Table is { } table ? TextOf(table) : paragraph.Text)
+                    {
+                        if (character == QuotationMarks.Opening)
+                            depth++;
+                        else if (QuotationMarks.IsClosing(character) && depth > 0)
+                            depth--;
+                    }
+                }
+
+                return depth > 0;
+            }
+        }
+
+        /// <summary>
         /// Dodaje akapit do bufora nowelizacji.
         /// Dekoduje metadane stylu przez <see cref="AmendmentStyleDecoder"/>.
         /// </summary>

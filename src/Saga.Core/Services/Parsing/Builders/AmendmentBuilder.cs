@@ -334,7 +334,9 @@ namespace Saga.Core.Services.Parsing.Builders
         /// </summary>
         private void AttachText(string text, AmendmentContent content, ContentFormula? formula = null, Ingest.BlockSymbol? symbol = null)
         {
-            var unit = (BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? _currentParagraph;
+            // Tiret jest jednostką dopiero wtedy, gdy cytat zaczyna się od tiretów — inaczej dalsza treść należy do
+            // jednostki, która tirety wylicza.
+            var unit = (BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? (BaseEntity?)_currentParagraph ?? _openTirets.LastOrDefault();
             if (unit is null)
             {
                 if (content.Tables.Count > 0)

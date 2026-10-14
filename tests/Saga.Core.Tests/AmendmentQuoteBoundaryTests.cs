@@ -259,5 +259,96 @@ namespace Saga.Core.Tests
             // Otwiera, nie zamyka — granica pozostaje niepewna i XML tego nie ukrywa.
             Assert.Equal("otwierajacy", citation.Attribute("cudzyslowy")?.Value);
         }
+
+        // ============================================================
+        // Cytat otwarty a styl ustawy matki
+        // ============================================================
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("ZLITPKTzmpktliter")]
+        [InlineData("PKTpunkt")]
+        public void Collector_SeesAQuoteLeftOpen_WhateverTheStyle(string? style)
+        {
+            var collector = new AmendmentCollector();
+            collector.AddParagraph("„Wariant D", style);
+            collector.AddParagraph("1. Wykształcenie – co najmniej średnie.", style);
+            Assert.True(collector.LeavesQuoteOpen);
+
+            collector.AddParagraph("2. Staż pracy.”,", style);
+            Assert.False(collector.LeavesQuoteOpen);
+        }
+
+        [Fact]
+        public void Collector_WithoutAnOpeningQuote_LeavesNothingOpen()
+        {
+            var collector = new AmendmentCollector();
+            collector.AddParagraph("Art. 5. Opłata wynosi „100 zł", "ZARTzmartartykuempunktem");
+
+            Assert.False(collector.LeavesQuoteOpen);
+        }
+
+        private static DocumentBlock Styled(string text, string? style) => new() { Text = text, StyleId = style };
+
+        private static LegalDocument ParseRegulation(params DocumentBlock[] body)
+        {
+            DocumentBlock[] blocks =
+            [
+                Styled("ROZPORZĄDZENIE", null), Styled("MINISTRA INFRASTRUKTURY", null), Styled("z dnia 13 stycznia 2026 r.", null),
+                Styled("zmieniające rozporządzenie w sprawie pracowników kolejowych", null),
+                Styled("Na podstawie art. 22d ust. 3 ustawy z dnia 28 marca 2003 r. o transporcie kolejowym (Dz. U. z 2025 r. poz. 1234) zarządza się, co następuje:", null),
+                .. body,
+                Styled("§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", "ARTartustawynprozporzdzenia"),
+            ];
+            return LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+        }
+
+        [Fact]
+        public void LinesOfAnOpenQuoteInTheStyleOfTheAct_AreQuotedContent()
+        {
+            // Korpus: 338265_3166784 — cytat po komendzie tiretu złożony stylem punktu aktu.
+            var document = ParseRegulation(
+                Styled("§ 1. W rozporządzeniu Ministra Infrastruktury z dnia 11 stycznia 2021 r. w sprawie pracowników (Dz. U. z 2024 r. poz. 780) wprowadza się następujące zmiany:", "ARTartustawynprozporzdzenia"),
+                Styled("1) uchyla się § 39;", "PKTpunkt"),
+                Styled("2) w załączniku nr 1 do rozporządzenia:", "PKTpunkt"),
+                Styled("a) w pkt 1:", "LITlitera"),
+                Styled("– w ppkt I dodaje się wariant D w brzmieniu:", "TIRtiret"),
+                Styled("„Wariant D", "PKTpunkt"),
+                Styled("1. Wykształcenie – co najmniej średnie.", "PKTpunkt"),
+                Styled("2. Staż pracy – odbycie przygotowania zawodowego.”,", "PKTpunkt"),
+                Styled("– w ppkt II uchyla się pkt 3,", "TIRtiret"),
+                Styled("b) uchyla się pkt 2.", "LITlitera"));
+
+            // Paragraf aktu zmieniającego ma swoje punkty, a nie ustępy z cytatu.
+            var section = document.Articles.First();
+            var paragraph = Assert.Single(section.Paragraphs);
+            Assert.True(paragraph.IsImplicit);
+            Assert.Equal(["1", "2"], paragraph.Points.Select(point => point.Number!.Value));
+
+            var letters = paragraph.Points[1].Letters;
+            Assert.Equal(["a", "b"], letters.Select(letter => letter.Number!.Value));
+            Assert.Equal(2, letters[0].Tirets.Count);
+            Assert.Contains(letters[0].Tirets[0].Amendment!.Content!.Paragraphs, quoted => quoted.Number!.Value == "2");
+        }
+
+        [Fact]
+        public void QuoteLeftOpenByATypo_EndsAtTheNextUnitOfTheAct()
+        {
+            // Literówka: cytat bez cudzysłowu zamykającego. Kolejny punkt aktu zmieniającego — bez własnej komendy —
+            // nie staje się treścią cytowaną.
+            var document = ParseRegulation(
+                Styled("§ 1. W rozporządzeniu Ministra Infrastruktury z dnia 11 stycznia 2021 r. w sprawie pracowników (Dz. U. z 2024 r. poz. 780) wprowadza się następujące zmiany:", "ARTartustawynprozporzdzenia"),
+                Styled("1) uchyla się § 39;", "PKTpunkt"),
+                Styled("2) § 5 otrzymuje brzmienie:", "PKTpunkt"),
+                Styled("„§ 5. Opłatę pobiera się raz w roku.;", "ZARTzmartartykuempunktem"),
+                Styled("3) w § 7:", "PKTpunkt"),
+                Styled("a) ust. 1 otrzymuje brzmienie:", "LITlitera"),
+                Styled("„1. Opłata wynosi 100 zł.”;", "ZLITUSTzmustliter"),
+                Styled("b) uchyla się ust. 2.", "LITlitera"));
+
+            var points = document.Articles.First().Paragraphs.Single().Points;
+            Assert.Equal(["1", "2", "3"], points.Select(point => point.Number!.Value));
+            Assert.Equal(["a", "b"], points[2].Letters.Select(letter => letter.Number!.Value));
+        }
     }
 }

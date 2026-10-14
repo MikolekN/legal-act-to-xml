@@ -593,7 +593,7 @@ namespace Saga.Core.Services.Classify
             return null;
         }
 
-        private static EntityNumber? ParseNumberForKind(ParagraphKind kind, string text) =>
+        internal static EntityNumber? ParseNumberForKind(ParagraphKind kind, string text) =>
             kind switch
             {
                 ParagraphKind.Article => ParsingFactories.ParseArticleNumber(text),

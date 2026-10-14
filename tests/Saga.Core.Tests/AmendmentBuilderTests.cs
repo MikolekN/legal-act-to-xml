@@ -220,6 +220,26 @@ namespace Saga.Core.Tests
             Assert.Equal("2", content.Tirets[1].Number?.Value);
         }
 
+        [Fact]
+        public void Build_TextAfterStandaloneTirets_ContinuesTheLastTiret_InItsPlace()
+        {
+            // Korpus: 330183_3021948 — objaśnienia: wprowadzenie, tirety z numerami rozdziałów, dalsze zdania.
+            var paragraphs = new List<CollectedAmendmentParagraph>
+            {
+                new("W jednostkach samorządu terytorialnego w rozdziałach:", null, null),
+                new("\u2013 01043, 01044,", null, null),
+                new("\u2013 92503", null, null),
+                new("ujmuje się wszystkie dochody i wydatki na realizację zadań.", null, null),
+            };
+
+            var content = _builder.Build(new AmendmentBuildInput(paragraphs, null, AmendmentOperationType.Modification));
+
+            Assert.Equal("W jednostkach samorządu terytorialnego w rozdziałach:", content.PlainText);
+            Assert.Equal(2, content.Tirets.Count);
+            Assert.Equal(["ujmuje się wszystkie dochody i wydatki na realizację zadań."],
+                content.Tirets[1].Continuation.Select(block => block.Text));
+        }
+
         // ============================================================
         // Pełna hierarchia: ART → UST → PKT → LIT → TIR
         // ============================================================

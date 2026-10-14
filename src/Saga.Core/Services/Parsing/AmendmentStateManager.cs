@@ -91,6 +91,18 @@ namespace Saga.Core.Services.Parsing
 
                 if (context.InsideAmendment)
                 {
+                    // 2b. Cudzysłów cytatu wciąż otwarty: akapit w stylu ustawy matki jest treścią cytowaną — styl bywa
+                    //     pomylony („„Wariant D" i „1. Wykształcenie …" w stylu punktu), a o granicy cytatu mówi
+                    //     cudzysłów. Cytat, który literówka zostawiła otwarty, kończy jak dotąd akapit z komendą albo
+                    //     kolejna jednostka aktu zmieniającego.
+                    if (context.AmendmentCollector.LeavesQuoteOpen
+                        && !StartsCommand(text)
+                        && !ContinuesTheAct(context, classification, text))
+                    {
+                        Log.Debug("Cytat otwarty — akapit w stylu ustawy matki {Style} jest treścią cytowaną", classification.StyleType);
+                        return;
+                    }
+
                     Log.Debug("Zamknieto nowelizacje (styl ustawy matki: {Style})", classification.StyleType);
                     context.InsideAmendment = false;
                 }
@@ -132,6 +144,37 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Akapit jest kolejną jednostką aktu zmieniającego: numer następuje po otwartej jednostce tego samego rodzaju
+        /// („3)" po punkcie 2), tiret stoi przy otwartym tirecie, a artykuł — zawsze, bo cytat nie przechodzi przez artykuły.
+        /// </summary>
+        private static bool ContinuesTheAct(ParsingContext context, ClassificationResult classification, string text)
+        {
+            if (classification.Kind == ParagraphKind.Article)
+                return true;
+            if (classification.Kind == ParagraphKind.Tiret)
+                return context.CurrentTiret is not null;
+
+            var open = classification.Kind switch
+            {
+                ParagraphKind.Paragraph => context.CurrentParagraph?.Number,
+                ParagraphKind.Point => context.CurrentPoint?.Number,
+                ParagraphKind.Letter => context.CurrentLetter?.Number,
+                _ => null,
+            };
+
+            return open is not null
+                && ParagraphClassifier.ParseNumberForKind(classification.Kind, text) is { } number
+                && new NumberingHint { ExpectedKind = classification.Kind, ExpectedNumber = open }.IsContinuous(number);
+        }
+
+        /// <summary>Akapit zawiera komendę — zmianę brzmienia, uchylenie albo zmianę wyrazów.</summary>
+        private static bool StartsCommand(string text) =>
+            AmendmentFinalizer.ModificationPattern.IsMatch(text) ||
+            AmendmentFinalizer.RepealPattern.IsMatch(text) ||
+            AmendmentCommandParser.ReplaceWordsPattern.IsMatch(text) ||
+            AmendmentCommandParser.AddWordsPattern.IsMatch(text);
+
+        /// <summary>
         /// Zwraca true, gdy podczas nowelizacji pojawia się akapit z triggerem
         /// nowego punktu/ustępu bez stylu ustawy matki — sygnał zamknięcia bieżącej nowelizacji.
         /// </summary>
@@ -151,10 +194,7 @@ namespace Saga.Core.Services.Parsing
 
             // ReplaceWords („wyrazy … zastępuje się wyrazami …") to od Etapu 8 pełnoprawna komenda —
             // nowy punkt ustawy matki z taką komendą również zamyka bieżącą nowelizację (symetria z DetectTrigger).
-            return AmendmentFinalizer.ModificationPattern.IsMatch(text) ||
-                AmendmentFinalizer.RepealPattern.IsMatch(text) ||
-                AmendmentCommandParser.ReplaceWordsPattern.IsMatch(text) ||
-                AmendmentCommandParser.AddWordsPattern.IsMatch(text);
+            return StartsCommand(text);
         }
 
         /// <summary>

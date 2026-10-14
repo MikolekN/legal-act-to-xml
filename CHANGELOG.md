@@ -841,6 +841,12 @@ a wersjonowanie zgodne z Semantic Versioning.
     na swoje miejsca, a znaczniki odnośników przytoczonej tabeli są indeksem górnym zamiast odsyłaczy do odnośnika
     obwieszczenia. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu i zgodność
     bez stylów bez zmian.
+- **Otwarty cudzysłów przed stylem** ([ADR-0085](docs/adr/0085-otwarty-cudzyslow-cytatu-przewaza-nad-stylem-ustawy-matki.md)): akapit w stylu jednostki aktu, który stoi
+  w cytacie o niedomkniętym cudzysłowie („„Wariant D", „1. Wykształcenie …" w stylu punktu), jest treścią cytowaną, a nie
+  ustępem aktu zmieniającego. Cytat kończy akapit z komendą albo kolejna jednostka aktu zmieniającego, więc literówka
+  w cudzysłowie nie wchłania następnych przepisów. Tekst za tiretami na początku cytatu jest dalszą treścią ostatniego
+  tiretu i zostaje na swoim miejscu.
+  - W korpusie zmienia się 4 dokumenty (dwie pary tego samego aktu). W rozporządzeniu zmieniającym 338265 (i jego kopii) 62 jednostki `nie-ztp-*` stają się jednostkami ZTP: cytat „Wariant D” w stylu punktu nie rozbija już § 1 na ustępy, a 9 zmian w tekście załącznika wskazuje jednostki załącznika (`zal_1__pkt_4`) zamiast punktów rozporządzenia. W 330183 (i kopii) cytowane tirety objaśnień przestają być tiretami aktu zmieniającego. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu bez zmian. Zgodność bez stylów rozporządzeń 98,11 % → 98,64 % jednostek (brakujących 548 → 396, nadmiarowych 253 → 101): budowa ze stylami zgadza się teraz z budową z samej treści.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
