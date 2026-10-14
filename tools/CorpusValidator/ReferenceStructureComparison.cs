@@ -240,9 +240,13 @@ internal static class ReferenceStructureComparison
         _ => "",
     }));
 
+    private static readonly Regex SpaceBeforePunctuation = new(@"\s+([;,.:)])", RegexOptions.Compiled);
+
     private static readonly (string Name, Func<string, string> Normalize)[] DifferenceKinds =
     [
-        ("odstępy", text => Whitespace.Replace(text.Replace('\u00a0', ' '), " ").Trim()),
+        // Odstęp przed interpunkcją zostaje po instrukcji wyjętej ze zdania („brzmieniu: <cytat/>;") — zależy od tego,
+        // jak plik referencyjny złożono wokół elementu, a nie od tekstu zdania.
+        ("odstępy", text => SpaceBeforePunctuation.Replace(Whitespace.Replace(text.Replace('\u00a0', ' '), " "), "$1").Trim()),
         ("myślnik", text => text.Replace('\u2013', '-').Replace('\u2212', '-')),
         ("cudzysłów", text => Regex.Replace(text, "[\u201e\u201d\u201c\"]", "\"")),
         ("indeks górny w nawiasie", text => Regex.Replace(text, @"\[([^\[\]]*)\]", "$1")),
@@ -263,6 +267,8 @@ internal static class ReferenceStructureComparison
             if (!ours.TryGetValue(sentence.Key, out var candidates) || candidates.Count == 0)
             {
                 missing++;
+                if (samples.Count(s => s.StartsWith("[bez odpowiednika]")) < 6)
+                    samples.Add($"[bez odpowiednika] {sentence.Key}\n      ref:   {Truncate(sentence.Text, 150)}");
                 continue;
             }
 
