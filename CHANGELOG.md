@@ -786,6 +786,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   numer, jak przy znaku odwołania. Inny numer w indeksie górnym na początku treści zostaje — to odwołanie.
   - W korpusie zmienia się 67 odnośników w 62 dokumentach (przy tytule, organie i w treści aktu). Zgodnych ze schematem
     nadal 2278 z 2321.
+- **Wyliczenie w odnośniku** ([ADR-0078](docs/adr/0078-wyliczenie-w-odnosniku-to-jego-jednostki.md)): „Niniejsza ustawa służy stosowaniu: 1) …;
+  2) …" wychodzi jako `punkt-odnosnik` z `nr`, litery i tirety pod nimi, części wspólne i dalsze akapity jako
+  `fragment-odnosnik` — w odnośniku aktu i w cytowanym (`odnosnik-cyt`). Wprowadzenie i pozycje to fragmenty jednego
+  zdania. Przedtem każdy akapit przypisu był kolejnym zdaniem jednego `p`.
+  - W korpusie zmienia się 147 dokumentów: 738 `punkt-odnosnik` (122 dokumenty), 64 `litera-odnosnik` (11), 32 `czesc-wspolna-punkt-odnosnik` (6) i 106 `fragment-odnosnik` (70) — przedtem zdania jednego `p` z oznaczeniem i tabulatorem w tekście. Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

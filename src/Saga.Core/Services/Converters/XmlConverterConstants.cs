@@ -419,6 +419,15 @@ namespace Saga.Core.Services.Converters
 
                 /// <summary>Odnośnik cytowany w nowelizacji.</summary>
                 internal const string QuotedElement = "odnosnik-cyt";
+
+                // Jednostki treści odnośnika (ADR-0078).
+                internal const string PointElement = "punkt-odnosnik";
+                internal const string LetterElement = "litera-odnosnik";
+                internal const string TiretElement = "tiret-odnosnik";
+                internal const string FragmentElement = "fragment-odnosnik";
+                internal const string PointsCommonPartElement = "czesc-wspolna-punkt-odnosnik";
+                internal const string LettersCommonPartElement = "czesc-wspolna-litera-odnosnik";
+                internal const string TiretsCommonPartElement = "czesc-wspolna-tiret-odnosnik";
                 internal const string IdAttribute = "id-odnosnika";
                 internal const string SymbolAttribute = "symbol";
             }

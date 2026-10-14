@@ -1,6 +1,5 @@
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
-using Saga.Core.Services.Parsing;
 using Saga.Model;
 using static Saga.Core.XLinqWrappers;
 
@@ -123,13 +122,7 @@ namespace Saga.Core.Services.Converters
                 new XAttribute(XmlConverterConstants.Contents.Odnosnik.SymbolAttribute, footnote.Symbol),
                 new XAttribute(XmlConverterConstants.Contents.GUID, footnote.Guid.ToString()));
 
-            // Schemat przewiduje w odnośniku jeden akapit; kolejne akapity przypisu dołączają do niego zdaniami.
-            var paragraph = Element(XmlConverterConstants.Contents.TextSection);
-            var order = 0;
-            foreach (var sentence in footnote.Paragraphs.SelectMany(ParsingFactories.SplitIntoSentences))
-                paragraph.Add(SentenceContext.ToXml(text: sentence.Text, number: ++order));
-
-            element.Add(paragraph);
+            FootnoteContentXml.Fill(element, footnote.Paragraphs);
             return element;
         }
 

@@ -133,6 +133,30 @@ namespace Saga.Core.Tests
             Assert.Empty(points[0].Amendment!.Content!.Points);
         }
 
+        private static LegalDocument ParseEnumeratingFootnote() => Parse(
+            "1) odnośnik nr 2 do tytułu ustawy otrzymuje brzmienie:",
+            "„2) Niniejsza ustawa:",
+            "1) wdraża dyrektywę 2022/2555;",
+            "2) służy stosowaniu rozporządzenia 2024/1366.”;");
+
+        [Fact]
+        public void EnumerationInsideAQuotedFootnote_IsExportedAsPointsOfThatFootnote()
+        {
+            // Treść cytowanego odnośnika ma tę samą budowę co odnośnika aktu (ADR-0078).
+            var quoted = LegalDocumentConverter.Convert(ParseEnumeratingFootnote()).Descendants()
+                .Single(e => e.Name.LocalName == "odnosnik-cyt");
+
+            Assert.Equal(new[] { "p", "punkt-odnosnik", "punkt-odnosnik" }, quoted.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal("2) Niniejsza ustawa:", quoted.Elements().First().Value);
+            Assert.Equal("1", quoted.Elements().ElementAt(1).Elements().First().Value);
+        }
+
+        [SchemaPlFact]
+        public void EnumerationInsideAQuotedFootnote_IsSchemaValid_InTheActBody()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(ParseEnumeratingFootnote()).Elements().First()));
+        }
+
         [SchemaPlFact]
         public void QuotedFootnote_IsSchemaValid_InTheActBody()
         {

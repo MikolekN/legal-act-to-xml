@@ -323,22 +323,16 @@ namespace Saga.Core.Services.Converters
             if (amendment.Content?.Footnote is not { } footnote)
                 return;
 
-            var paragraph = Element(XmlConverterConstants.Contents.TextSection);
-            var order = 0;
-            foreach (var text in footnote.Paragraphs.SelectMany(ParsingFactories.SplitIntoSentences))
-                paragraph.Add(SentenceContext.ToXml(text: text.Text, number: ++order));
-            if (!paragraph.HasElements)
-                paragraph.Add(SentenceContext.ToXml(text: string.Empty));
-
+            var quoted = Element(XmlConverterConstants.Contents.Odnosnik.QuotedElement,
+                new XAttribute(XmlConverterConstants.Contents.eId, EIdSegment.Of(StructuralReference.FootnotePrefix, footnote.Symbol)),
+                new XAttribute(XmlConverterConstants.Contents.GUID, footnote.Guid.ToString()));
+            var paragraph = FootnoteContentXml.Fill(quoted, footnote.Paragraphs);
             paragraph.Elements().First().AddFirst(
                 Element(XmlConverterConstants.Contents.Superscript, footnote.Symbol + ")"), new XText(" "));
 
             var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
             ApplyAttributes(citation, amendment, command, isStructural: true);
-            citation.Add(Element(XmlConverterConstants.Contents.Odnosnik.QuotedElement,
-                new XAttribute(XmlConverterConstants.Contents.eId, EIdSegment.Of(StructuralReference.FootnotePrefix, footnote.Symbol)),
-                new XAttribute(XmlConverterConstants.Contents.GUID, footnote.Guid.ToString()),
-                paragraph));
+            citation.Add(quoted);
 
             if (sentence is XElement zdanie)
                 zdanie.Add(citation);

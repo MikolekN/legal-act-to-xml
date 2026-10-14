@@ -2484,6 +2484,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0078: wyliczenie w odnośniku to jego jednostki
+        // ============================================================
+
+        [Fact]
+        public void Adr0078_EnumerationInAFootnote_IsItsUnits_AndTheContentDecidesWhereItEnds()
+        {
+            var units = FootnoteContent.Read(
+            [
+                "Niniejsza ustawa służy stosowaniu:",
+                "1)\trozporządzenia 2021/784;",
+                "2)\trozporządzenia 2022/2065.",
+                "Dane dotyczące ogłoszenia aktów prawa Unii Europejskiej dotyczą wydania specjalnego.",
+            ])!;
+
+            // Punkty odnośnika z numerem — a wiersz od wielkiej litery to dalszy akapit, choć szablon składa go stylem
+            // części wspólnej.
+            Assert.Equal(
+                [FootnoteContent.Kind.Point, FootnoteContent.Kind.Point, FootnoteContent.Kind.Paragraph],
+                units.Select(unit => unit.Kind));
+            Assert.Equal(["1", "2", null], units.Select(unit => unit.Number));
+
+            // Wyliczenia, którego jednostki odnośnika nie wyrażą (tiret poza literą), nie dzieli się.
+            Assert.Null(FootnoteContent.Read(["Niniejsza ustawa wdraża:", "– dyrektywę 2019/1937,", "– dyrektywę 2022/2555."]));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 
