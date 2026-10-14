@@ -43,7 +43,7 @@ namespace Saga.Core.Tests
 
         /// <summary>
         /// Czy dokumentacja wskazuje na istniejący plik. Ścieżka może być podana względem korzenia
-        /// repozytorium albo względem katalogu projektu (konwencja docs/parsing-flow.md), dlatego
+        /// repozytorium albo względem katalogu projektu (np. `Services/Parsing/…` w tabelach klas), dlatego
         /// dopuszczamy dopasowanie po sufiksie — nadal wyłapuje plik usunięty, przeniesiony
         /// do innego projektu albo literówkę w nazwie.
         /// </summary>

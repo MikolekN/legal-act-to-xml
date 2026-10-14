@@ -782,6 +782,12 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
   wyjściowym jest XML.
+- **Nieaktualne dokumenty z `docs/`**: `parsing-flow.md`, `classification-algorithm.md`,
+  `classification-algorithm-layered.md`, `onboarding-xml-converters.md`, `notatka_stan_AKN4PL.md`,
+  `analiza_AK4PL.md`, `analiza_AK4PL_uzupelnienie.md`. Opisywały klasyfikator warstwowy z warstwą AI, którego
+  już nie ma, układ trzech osobnych repozytoriów i stan modelu z marca; dwie analizy były zapisem rozmowy
+  z asystentem. To, co nadal prawdziwe, a nieopisane — przeciążenie `Parse(IReadOnlyList<DocumentBlock>)`
+  i tiret zapisany symbolem `w:sym` F02D — przeszło do `architecture.md`. Treść zostaje w historii gita.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

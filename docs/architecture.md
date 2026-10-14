@@ -284,6 +284,10 @@ LegalDocumentParser.Parse(Stream, fileNameHint?, ParseOptions?)  →  ParseResul
 LegalDocumentParser.Parse(filePath, ParseOptions?)
     → otwiera plik read-only (File.OpenRead) i deleguje do Parse(Stream, ...)
 
+LegalDocumentParser.Parse(IReadOnlyList<DocumentBlock>, ParseOptions?)
+    → wejście z gotowych bloków (wywołujący sam przeprowadził odczyt adapterem);
+      ten sam rdzeń, SourceFormat w kopercie = Unknown
+
 [Obsolete] LegalDocumentParser.Parse(WordprocessingDocument)
     → ścieżka wsteczna: czyta bloki przez DocxBlockReader i zwraca LegalDocument
       BEZPOŚREDNIO, z pominięciem klasyfikacji dokumentu i koperty ParseResult
@@ -296,7 +300,7 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 
 | Właściwość `DocumentBlock` | Opis |
 |---|---|
-| `Text` | Tekst bloku (kanał indeksu górnego `[x]`, tabulatory `\t`, łącznik nierozdzielający jako dywiz, przejście wiersza jako odstęp, wersaliki nadane przebiegowi wprost jako wielkie litery — wersaliki ze stylu zostają, jak zapisano; **nie** trymowany/sanityzowany) |
+| `Text` | Tekst bloku (kanał indeksu górnego `[x]`, tabulatory `\t`, tiret zapisany symbolem (`w:sym` F02D czcionki Symbol) jako półpauza, łącznik nierozdzielający jako dywiz, przejście wiersza jako odstęp, wersaliki nadane przebiegowi wprost jako wielkie litery — wersaliki ze stylu zostają, jak zapisano; **nie** trymowany/sanityzowany) |
 | `StyleId` | Identyfikator stylu Word — tylko DOCX; `null` dla PDF/TXT |
 | `Layout` | Opcjonalne metadane układu (`BlockLayoutInfo` — wcięcia, pogrubienie, kursywa) — z DOCX/PDF |
 | `Source` | Położenie w źródle (`BlockSourceLocation`) — diagnostyka |
