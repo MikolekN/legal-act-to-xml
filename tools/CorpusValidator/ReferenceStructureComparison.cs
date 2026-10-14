@@ -66,6 +66,26 @@ internal static class ReferenceStructureComparison
             + (Nr.Length > 0 ? $" nr={Nr}" : "") + (Heading.Length > 0 ? $" „{Truncate(Heading, 60)}”" : "");
     }
 
+    // Odesłania i metryczkę publikatora nakłada na eksport osobny moduł — SAGA ich nie tworzy.
+    private static readonly HashSet<string> ForeignAnnotations = ["ref", "mref", "rref", "metryczka"];
+
+    /// <summary>
+    /// Zdejmuje z pliku referencyjnego adnotacje, których SAGA nie tworzy (odesłania <c>ref</c>, <c>mref</c>,
+    /// <c>rref</c> i <c>metryczka</c> z jej elementami) — zostaje ich tekst. Bez tego każda z nich wychodziła
+    /// w porównaniu jako różnica, choć nie należy do zakresu programu.
+    /// </summary>
+    internal static void UnwrapForeignAnnotations(XElement root)
+    {
+        var annotations = root.Descendants()
+            .Where(e => ForeignAnnotations.Contains(e.Name.LocalName)
+                || e.Ancestors().Any(a => a.Name.LocalName == "metryczka"))
+            .Reverse()
+            .ToList();
+
+        foreach (var annotation in annotations)
+            annotation.ReplaceWith(annotation.Nodes());
+    }
+
     internal static int Run(string docxPath, string referencePath, string outputDirectory)
     {
         if (!File.Exists(docxPath) || !File.Exists(referencePath))
@@ -86,6 +106,7 @@ internal static class ReferenceStructureComparison
         ours.Save(Path.Combine(outputDirectory, "ours.xml"));
 
         var referenceRoot = XDocument.Load(referencePath).Root!;
+        UnwrapForeignAnnotations(referenceRoot);
         var reference = Collect(referenceRoot);
         var actual = Collect(ours);
 
@@ -93,8 +114,7 @@ internal static class ReferenceStructureComparison
             + SentenceReport(Sentences(referenceRoot), Sentences(ours))
             + LifecycleReport(LifecycleLines(referenceRoot), LifecycleLines(ours))
             + AnnexReport(AnnexLines(referenceRoot), AnnexLines(ours))
-            + CommandReport(CommandLines(referenceRoot), CommandLines(ours))
-            + CrossReferenceReport(CrossReferenceLines(referenceRoot), CrossReferenceLines(ours));
+            + CommandReport(CommandLines(referenceRoot), CommandLines(ours));
         File.WriteAllText(Path.Combine(outputDirectory, "comparison.txt"), report);
         Console.WriteLine(report);
         return 0;
@@ -449,47 +469,6 @@ internal static class ReferenceStructureComparison
         W();
         W($"--- Komendy nowelizacyjne (jednostka, element, funkcja, cel, treść): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
         WriteDiff(W, reference, actual, 40);
-        return sb.ToString();
-    }
-
-    // ============================================================
-    // 9. Odesłania
-    // ============================================================
-
-    private static readonly HashSet<string> CrossReferenceElements = ["ref", "rref", "mref"];
-
-    /// <summary>
-    /// Odesłania (<c>ref</c>, <c>rref</c>, <c>mref</c>) jako wiersze: jednostka, w której stoją (najbliższy przodek
-    /// z eId — w treści cytowanej jednostka cytatu), element z rodzicem <c>mref</c>, adres (<c>href</c> albo
-    /// <c>from</c>–<c>upTo</c>) i tekst odesłania.
-    /// </summary>
-    internal static List<string> CrossReferenceLines(XElement root) => root.Descendants()
-        .Where(e => CrossReferenceElements.Contains(e.Name.LocalName))
-        .Select(reference =>
-        {
-            string Attribute(string name) => reference.Attribute(name)?.Value ?? "";
-
-            var owner = reference.Ancestors().Select(EId).FirstOrDefault(id => id.Length > 0) ?? "";
-            var element = (reference.Parent?.Name.LocalName == "mref" ? "mref/" : "") + reference.Name.LocalName;
-            var target = reference.Name.LocalName switch
-            {
-                "ref" => Attribute("href"),
-                "rref" => $"{Attribute("from")}–{Attribute("upTo")}",
-                _ => "",
-            };
-
-            return $"{owner} > {element} {target} „{Truncate(Normalize(reference.Value), 80)}”";
-        })
-        .ToList();
-
-    private static string CrossReferenceReport(List<string> reference, List<string> actual)
-    {
-        var sb = new StringBuilder();
-        void W(string line = "") => sb.AppendLine(line);
-
-        W();
-        W($"--- Odesłania (jednostka, element, adres, tekst): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
-        WriteDiff(W, reference, actual, 30);
         return sb.ToString();
     }
 

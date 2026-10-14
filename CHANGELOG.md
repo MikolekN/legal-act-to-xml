@@ -41,10 +41,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   nie niesie (szczotka przed publikacją, akt bez nagłówka publikatora): eksport ma wtedy `Rok` i `Pozycja`, adresy
   z prefiksem aktu i daty wejścia w życie liczone od dnia ogłoszenia. Dane z dokumentu wygrywają; błędna wartość to
   odpowiedź 400 z opisem.
-- **Miara odesłań wobec przykładów** (`CorpusValidator --compare-reference`): nowa sekcja zestawia odesłania
-  (`ref`, `mref`, `rref`) z plikiem referencyjnym — jednostka, w której stoją, element, adres (`href` albo
-  `from`–`upTo`) i tekst. Stan wyjściowy: DU/2026/26 — 0 z 415, DU/2026/252 — 0 z 1631 (eksport odesłań jeszcze nie
-  powstaje).
+- **Porównanie z przykładami bez odesłań i metryczki** (`CorpusValidator --compare-reference`): odesłania (`ref`,
+  `mref`, `rref`) i metryczkę publikatora nakłada na eksport osobny moduł, więc porównanie zdejmuje je z pliku
+  referencyjnego i zostawia ich tekst — nie liczą się już jako różnice (wcześniej m.in. ok. 1000 wierszy załączników
+  DU/2026/252). Załączniki DU/2026/252: zgodnych 829 z 863 elementów (przedtem 744 z 1798).
 
 ### Zmieniono
 - **eId jednostek redakcyjnych nie zawiera już ścieżki jednostek systematyzacyjnych**: artykuł
