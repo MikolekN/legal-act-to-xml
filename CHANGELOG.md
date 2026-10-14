@@ -791,6 +791,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   `fragment-odnosnik` — w odnośniku aktu i w cytowanym (`odnosnik-cyt`). Wprowadzenie i pozycje to fragmenty jednego
   zdania. Przedtem każdy akapit przypisu był kolejnym zdaniem jednego `p`.
   - W korpusie zmienia się 147 dokumentów: 738 `punkt-odnosnik` (122 dokumenty), 64 `litera-odnosnik` (11), 32 `czesc-wspolna-punkt-odnosnik` (6) i 106 `fragment-odnosnik` (70) — przedtem zdania jednego `p` z oznaczeniem i tabulatorem w tekście. Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory).
+- **Zdanie albo akapit jako przedmiot komendy** ([ADR-0079](docs/adr/0079-zdanie-albo-akapit-jako-przedmiot-komendy-czyni-tresc-cytowana-tekstem.md)): „zdanie pierwsze otrzymuje
+  brzmienie:", „akapity czwarty i piąty otrzymują brzmienie:" cytują tekst — nie część wspólną ze stylu, którym szablon
+  składa cytowane zdania, i nie punkty z oznaczenia na początku akapitu tekstu załącznika.
+  - W korpusie zmienia się 8 dokumentów (4 akty, każdy dwa razy): 100 cytatów wychodzi tekstem (`cytat-w-tekscie`) zamiast 122 cytatów strukturalnych z częścią wspólną, tiretem, punktem albo literą, których zmieniany akt nie ma. Zgodnych ze schematem nadal 2278 z 2321 (oba walidatory). Zgodność bez stylów: rozporządzenia 97,38 % → 97,76 % jednostek (w pełni zgodnych 1006 → 1012), ustawy w pełni zgodnych 210 → 211 — różnice znikają, bo mylił się przebieg ze stylami.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

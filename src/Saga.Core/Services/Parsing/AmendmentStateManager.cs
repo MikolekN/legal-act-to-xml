@@ -237,15 +237,16 @@ namespace Saga.Core.Services.Parsing
                 context.SectionIsBasicUnit);
 
             // Odnośnik jako przedmiot komendy: jego treść nie przechodzi przez rozpoznawanie jednostek (ADR-0059).
+            // Zdanie albo akapit jako przedmiot komendy: treść cytowana jest tekstem, bez względu na style (ADR-0079).
             var footnote = QuotedFootnoteReader.Read(collector.Owner?.ContentText);
             var quoteAtTheMarker = false;
-            var content = footnote is null
-                ? _amendmentBuilder.Build(buildInput)
-                : new AmendmentContent
+            var content = footnote is not null
+                ? new AmendmentContent
                 {
                     ObjectType = AmendmentObjectType.None,
                     Footnote = QuotedFootnoteReader.Build(footnote, collector.Paragraphs, out quoteAtTheMarker),
-                };
+                }
+                : QuotedTextSubject.Read(collector.Owner?.ContentText, collector.Paragraphs) ?? _amendmentBuilder.Build(buildInput);
 
             // Tekst pod przepisem, który niczego nie zmienia („oświadczenie o następującej treści:", „według wzoru:"),
             // jest treścią tego przepisu, nie nowelizacją (ADR-0071).

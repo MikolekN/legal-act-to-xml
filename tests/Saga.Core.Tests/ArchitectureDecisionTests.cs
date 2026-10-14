@@ -2510,6 +2510,40 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0079: zdanie albo akapit jako przedmiot komendy — treść cytowana jest tekstem
+        // ============================================================
+
+        [Fact]
+        public void Adr0079_SentenceOrParagraphAsTheSubject_MakesTheQuotedContentText_WhateverItsStyle()
+        {
+            DocumentBlock Line(string text, string? style = null) => new() { Text = text, StyleId = style };
+            const string article = "ARTartustawynprozporzdzenia";
+            var blocks = new List<DocumentBlock>
+            {
+                Line("USTAWA"), Line("z dnia 14 czerwca 2024 r."), Line("o zmianie ustawy o opłatach"),
+                Line("Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:", article),
+                Line("1) w art. 5 w ust. 7 zdanie pierwsze otrzymuje brzmienie:", "PKTpunkt"),
+                // Szablon składa cytowane zdanie stylem części wspólnej punktów.
+                Line("„Opłatę wnosi się w terminie 14 dni.”;", "ZCZWSPPKTzmczciwsppktartykuempunktem"),
+                Line("2) w załączniku w pkt 2.2 akapity drugi i trzeci otrzymują brzmienie:", "PKTpunkt"),
+                Line("„1) Znak stosuje się przed przejazdem.", "ZPKTzmpktartykuempunktem"),
+                Line("2) Znak umieszcza się po prawej stronie.”.", "ZPKTzmpktartykuempunktem"),
+                Line("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", article),
+            };
+            var points = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!
+                .Articles.First().Paragraphs.Single().Points;
+
+            var sentence = points[0].Amendment!.Content!;
+            Assert.Equal("Opłatę wnosi się w terminie 14 dni.", sentence.PlainText);
+            Assert.Empty(sentence.CommonParts);
+
+            // Akapity tekstu zaczynające się oznaczeniem nie są punktami aktu.
+            var paragraphs = points[1].Amendment!.Content!;
+            Assert.Empty(paragraphs.Points);
+            Assert.NotNull(paragraphs.PlainText);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 
