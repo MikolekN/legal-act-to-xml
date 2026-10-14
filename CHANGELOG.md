@@ -788,6 +788,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   już nie ma, układ trzech osobnych repozytoriów i stan modelu z marca; dwie analizy były zapisem rozmowy
   z asystentem. To, co nadal prawdziwe, a nieopisane — przeciążenie `Parse(IReadOnlyList<DocumentBlock>)`
   i tiret zapisany symbolem `w:sym` F02D — przeszło do `architecture.md`. Treść zostaje w historii gita.
+- **Diagramy PlantUML modelu** (`src/Saga.Model/uml/*.puml`): nieaktualne — brakowało w nich m.in. załączników,
+  obwieszczenia, bloków treści, podpisu i odnośników — i nic się do nich nie odwoływało. Hierarchię modelu
+  opisuje `architecture.md` (sekcja 4).
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
