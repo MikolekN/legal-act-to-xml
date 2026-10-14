@@ -473,13 +473,41 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Akapit otwiera przytoczenie pod przepisem: zaczyna się cudzysłowem, którego nie domyka, a przepis nad nim kończy
-        /// dwukropek i niczego nie zmienia („1) oświadczenie następującej treści:" i „„Oświadczam, że:") (ADR-0076).
+        /// dwukropek i niczego nie zmienia („1) oświadczenie następującej treści:" i „„Oświadczam, że:") (ADR-0076). Tak samo
+        /// akapit, który w całości jest cytatem („ślubowanie według następującej roty:" i „„Ślubuję uroczyście … .”") —
+        /// przytoczenie kończy się wtedy na nim samym.
         /// </summary>
         private static bool OpensProvisionQuote(ParsingContext context, string text) =>
             !context.InsideAmendment && !context.AmendmentTriggerDetected && !context.AmendmentCollector.IsCollecting
-            && QuoteBalanceTracker.OpensQuote(text) && QuoteDepthAfter(0, text) > 0
+            && QuoteBalanceTracker.OpensQuote(text) && (QuoteDepthAfter(0, text) > 0 || IsWholeQuotation(text))
             && GetOwner(context) is { } provision && provision.ContentText.TrimEnd().EndsWith(':')
             && !AmendsAnything(context, provision);
+
+        private static readonly System.Text.RegularExpressions.Regex QuotationEnd = new(
+            $@"[{QuotationMarks.Closing}]\s*[.,;]?\s*$", System.Text.RegularExpressions.RegexOptions.Compiled);
+
+        /// <summary>
+        /// Akapit w całości jest cytatem: cudzysłów otwierający z jego początku domyka się dopiero na końcu, przed
+        /// interpunkcją. Wyrażenie w cudzysłowie na początku („„Ustawa" oznacza …”) domyka się wcześniej i cytatem nie jest.
+        /// </summary>
+        private static bool IsWholeQuotation(string text)
+        {
+            var end = QuotationEnd.Match(text);
+            var start = text.IndexOf(QuotationMarks.Opening);
+            if (!end.Success || start < 0)
+                return false;
+
+            var depth = 0;
+            for (var i = start; i < end.Index; i++)
+            {
+                if (text[i] == QuotationMarks.Opening)
+                    depth++;
+                else if (QuotationMarks.IsClosing(text[i]) && --depth == 0)
+                    return false;
+            }
+
+            return depth == 1;
+        }
 
         /// <summary>Głębokość cudzysłowu po akapicie: otwarcia minus zamknięcia, nie mniej niż zero.</summary>
         private static int QuoteDepthAfter(int depth, string text)

@@ -847,6 +847,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   w cudzysłowie nie wchłania następnych przepisów. Tekst za tiretami na początku cytatu jest dalszą treścią ostatniego
   tiretu i zostaje na swoim miejscu.
   - W korpusie zmienia się 4 dokumenty (dwie pary tego samego aktu). W rozporządzeniu zmieniającym 338265 (i jego kopii) 62 jednostki `nie-ztp-*` stają się jednostkami ZTP: cytat „Wariant D” w stylu punktu nie rozbija już § 1 na ustępy, a 9 zmian w tekście załącznika wskazuje jednostki załącznika (`zal_1__pkt_4`) zamiast punktów rozporządzenia. W 330183 (i kopii) cytowane tirety objaśnień przestają być tiretami aktu zmieniającego. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu bez zmian. Zgodność bez stylów rozporządzeń 98,11 % → 98,64 % jednostek (brakujących 548 → 396, nadmiarowych 253 → 101): budowa ze stylami zgadza się teraz z budową z samej treści.
+- **Rota i oświadczenie w jednym akapicie** ([ADR-0071](docs/adr/0071-tresc-pod-przepisem-ktory-niczego-nie-zmienia-jest-jego-trescia.md),
+  [ADR-0076](docs/adr/0076-cudzyslow-otwarty-pod-przepisem-trwa-do-domkniecia.md)): akapit, który w całości jest cytatem („„Ślubuję uroczyście … .”"), pod
+  przepisem kończącym się dwukropkiem i niczego niezmieniającym („… składa ślubowanie według następującej roty:") jest
+  przytoczeniem — `tresc-strukt` w zdaniu przepisu, jak przytoczenie na kilka akapitów. Wyrażenie w cudzysłowie na
+  początku akapitu („„Komornik” oznacza …") cytatem nie jest.
+  - W korpusie zmienia się 35 dokumentów: 44 roty i oświadczenia przestają być `fragment` i wychodzą jako `tresc-strukt`.
+    Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu i zgodność bez stylów bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

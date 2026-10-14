@@ -1,6 +1,6 @@
 # ADR-0076: Cudzysłów otwarty pod przepisem trwa do domknięcia — akapity w nim należą do przytoczenia, bez względu na styl
 
-- Status: Accepted
+- Status: Accepted (uzupełnienie 2026-10-14: akapit, który w całości jest cytatem — „ślubowanie według następującej roty:" i „„Ślubuję uroczyście … .”" — też jest przytoczeniem pod przepisem, zamkniętym na nim samym; patrz CHANGELOG)
 - Data: 2026-10-14
 
 ## Kontekst

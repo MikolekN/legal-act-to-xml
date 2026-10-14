@@ -89,6 +89,54 @@ namespace Saga.Core.Tests
             Assert.Empty(SchemaPl.Validator.Validate(xml));
         }
 
+        // Korpus: 299146_2684028 — rota ślubowania w jednym akapicie.
+        private static readonly DocumentBlock[] Oath =
+        [
+            Block("Art. 1. 1. Prezes sądu odbiera od komornika ślubowanie według następującej roty:", Article),
+            Block("„Ślubuję uroczyście jako komornik powierzone mi obowiązki wypełniać zgodnie z prawem.”."),
+            Block("2. Składający ślubowanie może dodać na końcu zwrot: „Tak mi dopomóż Bóg.”.", Paragraph),
+        ];
+
+        [Fact]
+        public void QuotationInASingleParagraph_IsQuotedContentOfTheProvision()
+        {
+            var (document, xml) = Export(false, Oath);
+
+            var paragraphs = document.Articles.First().Paragraphs;
+            Assert.Equal(["1", "2"], paragraphs.Select(paragraph => paragraph.Number!.Value));
+            var quotation = Assert.Single(paragraphs[0].Continuation.Select(block => block.Quotation).OfType<Quotation>());
+            Assert.True(quotation.HasOpeningQuote && quotation.HasClosingQuote);
+
+            var quoted = Assert.Single(Named(xml, "tresc-strukt"));
+            Assert.Equal("Ślubuję uroczyście jako komornik powierzone mi obowiązki wypełniać zgodnie z prawem.", quoted.Value);
+            Assert.EndsWith(".", quoted.Parent!.Value);
+            Assert.Empty(Named(xml, "fragment"));
+        }
+
+        [Theory]
+        // Wyrażenie w cudzysłowie na początku akapitu domyka się przed końcem — akapit nie jest cytatem.
+        [InlineData("„Komornik” oznacza także asesora; tak samo „aplikant”.")]
+        // Cytat bez cudzysłowu zamykającego na końcu.
+        [InlineData("„Ślubuję uroczyście” — tak brzmi początek roty.")]
+        public void ParagraphThatIsNotOneWholeQuotation_StaysText(string text)
+        {
+            var (document, xml) = Export(false,
+                Block("Art. 1. 1. Prezes sądu odbiera od komornika ślubowanie według następującej roty:", Article),
+                Block(text),
+                Block("2. Ślubowanie składa się w siedzibie sądu.", Paragraph));
+
+            Assert.Empty(Named(xml, "tresc-strukt"));
+            Assert.Equal([text], document.Articles.First().Paragraphs[0].Continuation.Select(block => block.Text));
+        }
+
+        [SchemaPlFact]
+        public void QuotationInASingleParagraph_IsSchemaValid()
+        {
+            var (_, xml) = Export(true, Oath);
+
+            Assert.Empty(SchemaPl.Validator.Validate(xml));
+        }
+
         [Fact]
         public void QuoteOpenedAndNotClosed_KeepsOnlyTheOpeningMark()
         {
