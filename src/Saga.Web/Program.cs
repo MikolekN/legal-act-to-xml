@@ -18,6 +18,13 @@ builder.Services.AddProblemDetails(options =>
             context.ProblemDetails.Title = "Dokument jest za duży";
             context.ProblemDetails.Detail = UploadLimits.ExceededMessage;
         }
+        else if (context.Exception is BadHttpRequestException)
+        {
+            // Żądanie, którego nie da się nawet związać z parametrami (np. bez formularza) — błąd klienta, nie usługi.
+            context.ProblemDetails.Title = "Błędne żądanie";
+            context.ProblemDetails.Detail =
+                $"Wyślij dokument jako formularz multipart/form-data w polu documentFile (obsługiwane formaty: {ServiceInfo.SupportedFormats}).";
+        }
     };
 });
 
@@ -35,7 +42,13 @@ forwardedHeaders.KnownIPNetworks.Clear();
 forwardedHeaders.KnownProxies.Clear();
 app.UseForwardedHeaders(forwardedHeaders);
 
-app.UseExceptionHandler();
+// Błąd wiązania żądania niesie własny kod (400, 413, 415) — usługa nie odpowiada na niego 500.
+app.UseExceptionHandler(new ExceptionHandlerOptions
+{
+    StatusCodeSelector = exception => exception is BadHttpRequestException badRequest
+        ? badRequest.StatusCode
+        : StatusCodes.Status500InternalServerError,
+});
 app.UseStatusCodePages();
 
 app.Use(async (context, next) =>

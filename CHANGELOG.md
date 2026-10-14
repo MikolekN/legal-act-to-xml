@@ -854,6 +854,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   początku akapitu („„Komornik” oznacza …") cytatem nie jest.
   - W korpusie zmienia się 35 dokumentów: 44 roty i oświadczenia przestają być `fragment` i wychodzą jako `tresc-strukt`.
     Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu i zgodność bez stylów bez zmian.
+- **Żądanie bez formularza nie daje 500**: `POST /v1/convert` bez ciała (albo bez typu treści) kończyło się błędem
+  wiązania parametrów, który `UseExceptionHandler` zamieniał na 500. Teraz odpowiedź niesie kod z wyjątku (400) i polski
+  opis: dokument trzeba wysłać formularzem `multipart/form-data` w polu `documentFile`.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

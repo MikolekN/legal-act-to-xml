@@ -115,7 +115,9 @@ klasyfikację niesie wynik, nie kod HTTP. Strumień bierze wprost z `IFormFile.O
 dane formularza są już zbuforowane, więc strumień jest seekowalny i nie trzeba przepisywać
 dokumentu do pamięci. Każda awaria wychodzi jako `ProblemDetails` z `traceId`
 (400/413/415/422 oraz 500 z `UseExceptionHandler`); ciało dla 413 dokłada `UseStatusCodePages`,
-bo Kestrel odrzuca zbyt duże żądanie przed wejściem do endpointu.
+bo Kestrel odrzuca zbyt duże żądanie przed wejściem do endpointu. Żądanie, którego nie da się związać
+z parametrami (`BadHttpRequestException` — np. bez formularza), dostaje kod z wyjątku
+(`ExceptionHandlerOptions.StatusCodeSelector`), nie 500: to błąd klienta, nie usługi.
 
 Interfejsem są dwie strony: `/` — wizytówka usługi z odnośnikiem do dokumentacji (szablon
 `Pages/index.html` wypełniany danymi wydania raz, przy starcie, przez `LandingPage`) oraz
