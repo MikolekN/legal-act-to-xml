@@ -41,6 +41,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   nie niesie (szczotka przed publikacją, akt bez nagłówka publikatora): eksport ma wtedy `Rok` i `Pozycja`, adresy
   z prefiksem aktu i daty wejścia w życie liczone od dnia ogłoszenia. Dane z dokumentu wygrywają; błędna wartość to
   odpowiedź 400 z opisem.
+- **Miara odesłań wobec przykładów** (`CorpusValidator --compare-reference`): nowa sekcja zestawia odesłania
+  (`ref`, `mref`, `rref`) z plikiem referencyjnym — jednostka, w której stoją, element, adres (`href` albo
+  `from`–`upTo`) i tekst. Stan wyjściowy: DU/2026/26 — 0 z 415, DU/2026/252 — 0 z 1631 (eksport odesłań jeszcze nie
+  powstaje).
 
 ### Zmieniono
 - **eId jednostek redakcyjnych nie zawiera już ścieżki jednostek systematyzacyjnych**: artykuł

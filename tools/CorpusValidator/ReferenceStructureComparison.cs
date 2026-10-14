@@ -93,7 +93,8 @@ internal static class ReferenceStructureComparison
             + SentenceReport(Sentences(referenceRoot), Sentences(ours))
             + LifecycleReport(LifecycleLines(referenceRoot), LifecycleLines(ours))
             + AnnexReport(AnnexLines(referenceRoot), AnnexLines(ours))
-            + CommandReport(CommandLines(referenceRoot), CommandLines(ours));
+            + CommandReport(CommandLines(referenceRoot), CommandLines(ours))
+            + CrossReferenceReport(CrossReferenceLines(referenceRoot), CrossReferenceLines(ours));
         File.WriteAllText(Path.Combine(outputDirectory, "comparison.txt"), report);
         Console.WriteLine(report);
         return 0;
@@ -448,6 +449,47 @@ internal static class ReferenceStructureComparison
         W();
         W($"--- Komendy nowelizacyjne (jednostka, element, funkcja, cel, treść): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
         WriteDiff(W, reference, actual, 40);
+        return sb.ToString();
+    }
+
+    // ============================================================
+    // 9. Odesłania
+    // ============================================================
+
+    private static readonly HashSet<string> CrossReferenceElements = ["ref", "rref", "mref"];
+
+    /// <summary>
+    /// Odesłania (<c>ref</c>, <c>rref</c>, <c>mref</c>) jako wiersze: jednostka, w której stoją (najbliższy przodek
+    /// z eId — w treści cytowanej jednostka cytatu), element z rodzicem <c>mref</c>, adres (<c>href</c> albo
+    /// <c>from</c>–<c>upTo</c>) i tekst odesłania.
+    /// </summary>
+    internal static List<string> CrossReferenceLines(XElement root) => root.Descendants()
+        .Where(e => CrossReferenceElements.Contains(e.Name.LocalName))
+        .Select(reference =>
+        {
+            string Attribute(string name) => reference.Attribute(name)?.Value ?? "";
+
+            var owner = reference.Ancestors().Select(EId).FirstOrDefault(id => id.Length > 0) ?? "";
+            var element = (reference.Parent?.Name.LocalName == "mref" ? "mref/" : "") + reference.Name.LocalName;
+            var target = reference.Name.LocalName switch
+            {
+                "ref" => Attribute("href"),
+                "rref" => $"{Attribute("from")}–{Attribute("upTo")}",
+                _ => "",
+            };
+
+            return $"{owner} > {element} {target} „{Truncate(Normalize(reference.Value), 80)}”";
+        })
+        .ToList();
+
+    private static string CrossReferenceReport(List<string> reference, List<string> actual)
+    {
+        var sb = new StringBuilder();
+        void W(string line = "") => sb.AppendLine(line);
+
+        W();
+        W($"--- Odesłania (jednostka, element, adres, tekst): referencja {reference.Count}, nasze {actual.Count}, zgodne {Matching(reference, actual)} ---");
+        WriteDiff(W, reference, actual, 30);
         return sb.ToString();
     }
 
