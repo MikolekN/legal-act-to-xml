@@ -287,6 +287,38 @@ namespace Saga.Core.Tests
                 LegalDocumentConverter.Convert(Parse(blocks.ToArray())).Elements().First()));
         }
 
+        // Korpus: 305231_2733472 — „1)" w osobnym akapicie, za nim wzór i jego legenda, „albo", „2)" i drugi wzór.
+        private static DocumentBlock[] PointsMadeOfFormulas() =>
+        [
+            .. Heading,
+            Text("Art. 1. 1. Premię oblicza się zgodnie ze wzorami:", "ARTartustawynprozporzdzenia"),
+            Text("1)", "PKTpunkt"),
+            Formula("K=A∙W"),
+            Text("albo", "PKTpunkt"),
+            Text("2)", "PKTpunkt"),
+            Formula("K=A∙W"),
+            Text("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", "ARTartustawynprozporzdzenia"),
+        ];
+
+        [Fact]
+        public void PointWhoseParagraphHasOnlyItsDesignation_KeepsAnEmptyParagraph_BeforeItsFormula()
+        {
+            var points = LegalDocumentConverter.Convert(Parse(PointsMadeOfFormulas())).Descendants()
+                .Where(e => e.Name.LocalName == "punkt").ToList();
+
+            Assert.Equal(2, points.Count);
+            Assert.All(points, point => Assert.Equal(["nr", "p", "wzor-mat"],
+                point.Elements().Select(e => e.Name.LocalName).Take(3)));
+            Assert.Equal(string.Empty, points[0].Elements().ElementAt(1).Value);
+        }
+
+        [SchemaPlFact]
+        public void PointsMadeOfFormulas_AreSchemaValid_InTheirBody()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(Parse(PointsMadeOfFormulas())).Elements().First()));
+        }
+
         [SchemaPlFact]
         public void ActWithAFormula_IsSchemaValid_InItsBody()
         {

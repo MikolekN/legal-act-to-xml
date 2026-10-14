@@ -48,6 +48,17 @@ namespace Saga.Core.Services.Converters
             return sentence;
         }
 
+        /// <summary>
+        /// Akapit jednostki redakcyjnej — schemat wymaga go zawsze, także gdy akapit źródła niesie samo oznaczenie
+        /// („1)", a za nim wzór w osobnym akapicie): wtedy jedno puste zdanie.
+        /// </summary>
+        internal static XElement UnitParagraph(XElement textSection)
+        {
+            if (!textSection.HasElements)
+                textSection.Add(ToXml(text: string.Empty));
+            return textSection;
+        }
+
         internal static XElement ToXml(string text, int number = 1, string? guid = null, int fragment = 1, IEntersIntoForce? dated = null)
         {
             var sentence = Element(XmlConverterConstants.Contents.Sentence.Element,

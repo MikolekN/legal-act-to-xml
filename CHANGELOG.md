@@ -805,6 +805,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   pkt 57a" wskazuje `zal_1__ust_2__pkt_57`, a nie punkt aktu; numeracja treści załącznika („pkt 1.4.1", „lp. 1.54") nie
   daje oznaczenia „1"; uchylenie wiersza tabeli załącznika nie wskazuje całego załącznika.
   - W korpusie zmienia się 1010 adresów celu w 121 dokumentach: 85 wskazuje jednostki załącznika (`zal_2__ust_2__pkt_57`), 208 — załącznik albo jego najgłębszą znaną jednostkę jako miejsce zmiany w tekście (127 przedtem z adresem jednostki aktu, 81 bez adresu), a 717 adresów jednostek aktu, których komenda nie dotyczyła, staje się `UNKNOWN` (załącznik bez numeru, wiersze tabel, części i numeracja treści załącznika). Liczba instrukcji bez zmian; zgodnych ze schematem nadal 2278 z 2321 (oba walidatory).
+- **Jednostka z samym oznaczeniem ma akapit** (`SentenceContext.UnitParagraph`): punkt, litera, tiret i ustęp, których
+  akapit źródła niesie samo oznaczenie („1)", a za nim wzór w osobnym akapicie), wychodzą z akapitem o pustym zdaniu —
+  schemat wymaga `p` przed dalszą treścią jednostki. Przedtem `wzor-mat` stał zaraz za `nr`.
+  - W korpusie zmienia się 1 dokument (2 punkty); zgodnych ze schematem 2279 z 2321 (oba walidatory).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

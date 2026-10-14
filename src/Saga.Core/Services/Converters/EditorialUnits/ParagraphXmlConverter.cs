@@ -38,10 +38,9 @@ namespace Saga.Core.Services.Converters
             SentenceContext? contextToPass = SentenceProcessor.Process(paragraph.TextSegments, previousSentenceContext, textSectionElement);
             AmendmentXmlConverter.ToXml(paragraph.Amendment, textSectionElement.LastNode);
             QuotationXmlConverter.Append(paragraph, textSectionElement.LastNode);
-            if (!string.IsNullOrEmpty(paragraph.ContentText))
-            {
-                paragraphElement.Add(textSectionElement);
-            }
+            // Ustęp niejawny jest adresowo i treściowo przezroczysty: bez własnego tekstu nie ma czego zapisać.
+            if (!isImplicit || !string.IsNullOrEmpty(paragraph.ContentText))
+                paragraphElement.Add(SentenceContext.UnitParagraph(textSectionElement));
 
             EmbeddedContentXmlConverter.AppendEmbedded(paragraphElement, paragraph);
 

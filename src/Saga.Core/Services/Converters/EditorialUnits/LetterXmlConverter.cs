@@ -45,10 +45,7 @@ namespace Saga.Core.Services.Converters
             SentenceContext? contextToPass = SentenceProcessor.Process(letter.TextSegments, previousSentenceContext, textSectionElement);
             AmendmentXmlConverter.ToXml(letter.Amendment, textSectionElement.LastNode);
             QuotationXmlConverter.Append(letter, textSectionElement.LastNode);
-            if (!string.IsNullOrEmpty(letter.ContentText))
-            {
-                letterElement.Add(textSectionElement);
-            }
+            letterElement.Add(SentenceContext.UnitParagraph(textSectionElement));
 
             EmbeddedContentXmlConverter.AppendEmbedded(letterElement, letter);
 
