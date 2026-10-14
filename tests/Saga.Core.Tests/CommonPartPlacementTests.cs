@@ -160,6 +160,26 @@ namespace Saga.Core.Tests
                 xml.Descendants().Single(e => e.Name.LocalName.StartsWith("czesc-wspolna")).Name.LocalName);
         }
 
+        [Fact]
+        public void QuotedDashAfterTheLettersOfTheLastPoint_ClosesThePoints_WhenPointsEndWithCommas()
+        {
+            // Ta sama reguła w treści cytowanej (ADR-0074): punkty kończą się przecinkiem — myślnik zamyka punkty.
+            var document = Parse(
+                ("Art. 1. W ustawie z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350) w art. 68b ust. 1 otrzymuje brzmienie:", null),
+                ("„1. Certyfikat wydaje się:", null),
+                ("1) pracownikom medycznym,", null),
+                ("2) osobom wykonującym:", null),
+                ("a) zawód medyczny,", null),
+                ("b) czynności pomocnicze", null),
+                ("– upoważnionym do wystawiania zaświadczeń.”.", null),
+                ("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", null));
+
+            var xml = LegalDocumentConverter.Convert(document);
+            var part = xml.Descendants().Single(e => e.Name.LocalName.StartsWith("czesc-wspolna"));
+            Assert.Equal("czesc-wspolna-punkt", part.Name.LocalName);
+            Assert.Equal("DU/2025/350__art_68b__ust_1__czw", part.Attribute("eId")?.Value);
+        }
+
         [Theory]
         [InlineData("2) utrudnia kontrolę", true)]
         [InlineData("2) wszczętych przed dniem 1 stycznia 2026 r.", true)]

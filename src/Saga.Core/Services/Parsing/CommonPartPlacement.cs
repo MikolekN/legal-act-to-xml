@@ -48,6 +48,38 @@ namespace Saga.Core.Services.Parsing
                 "Część wspólna przerywa wyliczenie — po niej stoją kolejne pozycje (§ 57 ZTP).");
         }
 
+        /// <summary>
+        /// Czy wyliczenie punktów kończy się częścią wspólną: każdy punkt przed ostatnim kończy się wtedy przecinkiem,
+        /// a nie średnikiem (§ 56 ust. 3 ZTP). Punkt z literami kończy się tam, gdzie jego ostatnia litera albo jej
+        /// ostatnie tiret. Myślnik za ostatnią pozycją ostatniego punktu zamyka wtedy punkty, nie litery (ADR-0074).
+        /// </summary>
+        internal static bool PointsCloseWithCommonPart(IReadOnlyList<Point> points)
+        {
+            if (points.Count < 2)
+                return false;
+
+            for (var i = 0; i < points.Count - 1; i++)
+            {
+                var ending = EndingText(points[i]).TrimEnd();
+                if (ending.Length == 0 || ending[^1] != ',')
+                    return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>Tekst, na którym kończy się punkt: ostatniej litery, jej ostatniego tiret albo samego punktu.</summary>
+        private static string EndingText(Point point)
+        {
+            if (point.Letters.Count == 0)
+                return point.ContentText;
+
+            BaseEntity last = point.Letters[^1];
+            for (var tirets = point.Letters[^1].Tirets; tirets.Count > 0; tirets = tirets[^1].Tirets)
+                last = tirets[^1];
+            return last.ContentText;
+        }
+
         /// <summary>Skrót roku na końcu pozycji („… 2026 r.") — kropka skrótu, nie znak końca pozycji.</summary>
         private static readonly Regex YearAbbreviationAtEnd = new(@"\b\d{4}\s+r\.$", RegexOptions.Compiled);
 

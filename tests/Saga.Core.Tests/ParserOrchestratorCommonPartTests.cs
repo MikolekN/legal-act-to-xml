@@ -99,6 +99,55 @@ namespace Saga.Core.Tests
             Assert.Equal("– stosuje się przepisy dotychczasowe.", wrapUpPart.ContentText);
         }
 
+        [Theory]
+        // § 56 ust. 3 ZTP: gdy wyliczenie punktów kończy część wspólna, punkty przed ostatnim kończą się przecinkiem.
+        [InlineData(",", true)]
+        [InlineData(";", false)]
+        public void ProcessParagraph_StylelessDashAfterTheLettersOfTheLastPoint_ClosesThePoints_WhenPointsEndWithCommas(
+            string pointEnding, bool closesThePoints)
+        {
+            // Korpus: myślnik za ostatnią literą ostatniego punktu — 88 części wspólnych punktów w 65 tekstach
+            // jednolitych wychodziło bez stylów jako część wspólna liter (ADR-0074).
+            var orchestrator = new ParserOrchestrator();
+            var context = CreateContext();
+
+            orchestrator.ProcessParagraph(CreateParagraph("Art. 1. 1. Zwolnienie przysługuje:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("1) osobie, która ukończyła 26 lat" + pointEnding), context);
+            orchestrator.ProcessParagraph(CreateParagraph("2) osobie, która:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("a) prowadzi gospodarstwo rolne,"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("b) uzyskuje dochód z gospodarstwa"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("– jeżeli złożyła wniosek w terminie."), context);
+
+            var paragraph = context.CurrentParagraph!;
+            var lastPoint = paragraph.Points[^1];
+            Assert.Equal(closesThePoints, paragraph.CommonParts.Any(cp => cp.Type == CommonPartType.WrapUp));
+            Assert.Equal(!closesThePoints, lastPoint.CommonParts.Any(cp => cp.Type == CommonPartType.WrapUp));
+            Assert.All(lastPoint.Letters, letter => Assert.Empty(letter.Tirets));
+        }
+
+        [Fact]
+        public void ProcessParagraph_StylelessDashAfterTheLettersOfAMiddlePoint_StaysWithTheLetters()
+        {
+            // Po części wspólnej przychodzi kolejny punkt — zamykała więc litery, nie punkty (CommonPartPlacement).
+            var orchestrator = new ParserOrchestrator();
+            var context = CreateContext();
+
+            orchestrator.ProcessParagraph(CreateParagraph("Art. 1. 1. Zwolnienie przysługuje:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("1) osobie, która ukończyła 26 lat,"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("2) osobie, która:"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("a) prowadzi gospodarstwo rolne,"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("b) uzyskuje dochód z gospodarstwa"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("– jeżeli złożyła wniosek w terminie,"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("3) osobie niepełnosprawnej"), context);
+            orchestrator.ProcessParagraph(CreateParagraph("– na jej wniosek."), context);
+
+            var paragraph = context.CurrentParagraph!;
+            Assert.Equal("– jeżeli złożyła wniosek w terminie,",
+                Assert.Single(paragraph.Points[1].CommonParts, cp => cp.Type == CommonPartType.WrapUp).ContentText);
+            Assert.Equal("– na jej wniosek.",
+                Assert.Single(paragraph.CommonParts, cp => cp.Type == CommonPartType.WrapUp).ContentText);
+        }
+
         [Fact]
         public void ProcessParagraph_StylelessDashAfterPunctuatedPoint_IsNotWrapUp()
         {

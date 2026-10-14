@@ -107,7 +107,15 @@ namespace Saga.Core.Services.Parsing
             // Lista liter (część wspólna w punkcie) albo punktów (część wspólna w ustępie).
             BaseEntity? lastItem;
             BaseEntity? parent;
-            if (context.CurrentLetter != null)
+            if (context.CurrentLetter != null && context.CurrentParagraph is { } paragraph
+                && CommonPartPlacement.LeavesEnumerationOpen(((BaseEntity?)context.CurrentTiret ?? context.CurrentLetter).ContentText)
+                && CommonPartPlacement.PointsCloseWithCommonPart(paragraph.Points))
+            {
+                // Punkty przed ostatnim kończą się przecinkiem: myślnik zamyka punkty, nie litery (ADR-0074).
+                lastItem = (BaseEntity?)context.CurrentTiret ?? context.CurrentLetter;
+                parent = paragraph;
+            }
+            else if (context.CurrentLetter != null)
             {
                 if (context.CurrentLetter.Tirets.Count > 0)
                     return false;

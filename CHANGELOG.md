@@ -762,6 +762,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   i pozycja z wiersza „Załącznik do obwieszczenia … (Dz. U. poz. 1451)" albo z nagłówka załącznika aktu, gdy dokument
   nie ma nagłówka strony. Przedtem `Rok` i `Pozycja` zostawały puste, a jednostki bez prefiksu aktu.
   - W korpusie 332 dokumenty bez nagłówka dziennika (192 rozporządzenia, 91 tekstów jednolitych, 48 innych obwieszczeń, 1 ustawa) dostają miejsce ogłoszenia z wiersza przyłączenia — w każdym data w tym wierszu jest datą aktu, a na 779 dokumentach z nagłówkiem adres z wiersza zgadza się z nagłówkiem bez wyjątku. Zgodnych ze schematem jest 2278 z 2321 (było 1946; oba walidatory, żaden dokument nie wypadł). Zostaje 41 dokumentów bez nagłówka, których wiersz pozycji nie podaje („poz. 0", „poz. )", „poz. …") albo którego nie ma, i 2 z niezgodną treścią.
+- **Część wspólna punktów za literami ostatniego punktu** ([ADR-0074](docs/adr/0074-przecinek-po-punktach-zapowiada-czesc-wspolna-punktow.md)): bez stylów myślnik
+  za ostatnią literą ostatniego punktu zamyka całe wyliczenie punktów, gdy punkty przed ostatnim kończą się przecinkiem
+  (§ 56 ust. 3 ZTP). Przedtem stawał się zawsze częścią wspólną liter.
+  - Bez stylów: w pełni zgodnych tekstów jednolitych jest 625 z 728 (było 599), ustaw 210 z 242 (było 207); części wspólnych punktów gubionych bez stylów jest 281 (było 349), nadmiarowych części wspólnych liter — 39 (było 104). Ze stylami zmienia się 6 plików: 7 myślników bez stylu za ostatnią literą wychodzi jako część wspólna punktów, nie liter. Zgodnych ze schematem jest nadal 2278 z 2321.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

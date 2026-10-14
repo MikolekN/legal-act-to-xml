@@ -2321,6 +2321,35 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0074: przecinek po punktach zapowiada część wspólną punktów
+        // ============================================================
+
+        [Theory]
+        [InlineData(",", "czesc-wspolna-punkt")]
+        [InlineData(";", "czesc-wspolna-litera")]
+        public void Adr0074_DashAfterTheLastLetter_ClosesThePoints_WhenThePointsEndWithCommas(string pointEnding, string expected)
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zwolnieniach",
+                "Art. 1. Zwolnienie przysługuje:",
+                "1) osobie, która ukończyła 26 lat" + pointEnding,
+                "2) osobie, która:",
+                "a) prowadzi gospodarstwo rolne,",
+                "b) uzyskuje dochód z gospodarstwa",
+                "– jeżeli złożyła wniosek w terminie.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // § 56 ust. 3 ZTP: punkty przed ostatnim kończą się przecinkiem tylko wtedy, gdy punkty zamyka część wspólna.
+            var part = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName.StartsWith("czesc-wspolna"));
+            Assert.Equal(expected, part.Name.LocalName);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 
