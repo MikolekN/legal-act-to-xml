@@ -274,6 +274,78 @@ namespace Saga.Core.Tests
                 LegalDocumentConverter.Convert(Parse(WithQuotation(QuotedAmendingProvision))).Elements().First()));
         }
 
+        // ============================================================
+        // Tabela w przytoczeniu
+        // ============================================================
+
+        private static DocumentBlock Cell(int row, int column, string text) =>
+            new() { Text = text, TableCell = new BlockTableCell { Table = 0, Row = row, Column = column } };
+
+        /// <summary>Wzorcowe obwieszczenie z przytoczeniem z bloków (z komórkami tabeli) w punkcie 2.</summary>
+        private static LegalDocument ParseWithQuotation(params DocumentBlock[] quoted)
+        {
+            var blocks = ConsolidatedText.Select(line => Block(line)).ToList();
+            blocks.RemoveAt(QuotedLine);
+            blocks.InsertRange(QuotedLine, quoted);
+            return LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+        }
+
+        // Korpus: 329080_2931155 — przytoczony przepis zmieniający dodaje wiersz tabeli załącznika.
+        private static readonly DocumentBlock[] QuotedTableRow =
+        [
+            Block("„Art. 54. W ustawie z dnia 6 września 2001 r. o transporcie drogowym (Dz. U. z 2022 r. poz. 2201) w załączniku nr 1 po lp. 2 dodaje się lp. 2a w brzmieniu:"),
+            Cell(0, 0, "„2a"), Cell(0, 1, "Naruszenie obowiązku delegowania kierowcy"), Cell(0, 2, "1500”;"),
+            Block("Art. 55. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.”"),
+        ];
+
+        [Fact]
+        public void TableQuotedByAQuotedProvision_IsTheContentOfItsAmendment()
+        {
+            var quotation = Assert.Single(ParseWithQuotation(QuotedTableRow).Announcement!.Points[1].Continuation).Quotation!;
+
+            Assert.Equal(["54", "55"], quotation.Content.Articles.Select(article => article.Number!.Value));
+            var amendment = quotation.Content.Articles[0].Paragraphs.Single().Amendment!;
+            var table = Assert.Single(amendment.Content!.Tables);
+            Assert.Equal("2a", table.Rows[0].Cells[0].Paragraphs.Single());
+            Assert.Equal([2201], amendment.TargetLegalAct.Positions);
+        }
+
+        [Fact]
+        public void TableInsideAQuotedArticle_ContinuesItsUnit()
+        {
+            var quotation = Assert.Single(ParseWithQuotation(
+                Block("„Art. 54. Opłaty wynoszą:"),
+                Cell(0, 0, "Opłata A"), Cell(0, 1, "100 zł"),
+                Block("Art. 55. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.”")).Announcement!.Points[1].Continuation).Quotation!;
+
+            var paragraph = quotation.Content.Articles[0].Paragraphs.Single();
+            Assert.Null(paragraph.Amendment);
+            Assert.NotNull(Assert.Single(paragraph.Continuation).Table);
+        }
+
+        [Fact]
+        public void QuotationEndingWithATable_StaysTextWithItsQuotationMarks_AndClosesInTheTable()
+        {
+            var document = ParseWithQuotation(
+                Block("„Art. 54. Opłaty wynoszą:"),
+                Cell(0, 0, "Opłata A"), Cell(0, 1, "100 zł”."));
+
+            var blocks = document.Announcement!.Points[1].Continuation;
+            Assert.Equal("„Art. 54. Opłaty wynoszą:", blocks[0].Text);
+            Assert.Equal("100 zł”.", blocks[1].Table!.Rows[0].Cells[1].Paragraphs.Single());
+
+            // Cudzysłów domknięty w komórce zamyka przytoczenie — podpis za nim jest podpisem.
+            Assert.Equal(2, blocks.Count);
+            Assert.Equal("Hołownia", document.Signature!.Surname);
+        }
+
+        [SchemaPlFact]
+        public void QuotationWithATable_IsSchemaValid_InItsBody()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(ParseWithQuotation(QuotedTableRow)).Elements().First()));
+        }
+
         [Fact]
         public void QuotationWithAQuoteThatNoCommandIntroduces_StaysText()
         {

@@ -92,6 +92,24 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TableOpeningAQuoteAfterACommand_IsANestedQuote()
+        {
+            static DocumentBlock Cell(int column, string text) =>
+                new() { Text = text, TableCell = new BlockTableCell { Table = 0, Row = 0, Column = column } };
+            var table = ContentTables.FromBlocks([Cell(0, "„2a"), Cell(1, "Naruszenie obowiązku"), Cell(2, "1500”;")]);
+
+            var items = NestedQuotes.Split(
+            [
+                Line("18) w załączniku nr 1 po lp. 2 dodaje się lp. 2a w brzmieniu:"),
+                new CollectedAmendmentParagraph(string.Empty, null, null) { Table = table },
+                Line("19) uchyla się art. 7."),
+            ]);
+
+            Assert.Equal(2, items.Count);
+            Assert.NotNull(Assert.Single(items[0].Nested).Table);
+        }
+
+        [Fact]
         public void QuoteLeftOpenToTheEnd_TakesNoLines()
         {
             // Literówka: cudzysłów niedomknięty do końca treści nie wciąga dalszych jednostek.

@@ -57,7 +57,7 @@ namespace Saga.Core.Services.Parsing
 
                 if (items.Count > 0 && items[^1] is { Nested.Count: 0, Continued.Count: 0 } previous && previous.Paragraph.Table is null
                     && Command.IsMatch(previous.Paragraph.Text.TrimEnd())
-                    && paragraph.Table is null && OpeningQuote.IsMatch(paragraph.Text))
+                    && OpensQuote(paragraph))
                 {
                     nested = previous.Nested;
                     nested.Add(paragraph);
@@ -93,13 +93,23 @@ namespace Saga.Core.Services.Parsing
             return null;
         }
 
-        /// <summary>Głębokość cudzysłowu po akapicie: otwarcia minus zamknięcia, nie mniej niż zero.</summary>
-        private static int DepthAfter(int depth, CollectedAmendmentParagraph paragraph)
-        {
-            if (paragraph.Table is not null)
-                return depth;
+        /// <summary>
+        /// Akapit albo tabela otwiera cytat. Cytowana tabela niesie cudzysłów w pierwszej niepustej komórce
+        /// („w załączniku nr 1 po lp. 2 dodaje się lp. 2a w brzmieniu:" i tabela „„2a | …”;").
+        /// </summary>
+        private static bool OpensQuote(CollectedAmendmentParagraph paragraph) =>
+            paragraph.Table is { } table ? QuotedTableBoundaries.OpensQuote(table) : OpeningQuote.IsMatch(paragraph.Text);
 
-            foreach (var character in paragraph.Text)
+        /// <summary>Głębokość cudzysłowu po akapicie albo tabeli (po wszystkich jej komórkach): otwarcia minus zamknięcia.</summary>
+        private static int DepthAfter(int depth, CollectedAmendmentParagraph paragraph) =>
+            paragraph.Table is { } table
+                ? table.Rows.SelectMany(row => row.Cells).SelectMany(cell => cell.Paragraphs).Aggregate(depth, DepthAfter)
+                : DepthAfter(depth, paragraph.Text);
+
+        /// <summary>Głębokość cudzysłowu po tekście, nie mniej niż zero.</summary>
+        private static int DepthAfter(int depth, string text)
+        {
+            foreach (var character in text)
             {
                 // Cudzysłów prosty otwiera, gdy żaden nie jest otwarty, a w przeciwnym razie zamyka.
                 if (character == QuotationMarks.Opening || (character == QuotationMarks.Straight && depth == 0))

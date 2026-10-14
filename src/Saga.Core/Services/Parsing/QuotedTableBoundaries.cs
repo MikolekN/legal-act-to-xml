@@ -19,6 +19,10 @@ namespace Saga.Core.Services.Parsing
         private static readonly Regex ClosingQuote = new(
             $@"[{QuotationMarks.ClosingOrStraight}]\s*(?<punct>[,;.])?\s*$", RegexOptions.Compiled);
 
+        /// <summary>Czy pierwsza niepusta komórka tabeli otwiera cytat — bez zdejmowania znaku.</summary>
+        internal static bool OpensQuote(ContentTable table) =>
+            FirstText(table) is var (cell, index) && OpensQuote(cell.Paragraphs[index]);
+
         /// <summary>Zdejmuje cudzysłów otwierający cytat z pierwszej niepustej komórki tabeli; false, gdy go tam nie ma.</summary>
         internal static bool TakeOpening(ContentTable table)
         {
@@ -26,8 +30,7 @@ namespace Saga.Core.Services.Parsing
                 return false;
 
             var text = cell.Paragraphs[index];
-            // Cudzysłów sparowany w tej samej komórce („„spółka akcyjna" i inne") otwiera wyrażenie, nie cytat.
-            if (!OpeningQuote.IsMatch(text) || Balance(text) <= 0)
+            if (!OpensQuote(text))
                 return false;
 
             Replace(cell, index, OpeningQuote.Replace(text, string.Empty, 1));
@@ -55,6 +58,9 @@ namespace Saga.Core.Services.Parsing
                 DropEdgeColumnIfEmpty(table, first: false);
             return match.Groups["punct"].Value;
         }
+
+        // Cudzysłów sparowany w tej samej komórce („„spółka akcyjna" i inne") otwiera wyrażenie, nie cytat.
+        private static bool OpensQuote(string text) => OpeningQuote.IsMatch(text) && Balance(text) > 0;
 
         /// <summary>
         /// Przewaga cudzysłowów otwierających nad zamykającymi w tekście: dodatnia — tekst zostawia cudzysłów

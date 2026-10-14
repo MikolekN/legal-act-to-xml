@@ -42,17 +42,29 @@ namespace Saga.Core.Services.Parsing
             // Głębokość otwartego przytoczenia; ciągnie się przez kolejne bloki do domknięcia cudzysłowu.
             var quoteDepth = 0;
             var quotedSinceSubPoint = false;
-            var quoted = new List<string>();
+            var quoted = new List<CollectedAmendmentParagraph>();
 
             for (var i = 0; i < blocks.Count; i++)
             {
                 if (blocks[i].TableCell is { } cell)
                 {
-                    // Tabela w środku przytoczenia: jednostek z niej nie będzie — akapity zostają tekstem.
-                    AttachAsText(quoted);
                     var run = blocks.Skip(i).TakeWhile(b => b.TableCell?.Table == cell.Table).ToList();
                     i += run.Count - 1;
-                    Attach(new ContentBlock { Table = ContentTables.FromBlocks(run) });
+                    var table = ContentTables.FromBlocks(run);
+
+                    // Tabela w przytoczeniu jest jego treścią — dalszą treścią jednostki, za którą stoi, jak w treści
+                    // cytowanej nowelizacji (ADR-0029). Cudzysłowy w jej komórkach liczą się do bilansu przytoczenia.
+                    if (quoteDepth > 0)
+                    {
+                        quoted.Add(new CollectedAmendmentParagraph(string.Empty, null, null) { Table = table });
+                        foreach (var cellBlock in run)
+                            quoteDepth = Balance(quoteDepth, cellBlock.Text);
+                        if (quoteDepth == 0)
+                            AttachQuotation(quoted);
+                        continue;
+                    }
+
+                    Attach(new ContentBlock { Table = table });
                     continue;
                 }
 
@@ -67,7 +79,7 @@ namespace Saga.Core.Services.Parsing
 
                 if (quoteDepth > 0 || QuoteBalanceTracker.OpensQuote(text))
                 {
-                    quoted.Add(text);
+                    quoted.Add(new CollectedAmendmentParagraph(text, null, null));
                     quoteDepth = Balance(quoteDepth, text);
                     quotedSinceSubPoint = true;
                     if (quoteDepth == 0)
@@ -142,15 +154,15 @@ namespace Saga.Core.Services.Parsing
                     announcement.Content.Add(block);
             }
 
-            void AttachAsText(List<string> paragraphs)
+            void AttachAsText(List<CollectedAmendmentParagraph> paragraphs)
             {
                 foreach (var paragraph in paragraphs)
-                    Attach(new ContentBlock { Text = paragraph });
+                    Attach(paragraph.Table is { } table ? new ContentBlock { Table = table } : new ContentBlock { Text = paragraph.Text });
                 paragraphs.Clear();
             }
 
-            // Domknięte przytoczenie: jednostki, gdy da się je zbudować w całości; inaczej akapity tekstu.
-            void AttachQuotation(List<string> paragraphs)
+            // Domknięte przytoczenie: jednostki, gdy da się je zbudować w całości; inaczej akapity tekstu i tabele.
+            void AttachQuotation(List<CollectedAmendmentParagraph> paragraphs)
             {
                 var owner = (BaseEntity?)subPoint ?? point;
                 if (owner is not null && !string.IsNullOrWhiteSpace(owner.ContentText)
@@ -193,10 +205,17 @@ namespace Saga.Core.Services.Parsing
         /// z własnym cytatem („Art. 94. W ustawie … 1) w art. 10f ust. 5 otrzymuje brzmienie: „5. …"") ma ten cytat jako
         /// swoją nowelizację, jak w nowelizacji nowelizacji (ADR-0082) — o ile cytat stoi za komendą przepisu; cytat
         /// bez komendy przed sobą nie jest jednostką przytaczanego artykułu, więc przytoczenie zostaje tekstem.
+        /// Tabela w środku przytoczenia jest dalszą treścią jednostki, za którą stoi.
         /// </summary>
-        private static Quotation? BuildQuotation(IReadOnlyList<string> paragraphs, string ownerText, bool sectionIsBasicUnit)
+        private static Quotation? BuildQuotation(
+            IReadOnlyList<CollectedAmendmentParagraph> paragraphs, string ownerText, bool sectionIsBasicUnit)
         {
-            var collected = paragraphs.Select(text => new CollectedAmendmentParagraph(text, null, null)).ToList();
+            // Tabela na granicy przytoczenia niesie jego cudzysłów w komórce; jednostką nie zaczyna się ani nie kończy.
+            if (paragraphs[0].Table is not null || paragraphs[^1].Table is not null)
+                return null;
+
+            // Granice obcina się na kopii — przytoczenie, którego nie da się zbudować, zostaje tekstem z cudzysłowami.
+            var collected = paragraphs.Select(paragraph => paragraph with { }).ToList();
             var quotes = AmendmentStateManager.TrimQuoteBoundaries(collected);
             if (!quotes.HasOpening || !quotes.HasClosing)
                 return null;

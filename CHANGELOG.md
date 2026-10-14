@@ -830,6 +830,17 @@ a wersjonowanie zgodne z Semantic Versioning.
   cytat zagnieżdżony. W treści cytowanej wiersze cudzysłowu otwartego w środku akapitu („zastępuje się wyrazami „…:",
   „1) …;", „2) … r”,") są dalszą treścią jego jednostki, nie jednostkami.
   - W korpusie zmienia się 23 dokumenty. W 19 obwieszczeniach tekstu jednolitego przytoczenia przepisów zmieniających są jednostkami: 3102 akapity przestają być `fragment` (pod jednostkami obwieszczeń zostaje 734 w 72 dokumentach, przedtem 3836 w 90), a w przytoczonych przepisach staje 596 `cytat-strukt`, 33 `cytat-w-tekscie`, 152 `now:zamien-tekst` i 41 `now:uchyl`. W 4 aktach 30 wierszy cytowanych oświadczeń i wzorów przestaje być powtórzonymi jednostkami cytatu (drugi „pkt 1") i zostaje tekstem jednostki, która je przytacza. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu i zgodność bez stylów bez zmian (tyle samo brakujących i nadmiarowych jednostek).
+- **Tabela w przytoczeniu**: tabela w środku przytoczenia w obwieszczeniu tekstu jednolitego jest dalszą treścią jednostki,
+  za którą stoi, a tabela otwierająca cudzysłów tuż za komendą przytoczonego przepisu („w załączniku nr 1 po lp. 2 dodaje
+  się lp. 2a w brzmieniu:") — treścią jego nowelizacji ([ADR-0050](docs/adr/0050-cudzyslowy-cytowanej-tabeli-licza-sie-w-bilansie-cytatu.md),
+  [ADR-0084](docs/adr/0084-przytoczony-przepis-zmieniajacy-jest-jednostka-z-wlasnymi-nowelizacjami.md)). Przedtem tabela dzieliła przytoczenie i całe zostawało tekstem.
+  Cudzysłowy w komórkach tabeli liczą się do bilansu przytoczenia: przytoczenie domknięte w tabeli nie wchłania już
+  dalszych podpunktów i podpisu obwieszczenia.
+  - W korpusie zmienia się 4 dokumenty: 413 akapitów przestaje być `fragment` (pod jednostkami obwieszczeń zostaje 321
+    w 68 dokumentach), staje 78 `cytat-strukt` i 51 `now:zamien-tekst`; w dwóch obwieszczeniach podpunkt i podpis wracają
+    na swoje miejsca, a znaczniki odnośników przytoczonej tabeli są indeksem górnym zamiast odsyłaczy do odnośnika
+    obwieszczenia. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu i zgodność
+    bez stylów bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
