@@ -87,9 +87,13 @@ namespace Saga.Core.Services.Parsing.Builders
 
             content.ObjectType = DetermineObjectType(input.Paragraphs, _sectionIsBasicUnit);
 
-            foreach (var para in input.Paragraphs)
+            // Cytat zagnieżdżony („„Art. 28b. …”" pod „4) po art. 28a dodaje się …") jest treścią zmiany, którą wprowadza
+            // cytowany przepis, nie dalszymi jednostkami cytatu (ADR-0082).
+            foreach (var item in NestedQuotes.Split(input.Paragraphs))
             {
-                ProcessAmendmentParagraph(para, content);
+                ProcessAmendmentParagraph(item.Paragraph, content);
+                if (item.Nested.Count > 0)
+                    AttachNestedAmendment(item.Nested, content);
             }
 
             Log.Information(
@@ -279,6 +283,26 @@ namespace Saga.Core.Services.Parsing.Builders
         }
 
         private bool HasOpenUnit => _currentLetter is not null || _currentPoint is not null || _currentParagraph is not null;
+
+        /// <summary>Najgłębsza otwarta jednostka cytatu — właściciel cytatu zagnieżdżonego, który po niej stoi.</summary>
+        private BaseEntity? DeepestOpenUnit =>
+            (BaseEntity?)_openTirets.LastOrDefault() ?? (BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? _currentParagraph;
+
+        /// <summary>
+        /// Cytat zagnieżdżony staje się nowelizacją przepisu, który go wprowadza. Bez takiego przepisu (cytat nie stoi pod
+        /// jednostką albo ta ma już nowelizację) jego akapity zostają akapitami cytatu zewnętrznego, jak dotąd.
+        /// </summary>
+        private void AttachNestedAmendment(List<CollectedAmendmentParagraph> nested, AmendmentContent content)
+        {
+            if (DeepestOpenUnit is IHasAmendments { Amendment: null } owner)
+            {
+                owner.Amendment = NestedAmendment.Build((BaseEntity)owner, nested, _sectionIsBasicUnit);
+                return;
+            }
+
+            foreach (var para in nested)
+                ProcessAmendmentParagraph(para, content);
+        }
 
         /// <summary>Jednostka (poza artykułem) rozpoznana z samego stylu: treść nie niesie niczego, co wygląda na oznaczenie.</summary>
         private bool IsStyleOnlyUnit(AmendmentEntityKind kind, CollectedAmendmentParagraph para) =>

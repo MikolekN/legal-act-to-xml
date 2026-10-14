@@ -809,6 +809,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   akapit źródła niesie samo oznaczenie („1)", a za nim wzór w osobnym akapicie), wychodzą z akapitem o pustym zdaniu —
   schemat wymaga `p` przed dalszą treścią jednostki. Przedtem `wzor-mat` stał zaraz za `nr`.
   - W korpusie zmienia się 1 dokument (2 punkty); zgodnych ze schematem 2279 z 2321 (oba walidatory).
+- **Nowelizacje zagnieżdżone** ([ADR-0082](docs/adr/0082-cytat-zagniezdzony-jest-nowelizacja-cytowanego-przepisu.md)): cytowany przepis, który sam jest komendą
+  („4) po art. 28a dodaje się art. 28b w brzmieniu:"), ma własną nowelizację z cytatem, który po nim stoi — w eksporcie
+  `cytat-strukt` w zdaniu cytowanego przepisu, z celem i aktem zmienianym czytanymi z cytatu. Przedtem jednostki cytatu
+  wewnętrznego stawały przed przepisem jako jednostki cytatu zewnętrznego, z adresem aktu zmieniającego.
+  - W korpusie zmienia się 11 dokumentów — wszystkie 9 ze stylami `ZZ/` i 2 bez nich: 23 cytaty zagnieżdżone wychodzą w zdaniu cytowanego przepisu, 15 punktów i 10 liter przestaje być `nie-ztp-*`, cytowany rozdział dostaje nagłówek; żadna komenda w cytacie nie zostaje bez swojej treści. Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory), pokrycie tekstu bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

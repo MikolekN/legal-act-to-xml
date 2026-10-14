@@ -2606,6 +2606,35 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0082: cytat zagnieżdżony jest nowelizacją cytowanego przepisu
+        // ============================================================
+
+        [Fact]
+        public void Adr0082_NestedQuote_IsTheAmendmentOfTheQuotedProvision_NotUnitsOfTheOuterQuote()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie niektórych ustaw",
+                "Art. 1. W ustawie z dnia 28 lipca 2023 r. o delegowaniu kierowców (Dz. U. poz. 1523) wprowadza się następujące zmiany:",
+                "1) w art. 39 pkt 4 otrzymuje brzmienie:",
+                "„4) po art. 28a dodaje się art. 28b w brzmieniu:",
+                "„Art. 28b. Przewoźnik zgłasza przewóz.”;”;",
+                "2) uchyla się art. 40.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var point = LegalDocumentParser.Parse(lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!.Articles.First().Paragraphs.Single().Points[0];
+
+            // Cytat zewnętrzny to sam punkt 4 — artykuł 28b nie jest jego jednostką ani jednostką aktu zmienianego.
+            var quoted = Assert.Single(point.Amendment!.Content!.Points);
+            Assert.Empty(point.Amendment.Content.Articles);
+
+            // Artykuł 28b jest treścią nowelizacji, którą wprowadza cytowany punkt.
+            Assert.Equal("28b", Assert.Single(quoted.Amendment!.Content!.Articles).Number!.Value);
+            Assert.Equal("art_28a", quoted.Amendment.Targets.Single().Structure.ToString());
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 
