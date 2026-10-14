@@ -327,6 +327,8 @@ ParseBlocks(blocks)
     │
     ├── Tworzy LegalDocument z domyślną hierarchią systematyzującą
     ├── JournalHeaderParser.Apply(blocks, document) — metadane publikatora z bloków JournalHeader
+    │     (bez nagłówka: po budowie modelu JournalHeaderParser.ApplyFromAttachment — adres z wiersza
+    │      „Załącznik do obwieszczenia … (Dz. U. poz. N)" albo z nagłówka załącznika, ADR-0073)
     ├── Tworzy ParsingContext (stan parsowania)
     ├── Tworzy ParserOrchestrator() — domyślny ParagraphClassifier
     ├── Iteruje po blocks (pomijając elementy null)

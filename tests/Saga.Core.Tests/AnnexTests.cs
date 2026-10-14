@@ -414,7 +414,8 @@ namespace Saga.Core.Tests
             var xml = LegalDocumentConverter.Convert(document);
             var annexes = Named(xml, "zalacznik");
 
-            Assert.Equal(new[] { "zal_1", "zal_2" }, annexes.Select(a => Attr(a, "eId")));
+            // Prefiks aktu z nagłówka załączników („Załączniki do ustawy z dnia 23 stycznia 2026 r. (Dz. U. poz. 252)").
+            Assert.Equal(new[] { "DU/2026/252__zal_1", "DU/2026/252__zal_2" }, annexes.Select(a => Attr(a, "eId")));
             Assert.Equal(
                 new[] { "zalacznik-do", "zalacznik-do", "zalacznik-nr", "tytul-zalacznika", "segment-zalacznika" },
                 ChildNames(annexes[0]));

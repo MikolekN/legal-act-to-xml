@@ -758,6 +758,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   `DataObowiazywaniaWersji` z `Od` wskazującym zdarzenie ujednolicenia, a — gdy obwieszczenie podaje „stan prawny na dzień …"
   (wzór z § 104 ZTP) — także `DataStanuPrawnegoTJ` (`Announcement.LegalStateDate`), jak w przykładzie autorów schematu.
   - W korpusie wszystkie 728 tekstów jednolitych dostaje `DataObowiazywaniaWersji` ze zdarzeniem ujednolicenia; `DataStanuPrawnegoTJ` — żaden (obwieszczenia według wcześniejszego wzoru, 2 z dniem wykropkowanym). Poza tym eksport się nie zmienia; zgodnych ze schematem jest nadal 1946 z 2321 (oba walidatory).
+- **Miejsce ogłoszenia aktu bez nagłówka dziennika** ([ADR-0073](docs/adr/0073-akt-bez-naglowka-dziennika-bierze-adres-z-wiersza-przylaczenia.md)): dziennik, rocznik
+  i pozycja z wiersza „Załącznik do obwieszczenia … (Dz. U. poz. 1451)" albo z nagłówka załącznika aktu, gdy dokument
+  nie ma nagłówka strony. Przedtem `Rok` i `Pozycja` zostawały puste, a jednostki bez prefiksu aktu.
+  - W korpusie 332 dokumenty bez nagłówka dziennika (192 rozporządzenia, 91 tekstów jednolitych, 48 innych obwieszczeń, 1 ustawa) dostają miejsce ogłoszenia z wiersza przyłączenia — w każdym data w tym wierszu jest datą aktu, a na 779 dokumentach z nagłówkiem adres z wiersza zgadza się z nagłówkiem bez wyjątku. Zgodnych ze schematem jest 2278 z 2321 (było 1946; oba walidatory, żaden dokument nie wypadł). Zostaje 41 dokumentów bez nagłówka, których wiersz pozycji nie podaje („poz. 0", „poz. )", „poz. …") albo którego nie ma, i 2 z niezgodną treścią.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano

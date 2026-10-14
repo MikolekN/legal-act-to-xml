@@ -2276,6 +2276,51 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0073: akt bez nagłówka dziennika — miejsce ogłoszenia z wiersza przyłączenia
+        // ============================================================
+
+        [Fact]
+        public void Adr0073_ActWithoutAJournalHeader_TakesItsAddressFromTheAttachmentLine()
+        {
+            static LegalDocument Parse(params string[] lines) => LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Rocznik pominięty w wierszu to rok daty aktu (§ 157 ZTP); podany wprost — ten, który podano.
+            var consolidated = Parse(
+                "Obwieszczenie", "Prezesa Rady Ministrów", "z dnia 24 września 2024 r.",
+                "w sprawie ogłoszenia jednolitego tekstu rozporządzenia Rady Ministrów w sprawie opłat",
+                "1. Na podstawie art. 16 ust. 3 ustawy ogłasza się jednolity tekst rozporządzenia.",
+                "Załącznik do obwieszczenia Prezesa Rady Ministrów z dnia 24 września 2024 r. (Dz. U. poz. 1451)",
+                "ROZPORZĄDZENIE", "RADY MINISTRÓW", "z dnia 1 lutego 2021 r.", "w sprawie opłat",
+                "§ 1. Rozporządzenie określa wysokość opłat.");
+            Assert.Equal(("DU/2024/1451", "Dz.U. 2024 poz. 1451"),
+                (consolidated.SourceJournal.GetELIStrings().Single(), Metadata(consolidated, "AdresWyswietlany")));
+
+            var lateYear = Parse(
+                "Obwieszczenie", "Marszałka Sejmu Rzeczypospolitej Polskiej", "z dnia 4 grudnia 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu ustawy o opłatach",
+                "1. Na podstawie art. 16 ust. 1 ustawy ogłasza się jednolity tekst ustawy.",
+                "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 4 grudnia 2025 r. (Dz. U. z 2026 r. poz. 15)",
+                "USTAWA", "z dnia 15 lipca 2011 r.", "o opłatach",
+                "Art. 1. Ustawa określa opłaty.");
+            Assert.Equal("DU/2026/15", lateYear.SourceJournal.GetELIStrings().Single());
+
+            // Pozycja nieuzupełniona w szczotce („poz. 0") niczego nie wskazuje.
+            var proof = Parse(
+                "Obwieszczenie", "Prezesa Rady Ministrów", "z dnia 21 października 2024 r.",
+                "w sprawie ogłoszenia jednolitego tekstu rozporządzenia Rady Ministrów w sprawie opłat",
+                "1. Na podstawie art. 16 ust. 3 ustawy ogłasza się jednolity tekst rozporządzenia.",
+                "Załącznik do obwieszczenia Prezesa Rady Ministrów z dnia 21 października 2024 r. (Dz. U. poz. 0)",
+                "ROZPORZĄDZENIE", "RADY MINISTRÓW", "z dnia 1 lutego 2021 r.", "w sprawie opłat",
+                "§ 1. Rozporządzenie określa wysokość opłat.");
+            Assert.Empty(proof.SourceJournal.Positions);
+
+            static string Metadata(LegalDocument document, string name) =>
+                LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == name).Value;
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 
@@ -2356,7 +2401,10 @@ namespace Saga.Core.Tests
             var exported = LegalDocumentConverter.Convert(document).Descendants()
                 .Where(element => element.Name.LocalName is "punkt-OTJ" or "podpunkt-OTJ")
                 .Select(element => $"{element.Name.LocalName} {element.Attribute("eId")?.Value}");
-            Assert.Equal(new[] { "punkt-OTJ pkt_1", "podpunkt-OTJ pkt_1__ppkt_1", "podpunkt-OTJ pkt_1__ppkt_2" }, exported);
+            // Prefiks aktu z wiersza „Załącznik do obwieszczenia … (Dz. U. poz. 1094)" — dokument nie ma nagłówka (ADR-0073).
+            Assert.Equal(
+                new[] { "punkt-OTJ DU/2025/1094__pkt_1", "podpunkt-OTJ DU/2025/1094__pkt_1__ppkt_1", "podpunkt-OTJ DU/2025/1094__pkt_1__ppkt_2" },
+                exported);
         }
 
         // ============================================================

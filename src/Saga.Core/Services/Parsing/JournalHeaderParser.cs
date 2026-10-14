@@ -70,6 +70,37 @@ namespace Saga.Core.Services.Parsing
                 publisher, date, position);
         }
 
+        /// <summary>Początek kolejnego wiersza przyłączenia („Załącznik nr 2 do rozporządzenia …").</summary>
+        private static readonly Regex NextAttachment = new(@"(?=\bZałącznik)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Akt bez nagłówka dziennika (szczotka, wydruk bez nagłówka strony): miejsce ogłoszenia podaje wiersz, który
+        /// przyłącza do niego treść — „Załącznik do obwieszczenia … z dnia 24 września 2024 r. (Dz. U. poz. 1451)" albo
+        /// nagłówek jego własnego załącznika. Rocznik pominięty w wierszu to rok daty aktu: rocznik podaje się
+        /// „w razie potrzeby" (§ 157 ZTP). Wywoływane po budowie modelu — wcześniej publikator dokumentu zastępuje
+        /// akt zmieniany w nowelizacjach bez własnego publikatora (ADR-0073).
+        /// </summary>
+        internal static void ApplyFromAttachment(LegalDocument document)
+        {
+            if (document.SourceJournal.Year is not null || document.SourceJournal.Positions.Count > 0)
+                return;
+
+            var line = document.Announcement is { AttachedTo.Length: > 0 } announcement
+                ? announcement.AttachedTo
+                : document.Annexes.FirstOrDefault(annex => annex.AttachedTo.Count > 0) is { } annex
+                    ? string.Join(" ", annex.AttachedTo)
+                    : null;
+
+            // Tylko pierwsze przyłączenie: dalszy wiersz („Załącznik nr 2 do rozporządzenia … z dnia 20 marca 2020 r.
+            // (Dz. U. poz. 123)") nazywa załącznik aktu zmienianego, nie ten akt.
+            var own = line is null ? null : NextAttachment.Split(line).FirstOrDefault(part => part.Trim().Length > 0);
+            if (own is null || JournalReferenceService.ReadFirstAct(own) is not { Positions: [> 0] } journal)
+                return;
+
+            document.SourceJournal = journal;
+            Log.Information("Akt bez nagłówka dziennika — miejsce ogłoszenia z wiersza przyłączenia: {Journal}", journal);
+        }
+
         private static List<string> HeaderLines(IReadOnlyList<DocumentBlock> blocks) =>
             blocks
                 .Where(b => b is { Role: BlockRole.JournalHeader } && !b.IsEmpty)

@@ -332,6 +332,8 @@ namespace Saga.Core.Services.Parsing
 
             if (context.Document.Announcement is { IsConsolidatedText: true } consolidated)
                 consolidated.LegalStateDate = ConsolidatedTextState.Read(consolidated);
+
+            JournalHeaderParser.ApplyFromAttachment(context.Document);
         }
 
         // ============================================================

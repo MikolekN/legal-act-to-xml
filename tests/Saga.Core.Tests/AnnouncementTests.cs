@@ -293,9 +293,10 @@ namespace Saga.Core.Tests
 
             var first = Child(announcement, "punkt-OTJ");
             Assert.Equal(new[] { "nr", "p", "podpunkt-OTJ", "podpunkt-OTJ", "czesc-wspolna-podpunkt-OTJ" }, ChildNames(first));
-            Assert.Equal("pkt_1", first.Attribute("eId")!.Value);
+            // Fikstura nie ma nagłówka dziennika — prefiks aktu daje wiersz „Załącznik do obwieszczenia … (Dz. U. poz. 1094)".
+            Assert.Equal("DU/2025/1094__pkt_1", first.Attribute("eId")!.Value);
             Assert.Equal(
-                new[] { "pkt_1__ppkt_1", "pkt_1__ppkt_2", "pkt_1__czw" },
+                new[] { "DU/2025/1094__pkt_1__ppkt_1", "DU/2025/1094__pkt_1__ppkt_2", "DU/2025/1094__pkt_1__czw" },
                 first.Elements().Skip(2).Select(e => e.Attribute("eId")!.Value));
 
             // Przytoczony przepis stoi w zdaniu punktu, nie obok niego.
