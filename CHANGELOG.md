@@ -778,6 +778,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   cudzysłowu, bez względu na style pozycji. Przedtem pozycje oświadczenia stawały się punktami aktu.
   - W korpusie zmienia się 11 tekstów jednolitych: 25 oświadczeń wychodzi jako `tresc-strukt`, a ich wiersz otwierający przestaje być `fragment` (28 akapitów). Powtórzonych eId w tekstach jednolitych jest 513 (było 559) — pozycje oświadczeń przestały być punktami aktu; nierozróżnionych okresem zostaje 34. Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory), pokrycie tekstu bez zmian. Bez stylów: 114 jednostek zgodnych więcej, żadna mniej; w pełni zgodnych tekstów jednolitych 628 z 728 (było 625).
 
+### Usunięto
+- **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
+  żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
+  wyjściowym jest XML.
+
 ## [1.0.3] - 2026-09-02
 ### Dodano
 - Parsowanie daty ogłoszenia aktu oraz całości nagłówka znajdującego się w ogłoszonych ustawach.

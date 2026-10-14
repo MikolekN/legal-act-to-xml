@@ -4,7 +4,7 @@ Ten plik zawiera wskazówki dla Claude Code (claude.ai/code) dotyczące pracy z 
 
 ## Opis projektu
 
-**SAGA** (System Automatycznego Generowania Aktów) to zestaw narzędzi na platformie .NET 10 do parsowania polskich dokumentów prawnych (aktów prawnych) z formatu DOCX do hierarchicznego modelu obiektowego, a następnie eksportu do XML/XLSX. Obsługuje hierarchiczne struktury dokumentów oraz nowelizacje.
+**SAGA** (System Automatycznego Generowania Aktów) to zestaw narzędzi na platformie .NET 10 do parsowania polskich dokumentów prawnych (aktów prawnych) z formatu DOCX do hierarchicznego modelu obiektowego, a następnie eksportu do XML. Obsługuje hierarchiczne struktury dokumentów oraz nowelizacje.
 
 ## Polecenia
 

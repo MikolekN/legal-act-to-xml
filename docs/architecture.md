@@ -8,7 +8,7 @@
 
 ## 1. Przegląd domeny
 
-SAGA to toolkit .NET 10 służący do **parsowania polskich aktów prawnych** z dokumentów Word/DOCX, PDF (z warstwą tekstową) oraz TXT do modelu obiektowego (DTO), a następnie do formatów wyjściowych (XML/XLSX). Wejście jest uniwersalne: format źródłowy jest wykrywany sygnaturowo, a dokument jest klasyfikowany wg rodzaju aktu (ZTP) przed (opcjonalnym) zbudowaniem modelu. Domena obejmuje:
+SAGA to toolkit .NET 10 służący do **parsowania polskich aktów prawnych** z dokumentów Word/DOCX, PDF (z warstwą tekstową) oraz TXT do modelu obiektowego (DTO), a następnie do XML (schemaPL). Wejście jest uniwersalne: format źródłowy jest wykrywany sygnaturowo, a dokument jest klasyfikowany wg rodzaju aktu (ZTP) przed (opcjonalnym) zbudowaniem modelu. Domena obejmuje:
 
 - **Hierarchię jednostek redakcyjnych**: `Article → Paragraph → Point → Letter → Tiret → Tiret (zagnieżdżony)` — „podwójny tiret" (2TIR/3TIR) to nie osobna klasa, tylko zagnieżdżona lista `Tiret.Tirets`
 - **Hierarchię jednostek systematyzujących**: `Part → Book → Title → Division → Chapter → Subchapter`
@@ -564,8 +564,6 @@ patrz [ADR-0013](adr/0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md).
 | **`RomanNumeralConverter`** | Wyłącznie cyfry rzymskie (`RomanToInt`/`ToRoman`) dla jednostek systematyzacyjnych; oznaczenie rzymskie i słowne trafia do eId jako liczba arabska („KSIĘGA PIERWSZA" i „KSIĘGA I" → `ksi_1`, [ADR-0018](adr/0018-postac-oznaczenia-w-eid.md)). Liczebniki słowne rozstrzyga `PolishNumerals`. |
 | **`StyleLibraryMapper`** | Statyczna mapa styli dokumentów prawnych — mapuje StyleId na czytelne nazwy. Zawiera `AmendmentStyleInfoMap` z metadanymi styli nowelizacyjnych. |
 | **`AmendmentStyleDecoder`** | Dekoder styli nowelizacyjnych — rozpoznaje instrument zmiany (`AmendmentInstrument`), typ celu (`AmendmentTargetKind`), kontekst nadrzędny. |
-| **`EnumExtensions`** | Metoda `ToDescription()` na enumach — odczyt atrybutu `[EnumDescription]`. |
-| **`SpreadsheetHelper`** | Helper do tworzenia komórek w arkuszu XLSX (OpenXml Spreadsheet). |
 
 ### 6.5 Konwertery XML (`Services/Converters/`)
 
@@ -942,9 +940,7 @@ src/Saga.Core/
 │   ├── ParagraphExtensions.cs       # Bezpieczne StyleId() z null-check; GetFullText() z obsługą superscriptu i równań
 │   ├── StringExtensions.cs          # CollapseWhitespace(), Sanitize()
 │   ├── StyleLibraryMapper.cs        # Mapa styli dokumentów prawnych
-│   ├── AmendmentStyleDecoder.cs     # Dekoder styli nowelizacyjnych
-│   ├── EnumExtensions.cs            # ToDescription() dla enumów
-│   └── SpreadsheetHelper.cs         # Helper do tworzenia komórek XLSX
+│   └── AmendmentStyleDecoder.cs     # Dekoder styli nowelizacyjnych
 ├── Ingest/                          # WARSTWA ODCZYTU FORMATU (DOCX/PDF/TXT → DocumentBlock)
 │   ├── SourceFormat.cs              # Enum: Docx/Pdf/PlainText/Unknown
 │   ├── SourceFormatDetector.cs      # Detekcja formatu po sygnaturze (nie po rozszerzeniu)
@@ -1027,7 +1023,7 @@ src/Saga.Core/
     │   ├── SectionSignRole.cs       # Samodzielny „§": jednostka główna czy paragraf kodeksu (rodzaj aktu)
     │   └── UnitAddressReader.cs     # Adres z tekstu komendy (cele nowelizacji)
     └── Converters/
-        └── [nieaktywne — kod zakomentowany] Konwertery do XML/XLSX (przyszłościowo)
+        └── …                        # Eksport modelu do XML schemaPL (wywołuje LegalDocumentConverter) — sekcja 6.5
 ```
 
 ---
@@ -1102,7 +1098,7 @@ src/Saga.Core/
              └── Amendments (nowelizacje z operacjami)
                    │
                    ▼
-             [Przyszłościowo] Converters → XML / XLSX
+             LegalDocumentConverter → XML (schemaPL)
 ```
 
 ---
