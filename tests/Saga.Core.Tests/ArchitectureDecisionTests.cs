@@ -2376,6 +2376,48 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0075: cudzysłów za oznaczeniem artykułu otwiera przytoczenie ustępu tego artykułu
+        // ============================================================
+
+        [Fact]
+        public void Adr0075_QuoteOpenedAfterTheArticleDesignation_QuotesAParagraphOfThatArticle()
+        {
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 11 sierpnia 2025 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 1094", Role = BlockRole.JournalHeader },
+            };
+            string[] lines =
+            [
+                "Obwieszczenie", "Marszałka Sejmu Rzeczypospolitej Polskiej", "z dnia 6 sierpnia 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
+                "1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy.",
+                "2. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje:",
+                "1) art. 78 ust. 1 ustawy z dnia 15 maja 2024 r. o wspieraniu rodziców (Dz. U. poz. 858), który stanowi:",
+                "Art. 78. „1. Uznaje się, że od dnia 19 stycznia 2023 r.:",
+                "1) programy mogą być dofinansowane;",
+                "2) wojewoda może przyznawać dofinansowanie.”;",
+                "2) art. 81 tej ustawy, który stanowi:",
+                "„Art. 81. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.”.",
+                "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
+                "USTAWA", "z dnia 11 sierpnia 2001 r.", "o odbudowie obiektów budowlanych",
+                "Art. 1. Ustawa reguluje zasady odbudowy.",
+            ];
+            blocks.AddRange(lines.Select(line => new DocumentBlock { Text = line }));
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Podpunkty obwieszczenia to tylko „1)" i „2)" punktu 2; punkty przytoczonego ustępu są jego punktami
+            // w akcie przytaczanym.
+            var subPoints = document.Announcement!.Points[1].Points.Select(point => point.Id).ToList();
+            Assert.Equal(new[] { "pkt_2__ppkt_1", "pkt_2__ppkt_2" }, subPoints);
+
+            var addresses = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "punkt").Select(e => e.Attribute("eId")?.Value).ToList();
+            Assert.Equal(new[] { "DU/2024/858__art_78__ust_1__pkt_1", "DU/2024/858__art_78__ust_1__pkt_2" }, addresses);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

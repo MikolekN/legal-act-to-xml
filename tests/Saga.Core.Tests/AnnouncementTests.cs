@@ -165,6 +165,26 @@ namespace Saga.Core.Tests
             Assert.Equal(2, articles[0].Paragraphs.Count);
         }
 
+        [Fact]
+        public void QuoteOpenedAfterTheArticleDesignation_IsAQuotationOfThatArticle()
+        {
+            // Korpus: 299130_2697165 — przytoczony jest ust. 1, więc cudzysłów stoi za oznaczeniem artykułu
+            // („Art. 78. „1. …"). Przedtem akapit zostawał tekstem, a punkty ustępu stawały się podpunktami
+            // obwieszczenia o tych samych adresach co jego własne (ADR-0075).
+            var second = Parse(WithQuotation(
+                    "Art. 57. „1. Uznaje się, że od dnia 19 stycznia 2023 r.:",
+                    "1) programy mogą być dofinansowane;",
+                    "2) wojewoda może przyznawać dofinansowanie.”"))
+                .Announcement!.Points[1];
+
+            Assert.Empty(second.Points);
+            var article = Assert.Single(Assert.Single(second.Continuation).Quotation!.Content.Articles);
+            Assert.Equal("57", article.Number?.Value);
+            var paragraph = Assert.Single(article.Paragraphs);
+            Assert.Equal("1", paragraph.Number?.Value);
+            Assert.Equal(new[] { "1", "2" }, paragraph.Points.Select(point => point.Number?.Value));
+        }
+
         [Theory]
         // Przytoczony ustęp wymagałby adresu z treści punktu („art. 5 ust. 3 ustawy …").
         [InlineData("„3. W przypadku gdy osoba posiada zaświadczenie, przepisu nie stosuje się.”")]

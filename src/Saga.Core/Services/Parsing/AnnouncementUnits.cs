@@ -21,6 +21,14 @@ namespace Saga.Core.Services.Parsing
 
         private static readonly Regex SubPointDesignation = new(@"^\d+[a-z]*\)\s", RegexOptions.Compiled);
 
+        /// <summary>
+        /// Cudzysłów otwarty za oznaczeniem artykułu („Art. 78. „1. Uznaje się …") — przytoczony jest ustęp, a oznaczenie
+        /// jego artykułu stoi przed cudzysłowem. Przytoczenie zaczyna się od tego akapitu (ADR-0075).
+        /// </summary>
+        private static readonly Regex QuoteAfterArticleDesignation = new(
+            $@"^(?<designation>(?:Art\.|§)\s*\d+{DesignationAlphabet.LowerLetter}*(?:\[[^\]]*\])?\.)\s*{QuotationMarks.Opening}",
+            RegexOptions.Compiled);
+
         /// <param name="sectionIsBasicUnit">
         /// Ogłaszany akt jest oparty na paragrafach — przytoczone „§ 2." to wtedy jednostka podstawowa (ADR-0034).
         /// </param>
@@ -52,6 +60,10 @@ namespace Saga.Core.Services.Parsing
                     continue;
 
                 var text = blocks[i].Text.CollapseWhitespace().Trim();
+
+                // „Art. 78. „1. …" czyta się jak „„Art. 78. 1. …": cudzysłów obejmuje ustęp, a ustęp należy do artykułu.
+                if (quoteDepth == 0 && QuoteAfterArticleDesignation.Match(text) is { Success: true } cited)
+                    text = QuotationMarks.Opening + cited.Groups["designation"].Value + " " + text[cited.Length..];
 
                 if (quoteDepth > 0 || QuoteBalanceTracker.OpensQuote(text))
                 {

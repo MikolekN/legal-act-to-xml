@@ -769,6 +769,10 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Pozycja zakończona spójnikiem prowadzi wyliczenie dalej** ([ADR-0074](docs/adr/0074-przecinek-po-punktach-zapowiada-czesc-wspolna-punktow.md)): tiret
   „– … lub" w ostatnim punkcie nie poprzedza części wspólnej punktów — myślnik za nim to kolejne tiret
   (`CommonPartPlacement.ClosesBeforeDash`). W korpusie bez zmian (zabezpieczenie reguły z ADR-0074).
+- **Przytoczony ustęp w obwieszczeniu** ([ADR-0075](docs/adr/0075-cudzyslow-za-oznaczeniem-artykulu-otwiera-przytoczenie-jego-ustepu.md)): „Art. 78. „1. …" — cudzysłów za
+  oznaczeniem artykułu — zaczyna przytoczenie, a ustęp należy do swojego artykułu w akcie przytaczanym. Przedtem akapit
+  zostawał tekstem, a punkty i kolejne ustępy przytoczenia stawały się podpunktami i punktami obwieszczenia.
+  - W korpusie zmienia się 45 tekstów jednolitych: przybywa 62 przytoczeń zbudowanych z jednostek (`tresc-strukt`), znika 75 akapitów zostawionych tekstem (`fragment`), 73 fałszywe podpunkty i 16 fałszywych punktów obwieszczenia (punkty i ustępy przytoczonego przepisu brane za jednostki obwieszczenia). Powtórzonych eId w tekstach jednolitych jest 559 (było 594). Zgodnych ze schematem jest nadal 2278 z 2321 (oba walidatory), pokrycie tekstu bez zmian.
 
 ## [1.0.3] - 2026-09-02
 ### Dodano
