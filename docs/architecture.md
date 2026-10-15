@@ -333,6 +333,8 @@ jest łapana i sprowadzana do pustej listy — treść aktu czyta się dalej.
 PDF i TXT nagłówków stron nie mają: winietę dziennika na samym początku dokumentu oznacza rolą
 `BlockRole.JournalHeader` `JournalMasthead`, wspólny dla obu adapterów — tylko bloki, które razem dają nazwę
 dziennika i dalsze wiersze winiety ([ADR-0088](adr/0088-winieta-dziennika-na-poczatku-pdf-i-txt-jest-naglowkiem-publikatora.md)).
+Czytnik TXT odtwarza też indeks górny oznaczeń jednostek, który zwykły tekst zapisuje cyframi („Art. 292." po
+„Art. 29." to „Art. 29[2].") — `SuperscriptDesignations` ([ADR-0089](adr/0089-indeks-gorny-oznaczenia-w-txt-odtwarza-ciag-numeracji.md)).
 
 ### 5.2 Rdzeń budowy modelu (`LegalDocumentParser.ParseBlocks`, `internal`)
 

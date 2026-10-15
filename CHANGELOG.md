@@ -947,6 +947,13 @@ a wersjonowanie zgodne z Semantic Versioning.
     (obwieszczenia bez aktu 96,65 %, ustawy 87,97 %, rozporządzenia 69,89 %, TJ 32,91 %); słowa w treści ponad tekst
     DOCX 2,61 % → 0,68 % (TJ 2,85 % → 0,65 %: odnośniki bez oznaczenia przestają wpadać do treści); jednostki
     94,31 % → 94,30 %, słowa treści 99,77 % → 99,73 %. DOCX bez zmian (`--compare-exports`: 0 z 2321).
+- **Indeks górny oznaczeń w TXT**: oznaczenie zapisane zwykłymi cyframi („Art. 292." po „Art. 29.", „§ 11." po
+  „§ 1.", „11)" po „1)") czytnik TXT odtwarza z ciągu numeracji jako indeks górny („Art. 29[2].") — ciągi artykułów,
+  paragrafów i ustępów w artykule i punktów w jednostce, z pominięciem treści cytowanej (`SuperscriptDesignations`,
+  [ADR-0089](docs/adr/0089-indeks-gorny-oznaczenia-w-txt-odtwarza-ciag-numeracji.md)).
+  - Korpus w TXT (`--format-parity`, 2151 dokumentów): jednostki 96,51 % → 97,73 % (TJ 96,27 % → 97,66 %; ustawy
+    i rozporządzenia bez zmian), żaden dokument nie traci; jednostek z indeksem górnym w adresie, których TXT nie
+    odtwarza, 7798 → 1306 (reszta to głównie treść cytowana). DOCX i PDF bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

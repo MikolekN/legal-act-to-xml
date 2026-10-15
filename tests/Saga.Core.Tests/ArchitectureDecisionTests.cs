@@ -2866,6 +2866,26 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0089: indeks górny oznaczenia w TXT odtwarza ciąg numeracji
+        // ============================================================
+
+        [Fact]
+        public void Adr0089_TextSuperscripts_AreRestoredFromTheSequence_OnlyOutsideQuotations()
+        {
+            static List<string> Read(params string[] lines)
+            {
+                using var stream = new MemoryStream(new UTF8Encoding(false).GetBytes(string.Join("\n", lines)));
+                return new PlainTextBlockReader().ReadBlocks(stream).Select(block => block.Text).ToList();
+            }
+
+            Assert.Equal(["Art. 29. A.", "Art. 29[2]. B.", "Art. 30. C."], Read("Art. 29. A.", "Art. 292. B.", "Art. 30. C."));
+
+            // Cytat przytacza jednostki innego aktu — zostaje tak, jak stoi.
+            string[] quoted = ["Art. 1. Zmiany:", "1) dodaje się:", "„Art. 4. Treść.", "Art. 41. Treść.”;", "2) uchyla się art. 7."];
+            Assert.Equal(quoted, Read(quoted));
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

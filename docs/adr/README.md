@@ -107,5 +107,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0086](0086-czesc-wspolna-bez-wyliczenia-i-bez-komendy-ktora-ja-nazywa-jest-tekstem-cytowanym.md) | Treść cytowana z samych części wspólnych, bez wyliczenia i pod komendą, która części wspólnej nie nazywa, jest tekstem cytowanym | Accepted | 2026-10-14 |
 | [0087](0087-oznaczenie-bez-paragrafu-w-artykule-kodeksu-to-paragraf-kodeksu-spoza-ztp.md) | Ustęp z oznaczeniem bez „§", który ciągnie numerację paragrafów kodeksu, to paragraf kodeksu spoza ZTP (`nie-ztp-paragraf-kodeksu`, eId `par`, numer jak wydrukowany) | Accepted | 2026-10-15 |
 | [0088](0088-winieta-dziennika-na-poczatku-pdf-i-txt-jest-naglowkiem-publikatora.md) | Winieta dziennika na samym początku PDF i TXT (nazwa dziennika, data wydania numeru, pozycja) jest nagłówkiem publikatora — te same dane ogłoszenia co nagłówek strony DOCX | Accepted | 2026-10-15 |
+| [0089](0089-indeks-gorny-oznaczenia-w-txt-odtwarza-ciag-numeracji.md) | Indeks górny oznaczenia zapisany w TXT zwykłymi cyframi („Art. 292.") czytnik TXT odtwarza z ciągu numeracji, poza treścią cytowaną | Accepted | 2026-10-15 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

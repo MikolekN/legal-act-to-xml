@@ -8,6 +8,8 @@ namespace Saga.Core.Ingest
     /// → fallback CP1250 (typowe dla polskich plików legacy). Normalizacja i segmentacja są wspólne
     /// z przyszłym adapterem PDF (TextNormalizer + BlockAssembler). Winieta dziennika na początku pliku dostaje rolę
     /// <see cref="BlockRole.JournalHeader"/> (<see cref="JournalMasthead"/>, ADR-0088).
+    /// Indeks górny oznaczenia jednostki zapisany zwykłymi cyframi („Art. 292.") odtwarza ciąg numeracji
+    /// (<see cref="SuperscriptDesignations"/>, ADR-0089).
     /// </summary>
     public sealed class PlainTextBlockReader : IDocumentBlockReader
     {
@@ -31,7 +33,7 @@ namespace Saga.Core.Ingest
                 .Split('\n')
                 .Select((lineText, index) => new TextLine(lineText, index + 1));
 
-            return JournalMasthead.Mark(BlockAssembler.Assemble(lines));
+            return JournalMasthead.Mark(SuperscriptDesignations.Restore(BlockAssembler.Assemble(lines)));
         }
 
         private static byte[] ReadAllBytes(Stream stream)
