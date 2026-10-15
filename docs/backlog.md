@@ -52,7 +52,7 @@ leżą **poza** splitterem:
 
 | Luka | Stan faktyczny | Dlaczego odłożone |
 |---|---|---|
-| **Numeracja hierarchiczna punktów** | Pozycje numerowane „5.6.", „18.8.1.", „I.1." (tabele kar, wykazy opłat, załączniki) są budowane jako punkty bez rozpoznanego numeru — eId kończy się samym `…__pkt`, a numer zostaje w treści i splitter tnie za nim. | Model numeru (`EntityNumber`) nie zna numeru wieloczłonowego, a ZTP nie przewiduje takiej jednostki redakcyjnej — trzeba najpierw zdecydować, czym te pozycje są w modelu. |
+| **Numeracja hierarchiczna punktów** | Pozycje numerowane „2.1", „5.6.", „18.8.1." (podstawy programowe, wykazy, treść załączników) wychodzą jako jednostki bez odczytanego oznaczenia (`nie-ztp-punkt` z `brak-eid`) albo akapity, z numerem w treści — w korpusie 78 zdań, prawie wszystkie w treści cytowanej jednego rozporządzenia (343572_3168483 i kopia). | Model numeru (`EntityNumber`) nie zna numeru wieloczłonowego, a ZTP nie przewiduje takiej jednostki redakcyjnej — najpierw trzeba zdecydować, czym te pozycje są w modelu. |
 | **Weto na samotne oznaczenie tylko w cudzysłowie** | Oznaczenie stojące samodzielnie na początku zdania („„Art. 59a. 1.") nie kończy zdania wyłącznie w treści cytowanej. Poza cudzysłowem granica zostaje (`SplitIntoSentences_OznaczenieBezCudzyslowu_PozostajeGranica`). | Świadomie: samotny numer bez cudzysłowu to w korpusie zawsze niezdjęty prefiks albo nierozpoznany numer — weto ukryłoby taki defekt w pomiarze, zostawiając zepsuty eId i treść. |
 
 ## 2. Klasyfikacja dokumentu
