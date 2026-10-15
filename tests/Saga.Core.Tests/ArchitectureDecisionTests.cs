@@ -2840,6 +2840,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0088: winieta dziennika na początku PDF i TXT jest nagłówkiem publikatora
+        // ============================================================
+
+        [Fact]
+        public void Adr0088_JournalMastheadAtTheStartOfPlainText_GivesTheAnnouncementData()
+        {
+            static LegalDocument Parse(params string[] lines)
+            {
+                using var stream = new MemoryStream(new UTF8Encoding(false).GetBytes(string.Join("\n", lines)));
+                return LegalDocumentParser.Parse(stream, "akt.txt", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+            }
+
+            string[] masthead = ["DZIENNIK USTAW", "RZECZYPOSPOLITEJ POLSKIEJ", "Warszawa, dnia 12 stycznia 2026 r.", "Poz. 26"];
+            string[] act = ["USTAWA", "z dnia 18 grudnia 2025 r.", "o zmianie ustawy o rzeczach różnych",
+                "Art. 1. Wprowadza się zmiany porządkowe.", "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."];
+
+            var announced = Parse([.. masthead, .. act]);
+            Assert.Equal(new DateTime(2026, 1, 12), announced.AnnouncementDate);
+            Assert.Equal([26], announced.SourceJournal.Positions);
+
+            // Winieta tylko na samym początku i tylko z nazwą dziennika — inne położenie to treść.
+            Assert.Null(Parse([.. act, .. masthead]).AnnouncementDate);
+            Assert.Null(Parse([.. masthead[2..], .. act]).AnnouncementDate);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

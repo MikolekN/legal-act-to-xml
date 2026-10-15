@@ -289,12 +289,11 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void Parse_PlainTextWithJournalLines_DoesNotInventAnnouncementDate()
+        public void Parse_PlainTextWithJournalLinesAfterTheAct_DoesNotInventAnnouncementDate()
         {
-            // Świadome ograniczenie zakresu: kanał TXT nie ma części nagłówkowej, a wiersze
-            // publikatora w treści to zwykły tekst. Uznanie ich za nagłówek byłoby zgadywaniem
-            // struktury z treści — osobna decyzja, nie efekt uboczny tej zmiany.
-            var lines = JournalHeaderLines.Concat(StatuteBodyLines);
+            // Kanał TXT nie ma części nagłówkowej: nagłówkiem jest tylko winieta na samym początku
+            // dokumentu (ADR-0088). Te same wiersze dalej w treści to zwykły tekst.
+            var lines = StatuteBodyLines.Concat(JournalHeaderLines);
             using var stream = new MemoryStream(new UTF8Encoding(false).GetBytes(string.Join("\n", lines)));
 
             var document = LegalDocumentParser.Parse(stream, "ustawa.txt",

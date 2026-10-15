@@ -20,6 +20,8 @@ namespace Saga.Core.Ingest.Pdf
     ///    granica strony NIE jest granicą bloku (jednostka przecięta stroną się skleja). Dehyfenacja
     ///    wyłącznie „-" (U+002D) na końcu wiersza + mała litera na początku następnego.
     /// 7. Wcięcia: X pierwszego wiersza bloku względem dominującego lewego marginesu → twips (1 pt = 20 twips).
+    /// 8. Winieta dziennika na początku pierwszej strony → bloki <see cref="BlockRole.JournalHeader"/>
+    ///    (<see cref="JournalMasthead"/>) — jak nagłówek strony DOCX, z danymi ogłoszenia.
     /// Celowo NIE nadaje StyleId (zabetonowałoby błędy) — klasyfikacja idzie gałęzią bezstylową.
     /// </summary>
     public sealed class PdfBlockReader : IDocumentBlockReader
@@ -119,8 +121,8 @@ namespace Saga.Core.Ingest.Pdf
                 ? Mode(bodyLines.Select(l => Math.Round(l.StartX)))
                 : 0;
 
-            var blocks = AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
-                startIndex: 0, forceBoundary: null);
+            var blocks = JournalMasthead.Mark(AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
+                startIndex: 0, forceBoundary: null)).ToList();
             var footnotes = AssembleBlocks(footnoteLines, docDominantSize, dominantLeft, BlockRole.FootnoteText,
                 startIndex: blocks.Count, forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text));
 

@@ -326,8 +326,12 @@ pierwszeństwa: najpierw podpięte jako `First` (Word zakłada osobny nagłówek
 przy włączonej „innej stronie tytułowej"), potem `Default`. Adapter nie rozstrzyga, która część
 „jest tą właściwą" — to należy do `JournalHeaderParser`, który bierze pierwsze dopasowanie każdej
 wartości; dzięki temu winieta wygrywa z żywą paginą, a część pusta po prostu nic nie wnosi.
-To jedyny kanał, którym metadane publikatora aktu ogłoszonego docierają do potoku; awaria odczytu
+W DOCX to jedyny kanał, którym metadane publikatora aktu ogłoszonego docierają do potoku; awaria odczytu
 jest łapana i sprowadzana do pustej listy — treść aktu czyta się dalej.
+
+PDF i TXT nagłówków stron nie mają: winietę dziennika na samym początku dokumentu oznacza rolą
+`BlockRole.JournalHeader` `JournalMasthead`, wspólny dla obu adapterów — tylko bloki, które razem dają nazwę
+dziennika i dalsze wiersze winiety ([ADR-0088](adr/0088-winieta-dziennika-na-poczatku-pdf-i-txt-jest-naglowkiem-publikatora.md)).
 
 ### 5.2 Rdzeń budowy modelu (`LegalDocumentParser.ParseBlocks`, `internal`)
 

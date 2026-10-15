@@ -886,6 +886,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   (`AmendmentCommandParser.ReplaceWordsPattern`) — przedtem dwukropek przed cudzysłowem gubił instrukcję.
   - W korpusie zmienia się 1 dokument (310705_2774450): przybywa jedna instrukcja `now:zamien-tekst` (cel: załącznik 2).
     Zgodnych ze schematem nadal 2280 z 2321 (oba walidatory, ten sam zbiór).
+- **Winieta dziennika w PDF i TXT**: „DZIENNIK USTAW / RZECZYPOSPOLITEJ POLSKIEJ / Warszawa, dnia … / Poz. …"
+  (i Monitora Polskiego) na samym początku dokumentu daje dane ogłoszenia jak nagłówek strony DOCX — dziennik,
+  rocznik, pozycję, datę ogłoszenia, a z nimi ELI, prefiks eId i daty wejścia w życie
+  ([ADR-0088](docs/adr/0088-winieta-dziennika-na-poczatku-pdf-i-txt-jest-naglowkiem-publikatora.md)). Wcześniej
+  wiersze winiety były treścią przed tytułem, a dane ogłoszenia PDF i TXT mógł podać tylko wywołujący.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): dane ogłoszenia zgodne z DOCX w 1835 dokumentach (było 109);
+    obwieszczenia bez aktu — jednostki 0,93 % → 94,88 %, słowa treści 1,03 % → 65,56 % (winieta Monitora Polskiego
+    przestaje zasłaniać rodzaj dokumentu). Treść TJ zgodna ze schematem 721 → 559: z danymi ogłoszenia akt staje pod
+    obwieszczeniem, a sklejona przez adapter PDF strefa tytułowa nie daje mu rodzaju i daty — to osobna luka
+    adaptera. TXT z eksportu Worda winiety nie ma (bez zmian), DOCX bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
