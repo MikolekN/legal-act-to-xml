@@ -796,6 +796,135 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void FootnoteNumberWithOnlyTheDigitInSuperscript_IsLinked()
+        {
+            // Szablon przypisu: numer w indeksie górnym, nawias zwykłym tekstem — „[1]) Minister …".
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Minister ustala wzory dokumentów", "1", footnote: null);
+            builder.AddText("1", 57, 93.5, 6);
+            builder.AddText(") Minister Infrastruktury kieruje działem transport.", 60.5, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks.SelectMany(b => b.Footnotes));
+            Assert.Equal("1", footnote.Symbol);
+            Assert.Equal(["Minister Infrastruktury kieruje działem transport."], footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void FootnoteNumberWithOnlyTheParenthesisInSuperscript_IsLinked()
+        {
+            // Odwrotnie: numer zwykłym tekstem, nawias w indeksie górnym — „1[)] Minister …", font 0,9× treści.
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Minister ustala wzory dokumentów", "1", footnote: null);
+            builder.AddText("1", 57, 90, 10);
+            builder.AddText(")", 62.6, 93.5, 6);
+            builder.AddText("Minister Infrastruktury kieruje działem transport.", 68, 90, 10);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks.SelectMany(b => b.Footnotes));
+            Assert.Equal("1", footnote.Symbol);
+            Assert.Equal(["Minister Infrastruktury kieruje działem transport."], footnote.Paragraphs);
+            Assert.DoesNotContain(blocks, b => b.Role == BlockRole.Body && b.Text.Contains("Minister Infrastruktury"));
+        }
+
+        [Fact]
+        public void FootnoteWithAnEnumeration_KeepsItsItemsAsParagraphs()
+        {
+            // Odnośnik tekstu jednolitego z wyliczeniem — pozycje „1)", „2)" zwykłym tekstem są jego akapitami,
+            // nie odnośnikami 1 i 2.
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 80. Ewidencję prowadzi starosta", "7", footnote: null);
+            builder.AddText("7)", 57, 113.5, 6);
+            builder.AddText("Dodany przez art. 5 ustawy; wejdzie w życie z dniem wdrożenia rejestrów, o których mowa:", 66, 110, 8);
+            builder.AddText("1) w art. 28 ust. 1 ustawy;", 66, 100, 8);
+            builder.AddText("2) w art. 39g ust. 3 ustawy o transporcie drogowym.", 66, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks.SelectMany(b => b.Footnotes));
+            Assert.Equal("7", footnote.Symbol);
+            Assert.Equal(
+                ["Dodany przez art. 5 ustawy; wejdzie w życie z dniem wdrożenia rejestrów, o których mowa:",
+                 "1) w art. 28 ust. 1 ustawy;",
+                 "2) w art. 39g ust. 3 ustawy o transporcie drogowym."],
+                footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void FootnoteNumberPrintedTwice_IsLinkedToItsReference()
+        {
+            // Automatyczny numer odnośnika i ten sam numer wpisany ręcznie: odnośnik 1 drukuje się „11)".
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Minister ustala wzory dokumentów", "1", footnote: null);
+            builder.AddText("11)", 57, 93.5, 6);
+            builder.AddText("Minister Rolnictwa i Rozwoju Wsi kieruje działem rozwój wsi.", 66, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks.SelectMany(b => b.Footnotes));
+            Assert.Equal("1", footnote.Symbol);
+            Assert.Equal(["Minister Rolnictwa i Rozwoju Wsi kieruje działem rozwój wsi."], footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void FootnoteMarkPrintedTwice_IsReadOnce()
+        {
+            // Oznaczenie własne odnośnika („zc)") w odwołaniu: indeks górny i ten sam tekst w linii pisma;
+            // w odnośniku: dwa razy w indeksie górnym.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText("Art. 1. Rozporządzenie (UE) 2017/745, z późn. zm.", 57, 700);
+            builder.AddText("zc)", 340, 703.5, 6);
+            builder.AddText("zc)), stosuje się.", 349, 700);
+            builder.AddText("zc)zc)", 57, 93.5, 6);
+            builder.AddText("Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE.", 80, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var referencing = Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            Assert.DoesNotContain("zc)", referencing.Text);
+            var footnote = Assert.Single(referencing.Footnotes);
+            Assert.Equal("zc", footnote.Symbol);
+            Assert.Equal(["Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE."], footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void UnnumberedReferenceWithAComma_KeepsTheComma()
+        {
+            // Kilka odwołań w jednym indeksie górnym („1), 2)"): pierwszy stracił numer, został „[),]".
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText("Art. 30. Ustawa zmieniana w art. 24", 57, 700);
+            builder.AddText("),", 330, 703.5, 6);
+            builder.AddText(")", 57, 93.5, 6);
+            builder.AddText("Artykuł 24 zawiera zmiany do ustawy o mieszkalnictwie.", 66, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var referencing = Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            Assert.Contains("[1),]", referencing.Text);
+            Assert.Equal(["Artykuł 24 zawiera zmiany do ustawy o mieszkalnictwie."], Assert.Single(referencing.Footnotes).Paragraphs);
+        }
+
+        [Fact]
+        public void FootnotesNumberedInPlainText_StaySeparateFootnotes()
+        {
+            // Odnośniki oznaczone zwykłym tekstem: następny zaczyna się wielką literą po odnośniku zakończonym kropką.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText("Art. 1. Minister ustala wzory", 57, 700);
+            builder.AddText("1)", 300, 703.5, 6);
+            builder.AddText("Art. 2. Przepisy wdrażają dyrektywę", 57, 680);
+            builder.AddText("2)", 300, 683.5, 6);
+            builder.AddText("1) Minister Infrastruktury kieruje działem administracji rządowej.", 57, 100, 10);
+            builder.AddText("2) Niniejsze rozporządzenie wdraża dyrektywę 2006/126/WE.", 57, 88, 10);
+
+            var blocks = Read(builder.Build());
+
+            var footnotes = blocks.SelectMany(b => b.Footnotes).ToList();
+            Assert.Equal(["1", "2"], footnotes.Select(f => f.Symbol));
+            Assert.Equal(["Niniejsze rozporządzenie wdraża dyrektywę 2006/126/WE."], footnotes[1].Paragraphs);
+        }
+
+        [Fact]
         public void MarkerWithoutAFootnoteOnItsPage_StaysAsPrinted()
         {
             // Powtórzone odwołanie na dalszej stronie: odnośnik stoi tylko przy pierwszym.

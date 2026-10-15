@@ -1048,6 +1048,17 @@ a wersjonowanie zgodne z Semantic Versioning.
   wiszący i równy (76 dokumentów gorzej).
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): 76 dokumentów lepiej, żaden gorzej; jednostki 99,45 % → 99,47 %,
     dokumenty z identyczną strukturą 1616 → 1629.
+- **Odnośniki PDF w pozostałych zapisach składu**: `PdfBlockReader` i `PdfFootnotes` czytają odnośnik, którego numer
+  szablon przypisu złożył w indeksie górnym tylko w części („[1]) Minister …", „1[)] Minister …"), numer wydrukowany
+  dwa razy (automatyczny i wpisany ręcznie: „11)" przy odwołaniu „1)", „zm.[za)]za))", „[zc)zc)] Zmiany …") i odnośnik
+  z kilku akapitów — wyliczenie („…, o których mowa:" / „1) w art. 28 …;") i dalszy akapit są akapitami odnośnika,
+  nie odnośnikami 1 i 2; odwołanie bez numeru przed przecinkiem („[),]") zachowuje przecinek. Powtórzone oznaczenie
+  zamykało też w treści przytoczenie obwieszczenia: 302046 ma znów 109 przytoczonych jednostek zamiast 202 akapitów
+  `fragment`.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): słowa odnośników 85,15 % → 95,91 % (242 dokumenty lepiej,
+    żaden gorzej), jednostki 99,47 % → 99,53 %, dokumenty z identyczną strukturą 1629 → 1634. Odrzucona alternatywa:
+    odwołanie bez odnośnika na swojej stronie sięga po odnośniki następnej, gdy na jego stronie nie ma żadnego
+    (tytuł u dołu strony) — 2 dokumenty lepiej, 3 gorzej.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

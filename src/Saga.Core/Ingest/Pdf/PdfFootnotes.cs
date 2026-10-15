@@ -28,21 +28,59 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Indeks górny z co najmniej jednym oznaczeniem odnośnika („[1)]", „[1), 2)]", „[a)]").</summary>
         private static readonly Regex Superscript = new(@"\[[^\[\]]*\)[^\[\]]*\]", RegexOptions.Compiled);
 
-        /// <summary>Znacznik bez oznaczenia — warstwa tekstowa zapisała z indeksu górnego tylko nawias („[)]").</summary>
-        private static readonly Regex UnnumberedMarker = new(@"^\[\s*\)\s*\]$", RegexOptions.Compiled);
+        /// <summary>
+        /// Znacznik bez oznaczenia — warstwa tekstowa zapisała z indeksu górnego tylko nawias („[)]"), także z przecinkiem
+        /// oddzielającym go od następnego odwołania („[),]").
+        /// </summary>
+        private static readonly Regex UnnumberedMarker = new(@"^\[\s*\)\s*(?<comma>,)?\s*\]$", RegexOptions.Compiled);
 
         private static readonly Regex Item = new(@"(?<![\p{L}\d])(?<symbol>\d{1,3}|[a-z]{1,2})\)", RegexOptions.Compiled);
 
         /// <summary>Oznaczenie na początku bloku odnośnika („[1)] …", „1) …", „[a)] …", bez oznaczenia — „[)] …").</summary>
         private static readonly Regex Start = new(
-            @"^(?:\[(?<symbol>\d{1,3}|[a-z]{1,2})?\)\]|(?<symbol>\d{1,3})\))\s*", RegexOptions.Compiled);
+            @"^(?:\[(?<symbol>\d{1,3}|[a-z]{1,2})?\)\]|(?<plain>(?<symbol>\d{1,3})\)))\s*", RegexOptions.Compiled);
+
+        /// <summary>Akapit, który otwiera wyliczenie albo jest jego pozycją — następny „N)" jest jego dalszą pozycją.</summary>
+        private static readonly Regex OpensItem = new(@"[:;]\s*$", RegexOptions.Compiled);
+
+        /// <summary>Treść pozycji wyliczenia: mała litera albo nawias („(uchylony)"), nie wielka litera nowego odnośnika.</summary>
+        private static readonly Regex ItemText = new(@"^[\p{Ll}(]", RegexOptions.Compiled);
 
         private sealed class Note(string symbol, int page, string text)
         {
             public string Symbol { get; } = symbol;
             public int Page { get; } = page;
-            public string Text { get; } = text;
+            public List<string> Paragraphs { get; } = [text];
             public bool Used { get; set; }
+        }
+
+        /// <summary>
+        /// Odnośniki strefy przypisów. Odnośnik bywa wieloakapitowy — wyliczenie („…, o których mowa:" / „1) w art. 28 …;"
+        /// / „2) w art. 39g …"), dalszy akapit — a jego akapity są w PDF osobnymi blokami. Blok bez oznaczenia jest dalszym
+        /// akapitem poprzedniego odnośnika; blok „N)" zapisany zwykłym tekstem — jego pozycją wyliczenia, gdy poprzedni
+        /// akapit otwiera wyliczenie albo kończy pozycję („:", „;") lub treść zaczyna się małą literą. Odnośnik oznaczony
+        /// zwykłym tekstem zaczyna się wielką literą po odnośniku zakończonym kropką („2) W brzmieniu …").
+        /// </summary>
+        private static List<Note> ReadNotes(IReadOnlyList<DocumentBlock> footnotes)
+        {
+            var notes = new List<Note>();
+            foreach (var block in footnotes)
+            {
+                var start = Start.Match(block.Text);
+                var text = block.Text[(start.Success ? start.Length : 0)..].Trim();
+                var previous = notes.Count > 0 ? notes[^1] : null;
+                var continues = previous is not null
+                    && (!start.Success
+                        || (start.Groups["plain"].Success
+                            && (OpensItem.IsMatch(previous.Paragraphs[^1]) || ItemText.IsMatch(text))));
+
+                if (continues)
+                    previous!.Paragraphs.Add(block.Text.Trim());
+                else if (start.Success)
+                    notes.Add(new Note(start.Groups["symbol"].Value, block.Source.PageNumber ?? 0, text));
+            }
+
+            return notes;
         }
 
         /// <param name="body">Bloki treści w kolejności czytania.</param>
@@ -52,12 +90,7 @@ namespace Saga.Core.Ingest.Pdf
         internal static List<DocumentBlock> Link(
             IReadOnlyList<DocumentBlock> body, IReadOnlyList<int> lastPages, IReadOnlyList<DocumentBlock> footnotes)
         {
-            var notes = footnotes
-                .Select(block => (Block: block, Start: Start.Match(block.Text)))
-                .Where(note => note.Start.Success)
-                .Select(note => new Note(note.Start.Groups["symbol"].Value, note.Block.Source.PageNumber ?? 0,
-                    note.Block.Text[note.Start.Length..].Trim()))
-                .ToList();
+            var notes = ReadNotes(footnotes);
 
             var result = new List<DocumentBlock>(body.Count);
             var numbering = new Numbering();
@@ -74,7 +107,7 @@ namespace Saga.Core.Ingest.Pdf
                 {
                     // Odwołanie bez oznaczenia łączy się z odnośnikiem bez oznaczenia z tej samej strony, w kolejności,
                     // i dostaje kolejny numer bieżącego ciągu; bez odnośnika zostaje sam ślad — ginie.
-                    if (UnnumberedMarker.IsMatch(superscript.Value))
+                    if (UnnumberedMarker.Match(superscript.Value) is { Success: true } unnumberedMarker)
                     {
                         var unnumbered = notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol.Length == 0);
                         if (unnumbered is null)
@@ -82,21 +115,24 @@ namespace Saga.Core.Ingest.Pdf
 
                         unnumbered.Used = true;
                         var (symbol, marker, run) = numbering.NextUnknown();
-                        (attached ??= []).Add(new BlockFootnote(symbol, [unnumbered.Text]) { Marker = marker, Run = run });
-                        return "[" + marker + ")]";
+                        (attached ??= []).Add(new BlockFootnote(symbol, unnumbered.Paragraphs) { Marker = marker, Run = run });
+                        return "[" + marker + ")" + unnumberedMarker.Groups["comma"].Value + "]";
                     }
 
                     return Item.Replace(superscript.Value, item =>
                     {
                         var symbol = item.Groups["symbol"].Value;
+                        // Numer złożony dwa razy („[11)]" przy odwołaniu „1)"): automatyczny numer Worda i ten sam numer
+                        // wpisany ręcznie w indeksie górnym — DOCX wpisany numer pomija, PDF drukuje oba.
                         var note = notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol == symbol)
+                            ?? (char.IsDigit(symbol[0]) ? notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol == symbol + symbol) : null)
                             ?? notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol.Length == 0);
                         if (note is null)
                             return item.Value;
 
                         note.Used = true;
                         var (marker, run) = numbering.Next(symbol);
-                        (attached ??= []).Add(new BlockFootnote(symbol, [note.Text]) { Marker = marker, Run = run });
+                        (attached ??= []).Add(new BlockFootnote(symbol, note.Paragraphs) { Marker = marker, Run = run });
                         return marker + ")";
                     });
                 });

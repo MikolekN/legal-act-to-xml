@@ -319,7 +319,8 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 `PdfBlockReader` (PdfPig) składa bloki z geometrii linii tekstu (`PdfLineExtractor`, `BlockAssembler`,
 `PageArtifactFilter`) — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
 warstwie syntaktycznej (regex) i układzie (wcięcia). Odnośniki ze strefy przypisów wiąże ze znacznikami treści `PdfFootnotes`
-(oznaczenie i strona odwołania) — blok niesie `Footnotes` i znacznik o numerze jednoznacznym, jak w DOCX.
+(oznaczenie i strona odwołania) — blok niesie `Footnotes` i znacznik o numerze jednoznacznym, jak w DOCX; akapity
+odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnika.
 Poza markerami jednostek granicę bloku stawiają: strefa tytułowa (nagłówek rodzaju z organem, data aktu, przedmiot,
 początek treści), wiersze końcowe odsunięte w prawo (podpis, wiersz przyłączenia, oznaczenie załącznika), adnotacja
 o uchyleniu w osobnym wierszu i wiersz domknięty jednostką uchyloną. Nagłówek rodzaju i organ wydrukowane wielkimi

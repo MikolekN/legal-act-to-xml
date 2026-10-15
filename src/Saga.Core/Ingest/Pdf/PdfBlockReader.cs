@@ -185,6 +185,35 @@ namespace Saga.Core.Ingest.Pdf
         private static readonly Regex PlainFootnoteStartPattern = new(
             @"^(?<symbol>\d{1,3})\)", RegexOptions.Compiled);
 
+        /// <summary>
+        /// Oznaczenie odnośnika na początku wiersza strefy przypisów złożone w indeksie górnym tylko w części: sam numer
+        /// („[1]) Minister …") albo sam nawias („1[)] Minister …") — tak wychodzi z szablonu przypisu, w którym numer
+        /// i nawias mają różne formatowanie.
+        /// </summary>
+        private static readonly Regex SplitNoteNumberPattern = new(
+            @"^(?:\[(?<symbol>\d{1,3}|[a-z]{1,2})\]\)|(?<symbol>\d{1,3})\s?\[\)\])", RegexOptions.Compiled);
+
+        /// <summary>Wiersz strefy przypisów z oznaczeniem odnośnika w kanale indeksu górnego („[1)] …").</summary>
+        private static PdfTextLine WithNoteNumber(PdfTextLine line)
+        {
+            var split = SplitNoteNumberPattern.Match(line.Text);
+            return split.Success
+                ? line with { Text = "[" + split.Groups["symbol"].Value + ")]" + line.Text[split.Length..] }
+                : line;
+        }
+
+        /// <summary>
+        /// Oznaczenie odnośnika wydrukowane dwa razy: odwołanie z oznaczeniem własnym („za)") ma w warstwie tekstowej
+        /// i znak w indeksie górnym, i ten sam tekst w linii pisma („zm.[za)]za))"), a odnośnik — oba w indeksie
+        /// górnym („[zc)zc)] Zmiany …"). Oznaczenie kończy nawias, którego w środku oznaczenia nie ma, więc powtórzenie
+        /// jest jednoznaczne.
+        /// </summary>
+        private static readonly Regex DuplicatedMarkPattern = new(
+            @"\[(?<mark>[a-z0-9]{1,3}\))(?:\k<mark>\]|\]\k<mark>)", RegexOptions.Compiled);
+
+        private static string WithoutDuplicatedMarks(string text) =>
+            text.Contains(')') ? DuplicatedMarkPattern.Replace(text, "[${mark}]") : text;
+
         /// <summary>Początek przypisu znacznikiem w indeksie górnym — kanał <c>[N)]</c> albo <c>[*]</c> z <see cref="PdfLineExtractor"/>.</summary>
         private static readonly Regex SuperscriptFootnoteStartPattern = new(
             @"^\[(?:\d+\)?|(?:[a-z]{1,2})?\)|\*+)\]", RegexOptions.Compiled);
@@ -221,7 +250,7 @@ namespace Saga.Core.Ingest.Pdf
 
                 // Łącznik nierozdzielający jak w DOCX (TextNormalizer.NonBreakingHyphen).
                 allLines.AddRange(PdfLineExtractor.ExtractLines(page)
-                    .Select(line => line with { Text = line.Text.Replace(TextNormalizer.NonBreakingHyphen, '-') }));
+                    .Select(line => line with { Text = WithoutDuplicatedMarks(line.Text.Replace(TextNormalizer.NonBreakingHyphen, '-')) }));
             }
 
             DetectScan(pageLetterCounts, totalChars, replacementChars);
@@ -345,20 +374,22 @@ namespace Saga.Core.Ingest.Pdf
             {
                 // Wiersze strony w porządku czytania (Y malejąco) — sufiks małego fontu od dołu strony.
                 var pageLines = pageGroup.OrderByDescending(l => l.BaselineY).ToList();
+                var noteLines = pageLines.Select(WithNoteNumber).ToList();
 
                 var continued = previousPageHadFootnotes;
                 var continuedMidSentence = previousFootnoteOpen;
-                var (zoneStart, hasZone) = FindFootnoteZone(pageLines, FootnoteSizeRatio * docDominantSize,
+                var (zoneStart, hasZone) = FindFootnoteZone(noteLines, FootnoteSizeRatio * docDominantSize,
                     line => FootnoteStartPattern.IsMatch(line.Text) || continued);
                 if (!hasZone)
-                    (zoneStart, hasZone) = FindFootnoteZone(pageLines, CloseFootnoteSizeRatio * docDominantSize,
+                    (zoneStart, hasZone) = FindFootnoteZone(noteLines, CloseFootnoteSizeRatio * docDominantSize,
                         line => SuperscriptFootnoteStartPattern.IsMatch(line.Text) || continuedMidSentence
-                            || IsReferencedOnPage(line, pageLines));
+                            || IsReferencedOnPage(line, noteLines));
 
+                // Wiersze strefy niosą oznaczenie w kanale indeksu górnego; treść strony — tak, jak ją złożono.
                 if (hasZone)
                 {
                     body.AddRange(pageLines.Take(zoneStart));
-                    footnotes.AddRange(pageLines.Skip(zoneStart));
+                    footnotes.AddRange(noteLines.Skip(zoneStart));
                 }
                 else
                 {
