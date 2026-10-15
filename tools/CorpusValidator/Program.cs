@@ -99,7 +99,7 @@ if (args.Length > 2 && args[0] == "--systematizing")
     return CorpusValidator.SystematizingUnitsReport.Run(args[1], args[2]);
 
 // Struktura jednostek z naszego eksportu zestawiona z plikiem referencyjnym autorów schematu
-// (akn4pl/przyklady/<akt>/schemaPL_no_ref.xml + źródłowy DOCX obok):
+// (legal-doc-schema/przyklady/<akt>/schemaPL.xml + źródłowy DOCX z korpusu):
 //   dotnet run --project tools/CorpusValidator -- --compare-reference <plik.docx> <referencja.xml> <katalog-wyjsciowy>
 if (args.Length > 3 && args[0] == "--compare-reference")
     return CorpusValidator.ReferenceStructureComparison.Run(args[1], args[2], args[3]);

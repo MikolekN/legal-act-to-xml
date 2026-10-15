@@ -8,7 +8,7 @@ namespace CorpusValidator;
 
 /// <summary>
 /// Zestawia strukturę jednostek z naszego eksportu schemaPL ze strukturą z pliku referencyjnego
-/// (przykłady autorów schematu: akn4pl/przyklady/*/schemaPL_no_ref.xml i źródłowy DOCX obok).
+/// (przykłady autorów schematu: legal-doc-schema/przyklady/*/schemaPL.xml i źródłowy DOCX z korpusu).
 ///
 /// Obie strony spłaszcza do listy jednostek w kolejności dokumentu — element, eId, nr, tytuł
 /// jednostki systematyzacyjnej, ścieżka jednostek nad nią, głębokość cytatu — i porównuje:

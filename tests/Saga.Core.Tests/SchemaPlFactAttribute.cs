@@ -5,8 +5,9 @@ namespace Saga.Core.Tests
 {
     /// <summary>
     /// [Fact] dla testu walidującego eksport wobec schemaPL.xsd. Schemat jest lokalny (katalog
-    /// <c>schema/</c> jest gitignorowany), więc gdy go nie ma albo się nie kompiluje, test jest
-    /// POMIJANY z powodem — jak <see cref="DocRepoFactAttribute"/>.
+    /// <c>schema/</c> jest gitignorowany — kopia <c>schemas/schemaPL</c> z repozytorium autorów schematu
+    /// <c>legal-doc-schema</c>), więc gdy go nie ma albo się nie kompiluje, test jest POMIJANY z powodem —
+    /// jak <see cref="DocRepoFactAttribute"/>.
     /// </summary>
     public sealed class SchemaPlFactAttribute : FactAttribute
     {
