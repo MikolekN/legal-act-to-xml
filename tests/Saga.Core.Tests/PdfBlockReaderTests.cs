@@ -332,6 +332,21 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SharedAttachmentLine_AndAnnexDesignations_AreSeparateBlocks()
+        {
+            var blocks = ReadPlaced(
+                ("§ 3. Rozporządzenie wchodzi w życie z dniem 20 stycznia 2026 r.", 72),
+                ("Załączniki do rozporządzenia Ministra Infrastruktury", 330),
+                ("z dnia 16 stycznia 2026 r. (Dz. U. poz. 56)", 330),
+                ("Załącznik nr 1", 420),
+                ("WZÓR", 280));
+
+            Assert.Equal(
+                ["Załączniki do rozporządzenia Ministra Infrastruktury z dnia 16 stycznia 2026 r. (Dz. U. poz. 56)", "Załącznik nr 1", "WZÓR"],
+                blocks.Skip(9).Select(b => b.Text));
+        }
+
+        [Fact]
         public void AttachmentWords_AtTheLeftMargin_StayInTheParagraph()
         {
             // Zdanie zaczynające się od „Załącznik do" w zawiniętym akapicie — przy marginesie to nie wiersz przyłączenia.
@@ -533,6 +548,23 @@ namespace Saga.Core.Tests
 
             var footnote = Assert.Single(blocks, b => b.Role == BlockRole.FootnoteText);
             Assert.Contains("ogłoszone w Dz. U. z 2023 r.", footnote.Text);
+        }
+
+        [Fact]
+        public void FootnoteNumberedInPlainText_ReferencedOnItsPage_BecomesFootnote()
+        {
+            // Odnośnik 0,9× treści z numerem bez indeksu górnego; treść strony ma odwołanie „[3)]".
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText("Art. 1. Laboratoria, o których mowa w rozporządzeniu 2017/625", 57, 700);
+            builder.AddText("3)", 400, 703.5, 6);
+            builder.AddText("3) Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2017/625.", 57, 90, 10);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks, b => b.Role == BlockRole.FootnoteText);
+            Assert.StartsWith("3) Rozporządzenie", footnote.Text);
+            Assert.Equal("3", Assert.Single(blocks.SelectMany(b => b.Footnotes)).Symbol);
         }
 
         [Fact]

@@ -117,7 +117,15 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>Wiersz przyłączenia: „Załącznik do obwieszczenia …", „Załącznik nr 2 do rozporządzenia …".</summary>
         private static readonly Regex AttachmentLinePattern = new(
-            @"^Załącznik(?:\s+nr\s+\S+)?\s+do\s+\p{L}", RegexOptions.Compiled);
+            @"^Załączniki?(?:\s+nr\s+\S+)?\s+do\s+\p{L}", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Oznaczenie załącznika w osobnym wierszu („Załącznik nr 1" nad treścią załącznika, gdy wiersz przyłączenia
+        /// wspólny dla kilku załączników stoi wyżej: „Załączniki do rozporządzenia …"). W DOCX to osobny akapit; w PDF
+        /// sklejał się z wierszem przyłączenia i z tytułem załącznika („… (Dz. U. poz. 56) Załącznik nr 1 WZÓR …").
+        /// </summary>
+        private static readonly Regex AnnexDesignationLinePattern = new(
+            @"^Załącznik\s+nr\s+\S+\s*$", RegexOptions.Compiled);
 
         /// <summary>
         /// Najmniejsze odsunięcie wiersza końcowego od lewego marginesu (1 cal). Skład Dziennika Ustaw stawia podpis
@@ -159,6 +167,10 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Przypis zakończony: ostatni wiersz strefy kończy zdanie — następna strona go nie kontynuuje.</summary>
         private static readonly Regex FootnoteEndPattern = new(
             @"[.;]\)?\s*$", RegexOptions.Compiled);
+
+        /// <summary>Początek przypisu oznaczeniem zapisanym zwykłym tekstem („3) …", „3)…").</summary>
+        private static readonly Regex PlainFootnoteStartPattern = new(
+            @"^(?<symbol>\d{1,3})\)", RegexOptions.Compiled);
 
         /// <summary>Początek przypisu znacznikiem w indeksie górnym — kanał <c>[N)]</c> albo <c>[*]</c> z <see cref="PdfLineExtractor"/>.</summary>
         private static readonly Regex SuperscriptFootnoteStartPattern = new(
@@ -325,7 +337,8 @@ namespace Saga.Core.Ingest.Pdf
                     line => FootnoteStartPattern.IsMatch(line.Text) || continued);
                 if (!hasZone)
                     (zoneStart, hasZone) = FindFootnoteZone(pageLines, CloseFootnoteSizeRatio * docDominantSize,
-                        line => SuperscriptFootnoteStartPattern.IsMatch(line.Text) || continuedMidSentence);
+                        line => SuperscriptFootnoteStartPattern.IsMatch(line.Text) || continuedMidSentence
+                            || IsReferencedOnPage(line, pageLines));
 
                 if (hasZone)
                 {
@@ -342,6 +355,21 @@ namespace Saga.Core.Ingest.Pdf
             }
 
             return (body, footnotes);
+        }
+
+        /// <summary>
+        /// Odnośnik z oznaczeniem bez indeksu górnego („3) Rozporządzenie …" — część składów tak numeruje odnośniki):
+        /// przyjęty, gdy treść tej samej strony ma odwołanie o tym oznaczeniu w indeksie górnym („…2017/625[3)]").
+        /// Samo „N)" mniejszym fontem to także wiersz tabeli; odwołanie na stronie jest drugim sygnałem.
+        /// </summary>
+        private static bool IsReferencedOnPage(PdfTextLine line, List<PdfTextLine> pageLines)
+        {
+            var start = PlainFootnoteStartPattern.Match(line.Text);
+            if (!start.Success)
+                return false;
+
+            var symbol = start.Groups["symbol"].Value;
+            return pageLines.Any(other => !ReferenceEquals(other, line) && PdfFootnotes.ReferencedSymbols(other.Text).Contains(symbol));
         }
 
         /// <summary>
@@ -475,8 +503,11 @@ namespace Saga.Core.Ingest.Pdf
             if (prev is not null && IsSignature(prev) && IsRightSide(prev, dominantLeft))
                 return true;
 
+            if (prev is not null && AnnexDesignationLinePattern.IsMatch(prev.Text) && IsRightSide(prev, dominantLeft))
+                return true;
+
             return IsRightSide(line, dominantLeft)
-                && (IsSignature(line) || AttachmentLinePattern.IsMatch(line.Text));
+                && (IsSignature(line) || AttachmentLinePattern.IsMatch(line.Text) || AnnexDesignationLinePattern.IsMatch(line.Text));
         }
 
         // Tekst wiersza jak w parserze (Sanitize) — PDF przynosi twarde spacje (U+00A0) w nazwie organu.

@@ -92,6 +92,10 @@ namespace Saga.Core.Ingest.Pdf
             return result;
         }
 
+        /// <summary>Oznaczenia odnośników, do których tekst odwołuje się znacznikiem w indeksie górnym („[1), 2)]" → 1, 2).</summary>
+        internal static IEnumerable<string> ReferencedSymbols(string text) =>
+            Superscript.Matches(text).SelectMany(superscript => Item.Matches(superscript.Value).Select(item => item.Groups["symbol"].Value));
+
         /// <summary>Numery znaczników kolejnych odnośników: ciąg numeracji zmienia się, gdy oznaczenia zaczynają się od nowa.</summary>
         private sealed class Numbering
         {

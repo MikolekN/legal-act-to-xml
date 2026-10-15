@@ -983,6 +983,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 96,44 % → 96,94 % (ustawy 95,55 % → 99,48 %, TJ
     96,45 % → 96,73 %, rozporządzenia 97,11 % → 97,29 %); treść zgodna ze schematem 2143 → 2148, dokumenty zgodne
     w całości 1705 → 1710.
+- **Odnośniki numerowane zwykłym tekstem i nagłówki załączników w PDF**: odnośnik, którego oznaczenie nie stoi
+  w indeksie górnym („3)Rozporządzenie …"), otwiera strefę przypisów, gdy treść tej samej strony ma odwołanie
+  „[3)]" (`PdfBlockReader`). Wiersz przyłączenia wspólny dla kilku załączników („Załączniki do rozporządzenia …")
+  i oznaczenie załącznika w osobnym wierszu („Załącznik nr 1") są osobnymi blokami, jak akapity DOCX — dotąd sklejały
+  się z tytułami załączników, a akt bez winiety tracił miejsce ogłoszenia z wiersza przyłączenia.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): słowa odnośników 41,82 % → 45,80 % (rozporządzenia
+    69,89 % → 79,49 %), słowa w treści ponad DOCX 0,67 % → 0,50 %; dane ogłoszenia zgodne z DOCX w 2083 dokumentach
+    (było 2051), metadane zgodne w całości 324 (było 294); dokumenty z identyczną strukturą 1293 → 1330.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
