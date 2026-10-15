@@ -1003,6 +1003,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   daje odnośnik niemal każdej zmienionej jednostce, więc oznaczenie przestawało być rozpoznawalne co krok.
   - Korpus w TXT (`--format-parity`, 2151 dokumentów): jednostki 97,73 % → 99,38 % (TJ 97,66 % → 99,52 %), dokumenty
     z identyczną strukturą 1328 → 1554. DOCX i PDF bez zmian.
+- **Ręczne przejście do nowego wiersza w TXT**: wiersz przepisu (artykuł, paragraf, ustęp) urwany bez znaku końcowego
+  albo wyraz przerwany dywizem („szcze-" / „gółowego …") łączy się z następnym wierszem od małej litery w jeden akapit,
+  jak w DOCX, gdzie ręczne przejście do nowego wiersza jest odstępem (`PlainTextLineBreaks`). Wiersz za pozycją
+  wyliczenia zostaje osobny — akapit małą literą bywa tam częścią wspólną bez myślnika (ADR-0046). Wcześniej komenda
+  nowelizacji rozbita na dwa wiersze przestawała być komendą, a akt zmieniany tracił adres.
+  - Korpus w TXT (`--format-parity`, 2151 dokumentów): jednostki 99,38 % → 99,43 % (rozporządzenia 97,78 % → 98,58 %),
+    dokumenty z identyczną strukturą 1554 → 1628; żaden dokument nie traci. DOCX i PDF bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
