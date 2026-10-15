@@ -912,6 +912,17 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 89,98 % → 91,66 % (TJ 89,85 % → 91,75 %); słowa
     treści 99,32 % → 99,81 %; treść zgodna ze schematem 1772 → 2143 (DOCX: 2151), dokumenty zgodne w całości
     1339 → 1696 (DOCX: 1826); podpis zgodny z DOCX w 1785 dokumentach (było 518), dane ogłoszenia w 2024 (było 1828).
+- **Odnośniki w PDF składu Dziennika Ustaw**: strefa przypisów pisana fontem bliskim treści (odnośnik 9 pt przy
+  treści 10 pt) jest rozpoznawana, gdy zaczyna się znacznikiem w indeksie górnym; na następnej stronie trwa tylko
+  wtedy, gdy przypis urwał się w pół zdania (`PdfBlockReader`). Dotąd przypisy rozpoznawał wyłącznie font co
+  najwyżej 0,85× treści, więc w PDF z Dziennika Ustaw tekst odnośnika wpadał do treści — także w środek przepisu
+  przeciętego stroną.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): słowa w treści ponad tekst DOCX 4,30 % → 3,00 %
+    (rozporządzenia 7,76 % → 1,55 %, ustawy 3,97 % → 0,31 %, obwieszczenia bez aktu 13,68 % → 0,74 %); słowa treści
+    DOCX obecne w wyniku 99,81 % → 99,79 % — przypisy pod tabelami załączników („1) Pułap stężenia …"), które DOCX
+    ma w treści, trafiają teraz do strefy przypisów. Dokumenty zgodne ze schematem w całości 1696 → 1705.
+- **Miara zgodności formatów liczy słowa nadmiarowe**: obok słów treści DOCX obecnych w wyniku — słowa treści wyniku
+  ponad tekst DOCX (np. odnośnik w środku przepisu), których sama miara pokrycia nie widzi.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

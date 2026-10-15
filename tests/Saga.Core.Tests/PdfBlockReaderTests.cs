@@ -373,6 +373,71 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void FootnoteZone_FontCloseToTheBody_WithSuperscriptMarker_BecomesFootnote()
+        {
+            // Skład Dziennika Ustaw: odnośnik 0,9× treści, znacznik w indeksie górnym.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("1)", 57, 93.5, 6);
+            builder.AddText("Niniejszą ustawą zmienia się ustawy wymienione w wykazie.", 66, 90, 10);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks, b => b.Role == BlockRole.FootnoteText);
+            Assert.StartsWith("[1)]", footnote.Text);
+            Assert.DoesNotContain(blocks, b => b.Role == BlockRole.Body && b.Text.Contains("Niniejszą ustawą"));
+        }
+
+        [Fact]
+        public void PageSetCloseToTheBodySize_AfterAFinishedFootnote_StaysBody()
+        {
+            // Strona załącznika złożona w całości fontem 0,9× (tabela) po stronie z zakończonym odnośnikiem.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("1)", 57, 93.5, 6);
+            builder.AddText("Niniejszą ustawą zmienia się ustawy wymienione w wykazie.", 66, 90, 10);
+            builder.AddPage();
+            for (int i = 0; i < 6; i++)
+                builder.AddText($"Pozycja {i + 1} wykazu miast w tabeli załącznika", 57, 700 - i * 14, 10);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Single(blocks, b => b.Role == BlockRole.FootnoteText);
+            Assert.Contains(blocks, b => b.Role == BlockRole.Body && b.Text.Contains("Pozycja 6 wykazu"));
+        }
+
+        [Fact]
+        public void FootnoteCloseToTheBodySize_CutMidSentence_ContinuesOnTheNextPage()
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("1)", 57, 93.5, 6);
+            builder.AddText("Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone", 66, 90, 10);
+            builder.AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("w Dz. U. z 2023 r. poz. 100 oraz z 2024 r. poz. 5.", 66, 90, 10);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks, b => b.Role == BlockRole.FootnoteText);
+            Assert.Contains("ogłoszone w Dz. U. z 2023 r.", footnote.Text);
+        }
+
+        [Fact]
+        public void FontCloseToTheBody_WithoutSuperscriptMarker_StaysBody()
+        {
+            // „N)" bez indeksu górnego, niewiele mniejszym fontem — wiersz tabeli albo wyliczenia, nie przypis.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("1) wiersz tabeli załącznika pisany mniejszym fontem;", 57, 90, 10);
+
+            var blocks = Read(builder.Build());
+
+            Assert.DoesNotContain(blocks, b => b.Role == BlockRole.FootnoteText);
+            Assert.Contains(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("1) wiersz tabeli"));
+        }
+
+        [Fact]
         public void FootnoteContinuedOnNextPage_StaysInFootnoteZone()
         {
             // Odnośnik wykazu zmian TJ regularnie zajmuje 2+ stron; kontynuacja zaczyna się

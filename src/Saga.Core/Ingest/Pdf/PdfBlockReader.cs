@@ -33,6 +33,13 @@ namespace Saga.Core.Ingest.Pdf
         private const double MaxEmptyPageRatio = 0.5;
         private const double MaxReplacementCharRatio = 0.05;
         private const double FootnoteSizeRatio = 0.85;
+
+        /// <summary>
+        /// Font przypisu bliski treści: skład Dziennika Ustaw pisze odnośniki 9 pt przy treści 10 pt (0,9×). Taką strefę
+        /// przyjmujemy tylko, gdy zaczyna się znacznikiem w indeksie górnym — samo „N)" mniejszym fontem bywa wierszem
+        /// tabeli załącznika.
+        /// </summary>
+        private const double CloseFootnoteSizeRatio = 0.95;
         private const double ParagraphGapRatio = 1.9;
         private const double PointsToTwips = 20.0;
 
@@ -132,6 +139,14 @@ namespace Saga.Core.Ingest.Pdf
         /// (bez niego goła liczba „2023 r. …" na początku zawiniętej kontynuacji rozcinałaby przypis).</summary>
         private static readonly Regex FootnoteStartPattern = new(
             @"^(?:\[?\d+\)\]?\s|\*+\s?)", RegexOptions.Compiled);
+
+        /// <summary>Przypis zakończony: ostatni wiersz strefy kończy zdanie — następna strona go nie kontynuuje.</summary>
+        private static readonly Regex FootnoteEndPattern = new(
+            @"[.;]\)?\s*$", RegexOptions.Compiled);
+
+        /// <summary>Początek przypisu znacznikiem w indeksie górnym — kanał <c>[N)]</c> albo <c>[*]</c> z <see cref="PdfLineExtractor"/>.</summary>
+        private static readonly Regex SuperscriptFootnoteStartPattern = new(
+            @"^\[(?:\d+\)?|\*+)\]", RegexOptions.Compiled);
 
         public SourceFormat Format => SourceFormat.Pdf;
 
@@ -265,7 +280,11 @@ namespace Saga.Core.Ingest.Pdf
         /// mniejszym fontem (≤ 0,85× dominanty dokumentu), którego pierwszy wiersz wygląda jak
         /// początek przypisu („N)") ALBO który kontynuuje przypis z poprzedniej strony (odnośnik
         /// wykazu zmian TJ regularnie zajmuje 2+ stron, a jego kontynuacja zaczyna się środkiem
-        /// zdania). Przypisy wracają osobną listą (emisja na końcu dokumentu).
+        /// zdania). Gdy takiej strefy nie ma, druga próba przyjmuje font bliski treści
+        /// (≤ <see cref="CloseFootnoteSizeRatio"/>), ale tylko ze znacznikiem w indeksie górnym albo jako kontynuację
+        /// przypisu, który na poprzedniej stronie urwał się w pół zdania — strona załącznika złożona w całości takim
+        /// fontem (tabela) nie jest kontynuacją przypisu, który się skończył.
+        /// Przypisy wracają osobną listą (emisja na końcu dokumentu).
         /// </summary>
         private static (List<PdfTextLine> Body, List<PdfTextLine> Footnotes) SplitFootnoteZone(
             List<PdfTextLine> lines, double docDominantSize)
@@ -273,18 +292,20 @@ namespace Saga.Core.Ingest.Pdf
             var body = new List<PdfTextLine>();
             var footnotes = new List<PdfTextLine>();
             bool previousPageHadFootnotes = false;
+            bool previousFootnoteOpen = false;
 
             foreach (var pageGroup in lines.GroupBy(l => l.PageNumber).OrderBy(g => g.Key))
             {
                 // Wiersze strony w porządku czytania (Y malejąco) — sufiks małego fontu od dołu strony.
                 var pageLines = pageGroup.OrderByDescending(l => l.BaselineY).ToList();
 
-                int zoneStart = pageLines.Count;
-                while (zoneStart > 0 && pageLines[zoneStart - 1].DominantSize <= FootnoteSizeRatio * docDominantSize)
-                    zoneStart--;
-
-                bool hasZone = zoneStart < pageLines.Count
-                    && (FootnoteStartPattern.IsMatch(pageLines[zoneStart].Text) || previousPageHadFootnotes);
+                var continued = previousPageHadFootnotes;
+                var continuedMidSentence = previousFootnoteOpen;
+                var (zoneStart, hasZone) = FindFootnoteZone(pageLines, FootnoteSizeRatio * docDominantSize,
+                    line => FootnoteStartPattern.IsMatch(line.Text) || continued);
+                if (!hasZone)
+                    (zoneStart, hasZone) = FindFootnoteZone(pageLines, CloseFootnoteSizeRatio * docDominantSize,
+                        line => SuperscriptFootnoteStartPattern.IsMatch(line.Text) || continuedMidSentence);
 
                 if (hasZone)
                 {
@@ -297,9 +318,24 @@ namespace Saga.Core.Ingest.Pdf
                 }
 
                 previousPageHadFootnotes = hasZone;
+                previousFootnoteOpen = hasZone && !FootnoteEndPattern.IsMatch(pageLines[^1].Text);
             }
 
             return (body, footnotes);
+        }
+
+        /// <summary>
+        /// Strefa przypisów strony: najdłuższy sufiks wierszy o foncie nie większym niż <paramref name="maxSize"/>,
+        /// przyjęty, gdy jego pierwszy wiersz spełnia <paramref name="opens"/>.
+        /// </summary>
+        private static (int Start, bool Found) FindFootnoteZone(
+            List<PdfTextLine> pageLines, double maxSize, Func<PdfTextLine, bool> opens)
+        {
+            int start = pageLines.Count;
+            while (start > 0 && pageLines[start - 1].DominantSize <= maxSize)
+                start--;
+
+            return start < pageLines.Count && opens(pageLines[start]) ? (start, true) : (pageLines.Count, false);
         }
 
         /// <summary>

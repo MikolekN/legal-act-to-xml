@@ -51,7 +51,7 @@ internal static class FormatParityReport
         public int Documents, Failed, Identical, MetadataIdentical;
         public int SchemaChecked, SchemaValid, ReferenceSchemaValid, BodyValid, ReferenceBodyValid;
         public long Units, Matched, TextOnlyUnits, MatchedTextOnly;
-        public long Words, WordsFound, FootnoteWords, FootnoteWordsFound;
+        public long Words, WordsFound, WordsExtra, FootnoteWords, FootnoteWordsFound;
         public readonly Dictionary<string, int> MissingByElement = new(StringComparer.Ordinal);
         public readonly Dictionary<string, int> ExtraByElement = new(StringComparer.Ordinal);
         public readonly Dictionary<string, int> MetadataMismatch = new(StringComparer.Ordinal);
@@ -61,7 +61,7 @@ internal static class FormatParityReport
     private sealed record Result(
         string File, string Format, string Kind, int Units, int TextOnlyUnits,
         List<string> Missing, List<string> Extra, int MatchedTextOnly,
-        long Words, long WordsFound, long FootnoteWords, long FootnoteWordsFound,
+        long Words, long WordsFound, long WordsExtra, long FootnoteWords, long FootnoteWordsFound,
         List<string> MetadataMismatch, Validity? Schema, Validity? ReferenceSchema, string? Error);
 
     /// <summary>Zgodność ze schematem całego dokumentu i samej treści aktu.</summary>
@@ -186,13 +186,13 @@ internal static class FormatParityReport
 
         return new Result(file, format, kind, reference.Count, textOnlyKeys.Count, missing, extra,
             textOnlyKeys.Count - missingFromTextOnly.Count,
-            words.Values.Sum(), Found(words, convertedWords),
+            words.Values.Sum(), Found(words, convertedWords), Found(convertedWords, words, excess: true),
             footnoteWords.Values.Sum(), Found(footnoteWords, convertedFootnoteWords),
             MetadataMismatch(styled, converted),
             Validate(validator, converted), referenceValid, Error: null);
 
         Result Failed(string error) => new(file, format, kind, reference.Count, 0, [], [], 0,
-            words.Values.Sum(), 0, footnoteWords.Values.Sum(), 0, [], null, referenceValid, error);
+            words.Values.Sum(), 0, 0, footnoteWords.Values.Sum(), 0, [], null, referenceValid, error);
     }
 
     private static readonly ParseOptions Options = new() { Policy = ParsePolicy.AlwaysParse };
@@ -268,8 +268,15 @@ internal static class FormatParityReport
         return (body, footnotes);
     }
 
-    private static long Found(Dictionary<string, int> reference, Dictionary<string, int> actual) =>
-        reference.Sum(w => (long)Math.Min(w.Value, actual.GetValueOrDefault(w.Key)));
+    /// <summary>
+    /// Słowa <paramref name="reference"/> obecne w <paramref name="actual"/> (z krotnością) — albo, z
+    /// <paramref name="excess"/>, nadwyżka: słowa <paramref name="reference"/> ponad to, co ma <paramref name="actual"/>.
+    /// Nadwyżka treści wyniku wobec treści DOCX mierzy tekst, który do treści nie należy (np. odnośnik w środku przepisu).
+    /// </summary>
+    private static long Found(Dictionary<string, int> reference, Dictionary<string, int> actual, bool excess = false) =>
+        reference.Sum(w => excess
+            ? (long)Math.Max(0, w.Value - actual.GetValueOrDefault(w.Key))
+            : (long)Math.Min(w.Value, actual.GetValueOrDefault(w.Key)));
 
     /// <summary>
     /// Pola metadanych z różną wartością: liście <c>metadane</c> (nazwa → wartości w kolejności dokumentu)
@@ -334,6 +341,7 @@ internal static class FormatParityReport
         tally.TextOnlyUnits += r.TextOnlyUnits;
         tally.MatchedTextOnly += r.MatchedTextOnly;
         tally.WordsFound += r.WordsFound;
+        tally.WordsExtra += r.WordsExtra;
         tally.FootnoteWordsFound += r.FootnoteWordsFound;
         if (r.Missing.Count == 0 && r.Extra.Count == 0)
             tally.Identical++;
@@ -364,11 +372,11 @@ internal static class FormatParityReport
     {
         using var writer = new StreamWriter(path, append: false, Encoding.UTF8);
         writer.WriteLine("plik\tformat\trodzaj\tjednostek\tbrak\tnadmiar\tzgodnych_z_samym_tekstem\tjednostek_samego_tekstu"
-            + "\tslowa\tslowa_znalezione\tslowa_odnosnikow\tslowa_odnosnikow_znalezione\tmetadane_rozne"
+            + "\tslowa\tslowa_znalezione\tslowa_nadmiarowe\tslowa_odnosnikow\tslowa_odnosnikow_znalezione\tmetadane_rozne"
             + "\tschemat\tschemat_docx\ttresc_wg_schematu\ttresc_wg_schematu_docx\tblad");
         foreach (var r in results)
             writer.WriteLine($"{r.File}\t{r.Format}\t{r.Kind}\t{r.Units}\t{r.Missing.Count}\t{r.Extra.Count}\t{r.MatchedTextOnly}\t{r.TextOnlyUnits}"
-                + $"\t{r.Words}\t{r.WordsFound}\t{r.FootnoteWords}\t{r.FootnoteWordsFound}\t{string.Join(",", r.MetadataMismatch)}"
+                + $"\t{r.Words}\t{r.WordsFound}\t{r.WordsExtra}\t{r.FootnoteWords}\t{r.FootnoteWordsFound}\t{string.Join(",", r.MetadataMismatch)}"
                 + $"\t{Flag(r.Schema?.Document)}\t{Flag(r.ReferenceSchema?.Document)}\t{Flag(r.Schema?.Body)}\t{Flag(r.ReferenceSchema?.Body)}\t{r.Error}");
 
         static string Flag(bool? value) => value switch { true => "tak", false => "nie", null => "" };
@@ -390,6 +398,7 @@ internal static class FormatParityReport
         W($"Pliki przekonwertowane: {convertedRoot}");
         W("Odniesieniem jest eksport DOCX ze stylami. „Sam tekst DOCX\": bloki DOCX bez stylu, układu i tabel —");
         W("struktura z samej treści przy idealnym podziale na akapity; różnica wobec niego to strata adaptera formatu.");
+        W("Słowa treści: ile słów treści DOCX ma wynik; nadmiar słów: ile słów treści wyniku ponad DOCX (wobec liczby słów DOCX).");
         W("Schemat: zgodnych / sprawdzonych (w nawiasie: zgodnych eksportów DOCX tych samych aktów).");
         if (schemaSkipReason is not null)
             W($"Walidacja schematu pominięta: {schemaSkipReason}");
@@ -399,7 +408,7 @@ internal static class FormatParityReport
             var all = new Tally();
             W();
             W($"--- {format.ToUpperInvariant()} ---");
-            W($"{"Rodzaj",-10} {"dok.",5} {"błąd",5} {"jednostek",9} {"zgodnych",9} {"w pełni",8} {"wobec samego tekstu",20} {"słowa treści",13} {"słowa odnośn.",13} {"metadane",9} {"schemat",16} {"treść wg schematu",18}");
+            W($"{"Rodzaj",-10} {"dok.",5} {"błąd",5} {"jednostek",9} {"zgodnych",9} {"w pełni",8} {"wobec samego tekstu",20} {"słowa treści",13} {"nadmiar słów",13} {"słowa odnośn.",13} {"metadane",9} {"schemat",16} {"treść wg schematu",18}");
             foreach (var (kind, t) in kinds)
             {
                 W(Line(kind, t));
@@ -424,7 +433,7 @@ internal static class FormatParityReport
 
         string Line(string kind, Tally t) =>
             $"{kind,-10} {t.Documents,5} {t.Failed,5} {t.Units,9} {Percent(t.Matched, t.Units),9} {t.Identical,8} {Percent(t.MatchedTextOnly, t.TextOnlyUnits),20}"
-            + $" {Percent(t.WordsFound, t.Words),13} {Percent(t.FootnoteWordsFound, t.FootnoteWords),13} {t.MetadataIdentical,9}"
+            + $" {Percent(t.WordsFound, t.Words),13} {Percent(t.WordsExtra, t.Words),13} {Percent(t.FootnoteWordsFound, t.FootnoteWords),13} {t.MetadataIdentical,9}"
             + $" {(t.SchemaChecked == 0 ? "—" : $"{t.SchemaValid}/{t.SchemaChecked} ({t.ReferenceSchemaValid})"),16}"
             + $" {(t.SchemaChecked == 0 ? "—" : $"{t.BodyValid}/{t.SchemaChecked} ({t.ReferenceBodyValid})"),18}";
     }
@@ -446,6 +455,7 @@ internal static class FormatParityReport
         into.MatchedTextOnly += from.MatchedTextOnly;
         into.Words += from.Words;
         into.WordsFound += from.WordsFound;
+        into.WordsExtra += from.WordsExtra;
         into.FootnoteWords += from.FootnoteWords;
         into.FootnoteWordsFound += from.FootnoteWordsFound;
         foreach (var (target, source) in new[]
