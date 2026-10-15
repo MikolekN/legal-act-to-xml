@@ -923,6 +923,12 @@ a wersjonowanie zgodne z Semantic Versioning.
     ma w treści, trafiają teraz do strefy przypisów. Dokumenty zgodne ze schematem w całości 1696 → 1705.
 - **Miara zgodności formatów liczy słowa nadmiarowe**: obok słów treści DOCX obecnych w wyniku — słowa treści wyniku
   ponad tekst DOCX (np. odnośnik w środku przepisu), których sama miara pokrycia nie widzi.
+- **Podpis w PDF rozpoznaje formuła parsera**: wiersz podpisu odsunięty w prawo jest osobnym blokiem, gdy pasuje do
+  `ActSignatureParser` — tej samej formuły, którą parser czyta podpis (także „wz." i „z up."), na tekście
+  oczyszczonym jak w parserze (twarde spacje w nazwie organu). Własny wzorzec adaptera pomijał „wz." i twarde spacje,
+  więc podpis zostawał doklejony do ostatniego przepisu.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): podpis zgodny z DOCX w 2128 dokumentach (było 1757);
+    metadane zgodne w całości 294 (było 186).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

@@ -2,6 +2,8 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using Saga.Core.Exceptions;
+using Saga.Core.Helpers;
+using Saga.Core.Services.Parsing;
 using UglyToad.PdfPig;
 
 namespace Saga.Core.Ingest.Pdf
@@ -109,13 +111,6 @@ namespace Saga.Core.Ingest.Pdf
             /// <summary>Blok przedmiotu aktu — za datą.</summary>
             Subject,
         }
-
-        /// <summary>
-        /// Podpis aktu: „Minister Finansów: A. Domański", „Prezydent Rzeczypospolitej Polskiej: K. Nawrocki",
-        /// „Minister Infrastruktury: w z. P. Kowalski" — cały wiersz.
-        /// </summary>
-        private static readonly Regex SignatureLinePattern = new(
-            @"^\p{Lu}[\p{L}\s,\-–]{2,120}:\s+(?:w\s+z\.\s+)?(?:\p{Lu}\.\s*){1,3}\p{Lu}[\p{L}\-–]+\s*$", RegexOptions.Compiled);
 
         /// <summary>Wiersz przyłączenia: „Załącznik do obwieszczenia …", „Załącznik nr 2 do rozporządzenia …".</summary>
         private static readonly Regex AttachmentLinePattern = new(
@@ -444,16 +439,20 @@ namespace Saga.Core.Ingest.Pdf
         /// Granica wierszy końcowych aktu: podpis i wiersz przyłączenia („Załącznik do …") stoją po prawej stronie
         /// i są osobnymi akapitami — bez granicy doklejały się do ostatniego przepisu (podpis), a akt ogłaszany
         /// w załączniku do obwieszczenia nie miał wiersza, który go otwiera. Wymagane oba sygnały: treść i położenie.
-        /// Za podpisem zaczyna się nowy blok.
+        /// Podpis rozpoznaje ta sama formuła co parser (<see cref="ActSignatureParser"/>, także „wz." i „z up.") —
+        /// blok, którego parser nie uzna za podpis, nic by nie dał. Za podpisem zaczyna się nowy blok.
         /// </summary>
         private static bool IsClosingLineBoundary(PdfTextLine line, PdfTextLine? prev, double dominantLeft)
         {
-            if (prev is not null && SignatureLinePattern.IsMatch(prev.Text) && IsRightSide(prev, dominantLeft))
+            if (prev is not null && IsSignature(prev) && IsRightSide(prev, dominantLeft))
                 return true;
 
             return IsRightSide(line, dominantLeft)
-                && (SignatureLinePattern.IsMatch(line.Text) || AttachmentLinePattern.IsMatch(line.Text));
+                && (IsSignature(line) || AttachmentLinePattern.IsMatch(line.Text));
         }
+
+        // Tekst wiersza jak w parserze (Sanitize) — PDF przynosi twarde spacje (U+00A0) w nazwie organu.
+        private static bool IsSignature(PdfTextLine line) => ActSignatureParser.TryParse(line.Text.Sanitize()) is not null;
 
         private static bool IsRightSide(PdfTextLine line, double dominantLeft) =>
             line.StartX - dominantLeft >= ClosingLineMinIndentPoints;

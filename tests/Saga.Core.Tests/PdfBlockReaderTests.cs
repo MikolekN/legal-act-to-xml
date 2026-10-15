@@ -286,6 +286,19 @@ namespace Saga.Core.Tests
             Assert.Equal("Minister Finansów: A. Domański", blocks[^1].Text);
         }
 
+        [Theory]
+        [InlineData("Minister Spraw Wewnętrznych i Administracji: wz. C. Mroczek")]
+        [InlineData("Minister Obrony Narodowej: z up. P. Bejda")]
+        [InlineData("Marszałek Sejmu: Sz. Hołownia")]
+        public void Signature_InEveryFormOfTheParser_IsItsOwnBlock(string signature)
+        {
+            var blocks = ReadPlaced(
+                ("§ 2. Rozporządzenie wchodzi w życie z dniem 1 sierpnia 2025 r.", 72),
+                (signature, 340));
+
+            Assert.Equal(signature, blocks[^1].Text);
+        }
+
         [Fact]
         public void AttachmentLine_RightAligned_OpensTheActAfterTheSignature()
         {
