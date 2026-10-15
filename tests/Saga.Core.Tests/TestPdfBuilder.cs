@@ -14,7 +14,11 @@ namespace Saga.Core.Tests
     {
         internal sealed record TextRun(string Text, double X, double Y, double Size);
 
+        /// <summary>Odcinek rysowany kreską — obramowanie tabeli.</summary>
+        internal sealed record Rule(double X1, double Y1, double X2, double Y2);
+
         private readonly List<List<TextRun>> _pages = new();
+        private readonly List<List<Rule>> _rules = new();
         private readonly Dictionary<char, (byte Code, string GlyphName)> _mapped = new();
         private byte _nextCode = 0x80;
 
@@ -34,6 +38,26 @@ namespace Saga.Core.Tests
         public TestPdfBuilder AddPage()
         {
             _pages.Add(new List<TextRun>());
+            _rules.Add(new List<Rule>());
+            return this;
+        }
+
+        /// <summary>Rysuje odcinek na OSTATNIEJ stronie (obramowanie tabeli). Współrzędne w punktach; Y rośnie do góry.</summary>
+        public TestPdfBuilder AddLine(double x1, double y1, double x2, double y2)
+        {
+            if (_pages.Count == 0)
+                AddPage();
+            _rules[^1].Add(new Rule(x1, y1, x2, y2));
+            return this;
+        }
+
+        /// <summary>Siatka tabeli: linie poziome na podanych Y i pionowe na podanych X, każda przez całą tabelę.</summary>
+        public TestPdfBuilder AddGrid(double[] rows, double[] columns)
+        {
+            foreach (var y in rows)
+                AddLine(columns[0], y, columns[^1], y);
+            foreach (var x in columns)
+                AddLine(x, rows[0], x, rows[^1]);
             return this;
         }
 
@@ -73,7 +97,7 @@ namespace Saga.Core.Tests
                 objects.Add($"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {Pt(PageWidth)} {Pt(PageHeight)}] " +
                     $"/Resources << /Font << /F1 3 0 R >> >> /Contents {contentObj} 0 R >>");
 
-                var content = BuildContentStream(_pages[i]);
+                var content = BuildRules(_rules[i]) + BuildContentStream(_pages[i]);
                 objects.Add($"<< /Length {content.Length} >>\nstream\n{content}\nendstream");
             }
 
@@ -120,6 +144,14 @@ namespace Saga.Core.Tests
                 sb.Append(") Tj ET\n");
             }
             return sb.ToString().TrimEnd('\n');
+        }
+
+        private static string BuildRules(List<Rule> rules)
+        {
+            var sb = new StringBuilder();
+            foreach (var rule in rules)
+                sb.Append(CultureInfo.InvariantCulture, $"0.5 w {Pt(rule.X1)} {Pt(rule.Y1)} m {Pt(rule.X2)} {Pt(rule.Y2)} l S\n");
+            return sb.ToString();
         }
 
         private static string Pt(double v) => v.ToString("0.###", CultureInfo.InvariantCulture);

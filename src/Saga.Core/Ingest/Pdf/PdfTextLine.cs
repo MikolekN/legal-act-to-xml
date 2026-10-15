@@ -30,5 +30,11 @@ namespace Saga.Core.Ingest.Pdf
         /// wiersz tabeli ma między kolumnami odstęp wielokrotnie większy niż między wyrazami.
         /// </summary>
         public double MaxGap { get; init; }
+
+        /// <summary>
+        /// Wiersz zastępczy tabeli z obramowaniem: stoi w miejscu tabeli na stronie (góra siatki), a komórki niosą
+        /// własne wiersze. Null dla wiersza tekstu.
+        /// </summary>
+        public PdfTable? Table { get; init; }
     }
 }

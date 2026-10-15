@@ -317,7 +317,8 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 | `IsEmpty` | `true` gdy `Text` jest pusty/białe znaki |
 
 `PdfBlockReader` (PdfPig) składa bloki z geometrii linii tekstu (`PdfLineExtractor`, `BlockAssembler`,
-`PageArtifactFilter`) — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
+`PageArtifactFilter`), a tabele z obramowaniem — z siatki odcinków rysowanych na stronie (`PdfTables`): akapit
+komórki jest blokiem z `TableCell`, jak w DOCX — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
 warstwie syntaktycznej (regex) i układzie (wcięcia). Odnośniki ze strefy przypisów wiąże ze znacznikami treści `PdfFootnotes`
 (oznaczenie i strona odwołania) — blok niesie `Footnotes` i znacznik o numerze jednoznacznym, jak w DOCX; akapity
 odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnika.
@@ -989,6 +990,7 @@ src/Saga.Core/
 │   └── Pdf/
 │       ├── PdfBlockReader.cs        # Adapter PDF (PdfPig) — warstwa tekstowa
 │       ├── PdfLineExtractor.cs      # Ekstrakcja linii z geometrii PDF
+│       ├── PdfTables.cs             # Tabele z obramowania (siatka odcinków, scalenia komórek)
 │       ├── PdfTextLine.cs           # Linia tekstu PDF z pozycją
 │       └── PageArtifactFilter.cs    # Filtrowanie artefaktów strony (nagłówki/stopki/numery stron)
 └── Services/

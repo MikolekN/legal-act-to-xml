@@ -21,9 +21,11 @@ namespace Saga.Core.Ingest.Pdf
         // międzywyrazowe 0,20-0,25 em przy wyjustowaniu; kerning międzyliterowy nie zbliża się do 0,2 em.
         private const double SpaceGapRatio = 0.2;
 
-        public static List<PdfTextLine> ExtractLines(Page page)
+        public static List<PdfTextLine> ExtractLines(Page page) => ExtractLines(page, page.Letters);
+
+        /// <summary>Wiersze z wybranych liter strony — tekst poza tabelami albo tekst jednej komórki.</summary>
+        public static List<PdfTextLine> ExtractLines(Page page, IReadOnlyList<Letter> letters)
         {
-            var letters = page.Letters;
             if (letters.Count == 0)
                 return new List<PdfTextLine>();
 
@@ -68,11 +70,12 @@ namespace Saga.Core.Ingest.Pdf
 
         private static PdfTextLine BuildLine(List<Letter> cluster, Page page)
         {
-            // Baza wiersza = dominanta Y; remis rozstrzyga NIŻSZE Y (superscript ma bazę podniesioną —
-            // wybór wyższej przy remisie zerowałby test podniesienia i gubił kanał [x]).
-            var baselineY = Mode(cluster.Select(l => Math.Round(l.StartBaseLine.Y, 1)), preferHigher: false);
-            // Rozmiar: remis rozstrzyga WIĘKSZY (tekst podstawowy > superscript).
-            var dominantSize = Mode(cluster.Select(l => Math.Round(l.PointSize, 1)), preferHigher: true);
+            // Rozmiar tekstu podstawowego i jego baza (dominanta Y liter tego rozmiaru; remis — NIŻSZE Y, bo superscript
+            // ma bazę podniesioną).
+            var dominantSize = BaseSize(cluster);
+            var baselineY = Mode(
+                cluster.Where(l => Math.Round(l.PointSize, 1) == dominantSize).Select(l => Math.Round(l.StartBaseLine.Y, 1)),
+                preferHigher: false);
 
             var ordered = cluster.OrderBy(l => l.StartBaseLine.X).ToList();
             var sb = new StringBuilder();
@@ -151,6 +154,18 @@ namespace Saga.Core.Ingest.Pdf
         }
 
         /// <summary>Dominanta (moda) wartości; kierunek rozstrzygania remisów podaje wywołujący.</summary>
+        /// <summary>
+        /// Rozmiar tekstu podstawowego wiersza: największy rozmiar, którym złożono co najmniej ćwierć liter. W krótkim
+        /// wierszu (komórka tabeli „2" z odwołaniem „0)" w indeksie górnym) liter indeksu bywa więcej niż liter tekstu —
+        /// dominanta brałaby rozmiar indeksu za podstawowy i gubiła kanał [x]; w zwykłym wierszu to ten sam rozmiar co dominanta.
+        /// </summary>
+        private static double BaseSize(List<Letter> cluster)
+        {
+            var sizes = cluster.GroupBy(l => Math.Round(l.PointSize, 1)).ToList();
+            var threshold = cluster.Count / 4.0;
+            return sizes.Where(size => size.Count() >= threshold).Max(size => size.Key);
+        }
+
         private static double Mode(IEnumerable<double> values, bool preferHigher)
         {
             var groups = values.GroupBy(v => v).OrderByDescending(g => g.Count());

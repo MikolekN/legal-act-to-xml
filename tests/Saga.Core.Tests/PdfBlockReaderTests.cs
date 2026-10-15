@@ -560,6 +560,118 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void BorderedTable_ReadsCellsIntoTheirPlaces()
+        {
+            // Tabela z obramowaniem: wiersz dwóch komórek, w drugiej komórce dwa wiersze tekstu; kolumny w jednym
+            // wierszu strony nie mieszają się, a tekst za tabelą jest osobnym blokiem.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 400);
+            builder.AddText("Art. 1. Stawki określa tabela:", 57, 720);
+            builder.AddGrid([705, 685, 645], [57, 200, 500]);
+            builder.AddText("Lp.", 60, 692);
+            builder.AddText("Nazwa stawki", 205, 692);
+            builder.AddText("1", 60, 670);
+            builder.AddText("stawka podstawowa dla", 205, 670);
+            builder.AddText("przedsiębiorców", 205, 656);
+            builder.AddText("Art. 2. Rozporządzenie wchodzi w życie.", 57, 620);
+
+            var blocks = Read(builder.Build());
+
+            var cells = blocks.Where(b => b.TableCell is not null).ToList();
+            Assert.Equal(
+                [(0, 0, "Lp."), (0, 1, "Nazwa stawki"), (1, 0, "1"), (1, 1, "stawka podstawowa dla przedsiębiorców")],
+                cells.Select(b => (b.TableCell!.Row, b.TableCell.Column, b.Text)));
+            Assert.Contains(blocks, b => b.TableCell is null && b.Text == "Art. 1. Stawki określa tabela:");
+            Assert.Contains(blocks, b => b.TableCell is null && b.Text == "Art. 2. Rozporządzenie wchodzi w życie.");
+        }
+
+        [Fact]
+        public void BorderedTable_MissingSeparatorMergesCells()
+        {
+            // Nagłówek na całą szerokość: linia pionowa między kolumnami zaczyna się dopiero pod nim; pusta komórka
+            // też jest komórką.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 400);
+            builder.AddText("Art. 1. Wykaz:", 57, 720);
+            foreach (var y in new double[] { 705, 685, 665 })
+                builder.AddLine(57, y, 500, y);
+            builder.AddLine(57, 705, 57, 665);
+            builder.AddLine(500, 705, 500, 665);
+            builder.AddLine(200, 685, 200, 665);
+            builder.AddText("WYKAZ STAWEK", 220, 692);
+            builder.AddText("opłata", 60, 672);
+
+            var blocks = Read(builder.Build());
+
+            var cells = blocks.Where(b => b.TableCell is not null).ToList();
+            Assert.Equal(
+                [(0, 0, 2, "WYKAZ STAWEK"), (1, 0, 1, "opłata"), (1, 1, 1, "")],
+                cells.Select(b => (b.TableCell!.Row, b.TableCell.Column, b.TableCell.ColumnSpan, b.Text)));
+        }
+
+        [Fact]
+        public void BorderedTableContinuedOnTheNextPage_IsOneTable()
+        {
+            // Tabela przecięta stroną: na następnej stronie te same kolumny, bez tekstu przed nimi.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("§ 1. Stawki:", 57, 600);
+            builder.AddGrid([585, 565], [57, 200, 500]);
+            builder.AddText("1", 60, 572);
+            builder.AddText("stawka pierwsza", 205, 572);
+            builder.AddPage();
+            builder.AddGrid([800, 780], [57, 200, 500]);
+            builder.AddText("2", 60, 787);
+            builder.AddText("stawka druga", 205, 787);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build());
+
+            var cells = blocks.Where(b => b.TableCell is not null).ToList();
+            Assert.Equal(
+                [(0, 0, "1"), (0, 1, "stawka pierwsza"), (1, 0, "2"), (1, 1, "stawka druga")],
+                cells.Select(b => (b.TableCell!.Row, b.TableCell.Column, b.Text)));
+            Assert.All(cells, b => Assert.Equal(0, b.TableCell!.Table));
+        }
+
+        [Fact]
+        public void BorderedTableCell_WithAShortNumberAndAnAnchor_KeepsTheAnchorSuperscript()
+        {
+            // Komórka „2" z odwołaniem do odnośnika: liter indeksu górnego więcej niż liter tekstu.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 400);
+            builder.AddText("§ 1. Wykaz podmiotów:", 57, 720);
+            builder.AddGrid([705, 685], [57, 97, 500]);
+            builder.AddText("2", 60, 692);
+            builder.AddText("10)", 67, 695.5, 6);
+            builder.AddText("Centrum Badań i Dozoru", 100, 692);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Contains(blocks, b => b.TableCell is { Column: 0 } && b.Text == "2[10)]");
+        }
+
+        [Fact]
+        public void FootnoteReferencedOnlyFromATableCell_IsAFootnote()
+        {
+            // Odnośnik oznaczony zwykłym tekstem („6)Kody …") — jedyne odwołanie do niego stoi w nagłówku tabeli.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 400);
+            builder.AddText("§ 1. Wykaz siedlisk:", 57, 720);
+            builder.AddGrid([705, 685], [57, 97, 500]);
+            builder.AddText("Kod", 60, 692);
+            builder.AddText("6)", 79, 695.5, 6);
+            builder.AddText("Nazwa siedliska", 100, 692);
+            builder.AddText("6)Kody siedlisk są zgodne z rozporządzeniem Ministra Środowiska.", 57, 90, 10);
+
+            var blocks = Read(builder.Build());
+
+            var referencing = Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            Assert.NotNull(referencing.TableCell);
+            Assert.Equal(["Kody siedlisk są zgodne z rozporządzeniem Ministra Środowiska."], Assert.Single(referencing.Footnotes).Paragraphs);
+        }
+
+        [Fact]
         public void TableRowsAtParagraphSpacing_StayTogether()
         {
             // Wiersze tabeli przytoczonej stoją co odstęp akapitowy; rozdzielone dawałyby z „1. … 70" jednostki.

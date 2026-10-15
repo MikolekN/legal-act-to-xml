@@ -2376,6 +2376,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0092: tabela w PDF to siatka z obramowania
+        // ============================================================
+
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void Adr0092_PdfTable_ComesFromItsBorders_NotFromTheTextLayout(bool bordered)
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            for (var i = 0; i < 5; i++)
+                builder.AddText($"Art. {90 + i}. Przepis wypełniający strony do celów testowych.", 57, 400 - i * 14);
+            builder.AddText("Art. 1. Stawki określa tabela:", 57, 720);
+            if (bordered)
+                builder.AddGrid([705, 685], [57, 200, 500]);
+            builder.AddText("1) opłata podstawowa", 60, 692);
+            builder.AddText("150 zł", 205, 692);
+
+            using var stream = new MemoryStream(builder.Build());
+            var blocks = new PdfBlockReader().ReadBlocks(stream);
+
+            // Bez obramowania kolumn nie wnioskuje się z odstępu — wiersz zostaje tekstem.
+            var cells = blocks.Where(block => block.TableCell is not null).Select(block => block.Text).ToList();
+            Assert.Equal(bordered ? ["1) opłata podstawowa", "150 zł"] : [], cells);
+        }
+
+        // ============================================================
         // ADR-0091: część wspólna za tiretami bez stylu rozpoznawana z wcięcia
         // ============================================================
 

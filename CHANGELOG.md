@@ -1067,6 +1067,18 @@ a wersjonowanie zgodne z Semantic Versioning.
     gorzej; dokumenty z identyczną strukturą 1634 → 1707. W jednym dokumencie odnośnik przeniesiony składem na
     następną stronę nie łączy się już z odwołaniem — wcześniej łączył się tylko dlatego, że błędnie sklejony blok
     sięgał tej strony.
+- **Tabele w PDF z obramowania**: `PdfTables` odczytuje siatkę tabeli z odcinków rysowanych na stronie (linie
+  poziome i pionowe, które się przecinają; brak odcinka między polami siatki to scalenie komórek), a `PdfBlockReader`
+  czyta jej litery komórkami — każdy akapit komórki jest blokiem z `TableCell` (tabela, wiersz, kolumna, scalenia),
+  jak w DOCX; tabela przecięta stroną, która na następnej stronie stoi zaraz na początku z tymi samymi kolumnami,
+  jest tą samą tabelą. Dotąd kolumny jednego wiersza strony mieszały się w jeden wiersz tekstu („„1 bez względu
+  Wyroby medyczne … 3 na CN …"), a wyliczenia w komórkach stawały się jednostkami. Rozmiar tekstu podstawowego
+  wiersza to największy rozmiar co najmniej ćwierci liter — w komórce „2" z odwołaniem „10)" liter indeksu górnego
+  jest więcej niż liter tekstu. Tabela bez obramowania zostaje wierszami tekstu.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 99,70 % → 99,72 % (54 dokumenty lepiej, 1 gorzej
+    o jedną jednostkę), dokumenty z identyczną strukturą 1707 → 1742, słowa treści 99,75 % → 99,78 %, metadane zgodne
+    1651 → 1656; słowa odnośników bez zmian (95,90 %: 7 dokumentów lepiej, 7 gorzej — odwołanie w komórce nie sięga
+    już strony następnej, na którą skład przeniósł odnośnik).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

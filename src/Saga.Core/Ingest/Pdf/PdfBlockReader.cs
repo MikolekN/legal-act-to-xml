@@ -234,6 +234,7 @@ namespace Saga.Core.Ingest.Pdf
 
             var allLines = new List<PdfTextLine>();
             var pageLetterCounts = new List<int>(pageCount);
+            var tables = new List<PdfTextLine>();
             int totalChars = 0, replacementChars = 0;
 
             for (int i = 1; i <= pageCount; i++)
@@ -248,24 +249,46 @@ namespace Saga.Core.Ingest.Pdf
                     replacementChars += letter.Value.Count(c => c == '�');
                 }
 
-                // Łącznik nierozdzielający jak w DOCX (TextNormalizer.NonBreakingHyphen).
-                allLines.AddRange(PdfLineExtractor.ExtractLines(page)
-                    .Select(line => line with { Text = WithoutDuplicatedMarks(line.Text.Replace(TextNormalizer.NonBreakingHyphen, '-')) }));
+                // Tabela z obramowaniem: jej litery czyta się komórkami, nie wierszami strony.
+                var pageTables = PdfTables.Find(page);
+                var inTables = pageTables.SelectMany(table => table.Cells).SelectMany(cell => cell.Letters).ToHashSet();
+                var freeLetters = inTables.Count == 0 ? page.Letters : page.Letters.Where(letter => !inTables.Contains(letter)).ToList();
+                allLines.AddRange(PdfLineExtractor.ExtractLines(page, freeLetters).Select(Normalized));
+                foreach (var table in pageTables)
+                {
+                    foreach (var cell in table.Cells)
+                        cell.Lines.AddRange(PdfLineExtractor.ExtractLines(page, cell.Letters).Select(Normalized));
+                    tables.Add(new PdfTextLine
+                    {
+                        Text = TablePlaceholder,
+                        PageNumber = i,
+                        StartX = table.Left,
+                        BaselineY = table.Top,
+                        DominantSize = double.MaxValue,
+                        PageHeight = page.Height,
+                        Table = table,
+                    });
+                }
             }
 
             DetectScan(pageLetterCounts, totalChars, replacementChars);
 
             var lines = PageArtifactFilter.Filter(allLines, pageCount);
-            if (lines.Count == 0)
+            if (lines.Count == 0 && tables.Count == 0)
                 throw new ScannedPdfException(
                     "Warstwa tekstowa PDF zawiera wyłącznie artefakty stron (nagłówki/paginację) — " +
                     "treść dokumentu jest prawdopodobnie zeskanowana; OCR jest poza zakresem parsera.");
 
-            var docDominantSize = DominantBodySize(lines);
+            var docDominantSize = lines.Count > 0 ? DominantBodySize(lines) : tables.Select(TableFontSize).DefaultIfEmpty(0).Max();
+
+            // Wiersz zastępczy tabeli staje w porządku czytania strony po wierszach artefaktów — numer strony
+            // ani paginacja nie są tabelą, a tabela nie powtarza się na stronach jak nagłówek.
+            lines.AddRange(tables);
             var (bodyLines, footnoteLines) = SplitFootnoteZone(lines, docDominantSize);
 
-            var dominantLeft = bodyLines.Count > 0
-                ? Mode(bodyLines.Select(l => Math.Round(l.StartX)))
+            var textLines = bodyLines.Where(l => l.Table is null).ToList();
+            var dominantLeft = textLines.Count > 0
+                ? Mode(textLines.Select(l => Math.Round(l.StartX)))
                 : 0;
 
             var lastPages = new List<int>();
@@ -280,6 +303,16 @@ namespace Saga.Core.Ingest.Pdf
             blocks.AddRange(footnotes);
             return blocks;
         }
+
+        /// <summary>Tekst wiersza zastępczego tabeli — nie jest treścią; blokiem nie zostaje.</summary>
+        private const string TablePlaceholder = "\uFFFC";
+
+        private static PdfTextLine Normalized(PdfTextLine line) =>
+            // Łącznik nierozdzielający jak w DOCX (TextNormalizer.NonBreakingHyphen).
+            line with { Text = WithoutDuplicatedMarks(line.Text.Replace(TextNormalizer.NonBreakingHyphen, '-')) };
+
+        private static double TableFontSize(PdfTextLine placeholder) =>
+            placeholder.Table!.Cells.SelectMany(cell => cell.Lines).Select(line => line.DominantSize).DefaultIfEmpty(0).Max();
 
         private static PdfDocument OpenDocument(Stream stream)
         {
@@ -415,7 +448,10 @@ namespace Saga.Core.Ingest.Pdf
                 return false;
 
             var symbol = start.Groups["symbol"].Value;
-            return pageLines.Any(other => !ReferenceEquals(other, line) && PdfFootnotes.ReferencedSymbols(other.Text).Contains(symbol));
+            // Odwołanie bywa w komórce tabeli — jej wiersze niesie wiersz zastępczy tabeli.
+            return pageLines
+                .SelectMany(other => other.Table is { } table ? table.Cells.SelectMany(cell => cell.Lines) : [other])
+                .Any(other => !ReferenceEquals(other, line) && PdfFootnotes.ReferencedSymbols(other.Text).Contains(symbol));
         }
 
         /// <summary>
@@ -456,6 +492,9 @@ namespace Saga.Core.Ingest.Pdf
             PdfTextLine? blockFirst = null;
             PdfTextLine? prev = null;
             var titleZone = TitleZone.None;
+            var tableIndex = -1;
+            var rowOffset = 0;
+            PdfTextLine? lastTable = null;
 
             void FlushBlock()
             {
@@ -481,9 +520,62 @@ namespace Saga.Core.Ingest.Pdf
                 blockFirst = null;
             }
 
+            // Tabela: każdy akapit komórki to blok z miejscem w siatce (jak komórka DOCX); pusta komórka — pusty blok.
+            // Tabela przecięta stroną ma na następnej stronie własną siatkę — ta sama tabela, gdy stoi tuż za nią
+            // (bez tekstu pomiędzy) i ma te same kolumny; jej wiersze numeruje się dalej.
+            void AddTable(PdfTextLine placeholder)
+            {
+                var table = placeholder.Table!;
+                if (lastTable is not null && ReferenceEquals(prev, lastTable)
+                    && placeholder.PageNumber == lastTable.PageNumber + 1 && SameColumns(lastTable.Table!, table))
+                {
+                    rowOffset += lastTable.Table!.RowCount;
+                }
+                else
+                {
+                    tableIndex++;
+                    rowOffset = 0;
+                }
+
+                foreach (var cell in table.Cells)
+                {
+                    var cellBlocks = AssembleBlocks(cell.Lines, emSize, cell.Bounds.Left, role, startIndex: 0, forceBoundary: null);
+                    if (cellBlocks.Count == 0)
+                        cellBlocks.Add(new DocumentBlock { Text = string.Empty, Role = role });
+
+                    var place = new BlockTableCell
+                    {
+                        Table = tableIndex,
+                        Row = rowOffset + cell.Row,
+                        Column = cell.Column,
+                        ColumnSpan = cell.ColumnSpan,
+                        RowSpan = cell.RowSpan,
+                    };
+                    foreach (var cellBlock in cellBlocks)
+                    {
+                        lastPages?.Add(placeholder.PageNumber);
+                        blocks.Add(cellBlock with
+                        {
+                            TableCell = place,
+                            Source = new BlockSourceLocation { BlockIndex = startIndex + blocks.Count, PageNumber = placeholder.PageNumber },
+                        });
+                    }
+                }
+
+                lastTable = placeholder;
+            }
+
             foreach (var line in lines)
             {
-                bool boundary = prev == null
+                if (line.Table is not null)
+                {
+                    FlushBlock();
+                    AddTable(line);
+                    prev = line;
+                    continue;
+                }
+
+                bool boundary = prev == null || prev.Table is not null
                     || (forceBoundary?.Invoke(line) ?? IsMarkerBoundary(line, prev))
                     || DesignationLinePattern.IsMatch(prev.Text)
                     || (forceBoundary is null && RepealNoteLinePattern.IsMatch(line.Text.Trim()))
@@ -527,6 +619,13 @@ namespace Saga.Core.Ingest.Pdf
             FlushBlock();
             return blocks;
         }
+
+        private static bool SameColumns(PdfTable first, PdfTable second) =>
+            first.Columns.Count == second.Columns.Count
+            && first.Columns.Zip(second.Columns).All(pair => Math.Abs(pair.First - pair.Second) <= ColumnTolerancePoints);
+
+        /// <summary>Tolerancja położenia linii kolumn tej samej tabeli na kolejnych stronach.</summary>
+        private const double ColumnTolerancePoints = 2;
 
         /// <summary>
         /// Granica w strefie tytułowej: data aktu zamyka blok nagłówka rodzaju (i organu), za datą zaczyna się przedmiot,
