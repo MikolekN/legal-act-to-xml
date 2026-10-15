@@ -2,7 +2,6 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using Saga.Core.Exceptions;
-using Saga.Core.Helpers;
 using Saga.Core.Services.Parsing;
 using UglyToad.PdfPig;
 
