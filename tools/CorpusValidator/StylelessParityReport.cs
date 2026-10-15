@@ -20,8 +20,9 @@ namespace CorpusValidator;
 /// systematyzacyjnych — ten sam klucz co w <c>--compare-reference</c>.
 ///
 /// Wynik: raport wg rodzaju aktu, jednostki ginące i nadmiarowe wg elementu, dokumenty z największą różnicą,
-/// <c>styleless-parity.tsv</c> (wiersz na dokument) oraz <c>styleless-parity-units.tsv</c> — każda jednostka,
-/// która bez stylów ginie („-") albo dochodzi („+").
+/// <c>styleless-parity.tsv</c> (wiersz na dokument) oraz <c>styleless-parity-units.tsv</c> i
+/// <c>styleless-parity-text-units.tsv</c> — każda jednostka, która bez stylów (albo w samym tekście) ginie („-") albo
+/// dochodzi („+").
 ///
 /// Użycie:
 ///   dotnet run --project tools/CorpusValidator -- --styleless-parity &lt;root&gt; &lt;katalog-wyjsciowy&gt;
@@ -62,6 +63,8 @@ internal static class StylelessParityReport
 
         using var units = new StreamWriter(Path.Combine(outputDirectory, "styleless-parity-units.tsv"), append: false, Encoding.UTF8);
         units.WriteLine("plik\trodzaj\tstrona\telement\tklucz");
+        using var textUnits = new StreamWriter(Path.Combine(outputDirectory, "styleless-parity-text-units.tsv"), append: false, Encoding.UTF8);
+        textUnits.WriteLine("plik\trodzaj\tstrona\telement\tklucz");
 
         foreach (var path in Directory.EnumerateFiles(root, "*.docx", SearchOption.AllDirectories).OrderBy(p => p, StringComparer.Ordinal))
         {
@@ -88,7 +91,8 @@ internal static class StylelessParityReport
                 var file = Path.GetFileNameWithoutExtension(path);
                 var (missingA, extraA) = Compare(reference, withoutStyles, tally.WithoutStyles,
                     (side, key) => units.WriteLine($"{file}\t{kind}\t{side}\t{key}"));
-                var (missingB, extraB) = Compare(reference, textOnly, tally.TextOnly, report: null);
+                var (missingB, extraB) = Compare(reference, textOnly, tally.TextOnly,
+                    (side, key) => textUnits.WriteLine($"{file}\t{kind}\t{side}\t{key}"));
                 rows.Add(new Row(file, kind, reference.Count, missingA, extraA, missingB, extraB));
             }
             catch (Exception ex) when (ex is not OutOfMemoryException)
