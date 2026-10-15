@@ -458,6 +458,7 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && RepealNoteLinePattern.IsMatch(line.Text.Trim()))
                     || (forceBoundary is null && IsTitleZoneBoundary(line, titleZone))
                     || (forceBoundary is null && IsClosingLineBoundary(line, prev, dominantLeft))
+                    || (forceBoundary is null && AnnouncementCommonPartPattern.IsMatch(line.Text))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
                     || (forceBoundary is null && line.PageNumber == prev.PageNumber
@@ -564,6 +565,15 @@ namespace Saga.Core.Ingest.Pdf
         }
 
         private static bool IsTabular(PdfTextLine line) => line.MaxGap > ColumnGapEm * line.DominantSize;
+
+        /// <summary>
+        /// Część wspólna wyliczenia aktów zmieniających w obwieszczeniu tekstu jednolitego — stała formuła („oraz zmian
+        /// wynikających z przepisów ogłoszonych przed dniem …", art. 16 ustawy o ogłaszaniu aktów normatywnych). Zaczyna
+        /// się małą literą, bez myślnika, w zwykłej interlinii pod ostatnim podpunktem, więc ani marker, ani odstęp jej nie
+        /// oddzielają; rozpoznaje ją jej brzmienie.
+        /// </summary>
+        private static readonly Regex AnnouncementCommonPartPattern = new(
+            @"^oraz\s+zmian\s+wynikających\s+z\s+prze", RegexOptions.Compiled);
 
         /// <summary>Miejsce w strefie tytułowej bloku, który zaczyna się wierszem <paramref name="line"/>.</summary>
         private static TitleZone NextTitleZone(PdfTextLine line, TitleZone previous)

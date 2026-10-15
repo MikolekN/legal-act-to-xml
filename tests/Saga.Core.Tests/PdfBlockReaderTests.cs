@@ -529,6 +529,18 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void AnnouncementCommonPart_StartsABlock()
+        {
+            var blocks = ReadLines(
+                "1. Na podstawie art. 16 ustawy ogłasza się tekst jednolity, z uwzględnieniem zmian wprowadzonych:",
+                "1) ustawą z dnia 21 lutego 2025 r. o zmianie ustawy o biokomponentach (Dz. U. poz. 303)",
+                "oraz zmian wynikających z przepisów ogłoszonych przed dniem 7 października 2025 r.",
+                "2. Podany w załączniku tekst jednolity nie obejmuje art. 5.");
+
+            Assert.Equal("oraz zmian wynikających z przepisów ogłoszonych przed dniem 7 października 2025 r.", blocks[2].Text);
+        }
+
+        [Fact]
         public void TableRowsAtParagraphSpacing_StayTogether()
         {
             // Wiersze tabeli przytoczonej stoją co odstęp akapitowy; rozdzielone dawałyby z „1. … 70" jednostki.

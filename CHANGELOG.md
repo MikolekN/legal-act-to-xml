@@ -1041,6 +1041,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 99,36 % → 99,45 % (rozporządzenia 97,66 % → 98,02 %,
     TJ 99,44 % → 99,52 %); 5 dokumentów lepiej o 515 jednostek, 4 gorzej o 35 (tabela opłat w załączniku, której wiersze
     PDF bez struktury tabeli pokazuje jak ustępy).
+- **Część wspólna obwieszczenia tekstu jednolitego w PDF**: stała formuła „oraz zmian wynikających z przepisów
+  ogłoszonych przed dniem …", zamykająca wyliczenie aktów zmieniających, zaczyna nowy blok (`PdfBlockReader`) — stoi
+  pod ostatnim podpunktem bez myślnika i bez odstępu akapitowego, więc dotąd doklejała się do niego. Odrzucona
+  alternatywa: wiersz w kolumnie oznaczenia pozycji z wcięciem wiszącym — w korpusie ta sama kolumna miesza układ
+  wiszący i równy (76 dokumentów gorzej).
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): 76 dokumentów lepiej, żaden gorzej; jednostki 99,45 % → 99,47 %,
+    dokumenty z identyczną strukturą 1616 → 1629.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
