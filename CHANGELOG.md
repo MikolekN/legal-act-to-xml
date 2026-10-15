@@ -954,6 +954,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w TXT (`--format-parity`, 2151 dokumentów): jednostki 96,51 % → 97,73 % (TJ 96,27 % → 97,66 %; ustawy
     i rozporządzenia bez zmian), żaden dokument nie traci; jednostek z indeksem górnym w adresie, których TXT nie
     odtwarza, 7798 → 1306 (reszta to głównie treść cytowana). DOCX i PDF bez zmian.
+- **Zapis indeksu górnego w TXT**: znaki indeksu górnego Unicode („Art. 29²", „ustaw¹⁾", „m²") i znaczniki odnośników
+  przyklejone do wyrazu („ustaw1), 2)", „ADMINISTRACJI1)", „z późn. zm.2))") przechodzą na kanał „[…]" jak w DOCX
+  i PDF (`PlainTextSuperscripts`); ciąg numeracji (ADR-0089) uwzględnia indeks zapisany wprost. Łącznik
+  nierozdzielający (U+2011) w TXT i PDF jest zwykłym dywizem, jak w czytniku DOCX („społeczno-zawodowych").
+  Wyraz krótszy niż trzy litery („dm3)", „CO2)") zostaje bez zmian — to wykładnik albo wzór.
+  - Korpus w TXT (`--format-parity`, 2151 dokumentów): tytuł zgodny z DOCX w 1665 dokumentach (było 857), metadane
+    zgodne w całości 206 (było 76); jednostki bez zmian (97,73 %), słowa treści 99,78 % → 99,80 %. PDF: jednostki bez
+    zmian, podpis zgodny w 2132 (było 2128).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

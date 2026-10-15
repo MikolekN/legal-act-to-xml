@@ -9,7 +9,8 @@ namespace Saga.Core.Ingest
     /// z przyszłym adapterem PDF (TextNormalizer + BlockAssembler). Winieta dziennika na początku pliku dostaje rolę
     /// <see cref="BlockRole.JournalHeader"/> (<see cref="JournalMasthead"/>, ADR-0088).
     /// Indeks górny oznaczenia jednostki zapisany zwykłymi cyframi („Art. 292.") odtwarza ciąg numeracji
-    /// (<see cref="SuperscriptDesignations"/>, ADR-0089).
+    /// (<see cref="SuperscriptDesignations"/>, ADR-0089); znaki indeksu górnego Unicode i znaczniki odnośników przyklejone
+    /// do słowa przechodzą na kanał „[…]" (<see cref="PlainTextSuperscripts"/>).
     /// </summary>
     public sealed class PlainTextBlockReader : IDocumentBlockReader
     {
@@ -33,7 +34,10 @@ namespace Saga.Core.Ingest
                 .Split('\n')
                 .Select((lineText, index) => new TextLine(lineText, index + 1));
 
-            return JournalMasthead.Mark(SuperscriptDesignations.Restore(BlockAssembler.Assemble(lines)));
+            var blocks = BlockAssembler.Assemble(lines)
+                .Select(block => block with { Text = PlainTextSuperscripts.Restore(block.Text) })
+                .ToList();
+            return JournalMasthead.Mark(SuperscriptDesignations.Restore(blocks));
         }
 
         private static byte[] ReadAllBytes(Stream stream)

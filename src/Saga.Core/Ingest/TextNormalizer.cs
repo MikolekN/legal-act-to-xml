@@ -7,6 +7,7 @@ namespace Saga.Core.Ingest
     /// z DOCX GetFullText — warunek spójności kanału między adapterami (R9 planu).
     /// Robi WYŁĄCZNIE to, czego nie zrobi późniejszy Sanitize orkiestratora:
     ///   - ujednolica końce linii (CRLF/CR → LF),
+    ///   - łącznik nierozdzielający (U+2011) zapisuje zwykłym dywizem, jak czytnik DOCX,
     ///   - usuwa znaki niewidoczne, których DOCX GetFullText nie emituje, a Sanitize nie zdejmuje
     ///     (nie są białymi znakami): miękki dywiz U+00AD oraz znaki zerowej szerokości / formatujące
     ///     U+200B/U+200C/U+200D/U+2060/U+FEFF (artefakty kopiuj-wklej, sklejanych plików).
@@ -14,6 +15,12 @@ namespace Saga.Core.Ingest
     /// </summary>
     internal static class TextNormalizer
     {
+        /// <summary>
+        /// Łącznik nierozdzielający (U+2011) — tak eksport tekstu zapisuje łącznik, który DOCX ma osobnym elementem
+        /// (<c>w:noBreakHyphen</c>), a czytnik DOCX oddaje zwykłym dywizem („Celno-Skarbowej", „społeczno-zawodowych").
+        /// </summary>
+        internal const char NonBreakingHyphen = '\u2011';
+
         public static string Normalize(string raw)
         {
             if (string.IsNullOrEmpty(raw))
@@ -26,7 +33,7 @@ namespace Saga.Core.Ingest
             {
                 if (IsRemovableInvisible(c))
                     continue;
-                sb.Append(c);
+                sb.Append(c == NonBreakingHyphen ? '-' : c);
             }
             return sb.ToString();
         }

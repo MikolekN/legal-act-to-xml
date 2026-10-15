@@ -21,13 +21,16 @@ namespace Saga.Core.Ingest
     {
         private const string Designation = @"\d+[a-z]{0,3}(?:\d{1,3}[a-z]?)?";
 
-        private static readonly Regex Article = new($@"^(?<lead>Art\.\s*)(?<number>{Designation})(?=\.)", RegexOptions.Compiled);
+        /// <summary>Indeks górny zapisany wprost (znakami indeksu Unicode — <see cref="PlainTextSuperscripts"/>).</summary>
+        private const string Explicit = @"(?:\[(?<explicit>[^\[\]]*)\])?";
 
-        private static readonly Regex Paragraph = new($@"^(?<lead>§\s*)(?<number>{Designation})(?=\.)", RegexOptions.Compiled);
+        private static readonly Regex Article = new($@"^(?<lead>Art\.\s*)(?<number>{Designation}){Explicit}(?=\.)", RegexOptions.Compiled);
 
-        private static readonly Regex Passage = new($@"^(?<lead>)(?<number>{Designation})(?=\.\s)", RegexOptions.Compiled);
+        private static readonly Regex Paragraph = new($@"^(?<lead>§\s*)(?<number>{Designation}){Explicit}(?=\.)", RegexOptions.Compiled);
 
-        private static readonly Regex Point = new($@"^(?<lead>)(?<number>{Designation})(?=\)\s)", RegexOptions.Compiled);
+        private static readonly Regex Passage = new($@"^(?<lead>)(?<number>{Designation}){Explicit}(?=\.\s)", RegexOptions.Compiled);
+
+        private static readonly Regex Point = new($@"^(?<lead>)(?<number>{Designation}){Explicit}(?=\)\s)", RegexOptions.Compiled);
 
         /// <summary>Pierwsza jednostka niższego poziomu w wierszu jednostki wyższego („Art. 5. 1.", „Art. 5. § 1.", „§ 3. 1.").</summary>
         private static readonly Regex InlineParagraph = new($@"\G\.\s*§\s*(?<number>{Designation})\.", RegexOptions.Compiled);
@@ -48,6 +51,10 @@ namespace Saga.Core.Ingest
             internal void Reset() => (_base, _superscript) = (null, null);
 
             internal void Set(string number) => (_base, _superscript) = (number, null);
+
+            /// <summary>Oznaczenie z indeksem górnym zapisanym wprost: tylko zapamiętane jako ostatnie w ciągu.</summary>
+            internal void SetExplicit(string number, string superscript) =>
+                (_base, _superscript) = (number, SuperscriptPart.IsMatch(superscript) ? superscript : null);
 
             /// <summary>Indeks górny ukryty w oznaczeniu albo null; zapamiętuje oznaczenie jako ostatnie w ciągu.</summary>
             internal string? Read(string number)
@@ -105,7 +112,7 @@ namespace Saga.Core.Ingest
                 string? restored = null;
                 if (Article.Match(text) is { Success: true } article)
                 {
-                    restored = Rewrite(text, article, articles.Read(article.Groups["number"].Value));
+                    restored = Rewrite(text, article, Read(articles, article));
                     passages.Reset();
                     paragraphs.Reset();
                     points.Reset();
@@ -114,7 +121,7 @@ namespace Saga.Core.Ingest
                 }
                 else if (Paragraph.Match(text) is { Success: true } paragraph)
                 {
-                    restored = Rewrite(text, paragraph, paragraphs.Read(paragraph.Groups["number"].Value));
+                    restored = Rewrite(text, paragraph, Read(paragraphs, paragraph));
                     passages.Reset();
                     points.Reset();
                     ReadInline(restored ?? text, paragraph.Index + paragraph.Length + (restored is null ? 0 : restored.Length - text.Length),
@@ -122,12 +129,12 @@ namespace Saga.Core.Ingest
                 }
                 else if (Passage.Match(text) is { Success: true } passage)
                 {
-                    restored = Rewrite(text, passage, passages.Read(passage.Groups["number"].Value));
+                    restored = Rewrite(text, passage, Read(passages, passage));
                     points.Reset();
                 }
                 else if (Point.Match(text) is { Success: true } point)
                 {
-                    restored = Rewrite(text, point, points.Read(point.Groups["number"].Value));
+                    restored = Rewrite(text, point, Read(points, point));
                 }
 
                 result.Add(restored is null ? block : block with { Text = restored });
@@ -143,6 +150,18 @@ namespace Saga.Core.Ingest
                 paragraphs.Set(paragraph.Groups["number"].Value);
             else if (InlinePassage.Match(text, at) is { Success: true } passage)
                 passages.Set(passage.Groups["number"].Value);
+        }
+
+        /// <summary>Indeks górny ukryty w oznaczeniu — chyba że stoi już wprost; wtedy oznaczenie tylko przedłuża ciąg.</summary>
+        private static string? Read(Level level, Match designation)
+        {
+            if (designation.Groups["explicit"].Success)
+            {
+                level.SetExplicit(designation.Groups["number"].Value, designation.Groups["explicit"].Value);
+                return null;
+            }
+
+            return level.Read(designation.Groups["number"].Value);
         }
 
         private static string? Rewrite(string text, Match designation, string? superscript)

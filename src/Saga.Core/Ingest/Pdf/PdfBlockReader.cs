@@ -182,7 +182,9 @@ namespace Saga.Core.Ingest.Pdf
                     replacementChars += letter.Value.Count(c => c == '�');
                 }
 
-                allLines.AddRange(PdfLineExtractor.ExtractLines(page));
+                // Łącznik nierozdzielający jak w DOCX (TextNormalizer.NonBreakingHyphen).
+                allLines.AddRange(PdfLineExtractor.ExtractLines(page)
+                    .Select(line => line with { Text = line.Text.Replace(TextNormalizer.NonBreakingHyphen, '-') }));
             }
 
             DetectScan(pageLetterCounts, totalChars, replacementChars);
