@@ -1059,6 +1059,14 @@ a wersjonowanie zgodne z Semantic Versioning.
     żaden gorzej), jednostki 99,47 % → 99,53 %, dokumenty z identyczną strukturą 1629 → 1634. Odrzucona alternatywa:
     odwołanie bez odnośnika na swojej stronie sięga po odnośniki następnej, gdy na jego stronie nie ma żadnego
     (tytuł u dołu strony) — 2 dokumenty lepiej, 3 gorzej.
+- **Odwołanie do odnośnika na końcu wiersza PDF nie otwiera wiersza**: wiersz domknięty znakiem albo adnotacją
+  o uchyleniu, za którą stoi odwołanie do odnośnika („3) (uchylony)[19)]", „… wyłącznie:[51)]"), jest domknięty —
+  następny punkt albo ustęp zaczyna nowy blok (`PdfBlockReader`). Tekst jednolity stawia tak odwołania przy każdej
+  zmienionej jednostce, więc dotąd jednostka za nią doklejała się do poprzedniej.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 99,53 % → 99,70 %, 165 dokumentów lepiej, żaden
+    gorzej; dokumenty z identyczną strukturą 1634 → 1707. W jednym dokumencie odnośnik przeniesiony składem na
+    następną stronę nie łączy się już z odwołaniem — wcześniej łączył się tylko dlatego, że błędnie sklejony blok
+    sięgał tej strony.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

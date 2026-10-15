@@ -323,7 +323,8 @@ warstwie syntaktycznej (regex) i układzie (wcięcia). Odnośniki ze strefy przy
 odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnika.
 Poza markerami jednostek granicę bloku stawiają: strefa tytułowa (nagłówek rodzaju z organem, data aktu, przedmiot,
 początek treści), wiersze końcowe odsunięte w prawo (podpis, wiersz przyłączenia, oznaczenie załącznika), adnotacja
-o uchyleniu w osobnym wierszu i wiersz domknięty jednostką uchyloną. Nagłówek rodzaju i organ wydrukowane wielkimi
+o uchyleniu w osobnym wierszu i wiersz domknięty jednostką uchyloną — także z odwołaniem do odnośnika za znakiem
+domykającym. Nagłówek rodzaju i organ wydrukowane wielkimi
 literami wracają do postaci tekstu aktu ([ADR-0090](adr/0090-wielkosc-liter-rodzaju-i-organu-w-pdf-wraca-do-postaci-tekstu-aktu.md)).
 
 `DocxBlockReader` czyta — poza treścią — także nagłówki stron i emituje je jako bloki

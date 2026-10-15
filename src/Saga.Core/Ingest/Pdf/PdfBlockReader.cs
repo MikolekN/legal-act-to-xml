@@ -637,10 +637,14 @@ namespace Saga.Core.Ingest.Pdf
             if (!ConditionalMarkerPattern.IsMatch(line.Text))
                 return false;
 
-            var prevText = prev.Text.TrimEnd();
+            // Odwołanie do odnośnika za znakiem domykającym („wyłącznie:[51)]", „4) (uchylony)[19)]") nie otwiera wiersza.
+            var prevText = TrailingFootnoteAnchor.Replace(prev.Text.TrimEnd(), string.Empty);
             return (ClosedLineEndPattern.IsMatch(prevText) && !ReferenceAbbreviationEndPattern.IsMatch(prevText))
                 || IsUppercaseHeading(prevText);
         }
+
+        /// <summary>Odwołanie do odnośnika na końcu wiersza — indeks górny z nawiasem („[19)]", „[1), 2)]").</summary>
+        private static readonly Regex TrailingFootnoteAnchor = new(@"\s*\[[^\[\]]*\)[^\[\]]*\]$", RegexOptions.Compiled);
 
         /// <summary>
         /// Wiersz wielkimi literami — tytuł załącznika, tabeli, jednostki („DROGI KRAJOWE … ELEKTRONICZNĄ"). Kończy się bez

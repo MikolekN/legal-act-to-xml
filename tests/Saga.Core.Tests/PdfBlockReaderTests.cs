@@ -540,6 +540,25 @@ namespace Saga.Core.Tests
             Assert.Equal("oraz zmian wynikających z przepisów ogłoszonych przed dniem 7 października 2025 r.", blocks[2].Text);
         }
 
+        [Theory]
+        [InlineData("3) (uchylony)", "4) prowadzenie urzędowego sprawdzenia;")]
+        [InlineData("2. Dane są udostępniane wyłącznie:", "1) organom Krajowej Administracji Skarbowej;")]
+        public void ClosedLineWithAFootnoteAnchor_EndsBeforeTheNextUnit(string closed, string next)
+        {
+            // Tekst jednolity: odwołanie do odnośnika stoi za znakiem domykającym wiersz.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText("Art. 1. Do zadań organu należy:", 57, 714);
+            builder.AddText(closed, 57, 700);
+            builder.AddText("19)", 250, 703.5, 6);
+            builder.AddText(next, 57, 686);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Contains(blocks, b => b.Text.StartsWith(closed) && b.Text.EndsWith("[19)]"));
+            Assert.Contains(blocks, b => b.Text == next);
+        }
+
         [Fact]
         public void TableRowsAtParagraphSpacing_StayTogether()
         {
