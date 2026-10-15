@@ -329,6 +329,45 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void QuotedProvision_AfterAClosedQuotation_StartsANewBlock()
+        {
+            // Koniec przepisu przytoczonego „… 2024 r.”" i następny przepis przytoczony w kolejnym wierszu.
+            var blocks = ReadLines(
+                "„Art. 18. Do postępowań wszczętych od dnia 1 lipca 2024 r.”",
+                "„Art. 22. W latach 2026–2035 maksymalny limit wydatków wynosi 575,4 mln zł.”");
+
+            Assert.Equal("„Art. 18. Do postępowań wszczętych od dnia 1 lipca 2024 r.”", blocks[0].Text);
+            Assert.StartsWith("„Art. 22.", blocks[1].Text);
+        }
+
+        [Fact]
+        public void ListItem_EndingWithAConjunction_IsClosed()
+        {
+            var blocks = ReadLines(
+                "Art. 5. Rekompensata przysługuje pod warunkiem:",
+                "1) zgłoszenia siebie jako płatnika składek oraz",
+                "2) zgłoszenia co najmniej jednej osoby do ubezpieczeń.");
+
+            Assert.Equal("1) zgłoszenia siebie jako płatnika składek oraz", blocks[1].Text);
+            Assert.StartsWith("2) zgłoszenia", blocks[2].Text);
+        }
+
+        [Fact]
+        public void FootnoteZone_LetterMarker_BecomesFootnote()
+        {
+            // Tekst jednolity: odnośnik obwieszczenia oznaczony literą w indeksie górnym.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("a)", 57, 93.5, 6);
+            builder.AddText("Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. poz. 5.", 66, 90, 10);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks, b => b.Role == BlockRole.FootnoteText);
+            Assert.StartsWith("[a)]", footnote.Text);
+        }
+
+        [Fact]
         public void ScannedPdf_NoTextLayer_ThrowsScannedPdfException()
         {
             var pdf = new TestPdfBuilder()

@@ -2,6 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using Saga.Core.Exceptions;
+using Saga.Core.Services;
 using Saga.Core.Services.Parsing;
 using UglyToad.PdfPig;
 
@@ -122,17 +123,23 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         private const double ClosingLineMinIndentPoints = 72;
 
-        /// <summary>Poprzedni wiersz domknięty: kończy się interpunkcją, ale nie skrótem referencyjnym.</summary>
+        /// <summary>
+        /// Poprzedni wiersz domknięty: kończy się interpunkcją — także przed cudzysłowem zamykającym („… 2024 r.”",
+        /// koniec przepisu przytoczonego) — albo spójnikiem, którym pozycja wyliczenia przechodzi w następną
+        /// („1) zgłoszenia płatnika składek oraz" / „2) …"). Skrót referencyjny wyklucza osobny wzorzec.
+        /// </summary>
         private static readonly Regex ClosedLineEndPattern = new(
-            @"[;:,.]$", RegexOptions.Compiled);
+            $@"(?:[;:,.][{QuotationMarks.ClosingOrStraight}]*|\s(?:oraz|lub|albo))$", RegexOptions.Compiled);
 
         private static readonly Regex ReferenceAbbreviationEndPattern = new(
             @"(?:\b(?:poz|[Nn]r|str|art|ust|pkt|lit)\.?|§)\s*$", RegexOptions.Compiled);
 
         /// <summary>Początek przypisu: „N)" (także w kanale [N)]) lub gwiazdki — nawias WYMAGANY
-        /// (bez niego goła liczba „2023 r. …" na początku zawiniętej kontynuacji rozcinałaby przypis).</summary>
+        /// (bez niego goła liczba „2023 r. …" na początku zawiniętej kontynuacji rozcinałaby przypis).
+        /// Odnośnik oznaczony literą („[a)]" — tekst jednolity oznacza tak odnośniki obwieszczenia) tylko w kanale
+        /// indeksu górnego: goła „a)" na początku wiersza to litera wyliczenia.</summary>
         private static readonly Regex FootnoteStartPattern = new(
-            @"^(?:\[?\d+\)\]?\s|\*+\s?)", RegexOptions.Compiled);
+            @"^(?:\[?\d+\)\]?\s|\[[a-z]{1,2}\)\]\s?|\*+\s?)", RegexOptions.Compiled);
 
         /// <summary>Przypis zakończony: ostatni wiersz strefy kończy zdanie — następna strona go nie kontynuuje.</summary>
         private static readonly Regex FootnoteEndPattern = new(
@@ -140,7 +147,7 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>Początek przypisu znacznikiem w indeksie górnym — kanał <c>[N)]</c> albo <c>[*]</c> z <see cref="PdfLineExtractor"/>.</summary>
         private static readonly Regex SuperscriptFootnoteStartPattern = new(
-            @"^\[(?:\d+\)?|\*+)\]", RegexOptions.Compiled);
+            @"^\[(?:\d+\)?|[a-z]{1,2}\)|\*+)\]", RegexOptions.Compiled);
 
         public SourceFormat Format => SourceFormat.Pdf;
 

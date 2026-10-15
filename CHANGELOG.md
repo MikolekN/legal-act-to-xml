@@ -929,6 +929,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   więc podpis zostawał doklejony do ostatniego przepisu.
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): podpis zgodny z DOCX w 2128 dokumentach (było 1757);
     metadane zgodne w całości 294 (było 186).
+- **Granice pozycji w PDF**: wiersz zakończony interpunkcją przed cudzysłowem zamykającym („… 2024 r.”") albo
+  spójnikiem pozycji wyliczenia („oraz", „lub", „albo") jest domknięty, więc następny wiersz z cudzysłowem otwierającym
+  albo numerem („„Art. 22.", „2)") zaczyna nowy blok (`PdfBlockReader`). Odnośnik oznaczony literą w indeksie górnym
+  („[a)]" — tak tekst jednolity oznacza odnośniki obwieszczenia) otwiera strefę przypisów jak numerowany.
+  Wcześniej kolejny przepis przytoczony doklejał się do poprzedniego, a przepisy po nim trafiały do złego artykułu.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 91,69 % → 94,31 % (TJ 91,78 % → 94,51 %,
+    rozporządzenia 95,14 % → 97,06 %, ustawy 87,38 % → 89,23 %); dokumenty z identyczną strukturą 1143 → 1256;
+    słowa w treści ponad tekst DOCX 3,00 % → 2,61 %.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
