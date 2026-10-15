@@ -409,6 +409,7 @@ namespace Saga.Core.Ingest.Pdf
             var buffer = new StringBuilder();
             PdfTextLine? blockFirst = null;
             PdfTextLine? prev = null;
+            var titleZone = TitleZone.None;
 
             void FlushBlock()
             {
@@ -417,7 +418,7 @@ namespace Saga.Core.Ingest.Pdf
                 lastPages?.Add(prev?.PageNumber ?? blockFirst.PageNumber);
                 blocks.Add(new DocumentBlock
                 {
-                    Text = buffer.ToString(),
+                    Text = titleZone == TitleZone.Kind ? WithTitleCase(buffer.ToString()) : buffer.ToString(),
                     Role = role,
                     Layout = new BlockLayoutInfo
                     {
@@ -433,8 +434,6 @@ namespace Saga.Core.Ingest.Pdf
                 buffer.Clear();
                 blockFirst = null;
             }
-
-            var titleZone = TitleZone.None;
 
             foreach (var line in lines)
             {
@@ -515,6 +514,36 @@ namespace Saga.Core.Ingest.Pdf
 
         private static bool IsRightSide(PdfTextLine line, double dominantLeft) =>
             line.StartX - dominantLeft >= ClosingLineMinIndentPoints;
+
+        /// <summary>Wyrazy, które w nazwie rodzaju i organu stoją małą literą („Ministra Spraw Wewnętrznych i Administracji").</summary>
+        private static readonly HashSet<string> LowercaseTitleWords = ["i", "oraz", "w", "z", "ze", "do", "na", "dla", "nr", "o", "od", "po", "przy"];
+
+        // Wyraz poza nawiasem kwadratowym — znacznik odnośnika („[a)]") zostaje, jak stoi.
+        private static readonly Regex TitleWord = new(@"(?<!\[[^\[\]]*)\p{L}+", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Nagłówek rodzaju i organ zapisane w PDF wielkimi literami („ROZPORZĄDZENIE MINISTRA FINANSÓW I GOSPODARKI")
+        /// — tak drukuje je skład, a tekst aktu ma „Rozporządzenie" i „Ministra Finansów i Gospodarki" (DOCX zapisuje wielkie
+        /// litery formatowaniem, przykłady autorów schematu mają „Ustawa"). Wielkość liter wraca do tej postaci: rodzaj
+        /// wielką literą na początku, w organie każdy wyraz wielką literą poza spójnikami i przyimkami. Wiersz, który
+        /// ma już małe litery, zostaje bez zmian.
+        /// </summary>
+        private static string WithTitleCase(string text)
+        {
+            if (TitleWord.Matches(text).Any(word => word.Value.Any(char.IsLower)))
+                return text;
+
+            var first = true;
+            var afterDo = false;
+            return TitleWord.Replace(text, match =>
+            {
+                var lower = match.Value.ToLowerInvariant();
+                var keepLower = !first && (LowercaseTitleWords.Contains(lower) || (afterDo && lower == "spraw"));
+                afterDo = lower == "do";
+                first = false;
+                return keepLower ? lower : char.ToUpperInvariant(lower[0]) + lower[1..];
+            });
+        }
 
         /// <summary>Miejsce w strefie tytułowej bloku, który zaczyna się wierszem <paramref name="line"/>.</summary>
         private static TitleZone NextTitleZone(PdfTextLine line, TitleZone previous)

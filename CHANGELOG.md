@@ -991,6 +991,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): słowa odnośników 41,82 % → 45,80 % (rozporządzenia
     69,89 % → 79,49 %), słowa w treści ponad DOCX 0,67 % → 0,50 %; dane ogłoszenia zgodne z DOCX w 2083 dokumentach
     (było 2051), metadane zgodne w całości 324 (było 294); dokumenty z identyczną strukturą 1293 → 1330.
+- **Wielkość liter tytułu w PDF**: nagłówek rodzaju i organ wydrukowane wielkimi literami („ROZPORZĄDZENIE MINISTRA
+  FINANSÓW I GOSPODARKI") czytnik PDF zapisuje w postaci tekstu aktu („Rozporządzenie Ministra Finansów
+  i Gospodarki") — tak jak większość DOCX i przykłady autorów schematu
+  ([ADR-0090](docs/adr/0090-wielkosc-liter-rodzaju-i-organu-w-pdf-wraca-do-postaci-tekstu-aktu.md)).
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): tytuł zgodny z DOCX w 1696 dokumentach (było 353), metadane
+    zgodne w całości 1519 (było 294). Struktura bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

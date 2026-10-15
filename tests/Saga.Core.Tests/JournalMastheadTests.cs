@@ -121,7 +121,7 @@ namespace Saga.Core.Tests
             var blocks = new PdfBlockReader().ReadBlocks(stream);
 
             Assert.Equal(Masthead, blocks.Where(block => block.Role == BlockRole.JournalHeader).Select(block => block.Text));
-            Assert.StartsWith("USTAWA", blocks.First(block => block.Role == BlockRole.Body).Text);
+            Assert.StartsWith("Ustawa", blocks.First(block => block.Role == BlockRole.Body).Text);
         }
     }
 }

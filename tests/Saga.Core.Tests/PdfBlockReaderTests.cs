@@ -226,7 +226,7 @@ namespace Saga.Core.Tests
                 "Art. 1. W ustawie wprowadza się zmiany.");
 
             Assert.Equal(
-                ["USTAWA", "z dnia 18 grudnia 2025 r.", "o zmianie ustawy o systemie ubezpieczeń społecznych", "Art. 1. W ustawie wprowadza się zmiany."],
+                ["Ustawa", "z dnia 18 grudnia 2025 r.", "o zmianie ustawy o systemie ubezpieczeń społecznych", "Art. 1. W ustawie wprowadza się zmiany."],
                 blocks.Take(4).Select(b => b.Text));
         }
 
@@ -243,10 +243,37 @@ namespace Saga.Core.Tests
                 "§ 1. W rozporządzeniu wprowadza się zmiany.");
 
             Assert.Equal(
-                ["ROZPORZĄDZENIE MINISTRA FINANSÓW", "z dnia 23 czerwca 2025 r.", "zmieniające rozporządzenie w sprawie zgłoszeń INTRASTAT",
+                ["Rozporządzenie Ministra Finansów", "z dnia 23 czerwca 2025 r.", "zmieniające rozporządzenie w sprawie zgłoszeń INTRASTAT",
                  "Na podstawie art. 98 ust. 2 ustawy z dnia 19 marca 2004 r. – Prawo celne zarządza się, co następuje:",
                  "§ 1. W rozporządzeniu wprowadza się zmiany."],
                 blocks.Take(5).Select(b => b.Text));
+        }
+
+        [Fact]
+        public void TitleZone_KindAndIssuerInCapitals_GetTheCaseOfTheActText()
+        {
+            var blocks = ReadLines(
+                "ROZPORZĄDZENIE",
+                "MINISTRA SPRAW WEWNĘTRZNYCH I ADMINISTRACJI",
+                "z dnia 1 sierpnia 2025 r.",
+                "w sprawie rejestru statków powietrznych",
+                "Na podstawie art. 5 ustawy zarządza się, co następuje:",
+                "§ 1. Rejestr prowadzi się w postaci elektronicznej.");
+
+            Assert.Equal("Rozporządzenie Ministra Spraw Wewnętrznych i Administracji", blocks[0].Text);
+            Assert.Equal("w sprawie rejestru statków powietrznych", blocks[2].Text);
+        }
+
+        [Fact]
+        public void TitleZone_ResolutionNumber_AndHeaderWithLowercase_AreKeptRight()
+        {
+            Assert.Equal("Uchwała nr 103 Rady Ministrów", ReadLines("UCHWAŁA NR 103", "RADY MINISTRÓW", "z dnia 1 marca 2025 r.", "w sprawie programu",
+                "§ 1. Przyjmuje się program.")[0].Text);
+            Assert.Equal("Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej[a)]", ReadLines("OBWIESZCZENIE", "MARSZAŁKA SEJMU RZECZYPOSPOLITEJ POLSKIEJ[a)]",
+                "z dnia 1 marca 2025 r.", "w sprawie ogłoszenia tekstu", "1. Na podstawie art. 16 ogłasza się tekst.")[0].Text);
+            // Wiersz z małymi literami ma wielkość liter tekstu — zostaje, jak stoi.
+            Assert.Equal("ROZPORZĄDZENIE Ministra Finansów", ReadLines("ROZPORZĄDZENIE", "Ministra Finansów", "z dnia 1 marca 2025 r.", "w sprawie opłat",
+                "§ 1. Opłata wynosi 10 zł.")[0].Text);
         }
 
         [Fact]
@@ -327,7 +354,7 @@ namespace Saga.Core.Tests
             Assert.Equal(
                 ["„Art. 88. Ustawa wchodzi w życie z dniem 28 czerwca 2025 r.”.", "Marszałek Sejmu: S. Hołownia",
                  "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 27 listopada 2024 r. (Dz. U. z 2025 r. poz. 18)",
-                 "USTAWA"],
+                 "Ustawa"],
                 blocks.Skip(8).Select(b => b.Text));
         }
 
