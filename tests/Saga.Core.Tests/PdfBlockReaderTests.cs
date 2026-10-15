@@ -183,6 +183,84 @@ namespace Saga.Core.Tests
             Assert.DoesNotContain(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("1) Zmiany"));
         }
 
+        /// <summary>
+        /// Wiersze w interlinii składu Dziennika Ustaw (14 pt), bez odstępu między strefą tytułową a treścią, i dopełnienie
+        /// przepisami — żeby typowa interlinia była interlinią treści.
+        /// </summary>
+        private static IReadOnlyList<DocumentBlock> ReadLines(params string[] lines)
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            var y = 760.0;
+            foreach (var line in lines.Concat(Enumerable.Range(90, 8).Select(n => $"Art. {n}. Przepis wypełniający stronę.")))
+            {
+                builder.AddText(line, 57, y);
+                y -= 14;
+            }
+
+            return Read(builder.Build());
+        }
+
+        [Fact]
+        public void TitleZone_KindDateAndSubject_AreSeparateBlocks()
+        {
+            var blocks = ReadLines(
+                "USTAWA",
+                "z dnia 18 grudnia 2025 r.",
+                "o zmianie ustawy o systemie",
+                "ubezpieczeń społecznych",
+                "Art. 1. W ustawie wprowadza się zmiany.");
+
+            Assert.Equal(
+                ["USTAWA", "z dnia 18 grudnia 2025 r.", "o zmianie ustawy o systemie ubezpieczeń społecznych", "Art. 1. W ustawie wprowadza się zmiany."],
+                blocks.Take(4).Select(b => b.Text));
+        }
+
+        [Fact]
+        public void TitleZone_RegulationSubject_EndsAtTheLegalBasis()
+        {
+            var blocks = ReadLines(
+                "ROZPORZĄDZENIE",
+                "MINISTRA FINANSÓW",
+                "z dnia 23 czerwca 2025 r.",
+                "zmieniające rozporządzenie w sprawie zgłoszeń INTRASTAT",
+                "Na podstawie art. 98 ust. 2 ustawy z dnia 19 marca 2004 r. – Prawo celne zarządza się,",
+                "co następuje:",
+                "§ 1. W rozporządzeniu wprowadza się zmiany.");
+
+            Assert.Equal(
+                ["ROZPORZĄDZENIE MINISTRA FINANSÓW", "z dnia 23 czerwca 2025 r.", "zmieniające rozporządzenie w sprawie zgłoszeń INTRASTAT",
+                 "Na podstawie art. 98 ust. 2 ustawy z dnia 19 marca 2004 r. – Prawo celne zarządza się, co następuje:",
+                 "§ 1. W rozporządzeniu wprowadza się zmiany."],
+                blocks.Take(5).Select(b => b.Text));
+        }
+
+        [Fact]
+        public void TitleZone_AnnouncementSubject_EndsAtItsFirstPoint()
+        {
+            var blocks = ReadLines(
+                "OBWIESZCZENIE",
+                "MARSZAŁKA SEJMU RZECZYPOSPOLITEJ POLSKIEJ",
+                "z dnia 27 listopada 2024 r.",
+                "w sprawie ogłoszenia jednolitego tekstu ustawy",
+                "o żegludze śródlądowej",
+                "1. Na podstawie art. 16 ust. 1 ustawy ogłasza się tekst jednolity.");
+
+            Assert.Equal("w sprawie ogłoszenia jednolitego tekstu ustawy o żegludze śródlądowej", blocks[2].Text);
+            Assert.StartsWith("1. Na podstawie", blocks[3].Text);
+        }
+
+        [Fact]
+        public void DateLine_OutsideTheTitleZone_StaysInItsParagraph()
+        {
+            var blocks = ReadLines(
+                "Art. 5. Do spraw wszczętych na podstawie ustawy",
+                "z dnia 5 marca 2025 r.",
+                "stosuje się przepisy dotychczasowe.");
+
+            Assert.Equal("Art. 5. Do spraw wszczętych na podstawie ustawy z dnia 5 marca 2025 r. stosuje się przepisy dotychczasowe.",
+                blocks[0].Text);
+        }
+
         [Fact]
         public void ScannedPdf_NoTextLayer_ThrowsScannedPdfException()
         {

@@ -20,7 +20,9 @@ namespace Saga.Core.Ingest.Pdf
     ///    granica strony NIE jest granicą bloku (jednostka przecięta stroną się skleja). Dehyfenacja
     ///    wyłącznie „-" (U+002D) na końcu wiersza + mała litera na początku następnego.
     /// 7. Wcięcia: X pierwszego wiersza bloku względem dominującego lewego marginesu → twips (1 pt = 20 twips).
-    /// 8. Winieta dziennika na początku pierwszej strony → bloki <see cref="BlockRole.JournalHeader"/>
+    /// 8. Strefa tytułowa: nagłówek rodzaju (z organem), data aktu i przedmiot to osobne bloki, a przedmiot kończy
+    ///    się na początku treści — skład nie oddziela ich odstępem większym od interlinii.
+    /// 9. Winieta dziennika na początku pierwszej strony → bloki <see cref="BlockRole.JournalHeader"/>
     ///    (<see cref="JournalMasthead"/>) — jak nagłówek strony DOCX, z danymi ogłoszenia.
     /// Celowo NIE nadaje StyleId (zabetonowałoby błędy) — klasyfikacja idzie gałęzią bezstylową.
     /// </summary>
@@ -60,6 +62,45 @@ namespace Saga.Core.Ingest.Pdf
         private static readonly Regex DesignationLinePattern = new(
             @"^(?:CZĘŚĆ|Część|KSIĘGA|Księga|TYTUŁ|Tytuł|DZIAŁ|Dział|ROZDZIAŁ|Rozdział|ODDZIAŁ|Oddział)\s+\S+\s*$",
             RegexOptions.Compiled);
+
+        /// <summary>Nagłówek rodzaju aktu — otwiera strefę tytułową (§ 16–19, § 120 ZTP).</summary>
+        private static readonly Regex KindHeaderPattern = new(
+            @"^(?:USTAWA|ROZPORZĄDZENIE|OBWIESZCZENIE|UCHWAŁA|ZARZĄDZENIE)\b", RegexOptions.Compiled);
+
+        /// <summary>Data aktu w strefie tytułowej: cały wiersz „z dnia 18 grudnia 2025 r." (ze znacznikiem odnośnika).</summary>
+        private static readonly Regex ActDateLinePattern = new(
+            @"^z\s+dnia\s+\d{1,2}\s+\p{L}+\s+\d{4}\s*r\.(?:\s*\[[^\]]*\])?\s*$", RegexOptions.Compiled);
+
+        /// <summary>Wiersz organu wydającego w strefie tytułowej: same wielkie litery („MINISTRA FINANSÓW").</summary>
+        private static readonly Regex IssuerLinePattern = new(
+            @"^[\p{Lu}][\p{Lu}\s,–\-]*(?:\[[^\]]*\])?\s*$", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Początek treści za przedmiotem aktu: podstawa prawna rozporządzenia („Na podstawie art. …"), pierwszy punkt
+        /// obwieszczenia („1. Na podstawie …") albo pierwszy przepis. Przedmiot nie kończy się interpunkcją, więc
+        /// warunkowy marker cyfrowy sam by tu nie zadziałał.
+        /// </summary>
+        private static readonly Regex SubjectEndPattern = new(
+            @"^(?:Na\s+podstawie\b|\d{1,3}[a-z]*[\.\)]\s|Art\.|§\s*\d)", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Miejsce w strefie tytułowej bieżącego bloku. Skład Dziennika Ustaw stawia nagłówek rodzaju, datę, przedmiot
+        /// i początek treści w kolejnych wierszach bez odstępu większego od interlinii, więc bez tego cała strefa
+        /// sklejała się w jeden blok z pierwszym akapitem treści, a parser tracił rodzaj, datę i tytuł aktu.
+        /// </summary>
+        private enum TitleZone
+        {
+            None,
+
+            /// <summary>Blok otwarty nagłówkiem rodzaju (z organem w kolejnych wierszach).</summary>
+            Kind,
+
+            /// <summary>Blok daty aktu.</summary>
+            Date,
+
+            /// <summary>Blok przedmiotu aktu — za datą.</summary>
+            Subject,
+        }
 
         /// <summary>Poprzedni wiersz domknięty: kończy się interpunkcją, ale nie skrótem referencyjnym.</summary>
         private static readonly Regex ClosedLineEndPattern = new(
@@ -288,11 +329,14 @@ namespace Saga.Core.Ingest.Pdf
                 blockFirst = null;
             }
 
+            var titleZone = TitleZone.None;
+
             foreach (var line in lines)
             {
                 bool boundary = prev == null
                     || (forceBoundary?.Invoke(line) ?? IsMarkerBoundary(line, prev))
                     || DesignationLinePattern.IsMatch(prev.Text)
+                    || (forceBoundary is null && IsTitleZoneBoundary(line, titleZone))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap);
 
@@ -301,6 +345,7 @@ namespace Saga.Core.Ingest.Pdf
                     FlushBlock();
                     blockFirst = line;
                     buffer.Append(line.Text);
+                    titleZone = forceBoundary is not null ? TitleZone.None : NextTitleZone(line, titleZone);
                 }
                 else
                 {
@@ -325,6 +370,35 @@ namespace Saga.Core.Ingest.Pdf
 
             FlushBlock();
             return blocks;
+        }
+
+        /// <summary>
+        /// Granica w strefie tytułowej: data aktu zamyka blok nagłówka rodzaju (i organu), za datą zaczyna się przedmiot,
+        /// a przedmiot kończy początek treści (<see cref="SubjectEndPattern"/>).
+        /// </summary>
+        private static bool IsTitleZoneBoundary(PdfTextLine line, TitleZone zone) => zone switch
+        {
+            TitleZone.Kind => ActDateLinePattern.IsMatch(line.Text),
+            TitleZone.Date => true,
+            TitleZone.Subject => SubjectEndPattern.IsMatch(line.Text),
+            _ => false,
+        };
+
+        /// <summary>Miejsce w strefie tytułowej bloku, który zaczyna się wierszem <paramref name="line"/>.</summary>
+        private static TitleZone NextTitleZone(PdfTextLine line, TitleZone previous)
+        {
+            if (KindHeaderPattern.IsMatch(line.Text))
+                return TitleZone.Kind;
+            if (previous == TitleZone.Kind)
+            {
+                // Organ odsunięty od nagłówka rodzaju („MARSZAŁKA SEJMU …") należy jeszcze do niego.
+                if (ActDateLinePattern.IsMatch(line.Text))
+                    return TitleZone.Date;
+                if (IssuerLinePattern.IsMatch(line.Text))
+                    return TitleZone.Kind;
+            }
+
+            return previous == TitleZone.Date ? TitleZone.Subject : TitleZone.None;
         }
 
         /// <summary>

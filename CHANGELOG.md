@@ -896,6 +896,15 @@ a wersjonowanie zgodne z Semantic Versioning.
     przestaje zasłaniać rodzaj dokumentu). Treść TJ zgodna ze schematem 721 → 559: z danymi ogłoszenia akt staje pod
     obwieszczeniem, a sklejona przez adapter PDF strefa tytułowa nie daje mu rodzaju i daty — to osobna luka
     adaptera. TXT z eksportu Worda winiety nie ma (bez zmian), DOCX bez zmian.
+- **Strefa tytułowa w PDF**: nagłówek rodzaju (z organem), data aktu, przedmiot i początek treści („Na podstawie …",
+  „1. Na podstawie …", pierwszy przepis) są osobnymi blokami (`PdfBlockReader`). Skład Dziennika Ustaw nie oddziela
+  ich odstępem większym od interlinii, więc cała strefa sklejała się z pierwszym akapitem treści, a akt tracił rodzaj,
+  datę, tytuł, a rozporządzenie — podstawę prawną i z nią treść przed pierwszym paragrafem.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): słowa treści 98,73 % → 99,32 % (rozporządzenia 94,88 % →
+    99,87 %, obwieszczenia bez aktu 65,56 % → 99,98 %); dokumenty zgodne ze schematem w całości 0 → 1339 (DOCX tych
+    samych aktów: 1826). Treść TJ zgodna ze schematem 559 → 354: obwieszczenie ma już własną strefę tytułową, ale
+    wiersz przyłączenia „Załącznik do obwieszczenia …" sklejony z podpisem nie otwiera aktu ogłaszanego, więc jego
+    rozdziały stają wprost pod obwieszczeniem — osobna luka adaptera (wiersze końcowe).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
