@@ -320,6 +320,10 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 `PageArtifactFilter`) — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
 warstwie syntaktycznej (regex) i układzie (wcięcia). Odnośniki ze strefy przypisów wiąże ze znacznikami treści `PdfFootnotes`
 (oznaczenie i strona odwołania) — blok niesie `Footnotes` i znacznik o numerze jednoznacznym, jak w DOCX.
+Poza markerami jednostek granicę bloku stawiają: strefa tytułowa (nagłówek rodzaju z organem, data aktu, przedmiot,
+początek treści), wiersze końcowe odsunięte w prawo (podpis, wiersz przyłączenia, oznaczenie załącznika), adnotacja
+o uchyleniu w osobnym wierszu i wiersz domknięty jednostką uchyloną. Nagłówek rodzaju i organ wydrukowane wielkimi
+literami wracają do postaci tekstu aktu ([ADR-0090](adr/0090-wielkosc-liter-rodzaju-i-organu-w-pdf-wraca-do-postaci-tekstu-aktu.md)).
 
 `DocxBlockReader` czyta — poza treścią — także nagłówki stron i emituje je jako bloki
 `BlockRole.JournalHeader` bez `BlockIndex`. Emituje **wszystkie** części kandydujące, w kolejności
@@ -335,6 +339,8 @@ PDF i TXT nagłówków stron nie mają: winietę dziennika na samym początku do
 dziennika i dalsze wiersze winiety ([ADR-0088](adr/0088-winieta-dziennika-na-poczatku-pdf-i-txt-jest-naglowkiem-publikatora.md)).
 Czytnik TXT odtwarza też indeks górny oznaczeń jednostek, który zwykły tekst zapisuje cyframi („Art. 292." po
 „Art. 29." to „Art. 29[2].") — `SuperscriptDesignations` ([ADR-0089](adr/0089-indeks-gorny-oznaczenia-w-txt-odtwarza-ciag-numeracji.md)).
+Znaki indeksu górnego Unicode i znaczniki odnośników przyklejone do wyrazu („ustaw1), 2)") przechodzą na kanał „[…]"
+(`PlainTextSuperscripts`), a przedmiot aktu rozbity na wiersze łączy `PlainTextTitleSubject`.
 
 ### 5.2 Rdzeń budowy modelu (`LegalDocumentParser.ParseBlocks`, `internal`)
 
