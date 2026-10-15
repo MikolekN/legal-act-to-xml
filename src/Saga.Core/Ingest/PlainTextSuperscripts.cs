@@ -28,10 +28,26 @@ namespace Saga.Core.Ingest
             @"(?<=\p{L}{3}|\bzm\.)(?<marker>[1-9]\d{0,2}\)(?:,\s?[1-9]\d{0,2}\))*)(?=[\s,;:.”""\)]|$)",
             RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
+        /// <summary>
+        /// Oznaczenie jednostki na początku wiersza z przyklejonym do niego znacznikiem odnośnika: „44b)10) …",
+        /// „1d.22) …", „Art. 13mb.44) 1. …", także jednostka niższego poziomu w tym samym wierszu („Art. 5. 1.22) …").
+        /// Tekst jednolity daje odnośnik niemal każdej zmienionej jednostce, a eksport tekstu stawia jego numer tuż za
+        /// oznaczeniem — bez kanału „[…]" oznaczenie przestawało być rozpoznawalne.
+        /// </summary>
+        private static readonly Regex DesignationWithMarker = new(
+            @"^(?<head>„?(?:(?:Art\.|§)\s*\d+[a-z]*(?:\[[^\]]*\])?\.\s+(?:§\s*)?)?\d+[a-z]*(?:\[[^\]]*\])?[.)]|„?(?:Art\.|§)\s*\d+[a-z]*(?:\[[^\]]*\])?\.)(?<marker>\d{1,3}\)|\))(?=\s)",
+            RegexOptions.Compiled);
+
         internal static string Restore(string line)
         {
             var text = line.Any(Plain.ContainsKey) ? Unicode(line) : line;
-            return GluedFootnoteMarker.Replace(text, match => "[" + match.Groups["marker"].Value + "]");
+            text = GluedFootnoteMarker.Replace(text, match => "[" + match.Groups["marker"].Value + "]");
+
+            // Znacznik bez numeru („1.)", „Art. 13ja.)") to kotwica odnośnika, której numeru eksport nie zapisał —
+            // a treści odnośnika eksport tekstu nie ma wcale; zostaje samo oznaczenie.
+            return DesignationWithMarker.Replace(text, match => match.Groups["marker"].Value == ")"
+                ? match.Groups["head"].Value
+                : match.Groups["head"].Value + "[" + match.Groups["marker"].Value + "]");
         }
 
         /// <summary>Ciąg znaków indeksu górnego Unicode → „[…]" ze zwykłymi znakami.</summary>

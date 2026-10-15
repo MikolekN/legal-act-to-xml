@@ -997,6 +997,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   ([ADR-0090](docs/adr/0090-wielkosc-liter-rodzaju-i-organu-w-pdf-wraca-do-postaci-tekstu-aktu.md)).
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): tytuł zgodny z DOCX w 1696 dokumentach (było 353), metadane
     zgodne w całości 1519 (było 294). Struktura bez zmian.
+- **Kotwica odnośnika przy oznaczeniu w TXT**: numer odnośnika przyklejony do oznaczenia jednostki („44b)10) …",
+  „1d.22) …", „Art. 13mb.44) 1. …") przechodzi na kanał „[…]" jak w DOCX, a sam nawias bez numeru („5.) …",
+  „Art. 13ja.) 1. …" — kotwica, której numeru eksport tekstu nie zapisał) znika (`PlainTextSuperscripts`). Tekst jednolity
+  daje odnośnik niemal każdej zmienionej jednostce, więc oznaczenie przestawało być rozpoznawalne co krok.
+  - Korpus w TXT (`--format-parity`, 2151 dokumentów): jednostki 97,73 % → 99,38 % (TJ 97,66 % → 99,52 %), dokumenty
+    z identyczną strukturą 1328 → 1554. DOCX i PDF bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

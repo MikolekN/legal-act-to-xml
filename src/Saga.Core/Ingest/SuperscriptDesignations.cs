@@ -21,6 +21,9 @@ namespace Saga.Core.Ingest
     {
         private const string Designation = @"\d+[a-z]{0,3}(?:\d{1,3}[a-z]?)?";
 
+        /// <summary>Znacznik odnośnika za oznaczeniem („1.[22)] …", „44b)[10)] …").</summary>
+        private const string Marker = @"(?:\[[^\[\]]*\)\])?";
+
         /// <summary>Indeks górny zapisany wprost (znakami indeksu Unicode — <see cref="PlainTextSuperscripts"/>).</summary>
         private const string Explicit = @"(?:\[(?<explicit>[^\[\]]*)\])?";
 
@@ -28,14 +31,14 @@ namespace Saga.Core.Ingest
 
         private static readonly Regex Paragraph = new($@"^(?<lead>§\s*)(?<number>{Designation}){Explicit}(?=\.)", RegexOptions.Compiled);
 
-        private static readonly Regex Passage = new($@"^(?<lead>)(?<number>{Designation}){Explicit}(?=\.\s)", RegexOptions.Compiled);
+        private static readonly Regex Passage = new($@"^(?<lead>)(?<number>{Designation}){Explicit}(?=\.{Marker}\s)", RegexOptions.Compiled);
 
-        private static readonly Regex Point = new($@"^(?<lead>)(?<number>{Designation}){Explicit}(?=\)\s)", RegexOptions.Compiled);
+        private static readonly Regex Point = new($@"^(?<lead>)(?<number>{Designation}){Explicit}(?=\){Marker}\s)", RegexOptions.Compiled);
 
         /// <summary>Pierwsza jednostka niższego poziomu w wierszu jednostki wyższego („Art. 5. 1.", „Art. 5. § 1.", „§ 3. 1.").</summary>
         private static readonly Regex InlineParagraph = new($@"\G\.\s*§\s*(?<number>{Designation})\.", RegexOptions.Compiled);
 
-        private static readonly Regex InlinePassage = new($@"\G\.\s*(?<number>{Designation})\.\s", RegexOptions.Compiled);
+        private static readonly Regex InlinePassage = new($@"\G\.\s*(?<number>{Designation})\.{Marker}\s", RegexOptions.Compiled);
 
         /// <summary>Reszta oznaczenia w indeksie górnym: liczba bez zera na początku, najwyżej z literą („2", „14a").</summary>
         private static readonly Regex SuperscriptPart = new(@"^(?<digits>[1-9]\d{0,2})(?<letter>[a-z]?)$", RegexOptions.Compiled);

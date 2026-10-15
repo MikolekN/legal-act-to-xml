@@ -50,6 +50,18 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void FootnoteAnchorAtADesignation_BecomesAMarker_OrGoesWhenItHasNoNumber()
+        {
+            // Tekst jednolity: odnośnik przy oznaczeniu zmienionej jednostki; eksport tekstu klei jego numer
+            // do oznaczenia albo zapisuje sam nawias.
+            Assert.Equal(
+                ["44b)[10)] przydatność do stosowania;", "1d.[22)] Podmiot pobiera opłaty.", "Art. 13mb.[44)] 1. Krajowymi podmiotami są:",
+                 "Art. 5. 1.[22)] Treść.", "5. Podmiot składa wniosek.", "Art. 13ja. 1. Podmiot świadczy usługę.", "§ 4. Przepisów nie stosuje się."],
+                Read("44b)10) przydatność do stosowania;", "1d.22) Podmiot pobiera opłaty.", "Art. 13mb.44) 1. Krajowymi podmiotami są:",
+                    "Art. 5. 1.22) Treść.", "5.) Podmiot składa wniosek.", "Art. 13ja.) 1. Podmiot świadczy usługę.", "§ 4.) Przepisów nie stosuje się."));
+        }
+
+        [Fact]
         public void NumbersThatAreText_StayAsTheyAre()
         {
             // Jednostka miary z wykładnikiem w nawiasie, punkt wyliczenia, odesłanie — nie znaczniki.
