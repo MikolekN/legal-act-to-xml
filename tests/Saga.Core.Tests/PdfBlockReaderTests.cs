@@ -443,6 +443,18 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void EnumerationUnderAnUppercaseTitle_StartsANewBlock()
+        {
+            var blocks = ReadLines(
+                "DROGI KRAJOWE LUB ICH ODCINKI, NA KTÓRYCH POBIERA SIĘ OPŁATĘ ELEKTRONICZNĄ",
+                "1) autostrada A1 na odcinku węzeł Toruń Południe – Gorzyczki;",
+                "2) autostrada A2.");
+
+            Assert.Equal("DROGI KRAJOWE LUB ICH ODCINKI, NA KTÓRYCH POBIERA SIĘ OPŁATĘ ELEKTRONICZNĄ", blocks[0].Text);
+            Assert.StartsWith("1) autostrada A1", blocks[1].Text);
+        }
+
+        [Fact]
         public void ListItem_EndingWithAConjunction_IsClosed()
         {
             var blocks = ReadLines(

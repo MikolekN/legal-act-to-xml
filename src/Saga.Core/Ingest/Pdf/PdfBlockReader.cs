@@ -597,9 +597,21 @@ namespace Saga.Core.Ingest.Pdf
                 return false;
 
             var prevText = prev.Text.TrimEnd();
-            return ClosedLineEndPattern.IsMatch(prevText)
-                && !ReferenceAbbreviationEndPattern.IsMatch(prevText);
+            return (ClosedLineEndPattern.IsMatch(prevText) && !ReferenceAbbreviationEndPattern.IsMatch(prevText))
+                || IsUppercaseHeading(prevText);
         }
+
+        /// <summary>
+        /// Wiersz wielkimi literami — tytuł załącznika, tabeli, jednostki („DROGI KRAJOWE … ELEKTRONICZNĄ"). Kończy się bez
+        /// znaku, a jednak jest domknięty: wyliczenie pod nim zaczyna nowy blok. Zdanie treści wielkimi literami nie bywa.
+        /// </summary>
+        private static bool IsUppercaseHeading(string text)
+        {
+            var letters = BracketContent.Replace(text, string.Empty).Where(char.IsLetter).ToList();
+            return letters.Count >= 3 && !letters.Any(char.IsLower);
+        }
+
+        private static readonly Regex BracketContent = new(@"\[[^\[\]]*\]", RegexOptions.Compiled);
 
         /// <summary>Typowa interlinia: mediana dodatnich odstępów Y kolejnych wierszy tej samej strony.</summary>
         private static double TypicalLineGap(List<PdfTextLine> lines, double emSize)

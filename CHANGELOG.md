@@ -1035,6 +1035,12 @@ a wersjonowanie zgodne z Semantic Versioning.
     99,59 % → 99,73 %, rozporządzenia 97,42 % → 97,66 %), dokumenty z identyczną strukturą 1510 → 1613 (233 lepiej,
     16 gorzej o łącznie 50 jednostek); dokumenty zgodne ze schematem w całości 1710 → 1793 (DOCX: 1826), dane
     ogłoszenia różne od DOCX w 11 dokumentach (było 100), metadane zgodne w całości 1595 → 1652. TXT i DOCX bez zmian.
+- **Tytuł wielkimi literami domyka wiersz w PDF**: wiersz bez małych liter („DROGI KRAJOWE … ELEKTRONICZNĄ" — tytuł
+  załącznika, tabeli, jednostki) jest domknięty jak wiersz zakończony interpunkcją, więc wyliczenie pod nim („1) …",
+  „1. …") zaczyna nowy blok (`PdfBlockReader`). Wcześniej pierwsza pozycja wyliczenia doklejała się do tytułu.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 99,36 % → 99,45 % (rozporządzenia 97,66 % → 98,02 %,
+    TJ 99,44 % → 99,52 %); 5 dokumentów lepiej o 515 jednostek, 4 gorzej o 35 (tabela opłat w załączniku, której wiersze
+    PDF bez struktury tabeli pokazuje jak ustępy).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
