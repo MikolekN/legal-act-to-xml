@@ -341,6 +341,37 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void RepealedUnit_ClosesItsLine()
+        {
+            var blocks = ReadLines(
+                "Art. 1. 1. Ustawa reguluje:",
+                "1) zasady dochodzenia roszczeń;",
+                "2) (uchylony)",
+                "2. Przepisy ustawy stosuje się również do innych podmiotów.",
+                "1a. (utracił moc)",
+                "3. Ustawa wchodzi w życie.");
+
+            Assert.Equal(
+                ["Art. 1. 1. Ustawa reguluje:", "1) zasady dochodzenia roszczeń;", "2) (uchylony)",
+                 "2. Przepisy ustawy stosuje się również do innych podmiotów.", "1a. (utracił moc)", "3. Ustawa wchodzi w życie."],
+                blocks.Take(6).Select(b => b.Text));
+        }
+
+        [Fact]
+        public void QuotedDesignationLine_IsSeparateFromItsTitle()
+        {
+            var blocks = ReadLines(
+                "Art. 105. W ustawie po dziale IIIA dodaje się dział IIIB w brzmieniu:",
+                "„Dział IIIB",
+                "Realizacja działań finansowanych z udziałem środków Europejskiego Funduszu Społecznego Plus",
+                "Art. 134n. 1. Minister właściwy do spraw zabezpieczenia społecznego pełni funkcję instytucji.”");
+
+            Assert.Equal(
+                ["„Dział IIIB", "Realizacja działań finansowanych z udziałem środków Europejskiego Funduszu Społecznego Plus"],
+                blocks.Skip(1).Take(2).Select(b => b.Text));
+        }
+
+        [Fact]
         public void ListItem_EndingWithAConjunction_IsClosed()
         {
             var blocks = ReadLines(

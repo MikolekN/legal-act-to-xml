@@ -968,6 +968,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w TXT (`--format-parity`, 2151 dokumentów): tytuł zgodny z DOCX w 2052 dokumentach (było 1665), metadane
     zgodne w całości 283 (było 206), treść zgodna ze schematem 2150 z 2151 (było 2148), dokumenty z identyczną
     strukturą 1328 (było 1268).
+- **Jednostka uchylona i oznaczenie przytoczone w PDF**: wiersz zakończony „(uchylony)", „(uchylona)", „(pominięty)",
+  „(utracił moc)", „(wygasł)" jest domknięty, więc następna jednostka („2. Przepisy …") zaczyna nowy blok
+  (`PdfBlockReader`). Wcześniej doklejała się do jednostki uchylonej i ginęła — w tekstach jednolitych co krok.
+  Wiersz oznaczenia jednostki systematyzacyjnej przytoczonej w nowelizacji („„Dział IIIB") jest — jak bez cudzysłowu —
+  osobnym blokiem przed tytułem jednostki; dotąd tytuł doklejał się do oznaczenia, a jednostki pod nią zmieniały adres.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 94,30 % → 96,44 % (ustawy 89,23 % → 95,55 %, TJ
+    94,49 % → 96,45 %, rozporządzenia 97,06 % → 97,11 %); dokumenty z identyczną strukturą 1256 → 1279.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

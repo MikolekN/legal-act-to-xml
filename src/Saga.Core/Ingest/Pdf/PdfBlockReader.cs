@@ -68,11 +68,12 @@ namespace Saga.Core.Ingest.Pdf
             @"^(?:\d{1,3}[a-zA-Z]*[\.\)]\s|„)", RegexOptions.Compiled);
 
         /// <summary>
-        /// Wiersz, który sam jest pełnym oznaczeniem jednostki systematyzacyjnej („Rozdział 1", „DZIAŁ II").
-        /// Tytuł jednostki stoi w następnym wierszu (§ 62 ust. 2 ZTP) — po takim wierszu zaczyna się nowy blok.
+        /// Wiersz, który sam jest pełnym oznaczeniem jednostki systematyzacyjnej („Rozdział 1", „DZIAŁ II"), także
+        /// przytoczonej w nowelizacji („„Dział IIIB"). Tytuł jednostki stoi w następnym wierszu (§ 62 ust. 2 ZTP) — po
+        /// takim wierszu zaczyna się nowy blok.
         /// </summary>
         private static readonly Regex DesignationLinePattern = new(
-            @"^(?:CZĘŚĆ|Część|KSIĘGA|Księga|TYTUŁ|Tytuł|DZIAŁ|Dział|ROZDZIAŁ|Rozdział|ODDZIAŁ|Oddział)\s+\S+\s*$",
+            @"^„?(?:CZĘŚĆ|Część|KSIĘGA|Księga|TYTUŁ|Tytuł|DZIAŁ|Dział|ROZDZIAŁ|Rozdział|ODDZIAŁ|Oddział)\s+\S+\s*$",
             RegexOptions.Compiled);
 
         /// <summary>Nagłówek rodzaju aktu — otwiera strefę tytułową (§ 16–19, § 120 ZTP).</summary>
@@ -128,10 +129,13 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>
         /// Poprzedni wiersz domknięty: kończy się interpunkcją — także przed cudzysłowem zamykającym („… 2024 r.”",
         /// koniec przepisu przytoczonego) — albo spójnikiem, którym pozycja wyliczenia przechodzi w następną
-        /// („1) zgłoszenia płatnika składek oraz" / „2) …"). Skrót referencyjny wyklucza osobny wzorzec.
+        /// („1) zgłoszenia płatnika składek oraz" / „2) …") albo adnotacją jednostki bez treści („5) (uchylony)",
+        /// „Art. 7. (pominięty)", „2. (utracił moc)") — taka jednostka jest kompletna, a tekst jednolity ma ich wiele.
+        /// Skrót referencyjny wyklucza osobny wzorzec.
         /// </summary>
         private static readonly Regex ClosedLineEndPattern = new(
-            $@"(?:[;:,.][{QuotationMarks.ClosingOrStraight}]*|\s(?:oraz|lub|albo))$", RegexOptions.Compiled);
+            $@"(?:[;:,.][{QuotationMarks.ClosingOrStraight}]*|\s(?:oraz|lub|albo)|\((?:uchylon|pominięt|utracił|utraciła|wygasł|skreślon)[^()]{{0,12}}\))$",
+            RegexOptions.Compiled);
 
         private static readonly Regex ReferenceAbbreviationEndPattern = new(
             @"(?:\b(?:poz|[Nn]r|str|art|ust|pkt|lit)\.?|§)\s*$", RegexOptions.Compiled);
