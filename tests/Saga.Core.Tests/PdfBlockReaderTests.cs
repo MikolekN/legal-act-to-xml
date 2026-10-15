@@ -261,6 +261,60 @@ namespace Saga.Core.Tests
                 blocks[0].Text);
         }
 
+        /// <summary>Wiersze z położeniem X, w interlinii 14 pt, z dopełnieniem przepisami przy lewym marginesie (57 pt).</summary>
+        private static IReadOnlyList<DocumentBlock> ReadPlaced(params (string Text, double X)[] lines)
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            var y = 760.0;
+            foreach (var (text, x) in Enumerable.Range(90, 8).Select(n => ($"Art. {n}. Przepis wypełniający stronę.", 57.0)).Concat(lines))
+            {
+                builder.AddText(text, x, y);
+                y -= 14;
+            }
+
+            return Read(builder.Build());
+        }
+
+        [Fact]
+        public void Signature_RightAligned_IsItsOwnBlock()
+        {
+            var blocks = ReadPlaced(
+                ("§ 4. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", 72),
+                ("Minister Finansów: A. Domański", 412));
+
+            Assert.Equal("§ 4. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", blocks[^2].Text);
+            Assert.Equal("Minister Finansów: A. Domański", blocks[^1].Text);
+        }
+
+        [Fact]
+        public void AttachmentLine_RightAligned_OpensTheActAfterTheSignature()
+        {
+            var blocks = ReadPlaced(
+                ("„Art. 88. Ustawa wchodzi w życie z dniem 28 czerwca 2025 r.”.", 72),
+                ("Marszałek Sejmu: S. Hołownia", 400),
+                ("Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej", 337),
+                ("Polskiej z dnia 27 listopada 2024 r. (Dz. U. z 2025 r. poz. 18)", 337),
+                ("USTAWA", 275));
+
+            Assert.Equal(
+                ["„Art. 88. Ustawa wchodzi w życie z dniem 28 czerwca 2025 r.”.", "Marszałek Sejmu: S. Hołownia",
+                 "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 27 listopada 2024 r. (Dz. U. z 2025 r. poz. 18)",
+                 "USTAWA"],
+                blocks.Skip(8).Select(b => b.Text));
+        }
+
+        [Fact]
+        public void AttachmentWords_AtTheLeftMargin_StayInTheParagraph()
+        {
+            // Zdanie zaczynające się od „Załącznik do" w zawiniętym akapicie — przy marginesie to nie wiersz przyłączenia.
+            var blocks = ReadPlaced(
+                ("Art. 5. Wzory dokumentów określa rozporządzenie, a ich wykaz", 72),
+                ("Załącznik do rozporządzenia zawiera wzór wniosku.", 57));
+
+            Assert.Equal("Art. 5. Wzory dokumentów określa rozporządzenie, a ich wykaz Załącznik do rozporządzenia zawiera wzór wniosku.",
+                blocks[^1].Text);
+        }
+
         [Fact]
         public void ScannedPdf_NoTextLayer_ThrowsScannedPdfException()
         {

@@ -22,6 +22,7 @@ namespace Saga.Core.Ingest.Pdf
     /// 7. Wcięcia: X pierwszego wiersza bloku względem dominującego lewego marginesu → twips (1 pt = 20 twips).
     /// 8. Strefa tytułowa: nagłówek rodzaju (z organem), data aktu i przedmiot to osobne bloki, a przedmiot kończy
     ///    się na początku treści — skład nie oddziela ich odstępem większym od interlinii.
+    ///    Wiersze końcowe — podpis i wiersz przyłączenia („Załącznik do …"), odsunięte w prawo — też.
     /// 9. Winieta dziennika na początku pierwszej strony → bloki <see cref="BlockRole.JournalHeader"/>
     ///    (<see cref="JournalMasthead"/>) — jak nagłówek strony DOCX, z danymi ogłoszenia.
     /// Celowo NIE nadaje StyleId (zabetonowałoby błędy) — klasyfikacja idzie gałęzią bezstylową.
@@ -101,6 +102,24 @@ namespace Saga.Core.Ingest.Pdf
             /// <summary>Blok przedmiotu aktu — za datą.</summary>
             Subject,
         }
+
+        /// <summary>
+        /// Podpis aktu: „Minister Finansów: A. Domański", „Prezydent Rzeczypospolitej Polskiej: K. Nawrocki",
+        /// „Minister Infrastruktury: w z. P. Kowalski" — cały wiersz.
+        /// </summary>
+        private static readonly Regex SignatureLinePattern = new(
+            @"^\p{Lu}[\p{L}\s,\-–]{2,120}:\s+(?:w\s+z\.\s+)?(?:\p{Lu}\.\s*){1,3}\p{Lu}[\p{L}\-–]+\s*$", RegexOptions.Compiled);
+
+        /// <summary>Wiersz przyłączenia: „Załącznik do obwieszczenia …", „Załącznik nr 2 do rozporządzenia …".</summary>
+        private static readonly Regex AttachmentLinePattern = new(
+            @"^Załącznik(?:\s+nr\s+\S+)?\s+do\s+\p{L}", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Najmniejsze odsunięcie wiersza końcowego od lewego marginesu (1 cal). Skład Dziennika Ustaw stawia podpis
+        /// i wiersz przyłączenia po prawej stronie, a akapit treści zaczyna się przy marginesie albo wcięciem
+        /// akapitowym — poniżej tej odległości wiersz o tej treści jest zdaniem akapitu, nie wierszem końcowym.
+        /// </summary>
+        private const double ClosingLineMinIndentPoints = 72;
 
         /// <summary>Poprzedni wiersz domknięty: kończy się interpunkcją, ale nie skrótem referencyjnym.</summary>
         private static readonly Regex ClosedLineEndPattern = new(
@@ -337,6 +356,7 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary?.Invoke(line) ?? IsMarkerBoundary(line, prev))
                     || DesignationLinePattern.IsMatch(prev.Text)
                     || (forceBoundary is null && IsTitleZoneBoundary(line, titleZone))
+                    || (forceBoundary is null && IsClosingLineBoundary(line, prev, dominantLeft))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap);
 
@@ -383,6 +403,24 @@ namespace Saga.Core.Ingest.Pdf
             TitleZone.Subject => SubjectEndPattern.IsMatch(line.Text),
             _ => false,
         };
+
+        /// <summary>
+        /// Granica wierszy końcowych aktu: podpis i wiersz przyłączenia („Załącznik do …") stoją po prawej stronie
+        /// i są osobnymi akapitami — bez granicy doklejały się do ostatniego przepisu (podpis), a akt ogłaszany
+        /// w załączniku do obwieszczenia nie miał wiersza, który go otwiera. Wymagane oba sygnały: treść i położenie.
+        /// Za podpisem zaczyna się nowy blok.
+        /// </summary>
+        private static bool IsClosingLineBoundary(PdfTextLine line, PdfTextLine? prev, double dominantLeft)
+        {
+            if (prev is not null && SignatureLinePattern.IsMatch(prev.Text) && IsRightSide(prev, dominantLeft))
+                return true;
+
+            return IsRightSide(line, dominantLeft)
+                && (SignatureLinePattern.IsMatch(line.Text) || AttachmentLinePattern.IsMatch(line.Text));
+        }
+
+        private static bool IsRightSide(PdfTextLine line, double dominantLeft) =>
+            line.StartX - dominantLeft >= ClosingLineMinIndentPoints;
 
         /// <summary>Miejsce w strefie tytułowej bloku, który zaczyna się wierszem <paramref name="line"/>.</summary>
         private static TitleZone NextTitleZone(PdfTextLine line, TitleZone previous)

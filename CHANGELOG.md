@@ -905,6 +905,13 @@ a wersjonowanie zgodne z Semantic Versioning.
     samych aktów: 1826). Treść TJ zgodna ze schematem 559 → 354: obwieszczenie ma już własną strefę tytułową, ale
     wiersz przyłączenia „Załącznik do obwieszczenia …" sklejony z podpisem nie otwiera aktu ogłaszanego, więc jego
     rozdziały stają wprost pod obwieszczeniem — osobna luka adaptera (wiersze końcowe).
+- **Wiersze końcowe w PDF**: podpis („Minister Finansów: A. Domański") i wiersz przyłączenia („Załącznik do
+  obwieszczenia …", „Załącznik nr 2 do rozporządzenia …") odsunięte w prawo są osobnymi blokami (`PdfBlockReader`) —
+  wymagane oba sygnały, treść i położenie (co najmniej cal od lewego marginesu). Wcześniej podpis doklejał się do
+  ostatniego przepisu, a akt ogłaszany w załączniku do obwieszczenia nie miał wiersza, który go otwiera.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 89,98 % → 91,66 % (TJ 89,85 % → 91,75 %); słowa
+    treści 99,32 % → 99,81 %; treść zgodna ze schematem 1772 → 2143 (DOCX: 2151), dokumenty zgodne w całości
+    1339 → 1696 (DOCX: 1826); podpis zgodny z DOCX w 1785 dokumentach (było 518), dane ogłoszenia w 2024 (było 1828).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
