@@ -47,8 +47,11 @@ namespace Saga.Core.Tests
         {
             var blocks = ReadText(Masthead.Concat(Act));
 
-            Assert.All(blocks.Take(4), block => Assert.Equal(BlockRole.JournalHeader, block.Role));
-            Assert.All(blocks.Skip(4), block => Assert.Equal(BlockRole.Body, block.Role));
+            // Winieta wraca jednym blokiem — nagłówek publikatora szuka nazwy, daty i pozycji w obrębie wiersza.
+            var header = Assert.Single(blocks, block => block.Role == BlockRole.JournalHeader);
+            Assert.Equal("DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ Warszawa, dnia 12 stycznia 2026 r. Poz. 26", header.Text);
+            Assert.Same(header, blocks[0]);
+            Assert.All(blocks.Skip(1), block => Assert.Equal(BlockRole.Body, block.Role));
         }
 
         [Fact]
@@ -56,7 +59,7 @@ namespace Saga.Core.Tests
         {
             var blocks = ReadText(new[] { "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", "Warszawa, dnia 12 stycznia 2026 r.", "Poz. 26" }.Concat(Act));
 
-            Assert.Equal(3, blocks.Count(block => block.Role == BlockRole.JournalHeader));
+            Assert.Single(blocks, block => block.Role == BlockRole.JournalHeader);
             Assert.Equal("USTAWA", blocks.First(block => block.Role == BlockRole.Body).Text);
         }
 
@@ -67,7 +70,8 @@ namespace Saga.Core.Tests
             var blocks = ReadText(new[] { "MONITOR", "POLSKI DZIENNIK URZĘDOWY RZECZYPOSPOLITEJ POLSKIEJ", "Warszawa, dnia 4 sierpnia 2025 r. Poz. 719" }
                 .Concat(Act));
 
-            Assert.Equal(3, blocks.Count(block => block.Role == BlockRole.JournalHeader));
+            Assert.Equal("MONITOR POLSKI DZIENNIK URZĘDOWY RZECZYPOSPOLITEJ POLSKIEJ Warszawa, dnia 4 sierpnia 2025 r. Poz. 719",
+                Assert.Single(blocks, block => block.Role == BlockRole.JournalHeader).Text);
             Assert.Equal("USTAWA", blocks.First(block => block.Role == BlockRole.Body).Text);
         }
 
@@ -120,7 +124,7 @@ namespace Saga.Core.Tests
             using var stream = new MemoryStream(builder.Build());
             var blocks = new PdfBlockReader().ReadBlocks(stream);
 
-            Assert.Equal(Masthead, blocks.Where(block => block.Role == BlockRole.JournalHeader).Select(block => block.Text));
+            Assert.Equal(string.Join(" ", Masthead), Assert.Single(blocks, block => block.Role == BlockRole.JournalHeader).Text);
             Assert.StartsWith("Ustawa", blocks.First(block => block.Role == BlockRole.Body).Text);
         }
     }

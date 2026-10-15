@@ -26,7 +26,11 @@ namespace Saga.Core.Ingest
             @"(?:\s+Poz\.\s*\d{1,6}\.?)?$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-        /// <summary>Bloki z winietą oznaczoną rolą <see cref="BlockRole.JournalHeader"/>; bez winiety — te same bloki.</summary>
+        private static string Normalize(string text) => Whitespace.Replace(text, " ").Trim();
+
+        private static readonly Regex Whitespace = new(@"\s+", RegexOptions.Compiled);
+
+        /// <summary>Bloki z winietą jako jednym blokiem w roli <see cref="BlockRole.JournalHeader"/>; bez winiety — te same bloki.</summary>
         internal static IReadOnlyList<DocumentBlock> Mark(IReadOnlyList<DocumentBlock> blocks)
         {
             var length = 0;
@@ -40,9 +44,13 @@ namespace Saga.Core.Ingest
                     break;
             }
 
+            // Winieta wraca jednym blokiem: skład łamie nazwę dziennika na kilka wierszy („MONITOR" / „POLSKI"),
+            // a nagłówek publikatora szuka nazwy, daty i pozycji w obrębie wiersza.
             return length == 0
                 ? blocks
-                : blocks.Select((block, index) => index < length ? block with { Role = BlockRole.JournalHeader } : block).ToList();
+                : [blocks[0] with { Text = Normalize(JoinedUpTo(length)), Role = BlockRole.JournalHeader }, .. blocks.Skip(length)];
+
+            string JoinedUpTo(int count) => string.Join(" ", blocks.Take(count).Select(block => block.Text.Trim()));
         }
     }
 }

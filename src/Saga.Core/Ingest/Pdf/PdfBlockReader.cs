@@ -19,7 +19,8 @@ namespace Saga.Core.Ingest.Pdf
     ///    emitowane NA KOŃCU (parser je pomija; klasyfikator dokumentu czyta z nich sygnały TJ).
     /// 6. Składanie wierszy w bloki-akapity: granica na markerze jednostki (nadzbiór wzorców — tylko
     ///    segmentacja), skoku wcięcia (&gt; 0,5 em) lub odstępie pionowym (&gt; 1,9× typowej interlinii);
-    ///    granica strony NIE jest granicą bloku (jednostka przecięta stroną się skleja). Dehyfenacja
+    ///    granica strony NIE jest granicą bloku (jednostka przecięta stroną się skleja). Odstęp akapitowy (&gt; 1,3×
+    ///    interlinii) dzieli akapity bez oznaczenia, poza wierszami tabeli. Dehyfenacja
     ///    wyłącznie „-" (U+002D) na końcu wiersza + mała litera na początku następnego.
     /// 7. Wcięcia: X pierwszego wiersza bloku względem dominującego lewego marginesu → twips (1 pt = 20 twips).
     /// 8. Strefa tytułowa: nagłówek rodzaju (z organem), data aktu i przedmiot to osobne bloki, a przedmiot kończy
@@ -45,6 +46,17 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         private const double CloseFootnoteSizeRatio = 0.95;
         private const double ParagraphGapRatio = 1.9;
+
+        /// <summary>
+        /// Odstęp akapitowy składu: wiersze akapitu stoją co interlinię, a akapity — z odstępem przed akapitem (Dziennik
+        /// Ustaw: 13 i 19 pkt). Odstęp większy niż 1,3 interlinii dzieli akapity także bez oznaczenia jednostki (część
+        /// wspólna, dalsza treść), ale tylko między wierszami bez kolumn — wiersze tabeli przytoczonej stoją z takim samym
+        /// odstępem, a rozdzielone dawałyby z „1. Poziom naukowy … 70" fałszywe jednostki.
+        /// </summary>
+        private const double ParagraphSpacingRatio = 1.3;
+
+        /// <summary>Odstęp w wierszu (w em), od którego wiersz uznajemy za wiersz tabeli — odstęp między kolumnami.</summary>
+        private const double ColumnGapEm = 2.0;
         private const double PointsToTwips = 20.0;
 
         /// <summary>
@@ -228,11 +240,13 @@ namespace Saga.Core.Ingest.Pdf
                 : 0;
 
             var lastPages = new List<int>();
-            var body = JournalMasthead.Mark(AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
-                startIndex: 0, forceBoundary: null, lastPages));
+            var body = AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
+                startIndex: 0, forceBoundary: null, lastPages);
             var footnotes = AssembleBlocks(footnoteLines, docDominantSize, dominantLeft, BlockRole.FootnoteText,
                 startIndex: body.Count, forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text));
-            var blocks = PdfFootnotes.Link(body, lastPages, footnotes);
+
+            // Odnośniki przed winietą: winieta scala swoje bloki, a strony bloków (lastPages) idą równolegle do listy.
+            var blocks = JournalMasthead.Mark(PdfFootnotes.Link(body, lastPages, footnotes)).ToList();
 
             blocks.AddRange(footnotes);
             return blocks;
@@ -445,7 +459,10 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && IsTitleZoneBoundary(line, titleZone))
                     || (forceBoundary is null && IsClosingLineBoundary(line, prev, dominantLeft))
                     || (line.PageNumber == prev.PageNumber
-                        && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap);
+                        && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
+                    || (forceBoundary is null && line.PageNumber == prev.PageNumber
+                        && prev.BaselineY - line.BaselineY > ParagraphSpacingRatio * typicalGap
+                        && !IsTabular(prev) && !IsTabular(line));
 
                 if (boundary)
                 {
@@ -545,6 +562,8 @@ namespace Saga.Core.Ingest.Pdf
                 return keepLower ? lower : char.ToUpperInvariant(lower[0]) + lower[1..];
             });
         }
+
+        private static bool IsTabular(PdfTextLine line) => line.MaxGap > ColumnGapEm * line.DominantSize;
 
         /// <summary>Miejsce w strefie tytułowej bloku, który zaczyna się wierszem <paramref name="line"/>.</summary>
         private static TitleZone NextTitleZone(PdfTextLine line, TitleZone previous)

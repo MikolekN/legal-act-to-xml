@@ -78,6 +78,8 @@ namespace Saga.Core.Ingest.Pdf
             var sb = new StringBuilder();
             bool inSuperscript = false;
             Letter? prev = null;
+            Letter? lastInk = null;
+            double maxGap = 0;
 
             foreach (var letter in ordered)
             {
@@ -95,6 +97,10 @@ namespace Saga.Core.Ingest.Pdf
                     prev = letter;
                     continue;
                 }
+
+                if (lastInk != null)
+                    maxGap = Math.Max(maxGap, letter.StartBaseLine.X - lastInk.EndBaseLine.X);
+                lastInk = letter;
 
                 bool isSuper = dominantSize > 0
                     && letter.PointSize <= SuperscriptSizeRatio * dominantSize
@@ -140,6 +146,7 @@ namespace Saga.Core.Ingest.Pdf
                 BaselineY = baselineY,
                 DominantSize = dominantSize,
                 PageHeight = page.Height,
+                MaxGap = maxGap,
             };
         }
 

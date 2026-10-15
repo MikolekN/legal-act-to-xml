@@ -1025,6 +1025,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 96,98 % → 99,02 % (TJ 96,77 % → 99,07 %), słowa
     odnośników 45,80 % → 85,08 % (TJ 36,37 % → 85,43 %), dokumenty z identyczną strukturą 1333 → 1510, metadane zgodne
     w całości 1521 → 1595. DOCX i TXT bez zmian.
+- **Odstęp akapitowy w PDF**: akapity stoją w składzie z odstępem przed akapitem (Dziennik Ustaw: wiersze co 13 pkt,
+  akapity co 19 pkt), więc odstęp większy niż 1,3 interlinii dzieli bloki także bez oznaczenia jednostki — część
+  wspólna bez myślnika, dalsza treść, akapity wprowadzenia (`PdfBlockReader`). Nie dotyczy wierszy tabeli (odstęp
+  w wierszu ponad 2 em, `PdfTextLine.MaxGap`): rozdzielone wiersze tabeli przytoczonej dawałyby z „1. Poziom naukowy …
+  70" fałszywe jednostki. Winieta dziennika w PDF i TXT wraca jednym blokiem (`JournalMasthead`) — skład łamie nazwę
+  dziennika („MONITOR" / „POLSKI"), a nagłówek publikatora szuka jej w obrębie wiersza.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 99,02 % → 99,36 % (TJ 99,07 % → 99,44 %, ustawy
+    99,59 % → 99,73 %, rozporządzenia 97,42 % → 97,66 %), dokumenty z identyczną strukturą 1510 → 1613 (233 lepiej,
+    16 gorzej o łącznie 50 jednostek); dokumenty zgodne ze schematem w całości 1710 → 1793 (DOCX: 1826), dane
+    ogłoszenia różne od DOCX w 11 dokumentach (było 100), metadane zgodne w całości 1595 → 1652. TXT i DOCX bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

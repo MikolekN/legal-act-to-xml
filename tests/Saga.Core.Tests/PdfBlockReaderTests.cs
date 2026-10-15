@@ -482,6 +482,57 @@ namespace Saga.Core.Tests
             Assert.StartsWith("[a)]", footnote.Text);
         }
 
+        /// <summary>
+        /// Strona składu z interlinią 13 pkt i odstępem akapitowym (akapity co 19 pkt): przed badanymi wierszami kilka
+        /// trzywierszowych przepisów, żeby typowa interlinia była interlinią wewnątrz akapitu.
+        /// </summary>
+        private static TestPdfBuilder WithSpacedParagraphs(TestPdfBuilder builder, ref double y)
+        {
+            for (var n = 90; n < 96; n++)
+            {
+                builder.AddText($"Art. {n}. Przepis wypełniający stronę, którego zdanie biegnie", 57, y);
+                builder.AddText("na drugi wiersz akapitu, a potem jeszcze", 57, y - 13);
+                builder.AddText("na trzeci.", 57, y - 26);
+                y -= 26 + 19;
+            }
+
+            return builder;
+        }
+
+        [Fact]
+        public void ParagraphSpacing_SeparatesAParagraphWithoutADesignation()
+        {
+            // Część wspólna bez myślnika stoi za ostatnim podpunktem z odstępem akapitowym, nie z interlinią.
+            var y = 760.0;
+            var builder = WithSpacedParagraphs(new TestPdfBuilder().AddPage(), ref y);
+            builder.AddText("7) ustawą z dnia 9 października 2025 r. o zmianie ustawy o zawodach pielęgniarki", 57, y);
+            builder.AddText("oraz zmian wynikających z przepisów ogłoszonych przed dniem 3 grudnia 2025 r.", 57, y - 19);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Equal(
+                ["7) ustawą z dnia 9 października 2025 r. o zmianie ustawy o zawodach pielęgniarki",
+                 "oraz zmian wynikających z przepisów ogłoszonych przed dniem 3 grudnia 2025 r."],
+                blocks.TakeLast(2).Select(b => b.Text));
+        }
+
+        [Fact]
+        public void TableRowsAtParagraphSpacing_StayTogether()
+        {
+            // Wiersze tabeli przytoczonej stoją co odstęp akapitowy; rozdzielone dawałyby z „1. … 70" jednostki.
+            var y = 760.0;
+            var builder = WithSpacedParagraphs(new TestPdfBuilder().AddPage(), ref y);
+            builder.AddText("14) tabela nr 2 otrzymuje brzmienie: Tabela nr 2", 57, y);
+            builder.AddText("1. Poziom naukowy prowadzonej działalności", 57, y - 19);
+            builder.AddText("70", 400, y - 19);
+            builder.AddText("2. Efekty finansowe badań naukowych", 57, y - 38);
+            builder.AddText("10", 400, y - 38);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Contains(blocks, b => b.Text.Contains("Tabela nr 2 1. Poziom naukowy prowadzonej działalności 70 2. Efekty"));
+        }
+
         [Fact]
         public void ScannedPdf_NoTextLayer_ThrowsScannedPdfException()
         {

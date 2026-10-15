@@ -24,5 +24,11 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>Wysokość strony (do klasyfikacji stref marginesów/przypisów).</summary>
         public required double PageHeight { get; init; }
+
+        /// <summary>
+        /// Największy odstęp między sąsiednimi znakami wiersza (punkty), mierzony od końca ostatniego znaku widocznego —
+        /// wiersz tabeli ma między kolumnami odstęp wielokrotnie większy niż między wyrazami.
+        /// </summary>
+        public double MaxGap { get; init; }
     }
 }
