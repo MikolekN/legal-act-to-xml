@@ -874,6 +874,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   w akcie, z ostrzeżeniem walidacji — nie jako ustęp, którego artykuł kodeksu nie dopuszcza. Ustępy wewnątrz
   paragrafu („§ 6. 1. …", „2. …") zostają ustępami.
   - W korpusie zmienia się 1 dokument (307517_2786682): „2." w art. 88 wychodzi jako `nie-ztp-paragraf-kodeksu` (`art_88__par_2`). Zgodnych ze schematem 2280 z 2321 (oba walidatory; było 2279) — niezgodnych zostaje 41 szczotek bez pozycji w dzienniku; treść aktu zgodna we wszystkich 2321 dokumentach; pokrycie tekstu i zgodność bez stylów bez zmian.
+- **Dwukropek przed nowymi wyrazami**: „wyrazy „X” zastępuje się wyrazami: „Y”" w jednym akapicie jest zamianą wyrazów
+  (`AmendmentCommandParser.ReplaceWordsPattern`) — przedtem dwukropek przed cudzysłowem gubił instrukcję.
+  - W korpusie zmienia się 1 dokument (310705_2774450): przybywa jedna instrukcja `now:zamien-tekst` (cel: załącznik 2).
+    Zgodnych ze schematem nadal 2280 z 2321 (oba walidatory, ten sam zbiór).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

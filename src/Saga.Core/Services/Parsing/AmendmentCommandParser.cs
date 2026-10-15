@@ -181,10 +181,11 @@ namespace Saga.Core.Services.Parsing
         /// Obsługuje też formę § 88 („użyte … wyrazy „X" zastępuje się użytymi w odpowiedniej liczbie
         /// i przypadku wyrazami „Y"") — dopuszczalna wstawka między „zastępuje się" a „wyrazami" —
         /// oraz proste cudzysłowy "…" jako ogranicznik brzmień (kanał TXT/PDF; Sanitize nie normalizuje cudzysłowów).
+        /// Dwukropek przed nowym brzmieniem („zastępuje się wyrazami: „Y”") komendy nie zmienia.
         /// </summary>
         internal static readonly Regex ReplaceWordsPattern = new(
             $@"wyraz(?:y|ów|em)?\s+{Quoted("old")}\s+zastępuje\s+się\s+"
-            + $@"(?:[^{QuotationMarks.Any}]{{0,80}}?)wyraz(?:ami|em|y)?\s+{Quoted("new")}",
+            + $@"(?:[^{QuotationMarks.Any}]{{0,80}}?)wyraz(?:ami|em|y)?(?:\s*:)?\s+{Quoted("new")}",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>

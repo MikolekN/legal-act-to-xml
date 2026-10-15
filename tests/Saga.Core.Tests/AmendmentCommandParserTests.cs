@@ -278,6 +278,18 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ReplaceWordsCommand_WithAColonBeforeTheNewWords_IsRecognized()
+        {
+            // Korpus: 310705_2774450 — „zastępuje się wyrazami: „…”" w jednym akapicie.
+            var cmd = AmendmentCommandParser.Parse(
+                "w tabeli nr 4 wyrazy „Wszystkie lata (jak podano w części 1 ust. 6)” zastępuje się wyrazami: „Wszystkie lata (jak podano w części 1 ust. 6 i 7)”.");
+
+            Assert.Equal(AmendmentCommandKind.ReplaceWords, cmd!.Kind);
+            Assert.Equal("Wszystkie lata (jak podano w części 1 ust. 6)", cmd.OldWording);
+            Assert.Equal("Wszystkie lata (jak podano w części 1 ust. 6 i 7)", cmd.NewWording);
+        }
+
+        [Fact]
         public void TiretTarget_IsRecognized()
         {
             var cmd = AmendmentCommandParser.Parse("w art. 5 ust. 2 pkt 3 lit. b tiret 2 otrzymuje brzmienie:");
