@@ -132,6 +132,12 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public List<int?> OpenTiretIndents { get; } = new();
 
+        /// <summary>
+        /// Wcięcie lewe (twips) bloku bieżącej litery; null, gdy blok nie niósł układu. Odróżnia część wspólną liter
+        /// od części wspólnej tiretów w dokumencie bez stylów (<see cref="StructureProcessor"/>).
+        /// </summary>
+        public int? CurrentLetterIndent { get; set; }
+
         /// <summary>Dodaje tiret na stos wraz z jego wcieciem lewym (utrzymuje synchronizacje obu list).</summary>
         public void PushTiret(DtoTiret tiret, int? leftIndentTwips)
         {

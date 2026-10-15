@@ -145,6 +145,49 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Najmniejsza różnica wcięcia, przy której myślnik za tiretem nie jest kolejnym tiretem. Skład Dziennika
+        /// Ustaw stawia część wspólną tiretów 4 pkt (80 twips) przed tiretami — mniej niż tolerancja wcięcia tiretów
+        /// tego samego poziomu (<see cref="TiretIndentTolerance"/>), która musi znosić rozjazd akapitów.
+        /// </summary>
+        private const int CommonPartIndentStep = 40;
+
+        /// <summary>
+        /// Część wspólna za tiretami w dokumencie bez stylów, rozpoznana z wcięcia (ADR-0091). Sam tekst tego nie
+        /// rozstrzyga — po tirecie bez znaku końcowego myślnik jest w korpusie częściej kolejnym tiretem (341) niż
+        /// częścią wspólną (58) — ale układ tak: część wspólna stoi przed tiretami. Myślnik wcięty jak litera zamyka
+        /// litery (część wspólna liter), wcięty między literą a tiretami — tirety (część wspólna tiretów).
+        /// Działa tylko bez stylu i z układem (PDF, DOCX bez szablonu); poprzedni tiret musi zostawiać wyliczenie
+        /// otwarte (§ 57 ust. 3 ZTP).
+        /// </summary>
+        private static bool TryCloseTiretsByIndent(
+            ParsingContext context, ClassificationResult classification, string text, string? styleId, BlockLayoutInfo? layout)
+        {
+            if (classification.IsAmendmentContent
+                || !string.IsNullOrEmpty(styleId)
+                || !IsWrapUpByText(text)
+                || layout?.LeftIndentTwips is not int indent
+                || context.CurrentTiret is not { } tiret
+                || context.CurrentLetter is not { } letter
+                || context.OpenTiretIndents.Count == 0
+                || context.OpenTiretIndents[^1] is not int tiretIndent
+                || indent > tiretIndent - CommonPartIndentStep
+                || !CommonPartPlacement.LeavesEnumerationOpen(tiret.ContentText))
+                return false;
+
+            var closesLetters = context.CurrentLetterIndent is int letterIndent && indent <= letterIndent + CommonPartIndentStep;
+            BaseEntity? parent = closesLetters ? context.CurrentPoint : letter;
+            if (parent is null || !ParsingFactories.AttachWrapUpCommonPart(parent, text))
+                return false;
+
+            context.ClearTiretStack();
+            Log.Warning("Myślnik bez stylu wcięty przed tiretami uznany za część wspólną {Level}: {Text}",
+                closesLetters ? "liter" : "tiretów", text);
+            ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
+                "Część wspólna rozpoznana bez stylu z wcięcia: myślnik stoi przed tiretami, a ostatni tiret nie ma znaku końcowego.");
+            return true;
+        }
+
+        /// <summary>
         /// Część wspólna bez myślnika i bez stylu: akapit bez oznaczenia, zaczynający się małą literą, tuż za
         /// pozycją wyliczenia zakończoną przecinkiem albo bez znaku końcowego. Mała litera znaczy dalszy ciąg
         /// zdania, a pozycja z przecinkiem (albo bez znaku — § 57 ust. 3 ZTP) jest domkniętym członem wyliczenia,
@@ -453,6 +496,7 @@ namespace Saga.Core.Services.Parsing
 
                     context.CurrentLetter = _letterBuilder.Build(
                         new LetterBuildInput(context.CurrentPoint, context.CurrentParagraph, context.CurrentArticle, text));
+                    context.CurrentLetterIndent = layout?.LeftIndentTwips;
                     ValidationReporter.AddClassificationWarning(context.CurrentLetter, classification, "LIT");
                     context.ClearTiretStack();
 
@@ -462,6 +506,9 @@ namespace Saga.Core.Services.Parsing
 
                 case ParagraphKind.Tiret:
                     if (TryHandleStylelessWrapUp(context, classification, text, sourceStyleId))
+                        return true;
+
+                    if (TryCloseTiretsByIndent(context, classification, text, sourceStyleId, layout))
                         return true;
 
                     if (TryContinueAfterDash(context, classification, text, sourceStyleId))

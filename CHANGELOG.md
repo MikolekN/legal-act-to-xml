@@ -1010,6 +1010,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   nowelizacji rozbita na dwa wiersze przestawała być komendą, a akt zmieniany tracił adres.
   - Korpus w TXT (`--format-parity`, 2151 dokumentów): jednostki 99,38 % → 99,43 % (rozporządzenia 97,78 % → 98,58 %),
     dokumenty z identyczną strukturą 1554 → 1628; żaden dokument nie traci. DOCX i PDF bez zmian.
+- **Część wspólna za tiretami bez stylu z wcięcia**: w akapicie bez stylu, z układem (PDF, DOCX bez szablonu), myślnik
+  za tiretem bez znaku końcowego wcięty przed tiretami jest częścią wspólną — liter, gdy stoi na wcięciu litery,
+  w przeciwnym razie tiretów
+  ([ADR-0091](docs/adr/0091-czesc-wspolna-za-tiretami-bez-stylu-rozpoznaje-wciecie.md)). Sam tekst tego nie rozstrzyga
+  (w korpusie po takim tirecie częściej stoi kolejny tiret), więc TXT zostaje bez zmian.
+  - Korpus: DOCX bez zmian (`--compare-exports` 0 z 2321), zgodność bez stylów bez zmian; PDF — dokumenty
+    z identyczną strukturą 1330 → 1333.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

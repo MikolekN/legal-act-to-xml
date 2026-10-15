@@ -2376,6 +2376,47 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0091: część wspólna za tiretami bez stylu rozpoznawana z wcięcia
+        // ============================================================
+
+        [Theory]
+        [InlineData(782, "czesc-wspolna-tiret", "art_1__ust_1__pkt_3__lit_b__czw")]
+        [InlineData(422, "czesc-wspolna-litera", "art_1__ust_1__pkt_3__czw")]
+        [InlineData(862, null, null)]
+        [InlineData(null, null, null)]
+        public void Adr0091_DashIndentedBeforeTheTirets_IsTheirCommonPart_OnlyWithLayoutAndWithoutStyle(
+            int? dashIndent, string? expectedElement, string? expectedEId)
+        {
+            static DocumentBlock Block(string text, int? indent = null) =>
+                new() { Text = text, Layout = indent is null ? null : new BlockLayoutInfo { LeftIndentTwips = indent } };
+
+            var blocks = new List<DocumentBlock>
+            {
+                Block("USTAWA"), Block("z dnia 14 czerwca 2024 r."), Block("o pieczy zastępczej"),
+                Block("Art. 1. 1. Do zadań wojewody należy:"),
+                Block("1) nadzór nad realizacją zadań;", 0),
+                Block("2) prowadzenie rejestru;", 0),
+                Block("3) kontrola:", 0),
+                Block("a) nad zgodnością zatrudnienia;", 422),
+                Block("b) nad realizacją zadań przez:", 422),
+                Block("– jednostki samorządu terytorialnego,", 862),
+                Block("– jednostki organizacyjne wspierania rodziny i systemu pieczy zastępczej", 862),
+                Block("– zwane dalej „kontrolowanymi jednostkami”,", dashIndent),
+                Block("4) prowadzenie szkoleń.", 0),
+                Block("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            };
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks,
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            // Bez wcięcia (TXT) albo wcięty jak tirety — kolejny tiret: sam tekst tego nie rozstrzyga.
+            var part = xml.Descendants().SingleOrDefault(e => e.Name.LocalName.StartsWith("czesc-wspolna"));
+            Assert.Equal(expectedElement, part?.Name.LocalName);
+            if (expectedEId is not null)
+                Assert.EndsWith(expectedEId, (string?)part!.Attribute("eId"));
+            Assert.Equal(expectedElement is null ? 3 : 2, xml.Descendants().Count(e => e.Name.LocalName == "tiret"));
+        }
+
+        // ============================================================
         // ADR-0075: cudzysłów za oznaczeniem artykułu otwiera przytoczenie ustępu tego artykułu
         // ============================================================
 
