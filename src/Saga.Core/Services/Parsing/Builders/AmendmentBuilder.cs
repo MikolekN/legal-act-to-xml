@@ -480,6 +480,7 @@ namespace Saga.Core.Services.Parsing.Builders
                     first.IsImplicit = false;
                     ParsingFactories.ApplyCodeParagraphRole(first, text);
                     ParsingFactories.SetContentAndSegments(first, contentText);
+                    ParsingFactories.AlignWithCodeParagraphs(_currentArticle);
                     _currentParagraph = first;
                 }
                 else
@@ -494,6 +495,7 @@ namespace Saga.Core.Services.Parsing.Builders
                     ParsingFactories.ApplyCodeParagraphRole(paragraph, text);
                     ParsingFactories.SetContentAndSegments(paragraph, contentText);
                     _currentArticle.Paragraphs.Add(paragraph);
+                    ParsingFactories.AlignWithCodeParagraphs(_currentArticle);
                     _currentParagraph = paragraph;
                 }
             }

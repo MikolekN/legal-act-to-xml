@@ -372,6 +372,74 @@ namespace Saga.Core.Tests
             Assert.Equal("artykul", ElementOf(xml, "art_3"));
         }
 
+        // Korpus: 307517_2786682 — w tekście jednolitym kodeksu „2." bez „§" po „§ 1." (literówka źródła).
+        private static readonly string[] CodeArticleWithAnUnsignedParagraph =
+        [
+            "Rozdział 1",
+            "Pełnomocnicy",
+            "Art. 88. § 1. Pełnomocnikiem może być adwokat albo radca prawny.",
+            "2. Na zasadach określonych w odrębnej ustawie czynności zastępstwa wykonuje Prokuratoria Generalna.",
+            "Art. 89. Do pełnomocnika stosuje się odpowiednio przepisy postępowania cywilnego.",
+        ];
+
+        [Fact]
+        public void ParagraphPrintedWithoutTheSign_InACodeArticle_IsANonZtpCodeParagraph()
+        {
+            var document = LegalDocumentParser.ParseBlocks(
+                CodeArticleWithAnUnsignedParagraph.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var unsigned = document.Articles.First().Paragraphs[1];
+            Assert.True(unsigned.CodeParagraphWithoutSign);
+            Assert.Equal(("art_88__par_2", "2"), (unsigned.Id, unsigned.Number!.Value));
+            Assert.Contains(unsigned.ValidationMessages, message => message.Level == ValidationLevel.Warning);
+
+            var xml = LegalDocumentConverter.Convert(document);
+            Assert.Equal("artykul-kodeksu", ElementOf(xml, "art_88"));
+            Assert.Equal("paragraf-kodeksu", ElementOf(xml, "art_88__par_1"));
+            Assert.Equal("nie-ztp-paragraf-kodeksu", ElementOf(xml, "art_88__par_2"));
+            Assert.Equal("artykul", ElementOf(xml, "art_89"));
+        }
+
+        [Fact]
+        public void ParagraphPrintedWithoutTheSign_BeforeTheCodeParagraph_IsAlignedToo()
+        {
+            var xml = ExportCode(
+                "Rozdział 1",
+                "Przepisy ogólne",
+                "Art. 5. 1. Pierwsza jednostka bez znaku paragrafu.",
+                "§ 2. Druga jednostka ze znakiem.");
+
+            Assert.Equal("nie-ztp-paragraf-kodeksu", ElementOf(xml, "art_5__par_1"));
+            Assert.Equal("paragraf-kodeksu", ElementOf(xml, "art_5__par_2"));
+        }
+
+        [Fact]
+        public void ParagraphsNumberedInsideASection_StayParagraphsOfIt()
+        {
+            // Korpus: 338565_3124999 — załącznik rozporządzenia: „§ 6. 1. …" i dalsze „2.", „3." to ustępy § 6, nie literówka.
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Art. 9. § 5. Magazyn posiada zabezpieczenia.",
+                "§ 6. 1. Proch czarny przechowuje się w skrzyniach.",
+                "2. Broń przechowuje się w szafach metalowych.",
+                "3. Dopuszcza się przechowywanie broni w gablotach.",
+                "§ 7. Magazyn zamyka się na dwa zamki.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var paragraphs = document.Articles.First().Paragraphs;
+            Assert.All(paragraphs, paragraph => Assert.False(paragraph.CodeParagraphWithoutSign));
+            Assert.Equal(["art_9__par_5", "art_9__par_6", "art_9__ust_2", "art_9__ust_3", "art_9__par_7"],
+                paragraphs.Select(paragraph => paragraph.Id));
+        }
+
+        [SchemaPlFact]
+        public void CodeArticleWithAnUnsignedParagraph_IsSchemaValid()
+        {
+            var xml = ExportCode(CodeArticleWithAnUnsignedParagraph);
+
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
+        }
+
         [Fact]
         public void ArticleWithCodeParagraphs_OutsideAChapter_StaysAnArticle()
         {

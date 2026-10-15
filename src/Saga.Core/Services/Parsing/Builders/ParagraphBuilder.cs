@@ -33,6 +33,7 @@ namespace Saga.Core.Services.Parsing.Builders
                 currentParagraph.IsImplicit = false;
                 ParsingFactories.ApplyCodeParagraphRole(currentParagraph, text);
                 ParsingFactories.SetContentAndSegments(currentParagraph, contentText);
+                ParsingFactories.AlignWithCodeParagraphs(article);
                 return currentParagraph;
             }
 
@@ -46,6 +47,7 @@ namespace Saga.Core.Services.Parsing.Builders
             ParsingFactories.ApplyCodeParagraphRole(paragraph, text);
             ParsingFactories.SetContentAndSegments(paragraph, contentText);
             article.Paragraphs.Add(paragraph);
+            ParsingFactories.AlignWithCodeParagraphs(article);
             return paragraph;
         }
 

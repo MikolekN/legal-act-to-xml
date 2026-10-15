@@ -14,7 +14,7 @@ namespace Saga.Core.Services.Converters
         {
             var isImplicit = IsParagraphImplicit(paragraph);
             var designated = UnitAddressXml.HasDesignation(paragraph);
-            var isPathological = IsPathological(paragraph) || (!isImplicit && !designated);
+            var isPathological = IsPathological(paragraph) || (!isImplicit && !designated) || paragraph.CodeParagraphWithoutSign;
 
             // Parsowane dokumenty potrafią zawierać puste ustępy
             if (isImplicit

@@ -3,6 +3,7 @@ using Saga.Core.Helpers;
 using Saga.Core.Services.Classify;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
+using Serilog;
 using DtoArticle = Saga.Model.EditorialUnits.Article;
 using DtoLetter = Saga.Model.EditorialUnits.Letter;
 using DtoParagraph = Saga.Model.EditorialUnits.Paragraph;
@@ -32,6 +33,43 @@ namespace Saga.Core.Services.Parsing
             paragraph.Role = DtoParagraph.CodeParagraphRole;
             paragraph.EIdPrefix = DtoParagraph.CodeParagraphRole;
             paragraph.DisplayLabel = "§";
+        }
+
+        /// <summary>
+        /// Artykuł nie miesza ustępów z paragrafami kodeksu. Ustęp z oznaczeniem bez „§", który ciągnie numerację
+        /// sąsiedniego paragrafu kodeksu („§ 1." i „2."; „1." i „§ 2."), jest paragrafem kodeksu zapisanym niezgodnie
+        /// z ZTP (literówka źródła): dostaje rolę i prefiks eId paragrafu, a oznaczenie zostaje takie, jak wydrukowane.
+        /// Inne „N." za paragrafem („§ 6. 1. Proch …", „2. Broń …") to ustępy tego paragrafu, nie literówka.
+        /// </summary>
+        public static void AlignWithCodeParagraphs(DtoArticle? article)
+        {
+            if (article is null
+                || !article.Paragraphs.Any(paragraph => paragraph is { Role: DtoParagraph.CodeParagraphRole, CodeParagraphWithoutSign: false }))
+                return;
+
+            var paragraphs = article.Paragraphs;
+            for (var i = 0; i < paragraphs.Count; i++)
+            {
+                var paragraph = paragraphs[i];
+                if (paragraph.Role == DtoParagraph.CodeParagraphRole || paragraph.IsImplicit || paragraph.Number is not { } number)
+                    continue;
+
+                var continuesPrevious = i > 0 && paragraphs[i - 1] is { Role: DtoParagraph.CodeParagraphRole, Number: { } previous }
+                    && number.NumericPart == previous.NumericPart + 1;
+                var precedesNext = i + 1 < paragraphs.Count && paragraphs[i + 1] is { Role: DtoParagraph.CodeParagraphRole, Number: { } next }
+                    && next.NumericPart == number.NumericPart + 1;
+                if (!continuesPrevious && !precedesNext)
+                    continue;
+
+                paragraph.Role = DtoParagraph.CodeParagraphRole;
+                paragraph.EIdPrefix = DtoParagraph.CodeParagraphRole;
+                paragraph.CodeParagraphWithoutSign = true;
+
+                Log.Warning("Oznaczenie „{Number}.” bez „§” w artykule z paragrafami kodeksu — paragraf kodeksu spoza ZTP (art. {Article})",
+                    number.Value, article.Number?.Value);
+                ValidationReporter.AddValidationMessage(paragraph, ValidationLevel.Warning,
+                    "Oznaczenie bez „§” w artykule z paragrafami kodeksu — odczytane jako paragraf kodeksu spoza ZTP.");
+            }
         }
 
         /// <summary>

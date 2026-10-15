@@ -105,5 +105,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0084](0084-przytoczony-przepis-zmieniajacy-jest-jednostka-z-wlasnymi-nowelizacjami.md) | Przytoczony przepis zmieniający z własnym cytatem jest jednostką z własnymi nowelizacjami (częściowo zastępuje ADR-0036); wiersze cudzysłowu otwartego w środku akapitu są tekstem tego akapitu, nie jednostkami | Accepted | 2026-10-14 |
 | [0085](0085-otwarty-cudzyslow-cytatu-przewaza-nad-stylem-ustawy-matki.md) | Dopóki cudzysłów zebranej treści cytowanej jest otwarty, akapit w stylu ustawy matki jest treścią cytowaną; cytat kończy akapit z komendą albo kolejna jednostka aktu zmieniającego | Accepted | 2026-10-14 |
 | [0086](0086-czesc-wspolna-bez-wyliczenia-i-bez-komendy-ktora-ja-nazywa-jest-tekstem-cytowanym.md) | Treść cytowana z samych części wspólnych, bez wyliczenia i pod komendą, która części wspólnej nie nazywa, jest tekstem cytowanym | Accepted | 2026-10-14 |
+| [0087](0087-oznaczenie-bez-paragrafu-w-artykule-kodeksu-to-paragraf-kodeksu-spoza-ztp.md) | Ustęp z oznaczeniem bez „§", który ciągnie numerację paragrafów kodeksu, to paragraf kodeksu spoza ZTP (`nie-ztp-paragraf-kodeksu`, eId `par`, numer jak wydrukowany) | Accepted | 2026-10-15 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

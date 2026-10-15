@@ -40,6 +40,13 @@ namespace Saga.Model.EditorialUnits
         /// </summary>
         public string? Role { get; set; }
 
+        /// <summary>
+        /// Paragraf kodeksu, którego oznaczenie wydrukowano bez „§" („2." w artykule z „§ 1.") — jednostka spoza ZTP.
+        /// Numer zostaje taki, jak w akcie; rola i prefiks eId są paragrafu kodeksu, bo artykuł nie miesza ustępów
+        /// z paragrafami.
+        /// </summary>
+        public bool CodeParagraphWithoutSign { get; set; }
+
         public Paragraph()
         {
             UnitType = UnitType.Paragraph;

@@ -866,6 +866,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   i 6.3.1.9 otrzymują brzmienie:"), są tekstem cytowanym — jeden `cytat-w-tekscie` zamiast osobnego `cytat-strukt` na
   każdy akapit z adresem `…__czw`.
   - W korpusie zmienia się 7 dokumentów: 121 części wspólnych bez wyliczenia (podpisy rysunków, tytuły tabel, pozycje efektów kształcenia „B.W15.") przestaje wychodzić osobnymi cytatami `cytat-strukt` — 54 cytaty tekstu zamiast 121 cytatów strukturalnych; w jednym tekście jednolitym znika fałszywa nowelizacja aktu przez samego siebie (część wspólna w stylu zmiany zostaje dalszą treścią punktu). Zgodnych ze schematem nadal 2279 z 2321 (oba walidatory, ten sam zbiór); pokrycie tekstu bez zmian. Zgodność bez stylów rozporządzeń 98,64 % → 99,04 % jednostek (brakujących 396 → 276; w pełni zgodnych 1013 → 1015 dokumentów).
+- **Paragraf kodeksu bez „§"** ([ADR-0087](docs/adr/0087-oznaczenie-bez-paragrafu-w-artykule-kodeksu-to-paragraf-kodeksu-spoza-ztp.md)): „2." wydrukowane bez „§" po „§ 1." (albo
+  „1." przed „§ 2.") w artykule kodeksu wychodzi jako `nie-ztp-paragraf-kodeksu` z adresem `par` i numerem jak
+  w akcie, z ostrzeżeniem walidacji — nie jako ustęp, którego artykuł kodeksu nie dopuszcza. Ustępy wewnątrz
+  paragrafu („§ 6. 1. …", „2. …") zostają ustępami.
+  - W korpusie zmienia się 1 dokument (307517_2786682): „2." w art. 88 wychodzi jako `nie-ztp-paragraf-kodeksu` (`art_88__par_2`). Zgodnych ze schematem 2280 z 2321 (oba walidatory; było 2279) — niezgodnych zostaje 41 szczotek bez pozycji w dzienniku; treść aktu zgodna we wszystkich 2321 dokumentach; pokrycie tekstu i zgodność bez stylów bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

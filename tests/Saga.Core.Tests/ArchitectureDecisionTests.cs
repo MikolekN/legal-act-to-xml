@@ -2817,6 +2817,29 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0087: oznaczenie bez „§" w artykule z paragrafami kodeksu to paragraf kodeksu spoza ZTP
+        // ============================================================
+
+        [Fact]
+        public void Adr0087_UnsignedDesignationInACodeArticle_IsANonZtpCodeParagraph_WithItsPrintedNumber()
+        {
+            static XElement Export(params string[] lines) => LegalDocumentConverter.Convert(
+                LegalDocumentParser.ParseBlocks(lines.Select(text => new DocumentBlock { Text = text }).ToList()));
+            static XElement Unit(XElement xml, string eId) => xml.Descendants().Single(e => e.Attribute("eId")?.Value == eId);
+
+            // „2." po „§ 1." — artykuł nie miesza ustępów z paragrafami: paragraf kodeksu spoza ZTP, numer jak w akcie.
+            var code = Export("Rozdział 1", "Pełnomocnicy",
+                "Art. 88. § 1. Pełnomocnikiem może być adwokat.", "2. Zastępstwo wykonuje Prokuratoria Generalna.");
+            var unsigned = Unit(code, "art_88__par_2");
+            Assert.Equal("nie-ztp-paragraf-kodeksu", unsigned.Name.LocalName);
+            Assert.Equal("2", unsigned.Elements().First(e => e.Name.LocalName == "nr").Value);
+
+            // Artykuł bez „§" zostaje przy ustępach.
+            var statute = Export("Art. 3. 1. Pierwszy ustęp.", "2. Drugi ustęp.");
+            Assert.Equal("ustep", Unit(statute, "art_3__ust_2").Name.LocalName);
+        }
+
+        // ============================================================
         // ADR-0031: tekst jednolity pod korzeniem „obwieszczenie"
         // ============================================================
 

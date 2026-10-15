@@ -236,6 +236,8 @@ Format: `art_5__ust_2__pkt_3__lit_a__tir_1`
   dopisuje dopiero eksport — [ADR-0027](adr/0027-prefiks-aktu-dopisuje-eksport.md)
 - Paragraf kodeksu (§ 55 ust. 3 ZTP) to `Paragraph` z prefiksem `par` zamiast `ust` (`art_2__par_1`),
   eksportowany jako `paragraf-kodeksu`; rolę nadaje `ParsingFactories.ApplyCodeParagraphRole` po znaku „§".
+  Oznaczenie bez „§", które ciągnie numerację paragrafów („§ 1." i „2."), to paragraf kodeksu spoza ZTP
+  (`ParsingFactories.AlignWithCodeParagraphs`, [ADR-0087](adr/0087-oznaczenie-bez-paragrafu-w-artykule-kodeksu-to-paragraf-kodeksu-spoza-ztp.md)).
 - Logika w `BaseEntity.Id` (getter) — buduje od bieżącej encji do korzenia, odwraca kolejność
 
 ### 4.4 Klasa bazowa `BaseEntity`
