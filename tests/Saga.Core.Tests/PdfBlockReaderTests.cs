@@ -164,6 +164,21 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SpaceSetInSuperscriptSize_StaysOutsideTheSuperscript()
+        {
+            // „po art. 4e² dodaje się" — spacja za indeksem złożona jego rozmiarem i podniesiona jak on.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("4) po art. 4e", 57, 700, 11)
+                .AddText("2 ", 116.5, 703.5, 7)
+                .AddText("dodaje się art. 4e", 124, 700, 11))
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains(blocks, b => b.Text.StartsWith("4) po art. 4e[2] dodaje się"));
+        }
+
+        [Fact]
         public void FootnoteZone_SmallerFontAtBottom_BecomesFootnoteBlocksAtEnd()
         {
             var builder = new TestPdfBuilder().AddPage();
@@ -369,6 +384,20 @@ namespace Saga.Core.Tests
             Assert.Equal(
                 ["„Dział IIIB", "Realizacja działań finansowanych z udziałem środków Europejskiego Funduszu Społecznego Plus"],
                 blocks.Skip(1).Take(2).Select(b => b.Text));
+        }
+
+        [Fact]
+        public void RepealNoteOnItsOwnLine_IsSeparateFromTheTitle()
+        {
+            var blocks = ReadLines(
+                "Rozdział 2",
+                "Skutki ogłoszenia upadłości co do zobowiązań upadłego",
+                "(oznaczenie i tytuł oddziału 1 – uchylone)",
+                "Art. 83. Postanowienia umowy są nieważne.");
+
+            Assert.Equal(
+                ["Rozdział 2", "Skutki ogłoszenia upadłości co do zobowiązań upadłego", "(oznaczenie i tytuł oddziału 1 – uchylone)"],
+                blocks.Take(3).Select(b => b.Text));
         }
 
         [Fact]

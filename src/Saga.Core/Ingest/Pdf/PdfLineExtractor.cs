@@ -81,6 +81,21 @@ namespace Saga.Core.Ingest.Pdf
 
             foreach (var letter in ordered)
             {
+                // Odstęp nie należy do indeksu górnego, nawet złożony jego rozmiarem (spacja za „4e³" w składzie
+                // LibreOffice): w kanale dawałby „art. 4e[3 ]w[ ]brzmieniu", a komenda nowelizacji przestawała pasować.
+                if (string.IsNullOrWhiteSpace(letter.Value))
+                {
+                    if (inSuperscript)
+                    {
+                        sb.Append(']');
+                        inSuperscript = false;
+                    }
+
+                    sb.Append(' ');
+                    prev = letter;
+                    continue;
+                }
+
                 bool isSuper = dominantSize > 0
                     && letter.PointSize <= SuperscriptSizeRatio * dominantSize
                     && letter.StartBaseLine.Y - baselineY > SuperscriptRaiseRatio * dominantSize;

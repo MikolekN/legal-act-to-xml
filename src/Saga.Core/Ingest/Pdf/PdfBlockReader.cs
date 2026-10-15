@@ -127,6 +127,14 @@ namespace Saga.Core.Ingest.Pdf
         private const double ClosingLineMinIndentPoints = 72;
 
         /// <summary>
+        /// Adnotacja o jednostce uchylonej stojąca w osobnym wierszu: „(uchylony)" pod oznaczeniem rozdziału,
+        /// „(zawierający art. 25–30 – uchylony)", „(oznaczenie i tytuł oddziału 1 – uchylone)". W DOCX to osobny akapit;
+        /// w PDF bez granicy doklejała się do tytułu jednostki, a jednostki za nią zmieniały adres.
+        /// </summary>
+        private static readonly Regex RepealNoteLinePattern = new(
+            @"^\([^()]*(?:uchylon|pominięt|utracił|utraciła|wygasł|skreślon)[^()]*\)$", RegexOptions.Compiled);
+
+        /// <summary>
         /// Poprzedni wiersz domknięty: kończy się interpunkcją — także przed cudzysłowem zamykającym („… 2024 r.”",
         /// koniec przepisu przytoczonego) — albo spójnikiem, którym pozycja wyliczenia przechodzi w następną
         /// („1) zgłoszenia płatnika składek oraz" / „2) …") albo adnotacją jednostki bez treści („5) (uchylony)",
@@ -405,6 +413,7 @@ namespace Saga.Core.Ingest.Pdf
                 bool boundary = prev == null
                     || (forceBoundary?.Invoke(line) ?? IsMarkerBoundary(line, prev))
                     || DesignationLinePattern.IsMatch(prev.Text)
+                    || (forceBoundary is null && RepealNoteLinePattern.IsMatch(line.Text.Trim()))
                     || (forceBoundary is null && IsTitleZoneBoundary(line, titleZone))
                     || (forceBoundary is null && IsClosingLineBoundary(line, prev, dominantLeft))
                     || (line.PageNumber == prev.PageNumber

@@ -975,6 +975,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   osobnym blokiem przed tytułem jednostki; dotąd tytuł doklejał się do oznaczenia, a jednostki pod nią zmieniały adres.
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 94,30 % → 96,44 % (ustawy 89,23 % → 95,55 %, TJ
     94,49 % → 96,45 %, rozporządzenia 97,06 % → 97,11 %); dokumenty z identyczną strukturą 1256 → 1279.
+- **Indeks górny i adnotacje o uchyleniu w PDF**: odstęp złożony rozmiarem indeksu górnego nie wchodzi do indeksu
+  (`PdfLineExtractor`) — kanał dawał „po art. 4e[2 ]dodaje się art. 4e[3 ]w[ ]brzmieniu:", więc komenda nowelizacji
+  nie pasowała, a przepis dodawany wypadał z cytatu. Adnotacja o uchyleniu w osobnym wierszu („(uchylony)",
+  „(zawierający art. 25–30 – uchylony)", „(oznaczenie i tytuł oddziału 1 – uchylone)") jest osobnym blokiem, jak
+  akapit DOCX, a nie dalszym ciągiem tytułu jednostki.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 96,44 % → 96,94 % (ustawy 95,55 % → 99,48 %, TJ
+    96,45 % → 96,73 %, rozporządzenia 97,11 % → 97,29 %); treść zgodna ze schematem 2143 → 2148, dokumenty zgodne
+    w całości 1705 → 1710.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
