@@ -455,6 +455,19 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ConjunctionAloneOnTheLastLineOfAnItem_ClosesIt()
+        {
+            var blocks = ReadLines(
+                "Art. 89. 1. Kto nie powiadomił Prezesa Urzędu o:",
+                "1) wstrzymaniu badania klinicznego lub nie przedstawił uzasadnienia,",
+                "lub",
+                "2) wstrzymaniu badania działania.");
+
+            Assert.Equal("1) wstrzymaniu badania klinicznego lub nie przedstawił uzasadnienia, lub", blocks[1].Text);
+            Assert.StartsWith("2) wstrzymaniu badania działania", blocks[2].Text);
+        }
+
+        [Fact]
         public void FootnoteZone_LetterMarker_BecomesFootnote()
         {
             // Tekst jednolity: odnośnik obwieszczenia oznaczony literą w indeksie górnym.
@@ -670,6 +683,40 @@ namespace Saga.Core.Tests
 
             var footnote = Assert.Single(blocks.SelectMany(b => b.Footnotes));
             Assert.Equal("4", footnote.Symbol);
+            Assert.Equal(["Artykuł 24 zawiera zmiany do ustawy o mieszkalnictwie."], footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void PointWithAFootnoteAnchorRightAfterItsNumber_StartsABlock()
+        {
+            // Tekst jednolity: „1)" z odwołaniem do odnośnika w indeksie górnym tuż za numerem („1)[)]").
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText("Art. 2. Ilekroć w niniejszej ustawie jest mowa o:", 57, 700);
+            builder.AddText("1)", 57, 686);
+            builder.AddText(")", 66.5, 689.5, 6);
+            builder.AddText("badaniu ustawowym – należy przez to rozumieć badanie sprawozdania;", 72, 686);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Contains(blocks, b => b.Text == "Art. 2. Ilekroć w niniejszej ustawie jest mowa o:");
+            Assert.Contains(blocks, b => b.Text.StartsWith("1) badaniu ustawowym"));
+        }
+
+        [Fact]
+        public void UnnumberedReference_IsLinkedToTheUnnumberedFootnoteOnItsPage()
+        {
+            // Warstwa tekstowa zgubiła numer i w odwołaniu („[)]"), i w odnośniku („[)] …").
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 30. Ustawa zmieniana w art. 24", "", footnote: null);
+            builder.AddText(")", 57, 93.5, 6);
+            builder.AddText("Artykuł 24 zawiera zmiany do ustawy o mieszkalnictwie.", 66, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var referencing = Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            Assert.Contains("[1)]", referencing.Text);
+            var footnote = Assert.Single(referencing.Footnotes);
+            Assert.Equal(("1", "1"), (footnote.Symbol, footnote.Marker));
             Assert.Equal(["Artykuł 24 zawiera zmiany do ustawy o mieszkalnictwie."], footnote.Paragraphs);
         }
 

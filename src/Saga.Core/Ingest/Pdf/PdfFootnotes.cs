@@ -28,6 +28,9 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Indeks górny z co najmniej jednym oznaczeniem odnośnika („[1)]", „[1), 2)]", „[a)]").</summary>
         private static readonly Regex Superscript = new(@"\[[^\[\]]*\)[^\[\]]*\]", RegexOptions.Compiled);
 
+        /// <summary>Znacznik bez oznaczenia — warstwa tekstowa zapisała z indeksu górnego tylko nawias („[)]").</summary>
+        private static readonly Regex UnnumberedMarker = new(@"^\[\s*\)\s*\]$", RegexOptions.Compiled);
+
         private static readonly Regex Item = new(@"(?<![\p{L}\d])(?<symbol>\d{1,3}|[a-z]{1,2})\)", RegexOptions.Compiled);
 
         /// <summary>Oznaczenie na początku bloku odnośnika („[1)] …", „1) …", „[a)] …", bez oznaczenia — „[)] …").</summary>
@@ -57,12 +60,6 @@ namespace Saga.Core.Ingest.Pdf
                 .ToList();
 
             var result = new List<DocumentBlock>(body.Count);
-            if (notes.Count == 0)
-            {
-                result.AddRange(body);
-                return result;
-            }
-
             var numbering = new Numbering();
             for (var i = 0; i < body.Count; i++)
             {
@@ -71,22 +68,40 @@ namespace Saga.Core.Ingest.Pdf
                 var last = i < lastPages.Count ? lastPages[i] : first;
                 List<BlockFootnote>? attached = null;
 
-                var text = Superscript.Replace(block.Text, superscript => Item.Replace(superscript.Value, item =>
+                bool OnThesePages(Note n) => !n.Used && n.Page >= first && n.Page <= last;
+
+                var text = Superscript.Replace(block.Text, superscript =>
                 {
-                    var symbol = item.Groups["symbol"].Value;
-                    bool OnThesePages(Note n) => !n.Used && n.Page >= first && n.Page <= last;
-                    var note = notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol == symbol)
-                        ?? notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol.Length == 0);
-                    if (note is null)
-                        return item.Value;
+                    // Odwołanie bez oznaczenia łączy się z odnośnikiem bez oznaczenia z tej samej strony, w kolejności,
+                    // i dostaje kolejny numer bieżącego ciągu; bez odnośnika zostaje sam ślad — ginie.
+                    if (UnnumberedMarker.IsMatch(superscript.Value))
+                    {
+                        var unnumbered = notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol.Length == 0);
+                        if (unnumbered is null)
+                            return string.Empty;
 
-                    note.Used = true;
-                    var (marker, run) = numbering.Next(symbol);
-                    (attached ??= []).Add(new BlockFootnote(symbol, [note.Text]) { Marker = marker, Run = run });
-                    return marker + ")";
-                }));
+                        unnumbered.Used = true;
+                        var (symbol, marker, run) = numbering.NextUnknown();
+                        (attached ??= []).Add(new BlockFootnote(symbol, [unnumbered.Text]) { Marker = marker, Run = run });
+                        return "[" + marker + ")]";
+                    }
 
-                result.Add(attached is null ? block : block with { Text = text, Footnotes = attached });
+                    return Item.Replace(superscript.Value, item =>
+                    {
+                        var symbol = item.Groups["symbol"].Value;
+                        var note = notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol == symbol)
+                            ?? notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol.Length == 0);
+                        if (note is null)
+                            return item.Value;
+
+                        note.Used = true;
+                        var (marker, run) = numbering.Next(symbol);
+                        (attached ??= []).Add(new BlockFootnote(symbol, [note.Text]) { Marker = marker, Run = run });
+                        return marker + ")";
+                    });
+                });
+
+                result.Add(attached is null && text == block.Text ? block : block with { Text = text, Footnotes = attached ?? block.Footnotes });
             }
 
             return result;
@@ -116,6 +131,19 @@ namespace Saga.Core.Ingest.Pdf
                 _last = value;
                 _letters = letters;
                 return ((_run * RunBase + value).ToString(CultureInfo.InvariantCulture), _run);
+            }
+
+            /// <summary>Odnośnik bez oznaczenia: następny w bieżącym ciągu numeracji (oznaczenie odtworzone z kolejności).</summary>
+            internal (string Symbol, string Marker, int Run) NextUnknown()
+            {
+                if (_run < 0)
+                    _run = 0;
+
+                _last++;
+                var symbol = _letters
+                    ? new string((char)('a' + (_last - 1) % 26), (_last - 1) / 26 + 1)
+                    : _last.ToString(CultureInfo.InvariantCulture);
+                return (symbol, (_run * RunBase + _last).ToString(CultureInfo.InvariantCulture), _run);
             }
         }
     }

@@ -55,17 +55,18 @@ namespace Saga.Core.Ingest.Pdf
         private static readonly Regex UnconditionalMarkerPattern = new(
             @"^(?:Art\.|§\s*\d|USTAWA\b|ROZPORZĄDZENIE\b|OBWIESZCZENIE\b|UCHWAŁA\b|ZARZĄDZENIE\b" +
             @"|CZĘŚĆ\s|KSIĘGA\s|TYTUŁ\s|DZIAŁ\s|ROZDZIAŁ\s|Rozdział\s|ODDZIAŁ\s|Oddział\s" +
-            @"|[a-z]{1,2}\)\s|[–\-−]\s)",
+            @"|[a-z]{1,2}\)(?:\[[^\[\]]*\])?\s|[–\-−]\s)",
             RegexOptions.Compiled);
 
         /// <summary>
-        /// Markery WARUNKOWE — cyfrowe „N)/N." (limit 3 cyfry) i cytat otwierający „. Odpalają tylko,
+        /// Markery WARUNKOWE — cyfrowe „N)/N." (limit 3 cyfry, także z indeksem górnym oznaczenia „5[1])" i ze
+        /// znacznikiem odnośnika tuż za oznaczeniem „1)[12)]", „1)[)]") i cytat otwierający „. Odpalają tylko,
         /// gdy poprzedni wiersz wygląda na DOMKNIĘTY (kończy się interpunkcją [;:,.] i nie skrótem
         /// „poz./nr/str./art./ust./pkt/lit."): zawinięcie „…(Dz. U. poz. ⏎ 1234) wprowadza…" ani
         /// „…zastępuje się wyrazami ⏎ „centrum…"" nie może rozcinać zdania (fałszywy punkt/cytat).
         /// </summary>
         private static readonly Regex ConditionalMarkerPattern = new(
-            @"^(?:\d{1,3}[a-zA-Z]*[\.\)]\s|„)", RegexOptions.Compiled);
+            @"^(?:\d{1,3}[a-zA-Z]*(?:\[[^\[\]]*\])?[\.\)](?:\[[^\[\]]*\])?\s|„)", RegexOptions.Compiled);
 
         /// <summary>
         /// Wiersz, który sam jest pełnym oznaczeniem jednostki systematyzacyjnej („Rozdział 1", „DZIAŁ II"), także
@@ -150,7 +151,7 @@ namespace Saga.Core.Ingest.Pdf
         /// Skrót referencyjny wyklucza osobny wzorzec.
         /// </summary>
         private static readonly Regex ClosedLineEndPattern = new(
-            $@"(?:[;:,.][{QuotationMarks.ClosingOrStraight}]*|\s(?:oraz|lub|albo)|\((?:uchylon|pominięt|utracił|utraciła|wygasł|skreślon)[^()]{{0,12}}\))$",
+            $@"(?:[;:,.][{QuotationMarks.ClosingOrStraight}]*|(?:^|\s)(?:oraz|lub|albo)|\((?:uchylon|pominięt|utracił|utraciła|wygasł|skreślon)[^()]{{0,12}}\))$",
             RegexOptions.Compiled);
 
         private static readonly Regex ReferenceAbbreviationEndPattern = new(

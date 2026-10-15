@@ -1017,6 +1017,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   (w korpusie po takim tirecie częściej stoi kolejny tiret), więc TXT zostaje bez zmian.
   - Korpus: DOCX bez zmian (`--compare-exports` 0 z 2321), zgodność bez stylów bez zmian; PDF — dokumenty
     z identyczną strukturą 1330 → 1333.
+- **Kotwica odnośnika przy oznaczeniu w PDF**: znacznik odnośnika w indeksie górnym tuż za oznaczeniem („1)[12)]",
+  „1)[)]", także indeks górny oznaczenia „5[1])") nie przeszkadza już rozpoznać początku punktu albo litery
+  (`PdfBlockReader`); odwołanie bez oznaczenia („[)]" — numer zgubiony w warstwie tekstowej) łączy się z odnośnikiem
+  bez oznaczenia z tej samej strony w kolejności i dostaje kolejny numer ciągu, a bez odnośnika znika
+  (`PdfFootnotes`). Spójnik sam w ostatnim wierszu pozycji („…, " / „lub") domyka ją jak spójnik na końcu wiersza.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 96,98 % → 99,02 % (TJ 96,77 % → 99,07 %), słowa
+    odnośników 45,80 % → 85,08 % (TJ 36,37 % → 85,43 %), dokumenty z identyczną strukturą 1333 → 1510, metadane zgodne
+    w całości 1521 → 1595. DOCX i TXT bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
