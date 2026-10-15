@@ -105,7 +105,9 @@ internal static class ReferenceStructureComparison
         }
         ours.Save(Path.Combine(outputDirectory, "ours.xml"));
 
-        var referenceRoot = XDocument.Load(referencePath).Root!;
+        // Spacja między elementami treści mieszanej („<publikator>Dz. Urz. UE L</publikator> <numer-dziennika>97") jest
+        // treścią — domyślne wczytanie gubi węzły z samych odstępów i skleja tekst („L97").
+        var referenceRoot = XDocument.Load(referencePath, LoadOptions.PreserveWhitespace).Root!;
         UnwrapForeignAnnotations(referenceRoot);
         var reference = Collect(referenceRoot);
         var actual = Collect(ours);

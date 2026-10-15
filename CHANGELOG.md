@@ -44,7 +44,10 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Porównanie z przykładami bez odesłań i metryczki** (`CorpusValidator --compare-reference`): odesłania (`ref`,
   `mref`, `rref`) i metryczkę publikatora nakłada na eksport osobny moduł, więc porównanie zdejmuje je z pliku
   referencyjnego i zostawia ich tekst — nie liczą się już jako różnice (wcześniej m.in. ok. 1000 wierszy załączników
-  DU/2026/252). Załączniki DU/2026/252: zgodnych 829 z 863 elementów (przedtem 744 z 1798).
+  DU/2026/252). Załączniki DU/2026/252: zgodnych 829 z 863 elementów (przedtem 744 z 1798). Plik referencyjny
+  wczytuje się z zachowaniem odstępów: spacja między elementami treści mieszanej jest treścią, a jej zgubienie
+  („L97" zamiast „L 97") dawało pozorne różnice — załączniki 849 z 863, zdania DU/2026/252 zgodne co do znaku 1926
+  z 2220 (było 1918), DU/2026/26 466 z 469.
 
 ### Zmieniono
 - **eId jednostek redakcyjnych nie zawiera już ścieżki jednostek systematyzacyjnych**: artykuł
