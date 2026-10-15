@@ -318,7 +318,8 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 
 `PdfBlockReader` (PdfPig) składa bloki z geometrii linii tekstu (`PdfLineExtractor`, `BlockAssembler`,
 `PageArtifactFilter`) — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
-warstwie syntaktycznej (regex) i układzie (wcięcia).
+warstwie syntaktycznej (regex) i układzie (wcięcia). Odnośniki ze strefy przypisów wiąże ze znacznikami treści `PdfFootnotes`
+(oznaczenie i strona odwołania) — blok niesie `Footnotes` i znacznik o numerze jednoznacznym, jak w DOCX.
 
 `DocxBlockReader` czyta — poza treścią — także nagłówki stron i emituje je jako bloki
 `BlockRole.JournalHeader` bez `BlockIndex`. Emituje **wszystkie** części kandydujące, w kolejności

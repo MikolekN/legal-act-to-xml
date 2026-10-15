@@ -937,6 +937,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w PDF (`--format-parity`, 2151 dokumentów): jednostki 91,69 % → 94,31 % (TJ 91,78 % → 94,51 %,
     rozporządzenia 95,14 % → 97,06 %, ustawy 87,38 % → 89,23 %); dokumenty z identyczną strukturą 1143 → 1256;
     słowa w treści ponad tekst DOCX 3,00 % → 2,61 %.
+- **Odnośniki w PDF**: znacznik odnośnika w indeksie górnym („[1)]", „[a)]") łączy się z odnośnikiem strefy przypisów
+  o tym samym oznaczeniu ze stron, które blok zajmuje (`PdfFootnotes`); blok niesie odnośnik jak blok DOCX, a znacznik
+  dostaje numer jednoznaczny w dokumencie (kolejne ciągi numeracji — litery obwieszczenia, liczby aktu, liczby
+  załącznika — przesunięte jak w DOCX, ADR-0061). Odnośnik, którego oznaczenia warstwa tekstowa nie zapisała („[)]"
+  — tak LibreOffice zapisuje część odnośników tekstów jednolitych), łączy się w kolejności ze znacznikiem bez odnośnika
+  na tej samej stronie. Wcześniej treść odnośników PDF nie trafiała do eksportu wcale.
+  - Korpus w PDF (`--format-parity`, 2151 dokumentów): słowa odnośników DOCX obecne w eksporcie 0 % → 41,73 %
+    (obwieszczenia bez aktu 96,65 %, ustawy 87,97 %, rozporządzenia 69,89 %, TJ 32,91 %); słowa w treści ponad tekst
+    DOCX 2,61 % → 0,68 % (TJ 2,85 % → 0,65 %: odnośniki bez oznaczenia przestają wpadać do treści); jednostki
+    94,31 % → 94,30 %, słowa treści 99,77 % → 99,73 %. DOCX bez zmian (`--compare-exports`: 0 z 2321).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

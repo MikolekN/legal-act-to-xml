@@ -27,6 +27,8 @@ namespace Saga.Core.Ingest.Pdf
     ///    Wiersze końcowe — podpis i wiersz przyłączenia („Załącznik do …"), odsunięte w prawo — też.
     /// 9. Winieta dziennika na początku pierwszej strony → bloki <see cref="BlockRole.JournalHeader"/>
     ///    (<see cref="JournalMasthead"/>) — jak nagłówek strony DOCX, z danymi ogłoszenia.
+    /// 10. Odnośniki ze strefy przypisów powiązane ze znacznikami treści (<see cref="PdfFootnotes"/>) — blok odwołania
+    ///    niesie je jak blok DOCX, a bloki strefy zostają na końcu dla klasyfikatora dokumentu.
     /// Celowo NIE nadaje StyleId (zabetonowałoby błędy) — klasyfikacja idzie gałęzią bezstylową.
     /// </summary>
     public sealed class PdfBlockReader : IDocumentBlockReader
@@ -137,9 +139,10 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Początek przypisu: „N)" (także w kanale [N)]) lub gwiazdki — nawias WYMAGANY
         /// (bez niego goła liczba „2023 r. …" na początku zawiniętej kontynuacji rozcinałaby przypis).
         /// Odnośnik oznaczony literą („[a)]" — tekst jednolity oznacza tak odnośniki obwieszczenia) tylko w kanale
-        /// indeksu górnego: goła „a)" na początku wiersza to litera wyliczenia.</summary>
+        /// indeksu górnego: goła „a)" na początku wiersza to litera wyliczenia. Sam nawias w indeksie górnym („[)]")
+        /// to znacznik, którego oznaczenia warstwa tekstowa nie zapisała (zdarza się w PDF z LibreOffice).</summary>
         private static readonly Regex FootnoteStartPattern = new(
-            @"^(?:\[?\d+\)\]?\s|\[[a-z]{1,2}\)\]\s?|\*+\s?)", RegexOptions.Compiled);
+            @"^(?:\[?\d+\)\]?\s|\[(?:[a-z]{1,2})?\)\]\s?|\*+\s?)", RegexOptions.Compiled);
 
         /// <summary>Przypis zakończony: ostatni wiersz strefy kończy zdanie — następna strona go nie kontynuuje.</summary>
         private static readonly Regex FootnoteEndPattern = new(
@@ -147,7 +150,7 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>Początek przypisu znacznikiem w indeksie górnym — kanał <c>[N)]</c> albo <c>[*]</c> z <see cref="PdfLineExtractor"/>.</summary>
         private static readonly Regex SuperscriptFootnoteStartPattern = new(
-            @"^\[(?:\d+\)?|[a-z]{1,2}\)|\*+)\]", RegexOptions.Compiled);
+            @"^\[(?:\d+\)?|(?:[a-z]{1,2})?\)|\*+)\]", RegexOptions.Compiled);
 
         public SourceFormat Format => SourceFormat.Pdf;
 
@@ -197,10 +200,12 @@ namespace Saga.Core.Ingest.Pdf
                 ? Mode(bodyLines.Select(l => Math.Round(l.StartX)))
                 : 0;
 
-            var blocks = JournalMasthead.Mark(AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
-                startIndex: 0, forceBoundary: null)).ToList();
+            var lastPages = new List<int>();
+            var body = JournalMasthead.Mark(AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
+                startIndex: 0, forceBoundary: null, lastPages));
             var footnotes = AssembleBlocks(footnoteLines, docDominantSize, dominantLeft, BlockRole.FootnoteText,
-                startIndex: blocks.Count, forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text));
+                startIndex: body.Count, forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text));
+            var blocks = PdfFootnotes.Link(body, lastPages, footnotes);
 
             blocks.AddRange(footnotes);
             return blocks;
@@ -348,9 +353,10 @@ namespace Saga.Core.Ingest.Pdf
         /// zawinięty punkt/literę/tiret i gubiła tekst. Dywiz na końcu wiersza: sklejenie bezpośrednie
         /// z ZACHOWANIEM dywizu (decyzja użytkownika — patrz komentarz przy sklejaniu).
         /// </summary>
+        /// <param name="lastPages">Gdy podana — dostaje stronę ostatniego wiersza każdego bloku (blok bywa przecięty stroną).</param>
         private static List<DocumentBlock> AssembleBlocks(
             List<PdfTextLine> lines, double emSize, double dominantLeft, BlockRole role,
-            int startIndex, Func<PdfTextLine, bool>? forceBoundary)
+            int startIndex, Func<PdfTextLine, bool>? forceBoundary, List<int>? lastPages = null)
         {
             var blocks = new List<DocumentBlock>();
             if (lines.Count == 0)
@@ -366,6 +372,7 @@ namespace Saga.Core.Ingest.Pdf
             {
                 if (blockFirst == null || buffer.Length == 0)
                     return;
+                lastPages?.Add(prev?.PageNumber ?? blockFirst.PageNumber);
                 blocks.Add(new DocumentBlock
                 {
                     Text = buffer.ToString(),

@@ -489,6 +489,87 @@ namespace Saga.Core.Tests
             Assert.Contains(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("1) wiersz tabeli"));
         }
 
+        /// <summary>
+        /// Strona z przepisem, którego zdanie kończy znacznik odnośnika w indeksie górnym, i z odnośnikiem na dole strony.
+        /// </summary>
+        private static TestPdfBuilder AddReferencingPage(TestPdfBuilder builder, string provision, string symbol, string? footnote)
+        {
+            builder.AddPage();
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText(provision, 57, 700);
+            builder.AddText(symbol + ")", 330, 703.5, 6);
+            if (footnote is not null)
+            {
+                builder.AddText(symbol + ")", 57, 93.5, 6);
+                builder.AddText(footnote, 66, 90, 8);
+            }
+
+            return builder;
+        }
+
+        [Fact]
+        public void Footnote_IsAttachedToTheBlockWithItsMarker()
+        {
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Ustawa zmienia ustawy wymienione", "1",
+                "Niniejszą ustawą zmienia się ustawę o podatku.");
+
+            var blocks = Read(builder.Build());
+
+            var referencing = Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            Assert.StartsWith("Art. 1.", referencing.Text);
+            Assert.Contains("[1)]", referencing.Text);
+            var footnote = Assert.Single(referencing.Footnotes);
+            Assert.Equal(("1", "1", 0), (footnote.Symbol, footnote.Marker, footnote.Run));
+            Assert.Equal(["Niniejszą ustawą zmienia się ustawę o podatku."], footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void LetterFootnotes_ThenNumbered_AreSeparateRunsOfNumbering()
+        {
+            // Tekst jednolity: odnośniki obwieszczenia literami, ogłaszanego aktu — liczbami.
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Obwieszczenie ogłasza tekst jednolity", "a",
+                "Zmiany tekstu jednolitego ogłoszono w Dz. U. poz. 5.");
+            AddReferencingPage(builder, "Art. 2. Ustawa wdraża dyrektywę Unii Europejskiej", "1",
+                "Niniejsza ustawa wdraża dyrektywę 2008/50/WE.");
+
+            var blocks = Read(builder.Build());
+
+            var footnotes = blocks.SelectMany(b => b.Footnotes).ToList();
+            Assert.Equal([("a", "1", 0), ("1", "100001", 1)], footnotes.Select(f => (f.Symbol, f.Marker, f.Run)));
+            Assert.Contains(blocks, b => b.Text.StartsWith("Art. 2.") && b.Text.Contains("[100001)]"));
+        }
+
+        [Fact]
+        public void FootnoteWithoutItsNumberInTheTextLayer_IsLinkedToTheMarkerOnItsPage()
+        {
+            // Warstwa tekstowa zapisała z oznaczenia odnośnika tylko nawias: „[)] Artykuł 24 zawiera zmiany …".
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 30. Ustawa zmieniana w art. 24", "4", footnote: null);
+            builder.AddText(")", 57, 93.5, 6);
+            builder.AddText("Artykuł 24 zawiera zmiany do ustawy o mieszkalnictwie.", 66, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks.SelectMany(b => b.Footnotes));
+            Assert.Equal("4", footnote.Symbol);
+            Assert.Equal(["Artykuł 24 zawiera zmiany do ustawy o mieszkalnictwie."], footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void MarkerWithoutAFootnoteOnItsPage_StaysAsPrinted()
+        {
+            // Powtórzone odwołanie na dalszej stronie: odnośnik stoi tylko przy pierwszym.
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Ustawa zmienia ustawy wymienione", "1",
+                "Niniejszą ustawą zmienia się ustawę o podatku.");
+            AddReferencingPage(builder, "Art. 2. Ustawa zmieniana w art. 1 wchodzi", "1", footnote: null);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            var repeated = Assert.Single(blocks, b => b.Text.StartsWith("Art. 2."));
+            Assert.Contains("[1)]", repeated.Text);
+            Assert.Empty(repeated.Footnotes);
+        }
+
         [Fact]
         public void FootnoteContinuedOnNextPage_StaysInFootnoteZone()
         {
