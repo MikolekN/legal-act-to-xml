@@ -114,6 +114,12 @@ if (args.Length > 2 && args[0] == "--compare-exports")
 if (args.Length > 2 && args[0] == "--styleless-parity")
     return CorpusValidator.StylelessParityReport.Run(args[1], args[2]);
 
+// Zgodność formatów: PDF i TXT tego samego aktu (np. z LibreOffice, ta sama ścieżka względna) wobec DOCX —
+// jednostki, słowa treści i odnośników, metadane, zgodność ze schematem:
+//   dotnet run --project tools/CorpusValidator -- --format-parity <korpus-docx> <korpus-przekonwertowany> <katalog-wyjsciowy>
+if (args.Length > 3 && args[0] == "--format-parity")
+    return CorpusValidator.FormatParityReport.Run(args[1], args[2], args[3]);
+
 // Pokrycie tekstu: czy tekst każdego akapitu źródła doszedł do eksportu — miara akapitów pominiętych przez potok.
 //   dotnet run --project tools/CorpusValidator -- --text-coverage <root> <katalog-wyjsciowy>
 if (args.Length > 2 && args[0] == "--text-coverage")

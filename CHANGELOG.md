@@ -48,6 +48,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   wczytuje się z zachowaniem odstępów: spacja między elementami treści mieszanej jest treścią, a jej zgubienie
   („L97" zamiast „L 97") dawało pozorne różnice — załączniki 849 z 863, zdania DU/2026/252 zgodne co do znaku 1926
   z 2220 (było 1918), DU/2026/26 466 z 469.
+- **Miara zgodności formatów** (`CorpusValidator --format-parity <korpus-docx> <korpus-przekonwertowany> <katalog>`):
+  PDF i TXT tego samego aktu (lokalnie `documents-pdf/` i `documents-txt/` — korpus przekonwertowany LibreOffice,
+  gitignorowany) zestawiane z eksportem DOCX: jednostki (bez prefiksu własnego aktu, który pochodzi z danych
+  ogłoszenia), słowa treści i osobno odnośników, pola metadanych, zgodność ze schematem całego dokumentu i samej
+  treści. Druga kolumna porównuje z „samym tekstem" DOCX — różnica wobec niego to strata adaptera formatu.
+  - Stan wyjściowy TXT (2151 dokumentów): jednostki 96,51 % (ustawy 98,68 %, rozporządzenia 97,78 %, TJ 96,27 %),
+    wobec samego tekstu DOCX 96,63 %; słowa treści 99,75 %; treść zgodna ze schematem 2148 z 2151. Brakuje danych
+    ogłoszenia (eksport TXT nie ma nagłówka strony) i treści odnośników (eksport TXT jej nie zapisuje).
 
 ### Zmieniono
 - **eId jednostek redakcyjnych nie zawiera już ścieżki jednostek systematyzacyjnych**: artykuł
