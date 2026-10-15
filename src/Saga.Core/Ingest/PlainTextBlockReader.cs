@@ -11,6 +11,7 @@ namespace Saga.Core.Ingest
     /// Indeks górny oznaczenia jednostki zapisany zwykłymi cyframi („Art. 292.") odtwarza ciąg numeracji
     /// (<see cref="SuperscriptDesignations"/>, ADR-0089); znaki indeksu górnego Unicode i znaczniki odnośników przyklejone
     /// do słowa przechodzą na kanał „[…]" (<see cref="PlainTextSuperscripts"/>).
+    /// Przedmiot aktu rozbity na wiersze łączy <see cref="PlainTextTitleSubject"/>.
     /// </summary>
     public sealed class PlainTextBlockReader : IDocumentBlockReader
     {
@@ -37,7 +38,7 @@ namespace Saga.Core.Ingest
             var blocks = BlockAssembler.Assemble(lines)
                 .Select(block => block with { Text = PlainTextSuperscripts.Restore(block.Text) })
                 .ToList();
-            return JournalMasthead.Mark(SuperscriptDesignations.Restore(blocks));
+            return JournalMasthead.Mark(SuperscriptDesignations.Restore(PlainTextTitleSubject.Join(blocks)));
         }
 
         private static byte[] ReadAllBytes(Stream stream)

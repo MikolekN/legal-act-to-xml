@@ -962,6 +962,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w TXT (`--format-parity`, 2151 dokumentów): tytuł zgodny z DOCX w 1665 dokumentach (było 857), metadane
     zgodne w całości 206 (było 76); jednostki bez zmian (97,73 %), słowa treści 99,78 % → 99,80 %. PDF: jednostki bez
     zmian, podpis zgodny w 2132 (było 2128).
+- **Przedmiot aktu rozbity na wiersze w TXT**: za datą aktu stojącą pod nagłówkiem rodzaju wiersze zaczynające się
+  małą literą dołączają do przedmiotu (`PlainTextTitleSubject`) — ręczne przejście do nowego wiersza w przedmiocie
+  DOCX czytnik DOCX oddaje odstępem, a eksport tekstu końcem wiersza, więc tytuł kończył się w pół zdania.
+  - Korpus w TXT (`--format-parity`, 2151 dokumentów): tytuł zgodny z DOCX w 2052 dokumentach (było 1665), metadane
+    zgodne w całości 283 (było 206), treść zgodna ze schematem 2150 z 2151 (było 2148), dokumenty z identyczną
+    strukturą 1328 (było 1268).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
