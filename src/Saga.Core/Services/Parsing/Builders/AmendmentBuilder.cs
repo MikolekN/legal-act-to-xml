@@ -61,6 +61,10 @@ namespace Saga.Core.Services.Parsing.Builders
         // Otwarte tirety cytatu od poziomu pierwszego — tiret zagnieżdżony („– –") trafia do ostatniego.
         private readonly List<Tiret> _openTirets = new();
 
+        /// <summary>Wcięcia otwartych tiretów (równolegle do <see cref="_openTirets"/>) i bieżącej litery — ADR-0091.</summary>
+        private readonly List<int?> _openTiretIndents = new();
+        private int? _letterIndent;
+
         // Otwarte jednostki systematyzacyjne cytatu, od najwyższej — artykuł trafia do najgłębszej.
         private readonly List<BaseEntity> _openUnits = new();
         private ISystematizingUnit? _pendingHeading;
@@ -404,6 +408,7 @@ namespace Saga.Core.Services.Parsing.Builders
                     break;
                 case AmendmentEntityKind.Letter:
                     BuildAmendmentLetter(para.Text, content);
+                    _letterIndent = para.LeftIndentTwips;
                     break;
                 case AmendmentEntityKind.Tiret:
                     if (!TryBuildStylelessCommonPart(para, content))
@@ -593,6 +598,7 @@ namespace Saga.Core.Services.Parsing.Builders
             // Zagnieżdżenie zapisane znacznikiem („– –") albo stylem; bez tiretu nadrzędnego zostaje poziom 1.
             var depth = Math.Min(TiretDepth(para), _openTirets.Count + 1);
             _openTirets.RemoveRange(depth - 1, _openTirets.Count - (depth - 1));
+            _openTiretIndents.RemoveRange(depth - 1, _openTiretIndents.Count - (depth - 1));
             var parentTiret = _openTirets.LastOrDefault();
 
             var tiret = new Tiret
@@ -626,6 +632,7 @@ namespace Saga.Core.Services.Parsing.Builders
             }
 
             _openTirets.Add(tiret);
+            _openTiretIndents.Add(para.LeftIndentTwips);
             Log.Debug("AmendmentBuilder: tiret {Number}", tiret.Number?.Value ?? "?");
         }
 
@@ -642,6 +649,7 @@ namespace Saga.Core.Services.Parsing.Builders
         {
             _currentTiretIndex = 0;
             _openTirets.Clear();
+            _openTiretIndents.Clear();
         }
 
         /// <summary>
@@ -672,6 +680,36 @@ namespace Saga.Core.Services.Parsing.Builders
         }
 
         /// <summary>
+        /// Część wspólna za tiretami w treści cytowanej bez stylu, rozpoznana z wcięcia — ta sama reguła co w treści aktu
+        /// (<c>StructureProcessor.TryCloseTiretsByIndent</c>, ADR-0091): myślnik wcięty przed tiretami za tiretem bez znaku
+        /// końcowego zamyka tirety, a wcięty jak litera — litery.
+        /// </summary>
+        private bool TryCloseTiretsByIndent(CollectedAmendmentParagraph para)
+        {
+            if (para.LeftIndentTwips is not int indent
+                || _openTiretIndents.Count == 0
+                || _openTiretIndents[^1] is not int tiretIndent
+                || indent > tiretIndent - StructureProcessor.CommonPartIndentStep
+                || !CommonPartPlacement.LeavesEnumerationOpen(_openTirets[^1].ContentText))
+                return false;
+
+            var closesLetters = _letterIndent is int letterIndent && indent <= letterIndent + StructureProcessor.CommonPartIndentStep;
+            BaseEntity? parent = closesLetters ? _currentPoint : _currentLetter;
+            if (parent is not IHasCommonParts host || host.CommonParts.Any(CommonPartPlacement.IsClosing))
+                return false;
+
+            host.CommonParts.Add(new CommonPart(CommonPartType.WrapUp, parent.Id, para.Text.Trim())
+            {
+                Parent = parent,
+                ListItemType = closesLetters ? UnitType.Letter : UnitType.Tiret,
+            });
+            ResetTirets();
+            ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
+                "Część wspólna rozpoznana bez stylu z wcięcia: myślnik stoi przed tiretami, a ostatni tiret nie ma znaku końcowego.");
+            return true;
+        }
+
+        /// <summary>
         /// Część wspólna w treści cytowanej bez stylu — ta sama reguła co w treści aktu
         /// (<c>StructureProcessor.TryHandleStylelessWrapUp</c>): myślnik tuż po punkcie albo literze, które nie
         /// mają żadnego znaku końcowego, zamyka wyliczenie (§ 57 ust. 3 ZTP). Po tirecie i po elemencie
@@ -695,7 +733,7 @@ namespace Saga.Core.Services.Parsing.Builders
             else if (_currentLetter != null)
             {
                 if (_currentLetter.Tirets.Count > 0)
-                    return false;
+                    return TryCloseTiretsByIndent(para);
                 (lastItem, parent, itemType) = (_currentLetter, _currentPoint, UnitType.Letter);
             }
             else if (_currentPoint != null && _currentPoint.Letters.Count == 0)

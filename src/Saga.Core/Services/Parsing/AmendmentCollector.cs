@@ -22,6 +22,9 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Równanie otwierające akapit (symbol wiersza legendy wzoru).</summary>
         public Ingest.BlockSymbol? LeadingSymbol { get; init; }
+
+        /// <summary>Wcięcie lewe akapitu (twips); null, gdy źródło nie niesie układu.</summary>
+        public int? LeftIndentTwips { get; init; }
     }
 
     /// <summary>
@@ -135,13 +138,16 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         /// <param name="formulaMathMl">MathML akapitu, gdy jest wzorem.</param>
         /// <param name="leadingSymbol">Równanie otwierające akapit, gdy za nim stoi tekst.</param>
-        public void AddParagraph(string text, string? styleId, string? formulaMathMl = null, Ingest.BlockSymbol? leadingSymbol = null)
+        /// <param name="leftIndentTwips">Wcięcie lewe akapitu, gdy źródło niesie układ.</param>
+        public void AddParagraph(
+            string text, string? styleId, string? formulaMathMl = null, Ingest.BlockSymbol? leadingSymbol = null, int? leftIndentTwips = null)
         {
             var styleInfo = AmendmentStyleDecoder.DecodeByStyleId(styleId);
             _paragraphs.Add(new CollectedAmendmentParagraph(text, styleId, styleInfo)
             {
                 FormulaMathMl = formulaMathMl,
                 LeadingSymbol = leadingSymbol,
+                LeftIndentTwips = leftIndentTwips,
             });
 
             // Bilans cudzysłowów — tylko dla zbierania bezstylowego. Rozbraja wyłącznie styl ZNACZĄCY

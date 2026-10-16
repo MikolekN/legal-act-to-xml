@@ -1087,6 +1087,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus w TXT (`--format-parity`, 2151 dokumentów): 24 dokumenty lepiej, 3 gorzej (najwyżej o 3 jednostki),
     dokumenty z identyczną strukturą 1628 → 1632; w 285 dokumentach z tabelami jednostki nadmiarowe 2446 → 1195,
     ginące 784 → 744. Pierwsza wersja (każdy tabulator rozdziela komórki) — 195 dokumentów gorzej.
+- **Część wspólna za tiretami z wcięcia także w treści cytowanej**: wcięcie akapitu idzie z nim do treści cytowanej
+  (`CollectedAmendmentParagraph.LeftIndentTwips`, `ParsingContext.CurrentLeftIndent`), a `AmendmentBuilder` stosuje tę
+  samą regułę co treść aktu ([ADR-0091](docs/adr/0091-czesc-wspolna-za-tiretami-bez-stylu-rozpoznaje-wciecie.md)):
+  myślnik bez stylu wcięty przed tiretami, za tiretem bez znaku końcowego, jest częścią wspólną tiretów, a wcięty jak
+  litera — liter. Dotąd w treści cytowanej zostawał kolejnym tiretem.
+  - Korpus (`--format-parity`): PDF 8 dokumentów lepiej; DOCX — zmieniają się 2 eksporty (320206 i 331307, ten sam akt
+    bez szablonu: „– w przypadku współautorstwa …,” wcięty przed tiretami jest teraz częścią wspólną tiretów, nie
+    tiretem — zmiana zaakceptowana przez właściciela), PDF tych dwóch dokumentów zostaje przy tirecie; TXT bez zmian
+    (bez układu).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

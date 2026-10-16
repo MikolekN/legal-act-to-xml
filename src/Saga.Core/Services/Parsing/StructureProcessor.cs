@@ -149,7 +149,7 @@ namespace Saga.Core.Services.Parsing
         /// Ustaw stawia część wspólną tiretów 4 pkt (80 twips) przed tiretami — mniej niż tolerancja wcięcia tiretów
         /// tego samego poziomu (<see cref="TiretIndentTolerance"/>), która musi znosić rozjazd akapitów.
         /// </summary>
-        private const int CommonPartIndentStep = 40;
+        internal const int CommonPartIndentStep = 40;
 
         /// <summary>
         /// Część wspólna za tiretami w dokumencie bez stylów, rozpoznana z wcięcia (ADR-0091). Sam tekst tego nie

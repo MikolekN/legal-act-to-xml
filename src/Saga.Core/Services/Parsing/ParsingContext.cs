@@ -78,6 +78,12 @@ namespace Saga.Core.Services.Parsing
         public Ingest.BlockSymbol? CurrentSymbol { get; set; }
 
         /// <summary>
+        /// Wcięcie lewe przetwarzanego bloku (twips) — idzie z akapitem do treści cytowanej, gdzie bez stylu
+        /// rozstrzyga część wspólną za tiretami (ADR-0091); null bez układu (TXT).
+        /// </summary>
+        public int? CurrentLeftIndent { get; set; }
+
+        /// <summary>
         /// Akapity, przed którymi cytat nowelizacji kończy się mimo otwartego bilansu cudzysłowów — wskazane
         /// przez przebieg, w którym cytat nie domknął się do końca dokumentu (ADR-0049).
         /// </summary>

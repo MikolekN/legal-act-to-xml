@@ -2460,6 +2460,38 @@ namespace Saga.Core.Tests
             Assert.Equal(expectedElement is null ? 3 : 2, xml.Descendants().Count(e => e.Name.LocalName == "tiret"));
         }
 
+        [Theory]
+        [InlineData(782, "czesc-wspolna-tiret")]
+        [InlineData(422, "czesc-wspolna-litera")]
+        [InlineData(862, null)]
+        [InlineData(null, null)]
+        public void Adr0091_InQuotedContent_DashIndentedBeforeTheTirets_IsTheirCommonPart(int? dashIndent, string? expectedElement)
+        {
+            static DocumentBlock Block(string text, int? indent = null) =>
+                new() { Text = text, Layout = indent is null ? null : new BlockLayoutInfo { LeftIndentTwips = indent } };
+
+            var blocks = new List<DocumentBlock>
+            {
+                Block("USTAWA"), Block("z dnia 14 czerwca 2024 r."), Block("o zmianie ustawy o wspieraniu rodziny"),
+                Block("Art. 1. W ustawie z dnia 9 czerwca 2011 r. o wspieraniu rodziny (Dz. U. z 2024 r. poz. 177) w art. 5 pkt 3 otrzymuje brzmienie:"),
+                Block("„3) kontrola:", 0),
+                Block("a) nad zgodnością zatrudnienia;", 422),
+                Block("b) nad realizacją zadań przez:", 422),
+                Block("– jednostki samorządu terytorialnego,", 862),
+                Block("– jednostki organizacyjne wspierania rodziny", 862),
+                Block("– zwane dalej „kontrolowanymi jednostkami”;”.", dashIndent),
+                Block("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
+            };
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks,
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            // Treść cytowana bez stylu: ta sama reguła co w treści aktu — rozstrzyga wcięcie, bez układu zostaje tiret.
+            var quoted = xml.Descendants().Single(e => e.Name.LocalName == "cytat-strukt");
+            var part = quoted.Descendants().SingleOrDefault(e => e.Name.LocalName.StartsWith("czesc-wspolna"));
+            Assert.Equal(expectedElement, part?.Name.LocalName);
+            Assert.Equal(expectedElement is null ? 3 : 2, quoted.Descendants().Count(e => e.Name.LocalName == "tiret"));
+        }
+
         // ============================================================
         // ADR-0075: cudzysłów za oznaczeniem artykułu otwiera przytoczenie ustępu tego artykułu
         // ============================================================

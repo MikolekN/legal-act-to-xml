@@ -52,6 +52,7 @@ namespace Saga.Core.Services.Parsing
 
             context.CurrentFormula = block.FormulaMathMl;
             context.CurrentSymbol = block.LeadingSymbol;
+            context.CurrentLeftIndent = block.Layout?.LeftIndentTwips;
 
             // Załącznik stoi za ostatnim artykułem i ma własną treść (tabele, wykazy, nawet „Rozdział 1") —
             // nie jest częścią struktury aktu. Zbierany jest w całości, z pustymi komórkami tabel.
