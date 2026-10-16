@@ -1132,10 +1132,16 @@ a wersjonowanie zgodne z Semantic Versioning.
     ze schematem bez zmian.
 - **Wyrazy zmian w tekście tak, jak stoją w akcie zmienianym** (`TextChangeWording`): `stary-tekst` i `nowy-tekst`
   nie niosą już znacznika odnośnika tego dokumentu („z późn. zm.[8)]” — treść odnośnika stoi w zdaniu komendy) ani
-  miękkiego dywizu Worda („jesienno­-zimowym”). Znaczniki zdejmuje przebieg po gotowym dokumencie, bo znacznik wpisany
+  miękkiego dywizu Worda („jesienno-zimowym”). Znaczniki zdejmuje przebieg po gotowym dokumencie, bo znacznik wpisany
   tekstem bywa powtórzeniem odnośnika, którego odwołanie stoi dalej; znacznik bez odnośnika w rejestrze zostaje.
   - Korpus DOCX: zmienia się 8 eksportów, w każdym tylko instrukcja `now:zamien-tekst` (6 ze znacznikiem, 2 z miękkim
     dywizem); zgodność ze schematem bez zmian.
+- **Załącznik zmieniany odesłaniem z „odpowiednio”** (`AnnexInstructionReader`): „załączniki nr 1 i 2 … otrzymują brzmienie
+  określone odpowiednio w załącznikach nr 1 i 2 do niniejszego rozporządzenia” zostawał bez instrukcji — wzorzec znał tylko
+  „określone w załącznikach”. „Odpowiednio” mówi tylko, że załączniki idą parami w kolejności wyliczenia
+  ([ADR-0058](docs/adr/0058-zalacznik-zmieniany-odeslaniem-jest-instrukcja-z-adresami-obu-zalacznikow.md)).
+  - Korpus DOCX: zmienia się 19 eksportów — 73 instrukcje `now:zastap` więcej, nic poza nimi; zgodność ze schematem
+    bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

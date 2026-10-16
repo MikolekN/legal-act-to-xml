@@ -22,6 +22,23 @@ namespace Saga.Core.Tests
                 Read("załączniki nr 1 i 2 do ustawy otrzymują brzmienie określone w załącznikach nr 1 i 2 do niniejszej ustawy;"));
         }
 
+        [Theory]
+        // Korpus: 347895_3208505, 321690_2980834 — „odpowiednio" mówi tylko, że załączniki idą parami.
+        [InlineData("załączniki nr 1 i 2 do rozporządzenia otrzymują brzmienie określone odpowiednio w załącznikach nr 1 i 2 do niniejszego rozporządzenia;")]
+        [InlineData("załączniki nr 1 i 2 otrzymują brzmienie określone odpowiednio w załącznikach nr 1 i 2 do niniejszego rozporządzenia.")]
+        public void ReplacedAnnexes_SourcedRespectively_ArePairedTheSameWay(string text)
+        {
+            Assert.Equal([(false, "1", "1", null), (false, "2", "2", null)], Read(text));
+        }
+
+        [Fact]
+        public void AddedAnnexes_SourcedRespectively_AreOneInstruction()
+        {
+            Assert.Equal(
+                [(true, "2", "3", "4")],
+                Read("dodaje się załączniki nr 3 i 4 do ustawy w brzmieniu określonym odpowiednio w załącznikach nr 3 i 4 do niniejszej ustawy."));
+        }
+
         [Fact]
         public void RangeOfReplacedAnnexes_IsPairedOneByOne()
         {

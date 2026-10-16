@@ -14,8 +14,10 @@ namespace Saga.Core.Services.Parsing
     {
         private const string Numbers = @"nr\s+(?<{0}>\d+[a-z]*(?:\s*(?:[," + Dashes.Any + @"]|i|oraz)\s*\d+[a-z]*)*)";
 
+        // „określone w załącznikach nr 1 i 2", „określone odpowiednio w załącznikach nr 1 i 2" — „odpowiednio" mówi
+        // tylko, że załączniki idą parami w kolejności wyliczenia.
         private static readonly string Sources =
-            @"w\s+załącznik(?:u|ach)\s*(?:" + string.Format(Numbers, "sources") + @"\s*)?do\s+niniejsz";
+            @"(?:odpowiednio\s+)?w\s+załącznik(?:u|ach)\s*(?:" + string.Format(Numbers, "sources") + @"\s*)?do\s+niniejsz";
 
         private static readonly Regex Replacement = new(
             @"(?<![\p{L}])załącznik(?:i)?\s+(?:" + string.Format(Numbers, "targets") + @"\s+)?(?:do\s+[\p{L}]+\s+)?otrzymuj[eą]\s+brzmienie\s+określone\s+" + Sources,
