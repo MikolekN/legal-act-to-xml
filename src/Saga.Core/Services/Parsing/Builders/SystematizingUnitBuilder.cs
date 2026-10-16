@@ -139,6 +139,27 @@ namespace Saga.Core.Services.Parsing.Builders
             return subchapter;
         }
 
+        /// <summary>
+        /// Uchylono samo oznaczenie i tytuł jednostki („(oznaczenie rozdziału 1 i tytuł – uchylone)"): jednostka zostaje
+        /// w układzie aktu z adnotacją, ale przepisy za adnotacją do niej nie należą — obowiązują dalej, poza jednostką
+        /// tego poziomu. Stoją w niejawnej jednostce tego samego poziomu, którą następna jawna jednostka przejmie, jeśli
+        /// artykułów w niej nie będzie (ADR-0096).
+        /// </summary>
+        public void LeaveRepealedDesignation(ParsingContext ctx, ParagraphKind kind)
+        {
+            if (kind is ParagraphKind.BookUnit)
+                ctx.CurrentBook = AddImplicit(new Book(), ctx.CurrentPart, ctx.CurrentPart.Books);
+            if (kind is ParagraphKind.BookUnit or ParagraphKind.TitleUnit)
+                ctx.CurrentTitle = AddImplicit(new Title(), ctx.CurrentBook, ctx.CurrentBook.Titles);
+            if (kind is ParagraphKind.BookUnit or ParagraphKind.TitleUnit or ParagraphKind.DivisionUnit)
+                ctx.CurrentDivision = AddImplicit(new Division(), ctx.CurrentTitle, ctx.CurrentTitle.Divisions);
+            if (kind is ParagraphKind.BookUnit or ParagraphKind.TitleUnit or ParagraphKind.DivisionUnit or ParagraphKind.ChapterUnit)
+                ctx.CurrentChapter = AddImplicit(new Chapter(), ctx.CurrentDivision, ctx.CurrentDivision.Chapters);
+            if (kind is ParagraphKind.BookUnit or ParagraphKind.TitleUnit or ParagraphKind.DivisionUnit or ParagraphKind.ChapterUnit
+                or ParagraphKind.SubchapterUnit)
+                ctx.Subchapter = AddImplicit(new Subchapter(), ctx.CurrentChapter, ctx.CurrentChapter.Subchapters);
+        }
+
         /// <summary>Można przejąć węzeł niejawny tylko gdy jego poddrzewo nie zawiera jeszcze artykułów
         /// (inaczej uczynienie go jawnym przeniosłoby do tej jednostki artykuły stojące w akcie przed nią).
         /// eId artykułów nie zależy od jednostek systematyzacyjnych (ADR-0017) — chodzi o miejsce w drzewie

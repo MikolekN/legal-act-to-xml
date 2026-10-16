@@ -778,6 +778,12 @@ namespace Saga.Core.Services.Parsing
             @"^\((?:[^()]*\b)?(?:uchylon[yae]|pominięt[yae])\s*\)(?:\[[^\]]*\])?\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// Adnotacja, która uchyla samo oznaczenie (i tytuł) jednostki, a nie jej przepisy: „(oznaczenie rozdziału 1
+        /// i tytuł – uchylone)", „(Rozdział 3b – oznaczenie i tytuł rozdziału – uchylone)".
+        /// </summary>
+        private static readonly Regex RepealedDesignationOnly = new(@"\boznaczeni[ea]\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
         /// Tytuł ze stylu szablonu: styl tytułu jednostki albo — dla części i księgi — ten sam styl
         /// CZĘŚĆ(KSIĘGA), którym zapisano oznaczenie, bez oznaczenia w treści.
         /// </summary>
@@ -872,6 +878,10 @@ namespace Saga.Core.Services.Parsing
                 if (context.PendingHeadingUnit is { } repealed)
                     repealed.Heading = annotation;
                 context.PendingHeadingUnit = null;
+
+                // Uchylone samo oznaczenie: przepisy za adnotacją obowiązują, ale już poza tą jednostką (ADR-0096).
+                if (RepealedDesignationOnly.IsMatch(annotation))
+                    _systematizingUnitBuilder.LeaveRepealedDesignation(context, kind);
                 return true;
             }
 

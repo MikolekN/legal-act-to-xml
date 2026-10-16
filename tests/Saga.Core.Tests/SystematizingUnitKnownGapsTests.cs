@@ -348,9 +348,10 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void AnnotationNamingARepealedBook_StandsBetweenThePartAndItsTitles()
+        public void AnnotationRepealingABooksDesignation_StandsInThePart_AndItsTitlesOutsideTheBook()
         {
-            // TJ 302049_2704309 (Kodeks postępowania cywilnego): oznaczenie i tytuł księgi uchylone, tytuły zostały.
+            // TJ 302049_2704309 (Kodeks postępowania cywilnego): oznaczenie i tytuł księgi uchylone, tytuły zostały —
+            // stoją wprost w części, poza księgą, której już nie ma (ADR-0096).
             var document = Parse(
                 ("CZĘŚĆ DRUGA", PartOrBook),
                 ("Postępowanie zabezpieczające", PartOrBook),
@@ -363,9 +364,38 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { typeof(Part), typeof(Book), typeof(Title) }, units.Select(unit => unit.GetType()));
             Assert.Equal("(oznaczenie oraz tytuł księgi pierwszej – uchylone)", ((ISystematizingUnit)units[1]).Heading);
             Assert.Equal("Postępowanie zabezpieczające", ((ISystematizingUnit)units[0]).Heading);
-            // Tytuł stoi pod księgą — tak jak w akcie, zanim uchylono jej oznaczenie i tytuł.
-            Assert.Same(units[1], units[2].Parent);
             Assert.Same(units[0], units[1].Parent);
+
+            // Tytuł stoi w części, w księdze niejawnej obok uchylonej.
+            var book = Assert.IsType<Book>(units[2].Parent);
+            Assert.NotSame(units[1], book);
+            Assert.True(book.IsImplicit);
+            Assert.Same(units[0], book.Parent);
+        }
+
+        [Theory]
+        // Uchylone samo oznaczenie (i tytuł): przepisy obowiązują dalej, ale poza jednostką (ADR-0096).
+        [InlineData("(oznaczenie i tytuł oddziału 1 – uchylone)", typeof(Subchapter), false)]
+        [InlineData("(oznaczenie rozdziału 4 i tytuł – uchylone)", typeof(Chapter), false)]
+        [InlineData("(Rozdział 3b – oznaczenie i tytuł rozdziału – uchylone)", typeof(Chapter), false)]
+        // Uchylona cała jednostka: to, co za adnotacją, stoi w niej jak pod zwykłym nagłówkiem (ADR-0066).
+        [InlineData("(Rozdział 2a – uchylony)", typeof(Chapter), true)]
+        public void ProvisionsAfterARepealAnnotation_StandInTheUnit_OnlyWhenTheWholeUnitIsRepealed(
+            string annotation, Type unitType, bool inside)
+        {
+            var document = Parse(
+                ("Dział trzynasty", TitleDesignation),
+                ("Odpowiedzialność za wykroczenia", TitleHeading),
+                (annotation, RepealAnnotation),
+                ("Art. 281. Kto, będąc pracodawcą, narusza przepisy, podlega karze grzywny.", ArticleStyle));
+
+            var repealed = Assert.Single(ExplicitUnits(document), unit => unit.GetType() == unitType);
+            var article = Assert.Single(document.Articles);
+            var ancestors = new List<BaseEntity>();
+            for (var unit = article.Parent; unit is not null; unit = unit.Parent)
+                ancestors.Add(unit);
+
+            Assert.Equal(inside, ancestors.Contains(repealed));
         }
 
         [Theory]

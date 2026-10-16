@@ -1148,6 +1148,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   cel wskazuje pozycję, a gospodarzem części wspólnej jest jednostka nad nią (`…__ust_1__czw`, `…__pkt_1__czw`). Część
   wspólna cytowana sama („w pkt 9 wprowadzenie do wyliczenia otrzymuje brzmienie:”) stoi pod celem komendy jak dotąd.
   - Korpus DOCX: zmieniają się 4 eksporty, w każdym jeden cel części wspólnej; zgodność ze schematem bez zmian.
+- **Adnotacja uchylająca samo oznaczenie jednostki nie obejmuje przepisów za nią**: „(oznaczenie rozdziału 1 i tytuł –
+  uchylone)” zostaje nagłówkiem rozdziału 1, ale obowiązujące artykuły za adnotacją stoją w jednostce niejawnej tego
+  samego poziomu, a nie w rozdziale, którego oznaczenie uchylono (`SystematizingUnitBuilder.LeaveRepealedDesignation`,
+  [ADR-0096](docs/adr/0096-adnotacja-uchylajaca-samo-oznaczenie-nie-obejmuje-przepisow-za-nia.md), zastępuje w części ADR-0066). Adnotacja o uchyleniu całej
+  jednostki („(Rozdział 2 – uchylony)”) działa jak dotąd.
+  - Korpus DOCX: zmienia się 5 tekstów jednolitych — 128 artykułów wychodzi spod 16 jednostek z uchylonym oznaczeniem
+    (`rozdzial-n`, `oddzial-n`, `dzial-n`, `tytul-n`, `ksiega-n` albo wprost w akcie); zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

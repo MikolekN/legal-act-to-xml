@@ -523,7 +523,7 @@ Poza wzorcem `IEntityBuilder<TInput, TResult>` (jednostki redakcyjne) w tym samy
 
 | Builder | Rola |
 |---|---|
-| `SystematizingUnitBuilder` | Buduje jednostki systematyzacyjne (Część/Księga/Tytuł/Dział/Rozdział/Oddział) i utrzymuje bieżącą ścieżkę w `ParsingContext` (`Enter(ctx, kind, number)`) — patrz 6.1 |
+| `SystematizingUnitBuilder` | Buduje jednostki systematyzacyjne (Część/Księga/Tytuł/Dział/Rozdział/Oddział) i utrzymuje bieżącą ścieżkę w `ParsingContext` (`Enter(ctx, kind, number)`) — patrz 6.1; adnotacja uchylająca samo oznaczenie zostawia przepisy za nią poza jednostką ([ADR-0096](adr/0096-adnotacja-uchylajaca-samo-oznaczenie-nie-obejmuje-przepisow-za-nia.md)) |
 
 Kaskadowe tworzenie encji implicit:
 - Punkt wymaga ustępu → `ParagraphBuilder.EnsureForPoint()`

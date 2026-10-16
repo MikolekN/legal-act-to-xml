@@ -2079,6 +2079,39 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0096: adnotacja uchylająca samo oznaczenie nie obejmuje przepisów za nią
+        // ============================================================
+
+        [Fact]
+        public void Adr0096_ProvisionsAfterARepealedDesignation_StandOutsideTheUnit()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o odbudowie obiektów budowlanych",
+                "Rozdział 1",
+                "Przepisy ogólne",
+                "Art. 1. Ustawa reguluje zasady odbudowy.",
+                "(oznaczenie rozdziału 2 i tytuł – uchylone)",
+                "Art. 2. Odbudowę prowadzi się według projektu.",
+                "Rozdział 3",
+                "Przepisy końcowe",
+                "Art. 9. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Rozdział 2 zostaje z adnotacją (ADR-0066), ale obowiązujący art. 2 nie jest już jego treścią.
+            var chapterOf = document.Articles.ToDictionary(article => article.Number!.Value, article => (Chapter)article.Parent!.Parent!);
+            Assert.True(chapterOf["2"].IsImplicit);
+
+            var xml = LegalDocumentConverter.Convert(document);
+            var repealed = xml.Descendants().Single(e => e.Name.LocalName == "rozdzial"
+                && e.Elements().First().Elements().First().Value == "2");
+            Assert.DoesNotContain(repealed.Descendants(), e => e.Name.LocalName == "artykul");
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 
