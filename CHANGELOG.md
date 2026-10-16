@@ -1155,6 +1155,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   jednostki („(Rozdział 2 – uchylony)”) działa jak dotąd.
   - Korpus DOCX: zmienia się 5 tekstów jednolitych — 128 artykułów wychodzi spod 16 jednostek z uchylonym oznaczeniem
     (`rozdzial-n`, `oddzial-n`, `dzial-n`, `tytul-n`, `ksiega-n` albo wprost w akcie); zgodność ze schematem bez zmian.
+- **Tiret ze znacznikiem odnośnika tuż za myślnikiem** (`ParagraphClassifier`): „–[19)] 12 miesięcy dla DME …” nie był
+  rozpoznawany jako tiret, bo wzorzec wymagał odstępu po myślniku — wiersz doklejał się do poprzedniej jednostki jako
+  fragment, a litera nad nim wychodziła jako `nie-ztp-litera` z jednym tiretem. Znacznik odnośnika za myślnikiem
+  zastępuje teraz odstęp.
+  - Korpus DOCX: zmieniają się 2 eksporty (ten sam akt w dwóch obwieszczeniach) — litera z dwoma tiretami zamiast
+    `nie-ztp-litera`; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

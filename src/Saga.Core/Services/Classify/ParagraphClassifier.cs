@@ -90,9 +90,10 @@ namespace Saga.Core.Services.Classify
         internal static readonly Regex LetterStripPattern = new(
             $@"^{OptionalQuotePrefix}{DesignationAlphabet.Letter}{{1,5}}{OptionalSuperscript}\)\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        // Tiret zaczyna myślnik — w każdej postaci, jaką piszą szczotki (Dashes, ADR-0040)
+        // Tiret zaczyna myślnik — w każdej postaci, jaką piszą szczotki (Dashes, ADR-0040) — a za nim odstęp albo,
+        // w tekstach jednolitych, od razu znacznik odnośnika („–[*)] 12 miesięcy dla DME…" — 336403_3088135).
         internal static readonly Regex TiretPattern = new(
-            $@"^{OptionalQuotePrefix}[{Dashes.Any}]+\s+", RegexOptions.Compiled);
+            $@"^{OptionalQuotePrefix}[{Dashes.Any}]+(?:\s+|(?={FootnoteMarker}))", RegexOptions.Compiled);
 
         /// <summary>Artykuł z grupą przechwytującą numer (do ParseArticleNumber).</summary>
         internal static readonly Regex ArticleNumberCapture = new(

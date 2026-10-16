@@ -29,6 +29,23 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TiretWithAFootnoteMarkerRightAfterTheDash_IsATiret()
+        {
+            // Korpus: 336403_3088135 — „–⁽*⁾ 12 miesięcy dla DME …": odnośnik o brzmieniu tiretu stoi zaraz za myślnikiem.
+            var document = Parse(
+                "Art. 1. 1. Warunkiem eksploatacji jest:",
+                "1) wykonywanie kontroli:",
+                "a) okresowych, wykonywanych nie rzadziej niż co:",
+                "– 6 miesięcy dla ILS,",
+                "–[2)] 12 miesięcy dla DME,",
+                "b) doraźnych.");
+
+            var letters = document.Articles.Single().Paragraphs.Single().Points.Single().Letters;
+            Assert.Equal(new[] { "a", "b" }, letters.Select(letter => letter.Number?.Value));
+            Assert.Equal(new[] { "6 miesięcy dla ILS,", "[2)] 12 miesięcy dla DME," }, letters[0].Tirets.Select(tiret => tiret.ContentText));
+        }
+
+        [Fact]
         public void TiretWrittenWithAFigureDash_IsRecognisedWithoutAStyle()
         {
             // Korpus: 323280_2941714 — tirety pisane „\u2012" (U+2012) wychodziły jako dalsza treść litery.
