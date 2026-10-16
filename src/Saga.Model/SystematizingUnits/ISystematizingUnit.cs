@@ -30,6 +30,12 @@ namespace Saga.Model.SystematizingUnits
         string Heading { get; set; }
 
         /// <summary>
+        /// Znaczniki odnośników stojące przy oznaczeniu jednostki („Rozdział 3[1)]") w zapisie kanału tekstowego.
+        /// Numer ich nie zawiera; w eksporcie odnośniki stoją w nagłówku zaraz za numerem.
+        /// </summary>
+        string DesignationMarkers { get; set; }
+
+        /// <summary>
         /// Data wejścia w życie nagłówka jednostki systematyzacyjnej.
         /// </summary>
         DateTime HeadingEffectiveDate { get; set; }

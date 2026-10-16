@@ -818,6 +818,11 @@ namespace Saga.Core.Services.Parsing
             _systematizingUnitBuilder.Enter(context, classification.Kind, number);
             Log.Debug("Wejście w jednostkę systematyzacyjną {Kind} {Number}", classification.Kind, number.Value);
 
+            // Odnośnik przy oznaczeniu („Rozdział 3[1)]" — „Rozdział dodany przez …") nie mieści się w numerze;
+            // jednostka niesie jego znacznik do nagłówka (ADR-0094).
+            if (context.PendingHeadingUnit is { } designated)
+                designated.DesignationMarkers = FootnoteMarkers.Only(text);
+
             if (context.PendingHeadingUnit is BaseEntity named
                 && number.Value.StartsWith(ParagraphClassifier.NamedUnitValue, StringComparison.Ordinal))
                 ValidationReporter.AddValidationMessage(named, ValidationLevel.Warning,

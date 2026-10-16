@@ -86,6 +86,22 @@ namespace Saga.Core.Tests
             Assert.Equal("3", chapter.Number?.Value);
             Assert.Equal(string.Empty, chapter.Number?.Superscript);
             Assert.Equal("rozdz_3", chapter.Id);
+
+            // Znacznik nie ginie — jednostka niesie go do nagłówka (ADR-0094).
+            Assert.Equal("[5)]", chapter.DesignationMarkers);
+        }
+
+        [Fact]
+        public void SuperscriptMergedWithAFootnoteMarker_StaysWithTheNumber()
+        {
+            // TJ 308528_2781833: „Oddział 2[1 15)]" — indeks górny oznaczenia i odnośnik nr 15 w jednym nawiasie.
+            var document = Parse(
+                ("Oddział 2[1 15)]", ChapterDesignation),
+                ("Art. 1. Treść.", ArticleStyle));
+
+            var unit = Assert.Single(ExplicitUnits(document));
+            Assert.Equal("1", unit.Number?.Superscript);
+            Assert.Equal("[15)]", ((ISystematizingUnit)unit).DesignationMarkers);
         }
 
         [Theory]

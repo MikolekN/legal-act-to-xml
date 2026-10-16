@@ -44,6 +44,15 @@ namespace Saga.Core.Services
         /// </summary>
         internal static string Remove(string text) => Reference.Replace(text, string.Empty).TrimEnd();
 
+        /// <summary>
+        /// Same znaczniki z tekstu, w kolejności. Indeks górny oznaczenia zlany ze znacznikiem nie jest częścią
+        /// odnośnika („Oddział 2[1 15)]" → „[15)]") — zostaje przy numerze.
+        /// </summary>
+        internal static string Only(string text) => string.Concat(Marker.Matches(text).Select(match =>
+            match.Groups["superscript"] is { Success: true } superscript
+                ? "[" + match.Value[(superscript.Index + superscript.Length - match.Index)..].TrimStart()
+                : match.Value));
+
         internal static string Blank(string text) => Marker.Replace(text, match =>
         {
             var superscript = match.Groups["superscript"];

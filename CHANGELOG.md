@@ -1096,6 +1096,14 @@ a wersjonowanie zgodne z Semantic Versioning.
     bez szablonu: „– w przypadku współautorstwa …,” wcięty przed tiretami jest teraz częścią wspólną tiretów, nie
     tiretem — zmiana zaakceptowana przez właściciela), PDF tych dwóch dokumentów zostaje przy tirecie; TXT bez zmian
     (bez układu).
+- **Odnośnik przy oznaczeniu jednostki systematyzacyjnej**: „Rozdział 3⁵⁾” — „Rozdział w brzmieniu ustalonym przez
+  …” gubił treść odnośnika: znacznik odcięty od numeru nie trafiał nigdzie. Jednostka niesie znaczniki oznaczenia
+  (`ISystematizingUnit.DesignationMarkers`; `FootnoteMarkers.Only` — indeks górny zlany ze znacznikiem zostaje przy
+  numerze), a eksport stawia odnośnik w nagłówku zaraz za `nr`, gdzie schemat go przyjmuje
+  ([ADR-0094](docs/adr/0094-odnosnik-przy-oznaczeniu-jednostki-systematyzacyjnej-stoi-za-jej-numerem.md)). Znacznik
+  bez odnośnika tego aktu znika z nagłówka.
+  - Korpus DOCX: zmienia się 30 eksportów — 44 odnośniki więcej i 6 odsyłaczy, nic poza nagłówkami; zgodność ze
+    schematem bez zmian (2280 z 2321).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

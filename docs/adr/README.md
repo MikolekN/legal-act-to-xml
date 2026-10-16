@@ -112,5 +112,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0091](0091-czesc-wspolna-za-tiretami-bez-stylu-rozpoznaje-wciecie.md) | Bez stylu myślnik za tiretem bez znaku końcowego, wcięty przed tiretami, jest częścią wspólną tiretów (albo liter, gdy stoi na wcięciu litery) | Accepted | 2026-10-15 |
 | [0092](0092-tabela-w-pdf-to-siatka-z-obramowania.md) | Tabela w PDF to siatka z obramowania rysowanego na stronie; tabeli bez obramowania czytnik nie zgaduje | Accepted | 2026-10-15 |
 | [0093](0093-tabela-w-txt-to-wiersze-z-tabulatorem-rozdzielajacym-komorki.md) | Tabela w TXT to wiersze, w których tabulator rozdziela komórki, a nie stoi za oznaczeniem | Accepted | 2026-10-16 |
+| [0094](0094-odnosnik-przy-oznaczeniu-jednostki-systematyzacyjnej-stoi-za-jej-numerem.md) | Odnośnik przy oznaczeniu jednostki systematyzacyjnej („Rozdział 3⁵⁾”) jednostka niesie w modelu, a eksport stawia go w nagłówku zaraz za `nr` | Accepted | 2026-10-16 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

@@ -14,6 +14,9 @@ namespace Saga.Model.SystematizingUnits
         /// </summary>
         public string Heading { get; set; } = string.Empty;
 
+        /// <inheritdoc/>
+        public string DesignationMarkers { get; set; } = string.Empty;
+
         /// <summary>
         /// Data wejścia w życie nagłówka oddziału, niezależna od daty samego oddziału.
         /// </summary>

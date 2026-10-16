@@ -52,9 +52,16 @@ namespace Saga.Core.Services.Converters
         internal static List<XText> Texts(XElement actElement) =>
             actElement.DescendantNodes().OfType<XText>()
                 .Where(text => text.Parent is { } parent
-                    && (Hosts.Contains(parent.Name.LocalName) || IsUnitHeading(parent))
+                    && (Hosts.Contains(parent.Name.LocalName) || IsUnitHeading(parent) || HoldsDesignation(parent))
                     && !parent.Ancestors().Any(a => a.Name.LocalName == XmlConverterConstants.Metadata.Element))
                 .ToList();
+
+        /// <summary>
+        /// Nagłówek jednostki systematyzacyjnej: tekstu własnego nie ma, ale za numerem mieści odnośniki
+        /// oznaczenia (ADR-0094) — zostawione tam jako znaczniki tekstem.
+        /// </summary>
+        internal static bool HoldsDesignation(XElement parent) =>
+            parent.Name.LocalName.StartsWith(UnitHeadingPrefix, StringComparison.Ordinal);
 
         // Tytuł jednostki systematyzacyjnej stoi w „p" bez zdań („naglowek-dzialu" → „p") — w tekstach jednolitych
         // niesie odnośnik o brzmieniu tytułu. Zwykłe „p" tekstu nie ma: mieści zdania.

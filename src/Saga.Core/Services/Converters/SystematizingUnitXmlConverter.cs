@@ -72,8 +72,9 @@ namespace Saga.Core.Services.Converters
         }
 
         /// <summary>
-        /// Nagłówek: oznaczenie jak w akcie (z indeksem górnym), tytuł, jeśli jest, i dalsza treść nagłówka —
-        /// wiersze stojące pod tytułem, które nie są ani jego częścią, ani jednostką (ADR-0067).
+        /// Nagłówek: oznaczenie jak w akcie (z indeksem górnym), odnośniki przy oznaczeniu (ADR-0094), tytuł,
+        /// jeśli jest, i dalsza treść nagłówka — wiersze stojące pod tytułem, które nie są ani jego częścią, ani
+        /// jednostką (ADR-0067).
         /// </summary>
         private static XElement Header(string name, BaseEntity unit, string heading)
         {
@@ -83,6 +84,10 @@ namespace Saga.Core.Services.Converters
                 designation += $"[{number.Superscript}]";
 
             var header = Element(name, Element(XmlConverterConstants.Contents.Num, designation));
+
+            // Znacznik zostaje tekstem za numerem; odnośnikiem w tym miejscu czyni go FootnoteXmlConverter.
+            if (((ISystematizingUnit)unit).DesignationMarkers is { Length: > 0 } markers)
+                header.Add(new XText(markers));
             if (!string.IsNullOrWhiteSpace(heading))
                 header.Add(Element(XmlConverterConstants.Contents.TextSection, heading));
 

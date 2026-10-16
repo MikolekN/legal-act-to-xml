@@ -40,9 +40,18 @@ namespace Saga.Core.Services.Converters
 
                 // W cytacie znacznik z numerem już osadzonym należy do aktu zmienianego, nie do tego aktu.
                 var quoted = text.Ancestors().Any(ancestor => Citations.Contains(ancestor.Name.LocalName));
-                text.ReplaceWith(Render(text.Value, registry, allowRepeats: !quoted));
+                var rendered = Render(text.Value, registry, allowRepeats: !quoted);
+
+                // Za numerem nagłówka schemat przyjmuje same odnośniki — znacznik bez odnośnika tego aktu znika.
+                text.ReplaceWith(InlineTextXml.HoldsDesignation(text.Parent!)
+                    ? rendered.OfType<XElement>().Where(IsFootnote)
+                    : rendered);
             }
         }
+
+        private static bool IsFootnote(XElement element) =>
+            element.Name.LocalName is XmlConverterConstants.Contents.Odnosnik.Element
+                or XmlConverterConstants.Contents.Odnosnik.ReferenceElement;
 
         /// <summary>Tekst bez znaczników odnośników — do pól, które niosą sam tytuł.</summary>
         internal static string WithoutMarkers(string text) => MarkerWithLeadingSpace.Replace(text, string.Empty).TrimEnd();

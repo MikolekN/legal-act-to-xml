@@ -200,6 +200,60 @@ namespace Saga.Core.Tests
             Assert.DoesNotContain("[", heading.Value);
         }
 
+        private static LegalDocument ActWithFootnoteAtTheDesignation(params string[] heading) => Parse(
+            [
+                "USTAWA",
+                "z dnia 14 czerwca 2024 r.",
+                "o ochronie sygnalistów",
+                .. heading,
+                "Art. 1. Ustawa (Dz. U. poz. 1, z późn. zm.{2}) określa zasady.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ]);
+
+        private static List<string> HeadingParts(XElement xml) =>
+            Named(xml, "naglowek-rozdzialu").Single().Elements().Select(e => e.Name.LocalName).ToList();
+
+        [Fact]
+        public void FootnoteAtAUnitDesignation_StandsRightAfterTheNumber()
+        {
+            // TJ 281631_2528006: „Rozdział 3⁵⁾" — „Rozdział w brzmieniu ustalonym przez …". Nagłówek przyjmuje
+            // odnośniki zaraz za numerem — tam stoi znacznik w akcie (ADR-0094).
+            var xml = LegalDocumentConverter.Convert(ActWithFootnoteAtTheDesignation("Rozdział 1{1}", "Przepisy ogólne"));
+
+            Assert.Equal(new[] { "1", "2" }, Named(xml, "odnosnik").Select(footnote => footnote.Attribute("symbol")?.Value));
+            Assert.Equal(new[] { "nr", "odnosnik", "p" }, HeadingParts(xml));
+            var heading = Named(xml, "naglowek-rozdzialu").Single();
+            Assert.Equal("1", heading.Elements().First().Value);
+            Assert.Equal("Przepisy ogólne", heading.Elements().Last().Value);
+        }
+
+        [Fact]
+        public void FootnoteAtADesignationWithoutATitle_StillFollowsTheNumber()
+        {
+            var xml = LegalDocumentConverter.Convert(ActWithFootnoteAtTheDesignation("Rozdział 1{1}"));
+
+            Assert.Equal(new[] { "nr", "odnosnik" }, HeadingParts(xml));
+        }
+
+        [Fact]
+        public void MarkerAtADesignationWithoutAFootnoteOfThisAct_IsDropped()
+        {
+            // Nagłówek nie ma tekstu własnego: indeks górny („sup") nie ma w nim miejsca, a zapis kanału tym bardziej.
+            var xml = LegalDocumentConverter.Convert(ActWithFootnoteAtTheDesignation("Rozdział 1{5)}", "Przepisy ogólne"));
+
+            Assert.Equal(new[] { "nr", "p" }, HeadingParts(xml));
+            Assert.DoesNotContain("[", Named(xml, "naglowek-rozdzialu").Single().Value);
+        }
+
+        [SchemaPlFact]
+        public void FootnoteAtAUnitDesignation_IsSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(
+                ActWithFootnoteAtTheDesignation("Rozdział 1{1}", "Przepisy ogólne")).Elements().First()));
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(
+                ActWithFootnoteAtTheDesignation("Rozdział 1{1}")).Elements().First()));
+        }
+
         private static LegalDocument Regulation() => Parse(
             "ROZPORZĄDZENIE",
             "MINISTRA FINANSÓW{1}",

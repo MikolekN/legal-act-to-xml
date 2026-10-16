@@ -2420,6 +2420,30 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0094: odnośnik przy oznaczeniu jednostki systematyzacyjnej stoi za jej numerem
+        // ============================================================
+
+        [Fact]
+        public void Adr0094_FootnoteAtADesignation_StandsRightAfterTheNumber()
+        {
+            using var stream = new MemoryStream(DocxFixtures.WithFootnotes(
+                ["Rozdział dodany przez art. 7 pkt 6 ustawy z dnia 28 lipca 2023 r.", "Zmiany wymienionej ustawy."],
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                "Rozdział 1{1}", "Przepisy ogólne",
+                "Art. 1. Ustawa (Dz. U. poz. 1, z późn. zm.{2}) określa zasady.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."));
+            var document = LegalDocumentParser.Parse(stream, "ustawa.docx",
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Znacznik niesie jednostka; odnośnik staje zaraz za numerem, nie w numerze ani w tytule.
+            var heading = LegalDocumentConverter.Convert(document).Descendants()
+                .Single(e => e.Name.LocalName == "naglowek-rozdzialu");
+            Assert.Equal(new[] { "nr", "odnosnik", "p" }, heading.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal("1", heading.Elements().First().Value);
+            Assert.Equal("Przepisy ogólne", heading.Elements().Last().Value);
+        }
+
+        // ============================================================
         // ADR-0091: część wspólna za tiretami bez stylu rozpoznawana z wcięcia
         // ============================================================
 
