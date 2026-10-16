@@ -1104,6 +1104,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   bez odnośnika tego aktu znika z nagłówka.
   - Korpus DOCX: zmienia się 30 eksportów — 44 odnośniki więcej i 6 odsyłaczy, nic poza nagłówkami; zgodność ze
     schematem bez zmian (2280 z 2321).
+- **Odnośnik przy oznaczeniu załącznika**: „Załącznik nr 1⁸⁾” — „Załącznik nr 1 w brzmieniu ustalonym przez …”
+  gubił treść odnośnika tak samo jak oznaczenie rozdziału. `zalacznik-nr` przyjmuje odnośniki za numerem; eksport
+  stawia je tam według tej samej zasady (`AnnexXmlConverter`, `InlineTextXml.HoldsDesignation` —
+  [ADR-0094](docs/adr/0094-odnosnik-przy-oznaczeniu-jednostki-systematyzacyjnej-stoi-za-jej-numerem.md)).
+  - Korpus DOCX: zmienia się 54 eksporty — 71 odnośników więcej; zgodność ze schematem bez zmian. W 4 dokumentach
+    18 znaczników wpisanych tekstem w załączniku wychodzi indeksem górnym zamiast odsyłaczem: odnośnik oznaczenia
+    wprowadza ciąg numeracji załącznika, a powtórzenie szuka odnośnika tylko w nim
+    ([ADR-0061](docs/adr/0061-odnosnik-ma-oznaczenie-jak-w-akcie-a-znacznik-numer-jednoznaczny.md)) — wcześniej
+    trafiało do poprzedniej sekcji tylko dlatego, że odnośnik oznaczenia ginął.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

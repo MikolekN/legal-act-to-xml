@@ -24,8 +24,15 @@ namespace Saga.Core.Services.Converters
                 element.Add(Element(XmlConverterConstants.Attachments.AttachedTo, Guid(), line));
 
             if (annex.Number is { Length: > 0 } number)
-                element.Add(Element(XmlConverterConstants.Attachments.NumberElement, Guid(),
-                    Element(XmlConverterConstants.Contents.Num, number)));
+            {
+                // Odnośnik przy oznaczeniu („Załącznik nr 2⁵⁾") stoi za numerem — znacznik zostaje tu tekstem,
+                // odnośnikiem czyni go FootnoteXmlConverter (ADR-0094).
+                var designation = Element(XmlConverterConstants.Attachments.NumberElement, Guid(),
+                    Element(XmlConverterConstants.Contents.Num, number));
+                if (FootnoteMarkers.Only(annex.Heading ?? string.Empty) is { Length: > 0 } markers)
+                    designation.Add(new XText(markers));
+                element.Add(designation);
+            }
 
             if (annex.Title is { Length: > 0 } title)
                 element.Add(Element(XmlConverterConstants.Attachments.TitleElement, Guid(), title));

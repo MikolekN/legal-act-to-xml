@@ -57,11 +57,12 @@ namespace Saga.Core.Services.Converters
                 .ToList();
 
         /// <summary>
-        /// Nagłówek jednostki systematyzacyjnej: tekstu własnego nie ma, ale za numerem mieści odnośniki
-        /// oznaczenia (ADR-0094) — zostawione tam jako znaczniki tekstem.
+        /// Nagłówek jednostki systematyzacyjnej i numer załącznika: tekstu własnego nie mają, ale za numerem
+        /// mieszczą odnośniki oznaczenia (ADR-0094) — zostawione tam jako znaczniki tekstem.
         /// </summary>
         internal static bool HoldsDesignation(XElement parent) =>
-            parent.Name.LocalName.StartsWith(UnitHeadingPrefix, StringComparison.Ordinal);
+            parent.Name.LocalName.StartsWith(UnitHeadingPrefix, StringComparison.Ordinal)
+            || parent.Name.LocalName == XmlConverterConstants.Attachments.NumberElement;
 
         // Tytuł jednostki systematyzacyjnej stoi w „p" bez zdań („naglowek-dzialu" → „p") — w tekstach jednolitych
         // niesie odnośnik o brzmieniu tytułu. Zwykłe „p" tekstu nie ma: mieści zdania.

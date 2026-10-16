@@ -254,6 +254,36 @@ namespace Saga.Core.Tests
                 ActWithFootnoteAtTheDesignation("Rozdział 1{1}")).Elements().First()));
         }
 
+        private static LegalDocument ActWithFootnoteAtTheAnnexDesignation() => Parse(
+            "USTAWA",
+            "z dnia 14 czerwca 2024 r.",
+            "o ochronie sygnalistów",
+            "Art. 1. Wzór zgłoszenia określa załącznik nr 1 do ustawy.",
+            "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            "Załączniki do ustawy z dnia 14 czerwca 2024 r.",
+            "Załącznik nr 1{1}",
+            "WZÓR ZGŁOSZENIA",
+            "Imię i nazwisko zgłaszającego");
+
+        [Fact]
+        public void FootnoteAtAnAnnexDesignation_StandsRightAfterItsNumber()
+        {
+            // 307524_2749959: „Załącznik nr 1⁸⁾" — „Załącznik nr 1 w brzmieniu ustalonym przez …"; numer załącznika
+            // przyjmuje odnośniki tak jak nagłówek jednostki systematyzacyjnej (ADR-0094).
+            var number = Named(LegalDocumentConverter.Convert(ActWithFootnoteAtTheAnnexDesignation()), "zalacznik-nr").Single();
+
+            Assert.Equal(new[] { "nr", "odnosnik" }, number.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal("1", number.Elements().First().Value);
+            Assert.Equal("1", number.Elements().Last().Attribute("symbol")?.Value);
+        }
+
+        [SchemaPlFact]
+        public void FootnoteAtAnAnnexDesignation_IsSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(ActWithFootnoteAtTheAnnexDesignation()).Elements().First()));
+        }
+
         private static LegalDocument Regulation() => Parse(
             "ROZPORZĄDZENIE",
             "MINISTRA FINANSÓW{1}",
