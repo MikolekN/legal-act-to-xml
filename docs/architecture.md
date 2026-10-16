@@ -343,7 +343,8 @@ dziennika i dalsze wiersze winiety ([ADR-0088](adr/0088-winieta-dziennika-na-poc
 Czytnik TXT odtwarza też indeks górny oznaczeń jednostek, który zwykły tekst zapisuje cyframi („Art. 292." po
 „Art. 29." to „Art. 29[2].") — `SuperscriptDesignations` ([ADR-0089](adr/0089-indeks-gorny-oznaczenia-w-txt-odtwarza-ciag-numeracji.md)).
 Znaki indeksu górnego Unicode i znaczniki odnośników przyklejone do wyrazu („ustaw1), 2)") przechodzą na kanał „[…]"
-(`PlainTextSuperscripts`), a przedmiot aktu rozbity na wiersze łączy `PlainTextTitleSubject`.
+(`PlainTextSuperscripts`), a przedmiot aktu rozbity na wiersze łączy `PlainTextTitleSubject`. Wiersz z komórkami
+rozdzielonymi tabulatorem jest wierszem tabeli (`PlainTextTables`, [ADR-0093](adr/0093-tabela-w-txt-to-wiersze-z-tabulatorem-rozdzielajacym-komorki.md)).
 
 ### 5.2 Rdzeń budowy modelu (`LegalDocumentParser.ParseBlocks`, `internal`)
 

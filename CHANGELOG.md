@@ -1079,6 +1079,14 @@ a wersjonowanie zgodne z Semantic Versioning.
     o jedną jednostkę), dokumenty z identyczną strukturą 1707 → 1742, słowa treści 99,75 % → 99,78 %, metadane zgodne
     1651 → 1656; słowa odnośników bez zmian (95,90 %: 7 dokumentów lepiej, 7 gorzej — odwołanie w komórce nie sięga
     już strony następnej, na którą skład przeniósł odnośnik).
+- **Tabele w TXT**: wiersz eksportu tekstu LibreOffice z komórkami rozdzielonymi tabulatorem jest wierszem tabeli —
+  `PlainTextTables` oddaje komórki blokami z `TableCell`, a kolejne pozycje wyliczenia dopisuje do ostatniej komórki,
+  dopóki ciągną jej numerację ([ADR-0093](docs/adr/0093-tabela-w-txt-to-wiersze-z-tabulatorem-rozdzielajacym-komorki.md)). Tabulator za oznaczeniem jednostki („1)⇥…"),
+  w legendzie wzoru i wyrównujący wartość w wierszu tekstu komórek nie rozdziela. Dotąd wyliczenia w komórkach
+  tabel były w TXT jednostkami.
+  - Korpus w TXT (`--format-parity`, 2151 dokumentów): 24 dokumenty lepiej, 3 gorzej (najwyżej o 3 jednostki),
+    dokumenty z identyczną strukturą 1628 → 1632; w 285 dokumentach z tabelami jednostki nadmiarowe 2446 → 1195,
+    ginące 784 → 744. Pierwsza wersja (każdy tabulator rozdziela komórki) — 195 dokumentów gorzej.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

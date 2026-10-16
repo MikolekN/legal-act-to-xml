@@ -2402,6 +2402,24 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0093: tabela w TXT — tabulator rozdzielający komórki, nie stojący za oznaczeniem
+        // ============================================================
+
+        [Theory]
+        [InlineData("A 01\tNaruszenie przepisów\tart. 173\t15", true)]
+        [InlineData("Efekty kształcenia\tKryteria weryfikacji\n1)\tcharakteryzuje pojęcia\t1)\twymienia przepisy\n2)\twyjaśnia znaczenie pojęć", true)]
+        [InlineData("1)\tcharakteryzuje pojęcia bezpieczeństwa pracy;\n2)\twyjaśnia znaczenie pojęć", false)]
+        [InlineData("OpłWyr\t–\topłatę wyrównawczą wyrażoną w złotych,", false)]
+        public void Adr0093_TxtTableRow_IsCutByTabsThatAreNotAfterADesignation(string text, bool isTable)
+        {
+            using var stream = new MemoryStream(new UTF8Encoding(false).GetBytes(text + "\nArt. 2. Ustawa wchodzi w życie."));
+            var blocks = new PlainTextBlockReader().ReadBlocks(stream);
+
+            // Tabulator za oznaczeniem i w legendzie wzoru nie rozdziela komórek — inaczej każde wyliczenie byłoby tabelą.
+            Assert.Equal(isTable, blocks.Any(block => block.TableCell is not null));
+        }
+
+        // ============================================================
         // ADR-0091: część wspólna za tiretami bez stylu rozpoznawana z wcięcia
         // ============================================================
 

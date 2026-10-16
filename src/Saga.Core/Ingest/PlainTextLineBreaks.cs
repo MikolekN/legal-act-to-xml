@@ -33,7 +33,7 @@ namespace Saga.Core.Ingest
             var result = new List<DocumentBlock>(blocks.Count);
             foreach (var block in blocks)
             {
-                if (result.Count > 0 && Continues(result[^1].Text, block.Text))
+                if (result.Count > 0 && block.TableCell is null && result[^1].TableCell is null && Continues(result[^1].Text, block.Text))
                 {
                     result[^1] = result[^1] with { Text = result[^1].Text.TrimEnd() + " " + block.Text.TrimStart() };
                     continue;

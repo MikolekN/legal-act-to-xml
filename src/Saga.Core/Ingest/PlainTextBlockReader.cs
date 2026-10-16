@@ -12,7 +12,8 @@ namespace Saga.Core.Ingest
     /// (<see cref="SuperscriptDesignations"/>, ADR-0089); znaki indeksu górnego Unicode i znaczniki odnośników przyklejone
     /// do słowa przechodzą na kanał „[…]" (<see cref="PlainTextSuperscripts"/>).
     /// Przedmiot aktu rozbity na wiersze łączy <see cref="PlainTextTitleSubject"/>, a akapit przepisu przerwany ręcznym
-    /// przejściem do nowego wiersza — <see cref="PlainTextLineBreaks"/>.
+    /// przejściem do nowego wiersza — <see cref="PlainTextLineBreaks"/>. Wiersze tabeli (komórki rozdzielone tabulatorem)
+    /// dostają miejsce w tabeli — <see cref="PlainTextTables"/>.
     /// </summary>
     public sealed class PlainTextBlockReader : IDocumentBlockReader
     {
@@ -36,7 +37,7 @@ namespace Saga.Core.Ingest
                 .Split('\n')
                 .Select((lineText, index) => new TextLine(lineText, index + 1));
 
-            var blocks = PlainTextLineBreaks.Join(BlockAssembler.Assemble(lines))
+            var blocks = PlainTextLineBreaks.Join(PlainTextTables.Mark(BlockAssembler.Assemble(lines)))
                 .Select(block => block with { Text = PlainTextSuperscripts.Restore(block.Text) })
                 .ToList();
             return JournalMasthead.Mark(SuperscriptDesignations.Restore(PlainTextTitleSubject.Join(blocks)));
