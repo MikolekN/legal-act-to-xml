@@ -1142,6 +1142,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   ([ADR-0058](docs/adr/0058-zalacznik-zmieniany-odeslaniem-jest-instrukcja-z-adresami-obu-zalacznikow.md)).
   - Korpus DOCX: zmienia się 19 eksportów — 73 instrukcje `now:zastap` więcej, nic poza nimi; zgodność ze schematem
     bez zmian.
+- **Cel części wspólnej cytowanej obok pozycji wyliczenia** (`AmendmentTargetPairing.AnchorContentUnits`): „w ust. 1 pkt 2
+  i część wspólna otrzymują brzmienie:” stawiało część wspólną punktów pod `…__pkt_2__czw`, a „dodaje się lit. c oraz
+  część wspólną” — część wspólną liter pod `…__lit_b__czw`. Gdy cytat niesie obok części wspólnej pozycje jej wyliczenia,
+  cel wskazuje pozycję, a gospodarzem części wspólnej jest jednostka nad nią (`…__ust_1__czw`, `…__pkt_1__czw`). Część
+  wspólna cytowana sama („w pkt 9 wprowadzenie do wyliczenia otrzymuje brzmienie:”) stoi pod celem komendy jak dotąd.
+  - Korpus DOCX: zmieniają się 4 eksporty, w każdym jeden cel części wspólnej; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

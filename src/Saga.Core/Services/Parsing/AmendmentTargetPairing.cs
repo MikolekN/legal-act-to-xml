@@ -75,11 +75,16 @@ namespace Saga.Core.Services.Parsing
             if (targets.Count == 0)
                 return;
 
-            // Część wspólna cytowana bez gospodarza („dodaje się część wspólną w brzmieniu:") stoi pod całym
-            // adresem celu — gospodarzem jest jednostka wskazana komendą (art_18zg__ust_2 → art_18zg__ust_2__czw).
+            // Część wspólna cytowana bez gospodarza („dodaje się część wspólną w brzmieniu:", „w pkt 9 wprowadzenie do
+            // wyliczenia otrzymuje brzmienie:") stoi pod całym adresem celu — gospodarzem jest jednostka wskazana komendą
+            // (art_18zg__ust_2 → art_18zg__ust_2__czw). Gdy cytat niesie obok niej pozycje jej wyliczenia („w ust. 1 pkt 2
+            // i część wspólna otrzymują brzmienie:"), cel wskazuje pozycję, a gospodarzem jest jednostka nad nią
+            // (art_12__ust_1__czw).
             foreach (var part in amendment.Content?.CommonParts ?? [])
                 if (part.Parent is null)
-                    part.AddressAnchor = targets[0].Structure.ToString();
+                    part.AddressAnchor = (QuotesItemsOf(amendment.Content!, part.ListItemType)
+                        ? HostOf(targets[0].Structure, part.ListItemType)
+                        : targets[0].Structure).ToString();
 
             if (units.Count == 0)
                 return;
@@ -88,6 +93,40 @@ namespace Saga.Core.Services.Parsing
             for (var i = 0; i < paired.Count; i++)
                 foreach (var unit in paired[i])
                     unit.AddressAnchor = AnchorFor(targets[i].Structure, unit);
+        }
+
+        private static bool QuotesItemsOf(AmendmentContent content, UnitType? listItemType) => listItemType switch
+        {
+            UnitType.Point => content.Points.Count > 0,
+            UnitType.Letter => content.Letters.Count > 0,
+            UnitType.Tiret => content.Tirets.Count > 0,
+            _ => false,
+        };
+
+        /// <summary>
+        /// Adres jednostki, która trzyma wyliczenie danego rodzaju: cel ucięty powyżej pozycji wyliczenia (punkty —
+        /// do ustępu, litery — do punktu, tirety — do litery). Bez rodzaju pozycji — cały cel.
+        /// </summary>
+        private static StructuralReference HostOf(StructuralReference target, UnitType? listItemType)
+        {
+            var host = target.Clone();
+            host.Sentence = null;
+            switch (listItemType)
+            {
+                case UnitType.Point:
+                    host.Point = host.Letter = host.Tiret = null;
+                    break;
+                case UnitType.Letter:
+                    host.Letter = host.Tiret = null;
+                    break;
+                case UnitType.Tiret:
+                    host.Tiret = null;
+                    break;
+                default:
+                    return target;
+            }
+
+            return host;
         }
 
         private static string AnchorFor(StructuralReference target, BaseEntity unit)

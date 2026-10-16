@@ -639,6 +639,27 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void CommonPartOfPoints_NamedAfterAPoint_StandsUnderTheUnitHoldingThePoints()
+        {
+            // Korpus: 360425_3190283 — „w ust. 1 pkt 2 i część wspólna otrzymują brzmienie:"; część wspólna punktów
+            // należy do ustępu, nie do punktu 2.
+            var amendment = new Amendment
+            {
+                Targets = { new StructuralAmendmentReference { Structure = new StructuralReference { Article = "12", Paragraph = "1", Point = "2" } } },
+                Content = new AmendmentContent
+                {
+                    Points = { new Saga.Model.EditorialUnits.Point { Number = new EntityNumber { Value = "2" } } },
+                    CommonParts = { new Saga.Model.EditorialUnits.CommonPart { Type = CommonPartType.WrapUp, ListItemType = UnitType.Point } },
+                },
+            };
+
+            AmendmentTargetPairing.AnchorContentUnits(amendment);
+
+            Assert.Equal("art_12__ust_1", amendment.Content.CommonParts[0].AddressAnchor);
+            Assert.Equal("art_12__ust_1", amendment.Content.Points[0].AddressAnchor);
+        }
+
+        [Fact]
         public void SignReplacedOnItsOwn_IsATextChangeOfTheUnit()
         {
             var (xml, _) = Convert("1) w art. 12 w pkt 2 kropkę zastępuje się średnikiem;");
