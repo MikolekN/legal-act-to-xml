@@ -205,22 +205,25 @@ namespace Saga.Core
 
         private static bool IsSuperscriptRun(Run run)
         {
+            // Odwołanie do przypisu jest znacznikiem odnośnika, jakkolwiek je sformatowano.
+            if (run.ChildElements.OfType<FootnoteReference>().Any())
+                return true;
+
             var rp = run.RunProperties;
             if (rp == null)
                 return false;
 
+            // Położenie nadane przebiegowi wprost wygrywa ze stylem: tekst w stylu indeksu górnego z położeniem
+            // „baseline" drukuje się zwykłym tekstem („d)" litery, „f" w „fakturze" — 326568_2926612).
+            if (rp.VerticalTextAlignment?.Val?.Value is { } position)
+                return position == VerticalPositionValues.Superscript;
+
             // Szablon ma cztery style indeksu górnego (IG, IGP — pogrubiony, IGK — kursywa, IGPK);
             // oznaczenia jednostek są pogrubione, więc ich indeks idzie stylem IGP.
             var styleVal = rp.RunStyle?.Val?.Value;
-            if (styleVal is "Odwoanieprzypisudolnego"
+            return styleVal is "Odwoanieprzypisudolnego"
                 || (styleVal != null && styleVal.StartsWith("IG", StringComparison.Ordinal)
-                    && styleVal.Contains("indeksgrny", StringComparison.Ordinal)))
-                return true;
-
-            if (rp.VerticalTextAlignment?.Val?.Value == VerticalPositionValues.Superscript)
-                return true;
-
-            return false;
+                    && styleVal.Contains("indeksgrny", StringComparison.Ordinal));
         }
     }
 }

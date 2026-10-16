@@ -1122,6 +1122,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus DOCX: zmienia się 20 eksportów — dokładnie te z własnymi znakami: 69 odnośników więcej, 22 indeksy górne
     mniej; zgodność ze schematem bez zmian. W 352666/362536 odnośnik przy organie obwieszczenia ma wreszcie swoją
     treść (dotąd treść następnego odnośnika).
+- **Położenie nadane wprost wygrywa ze stylem indeksu górnego** (`ParagraphExtensions.IsSuperscriptRun`): przebieg
+  w stylu „IGindeksgrny” z `w:vertAlign="baseline"` drukuje się zwykłym tekstem. Dotąd czytnik brał go za indeks górny:
+  „d)” litery wychodziło znacznikiem odnośnika i litera ginęła (326568), „4)” punktu stawało się odsyłaczem do
+  odnośnika nr 4 (313332), gwiazdki formularzy — indeksem górnym. Przebieg z odwołaniem do przypisu jest znacznikiem
+  odnośnika bez względu na formatowanie.
+  - Korpus DOCX: zmienia się 43 eksporty — 67 indeksów górnych mniej, odzyskane jednostki (litera w 326568, punkty
+    7¹ i 7² w 326562, punkt 4 w 313332, ust. 2d w 346342 i 350275), 2 odnośniki osadzone w swoim miejscu; zgodność
+    ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

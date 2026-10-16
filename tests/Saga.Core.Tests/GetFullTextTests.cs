@@ -38,6 +38,37 @@ namespace Saga.Core.Tests
             new RunProperties { RunStyle = new RunStyle { Val = "IGindeksgrny" } },
             new Text(text) { Space = SpaceProcessingModeValues.Preserve });
 
+        [Theory]
+        // 326568_2926612: „d)" litery w stylu indeksu górnego, położenie przywrócone wprost na „baseline".
+        [InlineData("baseline", "d) Irlandię")]
+        [InlineData("subscript", "d) Irlandię")]
+        [InlineData("superscript", "[d)] Irlandię")]
+        public void GetFullText_DirectVerticalPosition_WinsOverTheSuperscriptStyle(string position, string expected)
+        {
+            var paragraph = new Paragraph(
+                new Run(
+                    new RunProperties(new RunStyle { Val = "IGindeksgrny" }, new VerticalTextAlignment { Val = new VerticalPositionValues(position) }),
+                    new Text("d)")),
+                new Run(new Text(" Irlandię") { Space = SpaceProcessingModeValues.Preserve }));
+
+            Assert.Equal(expected, paragraph.GetFullText());
+        }
+
+        [Fact]
+        public void GetFullText_FootnoteReference_IsAMarkerHoweverFormatted()
+        {
+            // Odwołanie z położeniem „baseline" i nawias w indeksie górnym — nadal jeden znacznik.
+            var paragraph = new Paragraph(
+                new Run(new Text("Ustawa")),
+                new Run(
+                    new RunProperties(new VerticalTextAlignment { Val = VerticalPositionValues.Baseline }),
+                    new FootnoteReference { Id = 2 }),
+                Superscript(")"),
+                new Run(new Text(" stosuje się.") { Space = SpaceProcessingModeValues.Preserve }));
+
+            Assert.Equal("Ustawa[1)] stosuje się.", paragraph.GetFullText(new Dictionary<long, int> { [2] = 1 }));
+        }
+
         [Fact]
         public void GetFullText_FootnoteInsertedAsAField_StaysInOneBracket()
         {
