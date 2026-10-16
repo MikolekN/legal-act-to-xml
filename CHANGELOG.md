@@ -1130,6 +1130,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus DOCX: zmienia się 43 eksporty — 67 indeksów górnych mniej, odzyskane jednostki (litera w 326568, punkty
     7¹ i 7² w 326562, punkt 4 w 313332, ust. 2d w 346342 i 350275), 2 odnośniki osadzone w swoim miejscu; zgodność
     ze schematem bez zmian.
+- **Wyrazy zmian w tekście tak, jak stoją w akcie zmienianym** (`TextChangeWording`): `stary-tekst` i `nowy-tekst`
+  nie niosą już znacznika odnośnika tego dokumentu („z późn. zm.[8)]” — treść odnośnika stoi w zdaniu komendy) ani
+  miękkiego dywizu Worda („jesienno­-zimowym”). Znaczniki zdejmuje przebieg po gotowym dokumencie, bo znacznik wpisany
+  tekstem bywa powtórzeniem odnośnika, którego odwołanie stoi dalej; znacznik bez odnośnika w rejestrze zostaje.
+  - Korpus DOCX: zmienia się 8 eksportów, w każdym tylko instrukcja `now:zamien-tekst` (6 ze znacznikiem, 2 z miękkim
+    dywizem); zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

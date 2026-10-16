@@ -221,6 +221,37 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ReplacedWords_DoNotCarryAFootnoteOfThisAct_NorASoftHyphen()
+        {
+            // 306779_2736407: odnośnik aktu zmieniającego („z późn. zm.⁸⁾") stoi w wyrazach skreślanych; 331615_3027942:
+            // miękki dywiz Worda w „jesienno-zimowym". Akt zmieniany nie ma ani jednego, ani drugiego.
+            var document = new LegalDocument { Type = LegalActType.Statute };
+            var context = new ParsingContext(document, document.RootPart.Books[0].Titles[0].Divisions[0].Chapters[0].Subchapters[0]);
+            var orchestrator = new ParserOrchestrator();
+            orchestrator.ProcessBlock(new DocumentBlock { Text = "Art. 1. W ustawie wprowadza się następujące zmiany:", Source = new BlockSourceLocation() }, context);
+            orchestrator.ProcessBlock(new DocumentBlock
+            {
+                Text = "1) w art. 37 w ust. 4 skreśla się wyrazy „(Dz. U. z 2023 r. poz. 1270, z późn. zm.[8)])”;",
+                Source = new BlockSourceLocation(),
+                Footnotes = [new BlockFootnote("8", ["Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone."]) { Marker = "8" }],
+            }, context);
+            orchestrator.ProcessBlock(new DocumentBlock
+            {
+                Text = "2) w art. 38 wyrazy „w okresie jesienno" + (char)0x00AD + "-zimowym” zastępuje się wyrazami „w okresie zimowym”.",
+                Source = new BlockSourceLocation(),
+            }, context);
+            orchestrator.Finalize(context);
+            var xml = new XDocument(LegalDocumentConverter.Convert(document));
+
+            var instructions = Commands(xml);
+            Assert.Equal(new[] { "(Dz. U. z 2023 r. poz. 1270, z późn. zm.)", "w okresie jesienno-zimowym" },
+                instructions.Select(instruction => Attr(instruction, "stary-tekst")));
+
+            // Treść odnośnika nie ginie — stoi w zdaniu komendy.
+            Assert.Single(instructions[0].Parent!.Elements(), e => e.Name.LocalName == "odnosnik");
+        }
+
+        [Fact]
         public void AddedWords_AreAnInstructionReplacingTheIndicatedWordsWithThemAndTheAddedOnes()
         {
             // Przykład autorów schematu (DU/2026/26): „po wyrazach „art. 61b ust. 6" dodaje się wyrazy „i art. 68g"".

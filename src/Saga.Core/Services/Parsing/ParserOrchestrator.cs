@@ -322,6 +322,9 @@ namespace Saga.Core.Services.Parsing
 
             SystematizingUnitValidator.Validate(context.Document);
 
+            // Wyrazy zmian w tekście bez znaczników odnośników tego aktu — rozstrzyga pełny rejestr odnośników.
+            TextChangeWording.DropOwnFootnoteMarkers(context.Document);
+
             // Przebieg po gotowym drzewie: klauzula wejścia w życie.
             // Wymaga kompletnego drzewa, wraz z nowelizacjami.
             // Tekst jednolity jej nie ma: „dzień ogłoszenia" w jego przepisie końcowym to ogłoszenie ustawy,

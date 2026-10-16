@@ -818,8 +818,8 @@ namespace Saga.Core.Services.Parsing
             context.PendingTextChanges[owner.Guid] = signs
                 .Select(command => new TextChange
                 {
-                    OldText = command.OldWording ?? string.Empty,
-                    NewText = command.NewWording ?? string.Empty,
+                    OldText = TextChangeWording.AsInAmendedAct(command.OldWording ?? string.Empty),
+                    NewText = TextChangeWording.AsInAmendedAct(command.NewWording ?? string.Empty),
                     Occurrence = TextOccurrence.Last,
                     Targets = unitOfTheSign
                         .Select(target => new StructuralAmendmentReference
@@ -879,8 +879,8 @@ namespace Saga.Core.Services.Parsing
             var changes = commands
                 .Select(command => new TextChange
                 {
-                    OldText = (command.OldWording ?? string.Empty).Trim(),
-                    NewText = (command.NewWording ?? string.Empty).Trim(),
+                    OldText = TextChangeWording.AsInAmendedAct(command.OldWording ?? string.Empty).Trim(),
+                    NewText = TextChangeWording.AsInAmendedAct(command.NewWording ?? string.Empty).Trim(),
                     Occurrence = command.Kind == AmendmentCommandKind.ReplaceSign ? TextOccurrence.Last : TextOccurrence.All,
                 })
                 .ToList();
