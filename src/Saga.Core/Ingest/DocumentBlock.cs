@@ -71,5 +71,8 @@ namespace Saga.Core.Ingest
 
         /// <summary>Ciąg numeracji (sekcja dokumentu), w którym przypis stoi.</summary>
         public int Run { get; init; }
+
+        /// <summary>Czy odwołanie ma własny znak zamiast numeru z licznika (ADR-0095).</summary>
+        public bool IsCustomMark { get; init; }
     }
 }

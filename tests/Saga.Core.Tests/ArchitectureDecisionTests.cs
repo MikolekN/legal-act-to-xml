@@ -2444,6 +2444,31 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0095: odwołanie z własnym znakiem jest odnośnikiem z kolejnym znacznikiem
+        // ============================================================
+
+        [Fact]
+        public void Adr0095_CustomMarkReference_IsAFootnote_AndOtherMarkersStayPrintedNumbers()
+        {
+            static List<BlockFootnote> Footnotes(params string[] lines)
+            {
+                using var stream = new MemoryStream(DocxFixtures.WithFootnotes(["Pierwszy.", "Gwiazdka.", "Drugi."], lines));
+                return new DocxBlockReader().ReadBlocks(stream).SelectMany(block => block.Footnotes).ToList();
+            }
+
+            // Bez własnych znaków znacznik to numer drukowany — jak dotąd.
+            var plain = Footnotes("USTAWA{1}", "Art. 1. Treść{2}.", "Art. 2. Treść{3}.");
+            Assert.Equal(new[] { "1", "2", "3" }, plain.Select(f => f.Marker));
+            Assert.Equal(new[] { "1", "2", "3" }, plain.Select(f => f.Symbol));
+
+            // Własny znak jest oznaczeniem; znacznik bierze kolejny numer, a licznik Worda go nie liczy.
+            var custom = Footnotes("USTAWA{1}", "Art. 1. Treść{2:*)}.", "Art. 2. Treść{3}.");
+            Assert.Equal(new[] { "1", "2", "3" }, custom.Select(f => f.Marker));
+            Assert.Equal(new[] { "1", "*", "2" }, custom.Select(f => f.Symbol));
+            Assert.Equal("Gwiazdka.", Assert.Single(custom[1].Paragraphs));
+        }
+
+        // ============================================================
         // ADR-0091: część wspólna za tiretami bez stylu rozpoznawana z wcięcia
         // ============================================================
 

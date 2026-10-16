@@ -262,6 +262,7 @@ namespace Saga.Core.Services.Parsing
                     Symbol = footnote.Symbol,
                     Marker = footnote.Marker,
                     Run = footnote.Run,
+                    IsCustomMark = footnote.IsCustomMark,
                     Paragraphs = [.. footnote.Paragraphs],
                 });
             }

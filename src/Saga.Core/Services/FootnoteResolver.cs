@@ -37,8 +37,12 @@ namespace Saga.Core.Services
             }
 
             _last = value;
-            _run = footnote.Run;
-            _met[(footnote.Run, footnote.Symbol)] = footnote;
+
+            // Odnośnik z własnym znakiem stoi poza numeracją Worda: nie przełącza ciągu, w którym szuka się
+            // powtórzeń, i sam powtarza się w ciągu bieżącym (ADR-0095).
+            if (!footnote.IsCustomMark)
+                _run = footnote.Run;
+            _met[(footnote.IsCustomMark ? _run : footnote.Run, footnote.Symbol)] = footnote;
             return footnote;
         }
 

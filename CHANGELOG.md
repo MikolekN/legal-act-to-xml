@@ -1113,6 +1113,15 @@ a wersjonowanie zgodne z Semantic Versioning.
     wprowadza ciąg numeracji załącznika, a powtórzenie szuka odnośnika tylko w nim
     ([ADR-0061](docs/adr/0061-odnosnik-ma-oznaczenie-jak-w-akcie-a-znacznik-numer-jednoznaczny.md)) — wcześniej
     trafiało do poprzedniej sekcji tylko dlatego, że odnośnik oznaczenia ginął.
+- **Odwołanie do przypisu z własnym znakiem** (`w:customMarkFollows`: „3)”, „*”, „za”) jest odnośnikiem: oznaczeniem
+  jest ten znak, a znacznik w tekście bierze kolejny numer w dokumencie (`DocxFootnotes` liczy osobno numery drukowane
+  i numery znaczników; bez własnych znaków są to te same numery). Dotąd czytnik pomijał takie odwołania: treść
+  przypisu ginęła, a w tekście zostawał identyfikator `w:id` sklejony ze znakiem („3.[53)]”, „epidemiologiczne3*”).
+  Odnośnik z własnym znakiem nie przełącza ciągu numeracji, w którym szuka się powtórzeń (`FootnoteResolver`)
+  ([ADR-0095](docs/adr/0095-odwolanie-z-wlasnym-znakiem-jest-odnosnikiem-z-kolejnym-znacznikiem.md)).
+  - Korpus DOCX: zmienia się 20 eksportów — dokładnie te z własnymi znakami: 69 odnośników więcej, 22 indeksy górne
+    mniej; zgodność ze schematem bez zmian. W 352666/362536 odnośnik przy organie obwieszczenia ma wreszcie swoją
+    treść (dotąd treść następnego odnośnika).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

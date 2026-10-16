@@ -151,8 +151,9 @@ namespace Saga.Core.Tests
 
         /// <summary>
         /// Dokument z przypisami w układzie plików Dz.U. W wierszu treści „{n}" to odwołanie do n-tego
-        /// przypisu (z nawiasem w indeksie górnym, jak w aktach), a „{tekst}" — sam tekst w indeksie
-        /// górnym („{, }" między dwoma odwołaniami). Identyfikatory <c>w:id</c> zaczynają się od 2:
+        /// przypisu (z nawiasem w indeksie górnym, jak w aktach), „{n:znak}" — odwołanie z własnym znakiem
+        /// (<c>w:customMarkFollows</c>) w indeksie górnym, „{n;znak}" — w zwykłym przebiegu, a „{tekst}" — sam tekst
+        /// w indeksie górnym („{, }" między dwoma odwołaniami). Identyfikatory <c>w:id</c> zaczynają się od 2:
         /// wcześniejsze Word oddaje separatorom, więc id NIE jest numerem przypisu.
         /// </summary>
         internal static byte[] WithFootnotes(IReadOnlyList<string> footnotes, params string[] bodyLines) =>
@@ -262,6 +263,16 @@ namespace Saga.Core.Tests
                 {
                     paragraph.AppendChild(Superscript(new Word.FootnoteReference { Id = FootnoteId(number) }));
                     paragraph.AppendChild(Superscript(new Word.Text(")")));
+                }
+                else if (System.Text.RegularExpressions.Regex.Match(inner, @"^(?<number>\d+)(?<plain>[:;])(?<mark>.*)$") is { Success: true } custom)
+                {
+                    // „{n:znak}" — odwołanie z własnym znakiem w przebiegu indeksu górnego, „{n;znak}" — w zwykłym.
+                    var reference = new Word.Run(
+                        new Word.FootnoteReference { Id = FootnoteId(int.Parse(custom.Groups["number"].Value)), CustomMarkFollows = true },
+                        new Word.Text(custom.Groups["mark"].Value) { Space = SpaceProcessingModeValues.Preserve });
+                    if (custom.Groups["plain"].Value == ":")
+                        reference.PrependChild(new Word.RunProperties(new Word.RunStyle { Val = SuperscriptStyle }));
+                    paragraph.AppendChild(reference);
                 }
                 else
                 {

@@ -13,8 +13,8 @@ namespace Saga.Core.Ingest
     /// </summary>
     internal sealed class DocxFootnotes
     {
-        /// <summary>Oznaczenie przypisu w akcie i ciąg numeracji, w którym stoi.</summary>
-        private sealed record Designation(string Symbol, int Run);
+        /// <summary>Oznaczenie przypisu w akcie, ciąg numeracji, w którym stoi, i czy to własny znak odwołania.</summary>
+        private sealed record Designation(string Symbol, int Run, bool Custom = false);
 
         private const string Settings = "footnotePr";
 
@@ -51,6 +51,7 @@ namespace Saga.Core.Ingest
             // Sekcja dokumentu może wznawiać numerację i zmieniać jej zapis („a)" w obwieszczeniu, „1)"
             // w ogłaszanym akcie i znów „1)" w załączniku) — wtedy zaczyna się nowy ciąg numeracji.
             var printed = 0;
+            var slot = 0;
             var run = 0;
             var first = true;
             var runHasFootnotes = false;
@@ -60,13 +61,13 @@ namespace Saga.Core.Ingest
                 var start = int.TryParse(Setting(settings, "numStart"), NumberStyles.None, CultureInfo.InvariantCulture, out var given) ? given : 1;
                 if (first)
                 {
-                    printed = start - 1;
+                    printed = slot = start - 1;
                 }
                 else if (Setting(settings, "numRestart") == "eachSect")
                 {
                     // Nowy ciąg zaczyna się dopiero wtedy, gdy poprzedni ma odnośniki: sekcja bez odnośników
                     // (obwieszczenie przed ogłaszanym aktem) niczego nie przesuwa.
-                    printed = start - 1;
+                    printed = slot = start - 1;
                     if (runHasFootnotes)
                     {
                         run++;
@@ -77,17 +78,29 @@ namespace Saga.Core.Ingest
                 first = false;
                 foreach (var reference in references)
                 {
-                    // Odwołanie z własnym znakiem (gwiazdka) nie bierze numeru z licznika.
-                    if (reference.CustomMarkFollows?.Value == true || reference.Id?.Value is not { } id)
+                    if (reference.Id?.Value is not { } id || footnotes._numbers.ContainsKey(id))
                         continue;
 
-                    if (footnotes._numbers.ContainsKey(id))
-                        continue;
+                    // Odwołanie z własnym znakiem („3)", „*", „za") nie bierze numeru z licznika Worda: oznaczeniem
+                    // jest ten znak. Znacznik w tekście dostaje jednak kolejny numer — znaczniki rosną w kolejności
+                    // dokumentu (ADR-0061), a bez własnych znaków są to numery z licznika (ADR-0095).
+                    string symbol;
+                    if (reference.CustomMarkFollows?.Value == true)
+                    {
+                        symbol = CustomSymbol(ParagraphExtensions.CustomMark(reference));
+                        if (symbol.Length == 0)
+                            continue;
+                    }
+                    else
+                    {
+                        printed++;
+                        symbol = Format(printed, Setting(settings, "numFmt"));
+                    }
 
-                    printed++;
+                    slot++;
                     runHasFootnotes = true;
-                    footnotes._numbers[id] = run * RunBase + printed;
-                    footnotes._designations[id] = new Designation(Format(printed, Setting(settings, "numFmt")), run);
+                    footnotes._numbers[id] = run * RunBase + slot;
+                    footnotes._designations[id] = new Designation(symbol, run, Custom: reference.CustomMarkFollows?.Value == true);
                 }
             }
 
@@ -100,8 +113,11 @@ namespace Saga.Core.Ingest
                     .Select(paragraph => WithoutOwnMark(paragraph.GetFullText(footnotes._numbers)))
                     .Where(text => text.Length > 0)
                     .ToList();
+                var designation = footnotes._designations[id];
                 if (texts.Count > 0)
-                    texts[0] = WithoutTypedOwnNumber(texts[0], footnotes._designations[id].Symbol);
+                    texts[0] = designation.Custom
+                        ? WithoutTypedCustomMark(texts[0], designation.Symbol)
+                        : WithoutTypedOwnNumber(texts[0], designation.Symbol);
                 footnotes._texts[id] = texts;
             }
 
@@ -166,6 +182,7 @@ namespace Saga.Core.Ingest
                 {
                     Marker = number.ToString(CultureInfo.InvariantCulture),
                     Run = designation.Run,
+                    IsCustomMark = designation.Custom,
                 });
             }
 
@@ -215,6 +232,26 @@ namespace Saga.Core.Ingest
         {
             var typed = "[" + symbol + ")]";
             return text.StartsWith(typed, StringComparison.Ordinal) ? text[typed.Length..].TrimStart() : text;
+        }
+
+        /// <summary>
+        /// Oznaczenie przypisu z własnym znakiem: znak bez nawiasu zamykającego („3)" → „3", „*)" → „*", „za" → „za").
+        /// </summary>
+        private static string CustomSymbol(string mark) => mark.Trim().TrimEnd(')').Trim();
+
+        /// <summary>
+        /// Treść przypisu z własnym znakiem zaczyna ten znak wpisany tekstem — w indeksie górnym albo zwykłym
+        /// („[3)]W brzmieniu …", „za)Zmiana …", „*)WSSE …", „1 Niniejszy …"). To oznaczenie, nie treść.
+        /// </summary>
+        internal static string WithoutTypedCustomMark(string text, string symbol)
+        {
+            foreach (var typed in new[] { "[" + symbol + ")]", "[" + symbol + "]", symbol + ")" })
+            {
+                if (text.StartsWith(typed, StringComparison.Ordinal))
+                    return text[typed.Length..].TrimStart();
+            }
+
+            return text.StartsWith(symbol + " ", StringComparison.Ordinal) ? text[(symbol.Length + 1)..].TrimStart() : text;
         }
     }
 }

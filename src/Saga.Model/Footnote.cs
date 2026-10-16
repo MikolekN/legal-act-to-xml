@@ -33,6 +33,12 @@ namespace Saga.Model
         /// <summary>Ciąg numeracji, w którym odnośnik stoi; oznaczenia powtarzają się między ciągami.</summary>
         public int Run { get; set; }
 
+        /// <summary>
+        /// Czy odwołanie ma własny znak („3)", „*") zamiast numeru z licznika Worda. Taki odnośnik stoi poza
+        /// numeracją, więc nie mówi, który ciąg numeracji jest bieżący.
+        /// </summary>
+        public bool IsCustomMark { get; set; }
+
         /// <summary>Akapity treści odnośnika, bez własnego znacznika na początku.</summary>
         public List<string> Paragraphs { get; set; } = new();
     }

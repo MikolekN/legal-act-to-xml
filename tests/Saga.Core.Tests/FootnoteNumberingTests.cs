@@ -246,5 +246,81 @@ namespace Saga.Core.Tests
             var footnote = Assert.Single(Named(xml, "odnosnik"), f => f.Attribute("id-odnosnika")?.Value == "100001");
             Assert.Contains("dyrektywę", footnote.Value);
         }
+
+        // ============================================================
+        // Odwołanie z własnym znakiem (w:customMarkFollows) — ADR-0095
+        // ============================================================
+
+        private static byte[] WithCustomMark(string line) => DocxFixtures.WithFootnotes(
+            Notes, "USTAWA", "o ochronie sygnalistów{1}", line, "Art. 2. Ustawa{3} wchodzi w życie.");
+
+        [Fact]
+        public void CustomMarkReference_IsAFootnote_WithItsOwnMarkAsTheSymbol()
+        {
+            // Korpus: 346446_3115101 — „3." i znak „3)" wpisany za odwołaniem w jego przebiegu; Word nie liczy go
+            // licznikiem, więc następny zwykły odnośnik to „2)".
+            var docx = WithCustomMark("Art. 1. Przepisy{2:3)} stosuje się.");
+
+            var footnotes = FootnotesOf(docx);
+            Assert.Equal(new[] { "1", "3", "2" }, footnotes.Select(f => f.Symbol));
+            Assert.Equal(new[] { "1", "2", "3" }, footnotes.Select(f => f.Marker));
+
+            // Znacznik z numerem kolejnym — bez identyfikatora w:id i bez powtórzonego znaku.
+            Assert.Contains(Read(docx), block => block.Text == "Art. 1. Przepisy[2)] stosuje się.");
+        }
+
+        [Theory]
+        // 337123_3071682: gwiazdka w zwykłym przebiegu, nawias w następnym, w indeksie górnym.
+        [InlineData("Art. 1. Przepisy{2;*}{) }stosuje się.", "Art. 1. Przepisy[2)] stosuje się.", "*")]
+        // 349921_3119995: „za" i nawias znaku w indeksie górnym, a za nim nawias zamykający wtrącenie.
+        [InlineData("Art. 1. Przepisy (lit. a{2:za}{)}) stosuje się.", "Art. 1. Przepisy (lit. a[2)]) stosuje się.", "za")]
+        public void CustomMarkWithoutItsParenthesis_TakesTheParenthesisOfTheNextSuperscriptRun(string line, string text, string symbol)
+        {
+            var docx = WithCustomMark(line);
+
+            Assert.Contains(Read(docx), block => block.Text == text);
+            Assert.Equal(symbol, FootnotesOf(docx)[1].Symbol);
+        }
+
+        [Fact]
+        public void CustomMarkFootnote_IsExportedAtItsPlace()
+        {
+            using var stream = new MemoryStream(WithCustomMark("Art. 1. Przepisy{2:*)} stosuje się."));
+            var xml = LegalDocumentConverter.Convert(
+                LegalDocumentParser.Parse(stream, "akt.docx", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var footnote = Assert.Single(Named(xml, "odnosnik"), f => f.Attribute("symbol")?.Value == "*");
+            Assert.Equal(Notes[1], footnote.Value.Trim());
+            Assert.Equal("artykul", footnote.Ancestors().First(e => e.Attribute("eId") != null).Name.LocalName);
+            Assert.DoesNotContain("[", xml.Value);
+        }
+
+        [Fact]
+        public void CustomMarkFootnote_DoesNotSwitchTheRunOfRepeatedMarkers()
+        {
+            // Korpus: 341275_3063424 — załącznik w sekcji wznawiającej numerację; jego odnośnik ma własny znak „6)",
+            // ciągnący numerację aktu, a „1)" wpisane w tabeli załącznika powtarzają odnośnik aktu.
+            var resolver = new FootnoteResolver(
+                [Note("1", "1", 0), Note("2", "2", 0), new Footnote { Marker = "100001", Symbol = "6", Run = 1, IsCustomMark = true }]);
+            resolver.First("1");
+            resolver.First("2");
+
+            Assert.Equal("6", resolver.First("100001")?.Symbol);
+            Assert.Equal("1", resolver.Repeated("1")?.Marker);
+
+            // Sam własny znak powtarza się w ciągu bieżącym.
+            Assert.Equal("100001", resolver.Repeated("6")?.Marker);
+        }
+
+        [Theory]
+        [InlineData("[3)]W brzmieniu ustalonym", "3", "W brzmieniu ustalonym")]
+        [InlineData("za)Zmiana wymienionego", "za", "Zmiana wymienionego")]
+        [InlineData("*)WSSE oznacza", "*", "WSSE oznacza")]
+        [InlineData("1 Niniejszy dokument", "1", "Niniejszy dokument")]
+        [InlineData("12 lutego 2024 r.", "1", "12 lutego 2024 r.")]
+        public void CustomMarkTypedAtTheStartOfTheFootnote_IsNotItsContent(string text, string symbol, string content)
+        {
+            Assert.Equal(content, DocxFootnotes.WithoutTypedCustomMark(text, symbol));
+        }
     }
 }

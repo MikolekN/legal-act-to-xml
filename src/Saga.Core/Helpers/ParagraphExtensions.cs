@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Saga.Core.Helpers;
@@ -34,6 +35,7 @@ namespace Saga.Core
         {
             var sb = new StringBuilder();
             var superscript = new StringBuilder();
+            var closeCustomMark = false;
 
             foreach (var element in paragraph.Descendants())
             {
@@ -51,20 +53,35 @@ namespace Saga.Core
                 if (element is not Run run)
                     continue;
 
-                var text = RunText(run, footnoteNumbers);
+                var text = RunText(run, footnoteNumbers, out var customMark);
 
                 // Przebieg bez tekstu (znaczniki pola: odnośnik wstawiony polem NOTEREF) nie rozcina indeksu
                 // górnego — inaczej „8" i „)" jednego odnośnika stają w dwóch nawiasach „[8][)]".
                 if (text.Length == 0)
                     continue;
 
+                // Nawias własnego znaku bez nawiasu („za", „*") stoi w następnym przebiegu indeksu górnego — znacznik
+                // ma go już (ADR-0095).
+                if (closeCustomMark)
+                {
+                    closeCustomMark = false;
+                    if (IsSuperscriptRun(run) && text.TrimStart().StartsWith(')'))
+                    {
+                        text = text.Remove(text.IndexOf(')'), 1);
+                        if (text.Length == 0)
+                            continue;
+                    }
+                }
+
                 // Wersaliki nadane wprost przebiegowi to w akcie wielkie litery — tekst czytamy tak, jak go wydrukowano.
                 if (IsCapsRun(run))
                     text = text.ToUpperInvariant();
 
-                if (IsSuperscriptRun(run))
+                // Odwołanie z własnym znakiem jest znacznikiem odnośnika, także w przebiegu bez formatu indeksu.
+                if (customMark is not null || IsSuperscriptRun(run))
                 {
                     superscript.Append(text);
+                    closeCustomMark = customMark is { } mark && !mark.TrimEnd().EndsWith(')');
                     continue;
                 }
 
@@ -76,8 +93,13 @@ namespace Saga.Core
             return sb.ToString();
         }
 
-        private static string RunText(Run run, IReadOnlyDictionary<long, int>? footnoteNumbers)
+        /// <param name="customMark">
+        /// W\u0142asny znak odwo\u0142ania (<c>w:customMarkFollows</c>) z tego przebiegu, gdy przypis jest w mapie numer\u00f3w: przebieg
+        /// czyta si\u0119 wtedy jako znacznik z numerem (\u201e5)"), a znak stoj\u0105cy za odwo\u0142aniem jest tym samym znacznikiem.
+        /// </param>
+        private static string RunText(Run run, IReadOnlyDictionary<long, int>? footnoteNumbers, out string? customMark)
         {
+            customMark = null;
             var sb = new StringBuilder();
             foreach (var child in run.ChildElements)
             {
@@ -91,6 +113,16 @@ namespace Saga.Core
                         when string.Equals(sym.Font?.Value, "Symbol", StringComparison.OrdinalIgnoreCase)
                           && string.Equals(sym.Char?.Value, "F02D", StringComparison.OrdinalIgnoreCase):
                         sb.Append('\u2013');
+                        break;
+
+                    case FootnoteReference { CustomMarkFollows.Value: true } custom
+                        when custom.Id?.Value is { } customId && footnoteNumbers != null
+                          && footnoteNumbers.TryGetValue(customId, out var customNumber):
+                        customMark = CustomMark(custom);
+                        return sb.Append(customNumber).Append(')').ToString();
+
+                    // W\u0142asny znak bez przypisu w mapie zostaje tym, co wydrukowano \u2014 bez identyfikatora w:id.
+                    case FootnoteReference { CustomMarkFollows.Value: true }:
                         break;
 
                     case FootnoteReference fnRef:
@@ -116,6 +148,26 @@ namespace Saga.Core
                         break;
                 }
             }
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Własny znak odwołania do przypisu: tekst stojący za odwołaniem w jego przebiegu („3)", „*", „za"). Znak
+        /// czcionki Symbol (<c>w:sym</c>, „F031") leży w obszarze prywatnym Unicode przesuniętym o F000 — „1".
+        /// </summary>
+        internal static string CustomMark(FootnoteReference reference)
+        {
+            var sb = new StringBuilder();
+            foreach (var sibling in reference.ElementsAfter())
+            {
+                if (sibling is Text text)
+                    sb.Append(text.Text);
+                else if (sibling is SymbolChar { Char.Value: { } code }
+                    && int.TryParse(code, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var point)
+                    && point >= 0xF020 && point <= 0xF07E)
+                    sb.Append((char)(point - 0xF000));
+            }
+
             return sb.ToString();
         }
 
