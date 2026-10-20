@@ -2366,6 +2366,35 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0106: odnośnik jako miejsce zmiany jest celem
+        // ============================================================
+
+        [Fact]
+        public void Adr0106_FootnoteAsThePlace_IsTheTarget()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w odnośniku nr 1 do tytułu ustawy akapit trzeci otrzymuje brzmienie:",
+                "„Ustawa zmienia inne ustawy.”;",
+                "2) w odnośniku nr 2 wyrazy „opłata” zastępuje się wyrazami „należność”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var instructions = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Attribute("element-eId") is not null)
+                .Select(e => (e.Attribute("element-eId")!.Value, e.Attribute("funkcja")?.Value))
+                .ToList();
+
+            // Akapit odnośnika — ręcznie na odnośniku; tekst całego odnośnika — automatycznie.
+            Assert.Equal([("DU/2021/200__odn_1", "zastap-recznie"), ("DU/2021/200__odn_2", (string?)null)], instructions);
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 

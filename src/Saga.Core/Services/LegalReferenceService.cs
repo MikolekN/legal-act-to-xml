@@ -16,6 +16,14 @@ namespace Saga.Core.Services
         public IReadOnlyList<StructuralAmendmentReference> ReadAmendmentTargets(
             StructuralReference? context, string? contentText, bool sectionSignIsBasicUnit = false)
         {
+            // Odnośnik jako miejsce zmiany („w odnośniku nr 1 do tytułu ustawy:", „w odnośniku nr 2 wyrazy …"): jego akapity
+            // i punkty nie mają eId, więc celem jest sam odnośnik — także dla przepisów pod nim (ustalenie z 2026-10-19
+            // do pytania 24, ADR-0106).
+            if (context?.Footnote is { } inherited)
+                return [new StructuralAmendmentReference { Structure = new StructuralReference { Footnote = inherited }, RawText = contentText }];
+            if (contentText is not null && FootnotePlace.Match(ManualTargets.WithoutActFormula(contentText)) is { Success: true } place)
+                return [new StructuralAmendmentReference { Structure = new StructuralReference { Footnote = place.Groups["number"].Value }, RawText = contentText }];
+
             var targets = new List<StructuralAmendmentReference>();
             var seen = new HashSet<string>(StringComparer.Ordinal);
 
@@ -41,6 +49,10 @@ namespace Saga.Core.Services
 
             return targets;
         }
+
+        /// <summary>Odnośnik aktu zmienianego jako miejsce zmiany: „w odnośniku nr 1 (do tytułu ustawy)".</summary>
+        private static readonly Regex FootnotePlace = new(
+            @"^w\s+odnośniku\s+nr\s+(?<number>\d+[a-z]*)\b", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
         /// <summary>Cel „tytuł aktu zmienianego", gdy przepis zaczyna się od niego; null, gdy go nie nazywa (ADR-0101).</summary>
         internal static StructuralAmendmentReference? ActTitleTarget(string? contentText) =>

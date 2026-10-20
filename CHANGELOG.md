@@ -1248,6 +1248,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   nadal są bez znacznika, a odnośnik zostaje też w zdaniu komendy.
   - Korpus DOCX: zmieniają się 4 eksporty (296120, 302046, 308909, 353666) — w każdym wyrazy nowe z fragmentem
     odnośnika; zgodność ze schematem bez zmian.
+- **Odnośnik jako miejsce zmiany** ([ADR-0106](docs/adr/0106-odnosnik-jako-miejsce-zmiany-jest-celem.md)): „w odnośniku nr 1 do tytułu ustawy akapit trzeci
+  otrzymuje brzmienie:” wychodził z `UNKNOWN`, a „w odnośniku nr 1 … w pkt 5 kropkę zastępuje się średnikiem” wskazywało
+  punkt aktu. Teraz celem jest odnośnik (`…__odn_1`) — według ustalenia z 2026-10-19 jego akapity i punkty nie mają
+  `eId` — z instrukcją ręczną; zmiana tekstu całego odnośnika („w odnośniku nr 2 wyrazy „X” zastępuje się …”)
+  zostaje automatyczna.
+  - Korpus DOCX: zmienia się 6 eksportów — instrukcje ręczne na odnośniku zamiast celów w jednostkach aktu albo
+    `UNKNOWN`; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

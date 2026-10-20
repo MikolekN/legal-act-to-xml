@@ -26,6 +26,15 @@ namespace Saga.Core.Services.Parsing
             + @"(?:wyraz|liczb|cyfr|kwot|znak|kropk|przecin|średnik|dwukrop|nawias)",
             RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
+        /// <summary>
+        /// Zmiana w tekście całego odnośnika: za miejscem „w odnośniku nr N (do tytułu ustawy)" — albo bez niego, gdy podał je
+        /// przepis nadrzędny — stoi od razu przedmiot zmiany w tekście, a nie akapit czy punkt odnośnika.
+        /// </summary>
+        private static readonly Regex WholeFootnoteTextChange = new(
+            @"^(?:użyt\p{L}*\s+)?(?:w\s+odnośniku\s+nr\s+\S+(?:\s+do\s+tytułu\s+\p{L}+)?[\s:]*)?(?:użyt\p{L}*\s+)?(?:(?:po|przed)\s+)?(?:skreśla\s+się\s+)?"
+            + @"(?:wyraz|liczb|cyfr|kwot|znak|kropk|przecin|średnik|dwukrop|nawias)",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
         /// <summary>Załącznik jest przedmiotem uchylenia („uchyla się załącznik nr 4") — cel ma adres.</summary>
         private static readonly Regex RepealedAnnex = new(
             @"\b(?:uchyla|skreśla)\s+się\s+załącznik", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
@@ -55,10 +64,16 @@ namespace Saga.Core.Services.Parsing
             // każdy cel dostaje instrukcję ręczną z nowymi wyrazami (zasada ogólna 6, ADR-0103).
             var inflected = amendment.TextChanges.Count > 0 && InflectedWords.IsMatch(UnitReferences.UnitAddressReader.WithoutQuotedText(text));
 
+            // Odnośnik jako miejsce (ADR-0106): ręcznie, chyba że zmienia się tekst całego odnośnika („w odnośniku nr 2
+            // wyrazy „X” zastępuje się …") albo odnośnik jest przedmiotem komendy (cytowany odnośnik, ADR-0059).
+            var footnoteInside = amendment.Content?.Footnote is null
+                && !(ChangesTextOnly(amendment) && WholeFootnoteTextChange.IsMatch(text));
+
             foreach (var target in amendment.Targets.Concat(amendment.TextChanges.SelectMany(change => change.Targets)))
             {
                 var structure = target.Structure;
                 var manual = inflected
+                    || (structure.Footnote is not null && footnoteInside)
                     || structure.ActTitle
                     || structure is { Annex.Length: > 0, InAnnexContent: true }
                     || (IsAnnexItself(structure) && !wholeAnnexText && !annexRepealed);

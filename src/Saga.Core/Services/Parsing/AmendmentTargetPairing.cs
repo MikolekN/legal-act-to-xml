@@ -158,6 +158,7 @@ namespace Saga.Core.Services.Parsing
                 return string.Empty;
 
             // Jednostka dodawana w załączniku stoi pod jego adresem (zal_1__ust_2__pkt_57a, ADR-0080).
+            // Jednostka dodawana w odnośniku stoi pod jego adresem (odn_1__pkt_6), nie jako jednostka aktu (ADR-0106).
             return new StructuralReference
             {
                 Annex = target.Annex,
@@ -166,6 +167,7 @@ namespace Saga.Core.Services.Parsing
                 ParagraphIsCodeParagraph = level > 1 && target.ParagraphIsCodeParagraph,
                 Point = level > 2 ? target.Point : null,
                 Letter = level > 3 ? target.Letter : null,
+                Footnote = target.Footnote,
             }.ToString();
         }
 

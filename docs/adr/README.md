@@ -124,5 +124,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0103](0103-zmiana-wyrazow-w-roznych-formach-to-instrukcja-reczna.md) | Zmiana wyrazów w różnych formach („w różnej liczbie i różnym przypadku”) to `cytat-w-tekscie funkcja="zastap-recznie"` z nowymi wyrazami na każdy cel, nie `now:zamien-tekst` z formą podstawową | Accepted | 2026-10-20 |
 | [0104](0104-znak-dodawany-bez-miejsca-to-instrukcja-reczna.md) | Znak dodawany bez wskazania miejsca w tekście („w pkt 4 dodaje się przecinek”) to `cytat-w-tekscie funkcja="dodaj-recznie"` ze znakiem na jednostce; znak po wskazanych wyrazach zostaje zmianą automatyczną | Accepted | 2026-10-20 |
 | [0105](0105-odnosnik-w-nowych-wyrazach-to-fragment-xml-w-nowy-tekst.md) | Odnośnik tego aktu w nowych wyrazach zmiany w tekście („z późn. zm.¹⁾”) to zakodowany fragment XML odnośnika w `nowy-tekst`, bez deklaracji przestrzeni nazw | Accepted | 2026-10-20 |
+| [0106](0106-odnosnik-jako-miejsce-zmiany-jest-celem.md) | Odnośnik jako miejsce zmiany („w odnośniku nr 1 …”) jest celem komendy (`odn_N`): jego akapit albo punkt to instrukcja ręczna na odnośniku, zmiana tekstu całego odnośnika — automatyczna | Accepted | 2026-10-20 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.
