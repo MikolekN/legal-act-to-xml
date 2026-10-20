@@ -75,6 +75,21 @@ namespace Saga.Core.Tests
             "„2) Niniejsza ustawa służy stosowaniu rozporządzenia 2024/1366.”;");
 
         [Fact]
+        public void FirstFootnoteAddedInAnAnnex_IsAManualInstructionOnTheAnnex()
+        {
+            // Korpus: 303357_3003029 — odnośnik załącznika nie ma adresu, a dodawany nr 1 nie ma poprzednika.
+            var xml = LegalDocumentConverter.Convert(Parse(
+                "1) w załączniku nr 2 do ustawy:",
+                "a) w objaśnieniach odnośniki nr 1–7 oznacza się odpowiednio jako odnośniki nr 2–8 i dodaje się odnośnik nr 1 w brzmieniu:",
+                "„1) Zgodnie z unijnym wykazem nowej żywności.”;"));
+
+            var citation = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "cytat-strukt");
+            Assert.Equal("DU/2021/200__zal_2", citation.Attribute("element-eId")?.Value);
+            Assert.Equal("dodaj-recznie", citation.Attribute("funkcja")?.Value);
+            Assert.Equal("odnosnik-cyt", citation.Elements().Single().Name.LocalName);
+        }
+
+        [Fact]
         public void QuotedFootnote_IsNotBuiltAsUnits()
         {
             // Przedtem „1) Niniejsza ustawa …" bywało punktem 1 cytowanej treści albo tekstem bez adresu.

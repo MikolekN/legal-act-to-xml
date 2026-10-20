@@ -1292,6 +1292,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   wyrazów („w tytule ustawy, w art. 1 i w art. 5 wyraz …”) jest osobnym celem obok jednostek. Wcześniej `UNKNOWN`
   albo brak instrukcji dla tytułu.
   - Korpus DOCX: 4 pliki; zgodność ze schematem bez zmian (2013 z 2321). Ocena korpusu: 2147 → 2150.
+- **Odnośnik dodawany w załączniku**: „w załączniku nr 2: … w objaśnieniach odnośniki nr 1–7 oznacza się odpowiednio jako
+  odnośniki nr 2–8 i dodaje się odnośnik nr 1 w brzmieniu:” wychodził z `UNKNOWN` — odnośnik załącznika nie ma adresu,
+  a pierwszy nie ma poprzednika. Celem jest załącznik z przepisu nadrzędnego (`…__zal_2`) z instrukcją `dodaj-recznie`
+  (zasada 5, [ADR-0100](docs/adr/0100-cel-w-zalaczniku-bez-adresu-to-instrukcja-reczna.md)).
+  - Korpus DOCX: 2 pliki (jeden akt); zgodność ze schematem bez zmian (2013 z 2321). Ocena korpusu: 2150 → 2152.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

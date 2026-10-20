@@ -306,7 +306,9 @@ namespace Saga.Core.Services.Parsing
             // przypisanie do właściciela, walidacja
             var finalizerInput = new AmendmentFinalizerInput(content, collector, context)
             {
-                Targets = footnote is null ? null : QuotedFootnoteReader.Target(footnote, collector.Owner?.ContentText) is { } target ? [target] : [],
+                Targets = footnote is null ? null
+                    : QuotedFootnoteReader.Target(footnote, collector.Owner?.ContentText) is { } target ? [target]
+                    : AnnexOfTheOwner(context, collector) is { } annex ? [annex] : [],
             };
             var amendment = _amendmentFinalizer.Finalize(finalizerInput);
 
@@ -542,6 +544,18 @@ namespace Saga.Core.Services.Parsing
         /// Zdejmuje graniczne cudzysłowy cytatu.
         /// Zwraca zdjętą interpunkcję (np. ',' z '…”,').
         /// </summary>
+        /// <summary>
+        /// Odnośnik dodawany w załączniku („w załączniku nr 2: … w objaśnieniach … dodaje się odnośnik nr 1 w brzmieniu:"):
+        /// odnośnik załącznika nie ma adresu, a pierwszy nie ma poprzednika — celem jest sam załącznik z przepisu
+        /// nadrzędnego, z instrukcją ręczną (zasada 5, ADR-0100). Null, gdy cel przepisu nie leży w załączniku.
+        /// </summary>
+        private static StructuralAmendmentReference? AnnexOfTheOwner(ParsingContext context, AmendmentCollector collector) =>
+            collector.Owner is { } owner
+            && context.DetectedAmendmentTargets.TryGetValue(owner.Guid, out var detected)
+            && detected.FirstOrDefault()?.Structure.Annex is { } annex
+                ? new StructuralAmendmentReference { Structure = new StructuralReference { Annex = annex }, RawText = owner.ContentText }
+                : null;
+
         internal static QuoteBoundaries TrimQuoteBoundaries(AmendmentCollector collector) =>
             TrimQuoteBoundaries(collector.Paragraphs);
 
