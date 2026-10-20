@@ -14,7 +14,8 @@ namespace Saga.Model
         public bool Adds { get; set; }
 
         /// <summary>
-        /// Numer załącznika aktu zmienianego: zastępowanego albo — przy dodaniu — tego, po którym się dodaje.
+        /// Numer załącznika aktu zmienianego: zastępowanego albo — przy dodaniu — tego, po którym się dodaje
+        /// (przy zmianie części — tego, w którym ona stoi, <see cref="Part"/>).
         /// Null, gdy przepis go nie podaje i nie da się go wyprowadzić.
         /// </summary>
         public string? Target { get; set; }
@@ -24,5 +25,12 @@ namespace Saga.Model
 
         /// <summary>Koniec przedziału załączników aktu zmieniającego przy dodaniu kilku naraz.</summary>
         public string? SourceTo { get; set; }
+
+        /// <summary>
+        /// Część załącznika zmieniana albo dodawana odesłaniem, tak jak ją nazywa przepis („tabela C", „lp. 73") —
+        /// <see cref="Target"/> to wtedy załącznik, w którym stoi. Części nie zaadresuje <c>eId</c>, więc instrukcja
+        /// jest ręczna, z adresem załącznika (ADR-0108).
+        /// </summary>
+        public string? Part { get; set; }
     }
 }

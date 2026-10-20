@@ -1262,6 +1262,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus DOCX: 57 przytoczonych odnośników w 49 plikach; przytoczeń zostawionych tekstem 244 akapity w 20 obwieszczeniach
     (było 321 w 68); w 5 plikach własny odnośnik wraca na swój znacznik; zgodność ze schematem bez zmian (2013 z 2321).
     Ocena korpusu: 2121 → 2129 dokumentów poprawnych.
+- **Część załącznika zmieniana odesłaniem** ([ADR-0108](docs/adr/0108-czesc-zalacznika-zmieniana-odeslaniem-to-instrukcja-reczna.md)): „w załączniku nr 4 do rozporządzenia tabela D
+  otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia” i „… dodaje się lp. 73 w brzmieniu określonym
+  w załączniku …” nie dawały instrukcji. Teraz to `cytat-w-tekscie` z `zastap-recznie` / `dodaj-recznie` na załączniku
+  (`…__zal_4`), z częścią nazwaną jak w przepisie i `cudzyslowy="brak"`. Wyraz przeniesiony w źródle ręcznie („okreś- lone”)
+  nie psuje już rozpoznania zmiany całego załącznika.
+  - Korpus DOCX: 16 instrukcji ręcznych w 13 plikach (część zmieniana albo dodawana odesłaniem) i 5 instrukcji `now:zastap` w 3 plikach (wyraz „określone” przeniesiony ręcznie); zgodność ze schematem bez zmian (2013 z 2321). Ocena korpusu: 2129 → 2139.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

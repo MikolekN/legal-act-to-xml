@@ -1,6 +1,6 @@
 # ADR-0058: Załącznik zmieniany odesłaniem do załącznika aktu zmieniającego jest instrukcją z adresami obu załączników
 
-- Status: Accepted — Superseded in part by [ADR-0099](0099-jedyny-zalacznik-bez-numeru-ma-adres-zal-1.md) (załącznik bez numeru)
+- Status: Accepted — Superseded in part by [ADR-0099](0099-jedyny-zalacznik-bez-numeru-ma-adres-zal-1.md) (załącznik bez numeru), Superseded in part by [ADR-0108](0108-czesc-zalacznika-zmieniana-odeslaniem-to-instrukcja-reczna.md) (część załącznika)
 - Data: 2026-10-12
 
 ## Kontekst

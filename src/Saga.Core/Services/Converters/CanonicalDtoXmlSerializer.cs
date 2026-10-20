@@ -302,7 +302,8 @@ namespace Saga.Core.Services.Converters
                     new XAttribute("adds", annex.Adds),
                     annex.Target is null ? null : new XAttribute("target", annex.Target),
                     annex.Source is null ? null : new XAttribute("source", annex.Source),
-                    annex.SourceTo is null ? null : new XAttribute("sourceTo", annex.SourceTo)));
+                    annex.SourceTo is null ? null : new XAttribute("sourceTo", annex.SourceTo),
+                    annex.Part is null ? null : new XAttribute("part", annex.Part)));
             }
 
             AddJournalElement(el, "targetAct", amendment.TargetLegalAct);

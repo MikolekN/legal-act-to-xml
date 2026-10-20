@@ -83,14 +83,51 @@ namespace Saga.Core.Tests
         }
 
         [Theory]
-        // Zmienia się część załącznika, nie załącznik.
-        [InlineData("w załączniku nr 4 do rozporządzenia tabela D otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia.")]
-        [InlineData("w załączniku po lp. 71 dodaje się lp. 72 w brzmieniu określonym w załączniku do niniejszego rozporządzenia.")]
         // Brzmienie przytoczone, nie odesłanie.
         [InlineData("załącznik nr 1 do ustawy otrzymuje brzmienie:")]
+        [InlineData("w załączniku nr 4 do rozporządzenia tabela D otrzymuje brzmienie:")]
         public void OtherCommands_AreNotAnnexInstructions(string text)
         {
             Assert.Empty(AnnexInstructionReader.Read(text));
+        }
+
+        [Theory]
+        // Korpus: 310486_2768334, 351540_3121851 — wyraz przeniesiony w źródle ręcznie.
+        [InlineData("załącznik do rozporządzenia otrzymuje brzmienie okreś- lone w załączniku do niniejszego rozporządzenia.")]
+        [InlineData("załącznik do rozporządzenia otrzymuje brzmienie okreś-lone w załączniku do niniejszego rozporządzenia.")]
+        public void ReplacedAnnex_WithTheWordSplitByHand_IsStillAnInstruction(string text)
+        {
+            Assert.Equal([(false, "1", "1", null)], Read(text));
+        }
+
+        // ============================================================
+        // Część załącznika zmieniana odesłaniem (ADR-0108)
+        // ============================================================
+
+        private static (bool Adds, string? Target, string? Part, string? Source)[] ReadParts(string text) =>
+            AnnexInstructionReader.Read(text).Select(i => (i.Adds, i.Target, i.Part, i.Source)).ToArray();
+
+        [Theory]
+        // Korpus: 295470_2750296, 286890_2707650.
+        [InlineData("w załączniku nr 4 do rozporządzenia tabela D otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia.", "4", "tabela D", "1")]
+        [InlineData("w załączniku nr 3 do rozporządzenia w tabeli VI część I. Urzędy morskie otrzymuje brzmienie określone w załączniku nr 2 do niniejszego rozporządzenia;", "3", "w tabeli VI część I. Urzędy morskie", "2")]
+        // Korpus: 307572_2743131 — przecinek zamykający wtrącenie nie należy do części.
+        [InlineData("w załączniku nr 14 do ustawy „Plany finansowe państwowych osób prawnych” plan finansowy Polskiej Organizacji Turystycznej, ustalony w tabeli 14, otrzymuje brzmienie określone w załączniku nr 9 do niniejszej ustawy.", "14", "plan finansowy Polskiej Organizacji Turystycznej, ustalony w tabeli 14", "9")]
+        // Korpus: 335318_2975891 — wyraz przeniesiony w źródle ręcznie.
+        [InlineData("w załączniku nr 1 do rozporządzenia tabela nr 1 otrzymuje brzmienie okreś-lone w załączniku do niniejszego rozporządzenia.", "1", "tabela nr 1", "1")]
+        public void PartOfAnAnnexReplacedByReference_IsAnInstructionOnThatAnnex(string text, string target, string part, string source)
+        {
+            Assert.Equal([(false, target, part, source)], ReadParts(text));
+        }
+
+        [Theory]
+        // Korpus: 346994_3160600 — tytuł załącznika w cudzysłowie między numerem a komendą.
+        [InlineData("w załączniku nr 4 „Wykaz świadczeń gwarantowanych z zakresu leczenia szpitalnego” dodaje się lp. 73 w brzmieniu określonym w załączniku do niniejszego rozporządzenia.", "4", "lp. 73")]
+        // Załącznik bez numeru to jedyny — zal_1 (ADR-0099).
+        [InlineData("w załączniku po lp. 71 dodaje się lp. 72 w brzmieniu określonym w załączniku do niniejszego rozporządzenia.", "1", "lp. 72")]
+        public void PartOfAnAnnexAddedByReference_IsAnInstructionOnThatAnnex(string text, string target, string part)
+        {
+            Assert.Equal([(true, target, part, "1")], ReadParts(text));
         }
 
         private static System.Xml.Linq.XElement Convert(params string[] body)
@@ -132,6 +169,34 @@ namespace Saga.Core.Tests
             Assert.Equal("DU/2021/200__zal_2", Attr(instruction, "element-eId"));
             Assert.Equal("zal_1", Attr(instruction, "nowelizujacy-element-eId"));
             Assert.Equal("zal_2", Attr(instruction, "nowelizujacy-element-eId-do"));
+        }
+
+        [Fact]
+        public void PartOfAnAnnexChangedByReference_IsExportedAsAManualInstructionOnThatAnnex()
+        {
+            var xml = Convert(
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) w załączniku nr 4 do ustawy tabela D otrzymuje brzmienie określone w załączniku do niniejszej ustawy.");
+
+            // Części nie zaadresuje eId — instrukcja ręczna na załączniku, z częścią nazwaną tak jak w przepisie.
+            var citation = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
+            Assert.Equal("DU/2021/200__zal_4", Attr(citation, "element-eId"));
+            Assert.Equal("zastap-recznie", Attr(citation, "funkcja"));
+            Assert.Equal("brak", Attr(citation, "cudzyslowy"));
+            Assert.Equal("tabela D", citation.Value);
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "zastap");
+        }
+
+        [SchemaPlFact]
+        public void PartOfAnAnnexChangedByReference_IsSchemaValid_InItsBody()
+        {
+            var xml = Convert(
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w załączniku nr 4 do ustawy tabela D otrzymuje brzmienie określone w załączniku nr 1 do niniejszej ustawy;",
+                "2) w załączniku nr 5 do ustawy po lp. 3 dodaje się lp. 3a w brzmieniu określonym w załączniku nr 2 do niniejszej ustawy.");
+
+            Assert.Equal(["zastap-recznie", "dodaj-recznie"],
+                xml.Descendants().Where(e => e.Name.LocalName == "cytat-w-tekscie").Select(e => Attr(e, "funkcja")));
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
         }
 
         [Fact]

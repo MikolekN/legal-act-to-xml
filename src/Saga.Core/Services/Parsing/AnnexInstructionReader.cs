@@ -7,8 +7,9 @@ namespace Saga.Core.Services.Parsing
     /// Czyta zmianę załączników zapisaną odesłaniem do załączników aktu zmieniającego (ADR-0058):
     /// „załączniki nr 1 i 2 do ustawy otrzymują brzmienie określone w załącznikach nr 1 i 2 do niniejszej ustawy",
     /// „po załączniku nr 2 dodaje się załączniki nr 2a i 2b w brzmieniu określonym w załącznikach nr 3 i 4 do
-    /// niniejszego rozporządzenia". Przedmiotem komendy musi być sam załącznik — „w załączniku nr 4 tabela D otrzymuje
-    /// brzmienie określone w załączniku …" zmienia część załącznika i tu nie pasuje.
+    /// niniejszego rozporządzenia". Część załącznika zmieniana tak samo („w załączniku nr 4 tabela D otrzymuje
+    /// brzmienie określone w załączniku …", „… dodaje się lp. 73 w brzmieniu określonym w załączniku …") daje instrukcję
+    /// ręczną na załączniku, w którym stoi (ADR-0108).
     /// </summary>
     internal static class AnnexInstructionReader
     {
@@ -19,13 +20,34 @@ namespace Saga.Core.Services.Parsing
         private static readonly string Sources =
             @"(?:odpowiednio\s+)?w\s+załącznik(?:u|(?<sourcesPlural>ach))\s*(?:" + string.Format(Numbers, "sources") + @"\s*)?do\s+niniejsz";
 
+        // „okreś- lone" — wyraz przeniesiony w źródle ręcznie (dywiz i spacja w jego środku).
+        private const string Specified = @"okreś(?:-\s?)?lon";
+
         private static readonly Regex Replacement = new(
-            @"(?<![\p{L}])załącznik(?<targetsPlural>i)?\s+(?:" + string.Format(Numbers, "targets") + @"\s+)?(?:do\s+[\p{L}]+\s+)?otrzymuj[eą]\s+brzmienie\s+określone\s+" + Sources,
+            @"(?<![\p{L}])załącznik(?<targetsPlural>i)?\s+(?:" + string.Format(Numbers, "targets") + @"\s+)?(?:do\s+[\p{L}]+\s+)?otrzymuj[eą]\s+brzmienie\s+" + Specified + @"e\s+" + Sources,
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private static readonly Regex Addition = new(
             @"(?:po\s+załączniku\s+nr\s+(?<anchor>\d+[a-z]*)\s+(?:do\s+[\p{L}]+\s+)?)?dodaje\s+się\s+załącznik(?:i)?\s+(?:"
-            + string.Format(Numbers, "added") + @"\s+)?(?:do\s+[\p{L}]+\s+)?w\s+brzmieniu\s+określonym\s+" + Sources,
+            + string.Format(Numbers, "added") + @"\s+)?(?:do\s+[\p{L}]+\s+)?w\s+brzmieniu\s+" + Specified + @"ym\s+" + Sources,
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        // Załącznik aktu zmienianego jako miejsce zmiany: „w załączniku nr 1 do rozporządzenia", „w załączniku nr 4
+        // „Wykaz świadczeń …”", „w załączniku do rozporządzenia".
+        private static readonly string InAnnex =
+            @"(?<![\p{L}])w\s+załączniku\s+(?:nr\s+(?<target>\d+[a-z]*)\s+)?(?:do\s+(?!niniejsz)[\p{L}]+\s+)?"
+            + $@"(?:{QuotationMarks.Opening}[^{QuotationMarks.Closing}]*[{QuotationMarks.Closing}]\s+)?";
+
+        // Część załącznika zmieniana odesłaniem: „w załączniku nr 1 do rozporządzenia tabela C otrzymuje brzmienie
+        // określone w załączniku nr 1 do niniejszego rozporządzenia".
+        private static readonly Regex PartReplacement = new(
+            InAnnex + @"(?<part>\S.*?)\s+otrzymuj[eą]\s+brzmienie\s+" + Specified + @"e\s+" + Sources,
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        // Część dodawana odesłaniem: „w załączniku nr 4 „…” dodaje się lp. 73 w brzmieniu określonym w załączniku do
+        // niniejszego rozporządzenia".
+        private static readonly Regex PartAddition = new(
+            InAnnex + @"(?:\S.*?\s+)?dodaje\s+się\s+(?<part>\S.*?)\s+w\s+brzmieniu\s+" + Specified + @"ym\s+" + Sources,
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private static readonly Regex Range = new($@"^(?<from>\d+)\s*[{Dashes.Any}]\s*(?<to>\d+)$", RegexOptions.Compiled);
@@ -47,8 +69,26 @@ namespace Saga.Core.Services.Parsing
                 return [Added(addition)];
 
             var replacement = Replacement.Match(text);
-            return replacement.Success ? Replaced(replacement) : [];
+            if (replacement.Success)
+                return Replaced(replacement);
+
+            if (PartAddition.Match(text) is { Success: true } added)
+                return [Part(added, adds: true)];
+
+            return PartReplacement.Match(text) is { Success: true } replaced ? [Part(replaced, adds: false)] : [];
         }
+
+        /// <summary>
+        /// Część załącznika zmieniana albo dodawana odesłaniem: jedna instrukcja na załącznik, w którym stoi, z częścią
+        /// nazwaną tak jak w przepisie. Załącznik bez numeru to jedyny — „1" (ADR-0099).
+        /// </summary>
+        private static AnnexInstruction Part(Match match, bool adds) => new()
+        {
+            Adds = adds,
+            Target = match.Groups["target"].Success ? match.Groups["target"].Value : Annex.OnlyAnnexNumber,
+            Part = match.Groups["part"].Value.Trim().TrimEnd(',', ' '),
+            Source = Expand(match.Groups["sources"].Value, single: !match.Groups["sourcesPlural"].Success).FirstOrDefault(),
+        };
 
         /// <summary>
         /// Zastąpienie: załączniki aktu zmienianego dostają brzmienie kolejnych załączników aktu zmieniającego.

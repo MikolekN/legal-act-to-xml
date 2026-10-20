@@ -321,8 +321,15 @@ namespace Saga.Core.Services.Converters
             static string Annex(string number) => $"{XmlConverterConstants.Contents.Instruction.AnnexPrefix}_{number}";
 
             var instructions = new List<XElement>();
+            var manual = new List<XElement>();
             foreach (var annex in amendment.AnnexInstructions)
             {
+                if (annex.Part is { } part)
+                {
+                    manual.Add(ManualAnnexPart(amendment, annex, part, Annex));
+                    continue;
+                }
+
                 var instruction = new XElement(now + (annex.Adds
                         ? XmlConverterConstants.Contents.Instruction.AddAfter
                         : XmlConverterConstants.Contents.Instruction.ReplaceUnits),
@@ -343,6 +350,31 @@ namespace Saga.Core.Services.Converters
             }
 
             zdanie.AddFirst(instructions);
+            zdanie.Add(manual);
+        }
+
+        /// <summary>
+        /// Część załącznika zmieniana albo dodawana odesłaniem („tabela C otrzymuje brzmienie określone w załączniku nr 1
+        /// do niniejszego rozporządzenia"): części nie zaadresuje <c>eId</c>, a instrukcja ręczna nie ma atrybutów
+        /// załącznika aktu zmieniającego. Cytat niesie część tak, jak ją nazywa przepis, bez cudzysłowów — jak przy
+        /// uchyleniu celu bez adresu; odesłanie zostaje w zdaniu przepisu (ADR-0108).
+        /// </summary>
+        private static XElement ManualAnnexPart(Amendment amendment, AnnexInstruction annex, string part, Func<string, string> address)
+        {
+            XNamespace now = XmlConverterConstants.AmendmentNamespace;
+            var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element,
+                Element(XmlConverterConstants.Contents.Citation.Text.Content, part));
+            citation.Add(
+                new XAttribute(now + XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)),
+                new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute,
+                    XmlConverterConstants.Contents.Citation.Quotation.QuotationNone),
+                new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, Guid.NewGuid().ToString()));
+            if (annex.Target is { } target)
+                citation.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, address(target)));
+            citation.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.FunctionAttribute, annex.Adds
+                ? XmlConverterConstants.Contents.Citation.Quotation.Function.AddManually
+                : XmlConverterConstants.Contents.Citation.Quotation.Function.EditManually));
+            return citation;
         }
 
         /// <summary>
