@@ -41,6 +41,7 @@ namespace Saga.Core.Services.Parsing
             if (AmendedAct(owner) is { } act)
                 amendment.TargetLegalAct = act;
 
+            ManualTargets.Mark(amendment, command);
             AmendmentTargetPairing.AnchorContentUnits(amendment);
             return amendment;
         }
@@ -88,6 +89,7 @@ namespace Saga.Core.Services.Parsing
             amendment.Targets.AddRange(Targets(owner, sectionIsBasicUnit));
             if (AmendedAct(owner) is { } act)
                 amendment.TargetLegalAct = act;
+            ManualTargets.Mark(amendment, owner.ContentText);
             return amendment;
         }
 

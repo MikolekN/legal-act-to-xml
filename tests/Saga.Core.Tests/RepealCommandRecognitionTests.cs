@@ -69,14 +69,18 @@ namespace Saga.Core.Tests
         [Fact]
         public void AnythingRepealedInAnAmendingArticle_IsACommand()
         {
-            // W artykule zmieniającym przedmiotem bywa część załącznika, której adresu nie znamy — komenda zostaje.
+            // W artykule zmieniającym przedmiotem bywa część załącznika, której adresu nie znamy — komenda zostaje,
+            // jako instrukcja ręczna z adresem załącznika (ADR-0100).
             // Korpus: 327744_2958127 („uchyla się wiersz oznaczony lp. 16"), 321550_2998819 („skreśla się lp. 7").
             var xml = Export(
                 "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
                 "1) w art. 3 uchyla się ust. 2;",
                 "2) w załączniku nr 1 w tabeli skreśla się wiersz oznaczony lp. 16.");
 
-            Assert.Equal(["DU/2021/200__art_3__ust_2", "UNKNOWN"], Repeals(xml).Select(Unit));
+            Assert.Equal(["DU/2021/200__art_3__ust_2"], Repeals(xml).Select(Unit));
+            var manual = Assert.Single(xml.Descendants(), e => e.Attribute("funkcja")?.Value == "uchyl-recznie");
+            Assert.Equal("DU/2021/200__zal_1", Unit(manual));
+            Assert.Equal("wiersz oznaczony lp. 16", manual.Value);
         }
 
         [Theory]

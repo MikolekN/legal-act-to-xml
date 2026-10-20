@@ -38,6 +38,10 @@ namespace Saga.Core.Services.UnitReferences
         private static readonly Regex AdditionVerb = new(
             @"\bdodaje\s+się\b", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
+        /// <summary>Czasownik uchylenia tuż przed słowem „załącznik" — załącznik jest przedmiotem uchylenia.</summary>
+        private static readonly Regex RepealVerbBefore = new(
+            @"\b(?:uchyla|skreśla)\s+się\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
         /// <summary>Cele wskazane w tekście komendy.</summary>
         internal static IReadOnlyList<UnitAddress> Read(
             string? text, StructuralReference? context = null, bool sectionSignIsBasicUnit = false)
@@ -200,6 +204,10 @@ namespace Saga.Core.Services.UnitReferences
         /// </summary>
         private static bool IsAnnexLocation(IReadOnlyList<UnitToken> tokens, int index)
         {
+            // Załącznik uchylany w całości („uchyla się załącznik nr 4") jest celem komendy, jak każda uchylana jednostka.
+            if (index > 0 && tokens[index - 1] is { Kind: UnitTokenKind.Prose } verb && RepealVerbBefore.IsMatch(verb.Text))
+                return true;
+
             if (index == 0 || tokens[index - 1] is not { Kind: UnitTokenKind.Prose } previous
                 || previous.Text.Split(' ', StringSplitOptions.RemoveEmptyEntries)[^1].ToLowerInvariant() is not ("w" or "we"))
             {

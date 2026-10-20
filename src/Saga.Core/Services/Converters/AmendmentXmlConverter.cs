@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Saga.Core.Services.Parsing;
 using Saga.Model;
@@ -165,7 +166,9 @@ namespace Saga.Core.Services.Converters
                 element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, address));
 
             element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.FunctionAttribute,
-                function ?? GetFunctionType(amendment.OperationType, isStructural)));
+                command.Target is { IsManual: true }
+                    ? ManualFunction(amendment.OperationType)
+                    : function ?? GetFunctionType(amendment.OperationType, isStructural)));
 
             // element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.SentenceAttribute, sentence.ReferenceSentenceNumber));
 
@@ -185,6 +188,55 @@ namespace Saga.Core.Services.Converters
                 _ => XmlConverterConstants.Contents.Citation.Quotation.Function.NewText
             };
 
+        /// <summary>
+        /// Instrukcja ręczna dla celu, którego <c>eId</c> nie zaadresuje — adres wskazuje wtedy najgłębszą adresowalną
+        /// jednostkę (ADR-0100).
+        /// </summary>
+        private static string ManualFunction(AmendmentOperationType operation) => operation switch
+        {
+            AmendmentOperationType.Insertion => XmlConverterConstants.Contents.Citation.Quotation.Function.AddManually,
+            AmendmentOperationType.Repeal => XmlConverterConstants.Contents.Citation.Quotation.Function.RepealManually,
+            _ => XmlConverterConstants.Contents.Citation.Quotation.Function.EditManually,
+        };
+
+        /// <summary>Przedmiot uchylenia z tekstu przepisu: „w załączniku nr 2 uchyla się lp. 7;" → „lp. 7".</summary>
+        private static readonly Regex RepealedObject = new(
+            @"\b(?:uchyla|skreśla)\s+się\s+(?<object>.+?)[\s;,.:]*$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Uchylenie celu bez adresu: tekstu do uchylenia akt zmieniający nie przytacza, więc cytat niesie przedmiot uchylenia
+        /// tak, jak nazywa go przepis („lp. 7"), bez cudzysłowów — to wskazanie dla tego, kto zmianę wprowadzi ręcznie.
+        /// </summary>
+        private static void AddManualRepeal(Amendment amendment, Command command, XElement zdanie)
+        {
+            var raw = command.Target?.RawText?.Trim() ?? string.Empty;
+            var repealed = RepealedObject.Match(raw) is { Success: true } match ? match.Groups["object"].Value : raw;
+
+            var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element,
+                Element(XmlConverterConstants.Contents.Citation.Text.Content, repealed));
+            ApplyAttributes(citation, amendment, command, isStructural: false);
+            citation.SetAttributeValue(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute,
+                XmlConverterConstants.Contents.Citation.Quotation.QuotationNone);
+            zdanie.Add(citation);
+        }
+
+        /// <summary>
+        /// Zmiana w tekście celu bez adresu: <c>now:zamien-tekst</c> nie ma funkcji ręcznej, więc wychodzi cytat
+        /// z nowymi wyrazami i funkcją <c>zastap-recznie</c> — przy skreśleniu ze skreślanymi wyrazami i <c>uchyl-recznie</c>.
+        /// </summary>
+        private static XElement ManualTextChange(Amendment amendment, Command command, TextChange change)
+        {
+            var repeal = change.NewText.Length == 0;
+            var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element,
+                Element(XmlConverterConstants.Contents.Citation.Text.Content, repeal ? change.OldText : change.NewText));
+            ApplyAttributes(citation, amendment, command, isStructural: false);
+            citation.SetAttributeValue(XmlConverterConstants.Contents.Citation.Quotation.FunctionAttribute, repeal
+                ? XmlConverterConstants.Contents.Citation.Quotation.Function.RepealManually
+                : XmlConverterConstants.Contents.Citation.Quotation.Function.EditManually);
+            return citation;
+        }
+
         private static void AddTargetAttributes(XElement element, StructuralAmendmentReference? target)
         {
             var start = target?.Structure.ToString();
@@ -200,6 +252,12 @@ namespace Saga.Core.Services.Converters
         {
             if (sentence is not XElement zdanie)
                 return;
+
+            if (command.Target is { IsManual: true })
+            {
+                AddManualRepeal(amendment, command, zdanie);
+                return;
+            }
 
             XNamespace now = XmlConverterConstants.AmendmentNamespace;
 
@@ -285,6 +343,7 @@ namespace Saga.Core.Services.Converters
 
             XNamespace now = XmlConverterConstants.AmendmentNamespace;
             var instructions = new List<XElement>();
+            var manual = new List<XElement>();
 
             foreach (var change in amendment.TextChanges)
             {
@@ -295,6 +354,12 @@ namespace Saga.Core.Services.Converters
 
                 foreach (var command in targets)
                 {
+                    if (command.Target is { IsManual: true })
+                    {
+                        manual.Add(ManualTextChange(amendment, command, change));
+                        continue;
+                    }
+
                     var instruction = new XElement(now + XmlConverterConstants.Contents.Instruction.ReplaceText,
                         new XAttribute(XmlConverterConstants.Contents.Instruction.OldTextAttribute, change.OldText),
                         new XAttribute(XmlConverterConstants.Contents.Instruction.NewTextAttribute, change.NewText));
@@ -312,6 +377,7 @@ namespace Saga.Core.Services.Converters
             }
 
             zdanie.AddFirst(instructions);
+            zdanie.Add(manual);
         }
 
         /// <summary>

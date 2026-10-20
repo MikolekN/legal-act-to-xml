@@ -1193,6 +1193,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus DOCX: zmieniają się 464 eksporty — 435 załączników z adresem `zal_1`, w 45 z nich 1286 akapitów wyliczenia
     staje się jednostkami, 34 instrukcje `now:zastap` więcej (i 37 uzupełnionych o załącznik aktu zmieniającego), 112
     zmian w tekście z adresem `…__zal_1` zamiast `UNKNOWN`; zgodność ze schematem bez zmian.
+- **Cel w załączniku bez adresu jako instrukcja ręczna** ([ADR-0100](docs/adr/0100-cel-w-zalaczniku-bez-adresu-to-instrukcja-reczna.md)): komenda o wierszu tabeli
+  („uchyla się lp. 7”, „po lp. 4 dodaje się lp. 4a”), kolumnie, części, tabeli albo punkcie
+  z numerem z kropką wychodziła z `element-eId="UNKNOWN"` albo — zmiana w tekście — automatyczną instrukcją dla całego
+  załącznika. Teraz wychodzi instrukcja `dodaj-recznie`/`zastap-recznie`/`uchyl-recznie` z adresem najgłębszej
+  adresowalnej jednostki, jak zalecają autorzy schematu (2026-10-18): cytat z nową treścią, przy zmianie w tekście —
+  z nowymi wyrazami, przy uchyleniu bez treści — z przedmiotem uchylenia (`<tekst>lp. 7</tekst>`, `cudzyslowy="brak"`).
+  Zmiana w tekście całego załącznika („w załączniku nr 2 wyrazy „X” zastępuje się …”) zostaje automatyczna,
+  a „uchyla się załącznik nr 4” daje `now:uchyl` z `…__zal_4` (`ManualTargets`, `UnitAddressReader`).
+  - Korpus DOCX: zmienia się 150 eksportów — 393 instrukcje ręczne zamiast 257 `now:zamien-tekst` i 136 `now:uchyl`
+    z celem w załączniku, 2 uchylenia całego załącznika; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

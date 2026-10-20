@@ -223,7 +223,7 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "tabela" }, ChildNames(citation));
             Assert.Equal("brak", citation.Attribute("cudzyslowy")?.Value);
             Assert.Equal("zdanie", citation.Parent!.Name.LocalName);
-            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
+            Assert.DoesNotContain(citation.Parent.Elements(), e => e.Name.LocalName == "cytat-w-tekscie");
         }
 
         [Fact]

@@ -28,6 +28,12 @@ namespace Saga.Model
         /// </summary>
         public string? RawText { get; set; }
 
+        /// <summary>
+        /// Cel, którego <c>eId</c> nie zaadresuje (wiersz tabeli, kolumna, część załącznika): <see cref="Structure"/>
+        /// wskazuje najgłębszą adresowalną jednostkę, a instrukcja jest ręczna — <c>*-recznie</c> (ADR-0100).
+        /// </summary>
+        public bool IsManual { get; set; }
+
         public override string ToString() =>
             RangeEnd is null ? Structure.ToString() : $"{Structure}–{RangeEnd}";
     }

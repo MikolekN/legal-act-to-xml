@@ -2191,6 +2191,40 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0100: cel w załączniku bez adresu to instrukcja ręczna
+        // ============================================================
+
+        [Fact]
+        public void Adr0100_TargetInAnAnnexWithoutAnAddress_IsAManualInstruction()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w załączniku nr 2 do ustawy uchyla się lp. 7;",
+                "2) w załączniku nr 2 do ustawy w kolumnie trzeciej wyrazy „25 %” zastępuje się wyrazami „15 %”;",
+                "3) w załączniku nr 2 do ustawy wyrazy „opłata” zastępuje się wyrazami „należność”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var instructions = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Attribute("element-eId") is not null)
+                .Select(e => (e.Name.LocalName, e.Attribute("element-eId")!.Value, e.Attribute("funkcja")?.Value))
+                .ToList();
+
+            // Wiersz i kolumna nie mają adresu: ręcznie, z adresem załącznika. Zmiana w całym załączniku — automatycznie.
+            Assert.Equal(
+            [
+                ("cytat-w-tekscie", "DU/2021/200__zal_2", "uchyl-recznie"),
+                ("cytat-w-tekscie", "DU/2021/200__zal_2", "zastap-recznie"),
+                ("zamien-tekst", "DU/2021/200__zal_2", (string?)null),
+            ], instructions);
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 
@@ -2274,14 +2308,16 @@ namespace Saga.Core.Tests
                 lines.Select(line => new DocumentBlock { Text = line }).ToList(),
                 new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
 
+            // Uchylenie z adresem albo — miejsca w załączniku bez adresu — ręczne (ADR-0100).
             var repeals = LegalDocumentConverter.Convert(document).Descendants()
-                .Where(e => e.Name.LocalName == "uchyl")
-                .Select(e => (Sentence: e.Parent!.Value, Unit: e.Attribute("element-eId")?.Value))
+                .Where(e => e.Name.LocalName == "uchyl" || e.Attribute("funkcja")?.Value == "uchyl-recznie")
+                .Select(e => (Sentence: string.Concat(e.Parent!.Nodes().OfType<XText>().Select(t => t.Value)),
+                    Unit: e.Attribute("element-eId")?.Value))
                 .ToList();
 
             // Przepisy merytoryczne nie niosą instrukcji; w artykule zmieniającym komendą jest każde uchylenie.
             Assert.Equal(
-                [("w art. 3 uchyla się ust. 2;", "DU/2021/200__art_3__ust_2"), ("w załączniku nr 1 skreśla się lp. 7.", "UNKNOWN")],
+                [("w art. 3 uchyla się ust. 2;", "DU/2021/200__art_3__ust_2"), ("w załączniku nr 1 skreśla się lp. 7.", "DU/2021/200__zal_1")],
                 repeals);
         }
 

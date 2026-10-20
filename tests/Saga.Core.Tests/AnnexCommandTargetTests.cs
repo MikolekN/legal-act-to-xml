@@ -106,6 +106,11 @@ namespace Saga.Core.Tests
             .Select(e => e.Attributes().FirstOrDefault(a => a.Name.LocalName == "element-eId")?.Value)
             .OfType<string>().ToArray();
 
+        private static string?[] Functions(XElement xml) => xml.Descendants()
+            .Where(e => e.Attributes().Any(a => a.Name.LocalName == "element-eId"))
+            .Select(e => e.Attribute("funkcja")?.Value)
+            .OfType<string>().ToArray();
+
         [Fact]
         public void UnitAddedInAnAnnex_IsAddressedInThatAnnex()
         {
@@ -143,27 +148,62 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void UnitReplacedInsideTheAnnexContent_HasNoAddress()
+        public void UnitReplacedInsideTheAnnexContent_IsAManualInstructionOnTheAnnex()
         {
-            // Punkt tabeli załącznika — adres załącznika objąłby cały załącznik.
+            // Punkt tabeli załącznika nie ma adresu: instrukcja ręczna z adresem załącznika (ADR-0100) — automatyczna
+            // objęłaby cały załącznik.
             var xml = Export(
                 "1) w załączniku nr 1 do ustawy w tabeli nr 2 pkt 3 otrzymuje brzmienie:",
                 "„3) jezioro Gopło;”.");
 
-            Assert.Equal(["UNKNOWN"], Targets(xml));
+            Assert.Equal(["DU/2021/200__zal_1"], Targets(xml));
+            Assert.Equal(["zastap-recznie"], Functions(xml));
         }
 
         [Fact]
-        public void TextChangedInsideAnAnnex_IsAddressedToTheAnnex_ButARepealThereIsNot()
+        public void TextChangedOrRowRepealedInsideAnAnnex_IsAManualInstructionOnTheAnnex()
         {
             var xml = Export(
                 "1) w załączniku nr 1 do ustawy w pkt 1.4.1 zdanie pierwsze otrzymuje brzmienie:",
                 "„Napisy wykonuje się literami.”;",
                 "2) w załączniku nr 2 do ustawy skreśla się lp. 7.");
 
-            // Zastąpienie tekstu w załączniku — adresem jest załącznik; uchylenie wiersza, którego adresu nie ma,
-            // nie wskazuje całego załącznika.
-            Assert.Equal(["DU/2021/200__zal_1", "UNKNOWN"], Targets(xml));
+            // Miejsce w treści załącznika poza jego jednostkami — adresem jest załącznik, instrukcja jest ręczna (ADR-0100).
+            Assert.Equal(["DU/2021/200__zal_1", "DU/2021/200__zal_2"], Targets(xml));
+            Assert.Equal(["zastap-recznie", "uchyl-recznie"], Functions(xml));
+        }
+
+        [Fact]
+        public void TextChangedInTheWholeAnnex_StaysAutomatic()
+        {
+            // Przepis nie zawęża zmiany do miejsca w załączniku — instrukcja obejmuje cały załącznik.
+            var xml = Export("1) w załączniku nr 2 do ustawy wyrazy „opłata” zastępuje się wyrazami „należność”.");
+
+            var change = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "zamien-tekst");
+            Assert.Equal("DU/2021/200__zal_2", change.Attribute("element-eId")?.Value);
+        }
+
+        [Fact]
+        public void WholeAnnexRepealed_IsAnAutomaticRepealOfTheAnnex()
+        {
+            // Korpus: 301797_2760251 — „uchyla się załącznik nr 4 do rozporządzenia".
+            var xml = Export("1) uchyla się załącznik nr 4 do ustawy;");
+
+            var repeal = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "uchyl");
+            Assert.Equal("DU/2021/200__zal_4", repeal.Attribute("element-eId")?.Value);
+        }
+
+        [SchemaPlFact]
+        public void ManualInstructionsInAnAnnex_AreSchemaValid()
+        {
+            var xml = Export(
+                "1) w załączniku nr 2 do ustawy skreśla się lp. 7;",
+                "2) w załączniku nr 1 do ustawy w kolumnie trzeciej wyrazy „25 %” zastępuje się wyrazami „15 %”;",
+                "3) w załączniku nr 3 do ustawy po lp. 4 dodaje się lp. 4a w brzmieniu:",
+                "„4a Kanał Marwicki 2,1”.");
+
+            Assert.Equal(["uchyl-recznie", "zastap-recznie", "dodaj-recznie"], Functions(xml));
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
         }
 
         [SchemaPlFact]

@@ -97,9 +97,10 @@ namespace Saga.Core.Services.UnitReferences
 
         /// <summary>
         /// Miejsce w załączniku aktu — miejscownik („w załączniku nr 2", „w załącznikach", „w załączniku do
-        /// rozporządzenia"); „nr" należy do słowa kluczowego, za nim stoi oznaczenie (ADR-0080).
+        /// rozporządzenia"); „nr" należy do słowa kluczowego, za nim stoi oznaczenie (ADR-0080). Mianownik
+        /// („uchyla się załącznik nr 4") jest celem tylko jako przedmiot uchylenia — rozstrzyga czytający adres.
         /// </summary>
-        private const string AnnexKeywordPattern = @"\bzałącznik(?:u|ach)\b(?:\s+nr\b)?";
+        private const string AnnexKeywordPattern = @"\bzałącznik(?:u|ach|i)?\b(?:\s+nr\b)?";
 
         /// <summary>Oznaczenie rzymskie jednostki wyższej („dział VIa", „tytuł XIII") — wersaliki.</summary>
         private const string RomanDesignationPattern = @"(?-i:[IVXLC]+[a-z]?)\b";
