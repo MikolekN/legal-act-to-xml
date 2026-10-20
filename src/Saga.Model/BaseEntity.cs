@@ -58,6 +58,12 @@ namespace Saga.Model
         public EntityNumber? Number { get; set; }
 
         /// <summary>
+        /// Ostatnia jednostka zakresu oznaczeń („Art. 39–51. (pominięte)" — 51); null dla jednostki z jednym
+        /// oznaczeniem. Pierwszą jednostką zakresu jest <see cref="Number"/> i to ona daje adres (ADR-0097).
+        /// </summary>
+        public EntityNumber? NumberTo { get; set; }
+
+        /// <summary>
         /// Jednostka niejawna: nie ma oznaczenia w tekście, model wstawia ją dla spójności hierarchii
         /// (jedyny ustęp artykułu, rozdział aktu bez rozdziałów). Nie wchodzi do eId.
         /// </summary>

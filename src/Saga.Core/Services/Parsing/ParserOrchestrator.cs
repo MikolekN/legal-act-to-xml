@@ -376,12 +376,12 @@ namespace Saga.Core.Services.Parsing
                     ExpectedNumber = context.CurrentParagraph.Number,
                 };
 
-            // Poziom: artykuł
+            // Poziom: artykuł — po zakresie („Art. 39–51.") ciągłość liczy się od jego końca.
             if (context.CurrentArticle?.Number != null)
                 return new NumberingHint
                 {
                     ExpectedKind = ParagraphKind.Article,
-                    ExpectedNumber = context.CurrentArticle.Number,
+                    ExpectedNumber = context.CurrentArticle.NumberTo ?? context.CurrentArticle.Number,
                 };
 
             return null;

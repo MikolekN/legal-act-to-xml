@@ -2112,6 +2112,29 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0097: zakres oznaczeń to jedna jednostka z pustym nr i granicami nr-od/nr-do
+        // ============================================================
+
+        [Fact]
+        public void Adr0097_RangeOfDesignations_IsOneUnit_WithEmptyNumberAndBothEnds()
+        {
+            var document = LegalDocumentParser.ParseBlocks(
+                new[] { "Art. 38. Przepis obowiązujący.", "Art. 39–51. (pominięte)", "Art. 52. Przepis końcowy." }
+                    .Select(line => new DocumentBlock { Text = line }).ToList());
+
+            // Jedna jednostka zamiast trzynastu; adres ma pierwsza jednostka zakresu.
+            Assert.Equal(new[] { "38", "39", "52" }, document.Articles.Select(article => article.Number!.Value));
+            var range = document.Articles.ElementAt(1);
+            Assert.Equal("51", range.NumberTo?.Value);
+            Assert.Equal("art_39", range.Id.Split("__")[^1]);
+
+            var xml = LegalDocumentConverter.Convert(document).Descendants()
+                .Single(e => e.Name.LocalName == "artykul" && e.Attribute("eId")?.Value.Split("__")[^1] == "art_39");
+            Assert.Equal(new[] { ("nr", ""), ("nr-od", "39"), ("nr-do", "51") },
+                xml.Elements().Take(3).Select(e => (e.Name.LocalName, e.Value)));
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 

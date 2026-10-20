@@ -44,7 +44,7 @@ namespace Saga.Core.Services.Parsing.Builders
 
             subchapter.Articles.Add(article);
 
-            var articleTail = ParsingFactories.GetArticleTail(text);
+            var articleTail = ParsingFactories.ReadDesignationRange(article, ParsingFactories.GetArticleTail(text));
             var paragraph = ParsingFactories.CreateParagraphFromArticleTail(article, articleTail);
             article.Paragraphs.Add(paragraph);
 

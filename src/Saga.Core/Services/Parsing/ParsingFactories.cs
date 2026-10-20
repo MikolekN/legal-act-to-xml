@@ -553,6 +553,25 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
+        /// Zakres oznaczeń („Art. 39–51. (pominięte)"): koniec zakresu z początku ogona trafia do
+        /// <see cref="BaseEntity.NumberTo"/>, a zwraca się ogon bez niego. Koniec mniejszy niż początek zakresem nie
+        /// jest — ogon zostaje bez zmian (ADR-0097).
+        /// </summary>
+        public static string ReadDesignationRange(BaseEntity unit, string tail)
+        {
+            var match = ParagraphClassifier.DesignationRangeEndCapture.Match(tail);
+            if (!match.Success || unit.Number is not { } first)
+                return tail;
+
+            var last = _numberService.Parse(match.Groups[1].Value);
+            if (last.NumericPart < first.NumericPart)
+                return tail;
+
+            unit.NumberTo = last;
+            return tail[match.Length..].TrimStart();
+        }
+
+        /// <summary>
         /// Tworzy CommonPart typu Intro i wiaze go z odpowiednim segmentem tekstu rodzica.
         /// Logika:
         ///   - 1 segment  -> caly segment jest Intro

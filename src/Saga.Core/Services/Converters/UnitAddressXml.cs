@@ -21,8 +21,17 @@ namespace Saga.Core.Services.Converters
             ? new XAttribute(XmlConverterConstants.Contents.eId, unit.Id)
             : new XAttribute(XmlConverterConstants.Contents.MissingEId, XmlConverterConstants.Contents.UnmarkedUnit);
 
-        /// <summary>Oznaczenie jednostki; przy braku odczytu element zostaje pusty — nie ma czego wpisać.</summary>
-        internal static XElement Number(BaseEntity unit) =>
-            Element(XmlConverterConstants.Contents.Num, unit.Number?.Designation ?? string.Empty);
+        /// <summary>
+        /// Oznaczenie jednostki; przy braku odczytu element zostaje pusty — nie ma czego wpisać. Zakres oznaczeń
+        /// („Art. 39–51. (pominięte)") ma pusty <c>nr</c>, a granice w <c>nr-od</c> i <c>nr-do</c> (ADR-0097).
+        /// </summary>
+        internal static IEnumerable<XElement> Number(BaseEntity unit) => unit is { Number: { } first, NumberTo: { } last }
+            ?
+            [
+                Element(XmlConverterConstants.Contents.Num),
+                Element(XmlConverterConstants.Contents.NumFrom, first.Designation),
+                Element(XmlConverterConstants.Contents.NumTo, last.Designation),
+            ]
+            : [Element(XmlConverterConstants.Contents.Num, unit.Number?.Designation ?? string.Empty)];
     }
 }

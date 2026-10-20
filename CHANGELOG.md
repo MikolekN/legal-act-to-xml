@@ -1167,6 +1167,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   symboli — jej pozycjami, jak za wzorem stojącym wprost w ustępie.
   - Korpus DOCX: zmienia się 1 eksport (300744) — 37 opisów symboli zamiast fragmentów, 2 tirety mniej; zgodność ze
     schematem bez zmian.
+- **Zakres oznaczeń w tekście jednolitym jako `nr-od` i `nr-do`** ([ADR-0097](docs/adr/0097-zakres-oznaczen-to-jedna-jednostka-z-nr-od-i-nr-do.md)): „Art. 39–51.
+  (pominięte)” wychodził z numerem pierwszego artykułu, a reszta zakresu („–51.”) stała w treści.
+  Jednostka zakresu ma teraz pusty `nr`, granice w `nr-od` i `nr-do` oraz `eId` pierwszej jednostki (`art_39`) —
+  według ustaleń z autorami schematu z 2026-10-18 i 2026-10-20 (`BaseEntity.NumberTo`,
+  `ParsingFactories.ReadDesignationRange`). Ciągłość numeracji po zakresie liczy się od jego końca.
+  - Zmiana schematu nie jest jeszcze opublikowana: do synchronizacji kopii `schema/` takie eksporty są wobec niej
+    niezgodne (stan oczekiwany).
+  - Korpus DOCX: zmienia się 267 tekstów jednolitych — 290 zakresów artykułów, nic poza nimi; zgodnych ze schematem
+    (kopia sprzed zmiany) 2013 z 2321 zamiast 2280, każda nowa niezgodność to `nr-od`/`nr-do` albo pusty `nr` zakresu.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

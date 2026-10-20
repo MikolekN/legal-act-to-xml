@@ -115,5 +115,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0094](0094-odnosnik-przy-oznaczeniu-jednostki-systematyzacyjnej-stoi-za-jej-numerem.md) | Odnośnik przy oznaczeniu jednostki systematyzacyjnej („Rozdział 3⁵⁾”) jednostka niesie w modelu, a eksport stawia go w nagłówku zaraz za `nr` | Accepted | 2026-10-16 |
 | [0095](0095-odwolanie-z-wlasnym-znakiem-jest-odnosnikiem-z-kolejnym-znacznikiem.md) | Odwołanie z własnym znakiem (`w:customMarkFollows`: „3)”, „*”, „za”) jest odnośnikiem: oznaczeniem jest ten znak, a znacznik w tekście bierze kolejny numer w dokumencie | Accepted | 2026-10-16 |
 | [0096](0096-adnotacja-uchylajaca-samo-oznaczenie-nie-obejmuje-przepisow-za-nia.md) | Adnotacja uchylająca samo oznaczenie jednostki systematyzacyjnej („(oznaczenie rozdziału 1 i tytuł – uchylone)”) zostaje jej nagłówkiem, ale przepisy za nią stoją w jednostce niejawnej tego samego poziomu (zastępuje w części ADR-0066) | Accepted | 2026-10-16 |
+| [0097](0097-zakres-oznaczen-to-jedna-jednostka-z-nr-od-i-nr-do.md) | Zakres oznaczeń („Art. 39–51. (pominięte)”) to jedna jednostka: pusty `nr`, granice w `nr-od`/`nr-do`, adres pierwszej jednostki zakresu (wdrożone przed publikacją zmiany schematu) | Accepted | 2026-10-20 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

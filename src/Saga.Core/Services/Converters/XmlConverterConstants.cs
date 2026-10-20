@@ -433,6 +433,12 @@ namespace Saga.Core.Services.Converters
             }
 
             internal const string Num = "nr";
+
+            /// <summary>Początek zakresu oznaczeń („Art. 39–51." — 39); <c>nr</c> zostaje wtedy pusty (ADR-0097).</summary>
+            internal const string NumFrom = "nr-od";
+
+            /// <summary>Koniec zakresu oznaczeń („Art. 39–51." — 51).</summary>
+            internal const string NumTo = "nr-do";
             internal const string Label = "label";
             internal const string TextSection = "p";
             internal const string ContinuationFragment = "fragment";
