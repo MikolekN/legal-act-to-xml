@@ -62,6 +62,7 @@ namespace Saga.Core.Tests
         [InlineData("Art. 37b–37ag. (uchylone)", "37b", "37ag", "(uchylone)")]
         [InlineData("Art. 266–280.[1)]", "266", "280", "[1)]")]
         [InlineData("Art. 48‒50. (pominięte)", "48", "50", "(pominięte)")]
+        [InlineData("Art. 41a–Art. 41i. (uchylone)", "41a", "41i", "(uchylone)")]
         public void RangeEnd_IsReadFromTheDesignation(string line, string first, string last, string content)
         {
             var range = Parse("Art. 1. Przepis.", line).Articles.Last();

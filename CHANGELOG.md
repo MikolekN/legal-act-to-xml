@@ -1171,11 +1171,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   (pominięte)” wychodził z numerem pierwszego artykułu, a reszta zakresu („–51.”) stała w treści.
   Jednostka zakresu ma teraz pusty `nr`, granice w `nr-od` i `nr-do` oraz `eId` pierwszej jednostki (`art_39`) —
   według ustaleń z autorami schematu z 2026-10-18 i 2026-10-20 (`BaseEntity.NumberTo`,
-  `ParsingFactories.ReadDesignationRange`). Ciągłość numeracji po zakresie liczy się od jego końca.
+  `ParsingFactories.ReadDesignationRange`). Ciągłość numeracji po zakresie liczy się od jego końca. Koniec zakresu
+  bywa poprzedzony powtórzonym znakiem jednostki („Art. 41a–Art. 41i. (uchylone)”).
   - Zmiana schematu nie jest jeszcze opublikowana: do synchronizacji kopii `schema/` takie eksporty są wobec niej
     niezgodne (stan oczekiwany).
-  - Korpus DOCX: zmienia się 267 tekstów jednolitych — 290 zakresów artykułów, nic poza nimi; zgodnych ze schematem
-    (kopia sprzed zmiany) 2013 z 2321 zamiast 2280, każda nowa niezgodność to `nr-od`/`nr-do` albo pusty `nr` zakresu.
+  - Korpus DOCX: zmienia się 268 tekstów jednolitych — 291 zakresów artykułów, nic poza nimi; zgodnych ze schematem
+    (kopia sprzed zmiany) 2012 z 2321 zamiast 2280, każda nowa niezgodność to `nr-od`/`nr-do` albo pusty `nr` zakresu.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

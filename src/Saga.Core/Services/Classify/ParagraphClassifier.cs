@@ -105,11 +105,12 @@ namespace Saga.Core.Services.Classify
 
         /// <summary>
         /// Koniec zakresu oznaczeń na początku ogona jednostki („Art. 39–51. (pominięte)" → „–51."): myślnik, numer
-        /// i kropka, za nią odstęp, znacznik odnośnika albo koniec akapitu. Pojedyncze oznaczenie kończy kropka
-        /// tuż za numerem, więc myślnik z numerem w tym miejscu znaczy zakres (ADR-0097).
+        /// i kropka, za nią odstęp, znacznik odnośnika albo koniec akapitu; przed numerem bywa powtórzony znak jednostki
+        /// („Art. 41a–Art. 41i." — 307514_2780745). Pojedyncze oznaczenie kończy kropka tuż za numerem, więc myślnik
+        /// z numerem w tym miejscu znaczy zakres (ADR-0097).
         /// </summary>
         internal static readonly Regex DesignationRangeEndCapture = new(
-            $@"^[{Dashes.Any}]\s*(\d+{LetterSuffix}{OptionalSuperscript})\.(?:{AfterNumberDot}|$)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            $@"^[{Dashes.Any}]\s*(?:{BasicUnitMark}\s*)?(\d+{LetterSuffix}{OptionalSuperscript})\.(?:{AfterNumberDot}|$)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>Numer ustępu/paragrafu kodeksu z grupą przechwytującą (do ParseParagraphNumber).</summary>
         internal static readonly Regex ParagraphNumberCapture = new(
