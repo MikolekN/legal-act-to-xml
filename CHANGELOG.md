@@ -1255,6 +1255,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   zostaje automatyczna.
   - Korpus DOCX: zmienia się 6 eksportów — instrukcje ręczne na odnośniku zamiast celów w jednostkach aktu albo
     `UNKNOWN`; zgodność ze schematem bez zmian.
+- **Przytoczony odnośnik w obwieszczeniu** ([ADR-0107](docs/adr/0107-przytoczony-odnosnik-w-obwieszczeniu-jest-odnosnikiem-aktu-przytaczanego.md)): „… nie obejmuje odnośnika nr 2
+  oraz § 2 i § 3 rozporządzenia …, które stanowią: „²⁾ Niniejsze rozporządzenie służy stosowaniu: …”” — przytoczony
+  odnośnik zostawał tekstem (`fragment`), a jego znacznik wiązał się z własnym odnośnikiem dokumentu o tym numerze. Teraz
+  to `odnosnik-cyt` pod adresem `odn_N` aktu przytaczanego, z wyliczeniem jako `punkt-odnosnik`, w osobnym `tresc-strukt`.
+  - Korpus DOCX: 57 przytoczonych odnośników w 49 plikach; przytoczeń zostawionych tekstem 244 akapity w 20 obwieszczeniach
+    (było 321 w 68); w 5 plikach własny odnośnik wraca na swój znacznik; zgodność ze schematem bez zmian (2013 z 2321).
+    Ocena korpusu: 2121 → 2129 dokumentów poprawnych.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

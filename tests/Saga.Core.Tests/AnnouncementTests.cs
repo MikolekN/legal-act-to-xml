@@ -373,6 +373,86 @@ namespace Saga.Core.Tests
             Assert.Equal("art_57", exported.Elements().Single().Attribute("eId")!.Value);
         }
 
+        // ============================================================
+        // Przytoczony odnośnik (ADR-0107)
+        // ============================================================
+
+        // Korpus: 334858_3048802 — tekst jednolity nie obejmuje odnośnika nr 2 i paragrafów aktu zmieniającego; odnośnik
+        // przytoczony przed nimi, ze znacznikiem indeksem górnym i wyliczeniem.
+        private static List<string> WithQuotedFootnote(string footnoteNumber, string firstLine)
+        {
+            var lines = WithQuotation(
+                firstLine,
+                "1) rozporządzenia (UE) 2017/373 z dnia 1 marca 2017 r.,",
+                "2) rozporządzenia (UE) 2023/1768 z dnia 14 lipca 2023 r.”",
+                "„Art. 57. Przepisy ustawy zmienianej w art. 10 stosuje się również do odbudowy.”");
+            lines[QuotedLine - 1] = $"2. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje odnośnika nr {footnoteNumber} " +
+                "oraz art. 57 ustawy z dnia 1 października 2024 r. o zmianie ustawy o odbudowie (Dz. U. poz. 1473), które stanowią:";
+            return lines;
+        }
+
+        [Theory]
+        [InlineData("„[2)] Niniejsza ustawa służy stosowaniu:")]
+        [InlineData("[„2)] Niniejsza ustawa służy stosowaniu:")]
+        public void QuotedFootnoteNamedByThePoint_IsAQuotationOfThatFootnote(string firstLine)
+        {
+            var blocks = Parse(WithQuotedFootnote("2", firstLine)).Announcement!.Points[1].Continuation;
+
+            Assert.Equal(2, blocks.Count);
+            var footnote = blocks[0].Quotation!.Content.Footnote!;
+            Assert.Equal("2", footnote.Symbol);
+            Assert.Equal("Niniejsza ustawa służy stosowaniu:", footnote.Paragraphs[0]);
+            Assert.Equal(3, footnote.Paragraphs.Count);
+            Assert.Equal(new[] { "DU/2024/1473" }, blocks[0].Quotation!.SourceAct!.GetELIStrings());
+
+            // Przytoczony artykuł za odnośnikiem zostaje osobnym przytoczeniem.
+            Assert.Equal("57", Assert.Single(blocks[1].Quotation!.Content.Articles).Number?.Value);
+        }
+
+        [Fact]
+        public void QuotedFootnote_IsExportedAsAQuotedFootnoteOfTheQuotedAct()
+        {
+            var point = LegalDocumentConverter.Convert(Parse(WithQuotedFootnote("2", "„[2)] Niniejsza ustawa służy stosowaniu:")))
+                .Descendants().Single(e => e.Name.LocalName == "punkt-OTJ" && e.Attribute("eId")!.Value.EndsWith("pkt_2"));
+
+            var quotations = point.Descendants().Where(e => e.Name.LocalName == "tresc-strukt").ToList();
+            Assert.Equal(2, quotations.Count);
+            var footnote = Assert.Single(quotations[0].Elements());
+            Assert.Equal("odnosnik-cyt", footnote.Name.LocalName);
+            Assert.Equal("DU/2024/1473__odn_2", footnote.Attribute("eId")!.Value);
+            Assert.Equal("2)", footnote.Descendants().First(e => e.Name.LocalName == "sup").Value);
+            Assert.Equal(2, footnote.Elements().Count(e => e.Name.LocalName == "punkt-odnosnik"));
+            Assert.DoesNotContain(point.Descendants(), e => e.Name.LocalName == "fragment");
+        }
+
+        [SchemaPlFact]
+        public void QuotedFootnote_IsSchemaValid_InItsBody()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(Parse(WithQuotedFootnote("2", "„[2)] Niniejsza ustawa służy stosowaniu:"))).Elements().First()));
+        }
+
+        [Fact]
+        public void QuotationOpeningWithTheMarkerOfAnotherFootnote_StaysText()
+        {
+            // Punkt wymienia odnośnik nr 3, a przytoczenie zaczyna się znacznikiem „2)" — nie wiadomo, czym jest.
+            var blocks = Parse(WithQuotedFootnote("3", "„[2)] Niniejsza ustawa służy stosowaniu:")).Announcement!.Points[1].Continuation;
+
+            Assert.Equal("„[2)] Niniejsza ustawa służy stosowaniu:", blocks[0].Text);
+            Assert.Null(blocks[0].Quotation);
+            Assert.NotNull(blocks[^1].Quotation);
+        }
+
+        [Fact]
+        public void QuotationOpeningWithAPoint_StaysText_WhenThePointNamesNoFootnote()
+        {
+            var lines = WithQuotation("„2) rozporządzenia (UE) 2017/373 z dnia 1 marca 2017 r.”");
+
+            var blocks = Parse(lines).Announcement!.Points[1].Continuation;
+
+            Assert.Null(Assert.Single(blocks).Quotation);
+        }
+
         [Fact]
         public void SignatureUnderTheAnnouncement_IsTheSignatureOfTheDocument()
         {

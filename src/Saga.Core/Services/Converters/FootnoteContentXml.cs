@@ -1,5 +1,6 @@
 using System.Xml.Linq;
 using Saga.Core.Services.Parsing;
+using Saga.Model;
 using static Saga.Core.XLinqWrappers;
 using Odnosnik = Saga.Core.Services.Converters.XmlConverterConstants.Contents.Odnosnik;
 
@@ -13,6 +14,21 @@ namespace Saga.Core.Services.Converters
     internal static class FootnoteContentXml
     {
         private const string ListIntro = "ListIntro";
+
+        /// <summary>
+        /// Cytowany albo przytoczony odnośnik: <c>odnosnik-cyt</c> pod adresem <c>odn_N</c>, ze znacznikiem w treści
+        /// indeksem górnym — schemat nie wydziela numeru cytowanego odnośnika (ADR-0059).
+        /// </summary>
+        internal static XElement Quoted(Footnote footnote)
+        {
+            var quoted = Element(Odnosnik.QuotedElement,
+                new XAttribute(XmlConverterConstants.Contents.eId, EIdSegment.Of(StructuralReference.FootnotePrefix, footnote.Symbol)),
+                new XAttribute(XmlConverterConstants.Contents.GUID, footnote.Guid.ToString()));
+            var paragraph = Fill(quoted, footnote.Paragraphs);
+            paragraph.Elements().First().AddFirst(
+                Element(XmlConverterConstants.Contents.Superscript, footnote.Symbol + ")"), new XText(" "));
+            return quoted;
+        }
 
         /// <summary>
         /// Wypełnia element odnośnika treścią i zwraca jego pierwszy <c>p</c>. Treść, której jednostkami zapisać się

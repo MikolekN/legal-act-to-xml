@@ -27,8 +27,16 @@ namespace Saga.Core.Services.Parsing
         /// a numer w indeksie górnym — nieobecny w tekście, gdy źródło wstawia go polem („[)] Niniejsza ustawa …").
         /// </summary>
         private static readonly Regex LeadingMarker = new(
-            $@"^\s*(?:\[\s*(?<quote>[{QuotationMarks.OpeningOrStraight}])?\s*(?:\d+[a-z]*)?\)\s*\]|(?<quote>[{QuotationMarks.OpeningOrStraight}])?\d+[a-z]*\))\s*",
+            $@"^\s*(?:\[\s*(?<quote>[{QuotationMarks.OpeningOrStraight}])?\s*(?<no>\d+[a-z]*)?\)\s*\]|(?<quote>[{QuotationMarks.OpeningOrStraight}])?(?<no>\d+[a-z]*)\))\s*",
             RegexOptions.Compiled);
+
+        /// <summary>Odnośnik wymieniony w treści jednostki obwieszczenia („nie obejmuje odnośnika nr 2 oraz § 2 …").</summary>
+        private static readonly Regex Named = new(
+            @"(?<![\p{L}])odnośnik(?:a|u|iem)?\s+nr\s+(?<no>\d+[a-z]*)\b",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>Akapit zaczynający się oznaczeniem artykułu albo paragrafu — przepis, nie dalsza treść odnośnika.</summary>
+        private static readonly Regex Provision = new(@"^\s*(?:Art\.|§)\s*\d", RegexOptions.Compiled);
 
         /// <summary>Odnośnik wskazany komendą i to, czy jest dodawany.</summary>
         internal sealed record Command(string Number, bool Adds);
@@ -68,6 +76,27 @@ namespace Saga.Core.Services.Parsing
             }
 
             return new Footnote { Symbol = command.Number, Paragraphs = texts };
+        }
+
+        /// <summary>
+        /// Przytoczony odnośnik („Podany … tekst jednolity nie obejmuje odnośnika nr 2 oraz § 2 …, które stanowią:
+        /// „²⁾ Niniejsze rozporządzenie …""): treść jednostki wymienia odnośnik, a przytoczenie zaczyna się jego
+        /// znacznikiem. Null, gdy znacznik nie pasuje do żadnego wymienionego odnośnika albo w przytoczeniu stoi przepis.
+        /// <paramref name="opensWithQuote"/> mówi, czy przy znaczniku stał cudzysłów otwierający przytoczenie.
+        /// </summary>
+        internal static Footnote? Cited(string ownerText, IReadOnlyList<CollectedAmendmentParagraph> paragraphs, out bool opensWithQuote)
+        {
+            opensWithQuote = false;
+            var named = Named.Matches(ownerText).Select(match => match.Groups["no"].Value).ToHashSet();
+            if (named.Count == 0 || paragraphs.Count == 0 || paragraphs.Any(paragraph => paragraph.Table is not null)
+                || LeadingMarker.Match(paragraphs[0].Text) is not { Success: true } marker
+                || paragraphs.Skip(1).Any(paragraph => Provision.IsMatch(paragraph.Text)))
+                return null;
+
+            var number = marker.Groups["no"].Success ? marker.Groups["no"].Value : named.Count == 1 ? named.Single() : null;
+            return number is not null && named.Contains(number)
+                ? Build(new Command(number, Adds: false), paragraphs, out opensWithQuote)
+                : null;
         }
 
         /// <summary>

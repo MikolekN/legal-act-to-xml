@@ -12,8 +12,9 @@ namespace Saga.Core.Services.Parsing
     /// i tabele są dalszą treścią jednostki, za którą stoją; podpis trafia do dokumentu.
     /// Potok aktu tu nie pracuje — przytoczony artykuł nie jest artykułem żadnego z dwóch aktów dokumentu.
     /// Przytoczenie złożone z całych artykułów (paragrafów aktu wykonawczego) buduje się jak treść cytowaną
-    /// w nowelizacji (<see cref="AmendmentBuilder"/>) i trafia do jednostki jako <see cref="Quotation"/>;
-    /// każde inne zostaje akapitami tekstu.
+    /// w nowelizacji (<see cref="AmendmentBuilder"/>) i trafia do jednostki jako <see cref="Quotation"/>; tak samo
+    /// przytoczony odnośnik, który treść jednostki wymienia („nie obejmuje odnośnika nr 2 …"). Każde inne przytoczenie
+    /// zostaje akapitami tekstu.
     /// </summary>
     internal static class AnnouncementUnits
     {
@@ -205,7 +206,8 @@ namespace Saga.Core.Services.Parsing
         /// z własnym cytatem („Art. 94. W ustawie … 1) w art. 10f ust. 5 otrzymuje brzmienie: „5. …"") ma ten cytat jako
         /// swoją nowelizację, jak w nowelizacji nowelizacji (ADR-0082) — o ile cytat stoi za komendą przepisu; cytat
         /// bez komendy przed sobą nie jest jednostką przytaczanego artykułu, więc przytoczenie zostaje tekstem.
-        /// Tabela w środku przytoczenia jest dalszą treścią jednostki, za którą stoi.
+        /// Tabela w środku przytoczenia jest dalszą treścią jednostki, za którą stoi. Przytoczony odnośnik
+        /// (<see cref="QuotedFootnoteReader.Cited"/>) jest odnośnikiem pod adresem <c>odn_N</c> aktu przytaczanego.
         /// </summary>
         private static Quotation? BuildQuotation(
             IReadOnlyList<CollectedAmendmentParagraph> paragraphs, string ownerText, bool sectionIsBasicUnit)
@@ -217,6 +219,21 @@ namespace Saga.Core.Services.Parsing
             // Granice obcina się na kopii — przytoczenie, którego nie da się zbudować, zostaje tekstem z cudzysłowami.
             var collected = paragraphs.Select(paragraph => paragraph with { }).ToList();
             var quotes = AmendmentStateManager.TrimQuoteBoundaries(collected);
+
+            // Przytoczony odnośnik jest odnośnikiem, nie jednostkami (ADR-0059); jego znacznik bywa złożony indeksem
+            // górnym razem z cudzysłowem otwierającym przytoczenie.
+            if (QuotedFootnoteReader.Cited(ownerText, collected, out var quoteAtTheMarker) is { } footnote)
+            {
+                return (quotes.HasOpening || quoteAtTheMarker) && quotes.HasClosing
+                    ? new Quotation
+                    {
+                        Content = new AmendmentContent { ObjectType = AmendmentObjectType.None, Footnote = footnote },
+                        SourceAct = JournalReferenceService.ReadSingleAct(ownerText),
+                        TrailingPunctuation = quotes.Punctuation,
+                    }
+                    : null;
+            }
+
             if (!quotes.HasOpening || !quotes.HasClosing)
                 return null;
 

@@ -403,16 +403,9 @@ namespace Saga.Core.Services.Converters
             if (amendment.Content?.Footnote is not { } footnote)
                 return;
 
-            var quoted = Element(XmlConverterConstants.Contents.Odnosnik.QuotedElement,
-                new XAttribute(XmlConverterConstants.Contents.eId, EIdSegment.Of(StructuralReference.FootnotePrefix, footnote.Symbol)),
-                new XAttribute(XmlConverterConstants.Contents.GUID, footnote.Guid.ToString()));
-            var paragraph = FootnoteContentXml.Fill(quoted, footnote.Paragraphs);
-            paragraph.Elements().First().AddFirst(
-                Element(XmlConverterConstants.Contents.Superscript, footnote.Symbol + ")"), new XText(" "));
-
             var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
             ApplyAttributes(citation, amendment, command, isStructural: true);
-            citation.Add(quoted);
+            citation.Add(FootnoteContentXml.Quoted(footnote));
 
             if (sentence is XElement zdanie)
                 zdanie.Add(citation);

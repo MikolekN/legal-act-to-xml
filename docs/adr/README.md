@@ -125,5 +125,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0104](0104-znak-dodawany-bez-miejsca-to-instrukcja-reczna.md) | Znak dodawany bez wskazania miejsca w tekście („w pkt 4 dodaje się przecinek”) to `cytat-w-tekscie funkcja="dodaj-recznie"` ze znakiem na jednostce; znak po wskazanych wyrazach zostaje zmianą automatyczną | Accepted | 2026-10-20 |
 | [0105](0105-odnosnik-w-nowych-wyrazach-to-fragment-xml-w-nowy-tekst.md) | Odnośnik tego aktu w nowych wyrazach zmiany w tekście („z późn. zm.¹⁾”) to zakodowany fragment XML odnośnika w `nowy-tekst`, bez deklaracji przestrzeni nazw | Accepted | 2026-10-20 |
 | [0106](0106-odnosnik-jako-miejsce-zmiany-jest-celem.md) | Odnośnik jako miejsce zmiany („w odnośniku nr 1 …”) jest celem komendy (`odn_N`): jego akapit albo punkt to instrukcja ręczna na odnośniku, zmiana tekstu całego odnośnika — automatyczna | Accepted | 2026-10-20 |
+| [0107](0107-przytoczony-odnosnik-w-obwieszczeniu-jest-odnosnikiem-aktu-przytaczanego.md) | Przytoczony odnośnik w obwieszczeniu („nie obejmuje odnośnika nr 2 …, które stanowią: „²⁾ …”) jest cytowanym odnośnikiem aktu przytaczanego: `odnosnik-cyt` pod `odn_N` w `tresc-strukt` | Accepted | 2026-10-20 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

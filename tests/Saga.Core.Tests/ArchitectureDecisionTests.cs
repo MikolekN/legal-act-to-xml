@@ -2395,6 +2395,40 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0107: przytoczony odnośnik w obwieszczeniu jest cytowanym odnośnikiem aktu przytaczanego
+        // ============================================================
+
+        [Fact]
+        public void Adr0107_FootnoteQuotedInAnAnnouncement_IsAQuotedFootnoteOfTheQuotedAct()
+        {
+            string[] lines =
+            [
+                "Obwieszczenie", "Ministra Infrastruktury", "z dnia 22 września 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu rozporządzenia Ministra Infrastruktury w sprawie służby informacji lotniczej",
+                "1. Na podstawie art. 16 ust. 3 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst rozporządzenia.",
+                "2. Podany w załączniku do niniejszego obwieszczenia tekst jednolity rozporządzenia nie obejmuje odnośnika nr 2 oraz § 2 rozporządzenia Ministra Infrastruktury z dnia 25 marca 2025 r. zmieniającego rozporządzenie w sprawie służby informacji lotniczej (Dz. U. poz. 425), które stanowią:",
+                "„[2)] Niniejsze rozporządzenie służy stosowaniu:",
+                "1) rozporządzenia (UE) 2017/373;",
+                "2) rozporządzenia (UE) 2023/1768.”",
+                "„§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.”.",
+                "Minister Infrastruktury: wz. M. Lasek",
+                "Załącznik do obwieszczenia Ministra Infrastruktury z dnia 22 września 2025 r. (Dz. U. poz. 1358)",
+                "ROZPORZĄDZENIE", "MINISTRA INFRASTRUKTURY", "z dnia 8 lipca 2020 r.", "w sprawie służby informacji lotniczej",
+                "§ 1. Rozporządzenie określa zakres służby informacji lotniczej.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Przytoczenie zaczyna się znacznikiem odnośnika, który punkt wymienia — jest tym odnośnikiem, nie punktami.
+            var quoted = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Name.LocalName == "tresc-strukt")
+                .Select(e => (e.Elements().First().Name.LocalName, e.Elements().First().Attribute("eId")?.Value))
+                .ToList();
+            Assert.Equal([("odnosnik-cyt", "DU/2025/425__odn_2"), ("paragraf", "DU/2025/425__art_2")], quoted);
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 

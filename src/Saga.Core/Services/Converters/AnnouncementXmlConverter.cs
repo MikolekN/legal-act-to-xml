@@ -108,6 +108,8 @@ namespace Saga.Core.Services.Converters
                     new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute,
                         XmlConverterConstants.Contents.Citation.Quotation.QuotationBoth),
                     new XAttribute(XmlConverterConstants.Contents.GUID, Guid.NewGuid().ToString()));
+                if (quotation.Content.Footnote is { } footnote)
+                    quoted.Add(FootnoteContentXml.Quoted(footnote));
                 quoted.Add(quotation.Content.Articles.Select(article => ArticleXmlConverter.ToXml(article)));
                 quoted.AddAnnotation(new ActPrefixXml.QuotedAct(quotation.SourceAct?.GetELIStrings().FirstOrDefault()));
 
