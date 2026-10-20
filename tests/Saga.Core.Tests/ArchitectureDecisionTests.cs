@@ -2312,6 +2312,32 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0104: znak dodawany bez miejsca to instrukcja ręczna
+        // ============================================================
+
+        [Fact]
+        public void Adr0104_MarkAddedWithoutAPlace_IsAManualAddition()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 4 w pkt 4 dodaje się przecinek i dodaje się pkt 5 w brzmieniu:",
+                "„5) zakład ubezpieczeń.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var manual = LegalDocumentConverter.Convert(document).Descendants()
+                .Single(e => e.Attribute("funkcja")?.Value == "dodaj-recznie");
+
+            // Ostatniego słowa punktu akt zmieniający nie podaje — znak, ręcznie, na punkcie.
+            Assert.Equal(("DU/2021/200__art_4__pkt_4", ","), (manual.Attribute("element-eId")?.Value, manual.Value));
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 

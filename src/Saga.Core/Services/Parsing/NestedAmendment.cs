@@ -80,7 +80,7 @@ namespace Saga.Core.Services.Parsing
             {
                 OldText = TextChangeWording.AsInAmendedAct(command.OldWording ?? string.Empty).Trim(),
                 NewText = TextChangeWording.AsInAmendedAct(command.NewWording ?? string.Empty).Trim(),
-                Occurrence = command.Kind == AmendmentCommandKind.ReplaceSign ? TextOccurrence.Last : TextOccurrence.All,
+                Occurrence = command.ChangesFinalSign ? TextOccurrence.Last : TextOccurrence.All,
             }));
             return Complete(amendment, owner, sectionIsBasicUnit);
         }

@@ -711,7 +711,7 @@ namespace Saga.Core.Services.Parsing
                 {
                     // Zamiana znaku kończącego jednostkę towarzyszy zmianie jednostki po niej — zostaje przy
                     // nowelizacji tego przepisu. Zmiana wyrazów w komendzie złożonej nie ma jeszcze własnego celu.
-                    var signs = textChanges.Where(command => command.Kind == AmendmentCommandKind.ReplaceSign).ToList();
+                    var signs = textChanges.Where(command => command.ChangesFinalSign).ToList();
                     if (signs.Count > 0)
                         KeepSignChanges(context, compoundOwner, text, signs);
 
@@ -881,7 +881,7 @@ namespace Saga.Core.Services.Parsing
                 {
                     OldText = TextChangeWording.AsInAmendedAct(command.OldWording ?? string.Empty).Trim(),
                     NewText = TextChangeWording.AsInAmendedAct(command.NewWording ?? string.Empty).Trim(),
-                    Occurrence = command.Kind == AmendmentCommandKind.ReplaceSign ? TextOccurrence.Last : TextOccurrence.All,
+                    Occurrence = command.ChangesFinalSign ? TextOccurrence.Last : TextOccurrence.All,
                 })
                 .ToList();
             _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(content, collector, context,

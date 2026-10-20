@@ -122,5 +122,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0101](0101-tytul-aktu-jako-cel-to-instrukcja-reczna-z-adresem-aktu.md) | Tytuł aktu zmienianego jako cel komendy („tytuł ustawy otrzymuje brzmienie:”, „do tytułu ustawy dodaje się odnośnik nr 1”) to instrukcja ręczna `*-recznie` z adresem samego aktu | Accepted | 2026-10-20 |
 | [0102](0102-zdanie-nazwane-w-komendzie-jest-celem.md) | Zdanie nazwane w komendzie z numerem jest celem każdej zmiany (`…__zdn_N`): zdanie dodawane — `dodaj-po` na poprzednim, sąsiednie zastąpione jednym cytatem — zakres, bez numeru — instrukcja ręczna na jednostce (zastępuje w części ADR-0070) | Accepted | 2026-10-20 |
 | [0103](0103-zmiana-wyrazow-w-roznych-formach-to-instrukcja-reczna.md) | Zmiana wyrazów w różnych formach („w różnej liczbie i różnym przypadku”) to `cytat-w-tekscie funkcja="zastap-recznie"` z nowymi wyrazami na każdy cel, nie `now:zamien-tekst` z formą podstawową | Accepted | 2026-10-20 |
+| [0104](0104-znak-dodawany-bez-miejsca-to-instrukcja-reczna.md) | Znak dodawany bez wskazania miejsca w tekście („w pkt 4 dodaje się przecinek”) to `cytat-w-tekscie funkcja="dodaj-recznie"` ze znakiem na jednostce; znak po wskazanych wyrazach zostaje zmianą automatyczną | Accepted | 2026-10-20 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

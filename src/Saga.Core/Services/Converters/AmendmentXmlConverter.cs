@@ -233,9 +233,17 @@ namespace Saga.Core.Services.Converters
             ApplyAttributes(citation, amendment, command, isStructural: false);
             citation.SetAttributeValue(XmlConverterConstants.Contents.Citation.Quotation.FunctionAttribute, repeal
                 ? XmlConverterConstants.Contents.Citation.Quotation.Function.RepealManually
-                : XmlConverterConstants.Contents.Citation.Quotation.Function.EditManually);
+                : AddsWithoutAPlace(change)
+                    ? XmlConverterConstants.Contents.Citation.Quotation.Function.AddManually
+                    : XmlConverterConstants.Contents.Citation.Quotation.Function.EditManually);
             return citation;
         }
+
+        /// <summary>
+        /// Dodanie bez wskazanego miejsca w tekście („w pkt 4 dodaje się przecinek"): ostatniego słowa jednostki akt
+        /// zmieniający nie podaje, więc nie ma czego zastąpić — instrukcja ręczna ze znakiem (ADR-0104).
+        /// </summary>
+        private static bool AddsWithoutAPlace(TextChange change) => change.OldText.Length == 0 && change.NewText.Length > 0;
 
         /// <summary>
         /// Adres celu; tytuł aktu zmienianego nie ma <c>eId</c>, więc jego adresem jest sam akt („DU/2021/200") —
@@ -360,7 +368,7 @@ namespace Saga.Core.Services.Converters
 
                 foreach (var command in targets)
                 {
-                    if (command.Target is { IsManual: true })
+                    if (command.Target is { IsManual: true } || AddsWithoutAPlace(change))
                     {
                         manual.Add(ManualTextChange(amendment, command, change));
                         continue;

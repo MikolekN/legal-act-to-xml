@@ -1225,6 +1225,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   schematu z 2026-10-20 formy stoją tylko w akcie zmienianym (`ManualTargets`).
   - Korpus DOCX: zmienia się 23 eksporty — 160 instrukcji ręcznych zamiast `now:zamien-tekst`; zgodność ze schematem
     bez zmian.
+- **Znak dodawany bez wskazania miejsca jako instrukcja ręczna** ([ADR-0104](docs/adr/0104-znak-dodawany-bez-miejsca-to-instrukcja-reczna.md)): „w pkt 4 dodaje się
+  przecinek i dodaje się pkt 5 w brzmieniu:”, „na końcu dodaje się średnik” — zmiana znaku ginęła bez instrukcji.
+  Ostatniego słowa jednostki akt zmieniający nie podaje, więc wychodzi `cytat-w-tekscie funkcja="dodaj-recznie"` ze
+  znakiem na jednostce nazwanej przed komendą (`AmendmentCommandKind.AddSign`), jak zalecają autorzy schematu
+  (2026-10-20). Znak dodawany po wskazanych wyrazach („po wyrazach „X” dodaje się przecinek”) wychodzi
+  automatycznie: `now:zamien-tekst` „X” → „X,”.
+  - Korpus DOCX: zmienia się 28 eksportów — 41 instrukcji ręcznych ze znakiem i 2 zmiany automatyczne, których dotąd
+    nie było; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

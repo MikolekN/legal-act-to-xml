@@ -33,6 +33,12 @@ namespace Saga.Core.Services.Parsing
         /// uchyleniem jednostki po niej. Zmiana w tekście: ostatnie wystąpienie znaku zastępuje się innym.
         /// </summary>
         ReplaceSign,
+        /// <summary>
+        /// „w pkt 4 dodaje się przecinek", „na końcu dodaje się średnik" — znak dodawany na końcu jednostki bez wskazania
+        /// miejsca w tekście. Ostatniego słowa jednostki akt zmieniający nie podaje, więc zmiana jest instrukcją ręczną
+        /// z samym znakiem (ADR-0104).
+        /// </summary>
+        AddSign,
     }
 
     /// <summary>
@@ -63,7 +69,10 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Czy komenda jest zmianą w tekście jednostki (wyrazów), a nie zmianą jednostki.</summary>
         public bool ChangesText => Kind is AmendmentCommandKind.ReplaceWords or AmendmentCommandKind.AddWords
-            or AmendmentCommandKind.DeleteWords or AmendmentCommandKind.ReplaceSign;
+            or AmendmentCommandKind.DeleteWords or AmendmentCommandKind.ReplaceSign or AmendmentCommandKind.AddSign;
+
+        /// <summary>Czy komenda zmienia znak kończący jednostkę — zamienia go albo dodaje (ostatnie wystąpienie w jednostce).</summary>
+        public bool ChangesFinalSign => Kind is AmendmentCommandKind.ReplaceSign or AmendmentCommandKind.AddSign;
 
         /// <summary>Pełny dopasowany tekst komendy (do wycinania przy analizie komend złożonych).</summary>
         public string? MatchedCommandText { get; init; }
@@ -230,6 +239,23 @@ namespace Saga.Core.Services.Parsing
             + $@"(?:\s+(?:i|oraz)\s+(?<adds>dodaje(?:\s+się)?\s+)?wyraz(?:y)?\s+{Quoted("words")})?",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        /// <summary>
+        /// „po wyrazach „X" dodaje się przecinek" — znak dodawany po wskazanych wyrazach: miejsce jest znane, więc to
+        /// zmiana automatyczna jak dodanie wyrazów („X" → „X,"). Z wyrazami za znakiem rozpoznaje ją <see cref="AddWordsPattern"/>.
+        /// </summary>
+        internal static readonly Regex AddSignAfterWordsPattern = new(
+            $@"po\s+wyraz(?:ach|ie|ami|em)\s+{Quoted("anchor")}\s+dodaje\s+się\s+(?<sign>kropkę|średnik|przecinek|dwukropek)\b(?!\s+(?:i|oraz)\s+wyraz)",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// „w pkt 4 dodaje się przecinek", „na końcu dodaje się przecinek i wyraz „lub"" — znak dodawany bez wskazania
+        /// miejsca w tekście (ADR-0104). Znak po wskazanych wyrazach zaczyna się wcześniej i wygrywa jako zmiana automatyczna.
+        /// </summary>
+        internal static readonly Regex AddSignPattern = new(
+            @"(?:na\s+końcu\s+)?dodaje\s+się\s+(?<sign>kropkę|średnik|przecinek|dwukropek)\b"
+            + $@"(?:\s+(?:i|oraz)\s+wyraz(?:y)?\s+{Quoted("added")})?",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         private static string SignOf(string name) => name.ToLowerInvariant() switch
         {
             "kropkę" or "kropką" => ".",
@@ -303,6 +329,22 @@ namespace Saga.Core.Services.Parsing
                 var replacement = match.Groups["added"].Success ? JoinWords(sign, match.Groups["added"].Value.Trim()) : sign;
                 spans.Add((match.Index, match.Index + match.Length, [TextChange(text, match,
                     AmendmentCommandKind.ReplaceSign, SignOf(match.Groups["old"].Value), replacement)]));
+            }
+
+            // Znak po wskazanych wyrazach („po wyrazach „X" dodaje się przecinek") — miejsce znane, zmiana automatyczna.
+            foreach (Match match in AddSignAfterWordsPattern.Matches(text))
+            {
+                var anchor = match.Groups["anchor"].Value.Trim();
+                spans.Add((match.Index, match.Index + match.Length, [TextChange(text, match,
+                    AmendmentCommandKind.AddWords, anchor, anchor + SignOf(match.Groups["sign"].Value))]));
+            }
+
+            foreach (Match match in AddSignPattern.Matches(text))
+            {
+                var sign = SignOf(match.Groups["sign"].Value);
+                var added = match.Groups["added"].Success ? JoinWords(sign, match.Groups["added"].Value.Trim()) : sign;
+                spans.Add((match.Index, match.Index + match.Length, [TextChange(text, match,
+                    AmendmentCommandKind.AddSign, string.Empty, added)]));
             }
 
             foreach (Match match in DeleteSignPattern.Matches(text))
