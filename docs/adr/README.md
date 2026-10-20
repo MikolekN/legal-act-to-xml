@@ -36,7 +36,7 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0015](0015-jedno-zrodlo-powolan-jednostek.md) | Powołania jednostek rozbiera jedno źródło (słownik, ścieżka, „§”) — wejście w życie i cele nowelizacji; samodzielny „§” rozstrzyga rodzaj aktu | Accepted | 2026-09-23 |
 | [0016](0016-wyliczenie-celow-to-osobne-komendy.md) | Wyliczenie celów nowelizacji to osobne komendy; `element-do-eId` znaczy wyłącznie koniec przedziału | Accepted | 2026-09-23 |
 | [0017](0017-eid-jednostki-redakcyjnej-bez-sciezki-systematyzacyjnej.md) | eId jednostki redakcyjnej bez ścieżki jednostek systematyzacyjnych (`art_5`, nie `rozdz_1__art_5`); jednostka systematyzacyjna niesie ścieżkę jawnych przodków | Accepted | 2026-09-25 |
-| [0018](0018-postac-oznaczenia-w-eid.md) | Oznaczenie w eId: liczba arabska (także z rzymskiej i słownej), sufiks jak w tekście, bez indeksu górnego | Accepted — w części zastąpiony przez 0019 | 2026-09-25 |
+| [0018](0018-postac-oznaczenia-w-eid.md) | Oznaczenie w eId: liczba arabska (także z rzymskiej i słownej), sufiks jak w tekście, bez indeksu górnego | Accepted — w części zastąpiony przez 0019, 0098 | 2026-09-25 |
 | [0019](0019-indeks-gorny-w-eid.md) | Indeks górny zostaje w eId w notacji „[n]" (`art_53[1]`) — zgodnie ze schematem i przykładami jego autorów | Accepted | 2026-10-09 |
 | [0020](0020-eksport-jednostek-systematyzacyjnych.md) | Jednostki systematyzacyjne w eksporcie zagnieżdżone wg schemaPL; niejawny łańcuch nad pierwszą jawną jednostką znika, pod nią niejawne poziomy to `-n` | Accepted | 2026-10-09 |
 | [0021](0021-eid-jednostki-cytowanej-od-adresu-celu.md) | eId jednostki cytowanej w nowelizacji zaczyna się od adresu celu w akcie zmienianym (`art_68__ust_1__pkt_5`, nie `pkt_5`) | Accepted | 2026-10-09 |
@@ -116,5 +116,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0095](0095-odwolanie-z-wlasnym-znakiem-jest-odnosnikiem-z-kolejnym-znacznikiem.md) | Odwołanie z własnym znakiem (`w:customMarkFollows`: „3)”, „*”, „za”) jest odnośnikiem: oznaczeniem jest ten znak, a znacznik w tekście bierze kolejny numer w dokumencie | Accepted | 2026-10-16 |
 | [0096](0096-adnotacja-uchylajaca-samo-oznaczenie-nie-obejmuje-przepisow-za-nia.md) | Adnotacja uchylająca samo oznaczenie jednostki systematyzacyjnej („(oznaczenie rozdziału 1 i tytuł – uchylone)”) zostaje jej nagłówkiem, ale przepisy za nią stoją w jednostce niejawnej tego samego poziomu (zastępuje w części ADR-0066) | Accepted | 2026-10-16 |
 | [0097](0097-zakres-oznaczen-to-jedna-jednostka-z-nr-od-i-nr-do.md) | Zakres oznaczeń („Art. 39–51. (pominięte)”) to jedna jednostka: pusty `nr`, granice w `nr-od`/`nr-do`, adres pierwszej jednostki zakresu (wdrożone przed publikacją zmiany schematu) | Accepted | 2026-10-20 |
+| [0098](0098-jednostka-nazwana-ma-nazwe-jako-oznaczenie.md) | Jednostka nazwana („CZĘŚĆ OGÓLNA”, „TYTUŁ WSTĘPNY”) ma nazwę jako oznaczenie w eId (`czesc_OGÓLNA`), a w nagłówku pusty `nr` i nazwę w `p` przed tytułem (zastępuje w części ADR-0018) | Accepted | 2026-10-20 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

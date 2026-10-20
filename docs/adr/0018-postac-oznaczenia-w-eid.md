@@ -1,6 +1,6 @@
 # ADR-0018: Oznaczenie w eId — liczba arabska, sufiks jak w tekście, bez indeksu górnego
 
-- Status: Accepted — Superseded in part by [ADR-0019](0019-indeks-gorny-w-eid.md) (indeks górny)
+- Status: Accepted — Superseded in part by [ADR-0019](0019-indeks-gorny-w-eid.md) (indeks górny), [ADR-0098](0098-jednostka-nazwana-ma-nazwe-jako-oznaczenie.md) (nazwa zamiast numeru)
 - Data: 2026-09-25
 
 ## Kontekst

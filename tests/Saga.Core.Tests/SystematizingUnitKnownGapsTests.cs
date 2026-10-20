@@ -13,7 +13,7 @@ namespace Saga.Core.Tests
     /// otwarta, ma [Fact(Skip = "…")] z powodem samowystarczalnym. Domknięcie luki = zdjęcie Skip,
     /// bez dotykania asercji. Postać eId wynika z przyjętych reguł: oznaczenie rzymskie i słowne
     /// daje w eId liczbę arabską, sufiks zostaje jak w tekście, indeks górny zostaje w notacji „[n]",
-    /// a jednostka nazwana bez numeru dostaje tymczasowe eId „TMPn".
+    /// a jednostka nazwana bez numeru ma w eId swoją nazwę („czesc_OGÓLNA" — ADR-0098).
     ///
     /// Kontrprzykłady są aktywne zawsze — pominięty nie strzegłby niczego właśnie wtedy, gdy
     /// powstaje poprawka, która mogłaby go złamać.
@@ -220,7 +220,7 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void NamedParts_AreRecognized_WithTemporaryEIds()
+        public void NamedParts_AreRecognized_WithTheirNamesInTheEId()
         {
             // Kodeks karny (TJ 318682_2849299): części bez numeru.
             var document = Parse(
@@ -231,12 +231,12 @@ namespace Saga.Core.Tests
 
             var parts = ExplicitUnits(document).OfType<Part>().ToList();
             Assert.Equal(new string?[] { "OGÓLNA", "SZCZEGÓLNA" }, parts.Select(p => p.Number?.RawValue));
-            Assert.Equal(new[] { "czesc_TMP1", "czesc_TMP2" }, parts.Select(p => p.Id));
+            Assert.Equal(new[] { "czesc_OGÓLNA", "czesc_SZCZEGÓLNA" }, parts.Select(p => p.Id));
             Assert.Same(parts[1], Ancestor<Part>(ArticleNumbered(document, "117")));
         }
 
         [Fact]
-        public void NamedTitle_IsRecognized_WithTemporaryEId()
+        public void NamedTitle_IsRecognized_WithItsNameInTheEId()
         {
             // Kodeks postępowania cywilnego (TJ 302049_2704309).
             var document = Parse(
@@ -246,7 +246,7 @@ namespace Saga.Core.Tests
 
             var title = Assert.IsType<Title>(Assert.Single(ExplicitUnits(document)));
             Assert.Equal("WSTĘPNY", title.Number?.RawValue);
-            Assert.Equal("tyt_TMP1", title.Id);
+            Assert.Equal("tyt_WSTĘPNY", title.Id);
             Assert.Equal("Przepisy ogólne", title.Heading);
         }
 

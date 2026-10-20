@@ -74,7 +74,8 @@ namespace Saga.Core.Services.Converters
         /// <summary>
         /// Nagłówek: oznaczenie jak w akcie (z indeksem górnym), odnośniki przy oznaczeniu (ADR-0094), tytuł,
         /// jeśli jest, i dalsza treść nagłówka — wiersze stojące pod tytułem, które nie są ani jego częścią, ani
-        /// jednostką (ADR-0067).
+        /// jednostką (ADR-0067). Jednostka nazwana („CZĘŚĆ OGÓLNA") ma pusty <c>nr</c>, a nazwę — przed tytułem
+        /// w tym samym <c>p</c>, bo nagłówek ma jeden akapit (ADR-0098).
         /// </summary>
         private static XElement Header(string name, BaseEntity unit, string heading)
         {
@@ -82,6 +83,12 @@ namespace Saga.Core.Services.Converters
             var designation = number == null ? string.Empty : number.RawValue ?? number.Value;
             if (number != null && !string.IsNullOrEmpty(number.Superscript))
                 designation += $"[{number.Superscript}]";
+
+            if (number is { IsName: true })
+            {
+                heading = string.IsNullOrWhiteSpace(heading) ? designation : $"{designation} {heading}";
+                designation = string.Empty;
+            }
 
             var header = Element(name, Element(XmlConverterConstants.Contents.Num, designation));
 

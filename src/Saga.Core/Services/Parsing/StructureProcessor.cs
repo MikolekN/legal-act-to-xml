@@ -799,8 +799,7 @@ namespace Saga.Core.Services.Parsing
             // Część nazwana zaraz po oznaczeniu niższej jednostki to jej tytuł: „KSIĘGA PIERWSZA" /
             // „CZĘŚĆ OGÓLNA" (KC), „DZIAŁ I" / „Część ogólna" (KKS).
             || (classification.Kind == ParagraphKind.PartUnit && pendingUnit is not Part
-                && ParagraphClassifier.ParseSystematizingNumber(ParagraphKind.PartUnit, text)?.Value
-                    == ParagraphClassifier.NamedUnitValue);
+                && ParagraphClassifier.ParseSystematizingNumber(ParagraphKind.PartUnit, text)?.IsName == true);
 
         internal static bool IsSystematizing(ParagraphKind kind) => kind is
             ParagraphKind.PartUnit or ParagraphKind.BookUnit or ParagraphKind.TitleUnit or
@@ -818,13 +817,6 @@ namespace Saga.Core.Services.Parsing
                 return;
             }
 
-            if (number.Value == ParagraphClassifier.NamedUnitValue)
-            {
-                var ordinal = context.NamedUnitCounts.GetValueOrDefault(classification.Kind) + 1;
-                context.NamedUnitCounts[classification.Kind] = ordinal;
-                number.Value = $"{ParagraphClassifier.NamedUnitValue}{ordinal}";
-            }
-
             _systematizingUnitBuilder.Enter(context, classification.Kind, number);
             Log.Debug("Wejście w jednostkę systematyzacyjną {Kind} {Number}", classification.Kind, number.Value);
 
@@ -832,11 +824,6 @@ namespace Saga.Core.Services.Parsing
             // jednostka niesie jego znacznik do nagłówka (ADR-0094).
             if (context.PendingHeadingUnit is { } designated)
                 designated.DesignationMarkers = FootnoteMarkers.Only(text);
-
-            if (context.PendingHeadingUnit is BaseEntity named
-                && number.Value.StartsWith(ParagraphClassifier.NamedUnitValue, StringComparison.Ordinal))
-                ValidationReporter.AddValidationMessage(named, ValidationLevel.Warning,
-                    $"Jednostka nazwana bez numeru („{number.RawValue}”) — eId tymczasowy {named.Id}.");
 
             if (context.PendingHeadingUnit is BaseEntity entered
                 && ParagraphClassifier.ToleratedDesignationReason(classification.Kind, text, number) is { } reason)

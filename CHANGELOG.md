@@ -1177,6 +1177,12 @@ a wersjonowanie zgodne z Semantic Versioning.
     niezgodne (stan oczekiwany).
   - Korpus DOCX: zmienia się 268 tekstów jednolitych — 291 zakresów artykułów, nic poza nimi; zgodnych ze schematem
     (kopia sprzed zmiany) 2012 z 2321 zamiast 2280, każda nowa niezgodność to `nr-od`/`nr-do` albo pusty `nr` zakresu.
+- **Jednostka nazwana z nazwą jako oznaczeniem** ([ADR-0098](docs/adr/0098-jednostka-nazwana-ma-nazwe-jako-oznaczenie.md)): „CZĘŚĆ OGÓLNA”, „TYTUŁ WSTĘPNY” miały
+  eId zastępczy (`czesc_TMP1`) i nazwę w `nr`. Według ustaleń z 2026-10-20 eId niesie nazwę (`czesc_OGÓLNA`,
+  `tyt_WSTĘPNY`, jednostki pod nią — `czesc_OGÓLNA__rozdz_1`), `nr` w nagłówku jest pusty, a nazwa stoi w `p` przed
+  tytułem jednostki („WSTĘPNY Przepisy ogólne”) — `EntityNumber.IsName`.
+  - Korpus DOCX: zmieniają się 4 kodeksy (329088, 318682, 326565, 302049) — 9 jednostek nazwanych i adresy 119
+    jednostek pod nimi; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

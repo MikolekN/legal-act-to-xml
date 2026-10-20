@@ -221,8 +221,7 @@ namespace Saga.Core.Services.UnitReferences
         private static string? SystematizingSegment(UnitLevel level, string designation)
         {
             var type = TypeOf(level);
-            if (ParagraphClassifier.ParseSystematizingDesignation(type, designation) is not { } number
-                || number.Value.StartsWith(ParagraphClassifier.NamedUnitValue, StringComparison.Ordinal))
+            if (ParagraphClassifier.ParseSystematizingDesignation(type, designation) is not { } number)
                 return null;
 
             return EIdSegment.Of(SystematizingHierarchy.EIdPrefix(type), number.Designation);

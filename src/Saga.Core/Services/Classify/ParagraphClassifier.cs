@@ -549,7 +549,7 @@ namespace Saga.Core.Services.Classify
 
             var token = m.Groups["n"].Value;
             if (IsNamedDesignation(kind, token))
-                return new EntityNumber { Value = NamedUnitValue, RawValue = token };
+                return new EntityNumber { Value = token.ToUpperInvariant(), RawValue = token, IsName = true };
 
             var parsed = ParseDesignationToken(token,
                 allowUppercaseSuffix: kind is ParagraphKind.TitleUnit or ParagraphKind.DivisionUnit);
@@ -565,14 +565,8 @@ namespace Saga.Core.Services.Classify
         }
 
         /// <summary>
-        /// Value jednostki nazwanej bez numeru („CZĘŚĆ OGÓLNA") przed nadaniem kolejnego numeru tymczasowego
-        /// (TMP1, TMP2… — eId tymczasowy z decyzji właściciela, do czasu ustaleń z autorami schematu).
-        /// </summary>
-        public const string NamedUnitValue = "TMP";
-
-        /// <summary>
         /// Jednostki nazwane bez numeru — zamknięta lista z korpusu: części KK, KW i KKW, tytuł wstępny KPC.
-        /// Dowolny wyraz („Część budżetowa") pozostaje prozą.
+        /// Dowolny wyraz („Część budżetowa") pozostaje prozą. Nazwa jest oznaczeniem jednostki (ADR-0098).
         /// </summary>
         private static bool IsNamedDesignation(ParagraphKind kind, string token) => kind switch
         {

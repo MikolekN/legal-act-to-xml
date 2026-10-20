@@ -40,5 +40,11 @@ namespace Saga.Model
         /// Oznaczenie z indeksem górnym w notacji § 89 ust. 6 ZTP („5a[1]") — postać w eId i w &lt;nr&gt;.
         /// </summary>
         public string Designation => string.IsNullOrEmpty(Superscript) ? Value : $"{Value}[{Superscript}]";
+
+        /// <summary>
+        /// Oznaczenie słowne zamiast numeru („CZĘŚĆ OGÓLNA", „TYTUŁ WSTĘPNY"): nazwa jest oznaczeniem w eId
+        /// (<c>czesc_OGÓLNA</c>), a w nagłówku stoi w <c>p</c> przy pustym <c>nr</c> (ADR-0098).
+        /// </summary>
+        public bool IsName { get; set; }
     }
 }

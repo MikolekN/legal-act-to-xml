@@ -191,8 +191,8 @@ Rozpoznanie i budowa:
   Kolejny wiersz w stylu tytułu od wielkiej litery (nagłówek pośredni „Przepis wstępny") i adnotacja, która
   jednostki nie nazywa, są dalszą treścią nagłówka — `specjalny` za jego `p` ([ADR-0067](adr/0067-wiersz-pod-tytulem-jednostki-jest-dalsza-trescia-naglowka.md)).
   Tytuł złamany na kilka bloków dokleja się tylko, gdy kolejny blok zaczyna się małą literą.
-- **Części nazwane** („CZĘŚĆ OGÓLNA", „TYTUŁ WSTĘPNY") z zamkniętej listy dostają eId tymczasowy
-  `czesc_TMP1`. Taka część zaraz po oznaczeniu niższej jednostki jest jej tytułem (KC, KKS).
+- **Części nazwane** („CZĘŚĆ OGÓLNA", „TYTUŁ WSTĘPNY") z zamkniętej listy mają nazwę jako oznaczenie:
+  eId `czesc_OGÓLNA`, w nagłówku pusty `nr` i nazwa w `p` przed tytułem ([ADR-0098](adr/0098-jednostka-nazwana-ma-nazwe-jako-oznaczenie.md)). Taka część zaraz po oznaczeniu niższej jednostki jest jej tytułem (KC, KKS).
 - **Wiele części**: `LegalDocument.Parts`; część, której nie da się przejąć, staje obok jako
   rodzeństwo z własnym łańcuchem niejawnym (`SystematizingUnitBuilder.EnterPart`).
 - **Tekst jednolity**: oznaczenie i tytuł w stylu zmian (`Z…`) bez komendy nowelizacyjnej przed nimi

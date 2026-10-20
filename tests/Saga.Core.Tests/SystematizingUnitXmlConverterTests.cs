@@ -160,8 +160,21 @@ namespace Saga.Core.Tests
         {
             var structure = Structure(Export("CZĘŚĆ OGÓLNA", "Art. 1. Treść.", "CZĘŚĆ SZCZEGÓLNA", "Art. 117. Treść."));
 
-            Assert.Equal(new[] { "czesc[czesc_TMP1]", "czesc[czesc_TMP2]" },
+            Assert.Equal(new[] { "czesc[czesc_OGÓLNA]", "czesc[czesc_SZCZEGÓLNA]" },
                 structure.Where(s => !s.Contains('/')));
+        }
+
+        [Fact]
+        public void NamedUnit_HasAnEmptyNumber_AndItsNameBeforeTheTitleInOneParagraph()
+        {
+            // Kodeks postępowania cywilnego (TJ 302049_2704309): „TYTUŁ WSTĘPNY" i pod nim „Przepisy ogólne".
+            // Nagłówek ma jeden p i nie ma elementu tytułu, więc nazwa i tytuł stoją razem (ADR-0098).
+            var xml = Export("CZĘŚĆ OGÓLNA", "Art. 1. Treść.", "TYTUŁ WSTĘPNY", "Przepisy ogólne", "Art. 2. Treść.");
+
+            var headers = xml.Descendants().Where(e => e.Name.LocalName is "naglowek-czesci" or "naglowek-tytulu").ToList();
+            Assert.Equal(new[] { ("", "OGÓLNA"), ("", "WSTĘPNY Przepisy ogólne") },
+                headers.Select(h => (h.Elements().Single(e => e.Name.LocalName == "nr").Value,
+                    h.Elements().Single(e => e.Name.LocalName == "p").Value)));
         }
     }
 }

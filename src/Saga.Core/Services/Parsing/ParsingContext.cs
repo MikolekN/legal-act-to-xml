@@ -1,5 +1,4 @@
 using Saga.Core.Ingest;
-using Saga.Core.Services.Classify;
 using Saga.Model;
 using Saga.Model.SystematizingUnits;
 using DtoArticle = Saga.Model.EditorialUnits.Article;
@@ -111,9 +110,6 @@ namespace Saga.Core.Services.Parsing
         /// w całości tam, gdzie się zaczęła — nie dzieli się jej między przepis i cytat.
         /// </summary>
         public bool TableInAmendment { get; set; }
-
-        /// <summary>Liczba jednostek nazwanych bez numeru danego rodzaju — źródło tymczasowego eId (TMP1, TMP2…).</summary>
-        public Dictionary<ParagraphKind, int> NamedUnitCounts { get; } = new();
 
         public DtoArticle? CurrentArticle { get; set; }
         public DtoParagraph? CurrentParagraph { get; set; }

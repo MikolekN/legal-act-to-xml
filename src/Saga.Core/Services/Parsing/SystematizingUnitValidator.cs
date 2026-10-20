@@ -1,4 +1,3 @@
-using Saga.Core.Services.Classify;
 using Saga.Model;
 using Saga.Model.SystematizingUnits;
 
@@ -68,8 +67,7 @@ namespace Saga.Core.Services.Parsing
             }
         }
 
-        private static bool IsNamed(BaseEntity unit) =>
-            unit.Number?.Value.StartsWith(ParagraphClassifier.NamedUnitValue, StringComparison.Ordinal) == true;
+        private static bool IsNamed(BaseEntity unit) => unit.Number?.IsName == true;
 
         private static IEnumerable<BaseEntity> Children(BaseEntity unit) =>
             SystematizingHierarchy.Children(unit).Where(child => child is ISystematizingUnit);

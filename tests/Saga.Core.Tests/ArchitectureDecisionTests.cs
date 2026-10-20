@@ -2135,6 +2135,27 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0098: jednostka nazwana ma nazwę jako oznaczenie
+        // ============================================================
+
+        [Fact]
+        public void Adr0098_NamedUnit_HasItsNameAsTheDesignation()
+        {
+            var document = LegalDocumentParser.ParseBlocks(
+                new[] { "CZĘŚĆ OGÓLNA", "Rozdział I", "Zasady odpowiedzialności karnej", "Art. 1. Treść." }
+                    .Select(line => new DocumentBlock { Text = line }).ToList());
+
+            // Adres z nazwy, nie z kolejności w dokumencie; jednostki pod nią dziedziczą ten segment.
+            var part = document.Parts.Single(p => !p.IsImplicit);
+            Assert.Equal("czesc_OGÓLNA", part.Id);
+            Assert.StartsWith("czesc_OGÓLNA__rozdz_1", ((BaseEntity)document.Articles.Single().Parent!.Parent!).Id);
+
+            var header = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "naglowek-czesci");
+            Assert.Equal(("", "OGÓLNA"), (header.Elements().Single(e => e.Name.LocalName == "nr").Value,
+                header.Elements().Single(e => e.Name.LocalName == "p").Value));
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 
