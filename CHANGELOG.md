@@ -1203,6 +1203,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   a „uchyla się załącznik nr 4” daje `now:uchyl` z `…__zal_4` (`ManualTargets`, `UnitAddressReader`).
   - Korpus DOCX: zmienia się 150 eksportów — 393 instrukcje ręczne zamiast 257 `now:zamien-tekst` i 136 `now:uchyl`
     z celem w załączniku, 2 uchylenia całego załącznika; zgodność ze schematem bez zmian.
+- **Tytuł aktu zmienianego jako cel komendy** ([ADR-0101](docs/adr/0101-tytul-aktu-jako-cel-to-instrukcja-reczna-z-adresem-aktu.md)): „tytuł ustawy otrzymuje brzmienie:”,
+  „w tytule ustawy … skreśla się wyrazy …” i „do tytułu ustawy dodaje się odnośnik nr 1” wychodziły z `element-eId="UNKNOWN"`.
+  Teraz wychodzi instrukcja ręczna (`zastap-recznie`, `uchyl-recznie`, `dodaj-recznie`) z adresem samego aktu
+  zmienianego („DU/2021/200”), jak zalecają autorzy schematu (2026-10-18) — tytułu nie adresuje `eId`
+  (`StructuralReference.ActTitle`, `LegalReferenceService.ActTitleTarget`).
+  - Korpus DOCX: zmienia się 18 eksportów — 18 instrukcji z adresem aktu zamiast `UNKNOWN` (5 zmian wyrazów jako cytat
+    z wyrazami); zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

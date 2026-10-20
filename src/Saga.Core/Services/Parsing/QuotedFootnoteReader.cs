@@ -79,8 +79,10 @@ namespace Saga.Core.Services.Parsing
             var number = command.Number;
             if (command.Adds)
             {
+                // Pierwszy odnośnik nie ma poprzednika; dodany do tytułu aktu („do tytułu ustawy dodaje się odnośnik nr 1")
+                // wskazuje tytuł — instrukcją ręczną z adresem aktu (ADR-0101).
                 if (!int.TryParse(number, out var value) || value < 2)
-                    return null;
+                    return LegalReferenceService.ActTitleTarget(rawText);
                 number = (value - 1).ToString();
             }
 

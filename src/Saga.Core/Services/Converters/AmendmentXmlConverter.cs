@@ -161,7 +161,7 @@ namespace Saga.Core.Services.Converters
             // element.Add(new XAttribute(XmlConverterConstants.QuotationRefGUIDAttribute, "UNKNOWN"));
 
             if (string.IsNullOrEmpty(address))
-                AddTargetAttributes(element, command.Target);
+                AddTargetAttributes(element, amendment, command.Target);
             else
                 element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, address));
 
@@ -237,9 +237,15 @@ namespace Saga.Core.Services.Converters
             return citation;
         }
 
-        private static void AddTargetAttributes(XElement element, StructuralAmendmentReference? target)
+        /// <summary>
+        /// Adres celu; tytuł aktu zmienianego nie ma <c>eId</c>, więc jego adresem jest sam akt („DU/2021/200") —
+        /// instrukcja jest wtedy ręczna (ADR-0101).
+        /// </summary>
+        private static void AddTargetAttributes(XElement element, Amendment amendment, StructuralAmendmentReference? target)
         {
-            var start = target?.Structure.ToString();
+            var start = target is { Structure.ActTitle: true }
+                ? amendment.TargetLegalAct.GetELIStrings().FirstOrDefault()
+                : target?.Structure.ToString();
             element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute,
                 string.IsNullOrWhiteSpace(start) ? "UNKNOWN" : start));
 
@@ -263,7 +269,7 @@ namespace Saga.Core.Services.Converters
 
             var uchyl = new XElement(now + XmlConverterConstants.Contents.Instruction.Repeal);
             uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
-            AddTargetAttributes(uchyl, command.Target);
+            AddTargetAttributes(uchyl, amendment, command.Target);
             uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
 
             zdanie.Add(uchyl);
@@ -363,7 +369,7 @@ namespace Saga.Core.Services.Converters
                     var instruction = new XElement(now + XmlConverterConstants.Contents.Instruction.ReplaceText,
                         new XAttribute(XmlConverterConstants.Contents.Instruction.OldTextAttribute, change.OldText),
                         new XAttribute(XmlConverterConstants.Contents.Instruction.NewTextAttribute, change.NewText));
-                    AddTargetAttributes(instruction, command.Target);
+                    AddTargetAttributes(instruction, amendment, command.Target);
                     instruction.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
                     if (change.Occurrence == TextOccurrence.Last)
                     {

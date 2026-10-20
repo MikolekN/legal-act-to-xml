@@ -83,6 +83,12 @@ namespace Saga.Model
         /// <summary>Numer odnośnika (przypisu), gdy adres wskazuje odnośnik aktu, a nie jednostkę („odn_1").</summary>
         public string? Footnote { get; set; }
 
+        /// <summary>
+        /// Miejscem jest tytuł aktu zmienianego („tytuł ustawy otrzymuje brzmienie:", „w tytule ustawy …"). Tytułu nie
+        /// adresuje <c>eId</c> — instrukcja jest ręczna, z adresem samego aktu (ADR-0101).
+        /// </summary>
+        public bool ActTitle { get; set; }
+
         /// <summary>Ustawia artykuł i zeruje wszystkie poziomy podrzędne.</summary>
         public StructuralReference WithArticle(string value) =>
             new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = value };
@@ -115,7 +121,7 @@ namespace Saga.Model
         public const string FootnotePrefix = "odn";
 
         public StructuralReference Clone() =>
-            new() { Systematizing = Systematizing, Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence, Footnote = Footnote };
+            new() { Systematizing = Systematizing, Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence, Footnote = Footnote, ActTitle = ActTitle };
 
         public override string ToString()
         {

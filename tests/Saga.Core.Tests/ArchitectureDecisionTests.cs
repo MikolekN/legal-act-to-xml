@@ -2225,6 +2225,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0101: tytuł aktu jako cel to instrukcja ręczna z adresem aktu
+        // ============================================================
+
+        [Fact]
+        public void Adr0101_ActTitle_IsAManualInstructionOnTheAct()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) tytuł ustawy otrzymuje brzmienie:",
+                "„o opłatach i należnościach”;",
+                "2) w art. 2 ust. 1 otrzymuje brzmienie:",
+                "„1. Opłatę pobiera się raz w roku.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var instructions = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Attribute("element-eId") is not null)
+                .Select(e => (e.Attribute("element-eId")!.Value, e.Attribute("funkcja")?.Value))
+                .ToList();
+
+            // Tytuł: adres aktu i instrukcja ręczna; jednostka — jej adres i instrukcja automatyczna.
+            Assert.Equal([("DU/2021/200", "zastap-recznie"), ("DU/2021/200__art_2__ust_1", "zastap")], instructions);
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 

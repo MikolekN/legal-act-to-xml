@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.RegularExpressions;
 using Saga.Core.Services.Parsing;
 using Saga.Core.Services.UnitReferences;
 using Saga.Model;
@@ -37,8 +38,27 @@ namespace Saga.Core.Services
                     targets.Add(target);
             }
 
+            // Tytuł aktu zmienianego jako miejsce komendy — bez jednostki, którą adresuje eId (ADR-0101).
+            if (targets.Count == 0 && ActTitleTarget(contentText) is { } title)
+                targets.Add(title);
+
             return targets;
         }
+
+        /// <summary>Cel „tytuł aktu zmienianego", gdy przepis zaczyna się od niego; null, gdy go nie nazywa (ADR-0101).</summary>
+        internal static StructuralAmendmentReference? ActTitleTarget(string? contentText) =>
+            contentText is not null && ActTitlePlace.IsMatch(ManualTargets.WithoutActFormula(contentText))
+                ? new StructuralAmendmentReference { Structure = new StructuralReference { ActTitle = true }, RawText = contentText }
+                : null;
+
+        /// <summary>
+        /// Przepis zaczyna się tytułem aktu: „tytuł ustawy otrzymuje brzmienie:", „w tytule ustawy ogólne określenie
+        /// przedmiotu …", „do tytułu ustawy dodaje się odnośnik …", „dodaje się odnośnik nr 1 do tytułu ustawy". Odnośnik
+        /// do tytułu jako miejsce („w odnośniku nr 1 do tytułu ustawy") miejscem w tytule nie jest.
+        /// </summary>
+        private static readonly Regex ActTitlePlace = new(
+            @"^(?:dodaje\s+się\s+odnośnik(?:\s+nr\s+\d+)?\s+)?(?:(?:w|do)\s+)?tytu(?:ł|łu|le)\s+(?:ustawy|rozporządzenia|uchwały|zarządzenia|obwieszczenia|kodeksu)\b",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
         // Tożsamość celu po oznaczeniach z tekstu, nie po napisie eId — postać eId może się zmieniać
         // (ADR-0018, ADR-0019), a „art. 5 i 5[1]" to zawsze dwa cele.

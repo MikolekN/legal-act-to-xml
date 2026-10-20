@@ -35,16 +35,20 @@ namespace Saga.Core.Services.Parsing
         /// jednostka, a instrukcja dostaje funkcję <c>*-recznie</c>.
         /// </summary>
         /// <param name="ownText">Tekst przepisu, który jest komendą — z niego widać, czy zmiana w tekście obejmuje cały załącznik.</param>
+        /// <summary>Tekst przepisu bez formuły wprowadzającej akt zmieniany („W ustawie z dnia … (Dz. U. poz. 200)").</summary>
+        internal static string WithoutActFormula(string text) => ActFormula.Replace(text.Trim(), string.Empty, 1);
+
         internal static void Mark(Amendment amendment, string? ownText)
         {
-            var text = ActFormula.Replace((ownText ?? string.Empty).Trim(), string.Empty, 1);
+            var text = WithoutActFormula(ownText ?? string.Empty);
             var wholeAnnexText = ChangesTextOnly(amendment) && WholeAnnexTextChange.IsMatch(text);
             var annexRepealed = amendment.OperationType == AmendmentOperationType.Repeal && RepealedAnnex.IsMatch(text);
 
             foreach (var target in amendment.Targets.Concat(amendment.TextChanges.SelectMany(change => change.Targets)))
             {
                 var structure = target.Structure;
-                var manual = structure is { Annex.Length: > 0, InAnnexContent: true }
+                var manual = structure.ActTitle
+                    || structure is { Annex.Length: > 0, InAnnexContent: true }
                     || (IsAnnexItself(structure) && !wholeAnnexText && !annexRepealed);
                 if (!manual)
                     continue;
