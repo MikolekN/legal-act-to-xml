@@ -2156,6 +2156,41 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0099: jedyny załącznik bez numeru ma adres zal_1
+        // ============================================================
+
+        [Fact]
+        public void Adr0099_OnlyAnnexWithoutANumber_IsZal1_ForItselfTargetsAndInstructions()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) załącznik do ustawy otrzymuje brzmienie określone w załączniku do niniejszej ustawy.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+                "Załącznik do ustawy z dnia 14 czerwca 2024 r.",
+                "1) opłata roczna;",
+                "2) opłata miesięczna.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Własny załącznik: adres zal_1, a jednostki w jego treści — pod nim.
+            var annex = Assert.Single(document.Annexes);
+            Assert.Equal("zal_1", annex.Id);
+            Assert.Equal(["zal_1__pkt_1", "zal_1__pkt_2"], annex.Content.SelectMany(block => block.Unit!.Points).Select(point => point.Id));
+
+            // Odesłanie: jedyny załącznik po obu stronach.
+            var replaced = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "zastap");
+            Assert.Equal(("DU/2021/200__zal_1", "zal_1"),
+                (replaced.Attribute("element-eId")?.Value, replaced.Attribute("nowelizujacy-element-eId")?.Value));
+
+            // Cel komendy w załączniku bez numeru.
+            Assert.Equal(["zal_1__pkt_4"], UnitAddressReader.Read("w załączniku do rozporządzenia po pkt 4 dodaje się pkt 4a w brzmieniu:")
+                .Select(address => address.Start.ToString()));
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 
@@ -2803,8 +2838,7 @@ namespace Saga.Core.Tests
             Assert.Equal(["zal_1"], Read("w pkt 1.4.1 zdanie pierwsze otrzymuje brzmienie:", new StructuralReference { Annex = "1" }));
             Assert.Equal(["zal_36"], Read("w § 10 w ust. 2 pkt 9 otrzymuje brzmienie:", new StructuralReference { Annex = "36" }));
 
-            // Załącznik bez numeru nie ma adresu — jednostki pod nim też nie.
-            Assert.Equal([string.Empty], Read("w załączniku do rozporządzenia po pkt 4 dodaje się pkt 4a w brzmieniu:"));
+            // Załącznik bez numeru — zastąpione przez ADR-0099 (jedyny załącznik to zal_1).
 
             // Wzmianka o załączniku miejscem komendy nie jest.
             Assert.Equal(["art_5__ust_2"], Read("w art. 5 ust. 2 wyrazy, o których mowa w załączniku nr 1, skreśla się"));

@@ -1183,6 +1183,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   tytułem jednostki („WSTĘPNY Przepisy ogólne”) — `EntityNumber.IsName`.
   - Korpus DOCX: zmieniają się 4 kodeksy (329088, 318682, 326565, 302049) — 9 jednostek nazwanych i adresy 119
     jednostek pod nimi; zgodność ze schematem bez zmian.
+- **Jedyny załącznik bez numeru ma adres `zal_1`** ([ADR-0099](docs/adr/0099-jedyny-zalacznik-bez-numeru-ma-adres-zal-1.md)): według autorów schematu (2026-10-18)
+  załącznik, który komenda albo akt podaje bez numeru, jest jedyny, więc i pierwszy. Własny załącznik dostaje `eId`
+  `…__zal_1` zamiast `brak-eid`, a wyliczenie w jego treści — jednostki pod nim (`zal_1__pkt_1`); cel komendy
+  „w załączniku do rozporządzenia” ma adres `…__zal_1` z jednostkami pod nim; odesłanie „załącznik do
+  rozporządzenia otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia” daje `now:zastap`
+  z `zal_1` po obu stronach (`Annex.IsOnly`, `UnitAddressReader`, `AnnexInstructionReader`). Załącznik bez numeru obok
+  innych nadal nie ma adresu.
+  - Korpus DOCX: zmieniają się 464 eksporty — 435 załączników z adresem `zal_1`, w 45 z nich 1286 akapitów wyliczenia
+    staje się jednostkami, 34 instrukcje `now:zastap` więcej (i 37 uzupełnionych o załącznik aktu zmieniającego), 112
+    zmian w tekście z adresem `…__zal_1` zamiast `UNKNOWN`; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

@@ -1,6 +1,6 @@
 # ADR-0080: Komenda w załączniku wskazuje jednostki załącznika — miejsce „w załączniku nr N" stoi nad całą treścią aktu
 
-- Status: Accepted
+- Status: Accepted — Superseded in part by [ADR-0099](0099-jedyny-zalacznik-bez-numeru-ma-adres-zal-1.md) (załącznik bez numeru)
 - Data: 2026-10-14
 
 ## Kontekst

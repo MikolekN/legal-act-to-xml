@@ -48,8 +48,8 @@ namespace Saga.Model
 
         /// <summary>
         /// Numer załącznika, gdy adres wskazuje miejsce w załączniku aktu („w załączniku nr 1 … w ust. 2"); jednostki pod
-        /// nim są jednostkami załącznika (ADR-0028). Pusty napis — załącznik bez numeru, którego adresu akt nie ma
-        /// (ADR-0024): taki adres, z jednostkami pod nim, niczego nie wskazuje (ADR-0080).
+        /// nim są jednostkami załącznika (ADR-0028); załącznik bez numeru to „1" (ADR-0099). Pusty napis — miejsce
+        /// w załączniku bez adresu: taki adres, z jednostkami pod nim, niczego nie wskazuje (ADR-0080).
         /// </summary>
         public string? Annex { get; set; }
 

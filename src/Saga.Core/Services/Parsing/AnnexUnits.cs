@@ -24,9 +24,9 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Jednostki najwyższego poziomu zbudowane z akapitów załącznika albo null, gdy treść nie jest w całości
-        /// wyliczeniem — wtedy zostaje akapitami, żeby nic z niej nie zginęło. Załącznik bez numeru nie ma
-        /// adresu, od którego adresy jednostek mogłyby się zacząć („pkt_1" wyglądałby jak punkt samego aktu),
-        /// więc jego treść też zostaje akapitami.
+        /// wyliczeniem — wtedy zostaje akapitami, żeby nic z niej nie zginęło. Załącznik bez adresu (bez numeru obok
+        /// innych załączników) nie daje początku adresom jednostek („pkt_1" wyglądałby jak punkt samego aktu), więc
+        /// jego treść też zostaje akapitami; jedyny załącznik bez numeru ma adres <c>zal_1</c> (ADR-0099).
         /// </summary>
         internal static List<Paragraph>? TryBuild(IReadOnlyList<DocumentBlock> blocks, string annexId)
         {

@@ -8,7 +8,8 @@ namespace Saga.Core.Services.Converters
     /// <summary>
     /// Załącznik w eksporcie: <c>zalacznik</c> ze wskazaniem aktu (<c>zalacznik-do</c>), numerem
     /// (<c>zalacznik-nr</c>), tytułem i treścią w <c>segment-zalacznika</c> — tabele i akapity w kolejności
-    /// dokumentu. Załącznik bez numeru nie ma adresu i mówi dlaczego (ADR-0024).
+    /// dokumentu. Jedyny załącznik bez numeru ma adres <c>zal_1</c> (ADR-0099); załącznik bez numeru obok innych
+    /// adresu nie ma i mówi dlaczego (ADR-0024).
     /// </summary>
     internal static class AnnexXmlConverter
     {

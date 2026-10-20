@@ -55,9 +55,10 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void AnnexWithoutNumber_HasNoAddress_NorDoUnitsUnderIt()
+        public void AnnexWithoutNumber_IsTheOnlyAnnex_AddressedAsTheFirst()
         {
-            Assert.Equal([string.Empty], Read("w załączniku do rozporządzenia po pkt 4 dodaje się pkt 4a w brzmieniu:"));
+            // Komenda zakłada, że załącznik jest jedyny, więc i pierwszy — autorzy schematu, 2026-10-18 (ADR-0099).
+            Assert.Equal(["zal_1__pkt_4"], Read("w załączniku do rozporządzenia po pkt 4 dodaje się pkt 4a w brzmieniu:"));
         }
 
         [Theory]

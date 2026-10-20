@@ -128,6 +128,10 @@ namespace Saga.Core.Services.Parsing
                 collected.Add(block);
             }
 
+            // Jedyny załącznik bez numeru jest pierwszym — ma adres zal_1, także dla jednostek w jego treści (ADR-0099).
+            if (annexes is [{ Number: null or "" } only])
+                only.IsOnly = true;
+
             foreach (var (annex, blocksOfAnnex) in paragraphs)
                 StructureContent(annex, blocksOfAnnex);
 

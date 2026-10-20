@@ -17,10 +17,10 @@ namespace Saga.Core.Services.Parsing
         // „określone w załącznikach nr 1 i 2", „określone odpowiednio w załącznikach nr 1 i 2" — „odpowiednio" mówi
         // tylko, że załączniki idą parami w kolejności wyliczenia.
         private static readonly string Sources =
-            @"(?:odpowiednio\s+)?w\s+załącznik(?:u|ach)\s*(?:" + string.Format(Numbers, "sources") + @"\s*)?do\s+niniejsz";
+            @"(?:odpowiednio\s+)?w\s+załącznik(?:u|(?<sourcesPlural>ach))\s*(?:" + string.Format(Numbers, "sources") + @"\s*)?do\s+niniejsz";
 
         private static readonly Regex Replacement = new(
-            @"(?<![\p{L}])załącznik(?:i)?\s+(?:" + string.Format(Numbers, "targets") + @"\s+)?(?:do\s+[\p{L}]+\s+)?otrzymuj[eą]\s+brzmienie\s+określone\s+" + Sources,
+            @"(?<![\p{L}])załącznik(?<targetsPlural>i)?\s+(?:" + string.Format(Numbers, "targets") + @"\s+)?(?:do\s+[\p{L}]+\s+)?otrzymuj[eą]\s+brzmienie\s+określone\s+" + Sources,
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private static readonly Regex Addition = new(
@@ -52,12 +52,14 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Zastąpienie: załączniki aktu zmienianego dostają brzmienie kolejnych załączników aktu zmieniającego.
-        /// Gdy po obu stronach jest ich tyle samo, tworzą pary; inaczej źródło zostaje niewskazane.
+        /// Gdy po obu stronach jest ich tyle samo, tworzą pary; inaczej źródło zostaje niewskazane. Załącznik bez
+        /// numeru („załącznik do rozporządzenia", „w załączniku do niniejszego rozporządzenia") jest jedynym, więc
+        /// pierwszym — „1" (ADR-0099).
         /// </summary>
         private static List<AnnexInstruction> Replaced(Match match)
         {
-            var targets = Expand(match.Groups["targets"].Value);
-            var sources = Expand(match.Groups["sources"].Value);
+            var targets = Expand(match.Groups["targets"].Value, single: !match.Groups["targetsPlural"].Success);
+            var sources = Expand(match.Groups["sources"].Value, single: !match.Groups["sourcesPlural"].Success);
             if (targets.Count == 0)
                 return [];
 
@@ -78,7 +80,7 @@ namespace Saga.Core.Services.Parsing
         private static AnnexInstruction Added(Match match)
         {
             var added = Expand(match.Groups["added"].Value);
-            var sources = Expand(match.Groups["sources"].Value);
+            var sources = Expand(match.Groups["sources"].Value, single: !match.Groups["sourcesPlural"].Success);
 
             return new AnnexInstruction
             {
@@ -100,9 +102,15 @@ namespace Saga.Core.Services.Parsing
             return int.TryParse(number, out var value) && value > 1 ? (value - 1).ToString() : null;
         }
 
-        /// <summary>Numery z wyliczenia („1, 3 i 5") i przedziału liczb („3–9" → 3, 4, …, 9).</summary>
-        private static List<string> Expand(string numbers)
+        /// <summary>
+        /// Numery z wyliczenia („1, 3 i 5") i przedziału liczb („3–9" → 3, 4, …, 9). Załącznik w liczbie pojedynczej
+        /// bez numeru (<paramref name="single"/>) to jedyny załącznik aktu — „1" (ADR-0099).
+        /// </summary>
+        private static List<string> Expand(string numbers, bool single = false)
         {
+            if (numbers.Length == 0)
+                return single ? [Annex.OnlyAnnexNumber] : [];
+
             var result = new List<string>();
             foreach (Match item in Item.Matches(numbers))
             {

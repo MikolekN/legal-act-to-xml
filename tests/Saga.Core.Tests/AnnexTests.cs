@@ -63,7 +63,7 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void SingleAnnex_HasNoNumber_AndNoEId()
+        public void SingleAnnex_HasNoNumber_AndIsAddressedAsTheFirst()
         {
             var document = Parse(
                 Block("Załącznik do ustawy z dnia 23 stycznia 2026 r. (Dz. U. poz. 252)"),
@@ -74,7 +74,7 @@ namespace Saga.Core.Tests
             var annex = Assert.Single(document.Annexes);
             Assert.Null(annex.Number);
             Assert.Null(annex.Heading);
-            Assert.Equal(string.Empty, annex.Id);
+            Assert.Equal("zal_1", annex.Id);
             Assert.Equal(new[] { "Załącznik do ustawy z dnia 23 stycznia 2026 r. (Dz. U. poz. 252)" }, annex.AttachedTo);
             Assert.Equal("WYKAZ SEKTORÓW", annex.Title);
             Assert.Equal(new[] { "Energia" }, annex.Content.Select(b => b.Text));
@@ -208,8 +208,8 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "art_1", "art_2" }, document.Articles.Select(a => a.Id));
             Assert.Empty(document.Articles.Last().Paragraphs.Single().Points);
             Assert.Equal(
-                new[] { "1) inwentaryzację produktów;", "2) kontrolowanie wersji." },
-                Assert.Single(document.Annexes).Content.Select(b => b.Text));
+                new[] { "inwentaryzację produktów;", "kontrolowanie wersji." },
+                Assert.Single(document.Annexes).Content.SelectMany(b => b.Unit!.Points).Select(point => point.ContentText));
         }
 
         [Fact]
@@ -270,16 +270,32 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void EnumerationInAnUnnumberedAnnex_StaysAsParagraphs()
+        public void EnumerationInTheOnlyUnnumberedAnnex_IsAddressedFromZal1()
         {
-            // Załącznik bez numeru nie ma adresu — „pkt_1" wyglądałby jak punkt samego aktu.
+            // Jedyny załącznik bez numeru ma adres zal_1, więc jego wyliczenie staje się jednostkami pod nim (ADR-0099).
             var document = Parse(
                 Block("Załącznik do ustawy z dnia 23 stycznia 2026 r."),
                 Block("WYMOGI", TitleStyle),
                 Block("1) inwentaryzację produktów;", "PKTpunkt"),
                 Block("2) kontrolowanie wersji.", "PKTpunkt"));
 
-            Assert.All(Assert.Single(document.Annexes).Content, block => Assert.Null(block.Unit));
+            var units = Assert.Single(document.Annexes).Content.Select(block => block.Unit).ToList();
+            Assert.All(units, unit => Assert.NotNull(unit));
+            Assert.Equal(new[] { "zal_1__pkt_1", "zal_1__pkt_2" }, units.SelectMany(unit => unit!.Points).Select(point => point.Id));
+        }
+
+        [Fact]
+        public void EnumerationInAnUnnumberedAnnex_NextToNumberedOnes_StaysAsParagraphs()
+        {
+            // Załącznik bez adresu — „pkt_1" wyglądałby jak punkt samego aktu.
+            var document = Parse(
+                Block("Załącznik do ustawy z dnia 23 stycznia 2026 r."),
+                Block("1) inwentaryzację produktów;", "PKTpunkt"),
+                Block("2) kontrolowanie wersji.", "PKTpunkt"),
+                Block("Załącznik nr 2", DesignationStyle),
+                Block("Transport"));
+
+            Assert.All(document.Annexes[0].Content, block => Assert.Null(block.Unit));
         }
 
         // Korpus: 292961_2706155 — objaśnienie gwiazdki z tytułu stoi za wyliczeniem, w szablonie stylem części wspólnej.
@@ -476,8 +492,9 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void UnnumberedAnnex_NamesTheReasonInsteadOfAnEId()
+        public void OnlyUnnumberedAnnex_IsAddressedAsTheFirst_WithoutAPrintedNumber()
         {
+            // Autorzy schematu (2026-10-18): jedyny załącznik bez numeru to zal_1 — dodany później dostanie nr 2 (ADR-0099).
             var document = Parse(
                 Block("Załącznik do ustawy z dnia 23 stycznia 2026 r."),
                 Block("WYKAZ SEKTORÓW", TitleStyle),
@@ -485,9 +502,25 @@ namespace Saga.Core.Tests
 
             var annex = Assert.Single(Named(LegalDocumentConverter.Convert(document), "zalacznik"));
 
-            Assert.Null(Attr(annex, "eId"));
-            Assert.Equal("jednostka-nieoznaczona", Attr(annex, "brak-eid"));
+            Assert.Equal("zal_1", Attr(annex, "eId"));
+            Assert.Null(Attr(annex, "brak-eid"));
             Assert.Equal(new[] { "zalacznik-do", "tytul-zalacznika", "segment-zalacznika" }, ChildNames(annex));
+        }
+
+        [Fact]
+        public void UnnumberedAnnex_NextToNumberedOnes_NamesTheReasonInsteadOfAnEId()
+        {
+            // Załącznik bez numeru, który nie jest jedyny — adresu akt nie daje (ADR-0024).
+            var document = Parse(
+                Block("Załącznik do ustawy z dnia 23 stycznia 2026 r."),
+                Block("Energia"),
+                Block("Załącznik nr 2", DesignationStyle),
+                Block("Transport"));
+
+            var annexes = Named(LegalDocumentConverter.Convert(document), "zalacznik");
+
+            Assert.Equal(new string?[] { null, "zal_2" }, annexes.Select(annex => Attr(annex, "eId")));
+            Assert.Equal("jednostka-nieoznaczona", Attr(annexes[0], "brak-eid"));
         }
 
         [Fact]

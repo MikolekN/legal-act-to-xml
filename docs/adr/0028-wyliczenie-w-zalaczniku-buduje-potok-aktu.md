@@ -1,6 +1,6 @@
 # ADR-0028: Wyliczenie w załączniku buduje potok aktu, pod artykułem zastępczym
 
-- Status: Accepted
+- Status: Accepted — Superseded in part by [ADR-0099](0099-jedyny-zalacznik-bez-numeru-ma-adres-zal-1.md) (załącznik bez numeru)
 - Data: 2026-10-10
 
 ## Kontekst

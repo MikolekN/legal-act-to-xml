@@ -50,11 +50,21 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void ReplacedAnnex_WhoseSourceHasNoNumber_NamesOnlyTheTarget()
+        public void ReplacedAnnex_WhoseSourceHasNoNumber_IsReplacedByTheOnlyAnnexOfTheAmendingAct()
         {
             Assert.Equal(
-                [(false, "1", null, null)],
-                Read("załącznik nr 1 do rozporządzenia otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia."));
+                [(false, "2", "1", null)],
+                Read("załącznik nr 2 do rozporządzenia otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia."));
+        }
+
+        [Fact]
+        public void ReplacedAnnexWithoutANumber_IsTheOnlyAnnex_OnBothSides()
+        {
+            // Korpus: 28 komend „załącznik do rozporządzenia otrzymuje brzmienie określone w załączniku do niniejszego
+            // rozporządzenia" — według autorów schematu (2026-10-18) jedyny załącznik to zal_1 (ADR-0099).
+            Assert.Equal(
+                [(false, "1", "1", null)],
+                Read("załącznik do rozporządzenia otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia."));
         }
 
         [Theory]
@@ -62,10 +72,11 @@ namespace Saga.Core.Tests
         [InlineData("po załączniku nr 2 do rozporządzenia dodaje się załączniki nr 2a i 2b w brzmieniu określonym w załącznikach nr 3 i 4 do niniejszego rozporządzenia;", "2", "3", "4")]
         // Miejsce wynika z kolejności numerów: „nr 3" staje po „nr 2", „nr 2a" po „nr 2".
         [InlineData("dodaje się załączniki nr 3 i 4 do ustawy w brzmieniu określonym w załącznikach nr 3 i 4 do niniejszej ustawy.", "2", "3", "4")]
-        [InlineData("dodaje się załącznik nr 4 do ustawy w brzmieniu określonym w załączniku do niniejszej ustawy.", "3", null, null)]
+        // Załącznik aktu zmieniającego bez numeru jest jego jedynym załącznikiem — „1" (ADR-0099).
+        [InlineData("dodaje się załącznik nr 4 do ustawy w brzmieniu określonym w załączniku do niniejszej ustawy.", "3", "1", null)]
         [InlineData("dodaje się załącznik nr 2a do rozporządzenia w brzmieniu określonym w załączniku nr 1 do niniejszego rozporządzenia.", "2", "1", null)]
         // Pierwszy załącznik aktu nie ma poprzednika.
-        [InlineData("dodaje się załącznik nr 1 do ustawy w brzmieniu określonym w załączniku do niniejszej ustawy.", null, null, null)]
+        [InlineData("dodaje się załącznik nr 1 do ustawy w brzmieniu określonym w załączniku do niniejszej ustawy.", null, "1", null)]
         public void AddedAnnexes_AreOneInstructionAfterTheAnnexBeforeThem(string text, string? after, string? source, string? sourceTo)
         {
             Assert.Equal([(true, after, source, sourceTo)], Read(text));
@@ -75,8 +86,6 @@ namespace Saga.Core.Tests
         // Zmienia się część załącznika, nie załącznik.
         [InlineData("w załączniku nr 4 do rozporządzenia tabela D otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia.")]
         [InlineData("w załączniku po lp. 71 dodaje się lp. 72 w brzmieniu określonym w załączniku do niniejszego rozporządzenia.")]
-        // Załącznik bez numeru nie ma adresu.
-        [InlineData("załącznik do rozporządzenia otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia.")]
         // Brzmienie przytoczone, nie odesłanie.
         [InlineData("załącznik nr 1 do ustawy otrzymuje brzmienie:")]
         public void OtherCommands_AreNotAnnexInstructions(string text)
@@ -138,7 +147,7 @@ namespace Saga.Core.Tests
 
             var provision = document.Articles.First().Paragraphs.Single();
             var annex = Assert.Single(provision.Amendment!.AnnexInstructions);
-            Assert.Equal((false, "1", (string?)null), (annex.Adds, annex.Target, annex.Source));
+            Assert.Equal((false, "1", (string?)"1"), (annex.Adds, annex.Target, annex.Source));
             Assert.DoesNotContain(provision.ValidationMessages, m => m.Message.Contains("bez wykrytego celu", StringComparison.Ordinal));
         }
     }

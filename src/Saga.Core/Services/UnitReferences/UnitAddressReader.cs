@@ -76,10 +76,10 @@ namespace Saga.Core.Services.UnitReferences
                             continue;
                         }
 
-                        // Załącznik bez numeru: miejsce bez adresu — krok z pustym oznaczeniem; dalszy wyraz („do
-                        // rozporządzenia") oznaczeniem nie jest (ADR-0080).
+                        // Załącznik bez numeru: komenda zakłada, że jest jedyny, więc i pierwszy — adres zal_1 (ADR-0099);
+                        // dalszy wyraz („do rozporządzenia") oznaczeniem nie jest (ADR-0080).
                         inRun = false;
-                        token = new UnitToken(UnitTokenKind.Designation, string.Empty);
+                        token = new UnitToken(UnitTokenKind.Designation, Annex.OnlyAnnexNumber);
                         break;
 
                     case UnitTokenKind.UnitKeyword:

@@ -33,8 +33,23 @@ namespace Saga.Model
         /// <summary>Treść: akapity, tabele i jednostki redakcyjne w kolejności dokumentu.</summary>
         public List<AnnexBlock> Content { get; set; } = new();
 
-        /// <summary>Adres załącznika w akcie („zal_1"); pusty, gdy załącznik nie ma numeru (ADR-0024).</summary>
-        public string Id => string.IsNullOrEmpty(Number) ? string.Empty : EIdSegment.Of(EIdPrefix, Number);
+        /// <summary>
+        /// Jedyny załącznik aktu, wydrukowany bez numeru („Załącznik do rozporządzenia …"). Ma adres pierwszego
+        /// załącznika — załącznik dodany później dostanie nr 2 (ADR-0099); <see cref="Number"/> zostaje pusty, bo
+        /// numeru w akcie nie ma.
+        /// </summary>
+        public bool IsOnly { get; set; }
+
+        /// <summary>Numer w adresie jedynego załącznika bez numeru.</summary>
+        public const string OnlyAnnexNumber = "1";
+
+        /// <summary>
+        /// Adres załącznika w akcie („zal_1"); jedyny załącznik bez numeru to <c>zal_1</c> (ADR-0099), a pusty —
+        /// załącznik bez numeru obok innych, którego adresu akt nie daje (ADR-0024).
+        /// </summary>
+        public string Id => !string.IsNullOrEmpty(Number) ? EIdSegment.Of(EIdPrefix, Number)
+            : IsOnly ? EIdSegment.Of(EIdPrefix, OnlyAnnexNumber)
+            : string.Empty;
     }
 
     /// <summary>

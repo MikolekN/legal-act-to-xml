@@ -242,7 +242,7 @@ namespace Saga.Core.Services.UnitReferences
             UnitLevel.Article or UnitLevel.Paragraph or UnitLevel.Point =>
                 designation.Length > 0 && char.IsDigit(designation[0]),
             UnitLevel.Letter => designation.Length is 1 or 2 && designation.All(DesignationAlphabet.IsLowerLetter),
-            // Numer załącznika („nr 1", „nr 2a"); pusty — załącznik bez numeru (ADR-0080).
+            // Numer załącznika („nr 1", „nr 2a"); załącznik bez numeru czytający dostaje jako „1" (ADR-0099).
             UnitLevel.Annex => designation.Length == 0 || char.IsDigit(designation[0]),
             _ => true,
         };
