@@ -62,6 +62,12 @@ namespace Saga.Core.Tests
         [InlineData("DZIAŁ IvA", "dzial_4A")]
         [InlineData("DZIAŁ 1", "dzial_1")]
         [InlineData("dział II", "dzial_2")]
+        // Litera wtrącona, która jest zarazem cyfrą rzymską — TJ 311010_2798032 („DZIAŁ IIC", „Dział IIIC").
+        [InlineData("DZIAŁ IIC", "dzial_2C")]
+        [InlineData("Dział IIIC", "dzial_3C")]
+        // Słowo kluczowe w pisowni spoza ZTP — TJ 342785_3070463; liczebnik słowny z literą — TJ 317037_2830281.
+        [InlineData("DZiał VIa", "dzial_6a")]
+        [InlineData("Dział czternastya", "dzial_14a")]
         public void ToleratedDivisionDesignation_WithStyle_IsRecognized(string designation, string eId)
         {
             var document = Parse(
@@ -233,6 +239,44 @@ namespace Saga.Core.Tests
             Assert.Equal(new string?[] { "OGÓLNA", "SZCZEGÓLNA" }, parts.Select(p => p.Number?.RawValue));
             Assert.Equal(new[] { "czesc_OGÓLNA", "czesc_SZCZEGÓLNA" }, parts.Select(p => p.Id));
             Assert.Same(parts[1], Ancestor<Part>(ArticleNumbered(document, "117")));
+        }
+
+        [Fact]
+        public void FinalPartOfTheExecutivePenalCode_IsANamedPart()
+        {
+            // Kodeks karny wykonawczy (TJ 329088_2950894): „CZĘŚĆ KOŃCOWA" za uchylonym artykułem.
+            var document = Parse(
+                ("CZĘŚĆ WOJSKOWA", PartOrBook),
+                ("Art. 241. (uchylony)", ArticleStyle),
+                ("CZĘŚĆ KOŃCOWA", PartOrBook),
+                ("Art. 242. Treść.", ArticleStyle));
+
+            var parts = ExplicitUnits(document).OfType<Part>().ToList();
+            Assert.Equal(new[] { "czesc_WOJSKOWA", "czesc_KOŃCOWA" }, parts.Select(p => p.Id));
+            Assert.Same(parts[1], Ancestor<Part>(ArticleNumbered(document, "242")));
+        }
+
+        [Theory]
+        // Poprawna liczba rzymska kończąca się na C albo D zostaje liczbą („XC" = 90), a nie liczbą z literą.
+        [InlineData("DZIAŁ XC", "dzial_90")]
+        [InlineData("DZIAŁ CD", "dzial_400")]
+        public void RomanNumberEndingWithCOrD_StaysANumber(string designation, string eId)
+        {
+            var document = Parse(
+                (designation, TitleDesignation),
+                ("Art. 1. Treść.", ArticleStyle));
+
+            Assert.Equal(eId, Assert.Single(ExplicitUnits(document)).Id);
+        }
+
+        [Fact]
+        public void KeywordInAnotherSpelling_WithoutTheDesignationStyle_StaysProse()
+        {
+            var document = Parse(
+                ("DZiał VIa", null),
+                ("Art. 1. Treść.", ArticleStyle));
+
+            Assert.Empty(ExplicitUnits(document));
         }
 
         [Fact]

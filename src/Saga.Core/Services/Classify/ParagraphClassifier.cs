@@ -496,8 +496,29 @@ namespace Saga.Core.Services.Classify
             _ => null,
         };
 
-        private static string CapitalizeFirst(string text) =>
-            text.Length > 0 && char.IsLower(text[0]) ? char.ToUpperInvariant(text[0]) + text[1..] : text;
+        private static readonly string[] SystematizingKeywords = ["część", "księga", "tytuł", "dział", "rozdział", "oddział"];
+
+        /// <summary>
+        /// Słowo kluczowe jednostki w pisowni spoza ZTP („dział II", „DZiał VIa") czyta się jak „Dział" — tylko przy
+        /// stylu oznaczenia, więc proza („dział administracji rządowej") nie staje się jednostką. Inny tekst — wielka
+        /// pierwsza litera.
+        /// </summary>
+        private static string CapitalizeFirst(string text)
+        {
+            var end = 0;
+            while (end < text.Length && char.IsLetter(text[end])) end++;
+            var keyword = text[..end];
+            if (keyword.Length > 0 && !IsZtpKeyword(keyword)
+                && SystematizingKeywords.Contains(keyword.ToLowerInvariant()))
+            {
+                return char.ToUpperInvariant(keyword[0]) + keyword[1..].ToLowerInvariant() + text[end..];
+            }
+
+            return text.Length > 0 && char.IsLower(text[0]) ? char.ToUpperInvariant(text[0]) + text[1..] : text;
+        }
+
+        private static bool IsZtpKeyword(string keyword) =>
+            keyword == keyword.ToUpperInvariant() || keyword == char.ToUpperInvariant(keyword[0]) + keyword[1..].ToLowerInvariant();
 
         /// <summary>
         /// Parsuje numer jednostki: cyfry arabskie z sufiksem, cyfra rzymska (opcjonalnie z sufiksem litery
@@ -514,8 +535,20 @@ namespace Saga.Core.Services.Classify
             var n = RomanNumeralConverter.RomanToInt(token);
             if (n != null) return (n.Value, string.Empty);
 
+            // Litera jednostki wtrąconej, która jest zarazem cyfrą rzymską („IIC" = II + C, „IIIC" = III + C): cały zapis
+            // nie jest liczbą rzymską, a bez niej jest. Tylko C i D — dalsze cyfry rzymskie jako litery wtrącone to już zgadywanie.
+            if (allowUppercaseSuffix && token.Length > 1 && token[^1] is 'C' or 'D'
+                && RomanNumeralConverter.RomanToInt(token[..^1]) is { } stem)
+            {
+                return (stem, token[^1..]);
+            }
+
             if (PolishNumerals.TryParseOrdinal(token, out var wordValue))
                 return (wordValue, string.Empty);
+
+            // Liczebnik słowny z literą jednostki wtrąconej („czternastya" = czternasty + a).
+            if (token.Length > 1 && char.IsLower(token[^1]) && PolishNumerals.TryParseOrdinal(token[..^1], out var wordStem))
+                return (wordStem, token[^1..]);
 
             // Sufiks: małe litery, a dla tytułu i działu także wersalik spoza cyfr rzymskich („IIIA" = III + A).
             int b = token.Length;
@@ -565,12 +598,12 @@ namespace Saga.Core.Services.Classify
         }
 
         /// <summary>
-        /// Jednostki nazwane bez numeru — zamknięta lista z korpusu: części KK, KW i KKW, tytuł wstępny KPC.
-        /// Dowolny wyraz („Część budżetowa") pozostaje prozą. Nazwa jest oznaczeniem jednostki (ADR-0098).
+        /// Jednostki nazwane bez numeru — zamknięta lista z korpusu: części KK, KW i KKW (także końcowa KKW), tytuł
+        /// wstępny KPC. Dowolny wyraz („Część budżetowa") pozostaje prozą. Nazwa jest oznaczeniem jednostki (ADR-0098).
         /// </summary>
         private static bool IsNamedDesignation(ParagraphKind kind, string token) => kind switch
         {
-            ParagraphKind.PartUnit => token.ToUpperInvariant() is "OGÓLNA" or "SZCZEGÓLNA" or "WOJSKOWA",
+            ParagraphKind.PartUnit => token.ToUpperInvariant() is "OGÓLNA" or "SZCZEGÓLNA" or "WOJSKOWA" or "KOŃCOWA",
             ParagraphKind.TitleUnit => token.ToUpperInvariant() is "WSTĘPNY",
             _ => false,
         };
@@ -586,6 +619,8 @@ namespace Saga.Core.Services.Classify
 
             if (text.TrimStart() is [var first, ..] && char.IsLower(first))
                 return "Słowo kluczowe jednostki małą literą — oznaczenie uznane dzięki stylowi oznaczenia.";
+            if (text.TrimStart().Split(' ', 2)[0] is { Length: > 1 } keyword && !IsZtpKeyword(keyword))
+                return $"Słowo kluczowe jednostki w pisowni spoza ZTP („{keyword}\") — oznaczenie uznane dzięki stylowi oznaczenia.";
             if (lowerUnits && !arabic)
                 return $"Rozdział/oddział oznaczony cyframi rzymskimi („{raw}\"); § 62 ust. 1 ZTP wymaga arabskich.";
             if (!lowerUnits && arabic)

@@ -1268,6 +1268,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   (`…__zal_4`), z częścią nazwaną jak w przepisie i `cudzyslowy="brak"`. Wyraz przeniesiony w źródle ręcznie („okreś- lone”)
   nie psuje już rozpoznania zmiany całego załącznika.
   - Korpus DOCX: 16 instrukcji ręcznych w 13 plikach (część zmieniana albo dodawana odesłaniem) i 5 instrukcji `now:zastap` w 3 plikach (wyraz „określone” przeniesiony ręcznie); zgodność ze schematem bez zmian (2013 z 2321). Ocena korpusu: 2129 → 2139.
+- **Oznaczenia jednostek systematyzacyjnych — odczyt tolerancyjny**: „CZĘŚĆ KOŃCOWA” Kodeksu karnego wykonawczego jest
+  częścią nazwaną (`czesc_KOŃCOWA`, lista [ADR-0098](docs/adr/0098-jednostka-nazwana-ma-nazwe-jako-oznaczenie.md)); litera
+  jednostki wtrąconej, która jest zarazem cyfrą rzymską („DZIAŁ IIC” = II + C, tylko C i D — poprawna liczba rzymska, np. „XC”,
+  zostaje liczbą); liczebnik słowny z literą („Dział czternastya”, „KSIĘGA PIERWSZA a”); słowo kluczowe w pisowni spoza ZTP
+  („DZiał VIa”) przy stylu oznaczenia — z komunikatem odczytu tolerancyjnego. Wcześniej takie wiersze zostawały tekstem
+  (`fragment`) w treści poprzedniego przepisu.
+  - Korpus DOCX: 6 jednostek w 4 plikach zamiast 9 akapitów tekstu; zgodność ze schematem bez zmian (2013 z 2321).
+    Ocena korpusu: 2139 → 2141.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
