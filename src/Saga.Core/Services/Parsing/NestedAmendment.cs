@@ -40,11 +40,44 @@ namespace Saga.Core.Services.Parsing
             amendment.Targets.AddRange(Targets(owner, sectionIsBasicUnit));
             if (AmendedAct(owner) is { } act)
                 amendment.TargetLegalAct = act;
+            amendment.TextChanges.AddRange(FinalSignChanges(owner, sectionIsBasicUnit));
 
             SentenceTargets.Adjust(amendment, command);
             ManualTargets.Mark(amendment, command);
             AmendmentTargetPairing.AnchorContentUnits(amendment);
             return amendment;
+        }
+
+        /// <summary>
+        /// Zmiana znaku kończącego jednostkę w komendzie złożonej („w pkt 157 kropkę zastępuje się średnikiem i dodaje się
+        /// pkt 158", „w pkt 6 średnik zastępuje się kropką i uchyla się pkt 7", „w pkt 4 dodaje się przecinek i …") — jak
+        /// w przepisie aktu (<c>AmendmentStateManager.KeepSignChanges</c>): znak zmienia się w jednostce nazwanej przed
+        /// komendą, więc zmiana ma własny cel, czytany z tekstu przed nią.
+        /// </summary>
+        private static IEnumerable<TextChange> FinalSignChanges(BaseEntity owner, bool sectionIsBasicUnit)
+        {
+            var text = owner.ContentText;
+            var signs = AmendmentCommandParser.TextChangeCommands(text).Where(command => command.ChangesFinalSign).ToList();
+            if (signs.Count == 0 || signs[0].MatchedCommandText is not { } matched)
+                return [];
+
+            var at = text.IndexOf(matched, StringComparison.Ordinal);
+            if (at < 0)
+                return [];
+
+            var unitOfTheSign = Targets(owner, sectionIsBasicUnit, text[..at]);
+            return signs.Select(command => new TextChange
+            {
+                OldText = TextChangeWording.AsInAmendedAct(command.OldWording ?? string.Empty).Trim(),
+                NewText = TextChangeWording.AsInAmendedAct(command.NewWording ?? string.Empty).Trim(),
+                Occurrence = TextOccurrence.Last,
+                Targets = unitOfTheSign.Select(target => new StructuralAmendmentReference
+                {
+                    Structure = target.Structure.Clone(),
+                    RangeEnd = target.RangeEnd?.Clone(),
+                    RawText = target.RawText,
+                }).ToList(),
+            });
         }
 
         /// <summary>
@@ -70,7 +103,11 @@ namespace Saga.Core.Services.Parsing
 
             // Uchylenie jest komendą, gdy tuż za czasownikiem stoi uchylana jednostka (ADR-0069).
             if (AmendmentCommandParser.RepealsNamedUnit(structural))
-                return Complete(new Amendment { OperationType = AmendmentOperationType.Repeal }, owner, sectionIsBasicUnit);
+            {
+                var repeal = new Amendment { OperationType = AmendmentOperationType.Repeal };
+                repeal.TextChanges.AddRange(FinalSignChanges(owner, sectionIsBasicUnit));
+                return Complete(repeal, owner, sectionIsBasicUnit, RepealedAfterTheSign(repeal, text, sectionIsBasicUnit));
+            }
 
             if (commands.Count == 0 || !CommandLocation.IsMatch(text) || AmendmentFinalizer.RepealPattern.IsMatch(structural))
                 return null;
@@ -85,9 +122,28 @@ namespace Saga.Core.Services.Parsing
             return Complete(amendment, owner, sectionIsBasicUnit);
         }
 
-        private static Amendment Complete(Amendment amendment, BaseEntity owner, bool sectionIsBasicUnit)
+        /// <summary>
+        /// Uchylenie za zamianą znaku („w pkt 6 średnik zastępuje się kropką i uchyla się pkt 7") dotyczy jednostki nazwanej
+        /// po niej — czytanej w kontekście jednostki znaku; null, gdy przepis nie ma takiej budowy.
+        /// </summary>
+        private static IReadOnlyList<StructuralAmendmentReference>? RepealedAfterTheSign(Amendment repeal, string text, bool sectionIsBasicUnit)
         {
-            amendment.Targets.AddRange(Targets(owner, sectionIsBasicUnit));
+            if (repeal.TextChanges.FirstOrDefault()?.Targets.FirstOrDefault() is not { } unitOfTheSign
+                || AmendmentCommandParser.TextChangeCommands(text).LastOrDefault(command => command.ChangesFinalSign)?.MatchedCommandText is not { } sign)
+                return null;
+
+            var at = text.IndexOf(sign, StringComparison.Ordinal);
+            if (at < 0)
+                return null;
+
+            var repealed = new LegalReferenceService().ReadAmendmentTargets(unitOfTheSign.Structure, text[(at + sign.Length)..], sectionIsBasicUnit);
+            return repealed.Count > 0 ? repealed : null;
+        }
+
+        private static Amendment Complete(Amendment amendment, BaseEntity owner, bool sectionIsBasicUnit,
+            IReadOnlyList<StructuralAmendmentReference>? targets = null)
+        {
+            amendment.Targets.AddRange(targets ?? Targets(owner, sectionIsBasicUnit));
             if (AmendedAct(owner) is { } act)
                 amendment.TargetLegalAct = act;
             SentenceTargets.Adjust(amendment, owner.ContentText);
@@ -99,7 +155,8 @@ namespace Saga.Core.Services.Parsing
         /// Cel komendy z tekstu przepisu, czytany w kontekście jego cytowanych przodków („w art. 34:" → „a) ust. 2 otrzymuje
         /// brzmienie:"); przepis bez własnego celu dziedziczy cel przodka.
         /// </summary>
-        private static IReadOnlyList<StructuralAmendmentReference> Targets(BaseEntity owner, bool sectionIsBasicUnit)
+        /// <param name="ownText">Tekst samego przepisu, gdy cel czyta się tylko z jego części (przed zmianą znaku).</param>
+        private static IReadOnlyList<StructuralAmendmentReference> Targets(BaseEntity owner, bool sectionIsBasicUnit, string? ownText = null)
         {
             var chain = new List<BaseEntity>();
             for (var unit = owner; unit is not null; unit = unit.Parent)
@@ -110,7 +167,7 @@ namespace Saga.Core.Services.Parsing
             IReadOnlyList<StructuralAmendmentReference> targets = [];
             foreach (var unit in chain)
             {
-                var read = service.ReadAmendmentTargets(context, unit.ContentText, sectionIsBasicUnit);
+                var read = service.ReadAmendmentTargets(context, unit == owner ? ownText ?? unit.ContentText : unit.ContentText, sectionIsBasicUnit);
                 if (read.Count == 0)
                     continue;
 

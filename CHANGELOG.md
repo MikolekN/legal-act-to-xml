@@ -1233,6 +1233,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   automatycznie: `now:zamien-tekst` „X” → „X,”.
   - Korpus DOCX: zmienia się 28 eksportów — 41 instrukcji ręcznych ze znakiem i 2 zmiany automatyczne, których dotąd
     nie było; zgodność ze schematem bez zmian.
+- **Zmiana znaku kończącego w przytoczonym przepisie zmieniającym** (`NestedAmendment`): w przytoczeniach obwieszczeń
+  tekstów jednolitych („w pkt 157 kropkę zastępuje się średnikiem i dodaje się pkt 158 i 159”) zamiana znaku
+  ginęła, choć dodawane punkty miały instrukcję; „średnik zastępuje się kropką i uchyla się pkt 7” uchylało
+  przy tym jednostkę znaku. Teraz zmiana znaku ma cel w jednostce nazwanej przed komendą, jak w przepisie aktu
+  (`now:zamien-tekst` z `wystapienie="ostatnie"`, znak dodawany — `dodaj-recznie`), a uchylenie wskazuje jednostkę
+  nazwaną po niej.
+  - Korpus DOCX: zmienia się 17 eksportów — 60 instrukcji zamiany znaku, 9 ręcznych dodań znaku, 1 uchylenie celu
+    poprawionego; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

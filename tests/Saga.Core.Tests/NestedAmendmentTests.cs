@@ -291,5 +291,38 @@ namespace Saga.Core.Tests
             Assert.Empty(SchemaPl.Validator.ValidateActBody(
                 LegalDocumentConverter.Convert(Parse(AmendmentOfAnAmendingProvision)).Elements().First()));
         }
+
+        // Korpus: 305231_2733472, 305233_2726673 — przytoczenia w obwieszczeniach tekstów jednolitych gubiły zamianę znaku.
+        private static readonly string[] QuotedProvisionsChangingAFinalMark =
+        [
+            "Art. 1. W ustawie z dnia 12 kwietnia 2024 r. o zmianie ustawy o rachunkowości (Dz. U. poz. 619) art. 2 otrzymuje brzmienie:",
+            "„Art. 2. W ustawie z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym (Dz. U. z 2024 r. poz. 979) wprowadza się następujące zmiany:",
+            "1) w art. 12 w pkt 157 kropkę zastępuje się średnikiem i dodaje się pkt 158 w brzmieniu:",
+            "„158) rejestr dłużników.”;",
+            "2) w art. 13 w pkt 6 średnik zastępuje się kropką i uchyla się pkt 7.”.",
+        ];
+
+        [Fact]
+        public void QuotedProvisionChangingAFinalMark_KeepsTheChange_OnTheUnitNamedBeforeIt()
+        {
+            var points = Parse(QuotedProvisionsChangingAFinalMark).Articles.First().Paragraphs.Single().Amendment!.Content!
+                .Articles.Single().Paragraphs.Single().Points;
+
+            // Zamiana znaku w punkcie przed komendą — obok dodania punktu po nim i obok uchylenia punktu po nim.
+            var added = Assert.Single(points[0].Amendment!.TextChanges);
+            Assert.Equal((".", ";", TextOccurrence.Last), (added.OldText, added.NewText, added.Occurrence));
+            Assert.Equal("art_12__pkt_157", Assert.Single(added.Targets).Structure.ToString());
+
+            var repealed = points[1].Amendment!;
+            Assert.Equal("art_13__pkt_6", Assert.Single(Assert.Single(repealed.TextChanges).Targets).Structure.ToString());
+            Assert.Equal("art_13__pkt_7", Assert.Single(repealed.Targets).Structure.ToString());
+        }
+
+        [SchemaPlFact]
+        public void QuotedProvisionChangingAFinalMark_IsSchemaValid()
+        {
+            Assert.Empty(SchemaPl.Validator.ValidateActBody(
+                LegalDocumentConverter.Convert(Parse(QuotedProvisionsChangingAFinalMark)).Elements().First()));
+        }
     }
 }
