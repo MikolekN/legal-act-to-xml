@@ -12,9 +12,10 @@ namespace Saga.Core.Services
     public class JournalReferenceService
     {
         // Regex dla publikatorów typu "Dz. U. z 2020 r. poz. 1234, 5678 i 9012" oraz "M.P. poz. 1029"
-        // (Monitor Polski — uchwały i zarządzenia; § 158 ust. 7 ZTP stosuje się do obu dzienników).
+        // (Monitor Polski — uchwały i zarządzenia; § 158 ust. 7 ZTP stosuje się do obu dzienników). „Dz. U. 2025 r. poz. 881"
+        // bez „z" to literówka źródła — rok z „r." czyta się tak samo.
         private static readonly Regex JournalRegex = new Regex(
-            @"(?<source>(?:Dz\.\s*U\.|(?<monitor>M\.\s?P\.))\s*(?:z\s*(?<year>\d{4})\s*r\.?)?\s*poz\.\s*(?<positions>[\d,\sandi]+(?:,\s*[\d,\sandi]+)*))",
+            @"(?<source>(?:Dz\.\s*U\.|(?<monitor>M\.\s?P\.))\s*(?:(?:z\s*(?<year>\d{4})\s*r\.?)|(?:(?<year>\d{4})\s*r\.))?\s*poz\.\s*(?<positions>[\d,\sandi]+(?:,\s*[\d,\sandi]+)*))",
             RegexOptions.Compiled | RegexOptions.IgnoreCase
         );
 

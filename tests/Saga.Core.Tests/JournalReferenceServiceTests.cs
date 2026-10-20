@@ -40,6 +40,22 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void YearWithoutZ_IsReadLikeTheZtpForm()
+        {
+            // 334479_2972864: „(Dz. U. 2025 r. poz. 881)" — literówka źródła, brak „z" przed rocznikiem.
+            var article = new Article
+            {
+                ContentText = "Art. 4. W ustawie z dnia 7 września 1991 r. o systemie oświaty (Dz. U. 2025 r. poz. 881) w art. 11 po ust. 1 dodaje się ust. 1a w brzmieniu:"
+            };
+
+            _service.ParseJournalReferences(article);
+
+            var journal = Assert.Single(article.Journals);
+            Assert.Equal(2025, journal.Year);
+            Assert.Equal(new[] { 881 }, journal.Positions);
+        }
+
+        [Fact]
         public void MissingYear_WithoutAnActDate_LeavesTheJournalOut()
         {
             // Rocznika się nie zgaduje: publikator bez roku i bez daty aktu nie daje identyfikatora ELI.

@@ -2454,6 +2454,29 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0109: akapit w stylu oznaczenia bez oznaczenia jest wierszem nagłówkowym — nie znika
+        // ============================================================
+
+        [Fact]
+        public void Adr0109_DesignationStyleWithoutADesignation_IsAHeadingLine()
+        {
+            const string designation = "ROZDZODDZOZNoznaczenierozdziauluboddziau";
+            DocumentBlock Line(string text, string? style = null) => new() { Text = text, StyleId = style };
+            var document = LegalDocumentParser.ParseBlocks(new List<DocumentBlock>
+            {
+                Line("USTAWA"), Line("z dnia 20 grudnia 1990 r."), Line("o ubezpieczeniu społecznym rolników"),
+                Line("Rozdział 2", designation),
+                Line("Zakres podmiotowy ubezpieczenia", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                Line("A. Ubezpieczenie wypadkowe", designation),
+                Line("Art. 7. Ubezpieczeniu podlega rolnik.", "ARTartustawynprozporzdzenia"),
+            });
+
+            // Styl mówi „oznaczenie rozdziału", treść oznaczenia nie ma: wiersz zostaje w nagłówku rozdziału, nie ginie.
+            var header = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "naglowek-rozdzialu");
+            Assert.Equal("A. Ubezpieczenie wypadkowe", header.Elements().Single(e => e.Name.LocalName == "specjalny").Value);
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 

@@ -351,8 +351,8 @@ namespace Saga.Core.Ingest
 
         /// <summary>
         /// Liczba widocznych (niebiałych) znaków runu — waga głosu w dominancie formatowania.
-        /// Parytet z GetFullText: liczy tekst oraz tiret zapisany symbolem (w:sym F02D → en-dash),
-        /// który jest realnym znakiem ciała bloku. Odnośniki przypisów (indeks górny) celowo NIE
+        /// Parytet z GetFullText: liczy tekst, tiret zapisany symbolem (w:sym F02D → en-dash) i znak symbolu ze
+        /// zwykłym kodem Unicode (<see cref="ParagraphExtensions.SymbolText"/>) — realne znaki ciała bloku. Odnośniki przypisów (indeks górny) celowo NIE
         /// głosują — to metadane, nie formatowanie ciała, i zaniżałyby dominantę rozmiaru.
         /// </summary>
         private static int VisibleLength(Word.Run run)
@@ -371,6 +371,10 @@ namespace Saga.Core.Ingest
                     case Word.SymbolChar sym
                         when string.Equals(sym.Font?.Value, "Symbol", StringComparison.OrdinalIgnoreCase)
                           && string.Equals(sym.Char?.Value, "F02D", StringComparison.OrdinalIgnoreCase):
+                        count++;
+                        break;
+
+                    case Word.SymbolChar sym when ParagraphExtensions.SymbolText(sym) is { } character && !char.IsWhiteSpace(character):
                         count++;
                         break;
                 }

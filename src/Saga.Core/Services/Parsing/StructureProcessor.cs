@@ -337,6 +337,23 @@ namespace Saga.Core.Services.Parsing
         public bool Process(ParsingContext context, ClassificationResult classification, string text,
             string? sourceStyleId = null, BlockLayoutInfo? layout = null)
         {
+            // Akapit w stylu oznaczenia jednostki systematyzacyjnej, którego oznaczenia nie da się odczytać („A. Ubezpieczenie
+            // wypadkowe …" w stylu oznaczenia rozdziału), jednostką nie jest. Idzie drogą wiersza nagłówkowego bez
+            // oznaczenia — pod tytułem jednostki jest nagłówkiem pośrednim (ADR-0067), dalej dalszą treścią — zamiast zniknąć.
+            if ((IsSystematizing(classification.Kind) && ParagraphClassifier.ParseSystematizingNumber(classification.Kind, text) is null)
+                || (classification.Kind == ParagraphKind.Unknown && ParagraphClassifier.IsDesignationStyle(classification.StyleType)))
+            {
+                Log.Debug("Akapit w stylu oznaczenia {Kind} bez oznaczenia — wiersz nagłówkowy: {Text}", classification.Kind, text);
+                classification = new ClassificationResult
+                {
+                    Kind = ParagraphKind.UnitHeading,
+                    Confidence = classification.Confidence,
+                    IsAmendmentContent = classification.IsAmendmentContent,
+                    StyleType = classification.StyleType,
+                    Penalties = classification.Penalties,
+                };
+            }
+
             // Tytuł złamany na kilka bloków w stylu tytułu — dalszy ciąg dokleja się do przypisanego.
             // Tytuł zaczyna się wielką literą (§ 62 ust. 2 ZTP), więc blok od wielkiej litery to osobny
             // nagłówek (np. nienumerowany „Przepis wstępny"), nie ciąg dalszy.

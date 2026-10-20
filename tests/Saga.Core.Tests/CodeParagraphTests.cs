@@ -518,6 +518,21 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ExponentAfterABracket_IsASupElement_LiteralBracketsStay()
+        {
+            // 353994_3131986: wzór zapisany tekstem — wykładnik „2,5" za nawiasem; nawias kwadratowy wzoru zostaje.
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(new[]
+            {
+                new DocumentBlock { Text = "Art. 1. Stawka podatku = [0,033 × cena + (0,001 × cena)[2,5]] × 0,74, a pole = (a + b)[2]." },
+            }));
+
+            var sentence = xml.Descendants().Single(e => e.Name.LocalName == "zdanie");
+
+            Assert.Equal(new[] { "2,5", "2" }, sentence.Elements().Where(e => e.Name.LocalName == "sup").Select(e => e.Value));
+            Assert.Equal("Stawka podatku = [0,033 × cena + (0,001 × cena)2,5] × 0,74, a pole = (a + b)2.", sentence.Value);
+        }
+
+        [Fact]
         public void SuperscriptedArticleAndCodeParagraph_KeepTheSuperscriptInEIdAndNr()
         {
             // Jak w przykładzie autorów schematu: artykul eId="…art_477[9]__par_2[1]", nr="2[1]".

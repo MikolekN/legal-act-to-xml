@@ -34,6 +34,22 @@ namespace Saga.Core.Tests
             Assert.Equal("\u2013 tresc po polpauzie", result);
         }
 
+        [Theory]
+        // 320962_2862821: „co najmniej 2/3 ważnych głosów" — ukośnik wstawiony symbolem w zwykłej czcionce.
+        [InlineData("Times New Roman", "002F", "2/3")]
+        [InlineData("Times New Roman", "00F3", "2ó3")]
+        // Kod z obszaru prywatnego (Wingdings) nie jest tekstem.
+        [InlineData("Wingdings", "F0FC", "23")]
+        public void GetFullText_SymbolWithAnOrdinaryCode_IsThatCharacter(string font, string code, string expected)
+        {
+            var paragraph = new Paragraph(
+                new Run(new Text("2")),
+                new Run(new SymbolChar { Font = new StringValue(font), Char = new HexBinaryValue(code) }),
+                new Run(new Text("3")));
+
+            Assert.Equal(expected, paragraph.GetFullText());
+        }
+
         private static Run Superscript(string text) => new(
             new RunProperties { RunStyle = new RunStyle { Val = "IGindeksgrny" } },
             new Text(text) { Space = SpaceProcessingModeValues.Preserve });

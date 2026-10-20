@@ -410,7 +410,7 @@ namespace Saga.Core.Services.Classify
                 _ => null,
             };
 
-        private static bool IsDesignationStyle(string? styleType) =>
+        internal static bool IsDesignationStyle(string? styleType) =>
             styleType is ChapterOrSubchapterStyle or TitleOrDivisionStyle or PartOrBookStyle;
 
         internal static bool IsSystematizingStyle(string? styleType) =>

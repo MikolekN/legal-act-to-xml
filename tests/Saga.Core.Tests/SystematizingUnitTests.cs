@@ -371,6 +371,21 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SubheadingInTheDesignationStyleWithoutADesignation_IsFurtherContentOfTheHeading()
+        {
+            // TJ 315430_2812584: „A. Ubezpieczenie wypadkowe …" złożone stylem oznaczenia rozdziału — oznaczeniem nie jest,
+            // ale nie ginie: zostaje pod tytułem rozdziału, jak podtytuł w stylu tytułu (ADR-0067).
+            const string subheading = "A. Ubezpieczenie wypadkowe, chorobowe i macierzyńskie";
+            var document = ParseStyled(
+                ("Rozdział 2", "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Zakres podmiotowy ubezpieczenia", "ROZDZODDZPRZEDMprzedmiotregulacjirozdziauluboddziau"),
+                (subheading, "ROZDZODDZOZNoznaczenierozdziauluboddziau"),
+                ("Art. 7. Treść.", "ARTartustawynprozporzdzenia"));
+
+            Assert.Equal(new[] { subheading }, ExplicitUnit(document).Continuation.Select(block => block.Text));
+        }
+
+        [Fact]
         public void RepealAnnotationThatNamesNoUnit_UnderATitle_IsFurtherContentOfTheHeading()
         {
             // KPC (TJ 302049_2704309): „(Przepis wstępny – uchylone)" pod tytułem części — nie nazywa jednostki

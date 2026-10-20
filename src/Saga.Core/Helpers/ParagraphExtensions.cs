@@ -115,6 +115,10 @@ namespace Saga.Core
                         sb.Append('\u2013');
                         break;
 
+                    case SymbolChar sym when SymbolText(sym) is { } character:
+                        sb.Append(character);
+                        break;
+
                     case FootnoteReference { CustomMarkFollows.Value: true } custom
                         when custom.Id?.Value is { } customId && footnoteNumbers != null
                           && footnoteNumbers.TryGetValue(customId, out var customNumber):
@@ -155,6 +159,17 @@ namespace Saga.Core
         /// Własny znak odwołania do przypisu: tekst stojący za odwołaniem w jego przebiegu („3)", „*", „za"). Znak
         /// czcionki Symbol (<c>w:sym</c>, „F031") leży w obszarze prywatnym Unicode przesuniętym o F000 — „1".
         /// </summary>
+        /// <summary>
+        /// Znak wstawiony symbolem Worda ze zwykłym kodem Unicode (w:sym char="002F" — ukośnik „2/3", „00F3" — „ó"),
+        /// niezależnie od czcionki. Kody z obszaru prywatnego (E000–F8FF: Symbol, Wingdings) nie są tekstem — null.
+        /// </summary>
+        internal static char? SymbolText(SymbolChar symbol) =>
+            symbol.Char?.Value is { } code
+            && int.TryParse(code, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var point)
+            && point is >= 0x20 and < 0xE000
+                ? (char)point
+                : null;
+
         internal static string CustomMark(FootnoteReference reference)
         {
             var sb = new StringBuilder();

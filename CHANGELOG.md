@@ -1276,6 +1276,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   (`fragment`) w treści poprzedniego przepisu.
   - Korpus DOCX: 6 jednostek w 4 plikach zamiast 9 akapitów tekstu; zgodność ze schematem bez zmian (2013 z 2321).
     Ocena korpusu: 2139 → 2141.
+- **Drobne poprawki odczytu**:
+  - Znak wstawiony symbolem Worda ze zwykłym kodem Unicode (`w:sym char="002F"` — „2/3”, „00F3” — „ó”) jest tym znakiem;
+    ginął z tekstu („co najmniej 23 ważnych głosów”, „ktrym”). Kody z obszaru prywatnego (Symbol, Wingdings) — jak dotąd.
+  - Wykładnik we wzorze zapisanym tekstem za nawiasem („(0,001 × średnia cena miedzi)[2,5]”) jest indeksem górnym (`sup`),
+    także ułamek dziesiętny; wcześniej zostawał w tekście z nawiasem.
+  - Publikator z rocznikiem bez „z” („Dz. U. 2025 r. poz. 881”, literówka źródła) wskazuje akt — cel komendy ma prefiks.
+  - Akapit w stylu oznaczenia jednostki systematyzacyjnej bez oznaczenia nie znika z eksportu
+    ([ADR-0109](docs/adr/0109-akapit-w-stylu-oznaczenia-bez-oznaczenia-jest-wierszem-naglowkowym.md)).
+  - Korpus DOCX: 11 plików; zgodność ze schematem bez zmian (2013 z 2321). Ocena korpusu: 2141 → 2146.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

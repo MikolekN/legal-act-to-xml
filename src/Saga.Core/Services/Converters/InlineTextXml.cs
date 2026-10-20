@@ -41,9 +41,12 @@ namespace Saga.Core.Services.Converters
         // Indeks górny w kanale tekstowym: nawias tuż za literą albo cyfrą — „477[9]", „2[1a]", „m[2]". Znacznik
         // odnośnika ma w nawiasie „)" i tu nie pasuje. Indeksem górnym jest też znacznik objaśnienia, za którym nie
         // stoi odnośnik tego aktu (ADR-0047): gwiazdka („[*)]", „[(**)]", „[*]"), liczba rzymska odnośnika do
-        // odnośnika („[I)]") i sam nawias przy gwiazdce zwykłej („S*[)]"). Nawias z innym tekstem („[zł/GJ]") zostaje.
+        // odnośnika („[I)]") i sam nawias przy gwiazdce zwykłej („S*[)]"). Wykładnik we wzorze zapisanym
+        // tekstem stoi też za nawiasem i bywa ułamkiem dziesiętnym („(0,001 × średnia cena miedzi)[2,5]"). Nawias z innym
+        // tekstem („[zł/GJ]", „[0,033 × …]") zostaje.
         private static readonly Regex Superscript = new(
-            @"(?<=[\p{L}\d])\[(?<index>[0-9a-z]{1,4})\]|\[(?<index>\(?\*{1,3}\)?|\(?[IVX]{1,4}\)|\))\]",
+            @"(?<=[\p{L}\d])\[(?<index>[0-9a-z]{1,4})\]|(?<=[\p{L}\d)])\[(?<index>\d+,\d+)\]|(?<=\))\[(?<index>\d{1,2})\]"
+            + @"|\[(?<index>\(?\*{1,3}\)?|\(?[IVX]{1,4}\)|\))\]",
             RegexOptions.Compiled);
 
         private const string UnitHeadingPrefix = "naglowek-";
