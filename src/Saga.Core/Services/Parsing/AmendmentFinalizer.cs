@@ -176,6 +176,7 @@ namespace Saga.Core.Services.Parsing
             // 3b. Miejsce w załączniku, którego eId nie zaadresuje („skreśla się lp. 7", „poz. A otrzymuje brzmienie:",
             //     „w kolumnie trzeciej wyrazy …"), jest celem instrukcji ręcznej z adresem najgłębszej adresowalnej
             //     jednostki — automatyczna objęłaby więcej, niż komenda zmienia (ADR-0080, ADR-0100).
+            SentenceTargets.Adjust(amendment, collector.Owner.ContentText);
             ManualTargets.Mark(amendment, collector.Owner.ContentText);
 
             AmendmentTargetPairing.AnchorContentUnits(amendment);

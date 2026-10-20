@@ -19,15 +19,12 @@ namespace Saga.Core.Services
             var targets = new List<StructuralAmendmentReference>();
             var seen = new HashSet<string>(StringComparer.Ordinal);
 
-            // Zdanie zostaje w adresie tylko wtedy, gdy samo jest uchylane („skreśla się zdanie drugie"): instrukcja
-            // uchylenia nie niesie treści, więc bez niego wskazywałaby całą jednostkę (ADR-0070). Zmiana brzmienia
-            // zdania niesie je w treści cytowanej, a zmiana w tekście dotyczy jednostki. Zdanie bez jednostki
-            // („w opisie koszuli skreśla się zdanie szóste") niczego nie adresuje.
-            var sentenceIsRepealed = contentText is not null && AmendmentCommandParser.RepealsSentence(contentText);
-
+            // Zdanie nazwane z numerem zostaje w adresie: uchylane (ADR-0070), zastępowane i zmieniane w tekście
+            // („w ust. 3 w zdaniu pierwszym wyrazy …") — cel w całej jednostce zmieniłby też zdania, których komenda nie
+            // wymienia (ADR-0102). Zdanie bez jednostki („w opisie koszuli skreśla się zdanie szóste") niczego nie adresuje.
             foreach (var address in UnitAddressReader.Read(contentText, context, sectionSignIsBasicUnit))
             {
-                var keepsSentence = sentenceIsRepealed && NamesAUnit(address.Start);
+                var keepsSentence = NamesAUnit(address.Start);
                 var start = keepsSentence ? address.Start : WithoutSentence(address.Start);
                 var end = address.End is not { } last ? null : keepsSentence ? last : WithoutSentence(last);
                 if (end is not null && Identity(end) == Identity(start))

@@ -2255,6 +2255,33 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0102: zdanie nazwane w komendzie jest celem każdej zmiany
+        // ============================================================
+
+        [Fact]
+        public void Adr0102_NamedSentence_IsTheTargetOfEveryChange()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 8 w ust. 3 w zdaniu pierwszym wyrazy „raz” zastępuje się wyrazami „dwa razy”;",
+                "2) w art. 9 w ust. 7 dodaje się zdanie trzecie w brzmieniu:",
+                "„Opłaty nie zwraca się.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var targets = LegalDocumentConverter.Convert(document).Descendants()
+                .Select(e => e.Attribute("element-eId")?.Value).OfType<string>().ToList();
+
+            // Zmiana wyrazów w zdaniu i zdanie dodawane po poprzednim — nie cała jednostka.
+            Assert.Equal(["DU/2021/200__art_8__ust_3__zdn_1", "DU/2021/200__art_9__ust_7__zdn_2"], targets);
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 
@@ -2376,12 +2403,12 @@ namespace Saga.Core.Tests
                 .Select(e => (e.Name.LocalName, e.Attribute("element-eId")?.Value))
                 .ToList();
 
-            // Uchylenie zdania nie jest uchyleniem ustępu; zmiana w tekście zdania zostaje przy jednostce.
+            // Uchylenie zdania nie jest uchyleniem ustępu. Zmiana w tekście zdania — zastąpione przez ADR-0102 (też zdanie).
             Assert.Equal(
                 [
                     ("uchyl", "DU/2021/200__art_76__ust_2__zdn_2"),
                     ("uchyl", "DU/2021/200__art_77__ust_3"),
-                    ("zamien-tekst", "DU/2021/200__art_78__ust_4"),
+                    ("zamien-tekst", "DU/2021/200__art_78__ust_4__zdn_2"),
                 ],
                 instructions);
         }

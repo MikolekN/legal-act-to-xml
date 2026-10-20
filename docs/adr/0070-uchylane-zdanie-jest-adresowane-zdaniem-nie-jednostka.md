@@ -1,6 +1,6 @@
 # ADR-0070: Uchylane zdanie jest adresowane zdaniem (`zdn_N`), a nie jednostką, w której stoi
 
-- Status: Accepted
+- Status: Accepted — Superseded in part by [ADR-0102](0102-zdanie-nazwane-w-komendzie-jest-celem.md) (zmiany inne niż uchylenie zdania)
 - Data: 2026-10-13
 
 ## Kontekst

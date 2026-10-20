@@ -84,7 +84,7 @@ namespace Saga.Core.Services.Parsing
                 if (part.Parent is null)
                     part.AddressAnchor = (QuotesItemsOf(amendment.Content!, part.ListItemType)
                         ? HostOf(targets[0].Structure, part.ListItemType)
-                        : targets[0].Structure).ToString();
+                        : WithoutSentence(targets[0].Structure)).ToString();
 
             if (units.Count == 0)
                 return;
@@ -123,10 +123,18 @@ namespace Saga.Core.Services.Parsing
                     host.Tiret = null;
                     break;
                 default:
-                    return target;
+                    return host;
             }
 
             return host;
+        }
+
+        /// <summary>Cel bez zdania — zdanie wskazuje miejsce zmiany, nie gospodarza cytowanej jednostki (ADR-0102).</summary>
+        private static StructuralReference WithoutSentence(StructuralReference target)
+        {
+            var unit = target.Clone();
+            unit.Sentence = null;
+            return unit;
         }
 
         private static string AnchorFor(StructuralReference target, BaseEntity unit)

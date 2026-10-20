@@ -1210,6 +1210,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   (`StructuralReference.ActTitle`, `LegalReferenceService.ActTitleTarget`).
   - Korpus DOCX: zmienia się 18 eksportów — 18 instrukcji z adresem aktu zamiast `UNKNOWN` (5 zmian wyrazów jako cytat
     z wyrazami); zgodność ze schematem bez zmian.
+- **Zdanie nazwane w komendzie jest celem każdej zmiany** ([ADR-0102](docs/adr/0102-zdanie-nazwane-w-komendzie-jest-celem.md)): „zdanie drugie otrzymuje
+  brzmienie:”, „w zdaniu pierwszym wyrazy … zastępuje się …” i „dodaje się zdanie trzecie” wskazywały całą
+  jednostkę — zmiana wyrazów trafiała też w zdania, których komenda nie wymienia. Według ustalenia z 2026-10-19 cel to
+  zdanie (`…__ust_3__zdn_1`), zdanie dodawane staje po poprzednim (`dodaj-po` na `…__zdn_2`), sąsiednie zdania zastąpione
+  jednym cytatem to zakres (`element-eId`/`element-do-eId`), a zdanie bez numeru — instrukcja ręczna na jednostce
+  (`SentenceTargets`, `LegalReferenceService`).
+  - Korpus DOCX: zmienia się 80 eksportów — cele zmian w zdaniach wskazują zdanie; komendy o zdaniu wskazujące całą
+    jednostkę: 1 (fałszywy alarm sprawdzenia) zamiast 258 w 92 dokumentach; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

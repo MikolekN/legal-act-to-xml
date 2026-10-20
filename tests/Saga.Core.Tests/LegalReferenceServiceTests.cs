@@ -197,15 +197,12 @@ namespace Saga.Core.Tests
         }
 
         [Theory]
-        [InlineData("w art. 5 w ust. 2 zdanie drugie i trzecie otrzymują brzmienie:")]
-        [InlineData("w art. 5 w ust. 2 zdania drugie–czwarte otrzymują brzmienie:")]
-        public void ReadAmendmentTargets_Sentences_CollapseIntoTheirUnit(string text)
+        // Zdania nazwane z numerem zostają w celu (ADR-0102): wyliczenie to cel na każde zdanie, przedział — zakres.
+        [InlineData("w art. 5 w ust. 2 zdanie drugie i trzecie otrzymują brzmienie:", "art_5__ust_2__zdn_2|art_5__ust_2__zdn_3")]
+        [InlineData("w art. 5 w ust. 2 zdania drugie–czwarte otrzymują brzmienie:", "art_5__ust_2__zdn_2–art_5__ust_2__zdn_4")]
+        public void ReadAmendmentTargets_NamedSentences_StayInTheTarget(string text, string expected)
         {
-            // Cel nowelizacji to jednostka redakcyjna, bez zdania — zdania jednego ustępu to jeden cel.
-            var target = SingleTarget(text);
-
-            Assert.Equal("art_5__ust_2", target.ToString());
-            Assert.Null(target.RangeEnd);
+            Assert.Equal(expected, string.Join("|", new LegalReferenceService().ReadAmendmentTargets(null, text).Select(t => t.ToString())));
         }
 
         [Theory]
@@ -230,14 +227,14 @@ namespace Saga.Core.Tests
         }
 
         [Theory]
-        // Zmiana w tekście zdania dotyczy jednostki — jak w przykładach autorów schematu.
+        // Zmiana w tekście zdania wskazuje zdanie — cel w jednostce zmieniłby też pozostałe zdania (ADR-0102).
         [InlineData("w art. 31 w ust. 4 w zdaniu drugim wyrazy „na piśmie” zastępuje się wyrazami „w postaci papierowej”;")]
         [InlineData("w art. 31 w ust. 4 w zdaniu drugim skreśla się wyrazy „na piśmie”;")]
-        // Zdanie, po którym się dodaje, też nie jest uchylane.
+        // Zdanie, po którym się dodaje.
         [InlineData("w art. 31 w ust. 4 po zdaniu drugim dodaje się zdanie trzecie w brzmieniu:")]
-        public void ReadAmendmentTargets_SentenceThatIsNotRepealed_CollapsesIntoItsUnit(string text)
+        public void ReadAmendmentTargets_SentenceNamedByTheCommand_StaysInTheTarget(string text)
         {
-            Assert.Equal("art_31__ust_4", SingleTarget(text).ToString());
+            Assert.Equal("art_31__ust_4__zdn_2", SingleTarget(text).ToString());
         }
 
         [Fact]
