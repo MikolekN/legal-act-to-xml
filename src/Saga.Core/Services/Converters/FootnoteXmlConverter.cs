@@ -49,6 +49,40 @@ namespace Saga.Core.Services.Converters
             }
         }
 
+        /// <summary>
+        /// Odnośnik w wyrazach nowych zmiany w tekście („wyrazy „…” zastępuje się wyrazami „… z późn. zm.¹⁾”") — wymagany przy
+        /// „z późn. zm." (§ 158 ust. 7 ZTP) — przechodzi do aktu zmienianego razem z wyrazami: w <c>nowy-tekst</c> pod
+        /// znacznik trafia fragment XML odnośnika (ADR-0105, ustalenie z 2026-10-20). Fragment nie deklaruje przestrzeni
+        /// nazw — wklejony należy do aktu, w który go wklejono. Znak „&lt;" i „&amp;" koduje sam zapis atrybutu.
+        /// </summary>
+        internal static void EmbedInNewWords(XElement actElement, LegalDocument document)
+        {
+            if (document.Footnotes.Count == 0)
+                return;
+
+            var byMarker = document.Footnotes.GroupBy(footnote => footnote.Marker).ToDictionary(group => group.Key, group => group.First());
+            foreach (var attribute in actElement.Descendants().Attributes()
+                .Where(attribute => attribute.Name.LocalName == XmlConverterConstants.Contents.Instruction.NewTextAttribute && Marker.IsMatch(attribute.Value)))
+            {
+                attribute.Value = Marker.Replace(attribute.Value, marker =>
+                {
+                    var numbers = Number.Matches(marker.Value).Select(number => number.Groups["number"].Value).ToList();
+                    return numbers.Count > 0 && numbers.All(byMarker.ContainsKey)
+                        ? string.Concat(numbers.Select(number => Fragment(ToXml(byMarker[number]))))
+                        : marker.Value;
+                });
+            }
+        }
+
+        private static readonly Regex NamespaceDeclaration = new(@"\s+xmlns(?::\w+)?=""[^""]*""", RegexOptions.Compiled);
+
+        // Przedrostek „gd:" jak w akcie docelowym — bez deklaracji zapis wymyśliłby własny („p1:").
+        private static string Fragment(XElement footnote)
+        {
+            footnote.SetAttributeValue(XNamespace.Xmlns + "gd", XmlConverterConstants.GuidNamespace.NamespaceName);
+            return NamespaceDeclaration.Replace(footnote.ToString(SaveOptions.DisableFormatting), string.Empty);
+        }
+
         private static bool IsFootnote(XElement element) =>
             element.Name.LocalName is XmlConverterConstants.Contents.Odnosnik.Element
                 or XmlConverterConstants.Contents.Odnosnik.ReferenceElement;

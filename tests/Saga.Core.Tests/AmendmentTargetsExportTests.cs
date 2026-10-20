@@ -252,6 +252,35 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void NewWords_CarryTheFootnoteOfThisAct_AsAnXmlFragment()
+        {
+            // 296120_2785579 (Dz. U. 2025 poz. 43): odnośnik wymagany przy „z późn. zm." (§ 158 ust. 7 ZTP) stoi w wyrazach
+            // nowych i przechodzi do aktu zmienianego razem z nimi — fragment XML odnośnika w nowy-tekst (ADR-0105).
+            var document = new LegalDocument { Type = LegalActType.Statute };
+            var context = new ParsingContext(document, document.RootPart.Books[0].Titles[0].Divisions[0].Chapters[0].Subchapters[0]);
+            var orchestrator = new ParserOrchestrator();
+            orchestrator.ProcessBlock(new DocumentBlock { Text = "Art. 1. W ustawie wprowadza się następujące zmiany:", Source = new BlockSourceLocation() }, context);
+            orchestrator.ProcessBlock(new DocumentBlock
+            {
+                Text = "1) w art. 37 wyrazy „(Dz. Urz. UE L 20 z 31.01.2022, str. 95)” zastępuje się wyrazami „(Dz. Urz. UE L 20 z 31.01.2022, str. 95, z późn. zm.[1)])”.",
+                Source = new BlockSourceLocation(),
+                Footnotes = [new BlockFootnote("1", ["Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 31 & L 45."]) { Marker = "1" }],
+            }, context);
+            orchestrator.Finalize(context);
+            var xml = new XDocument(LegalDocumentConverter.Convert(document));
+
+            var change = Assert.Single(Commands(xml));
+            var newWords = Attr(change, "nowy-tekst")!;
+            Assert.StartsWith("(Dz. Urz. UE L 20 z 31.01.2022, str. 95, z późn. zm.<odnosnik id-odnosnika=\"1\" symbol=\"1\"", newWords);
+            Assert.Contains("Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 31 &amp; L 45.", newWords);
+            Assert.EndsWith("</odnosnik>)", newWords);
+            Assert.DoesNotContain("xmlns", newWords);
+
+            // Odnośnik zostaje też odnośnikiem aktu zmieniającego — w zdaniu komendy.
+            Assert.Single(change.Parent!.Elements(), e => e.Name.LocalName == "odnosnik");
+        }
+
+        [Fact]
         public void AddedWords_AreAnInstructionReplacingTheIndicatedWordsWithThemAndTheAddedOnes()
         {
             // Przykład autorów schematu (DU/2026/26): „po wyrazach „art. 61b ust. 6" dodaje się wyrazy „i art. 68g"".

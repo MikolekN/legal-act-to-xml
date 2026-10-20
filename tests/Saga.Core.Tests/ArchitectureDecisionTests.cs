@@ -2338,6 +2338,34 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0105: odnośnik w nowych wyrazach to fragment XML w nowy-tekst
+        // ============================================================
+
+        [Fact]
+        public void Adr0105_FootnoteInNewWords_IsAnXmlFragmentInTheAttribute()
+        {
+            var document = new LegalDocument { Type = LegalActType.Statute };
+            var context = new ParsingContext(document, document.RootPart.Books[0].Titles[0].Divisions[0].Chapters[0].Subchapters[0]);
+            var orchestrator = new ParserOrchestrator();
+            orchestrator.ProcessBlock(new DocumentBlock { Text = "Art. 1. W ustawie wprowadza się następujące zmiany:", Source = new BlockSourceLocation() }, context);
+            orchestrator.ProcessBlock(new DocumentBlock
+            {
+                Text = "1) w art. 5 wyrazy „(Dz. U. poz. 7)” zastępuje się wyrazami „(Dz. U. poz. 7, z późn. zm.[1)])”.",
+                Source = new BlockSourceLocation(),
+                Footnotes = [new BlockFootnote("1", ["Zmiany ustawy zostały ogłoszone."]) { Marker = "1" }],
+            }, context);
+            orchestrator.Finalize(context);
+
+            var change = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "zamien-tekst");
+
+            // Odnośnik przechodzi z wyrazami do aktu zmienianego — fragment bez deklaracji przestrzeni nazw.
+            var fragment = XElement.Parse(change.Attribute("nowy-tekst")!.Value["(Dz. U. poz. 7, z późn. zm.".Length..^1]
+                .Replace("gd:", string.Empty));
+            Assert.Equal(("odnosnik", "1"), (fragment.Name.LocalName, fragment.Attribute("id-odnosnika")?.Value));
+            Assert.Equal("Zmiany ustawy zostały ogłoszone.", fragment.Value);
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 

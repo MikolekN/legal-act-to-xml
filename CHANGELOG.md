@@ -1241,6 +1241,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   nazwaną po niej.
   - Korpus DOCX: zmienia się 17 eksportów — 60 instrukcji zamiany znaku, 9 ręcznych dodań znaku, 1 uchylenie celu
     poprawionego; zgodność ze schematem bez zmian.
+- **Odnośnik w nowych wyrazach jako fragment XML w `nowy-tekst`** ([ADR-0105](docs/adr/0105-odnosnik-w-nowych-wyrazach-to-fragment-xml-w-nowy-tekst.md)): odnośnik aktu
+  zmieniającego, który stoi w wyrazach nowych („… z późn. zm.¹⁾” — § 158 ust. 7 ZTP), przechodzi do aktu
+  zmienianego razem z nimi: pod znacznik trafia zakodowany fragment `<odnosnik id-odnosnika=… symbol=…>…</odnosnik>`
+  bez deklaracji przestrzeni nazw (ustalenie z 2026-10-20, `FootnoteXmlConverter.EmbedInNewWords`). Wyrazy zastępowane
+  nadal są bez znacznika, a odnośnik zostaje też w zdaniu komendy.
+  - Korpus DOCX: zmieniają się 4 eksporty (296120, 302046, 308909, 353666) — w każdym wyrazy nowe z fragmentem
+    odnośnika; zgodność ze schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

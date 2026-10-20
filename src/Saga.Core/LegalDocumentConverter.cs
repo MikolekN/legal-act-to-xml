@@ -72,6 +72,7 @@ namespace Saga.Core.Services
                 body.Add(AnnexXmlConverter.ToXml(annex));
 
             FootnoteXmlConverter.Embed(actElement, document);
+            FootnoteXmlConverter.EmbedInNewWords(actElement, document);
             InlineTextXml.EmbedSuperscripts(actElement);
 
             TemporalDataXmlConverter.AssignPeriods(actElement, document);

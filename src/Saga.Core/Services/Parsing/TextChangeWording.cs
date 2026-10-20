@@ -21,12 +21,14 @@ namespace Saga.Core.Services.Parsing
             wording.Replace(SoftHyphen.ToString(), string.Empty, StringComparison.Ordinal);
 
         /// <summary>
-        /// Zdejmuje z wyrazów zmian w tekście znaczniki odnośników tego dokumentu: „(Dz. U. poz. 1270, z późn.
+        /// Zdejmuje z wyrazów zastępowanych znaczniki odnośników tego dokumentu: „(Dz. U. poz. 1270, z późn.
         /// zm.[8)])" niesie odnośnik aktu zmieniającego o zmianach ustawy; treść odnośnika stoi w zdaniu komendy,
         /// a akt zmieniany znacznika nie ma. Rozstrzyga pełny rejestr odnośników, więc przebieg idzie po gotowym
         /// dokumencie: znacznik wpisany tekstem bywa powtórzeniem odnośnika, którego odwołanie stoi dalej. Znacznik,
         /// którego numer nie jest odnośnikiem tego dokumentu, zostaje. Przebieg obejmuje też przepisy przytoczone
-        /// w obwieszczeniu tekstu jednolitego — ich odnośniki obwieszczenie powtarza jako własne.
+        /// w obwieszczeniu tekstu jednolitego — ich odnośniki obwieszczenie powtarza jako własne. W wyrazach nowych
+        /// znacznik zostaje: eksport podstawia pod niego fragment XML odnośnika, który przechodzi do aktu zmienianego
+        /// razem z wyrazami (ADR-0105).
         /// </summary>
         internal static void DropOwnFootnoteMarkers(LegalDocument document)
         {
@@ -43,10 +45,7 @@ namespace Saga.Core.Services.Parsing
                     continue;
 
                 foreach (var change in changes)
-                {
                     change.OldText = Without(change.OldText);
-                    change.NewText = Without(change.NewText);
-                }
             }
         }
 
