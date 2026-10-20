@@ -43,9 +43,17 @@ namespace Saga.Core.Services
                     targets.Add(target);
             }
 
-            // Tytuł aktu zmienianego jako miejsce komendy — bez jednostki, którą adresuje eId (ADR-0101).
-            if (targets.Count == 0 && ActTitleTarget(contentText) is { } title)
+            // Tytuł aktu zmienianego jako miejsce komendy — bez jednostki, którą adresuje eId (ADR-0101). Sam „tytuł"
+            // („1) tytuł otrzymuje brzmienie:" w wyliczeniu zmian aktu) jest tytułem aktu tylko wtedy, gdy przepisy nadrzędne
+            // nie wskazują jednostki — pod „w dziale II:" byłby tytułem działu.
+            if (targets.Count == 0 && ActTitleTarget(contentText, bare: context is null) is { } title)
                 targets.Add(title);
+
+            // Tytuł aktu wśród kilku miejsc zmiany („wyraz „X” użyty w tytule ustawy, w art. 1 i w art. 5 …") jest celem
+            // obok jednostek — przed nimi, w kolejności z przepisu.
+            else if (targets.Count > 0 && contentText is not null
+                     && TitleAmongPlaces.IsMatch(UnitAddressReader.WithoutQuotedText(contentText)))
+                targets.Insert(0, ActTitleReference(contentText));
 
             return targets;
         }
@@ -54,11 +62,32 @@ namespace Saga.Core.Services
         private static readonly Regex FootnotePlace = new(
             @"^w\s+odnośniku\s+nr\s+(?<number>\d+[a-z]*)\b", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-        /// <summary>Cel „tytuł aktu zmienianego", gdy przepis zaczyna się od niego; null, gdy go nie nazywa (ADR-0101).</summary>
-        internal static StructuralAmendmentReference? ActTitleTarget(string? contentText) =>
-            contentText is not null && ActTitlePlace.IsMatch(ManualTargets.WithoutActFormula(contentText))
-                ? new StructuralAmendmentReference { Structure = new StructuralReference { ActTitle = true }, RawText = contentText }
-                : null;
+        /// <summary>
+        /// Cel „tytuł aktu zmienianego", gdy przepis zaczyna się od niego; null, gdy go nie nazywa (ADR-0101).
+        /// <paramref name="bare"/>: wystarczy sam „tytuł" bez nazwy aktu — gdy żaden przepis nadrzędny nie wskazuje jednostki.
+        /// </summary>
+        internal static StructuralAmendmentReference? ActTitleTarget(string? contentText, bool bare = false)
+        {
+            if (contentText is null)
+                return null;
+
+            var text = ManualTargets.WithoutActFormula(contentText);
+            return ActTitlePlace.IsMatch(text) || (bare && BareActTitlePlace.IsMatch(text)) ? ActTitleReference(contentText) : null;
+        }
+
+        /// <summary>Cel „tytuł aktu zmienianego" — adresem jest sam akt, instrukcja jest ręczna (ADR-0101).</summary>
+        internal static StructuralAmendmentReference ActTitleReference(string? rawText) =>
+            new() { Structure = new StructuralReference { ActTitle = true }, RawText = rawText };
+
+        /// <summary>Tytuł aktu jako jedno z miejsc zmiany: „… użyty w tytule ustawy, w art. 1 …".</summary>
+        private static readonly Regex TitleAmongPlaces = new(
+            @"(?<![\p{L}])w\s+tytule\s+(?:ustawy|rozporządzenia|uchwały|zarządzenia|kodeksu)\b",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+        /// <summary>Sam „tytuł" jako przedmiot albo miejsce komendy: „tytuł otrzymuje brzmienie:", „w tytule wyrazy …".</summary>
+        private static readonly Regex BareActTitlePlace = new(
+            @"^(?:w\s+)?tytu(?:ł|le)\s+(?:otrzymuje\s+brzmienie|(?:po\s+)?wyraz|skreśla\s+się|dodaje\s+się)",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
         /// <summary>
         /// Przepis zaczyna się tytułem aktu: „tytuł ustawy otrzymuje brzmienie:", „w tytule ustawy ogólne określenie

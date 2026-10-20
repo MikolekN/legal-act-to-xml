@@ -1285,6 +1285,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Akapit w stylu oznaczenia jednostki systematyzacyjnej bez oznaczenia nie znika z eksportu
     ([ADR-0109](docs/adr/0109-akapit-w-stylu-oznaczenia-bez-oznaczenia-jest-wierszem-naglowkowym.md)).
   - Korpus DOCX: 11 plików; zgodność ze schematem bez zmian (2013 z 2321). Ocena korpusu: 2141 → 2146.
+- **Tytuł aktu jako cel — dalsze postaci** ([ADR-0101](docs/adr/0101-tytul-aktu-jako-cel-to-instrukcja-reczna-z-adresem-aktu.md)):
+  sam „tytuł” w wyliczeniu zmian aktu („1) tytuł otrzymuje brzmienie:”) — gdy przepisy nadrzędne nie wskazują jednostki
+  (pod „w dziale II:” to tytuł działu); odnośnik nr 1 dodany do tytułu za innym zwrotem („… oznacza się jako odnośnik nr 2
+  do tytułu ustawy i do tytułu ustawy dodaje się odnośnik nr 1 w brzmieniu:”); tytuł wymieniony wśród miejsc zmiany
+  wyrazów („w tytule ustawy, w art. 1 i w art. 5 wyraz …”) jest osobnym celem obok jednostek. Wcześniej `UNKNOWN`
+  albo brak instrukcji dla tytułu.
+  - Korpus DOCX: 4 pliki; zgodność ze schematem bez zmian (2013 z 2321). Ocena korpusu: 2147 → 2150.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

@@ -21,6 +21,11 @@ namespace Saga.Core.Services.Parsing
 
         private static readonly Regex InAnAnnex = new(@"załącznik", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        /// <summary>Odnośnik dodawany do tytułu aktu: „do tytułu ustawy dodaje się odnośnik nr 1 w brzmieniu:".</summary>
+        private static readonly Regex AddedToTheTitle = new(
+            @"\bdo\s+tytułu\s+(?:ustawy|rozporządzenia|uchwały|zarządzenia|kodeksu)\s+dodaje\s+się\s+odnośnik\b",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         /// <summary>
         /// Znacznik odnośnika na początku jego treści: „1)", także zapisany indeksem górnym („[1)]"). Cudzysłów
         /// otwierający cytat bywa złożony indeksem górnym razem ze znacznikiem („[„2)] Niniejsza ustawa …"),
@@ -108,10 +113,12 @@ namespace Saga.Core.Services.Parsing
             var number = command.Number;
             if (command.Adds)
             {
-                // Pierwszy odnośnik nie ma poprzednika; dodany do tytułu aktu („do tytułu ustawy dodaje się odnośnik nr 1")
-                // wskazuje tytuł — instrukcją ręczną z adresem aktu (ADR-0101).
+                // Pierwszy odnośnik nie ma poprzednika; dodany do tytułu aktu („do tytułu ustawy dodaje się odnośnik nr 1",
+                // także za innym zwrotem: „odnośnik nr 1 … oznacza się jako odnośnik nr 2 … i do tytułu ustawy dodaje się
+                // odnośnik nr 1") wskazuje tytuł — instrukcją ręczną z adresem aktu (ADR-0101).
                 if (!int.TryParse(number, out var value) || value < 2)
-                    return LegalReferenceService.ActTitleTarget(rawText);
+                    return LegalReferenceService.ActTitleTarget(rawText)
+                        ?? (rawText is not null && AddedToTheTitle.IsMatch(rawText) ? LegalReferenceService.ActTitleReference(rawText) : null);
                 number = (value - 1).ToString();
             }
 

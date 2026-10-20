@@ -40,6 +40,39 @@ namespace Saga.Core.Tests
             Assert.Equal([("DU/2021/200", function)], Instructions(Export(command, quote)));
         }
 
+        [Theory]
+        // Korpus: 336454_3062257 — sam „tytuł" w wyliczeniu zmian aktu, bez nazwy aktu.
+        [InlineData("1) tytuł otrzymuje brzmienie:", "„o opłatach i należnościach”;")]
+        // Korpus: 351432_3114915 — dodanie odnośnika do tytułu za innym zwrotem.
+        [InlineData("1) odnośnik nr 1 do tytułu ustawy oznacza się jako odnośnik nr 2 do tytułu ustawy i do tytułu ustawy dodaje się odnośnik nr 1 w brzmieniu:",
+            "„1) Niniejsza ustawa wdraża dyrektywę.”;")]
+        public void TitleWithoutTheNameOfTheAct_IsTheTitleOfTheAct(string command, string quote)
+        {
+            Assert.Equal("DU/2021/200", Assert.Single(Instructions(Export(command, quote))).Target);
+        }
+
+        [Fact]
+        public void BareTitleUnderAUnit_IsNotTheTitleOfTheAct()
+        {
+            // Pod „w dziale II:" sam „tytuł" to tytuł działu, nie aktu.
+            var instructions = Instructions(Export("1) w dziale II:", "a) tytuł otrzymuje brzmienie:", "„Opłaty lokalne”;"));
+
+            Assert.DoesNotContain(instructions, instruction => instruction.Target == "DU/2021/200");
+        }
+
+        [Fact]
+        public void TitleAmongThePlacesOfAWordChange_IsATargetNextToTheUnits()
+        {
+            // Roadmapa, kandydat 15 (korpus: 310979_2778577): tytuł wymieniony wśród miejsc zmiany wyrazów nie był osobnym celem.
+            var instructions = Instructions(Export(
+                "1) w tytule ustawy, w art. 1 i w art. 5 wyraz „opłata” zastępuje się wyrazem „należność”;"));
+
+            // Jednostki — zamiana automatyczna; tytuł nie ma eId, więc ręcznie na akcie (ADR-0101), za nimi.
+            Assert.Equal(
+                [("DU/2021/200__art_1", null), ("DU/2021/200__art_5", null), ("DU/2021/200", "zastap-recznie")],
+                instructions);
+        }
+
         [Fact]
         public void WordsChangedInTheTitle_AreAManualInstructionWithTheWords()
         {
