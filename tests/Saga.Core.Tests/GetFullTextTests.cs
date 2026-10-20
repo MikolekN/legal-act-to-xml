@@ -86,6 +86,19 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void GetFullText_FootnoteReferenceWithoutItsBracket_GetsIt()
+        {
+            // 343214_3102996: „6. Uzasadnienie przyznania nagrody rocznej⁴:" — za odwołaniem nie ma „)", więc „[1]" byłby
+            // indeksem górnym, a treść odnośnika ginęła z eksportu.
+            var paragraph = new Paragraph(
+                new Run(new Text("6. Uzasadnienie przyznania nagrody rocznej")),
+                new Run(new RunProperties { RunStyle = new RunStyle { Val = "Odwoanieprzypisudolnego" } }, new FootnoteReference { Id = 4 }),
+                new Run(new Text(":")));
+
+            Assert.Equal("6. Uzasadnienie przyznania nagrody rocznej[1)]:", paragraph.GetFullText(new Dictionary<long, int> { [4] = 1 }));
+        }
+
+        [Fact]
         public void GetFullText_FootnoteInsertedAsAField_StaysInOneBracket()
         {
             // TJ 307519_2779687: odnośnik wstawiony polem NOTEREF — między „8" a „)" stoi przebieg końca pola

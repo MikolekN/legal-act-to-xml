@@ -134,6 +134,11 @@ namespace Saga.Core
                             sb.Append(number);
                         else
                             sb.Append(fnRef.Id?.Value);
+
+                        // Nawias zamykający znacznik stoi zwykle w następnym przebiegu; gdy go nie ma, znacznik dostaje go
+                        // tutaj — inaczej „[4]" byłby indeksem górnym, a treść odnośnika ginęła z eksportu.
+                        if (!FollowedByClosingBracket(fnRef))
+                            sb.Append(')');
                         break;
 
                     case TabChar:
@@ -169,6 +174,33 @@ namespace Saga.Core
             && point is >= 0x20 and < 0xE000
                 ? (char)point
                 : null;
+
+        /// <summary>
+        /// Czy w akapicie za odwołaniem do przypisu stoi „)" — część znacznika „4)". W korpusie DOCX brakuje go przy
+        /// 6 z 14 049 odwołań (325404, 334898, 343214 i ich bliźniaki); odwołanie poza akapitem — jak z nawiasem.
+        /// </summary>
+        private static bool FollowedByClosingBracket(FootnoteReference reference)
+        {
+            if (reference.Ancestors<Paragraph>().FirstOrDefault() is not { } paragraph)
+                return true;
+
+            var after = false;
+            foreach (var element in paragraph.Descendants())
+            {
+                if (element == reference)
+                {
+                    after = true;
+                    continue;
+                }
+
+                if (!after || element is not Text text || text.Text.Trim().Length == 0)
+                    continue;
+
+                return text.Text.TrimStart().StartsWith(')');
+            }
+
+            return false;
+        }
 
         internal static string CustomMark(FootnoteReference reference)
         {

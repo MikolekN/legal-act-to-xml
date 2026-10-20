@@ -1297,6 +1297,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   a pierwszy nie ma poprzednika. Celem jest załącznik z przepisu nadrzędnego (`…__zal_2`) z instrukcją `dodaj-recznie`
   (zasada 5, [ADR-0100](docs/adr/0100-cel-w-zalaczniku-bez-adresu-to-instrukcja-reczna.md)).
   - Korpus DOCX: 2 pliki (jeden akt); zgodność ze schematem bez zmian (2013 z 2321). Ocena korpusu: 2150 → 2152.
+- **Znacznik odnośnika bez nawiasu**: odwołanie do przypisu, za którym w akapicie nie stoi „)” („Uzasadnienie przyznania
+  nagrody rocznej⁴:”), dostaje nawias przy odczycie DOCX — inaczej „[4]” był indeksem górnym, a treść odnośnika ginęła
+  z eksportu. W korpusie 6 z 14 049 odwołań.
+  - Korpus DOCX: 6 odnośników w 6 plikach wraca do eksportu; zgodność ze schematem bez zmian (2013 z 2321).
+    Ocena korpusu: 2152 → 2158.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
