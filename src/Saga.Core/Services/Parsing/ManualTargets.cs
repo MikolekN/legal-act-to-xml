@@ -31,6 +31,13 @@ namespace Saga.Core.Services.Parsing
             @"\b(?:uchyla|skreśla)\s+się\s+załącznik", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
         /// <summary>
+        /// Wyrazy w różnych formach: „w różnej liczbie i różnym przypadku, wyrazy „X” zastępuje się użytymi w odpowiedniej
+        /// liczbie i odpowiednim przypadku wyrazami „Y”" — formy stoją tylko w akcie zmienianym (ADR-0103).
+        /// </summary>
+        private static readonly Regex InflectedWords = new(
+            @"\bw\s+(?:różn|odpowiedni)\p{L}*\s+(?:liczb|przypad)\p{L}*", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+        /// <summary>
         /// Oznacza cele bez adresu jako ręczne: adresem zostaje najgłębsza adresowalna jednostka — załącznik albo jego
         /// jednostka, a instrukcja dostaje funkcję <c>*-recznie</c>.
         /// </summary>
@@ -44,10 +51,15 @@ namespace Saga.Core.Services.Parsing
             var wholeAnnexText = ChangesTextOnly(amendment) && WholeAnnexTextChange.IsMatch(text);
             var annexRepealed = amendment.OperationType == AmendmentOperationType.Repeal && RepealedAnnex.IsMatch(text);
 
+            // Odmiana wyrazów w akcie zmienianym: instrukcja z formą podstawową z komendy trafiłaby co najwyżej w mianownik —
+            // każdy cel dostaje instrukcję ręczną z nowymi wyrazami (zasada ogólna 6, ADR-0103).
+            var inflected = amendment.TextChanges.Count > 0 && InflectedWords.IsMatch(UnitReferences.UnitAddressReader.WithoutQuotedText(text));
+
             foreach (var target in amendment.Targets.Concat(amendment.TextChanges.SelectMany(change => change.Targets)))
             {
                 var structure = target.Structure;
-                var manual = structure.ActTitle
+                var manual = inflected
+                    || structure.ActTitle
                     || structure is { Annex.Length: > 0, InAnnexContent: true }
                     || (IsAnnexItself(structure) && !wholeAnnexText && !annexRepealed);
                 if (!manual)

@@ -2282,6 +2282,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0103: zmiana wyrazów w różnych formach to instrukcja ręczna
+        // ============================================================
+
+        [Fact]
+        public void Adr0103_InflectedWords_AreAManualInstructionPerTarget()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) użyte w art. 40 i w art. 64, w różnym przypadku, wyrazy „zespół” zastępuje się użytymi w odpowiednim przypadku wyrazami „CSIRT”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            var instructions = LegalDocumentConverter.Convert(document).Descendants()
+                .Where(e => e.Attribute("element-eId") is not null)
+                .Select(e => (e.Name.LocalName, e.Attribute("element-eId")!.Value, e.Attribute("funkcja")?.Value))
+                .ToList();
+
+            // Nie automatyczna zmiana z formą podstawową — ręczna, na każdy cel.
+            Assert.Equal(
+            [
+                ("cytat-w-tekscie", "DU/2021/200__art_40", "zastap-recznie"),
+                ("cytat-w-tekscie", "DU/2021/200__art_64", "zastap-recznie"),
+            ], instructions);
+        }
+
+        // ============================================================
         // ADR-0067: wiersz pod tytułem jednostki jest dalszą treścią nagłówka
         // ============================================================
 

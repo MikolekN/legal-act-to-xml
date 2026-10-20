@@ -1218,6 +1218,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   (`SentenceTargets`, `LegalReferenceService`).
   - Korpus DOCX: zmienia się 80 eksportów — cele zmian w zdaniach wskazują zdanie; komendy o zdaniu wskazujące całą
     jednostkę: 1 (fałszywy alarm sprawdzenia) zamiast 258 w 92 dokumentach; zgodność ze schematem bez zmian.
+- **Zmiana wyrazów w różnych formach jako instrukcja ręczna** ([ADR-0103](docs/adr/0103-zmiana-wyrazow-w-roznych-formach-to-instrukcja-reczna.md)): „w różnej liczbie
+  i różnym przypadku, wyrazy „X” zastępuje się użytymi w odpowiedniej liczbie i odpowiednim przypadku wyrazami „Y””
+  dawało `now:zamien-tekst` z formą podstawową z komendy, która w akcie zmienianym trafia co najwyżej w mianownik.
+  Teraz każdy cel dostaje `cytat-w-tekscie funkcja="zastap-recznie"` z nowymi wyrazami — według odpowiedzi autorów
+  schematu z 2026-10-20 formy stoją tylko w akcie zmienianym (`ManualTargets`).
+  - Korpus DOCX: zmienia się 23 eksporty — 160 instrukcji ręcznych zamiast `now:zamien-tekst`; zgodność ze schematem
+    bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
