@@ -1161,6 +1161,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   zastępuje teraz odstęp.
   - Korpus DOCX: zmieniają się 2 eksporty (ten sam akt w dwóch obwieszczeniach) — litera z dwoma tiretami zamiast
     `nie-ztp-litera`; zgodność ze schematem bez zmian.
+- **Wprowadzenie legendy zaczęte myślnikiem za wzorem w punkcie** (`FormulaLegend.TryAbsorbDashedIntroduction`):
+  „– gdzie poszczególne symbole oznaczają:” za wzorem stojącym w punkcie otwierało tiret, a opisy symboli wychodziły
+  pod nim jako `fragment`. Myślnik wiąże wiersz ze wzorem, więc wiersz jest teraz wprowadzeniem legendy wzoru, a opisy
+  symboli — jej pozycjami, jak za wzorem stojącym wprost w ustępie.
+  - Korpus DOCX: zmienia się 1 eksport (300744) — 37 opisów symboli zamiast fragmentów, 2 tirety mniej; zgodność ze
+    schematem bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

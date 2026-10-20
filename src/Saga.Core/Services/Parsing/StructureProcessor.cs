@@ -505,6 +505,10 @@ namespace Saga.Core.Services.Parsing
                     return true;
 
                 case ParagraphKind.Tiret:
+                    // „– gdzie poszczególne symbole oznaczają:" za wzorem to wprowadzenie jego legendy, nie tiret.
+                    if (DeepestUnit(context) is { } formulaOwner && FormulaLegend.TryAbsorbDashedIntroduction(formulaOwner, text))
+                        return true;
+
                     if (TryHandleStylelessWrapUp(context, classification, text, sourceStyleId))
                         return true;
 

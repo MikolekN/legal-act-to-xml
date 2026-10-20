@@ -53,6 +53,24 @@ namespace Saga.Core.Services.Parsing
             return true;
         }
 
+        /// <summary>
+        /// Wprowadzenie legendy zaczęte myślnikiem („– gdzie poszczególne symbole oznaczają:" — 300744_2694324): myślnik
+        /// łączy je ze wzorem, za którym stoi, więc wiersz nie otwiera tiretów. Dołącza je do wzoru, gdy ten nie ma
+        /// jeszcze legendy; false, gdy wiersz nie jest takim wprowadzeniem.
+        /// </summary>
+        internal static bool TryAbsorbDashedIntroduction(BaseEntity unit, string text)
+        {
+            if (unit.Continuation.LastOrDefault()?.Formula is not { LegendIntroduction: null, Legend.Count: 0 } formula)
+                return false;
+
+            text = text.Trim();
+            if (!LeadingDash.IsMatch(text) || !Introduction.IsMatch(LeadingDash.Replace(text, string.Empty, 1)))
+                return false;
+
+            formula.LegendIntroduction = text;
+            return true;
+        }
+
         private static FormulaSymbol? Describe(string text, FormulaSymbol? leadingSymbol)
         {
             // Symbol jako równanie na początku wiersza: reszta wiersza, bez myślnika, to objaśnienie.

@@ -118,6 +118,27 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void DashAfterAFormulaInAPoint_IntroducesItsLegend()
+        {
+            // Korpus: 300744_2694324 art. 12b ust. 1c — wzór stoi w punkcie, a „– gdzie …" otwierało pod nim tiret,
+            // w którym legenda rozpadała się na fragmenty.
+            var paragraph = FirstParagraph(Parse(
+                Text("Art. 1. 1. Wysokość składki ustala się:"),
+                Text("1) zgodnie ze wzorem:"),
+                Formula("S=W∙C"),
+                Text("– gdzie poszczególne symbole oznaczają:"),
+                Text("S – wysokość składki,"),
+                Text("W – wolumen gazu."),
+                Text("2. Składkę uiszcza się w terminie 14 dni.")));
+
+            var point = Assert.Single(paragraph.Points);
+            Assert.Empty(point.Letters);
+            var formula = Assert.Single(point.Continuation).Formula!;
+            Assert.Equal("– gdzie poszczególne symbole oznaczają:", formula.LegendIntroduction);
+            Assert.Equal(new[] { "S", "W" }, formula.Legend.Select(symbol => symbol.Symbol));
+        }
+
+        [Fact]
         public void DashAfterALegendEntryWithAColon_OpensTirets()
         {
             // Korpus: 357032_3162287 — „Sw – oznacza:" i dwa myślniki: wprowadzeniem jest wiersz legendy.
