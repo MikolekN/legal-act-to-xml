@@ -30,6 +30,7 @@ namespace Saga.Core.Tests
         // Spoza wzorców klasyfikatora, a jednak oznaczenie.
         [InlineData("A) wyliczenie wersalikiem,")]
         [InlineData("l) litera w miejscu punktu,")]
+        [InlineData("ł[1]) litera wstawiona za „ł)” z indeksem górnym,")]
         [InlineData("3-5. (uchylone)")]
         [InlineData("3.8. Zajęcia dodatkowe")]
         [InlineData("2.1 wykorzystuje umiejętności cyfrowe;")]
@@ -71,6 +72,28 @@ namespace Saga.Core.Tests
             var paragraph = document.Articles.Single().Paragraphs.Single();
             Assert.Equal(new[] { "1", "2" }, paragraph.Points.Select(point => point.Number?.Value));
             Assert.Equal("zdanie bez oznaczenia jednostki", Assert.Single(paragraph.Points[0].Continuation).Text);
+        }
+
+        [Fact]
+        public void PolishLettersWithASuperscript_InTheLetterStyle_AreLetters()
+        {
+            // Korpus: 317038_2843903 — „ł[1])" i „ł[2])" za „ł)": wzorzec litery zna tylko „[a-z]", a kształt
+            // oznaczenia nie znał indeksu za literą, więc pierwsza wychodziła częścią wspólną przerywającą
+            // wyliczenie, a druga dalszą treścią litery „ł".
+            var document = Parse(
+                Block("Art. 4. Płatnikami składek są:"),
+                Block("1) w odniesieniu do osób:", "PKT"),
+                Block("l) bezrobotnych – starosta,", "LIT"),
+                Block("ł) pobierających zasiłek – powiatowy urząd pracy,", "LIT"),
+                Block("ł[1]) pobierających świadczenie integracyjne – centrum integracji społecznej,", "LIT"),
+                Block("ł[2]) odbywających studia podyplomowe – powiatowy urząd pracy,", "LIT"),
+                Block("m) pozostałych – Zakład.", "LIT"));
+
+            var point = document.Articles.Single().Paragraphs.Single().Points.Single();
+            Assert.Equal(new[] { "lit_l", "lit_ł", "lit_ł[1]", "lit_ł[2]", "lit_m" },
+                point.Letters.Select(letter => letter.Id![(letter.Id!.LastIndexOf("__", StringComparison.Ordinal) + 2)..]));
+            Assert.DoesNotContain(point.CommonParts, part => part.Type == CommonPartType.WrapUp);
+            Assert.All(point.Letters, letter => Assert.Empty(letter.Continuation));
         }
 
         [Fact]

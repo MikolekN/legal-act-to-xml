@@ -1327,6 +1327,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   wygrywa ze stylem). Myślnik zaczyna i tiret, i część wspólną, więc o nim nadal rozstrzyga styl.
   - Korpus DOCX: 12 akapitów w 7 dokumentach; ocena korpusu 2160 → 2163 z 2321, zgodność ze schematem bez zmian
     (2013).
+- **Litera z indeksem górnym po polskiej literze**: litery „ł[1])”, „ł[2])” wstawione za „ł)” wzorzec litery
+  odczytuje tylko ze stylu, a kształt oznaczenia nie znał indeksu za literą — akapit uznany za pozbawiony oznaczenia
+  wychodził częścią wspólną przerywającą wyliczenie albo dalszą treścią poprzedniej litery, w pomieszanej kolejności.
+  Kształt oznaczenia przyjmuje teraz indeks górny między literami a nawiasem.
+  - Korpus DOCX: 317038 i 360701 (art. 4 pkt 2 lit. ł[1], ł[2]); zgodność ze schematem bez zmian (2013 z 2321).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
