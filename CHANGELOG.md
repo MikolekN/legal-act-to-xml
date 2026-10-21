@@ -1341,6 +1341,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus DOCX: 8 tekstów jednolitych; ocena korpusu 2176 → 2179 z 2321. Zgodność ze schematem 2013 → 2012:
     pominięte przepisy zmieniające „Art. 480–524. (pominięte)” w 330983 wracają do eksportu jako zakres artykułów,
     który wyprzedza dzisiejszą kopię schematu (ADR-0097).
+- **Sklejanie wierszy PDF z aktów urzędowych**: skład Dziennika Ustaw zostawia czasem za dywizem na końcu wiersza glif
+  odstępu („moto- ”), więc wiersz nie kończył się dywizem i sklejenie wstawiało odstęp („moto- rowerów”) — tam, gdzie
+  bez glifu powstaje „moto-rowerów” (zachowanie dywizu bez zmian, decyzja z 2026-07-19); odstępy z końca wiersza nie
+  podwajają się już przy sklejeniu. Dywiz zawieszony rozpoznaje spójnik w następnym wierszu („Tele- i Radiokomunikacji”)
+  — także bez glifu odstępu, gdzie dotąd powstawało „Tele-i”. Formuła podstawy prawnej („…, co następuje:”) kończy
+  akapit: akapit bez oznaczenia za nią („W sądach powszechnych zostały zwolnione:”, M.P. 2026 poz. 994) skład oddziela
+  tylko wcięciem i był sklejany z podstawą, która przez to nie była rozpoznawana.
+  - Korpus PDF: 32 dokumenty więcej z `podstawa-prawna`, 7 z przepisem obwieszczenia; 3 wyrazy sklejone bez zbędnego
+    odstępu; pozostałe zmiany to odstępy podwójne zamienione na pojedyncze (2121 eksportów); w pełni zgodnych z DOCX 1748 → 1755. Korpus DOCX i TXT bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

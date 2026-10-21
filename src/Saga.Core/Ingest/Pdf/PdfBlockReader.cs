@@ -582,6 +582,7 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && IsTitleZoneBoundary(line, titleZone))
                     || (forceBoundary is null && IsClosingLineBoundary(line, prev, dominantLeft))
                     || (forceBoundary is null && AnnouncementCommonPartPattern.IsMatch(line.Text))
+                    || (forceBoundary is null && LegalBasisEndPattern.IsMatch(prev.Text))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
                     || (forceBoundary is null && line.PageNumber == prev.PageNumber
@@ -602,7 +603,14 @@ namespace Saga.Core.Ingest.Pdf
                     // odróżnić dywizu złożenia („społeczno-gospodarczy") od dzielenia wyrazów składem
                     // („posta-nowienia"); usuwanie scala złożenia NIEODWRACALNIE, zachowanie zostawia
                     // widoczny i odwracalny artefakt — mniejsza szkoda dla wierności tekstu prawnego.
-                    if (buffer.Length > 0 && buffer[^1] == '-')
+                    // Glif odstępu, który skład zostawia na końcu wiersza (także za dywizem: „moto- "), nie wchodzi
+                    // do sklejenia — o odstępie między wierszami decyduje ta reguła, nie strumień PDF. Dywiz
+                    // zawieszony („Tele- i Radiokomunikacji", „dwu- lub trzyletni") rozpoznaje spójnik na początku
+                    // następnego wiersza: zostaje za nim odstęp.
+                    while (buffer.Length > 0 && buffer[^1] == ' ')
+                        buffer.Length--;
+
+                    if (buffer.Length > 0 && buffer[^1] == '-' && !SuspendedHyphenFollowerPattern.IsMatch(line.Text))
                     {
                         buffer.Append(line.Text);
                     }
@@ -704,6 +712,21 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         private static readonly Regex AnnouncementCommonPartPattern = new(
             @"^oraz\s+zmian\s+wynikających\s+z\s+prze", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Formuła kończąca podstawę prawną („… zarządza się, co następuje:", „obwieszcza się, co następuje:"). Za nią
+        /// zawsze zaczyna się nowy akapit; gdy nie ma oznaczenia („W sądach powszechnych zostały zwolnione:"), skład
+        /// Dziennika i Monitora oddziela go tylko wcięciem pierwszego wiersza, którego granice bloków nie czytają.
+        /// </summary>
+        private static readonly Regex LegalBasisEndPattern = new(
+            @"\bco\s+następuje\s*:\s*$", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Spójnik za dywizem zawieszonym („Tele- i Radiokomunikacji", „krótko- lub długoterminowe", „od pięcio- do
+        /// dziesięcioletnich") — początek wiersza po dywizie, który nie dzieli wyrazu.
+        /// </summary>
+        private static readonly Regex SuspendedHyphenFollowerPattern = new(
+            @"^(?:i|lub|albo|oraz|czy|bądź|ani|do)\s", RegexOptions.Compiled);
 
         /// <summary>Miejsce w strefie tytułowej bloku, który zaczyna się wierszem <paramref name="line"/>.</summary>
         private static TitleZone NextTitleZone(PdfTextLine line, TitleZone previous)

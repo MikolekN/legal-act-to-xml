@@ -97,6 +97,56 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TrailingHyphen_FollowedByASpaceGlyph_IsJoinedDirectly()
+        {
+            // Dz. U. 2026 poz. 1209: składacz zostawił za dywizem na końcu wiersza glif odstępu („moto- ") — wiersz
+            // kończy się wtedy spacją, a nie dywizem, i sklejenie wstawiało drugą („moto- rowerów").
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Zwrot kosztów używania motocykli i moto- ", 57, 700)
+                .AddText("rowerów następuje na wniosek.", 57, 686)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains("motocykli i moto-rowerów następuje", blocks[0].Text);
+        }
+
+        [Theory]
+        // Korpus PDF: 295666_2708885, 329307_2940144 — „Tele- i Radiokomunikacji" z glifem odstępu za dywizem i bez niego.
+        [InlineData("Art. 1. Instytut Tele- ")]
+        [InlineData("Art. 1. Instytut Tele-")]
+        public void SuspendedHyphen_AtTheLineEnd_KeepsItsSpace(string firstLine)
+        {
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText(firstLine, 57, 700)
+                .AddText("i Radiotechniki prowadzi badania.", 57, 686)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains("Instytut Tele- i Radiotechniki prowadzi", blocks[0].Text);
+        }
+
+        [Fact]
+        public void LegalBasisFormula_EndsTheParagraph_EvenWithoutADesignationAfterIt()
+        {
+            // M.P. 2026 poz. 994: za „obwieszcza się, co następuje:" akapit bez oznaczenia, oddzielony w składzie tylko
+            // wcięciem pierwszego wiersza — sklejony z podstawą prawną, która przez to nie była rozpoznawana.
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("Na podstawie art. 20a § 4 ustawy z dnia 27 lipca 2001 r. – Prawo o ustroju sądów", 57, 700)
+                .AddText("powszechnych obwieszcza się, co następuje:", 57, 686)
+                .AddText("W sądach powszechnych zostały zwolnione:", 70, 672)
+                .AddText("1) stanowisko sędziego sądu okręgowego w Sądzie Okręgowym w Bydgoszczy;", 57, 658)
+                .AddText("2) stanowisko sędziego sądu okręgowego w Sądzie Okręgowym w Krakowie.", 57, 644)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.EndsWith("obwieszcza się, co następuje:", blocks[0].Text);
+            Assert.Equal("W sądach powszechnych zostały zwolnione:", blocks[1].Text);
+        }
+
+        [Fact]
         public void TrailingHyphen_BeforeUppercase_JoinsCompoundName()
         {
             var pdf = new TestPdfBuilder().AddPage()
