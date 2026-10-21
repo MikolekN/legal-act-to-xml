@@ -163,6 +163,41 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TextSetAcrossThePage_IsReadInItsOwnLines()
+        {
+            // M.P. 2026 poz. 948: tabela załącznika złożona w poprzek strony pionowej — tekst obrócony o ćwierć obrotu.
+            // Czytany w układzie strony dawał kolumny pojedynczych liter („z ar o yt zs ok").
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddRotatedText("Art. 1. Pierwszy przepis złożony w poprzek strony.", 100, 100)
+                .AddRotatedText("Art. 2. Drugi przepis złożony w poprzek strony.", 114, 100)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Equal(new[] { "Art. 1. Pierwszy przepis złożony w poprzek strony.", "Art. 2. Drugi przepis złożony w poprzek strony." },
+                blocks.Select(b => b.Text.Trim()));
+        }
+
+        [Fact]
+        public void TableSetAcrossThePage_IsReadByItsRowsAndColumns()
+        {
+            // Obramowanie obraca się razem z tekstem: kolumny tabeli to w układzie strony linie poziome, wiersze — pionowe.
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddRotatedText("Tabela – zestawienie kosztów programu wieloletniego", 80, 100)
+                .AddGrid(rows: [100, 300, 500], columns: [95, 115, 135])
+                .AddRotatedText("Część", 111, 110)
+                .AddRotatedText("Kwota", 111, 310)
+                .AddRotatedText("1", 131, 110)
+                .AddRotatedText("500 zł", 131, 310)
+                .Build();
+
+            var cells = Read(pdf).Where(b => b.TableCell is not null)
+                .Select(b => $"{b.TableCell!.Row}:{b.TableCell.Column}={b.Text.Trim()}");
+
+            Assert.Equal(new[] { "0:0=Część", "0:1=Kwota", "1:0=1", "1:1=500 zł" }, cells);
+        }
+
+        [Fact]
         public void TrailingHyphen_BeforeUppercase_JoinsCompoundName()
         {
             var pdf = new TestPdfBuilder().AddPage()

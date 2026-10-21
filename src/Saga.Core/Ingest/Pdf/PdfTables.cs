@@ -1,5 +1,6 @@
 #nullable enable
 using UglyToad.PdfPig.Content;
+using UglyToad.PdfPig.Core;
 
 namespace Saga.Core.Ingest.Pdf
 {
@@ -65,9 +66,15 @@ namespace Saga.Core.Ingest.Pdf
 
         private readonly record struct Segment(bool Horizontal, double At, double From, double To);
 
-        internal static List<PdfTable> Find(Page page)
+        internal static List<PdfTable> Find(Page page) => Find(page, page.Letters, toFrame: null);
+
+        /// <summary>
+        /// Tabele z wybranych liter strony. Dla treści złożonej w poprzek strony litery i obramowanie przychodzą
+        /// w układzie, w którym tekst jest poziomy — <paramref name="toFrame"/> przenosi do niego odcinki obramowania.
+        /// </summary>
+        internal static List<PdfTable> Find(Page page, IReadOnlyList<Letter> letters, Func<PdfRectangle, PdfRectangle>? toFrame)
         {
-            var segments = Segments(page);
+            var segments = Segments(page, toFrame);
             var tables = new List<PdfTable>();
             foreach (var component in Components(segments))
             {
@@ -84,7 +91,7 @@ namespace Saga.Core.Ingest.Pdf
             if (tables.Count == 0)
                 return tables;
 
-            foreach (var letter in page.Letters)
+            foreach (var letter in letters)
             {
                 var x = (letter.StartBaseLine.X + letter.EndBaseLine.X) / 2;
                 var y = letter.StartBaseLine.Y + 0.3 * letter.PointSize;
@@ -104,7 +111,7 @@ namespace Saga.Core.Ingest.Pdf
             return table.Cells.FirstOrDefault(cell => cell.Contains(x, y));
         }
 
-        private static List<Segment> Segments(Page page)
+        private static List<Segment> Segments(Page page, Func<PdfRectangle, PdfRectangle>? toFrame)
         {
             var segments = new List<Segment>();
             foreach (var path in page.Paths)
@@ -114,8 +121,10 @@ namespace Saga.Core.Ingest.Pdf
 
                 foreach (var subpath in path)
                 {
-                    if (subpath.GetBoundingRectangle() is not { } box)
+                    if (subpath.GetBoundingRectangle() is not { } drawn)
                         continue;
+
+                    var box = toFrame is null ? drawn : toFrame(drawn);
 
                     if (box.Height <= ThinStroke && box.Width > ThinStroke)
                         segments.Add(new Segment(true, (box.Bottom + box.Top) / 2, box.Left, box.Right));

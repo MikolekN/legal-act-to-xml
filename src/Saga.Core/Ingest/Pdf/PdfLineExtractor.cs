@@ -23,8 +23,11 @@ namespace Saga.Core.Ingest.Pdf
 
         public static List<PdfTextLine> ExtractLines(Page page) => ExtractLines(page, page.Letters);
 
-        /// <summary>Wiersze z wybranych liter strony — tekst poza tabelami albo tekst jednej komórki.</summary>
-        public static List<PdfTextLine> ExtractLines(Page page, IReadOnlyList<Letter> letters)
+        /// <summary>
+        /// Wiersze z wybranych liter strony — tekst poza tabelami albo tekst jednej komórki. Treść złożona w poprzek strony
+        /// przychodzi w układzie, w którym jest pozioma (<see cref="PdfRotation"/>); jej wysokość podaje <paramref name="frameHeight"/>.
+        /// </summary>
+        public static List<PdfTextLine> ExtractLines(Page page, IReadOnlyList<Letter> letters, double? frameHeight = null)
         {
             if (letters.Count == 0)
                 return new List<PdfTextLine>();
@@ -33,7 +36,7 @@ namespace Saga.Core.Ingest.Pdf
             var lines = new List<PdfTextLine>(clusters.Count);
             foreach (var cluster in clusters)
             {
-                var line = BuildLine(cluster, page);
+                var line = BuildLine(cluster, page, frameHeight ?? page.Height);
                 if (!string.IsNullOrWhiteSpace(line.Text))
                     lines.Add(line);
             }
@@ -86,7 +89,7 @@ namespace Saga.Core.Ingest.Pdf
             return clusters;
         }
 
-        private static PdfTextLine BuildLine(List<Letter> cluster, Page page)
+        private static PdfTextLine BuildLine(List<Letter> cluster, Page page, double pageHeight)
         {
             // Rozmiar tekstu podstawowego i jego baza (dominanta Y liter tego rozmiaru; remis — NIŻSZE Y, bo superscript
             // ma bazę podniesioną).
@@ -166,7 +169,7 @@ namespace Saga.Core.Ingest.Pdf
                 StartX = ordered[0].StartBaseLine.X,
                 BaselineY = baselineY,
                 DominantSize = dominantSize,
-                PageHeight = page.Height,
+                PageHeight = pageHeight,
                 MaxGap = maxGap,
             };
         }

@@ -12,7 +12,8 @@ namespace Saga.Core.Tests
     /// </summary>
     internal sealed class TestPdfBuilder
     {
-        internal sealed record TextRun(string Text, double X, double Y, double Size);
+        /// <summary>Tekst w wierszu; <c>Rotated</c> — obrócony o ćwierć obrotu, biegnący w górę strony (treść w poprzek strony).</summary>
+        internal sealed record TextRun(string Text, double X, double Y, double Size, bool Rotated = false);
 
         /// <summary>Odcinek rysowany kreską — obramowanie tabeli.</summary>
         internal sealed record Rule(double X1, double Y1, double X2, double Y2);
@@ -62,11 +63,19 @@ namespace Saga.Core.Tests
         }
 
         /// <summary>Dodaje tekst na OSTATNIEJ stronie. Współrzędne w punktach; Y rośnie do góry.</summary>
-        public TestPdfBuilder AddText(string text, double x, double y, double size = 11)
+        public TestPdfBuilder AddText(string text, double x, double y, double size = 11) => Add(new TextRun(text, x, y, size));
+
+        /// <summary>
+        /// Dodaje tekst obrócony o ćwierć obrotu (biegnie w górę strony od punktu x, y; wiersze następują w prawo) —
+        /// tak skład stawia szeroką tabelę na stronie pionowej.
+        /// </summary>
+        public TestPdfBuilder AddRotatedText(string text, double x, double y, double size = 11) => Add(new TextRun(text, x, y, size, Rotated: true));
+
+        private TestPdfBuilder Add(TextRun run)
         {
             if (_pages.Count == 0)
                 AddPage();
-            _pages[^1].Add(new TextRun(text, x, y, size));
+            _pages[^1].Add(run);
             return this;
         }
 
@@ -131,7 +140,7 @@ namespace Saga.Core.Tests
             foreach (var run in runs)
             {
                 sb.Append(CultureInfo.InvariantCulture,
-                    $"BT /F1 {Pt(run.Size)} Tf 1 0 0 1 {Pt(run.X)} {Pt(run.Y)} Tm (");
+                    $"BT /F1 {Pt(run.Size)} Tf {(run.Rotated ? "0 1 -1 0" : "1 0 0 1")} {Pt(run.X)} {Pt(run.Y)} Tm (");
                 foreach (var c in run.Text)
                 {
                     if (c == '(' || c == ')' || c == '\\')

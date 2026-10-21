@@ -1364,6 +1364,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   kończył go już po samej dacie.
   - Korpus DOCX: 3 zdania „Z dniem … r. …” w 3 dokumentach już nie rozcięte; ocena korpusu bez zmian (2179). Uchwały
     zmieniającej korpus nie ma — odczyt sprawdzony na M.P. 2026 poz. 948.
+- **Treść PDF złożona w poprzek strony**: skład stawia szeroką tabelę załącznika na stronie pionowej tekstem obróconym
+  o ćwierć obrotu (bez obrotu strony — M.P. 2026 poz. 948, tabela mierników programu). Czytana w układzie strony dawała
+  kolumny pojedynczych liter („z ar o yt zs ok”, 425 słów zgubionych i 1598 nadmiarowych w jednym akcie). Strona, na której
+  litery obrócone przeważają, czyta je teraz w układzie, w którym są poziome — razem z obramowaniem tabeli, więc tabela
+  wychodzi wierszami i kolumnami; reszta strony (nagłówek dziennika) czyta się jak dotąd. Pojedyncza komórka z pionowym
+  napisem w zwykłej tabeli strony nie przestawia.
+  - Korpus PDF bez zmian (strony z treścią w poprzek nie występują w PDF-ach z korpusu DOCX); M.P. 2026 poz. 948: słów
+    zgubionych 425 → 39 (nagłówki dziennika), nadmiarowych 1598 → 15.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

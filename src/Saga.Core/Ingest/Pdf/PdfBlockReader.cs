@@ -5,6 +5,8 @@ using Saga.Core.Exceptions;
 using Saga.Core.Services;
 using Saga.Core.Services.Parsing;
 using UglyToad.PdfPig;
+using UglyToad.PdfPig.Content;
+using UglyToad.PdfPig.Core;
 
 namespace Saga.Core.Ingest.Pdf
 {
@@ -249,23 +251,44 @@ namespace Saga.Core.Ingest.Pdf
                     replacementChars += letter.Value.Count(c => c == '�');
                 }
 
-                // Tabela z obramowaniem: jej litery czyta się komórkami, nie wierszami strony.
-                var pageTables = PdfTables.Find(page);
+                // Treść złożona w poprzek strony (szeroka tabela na stronie pionowej) czyta się w układzie, w którym jest
+                // pozioma, za resztą strony; obramowanie tabeli należy wtedy do niej, więc w układzie strony tabel się nie szuka.
+                var turned = PdfRotation.Turned(page.Letters);
+                if (turned is { } rotated)
+                {
+                    var direction = rotated.Direction;
+                    var (width, height) = (page.Width, page.Height);
+                    var inFrame = rotated.Turned.ToHashSet();
+                    allLines.AddRange(PdfLineExtractor.ExtractLines(page, page.Letters.Where(letter => !inFrame.Contains(letter)).ToList())
+                        .Select(Normalized));
+                    ReadLetters(page, rotated.Turned.Select(letter => PdfRotation.Letter(letter, direction, width, height)).ToList(),
+                        box => PdfRotation.Rectangle(box, direction, width, height), frameHeight: width);
+                }
+                else
+                {
+                    ReadLetters(page, page.Letters, toFrame: null, frameHeight: page.Height);
+                }
+            }
+
+            // Tabela z obramowaniem: jej litery czyta się komórkami, nie wierszami strony.
+            void ReadLetters(Page page, IReadOnlyList<Letter> letters, Func<PdfRectangle, PdfRectangle>? toFrame, double frameHeight)
+            {
+                var pageTables = PdfTables.Find(page, letters, toFrame);
                 var inTables = pageTables.SelectMany(table => table.Cells).SelectMany(cell => cell.Letters).ToHashSet();
-                var freeLetters = inTables.Count == 0 ? page.Letters : page.Letters.Where(letter => !inTables.Contains(letter)).ToList();
-                allLines.AddRange(PdfLineExtractor.ExtractLines(page, freeLetters).Select(Normalized));
+                var freeLetters = inTables.Count == 0 ? letters : letters.Where(letter => !inTables.Contains(letter)).ToList();
+                allLines.AddRange(PdfLineExtractor.ExtractLines(page, freeLetters, frameHeight).Select(Normalized));
                 foreach (var table in pageTables)
                 {
                     foreach (var cell in table.Cells)
-                        cell.Lines.AddRange(PdfLineExtractor.ExtractLines(page, cell.Letters).Select(Normalized));
+                        cell.Lines.AddRange(PdfLineExtractor.ExtractLines(page, cell.Letters, frameHeight).Select(Normalized));
                     tables.Add(new PdfTextLine
                     {
                         Text = TablePlaceholder,
-                        PageNumber = i,
+                        PageNumber = page.Number,
                         StartX = table.Left,
                         BaselineY = table.Top,
                         DominantSize = double.MaxValue,
-                        PageHeight = page.Height,
+                        PageHeight = frameHeight,
                         Table = table,
                     });
                 }
