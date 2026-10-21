@@ -198,6 +198,24 @@ namespace Saga.Core.Tests
             Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName.EndsWith("tiret", StringComparison.Ordinal));
         }
 
+        [Fact]
+        public void DesignatedParagraphsInCommonPartStyle_AreTheUnitsTheyDesignate()
+        {
+            // Korpus: 330984_2944694 — pkt 4 i 5 art. 4a złożone stylem części wspólnej punktów wypadały z wyliczenia
+            // („4) (uchylony)" jako część wspólna, pkt 5 przepadał w niej).
+            var paragraph = FirstParagraph(Parse(
+                Text("Art. 1. Za pośrednictwem systemu Centralna Informacja:"),
+                Text("1) udostępnia informacje,"),
+                Text("2) wydaje kopie dokumentów,"),
+                Text("3) (uchylony)"),
+                Text("4) (uchylony)", PointsCommonPart),
+                Text("5) przekazuje informacje o oddziałach,", PointsCommonPart),
+                Text("6) potwierdza otrzymanie informacji.")));
+
+            Assert.Equal(new[] { "1", "2", "3", "4", "5", "6" }, paragraph.Points.Select(p => p.Number!.Value));
+            Assert.DoesNotContain(paragraph.CommonParts, part => part.Type == CommonPartType.WrapUp);
+        }
+
         [SchemaPlFact]
         public void ActWithCommonPartsWithoutDashes_IsSchemaValid_AsAWhole()
         {

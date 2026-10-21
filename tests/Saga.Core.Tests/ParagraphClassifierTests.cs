@@ -28,6 +28,19 @@ namespace Saga.Core.Tests
             Assert.Empty(result.Penalties);
         }
 
+        [Theory]
+        // Korpus: 330984_2944694 („4) (uchylony)"), 351826_3166873 („ba) biogazu,"), 307514_2780745.
+        [InlineData("4) (uchylony)", "CZWSPPKTczwsplnapunktw", ParagraphKind.Point)]
+        [InlineData("ba) biogazu,", "CZWSPLITczwsplnaliter", ParagraphKind.Letter)]
+        [InlineData("– w przypadku braku zgody.", "CZWSPPKTczwsplnapunktw", ParagraphKind.WrapUp)]
+        [InlineData("ulega obniżeniu o ten okres.", "CZWSPPKTczwsplnapunktw", ParagraphKind.WrapUp)]
+        public void Classify_DesignationInCommonPartStyle_ContentWins(string text, string style, ParagraphKind expected)
+        {
+            var result = Classify(text, style);
+
+            Assert.Equal(expected, result.Kind);
+        }
+
         [Fact]
         public void Classify_PointByText_NoSpace_ReturnsPoint()
         {

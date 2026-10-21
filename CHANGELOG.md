@@ -1320,6 +1320,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   przepisu.
   - Korpus DOCX: 327653 i 335675 (art. 17 ust. 8); ocena korpusu 2158 → 2160 z 2321, zgodność ze schematem
     bez zmian (2013).
+- **Oznaczona jednostka w stylu części wspólnej**: styl części wspólnej (`CZ_WSP_*`) rozstrzygał sam, więc punkt czy
+  litera złożone nim („4) (uchylony)”, „b) biogazu rolniczego,”, „c)[*)] w odniesieniu do wodoru:”) wypadały
+  z wyliczenia — jako część wspólna przerywająca wyliczenie albo dalszy ciąg poprzedniej jednostki. Część wspólna nie ma
+  oznaczenia: akapit w jej stylu zaczęty oznaczeniem artykułu, ustępu, punktu albo litery jest tą jednostką (treść
+  wygrywa ze stylem). Myślnik zaczyna i tiret, i część wspólną, więc o nim nadal rozstrzyga styl.
+  - Korpus DOCX: 12 akapitów w 7 dokumentach; ocena korpusu 2160 → 2163 z 2321, zgodność ze schematem bez zmian
+    (2013).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

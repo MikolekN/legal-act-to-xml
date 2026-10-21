@@ -187,8 +187,15 @@ namespace Saga.Core.Services.Classify
 
             // WrapUp — priorytet przed pozostałą logiką.
             // Wykrywany wyłącznie przez styl (CZ_WSP_*); tekst jedynie potwierdza lub obniża pewność.
+            // Część wspólna nie ma oznaczenia: akapit w jej stylu zaczęty oznaczeniem jednostki („4) (uchylony)",
+            // „b) biogazu rolniczego,") jest tą jednostką — treść wygrywa ze stylem. Myślnik zaczyna i tiret,
+            // i część wspólną, więc tu nie rozstrzyga.
             if (styleType == "WRAPUP")
+            {
+                if (MatchRegex(text, input.SectionIsBasicUnit) is { } designated && IsDesignatedEditorialUnit(designated))
+                    return BuildResult(input, styleType, isAmend, ParagraphKind.WrapUp, designated);
                 return BuildWrapUpResult(styleType, isAmend, byStyle: true, IsWrapUpByText(text));
+            }
 
             // Sygnał ze stylu (null gdy AMENDMENT lub nieznany)
             ParagraphKind? styleKind = isAmend ? null : MapStyleToKind(styleType);
@@ -410,6 +417,9 @@ namespace Saga.Core.Services.Classify
                 UnitHeadingStyle => ParagraphKind.UnitHeading,
                 _ => null,
             };
+
+        private static bool IsDesignatedEditorialUnit(ParagraphKind kind) =>
+            kind is ParagraphKind.Article or ParagraphKind.Paragraph or ParagraphKind.Point or ParagraphKind.Letter;
 
         internal static bool IsDesignationStyle(string? styleType) =>
             styleType is ChapterOrSubchapterStyle or TitleOrDivisionStyle or PartOrBookStyle;
