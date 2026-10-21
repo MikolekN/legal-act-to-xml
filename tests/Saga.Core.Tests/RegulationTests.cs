@@ -146,6 +146,27 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void Resolution_WithItsOrganInTitleCase_HasItsTitleZone()
+        {
+            // M.P. 2026 poz. 948: adapter PDF składa nagłówek w jeden wiersz pisany jak nazwa własna (ADR-0090) — wzorzec
+            // nagłówka uchwały znał tylko organ wersalikami, więc strefa tytułowa przepadała (pusty tytuł, organ UNKNOWN).
+            var act = Export(
+            [
+                "Uchwała nr 195 Rady Ministrów",
+                "z dnia 25 września 2026 r.",
+                "zmieniająca uchwałę w sprawie ustanowienia programu wieloletniego",
+                "Na podstawie art. 136 ust. 2 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2025 r. poz. 1483) Rada Ministrów uchwala, co następuje:",
+                "§ 1. Ustanawia się program wieloletni.",
+                "§ 2. Uchwała wchodzi w życie z dniem następującym po dniu ogłoszenia.",
+            ]);
+
+            Assert.Equal("uchwala", act.Name.LocalName);
+            Assert.Equal("Rady Ministrów", act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
+            Assert.Equal("zmieniająca uchwałę w sprawie ustanowienia programu wieloletniego",
+                act.Elements().Single(e => e.Name.LocalName == "tytul").Value);
+        }
+
+        [Fact]
         public void Statute_KeepsItsRootAndArticles()
         {
             var act = Export(

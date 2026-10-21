@@ -147,6 +147,22 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void OverprintedText_IsReadOnce()
+        {
+            // M.P. 2026 poz. 948: skład pogrubia nagłówek, drukując go drugi raz w tym samym miejscu — „Poz. 948" czytało
+            // się „994488", a strefa tytułowa w ogóle nie była rozpoznawana.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Uchwała wchodzi w życie z dniem następującym po dniu ogłoszenia.", 57, 700)
+                .AddText("Art. 2. Organ prowadzi rejestr.", 57, 686)
+                .AddText("Art. 2. Organ prowadzi rejestr.", 57, 686))
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains(blocks, b => b.Text == "Art. 2. Organ prowadzi rejestr.");
+        }
+
+        [Fact]
         public void TrailingHyphen_BeforeUppercase_JoinsCompoundName()
         {
             var pdf = new TestPdfBuilder().AddPage()

@@ -29,7 +29,7 @@ namespace Saga.Core.Ingest.Pdf
             if (letters.Count == 0)
                 return new List<PdfTextLine>();
 
-            var clusters = ClusterIntoLines(letters);
+            var clusters = ClusterIntoLines(WithoutOverprints(letters));
             var lines = new List<PdfTextLine>(clusters.Count);
             foreach (var cluster in clusters)
             {
@@ -40,6 +40,24 @@ namespace Saga.Core.Ingest.Pdf
 
             // Porządek czytania: od góry strony (Y malejąco).
             return lines.OrderByDescending(l => l.BaselineY).ToList();
+        }
+
+        /// <summary>
+        /// Glif nadrukowany drugi raz w tym samym miejscu — skład Monitora Polskiego pogrubia tak oznaczenia i nagłówki
+        /// („Poz. 948", „UCHWAŁA NR 195" dwa razy w tym samym punkcie). Drugi egzemplarz to ta sama litera, a nie kolejna:
+        /// po sortowaniu wzdłuż wiersza wychodziło „994488". Pozycje porównuje się z dokładnością do 0,1 pt.
+        /// </summary>
+        private static IReadOnlyList<Letter> WithoutOverprints(IReadOnlyList<Letter> letters)
+        {
+            var seen = new HashSet<(string Value, long X, long Y)>();
+            var kept = new List<Letter>(letters.Count);
+            foreach (var letter in letters)
+            {
+                if (seen.Add((letter.Value, (long)Math.Round(letter.StartBaseLine.X * 10), (long)Math.Round(letter.StartBaseLine.Y * 10))))
+                    kept.Add(letter);
+            }
+
+            return kept.Count == letters.Count ? letters : kept;
         }
 
         /// <summary>

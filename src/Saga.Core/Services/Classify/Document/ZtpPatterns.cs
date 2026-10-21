@@ -56,14 +56,15 @@ namespace Saga.Core.Services.Classify.Document
             @"(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*[,\)]?)(?:\s+(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*|i|oraz|do|ds|w|z|na|dla|spraw)[,\)]?)*";
 
         // § 138a: uchwała / zarządzenie. Zakotwiczone na $ (jak pozostałe nagłówki) i tak zbudowane,
-        // by NIE łapać zwykłych zdań („Uchwała wchodzi w życie…"): forma mieszana wymaga „Nr",
-        // a po nazwie dopuszczalny jest tylko opcjonalny numer i organ WIELKIMI literami.
+        // by NIE łapać zwykłych zdań („Uchwała wchodzi w życie…"): po nazwie dopuszczalny jest tylko opcjonalny
+        // numer i organ WIELKIMI literami albo pisany jak nazwa własna („Uchwała nr 195 Rady Ministrów" — tak nagłówek
+        // daje adapter PDF, ADR-0090); czasownik prozy małą literą unieważnia dopasowanie.
         internal static readonly Regex ResolutionHeaderPattern = new(
-            @"^(?:UCHWAŁA|Uchwała)(?:\s+(?:NR|Nr|nr)\s*(?<no>[\w/\-\.]+))?(?:\s+[A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ0-9\s/\-\.,]*)?$", RegexOptions.Compiled);
+            @"^(?:UCHWAŁA|Uchwała)(?:\s+(?:NR|Nr|nr)\s*(?<no>[\w/\-\.]+))?(?:\s+(?:[A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ0-9\s/\-\.,]*|" + TitleCaseOrgan + @"))?$", RegexOptions.Compiled);
 
         /// <summary>§ 138a: zarządzenie (nr opcjonalny).</summary>
         internal static readonly Regex OrderHeaderPattern = new(
-            @"^(?:ZARZĄDZENIE|Zarządzenie)(?:\s+(?:NR|Nr|nr)\s*(?<no>[\w/\-\.]+))?(?:\s+[A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ0-9\s/\-\.,]*)?$", RegexOptions.Compiled);
+            @"^(?:ZARZĄDZENIE|Zarządzenie)(?:\s+(?:NR|Nr|nr)\s*(?<no>[\w/\-\.]+))?(?:\s+(?:[A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ0-9\s/\-\.,]*|" + TitleCaseOrgan + @"))?$", RegexOptions.Compiled);
 
         /// <summary>
         /// Organ wydający w osobnej linii (§ 120 ust. 4 — rozporządzenie).

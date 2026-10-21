@@ -1350,6 +1350,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   tylko wcięciem i był sklejany z podstawą, która przez to nie była rozpoznawana.
   - Korpus PDF: 32 dokumenty więcej z `podstawa-prawna`, 7 z przepisem obwieszczenia; 3 wyrazy sklejone bez zbędnego
     odstępu; pozostałe zmiany to odstępy podwójne zamienione na pojedyncze (2121 eksportów); w pełni zgodnych z DOCX 1748 → 1755. Korpus DOCX i TXT bez zmian.
+- **Monitor Polski w PDF: nadruk i nagłówek uchwały**: skład Monitora Polskiego pogrubia oznaczenia, drukując glif drugi
+  raz w tym samym miejscu — po sortowaniu wzdłuż wiersza „Poz. 948” czytało się „994488”. Glif powtórzony w tym samym
+  punkcie (0,1 pt) czyta się raz. Nagłówek uchwały i zarządzenia z organem pisanym jak nazwa własna („Uchwała nr 195 Rady
+  Ministrów” — tak wiersz składa adapter PDF, ADR-0090) jest nagłówkiem rodzaju, jak dotąd nagłówek rozporządzenia;
+  wcześniej strefa tytułowa uchwały z PDF przepadała (pusty tytuł, organ `UNKNOWN`).
+  - Korpus PDF: 2 dokumenty z nadrukiem czytane poprawnie („magistra” zamiast „mmaaggiissttrraa”); korpus DOCX bez zmian.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
