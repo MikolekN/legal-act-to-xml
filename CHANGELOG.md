@@ -1302,6 +1302,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   z eksportu. W korpusie 6 z 14 049 odwołań.
   - Korpus DOCX: 6 odnośników w 6 plikach wraca do eksportu; zgodność ze schematem bez zmian (2013 z 2321).
     Ocena korpusu: 2152 → 2158.
+- **Tekst w inteligentnych tagach i nawiasy znaczników**: przebiegi w inteligentnym tagu Worda 2003 (`w:smartTag`,
+  np. „metricconverter” wokół „1 m²”) są dla SDK elementami nieznanymi i ich tekst ginął — komórki tabeli wychodziły
+  puste; tag jest teraz rozwijany przy odczycie DOCX. Znacznik odnośnika z literą („3a)”, „a)”) jest znacznikiem, a znacznik,
+  któremu nie odpowiada osadzony odnośnik (w treści odnośnika, z gwiazdkami „3(**)”), wychodzi indeksem górnym —
+  wewnętrzny zapis „[…)]” nie trafia już do eksportu (wzór w nawiasie kwadratowym zostaje tekstem).
+  - Korpus DOCX: 18 plików, 47 indeksów górnych zamiast nawiasów i pustych komórek; zgodność ze schematem i ocena
+    korpusu bez zmian (2013 i 2158 z 2321).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

@@ -517,6 +517,36 @@ namespace Saga.Core.Tests
             Assert.DoesNotContain("[", sentences[1].Value);
         }
 
+        [Theory]
+        // 345469_3071716: znacznik odnośnika wstawionego („3a)") bez odnośnika w akcie — indeksem górnym, nie „[3a)]".
+        [InlineData("Art. 1. Obrót paliwami opałowymi[3a)] wymaga zgłoszenia.", "3a)", "Obrót paliwami opałowymi3a) wymaga zgłoszenia.")]
+        // Znacznik z gwiazdkami po numerze, jak w objaśnieniach tabel.
+        [InlineData("Art. 1. Stawka podstawowa[3(**)] obowiązuje.", "3(**)", "Stawka podstawowa3(**) obowiązuje.")]
+        // 297258_2700114: znacznik literowy odnośnika w treści odnośnika („z późn. zm.[a)]").
+        [InlineData("Art. 1. Stosuje się rozporządzenie z późn. zm.[a)] i inne.", "a)", "Stosuje się rozporządzenie z późn. zm.a) i inne.")]
+        public void MarkerWithoutAFootnote_IsASupElement_NeverTheBracketChannel(string line, string sup, string sentence)
+        {
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(new[] { new DocumentBlock { Text = line } }));
+
+            var zdanie = xml.Descendants().Single(e => e.Name.LocalName == "zdanie");
+            Assert.Equal(sup, zdanie.Elements().Single(e => e.Name.LocalName == "sup").Value);
+            Assert.Equal(sentence, zdanie.Value);
+        }
+
+        [Fact]
+        public void FormulaInBrackets_StaysText()
+        {
+            // Nawias ze wzorem kończy się „)]" jak znacznik, ale znacznikiem nie jest.
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(new[]
+            {
+                new DocumentBlock { Text = "Art. 1. Kwota wynosi [D_2022 x (A + B)/n)] złotych." },
+            }));
+
+            var zdanie = xml.Descendants().Single(e => e.Name.LocalName == "zdanie");
+            Assert.Empty(zdanie.Elements());
+            Assert.Equal("Kwota wynosi [D_2022 x (A + B)/n)] złotych.", zdanie.Value);
+        }
+
         [Fact]
         public void ExponentAfterABracket_IsASupElement_LiteralBracketsStay()
         {

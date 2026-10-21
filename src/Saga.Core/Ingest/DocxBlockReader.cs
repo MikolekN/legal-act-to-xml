@@ -85,6 +85,12 @@ namespace Saga.Core.Ingest
             var mainPart = wordDocument.MainDocumentPart ??
                 throw new ParsingException("MainDocumentPart dokumentu jest null - plik moze byc uszkodzony lub pusty.");
 
+            // Inteligentne tagi Worda 2003 ukrywają przebiegi przed SDK — ich tekst ginąłby w każdym odczycie.
+            DocxSmartTags.Unwrap(mainPart.Document);
+            DocxSmartTags.Unwrap(mainPart.FootnotesPart?.Footnotes);
+            foreach (var header in mainPart.HeaderParts)
+                DocxSmartTags.Unwrap(header.Header);
+
             var blocks = new List<DocumentBlock>();
             blocks.AddRange(ReadPageHeaderBlocks(mainPart));
             var footnotes = DocxFootnotes.Read(mainPart);

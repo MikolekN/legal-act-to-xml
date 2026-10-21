@@ -16,8 +16,8 @@ namespace Saga.Core.Services.Converters
     {
         // Znacznik z jednym albo kilkoma numerami: „[3)]", „[1), 2)]", „[13).]".
         private static readonly Regex Marker = FootnoteMarkers.Reference;
-        private static readonly Regex Number = new(@"(?<number>\d+)\)", RegexOptions.Compiled);
-        private static readonly Regex MarkerWithLeadingSpace = new(@"(?:\s*\[[^\[\]]*\d+\)[^\[\]]*\])+", RegexOptions.Compiled);
+        private static readonly Regex Number = new(@"(?<number>\d+[a-z]?)\)", RegexOptions.Compiled);
+        private static readonly Regex MarkerWithLeadingSpace = new(@"(?:\s*\[[^\[\]]*\d+[a-z]?\)[^\[\]]*\])+", RegexOptions.Compiled);
 
         private static readonly HashSet<string> Citations =
         [

@@ -13,9 +13,10 @@ namespace Saga.Core.Services
 
         /// <summary>
         /// Znacznik w każdej postaci spotykanej w aktach: nawias z co najmniej jednym numerem odnośnika —
-        /// także z interpunkcją wciągniętą do indeksu górnego („[1),]", „[13).]") i z kilkoma numerami.
+        /// także z interpunkcją wciągniętą do indeksu górnego („[1),]", „[13).]"), z kilkoma numerami i z numerem
+        /// odnośnika wstawionego („[3a)]").
         /// </summary>
-        internal const string ReferencePattern = @"\[[^\[\]]*\d+\)[^\[\]]*\]";
+        internal const string ReferencePattern = @"\[[^\[\]]*\d+[a-z]?\)[^\[\]]*\]";
 
         internal static readonly Regex Reference = new(ReferencePattern, RegexOptions.Compiled);
 
@@ -32,7 +33,7 @@ namespace Saga.Core.Services
 
         // „[1 15)]": indeks górny oznaczenia i odnośnik sąsiadujące w DOCX zlewają się w jeden nawias.
         private static readonly Regex Marker = new(
-            @"\[(?:(?<superscript>\d+[a-z]*)\s+)?[^\[\]]*\d+\)[^\[\]]*\]", RegexOptions.Compiled);
+            @"\[(?:(?<superscript>\d+[a-z]*)\s+)?[^\[\]]*\d+[a-z]?\)[^\[\]]*\]", RegexOptions.Compiled);
 
         /// <summary>
         /// Tekst ze znacznikami zastąpionymi odstępami tej samej długości — pozycje w tekście zostają ważne.

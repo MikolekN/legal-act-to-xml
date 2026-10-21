@@ -46,7 +46,11 @@ namespace Saga.Core.Services.Converters
         // tekstem („[zł/GJ]", „[0,033 × …]") zostaje.
         private static readonly Regex Superscript = new(
             @"(?<=[\p{L}\d])\[(?<index>[0-9a-z]{1,4})\]|(?<=[\p{L}\d)])\[(?<index>\d+,\d+)\]|(?<=\))\[(?<index>\d{1,2})\]"
-            + @"|\[(?<index>\(?\*{1,3}\)?|\(?[IVX]{1,4}\)|\))\]",
+            + @"|\[(?<index>\(?\*{1,3}\)?|\(?[IVX]{1,4}\)|\))\]"
+            // Znacznik, któremu nie odpowiada osadzony odnośnik — w treści odnośnika („z późn. zm.[1)]", „[a)]") albo
+            // z gwiazdkami („[3(**)]") — wychodzi indeksem górnym; kanał tekstowy z nawiasem do eksportu nie trafia. Tylko kształt
+            // znacznika: wzór w nawiasie („[D_2022 x (A + B)/n)]") zostaje tekstem.
+            + @"|\[(?<index>\d+[a-z]?\)(?:\s*[,;]?\s*\d+[a-z]?\))*[.,;]?|\d*\(\*{1,4}\)|[a-z]\))\]",
             RegexOptions.Compiled);
 
         private const string UnitHeadingPrefix = "naglowek-";

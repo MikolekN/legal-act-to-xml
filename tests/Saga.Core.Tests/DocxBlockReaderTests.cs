@@ -571,5 +571,22 @@ namespace Saga.Core.Tests
             Assert.Null(cells["między tabelami"]);
             Assert.Equal(2, cells["druga"]!.Table);
         }
+
+        [Fact]
+        public void SmartTagOfWord2003_KeepsItsRuns()
+        {
+            // 335935_3056933: „1 m²" w inteligentnym tagu „metricconverter" — SDK go nie zna, więc tekst ginął.
+            const string body =
+                @"<w:p><w:r><w:t xml:space=""preserve"">Powierzchnia </w:t></w:r>" +
+                @"<w:smartTag w:uri=""urn:schemas-microsoft-com:office:smarttags"" w:element=""metricconverter"">" +
+                @"<w:smartTagPr><w:attr w:name=""ProductID"" w:val=""1 m2""/></w:smartTagPr>" +
+                @"<w:r><w:t>1 m</w:t></w:r><w:r><w:rPr><w:vertAlign w:val=""superscript""/></w:rPr><w:t>2</w:t></w:r>" +
+                @"</w:smartTag><w:r><w:t>.</w:t></w:r></w:p>";
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXml(body));
+
+            var block = Assert.Single(DocumentBlockReaderFactory.Create(SourceFormat.Docx).ReadBlocks(stream));
+
+            Assert.Equal("Powierzchnia 1 m[2].", block.Text);
+        }
     }
 }
