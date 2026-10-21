@@ -11,6 +11,8 @@ namespace Saga.Core.Services
     {
         private static readonly Regex NumericPrefix = new(@"^(\d+)(.*)$", RegexOptions.Compiled);
 
+        private static readonly Regex DigitsOnly = new(@"^\d+$", RegexOptions.Compiled);
+
         // Indeks górny na końcu numeru — dwa kanały zapisu:
         //   "5a^1"  — separator '^' (zapis historyczny),
         //   "5a[1]" — nawiasy kwadratowe (kanał GetFullText; notacja § 89 ust. 6 ZTP)
@@ -40,6 +42,14 @@ namespace Saga.Core.Services
             {
                 dto.Superscript = supMatch.Groups["sup"].Value.Trim();
                 v = supMatch.Groups["base"].Value.Trim();
+            }
+
+            // Sama litera w indeksie górnym („5[a]") to litera jednostki wstawionej złożona innym krojem — numer „5a"
+            // (odczyt tolerancyjny; numer z literą w indeksie nie jest oznaczeniem ZTP, a schemat go nie przyjmuje).
+            if (dto.Superscript is { Length: > 0 } letters && letters.All(char.IsLower) && DigitsOnly.IsMatch(v.TrimEnd('.')))
+            {
+                v = v.TrimEnd('.') + letters;
+                dto.Superscript = string.Empty;
             }
 
             // Usuń kropkę na końcu i zbędne białe znaki

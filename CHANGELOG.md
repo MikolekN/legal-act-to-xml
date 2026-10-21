@@ -1309,6 +1309,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   wewnętrzny zapis „[…)]” nie trafia już do eksportu (wzór w nawiasie kwadratowym zostaje tekstem).
   - Korpus DOCX: 18 plików, 47 indeksów górnych zamiast nawiasów i pustych komórek; zgodność ze schematem i ocena
     korpusu bez zmian (2013 i 2158 z 2321).
+- **Litera numeru jednostki w indeksie górnym**: ustęp „5ᵃ.” — litera jednostki wstawionej złożona indeksem górnym —
+  wychodził jako ustęp bez oznaczenia. Sama litera w indeksie górnym numeru złożonego z cyfr jest literą tego numeru
+  („5a”), a nie indeksem górnym; numer z cyfrą w indeksie („5[1]”) się nie zmienia.
+  - Korpus DOCX: art. 36 ust. 5a w 345465 zamiast `nie-ztp-ustep` bez eId.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

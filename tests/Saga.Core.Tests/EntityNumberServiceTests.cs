@@ -53,6 +53,34 @@ namespace Saga.Core.Tests
             Assert.Equal("12b", number.Value);
         }
 
+        [Theory]
+        // 345465_3065747: „5ᵃ." — litera jednostki wstawionej złożona indeksem górnym to numer „5a".
+        [InlineData("5[a]")]
+        [InlineData("5[a].")]
+        public void Parse_LetterOnlySuperscript_IsTheLetterOfTheNumber(string raw)
+        {
+            var number = _service.Parse(raw);
+
+            Assert.Equal("5a", number.Value);
+            Assert.Equal("a", number.LexicalPart);
+            Assert.Equal(string.Empty, number.Superscript);
+        }
+
+        [Fact]
+        public void UstepWithASuperscriptLetter_IsRecognizedAsTheLetteredUstep()
+        {
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                new Saga.Core.Ingest.DocumentBlock { Text = "Art. 36. 1. Komisje orzekają." },
+                new Saga.Core.Ingest.DocumentBlock { Text = "5. Komisje II instancji powołuje się przy ministrze." },
+                new Saga.Core.Ingest.DocumentBlock { Text = "5[a]. Komisja II instancji dla urzędu orzeka w składzie trzyosobowym." },
+                new Saga.Core.Ingest.DocumentBlock { Text = "6. Członkowie komisji są niezawiśli." },
+            });
+
+            Assert.Equal(new[] { "art_36__ust_1", "art_36__ust_5", "art_36__ust_5a", "art_36__ust_6" },
+                document.Articles.Single().Paragraphs.Select(p => p.Id));
+        }
+
         // ============================================================
         // FormatToString — emisja w notacji [x] (§ 89 ust. 6 ZTP)
         // ============================================================

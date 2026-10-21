@@ -31,10 +31,11 @@ namespace Saga.Core.Services.Classify
 
         /// <summary>
         /// Opcjonalny indeks górny numeru jednostki w notacji [x] (§ 89 ust. 6 ZTP; kanał GetFullText):
-        /// liczba, w aktach wielokrotnie nowelizowanych także z literą („130[1a]"). Bez nawiasu zamykającego —
-        /// odnośniki przypisów mają postać [N)] i nie mogą tu wpadać.
+        /// liczba, w aktach wielokrotnie nowelizowanych także z literą („130[1a]"), albo sama litera jednostki wstawionej
+        /// złożona indeksem górnym („5[a]." — odczyt tolerancyjny jako „5a", <see cref="EntityNumberService"/>). Bez nawiasu
+        /// zamykającego — odnośniki przypisów mają postać [N)] i nie mogą tu wpadać.
         /// </summary>
-        internal const string OptionalSuperscript = @"(?:\[\d+[a-z]*\])?";
+        internal const string OptionalSuperscript = @"(?:\[(?:\d+[a-z]*|[a-z]{1,2})\])?";
 
         /// <summary>Litery za liczbą w oznaczeniu („2a", „15zzs", „48ł").</summary>
         private const string LetterSuffix = DesignationAlphabet.Letter + "*";
