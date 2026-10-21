@@ -347,9 +347,10 @@ namespace Saga.Core.Services.Parsing
 
         private static readonly Regex FrontedDatePattern = new(
             @"^(?:W|Od|Do|Z|Za|Przez|Począwszy\s+od|Najpóźniej\s+do|Nie\s+później\s+niż)\s+"
-            + @"(?:terminie\s+do\s+|okresie\s+od\s+|roku\s+)?(?:dnia\s+)?"
+            + @"(?:terminie\s+do\s+|okresie\s+od\s+|roku\s+)?(?:dni(?:a|em)\s+)?"
             + YearOrLongDate
-            // Daty: „W 2020 r. i 2021 r.", „Od dnia 1 marca 2023 r. do dnia 31 maja 2023 r."
+            // Daty: „W 2020 r. i 2021 r.", „Od dnia 1 marca 2023 r. do dnia 31 maja 2023 r.", „Z dniem 15 października
+            // 2026 r. Akademii … nadaje się nazwę" (Dz. U. 2026 poz. 1308).
             + @"(?:\s*\.\s+(?:i|oraz|do|a\s+także)\s+(?:dnia\s+)?" + YearOrLongDate + @")*$",
             RegexOptions.Compiled | RegexOptions.CultureInvariant);
 

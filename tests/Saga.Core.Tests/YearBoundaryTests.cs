@@ -16,6 +16,7 @@ namespace Saga.Core.Tests
         [InlineData("Od dnia 1 lipca 2005 r. Ochotnicze Hufce Pracy stają się jednostką budżetową.")]
         [InlineData("W 2020 r. i 2021 r. Bank Gospodarstwa Krajowego prowadził rachunek pomocniczy.")]
         [InlineData("Od dnia 1 marca 2023 r. do dnia 31 grudnia 2023 r. Prezes Funduszu wydaje decyzje.")]
+        [InlineData("Z dniem 15 października 2026 r. Akademii Mazowieckiej w Płocku nadaje się nazwę „Uniwersytet Mazowiecki w Płocku”.")]
         public void SplitIntoSentences_DataOtwieraZdanie_NieJestGranica(string text)
         {
             var segments = ParsingFactories.SplitIntoSentences(text);

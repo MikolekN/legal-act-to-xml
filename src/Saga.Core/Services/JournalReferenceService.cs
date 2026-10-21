@@ -156,10 +156,11 @@ namespace Saga.Core.Services
 
         // „W ustawie z dnia …", także z określeniem ustawy przed datą („W ustawie budżetowej na rok 2024 z dnia …"),
         // oraz „W rozporządzeniu Ministra … z dnia …" — przed datą stoi organ wydający, stąd dłuższe okno
-        // („Ministrów Infrastruktury oraz Spraw Wewnętrznych i Administracji").
+        // („Ministrów Infrastruktury oraz Spraw Wewnętrznych i Administracji"). Tak samo uchwała i zarządzenie z Monitora
+        // Polskiego („W uchwale nr 103 Rady Ministrów z dnia …", „W zarządzeniu nr 5 Prezesa Rady Ministrów z dnia …").
         // Określenie nie sięga za nawias — tam zaczyna się już publikator albo inna treść.
         private static readonly Regex AmendingFormula = new(
-            @"^W\s+(?:ustawie\b[^()]{0,60}?|rozporządzeniu\b[^()]{0,120}?)\bz\s+dnia\b",
+            @"^W\s+(?:ustawie\b[^()]{0,60}?|(?:rozporządzeniu|uchwale|zarządzeniu)\b[^()]{0,120}?)\bz\s+dnia\b",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private static bool StartsWithAmendingFormula(string contentText)

@@ -155,6 +155,22 @@ namespace Saga.Core.Tests
         }
 
         [Theory]
+        // M.P. 2026 poz. 948: uchwała zmieniająca uchwałę — formuła „W uchwale …" nie otwierała odczytu publikatora, więc
+        // komendy wskazywały jako akt zmieniany samą uchwałę zmieniającą. Zarządzenie zmieniające ma tę samą formułę.
+        [InlineData("§ 1. W uchwale nr 103 Rady Ministrów z dnia 20 czerwca 2023 r. w sprawie ustanowienia programu wieloletniego " +
+                    "(M.P. z 2026 r. poz. 249) wprowadza się następujące zmiany:", "MP/2026/249")]
+        [InlineData("§ 1. W zarządzeniu nr 81 Prezesa Rady Ministrów z dnia 24 lipca 2017 r. w sprawie Rady do spraw Cyfryzacji " +
+                    "(M.P. z 2018 r. poz. 756) § 2 otrzymuje brzmienie:", "MP/2018/756")]
+        public void AmendingFormula_OfAResolutionOrAnOrder_ReadsItsJournal(string text, string eli)
+        {
+            var section = new Article { ContentText = text, IsSection = true };
+
+            _service.ParseJournalReferences(section);
+
+            Assert.Equal(new[] { eli }, Assert.Single(section.Journals).GetELIStrings());
+        }
+
+        [Theory]
         // Monitor Polski: uchwały i zarządzenia; rocznik pominięty to rok z daty aktu (§ 158 ust. 7 ZTP).
         [InlineData("§ 2 uchwały nr 151 Rady Ministrów z dnia 22 sierpnia 2023 r. zmieniającej uchwałę w sprawie programu (M.P. poz. 1029), który stanowi:", "MP/2023/1029")]
         [InlineData("§ 2 zarządzenia nr 81 Prezesa Rady Ministrów z dnia 24 lipca 2017 r. (M. P. z 2018 r. poz. 756), który stanowi:", "MP/2018/756")]

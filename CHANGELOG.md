@@ -1356,6 +1356,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   Ministrów” — tak wiersz składa adapter PDF, ADR-0090) jest nagłówkiem rodzaju, jak dotąd nagłówek rozporządzenia;
   wcześniej strefa tytułowa uchwały z PDF przepadała (pusty tytuł, organ `UNKNOWN`).
   - Korpus PDF: 2 dokumenty z nadrukiem czytane poprawnie („magistra” zamiast „mmaaggiissttrraa”); korpus DOCX bez zmian.
+- **Uchwała zmieniająca i „Z dniem …”**: formuła zmieniająca uchwały i zarządzenia („W uchwale nr 103 Rady Ministrów
+  z dnia … (M.P. z 2026 r. poz. 249) wprowadza się następujące zmiany:”) nie otwierała odczytu publikatora — wzorzec znał
+  tylko „W ustawie” i „W rozporządzeniu”, więc komendy wskazywały jako akt zmieniany samą uchwałę zmieniającą (M.P. 2026
+  poz. 948: 26 instrukcji). Data za „Z dniem” na początku zdania („Z dniem 15 października 2026 r. Akademii Mazowieckiej
+  … nadaje się nazwę …”, Dz. U. 2026 poz. 1308) otwiera zdanie jak data za „Od dnia” — skrót „r.” przed wielką literą nie
+  kończył go już po samej dacie.
+  - Korpus DOCX: 3 zdania „Z dniem … r. …” w 3 dokumentach już nie rozcięte; ocena korpusu bez zmian (2179). Uchwały
+    zmieniającej korpus nie ma — odczyt sprawdzony na M.P. 2026 poz. 948.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
