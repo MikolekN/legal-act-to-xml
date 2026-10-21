@@ -1313,6 +1313,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   wychodził jako ustęp bez oznaczenia. Sama litera w indeksie górnym numeru złożonego z cyfr jest literą tego numeru
   („5a”), a nie indeksem górnym; numer z cyfrą w indeksie („5[1]”) się nie zmienia.
   - Korpus DOCX: art. 36 ust. 5a w 345465 zamiast `nie-ztp-ustep` bez eId.
+- **Przykładowe brzmienia w punktach przepisu**: punkty, których treścią jest wzór wpisu w cudzysłowie („1) „Ustalenia
+  na str. … skreśla się.”;”), w przepisie, który niczego nie zmienia, były czytane jako treść nowelizacji — ustęp
+  wychodził jako `nie-ztp-ustep` z cytatem. Słowa „skreśla się” czy „otrzymuje brzmienie” we wzorze nie czynią
+  z przepisu komendy, gdy artykuł nie jest nowelizujący, a przepis nie zapowiedział żadnej zmiany; teraz to punkty
+  przepisu.
+  - Korpus DOCX: 327653 i 335675 (art. 17 ust. 8); ocena korpusu 2158 → 2160 z 2321, zgodność ze schematem
+    bez zmian (2013).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

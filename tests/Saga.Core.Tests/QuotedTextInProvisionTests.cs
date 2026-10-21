@@ -238,5 +238,24 @@ namespace Saga.Core.Tests
             Assert.Empty(Named(xml, "tresc-strukt"));
             Assert.Equal("DU/2021/200__art_5__ust_2", Assert.Single(Named(xml, "cytat-strukt")).Attribute("element-eId")?.Value);
         }
+
+        [Fact]
+        public void PointsWithQuotedExampleWordings_ArePointsOfTheProvision_NotAnAmendment()
+        {
+            // TJ 327653_2981670: cudzysłów stoi za oznaczeniem punktu, a przepis niczego nie zmienia — „w brzmieniu:"
+            // zapowiada wzory tekstu, nie nowe brzmienie jednostki.
+            var (_, xml) = Export(false,
+                Block("Art. 1. 1. Zespół przeprowadza dodatkowe czynności kontrolne.", Article),
+                Block("2. Zespół dołącza do protokołu stosowny tekst w brzmieniu:"),
+                Block("1) „Ustalenia na str. ........ skreśla się.”;"),
+                Block("2) „Treść ustaleń na str. ........ otrzymuje brzmienie: ................”."),
+                Block("3. Zespół zajmuje stanowisko wobec zastrzeżeń."));
+
+            Assert.Empty(Named(xml, "cytat-strukt"));
+            Assert.Equal(new[] { "art_1__ust_2__pkt_1", "art_1__ust_2__pkt_2" },
+                Named(xml, "punkt").Select(p => p.Attribute("eId")!.Value));
+            Assert.Equal(new[] { "art_1__ust_1", "art_1__ust_2", "art_1__ust_3" },
+                Named(xml, "ustep").Select(p => p.Attribute("eId")!.Value));
+        }
     }
 }

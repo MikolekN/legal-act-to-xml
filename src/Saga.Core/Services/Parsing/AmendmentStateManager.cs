@@ -113,6 +113,17 @@ namespace Saga.Core.Services.Parsing
             }
 
             // 3. Brak rozpoznanego stylu ustawy matki
+            // 3a. Wyliczenie przepisu, który niczego nie zmienia, z przykładowymi brzmieniami w cudzysłowie („dołącza
+            //     stosowny tekst w brzmieniu: 1) „Ustalenia na str. … skreśla się.”;"): cudzysłów stoi za oznaczeniem punktu,
+            //     nie przed nim — to punkty przepisu, a nie cytowana treść.
+            if (context.AmendmentTriggerDetected && QuotedAfterDesignation.IsMatch(text)
+                && GetOwner(context) is { } provision && !AmendsAnything(context, provision))
+            {
+                context.AmendmentTriggerDetected = false;
+                Log.Debug("Punkt z brzmieniem w cudzysłowie pod przepisem bez zmian — jednostka przepisu: {Text}", text);
+                return;
+            }
+
             if (context.AmendmentTriggerDetected)
             {
                 // Po triggerze napotkano akapit bez stylu → to treść nowelizacji
@@ -599,6 +610,11 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>Otwierający cudzysłów cytatu na początku pierwszego akapitu.</summary>
+        /// <summary>Punkt albo litera, za której oznaczeniem otwiera się cudzysłów („1)„Ustalenia …”;", „a) „X”").</summary>
+        private static readonly System.Text.RegularExpressions.Regex QuotedAfterDesignation = new(
+            $@"^\s*(?:\d+[a-z]*|[a-z]{{1,2}})\)\s*[{QuotationMarks.OpeningOrStraight}]",
+            System.Text.RegularExpressions.RegexOptions.Compiled);
+
         private static readonly System.Text.RegularExpressions.Regex OpeningQuotePattern = new(
             $@"^\s*[{QuotationMarks.OpeningOrStraight}]",
             System.Text.RegularExpressions.RegexOptions.Compiled);
