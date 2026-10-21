@@ -124,14 +124,18 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Tekst jednolity składa jednostki dodane nowelizacją stylami zmian (Z…): oznaczenie i tytuł
-        /// jednostki w stylu Z bez komendy nowelizacyjnej przed nimi i bez cudzysłowu to jednostka aktu.
+        /// Tekst jednolity składa jednostki dodane nowelizacją stylami zmian (Z…): akapit w stylu Z bez komendy
+        /// nowelizacyjnej przed nim i bez cudzysłowu to treść samego aktu — oznaczenie jednostki („§ 12." w stylu
+        /// artykułu nowelizacji), wzór, legenda — bo tekst jednolity nie zmienia sam siebie. W innym akcie tak
+        /// czytamy tylko oznaczenie i tytuł jednostki systematyzacyjnej: w akcie zmieniającym styl Z bywa jedynym
+        /// sygnałem cytatu za komendą, której wzorce nie rozpoznały.
         /// </summary>
         private static bool IsMisstyledActUnit(ParsingContext context, ClassificationResult classification, string text) =>
             classification.IsAmendmentContent
             && !context.InsideAmendment && !context.AmendmentTriggerDetected && !context.AmendmentCollector.IsCollecting
             && text is not [QuotationMarks.Opening or QuotationMarks.Straight, ..]
-            && (StructureProcessor.IsSystematizing(classification.Kind)
+            && (context.Document.Classification is { IsConsolidatedText: true }
+                || StructureProcessor.IsSystematizing(classification.Kind)
                 || (context.PendingHeadingUnit != null && classification.Kind is ParagraphKind.Unknown or ParagraphKind.UnitHeading));
 
         /// <summary>

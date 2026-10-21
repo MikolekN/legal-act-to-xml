@@ -196,7 +196,8 @@ Rozpoznanie i budowa:
 - **Wiele części**: `LegalDocument.Parts`; część, której nie da się przejąć, staje obok jako
   rodzeństwo z własnym łańcuchem niejawnym (`SystematizingUnitBuilder.EnterPart`).
 - **Tekst jednolity**: oznaczenie i tytuł w stylu zmian (`Z…`) bez komendy nowelizacyjnej przed nimi
-  to jednostka aktu (`ParserOrchestrator`).
+  to jednostka aktu (`ParserOrchestrator.IsMisstyledActUnit`); w tekście jednolitym dotyczy to każdego akapitu
+  w stylu `Z…` bez komendy i bez cudzysłowu ([ADR-0110](adr/0110-styl-zmian-bez-komendy-w-tekscie-jednolitym-jest-trescia-aktu.md)).
 - **Załącznik**: nagłówek „Załącznik do ustawy z dnia…" po pierwszym artykule kończy strukturę aktu.
 - **Walidacja** na gotowym drzewie (`SystematizingUnitValidator`): powtórzone oznaczenie, luka,
   malejąca numeracja, oddział poza rozdziałem, brak tytułu — tylko komunikaty, bez napraw.
@@ -706,6 +707,7 @@ regex), `Kind = Unknown` i `Confidence = 1` wprost (nie przez odjęcie kar).
 2. Detekcja triggera: treść zawiera "otrzymuje brzmienie:" / "dodaje się"
    → AmendmentTriggerDetected = true, AmendmentOwner = bieżąca encja
 3. Następne akapity ze stylem Z/* lub bezstylowe
+   (w tekście jednolitym styl Z/* bez komendy przed nim nie otwiera nowelizacji — ADR-0110)
    → InsideAmendment = true
    → AmendmentCollector.Begin(owner, targets)
    → AmendmentCollector.AddParagraph(text, styleId)

@@ -1332,6 +1332,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   wychodził częścią wspólną przerywającą wyliczenie albo dalszą treścią poprzedniej litery, w pomieszanej kolejności.
   Kształt oznaczenia przyjmuje teraz indeks górny między literami a nawiasem.
   - Korpus DOCX: 317038 i 360701 (art. 4 pkt 2 lit. ł[1], ł[2]); zgodność ze schematem bez zmian (2013 z 2321).
+- **Style zmian w tekście jednolitym bez komendy**: tekst jednolity składa jednostki dodane nowelizacją stylami zmian
+  (Z…), a styl Z zawsze otwierał nowelizację — akt ogłaszany zmieniał sam siebie: „§ 12.” w stylu artykułu nowelizacji
+  znikał w cytacie pod § 11, wzór z legendą wychodził komendą „zastąp” z celem `UNKNOWN`, a część wspólna — dalszą
+  treścią punktu. W tekście jednolitym akapit w stylu Z bez komendy nowelizacyjnej przed nim i bez cudzysłowu jest
+  teraz treścią samego aktu, czytaną po treści; przepis zmieniający zachowany w tekście jednolitym nadal ma swój cytat.
+  Poza tekstem jednolitym bez zmian (w akcie zmieniającym styl Z bywa jedynym sygnałem cytatu).
+  - Korpus DOCX: 8 tekstów jednolitych; ocena korpusu 2176 → 2179 z 2321. Zgodność ze schematem 2013 → 2012:
+    pominięte przepisy zmieniające „Art. 480–524. (pominięte)” w 330983 wracają do eksportu jako zakres artykułów,
+    który wyprzedza dzisiejszą kopię schematu (ADR-0097).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
