@@ -1372,6 +1372,23 @@ a wersjonowanie zgodne z Semantic Versioning.
   napisem w zwykłej tabeli strony nie przestawia.
   - Korpus PDF bez zmian (strony z treścią w poprzek nie występują w PDF-ach z korpusu DOCX); M.P. 2026 poz. 948: słów
     zgubionych 425 → 39 (nagłówki dziennika), nadmiarowych 1598 → 15.
+- **PDF z aktów urzędowych: powołania na początku wiersza, pismo załącznika, podwójne oznaczenie załącznika**:
+  - „Art.” i „§” na początku wiersza otwierały blok bez warunku, więc powołanie, które zawinięcie zdania postawiło na
+    początku wiersza („Art. 57 § 1 Kodeksu postępowania karnego stosuje się odpowiednio.” — Dz. U. 2026 poz. 1336), stawało
+    się nowym artykułem albo urwanym fragmentem. Oznaczenie artykułu i paragrafu ma kropkę za numerem (także zakres
+    z powtórzonym oznaczeniem „Art. 41a–Art. 41i.”, i artykuł, któremu źródło zgubiło kropkę, a za numerem stoi ustęp:
+    „Art. 32g 1.”).
+  - Rozmiar pisma treści liczony z całego PDF wypadał na większe pismo załącznika (wzór 12 pt przy akcie 10 pt — Dz. U.
+    2026 poz. 1320) i strony aktu w całości wpadały w strefę przypisów (z 18 paragrafów zostawały 2); liczy się go teraz
+    ze stron przed pierwszym załącznikiem aktu.
+  - Oznaczenie załącznika powtórzone tuż za sobą („Załącznik nr 1” dziennika nad wzorem z własnym oznaczeniem) to jeden
+    załącznik, nie dwa o tym samym `eId`.
+  - Lewy margines treści to najmniejszy powtarzający się początek wiersza, nie moda początków: w krótkim akcie (obwieszczenie
+    z podpisem i załącznikami — M.P. 2026 poz. 1002) wiersze wyśrodkowane i po prawej przeważały, podpis przestawał stać „po
+    prawej”, nie zamykał bloku i sklejał się z nagłówkiem załączników, które przepadały.
+  - Korpus PDF: 159 eksportów ze zmianą treści lub budowy (305 fragmentów mniej — powołania wracają do zdań, 4 fałszywe
+    artykuły mniej, 5 załączników i 3 podpisy więcej w 3 dokumentach), w pełni zgodnych z DOCX 1755 → 1777; korpus DOCX bez
+    zmian (ocena 2179).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

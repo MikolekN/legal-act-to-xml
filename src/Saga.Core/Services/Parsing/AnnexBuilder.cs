@@ -104,6 +104,14 @@ namespace Saga.Core.Services.Parsing
 
                 if (Designation.Match(text) is { Success: true } designation)
                 {
+                    // Oznaczenie powtórzone tuż za sobą — dziennik złożył swoje „Załącznik nr 1" nad wzorem, który ma
+                    // własne (Dz. U. 2026 poz. 1320) — to ten sam załącznik, nie drugi o tym samym numerze.
+                    if (current is { Title: null, Content.Count: 0 } open && open.Number == designation.Groups["number"].Value)
+                    {
+                        titleOpen = true;
+                        continue;
+                    }
+
                     var annex = Start(designation.Groups["heading"].Value, designation.Groups["number"].Value);
                     titleOpen = true;
 

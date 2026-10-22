@@ -65,12 +65,28 @@ namespace Saga.Core.Ingest.Pdf
         /// Markery BEZWARUNKOWE początku jednostki/nagłówka — segmentacja bloków (nie klasyfikacja).
         /// Tiret i litera są bezwarunkowe: element listy przed częścią wspólną kanonicznie NIE ma
         /// interpunkcji końcowej (§ 57 ZTP), więc warunek interpunkcyjny gubiłby granice tiretów.
+        /// Oznaczenie artykułu i paragrafu kończy kropka za numerem („Art. 28.", „§ 2.", „Art. 480–524."): powołanie,
+        /// które zawinięcie zdania postawiło na początku wiersza („Art. 57 § 1 Kodeksu postępowania karnego stosuje się
+        /// odpowiednio." — Dz. U. 2026 poz. 1336), granicy nie wyznacza.
         /// </summary>
         private static readonly Regex UnconditionalMarkerPattern = new(
-            @"^(?:Art\.|§\s*\d|USTAWA\b|ROZPORZĄDZENIE\b|OBWIESZCZENIE\b|UCHWAŁA\b|ZARZĄDZENIE\b" +
+            @"^(?:(?:Art\.|§)\s*" + UnitNumberWithDot + ArticleNumberBeforeParagraph + @"|USTAWA\b|ROZPORZĄDZENIE\b|OBWIESZCZENIE\b|UCHWAŁA\b|ZARZĄDZENIE\b" +
             @"|CZĘŚĆ\s|KSIĘGA\s|TYTUŁ\s|DZIAŁ\s|ROZDZIAŁ\s|Rozdział\s|ODDZIAŁ\s|Oddział\s" +
             @"|[a-z]{1,2}\)(?:\[[^\[\]]*\])?\s|[–\-−]\s)",
             RegexOptions.Compiled);
+
+        /// <summary>
+        /// Numer artykułu albo paragrafu z kropką: litery i indeks górny („5a", „48ł", „5[1]"), zakres — także z powtórzonym
+        /// oznaczeniem („480–524", „41a–Art. 41i") — i znacznik odnośnika przed kropką („44[10)].").
+        /// </summary>
+        private const string UnitNumberWithDot =
+            @"\d+\p{Ll}*(?:\[[^\[\]]*\])?(?:\s*[–‑−-]\s*(?:Art\.\s*|§\s*)?\d+\p{Ll}*(?:\[[^\[\]]*\])?)?\.";
+
+        /// <summary>
+        /// Artykuł, w którym źródło zgubiło kropkę za numerem, ale tuż za nim stoi oznaczenie ustępu („Art. 32g 1. Do czasu …",
+        /// Dz. U. 2024 poz. 1473) — powołanie tak nie wygląda („art. 57 ust. 1").
+        /// </summary>
+        private const string ArticleNumberBeforeParagraph = @"|Art\.\s*\d+\p{Ll}*\s+\d+\p{Ll}*\.\s";
 
         /// <summary>
         /// Markery WARUNKOWE — cyfrowe „N)/N." (limit 3 cyfry, także z indeksem górnym oznaczenia „5[1])" i ze
@@ -129,6 +145,25 @@ namespace Saga.Core.Ingest.Pdf
             /// <summary>Blok przedmiotu aktu — za datą.</summary>
             Subject,
         }
+
+        /// <summary>
+        /// Lewy margines treści: najmniejszy początek wiersza, który się powtarza — treść zawija się do marginesu. Moda
+        /// początków zawodziła w krótkim akcie, w którym wiersze wyśrodkowane i po prawej (tytuł, podpis, nagłówki
+        /// załączników) przeważają nad treścią (M.P. 2026 poz. 1002): podpis przestawał stać „po prawej", nie zamykał bloku
+        /// i sklejał się z nagłówkiem załączników.
+        /// </summary>
+        private static double BodyLeftMargin(List<PdfTextLine> textLines)
+        {
+            if (textLines.Count == 0)
+                return 0;
+
+            var repeated = textLines.GroupBy(l => Math.Round(l.StartX)).Where(g => g.Count() >= 2).Select(g => g.Key).ToList();
+            return repeated.Count > 0 ? repeated.Min() : Mode(textLines.Select(l => Math.Round(l.StartX)));
+        }
+
+        /// <summary>Wiersz przyłączenia załącznika aktu („Załącznik nr 1 do rozporządzenia …") — nie obwieszczenia, którego załącznikiem jest akt.</summary>
+        private static bool IsActAnnexLine(PdfTextLine line) =>
+            AttachmentLinePattern.IsMatch(line.Text.Trim()) && !line.Text.Contains("do obwieszczenia", StringComparison.Ordinal);
 
         /// <summary>Wiersz przyłączenia: „Załącznik do obwieszczenia …", „Załącznik nr 2 do rozporządzenia …".</summary>
         private static readonly Regex AttachmentLinePattern = new(
@@ -310,9 +345,7 @@ namespace Saga.Core.Ingest.Pdf
             var (bodyLines, footnoteLines) = SplitFootnoteZone(lines, docDominantSize);
 
             var textLines = bodyLines.Where(l => l.Table is null).ToList();
-            var dominantLeft = textLines.Count > 0
-                ? Mode(textLines.Select(l => Math.Round(l.StartX)))
-                : 0;
+            var dominantLeft = BodyLeftMargin(textLines);
 
             var lastPages = new List<int>();
             var body = AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
@@ -395,6 +428,14 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         private static double DominantBodySize(List<PdfTextLine> lines)
         {
+            // Załącznik aktu bywa złożony większym pismem niż akt (wzór wniosku 12 pt przy treści 10 pt — Dz. U. 2026
+            // poz. 1320): liczony razem z aktem wygrywał regułę „największy z istotnych", a strony aktu w całości wpadały
+            // w strefę przypisów. Rozmiar treści liczy się więc ze stron przed pierwszym załącznikiem aktu; załącznik
+            // obwieszczenia to sam akt ogłaszany, nie załącznik.
+            var annexPage = lines.FirstOrDefault(IsActAnnexLine)?.PageNumber;
+            if (annexPage is int firstAnnexPage && lines.Any(l => l.PageNumber < firstAnnexPage))
+                lines = lines.Where(l => l.PageNumber < firstAnnexPage).ToList();
+
             var weights = lines
                 .GroupBy(l => l.DominantSize)
                 .Select(g => (Size: g.Key, Weight: g.Sum(l => l.Text.Length)))

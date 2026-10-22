@@ -35,6 +35,26 @@ namespace Saga.Core.Tests
                 new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
 
         [Fact]
+        public void DesignationPrintedTwice_IsOneAnnex()
+        {
+            // Dz. U. 2026 poz. 1320: dziennik złożył „Załącznik nr 1" nad wzorem wniosku, który ma własne oznaczenie —
+            // dwa załączniki o tym samym numerze (powtórzony zal_1) zamiast jednego.
+            var document = Parse(
+                Block("Załączniki do rozporządzenia Ministra Klimatu i Środowiska z dnia 8 października 2026 r."),
+                Block("(Dz. U. poz. 1320)"),
+                Block("Załącznik nr 1"),
+                Block("Załącznik nr 1"),
+                Block("WZÓR"),
+                Block("Imię i nazwisko wnioskodawcy"),
+                Block("Załącznik nr 2"),
+                Block("Załącznik nr 2"),
+                Block("NIEZAGOSPODAROWANE ZŁOŻA"),
+                Block("Czeklin"));
+
+            Assert.Equal(new[] { "zal_1", "zal_2" }, document.Annexes.Select(a => a.Id));
+        }
+
+        [Fact]
         public void Annexes_UnderACommonHeading_StartAtTheirDesignations()
         {
             // Układ przykładu autorów schematu (DU/2026/252): wskazanie aktu raz, potem „Załącznik nr N" i tytuł.

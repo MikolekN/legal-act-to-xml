@@ -198,6 +198,87 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ReferenceToAnArticle_AtTheLineStart_ContinuesTheSentence()
+        {
+            // Dz. U. 2026 poz. 1336 (art. 28 § 2 k.p.w.): zawinięcie postawiło „Art. 57 § 1 Kodeksu …" na początku wiersza —
+            // czytane jako nowy artykuł 57. Oznaczenie artykułu ma kropkę za numerem, powołanie — nie.
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("§ 2. Odstąpienie oskarżyciela posiłkowego od oskarżenia nie tamuje rozpoznania sprawy.", 57, 700)
+                .AddText("Art. 57 § 1 Kodeksu postępowania karnego stosuje się odpowiednio.", 57, 686)
+                .AddText("Art. 29. § 1. Niestawiennictwo pokrzywdzonego nie tamuje rozpoznania sprawy.", 70, 672)
+                .AddText("Art. 41a–Art. 41i. (uchylone)", 70, 658)
+                .AddText("Art. 32g 1. Do czasu określenia zasad udzielania ulg stosuje się przepisy dotychczasowe.", 70, 644)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Equal(4, blocks.Count);
+            Assert.EndsWith("sprawy. Art. 57 § 1 Kodeksu postępowania karnego stosuje się odpowiednio.", blocks[0].Text);
+            Assert.StartsWith("Art. 29. § 1.", blocks[1].Text);
+            // Zakres z powtórzonym oznaczeniem po myślniku to nadal oznaczenie (Dz. U. 2025 poz. 18).
+            Assert.Equal("Art. 41a–Art. 41i. (uchylone)", blocks[2].Text.Trim());
+            // Kropka zgubiona za numerem artykułu, a za nim oznaczenie ustępu (Dz. U. 2024 poz. 1473) — nadal oznaczenie.
+            Assert.StartsWith("Art. 32g 1. Do czasu", blocks[3].Text);
+        }
+
+        [Fact]
+        public void AnnexInALargerFont_DoesNotTurnTheActPagesIntoFootnotes()
+        {
+            // Dz. U. 2026 poz. 1320: akt 10 pt, wzór wniosku w załączniku 12 pt. Rozmiar treści liczony z całego dokumentu
+            // wypadał na 12 pt, a strona aktu zaczęta „6) …" wpadała w całości w strefę przypisów.
+            var builder = new TestPdfBuilder().AddPage()
+                .AddText("§ 1. Wniosek o zawarcie umowy zawiera:", 57, 700, 10);
+            for (var i = 1; i <= 5; i++)
+                builder.AddText($"{i}) element wniosku numer {i} określony w rozporządzeniu;", 57, 700 - 14 * i, 10);
+            builder.AddPage()
+                .AddText("6) informacje o stanie zagospodarowania złoża kopaliny;", 57, 760, 10)
+                .AddText("7) cel korzystania z informacji geologicznej.", 57, 746, 10)
+                .AddText("§ 2. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", 57, 732, 10)
+                .AddPage()
+                .AddText("Załącznik nr 1 do rozporządzenia Ministra Klimatu i Środowiska", 300, 780, 12);
+            for (var i = 0; i < 30; i++)
+                builder.AddText($"Pole formularza numer {i} do wypełnienia przez wnioskodawcę ...........", 57, 740 - 20 * i, 12);
+
+            var blocks = Read(builder.Build());
+
+            var section = Assert.Single(blocks, b => b.Text.StartsWith("§ 2.", StringComparison.Ordinal));
+            Assert.Equal(BlockRole.Body, section.Role);
+            Assert.Equal(BlockRole.Body, Assert.Single(blocks, b => b.Text.StartsWith("6)", StringComparison.Ordinal)).Role);
+        }
+
+        [Fact]
+        public void SignatureOfAShortAnnouncement_EndsItsBlock_BeforeTheAnnexes()
+        {
+            // M.P. 2026 poz. 1002: krótkie obwieszczenie — wiersze wyśrodkowane i po prawej przeważają nad treścią, moda
+            // początków wierszy nie była marginesem, podpis przestawał stać „po prawej" i sklejał się z nagłówkiem załączników.
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("OBWIESZCZENIE", 255, 760)
+                .AddText("MINISTRA FINANSÓW I GOSPODARKI", 205, 746)
+                .AddText("z dnia 6 października 2026 r.", 230, 732)
+                .AddText("w sprawie stawek minimalnych podatku od środków transportowych", 150, 718)
+                .AddText("Na podstawie art. 12b ust. 4 ustawy o podatkach i opłatach lokalnych ogłasza się stawki", 63, 696)
+                .AddText("minimalne podatku od środków transportowych na rok 2027.", 51, 682)
+                .AddText("Minister Finansów i Gospodarki: wz. J. Neneman", 330, 650)
+                .AddPage()
+                .AddText("Załączniki do obwieszczenia Ministra Finansów i Gospodarki", 230, 780)
+                .AddText("z dnia 6 października 2026 r. (M.P. poz. 1002)", 230, 766)
+                .AddText("Załącznik nr 1", 470, 740)
+                .AddText("STAWKI MINIMALNE PODATKU DLA POJAZDÓW", 180, 720)
+                .AddPage()
+                .AddText("Załącznik nr 2", 470, 780)
+                .AddText("STAWKI MINIMALNE PODATKU DLA CIĄGNIKÓW", 170, 760)
+                .AddPage()
+                .AddText("Załącznik nr 3", 470, 780)
+                .AddText("STAWKI MINIMALNE PODATKU DLA PRZYCZEP", 175, 760)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains(blocks, b => b.Text.Trim() == "Minister Finansów i Gospodarki: wz. J. Neneman");
+            Assert.Contains(blocks, b => b.Text.StartsWith("Załączniki do obwieszczenia", StringComparison.Ordinal));
+        }
+
+        [Fact]
         public void TrailingHyphen_BeforeUppercase_JoinsCompoundName()
         {
             var pdf = new TestPdfBuilder().AddPage()
