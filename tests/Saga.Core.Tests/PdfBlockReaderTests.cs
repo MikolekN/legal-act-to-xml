@@ -1444,6 +1444,44 @@ namespace Saga.Core.Tests
             Assert.Contains(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("(podpis z podaniem", StringComparison.Ordinal));
         }
 
+        /// <summary>
+        /// Odnośnik z wyliczeniem urwany na pozycji zakończonej średnikiem; następna strona zaczyna strefę przypisów jego
+        /// kolejną pozycją zwykłym tekstem (Dz. U. 2026 poz. 1322: odnośnik 11). Odnośniki 0,9× treści.
+        /// </summary>
+        private static IReadOnlyList<DocumentBlock> ReadFootnoteListContinuedOnTheNextPage(bool separator)
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText("Art. 1. Przepis z odnośnikiem.", 57, 700)
+                .AddText("1)", 210, 703.5, 6)
+                .AddText("1)", 57, 133.5, 6)
+                .AddText("Rozporządzenie utraciło moc. Jednakże:", 66, 130, 10)
+                .AddText("1) art. 4 nadal ma zastosowanie;", 57, 116, 10)
+                .AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("2) art. 54 nadal ma zastosowanie.", 57, 108, 10);
+            if (separator)
+                builder.AddLine(57, 120, 198, 120);
+            return Read(builder.Build());
+        }
+
+        [Fact]
+        public void FootnoteListContinuedUnderTheSeparator_StaysInTheFootnote()
+        {
+            var blocks = ReadFootnoteListContinuedOnTheNextPage(separator: true);
+
+            Assert.DoesNotContain(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("2) art. 54", StringComparison.Ordinal));
+            Assert.Equal(["Rozporządzenie utraciło moc. Jednakże:", "1) art. 4 nadal ma zastosowanie;", "2) art. 54 nadal ma zastosowanie."],
+                Assert.Single(blocks.SelectMany(b => b.Footnotes)).Paragraphs);
+        }
+
+        [Fact]
+        public void ListItemInSmallerFontWithoutTheSeparator_AfterAFinishedFootnote_StaysBody()
+        {
+            Assert.Contains(ReadFootnoteListContinuedOnTheNextPage(separator: false),
+                b => b.Role == BlockRole.Body && b.Text.StartsWith("2) art. 54", StringComparison.Ordinal));
+        }
+
         [Fact]
         public void BareNumberNoteWithoutAReference_StaysTextOfThePreviousFootnote()
         {

@@ -543,6 +543,9 @@ namespace Saga.Core.Ingest.Pdf
                     (zoneStart, hasZone) = FindReferencedFootnoteZone(noteLines, CloseFootnoteSizeRatio * Math.Max(docDominantSize,
                         noteLines.Where(l => l.Table is null).Select(l => l.DominantSize).DefaultIfEmpty(0).Max()),
                         separators.GetValueOrDefault(pageGroup.Key) ?? []);
+                if (!hasZone && continued)
+                    (zoneStart, hasZone) = FindContinuedEnumerationZone(noteLines, CloseFootnoteSizeRatio * docDominantSize,
+                        separators.GetValueOrDefault(pageGroup.Key) ?? []);
 
                 // Wiersze strefy niosą oznaczenie w kanale indeksu górnego; treść strony — tak, jak ją złożono.
                 if (hasZone)
@@ -618,6 +621,32 @@ namespace Saga.Core.Ingest.Pdf
 
             return (pageLines.Count, false);
         }
+
+        /// <summary>
+        /// Dalszy ciąg wyliczenia odnośnika z poprzedniej strony: odnośnik urwany na pozycji zakończonej średnikiem („2) …;")
+        /// nie jest urwany w pół zdania, a następna strona zaczyna strefę od jego kolejnej pozycji („3) art. 54 …" — zwykłym
+        /// tekstem, bez odwołania na stronie; Dz. U. 2026 poz. 1322). Strefą jest sufiks małego pisma, gdy zaczyna się
+        /// oznaczeniem pozycji wyliczenia, a tuż nad nim stoi kreska odnośników — inaczej pozycje trafiały do treści jako
+        /// punkty przepisu nad nimi.
+        /// </summary>
+        private static (int Start, bool Found) FindContinuedEnumerationZone(
+            List<PdfTextLine> pageLines, double maxSize, List<double> separators)
+        {
+            int start = pageLines.Count;
+            while (start > 0 && pageLines[start - 1].DominantSize <= maxSize)
+                start--;
+            if (start == pageLines.Count || !EnumerationItemStartPattern.IsMatch(pageLines[start].Text))
+                return (pageLines.Count, false);
+
+            var first = pageLines[start];
+            var above = start > 0 ? pageLines[start - 1].BaselineY : double.MaxValue;
+            return separators.Any(y => y > first.BaselineY && y < Math.Min(above, first.BaselineY + SeparatorReach * first.DominantSize))
+                ? (start, true)
+                : (pageLines.Count, false);
+        }
+
+        /// <summary>Oznaczenie pozycji wyliczenia na początku wiersza: „3)", „b)", tiret.</summary>
+        private static readonly Regex EnumerationItemStartPattern = new($@"^(?:\d+[a-z]*\)|[a-z]{{1,2}}\)|[{Dashes.Any}])\s", RegexOptions.Compiled);
 
         /// <summary>Kreska oddzielająca odnośniki stoi nad pierwszym z nich najwyżej o tyle rozmiarów jego pisma.</summary>
         private const double SeparatorReach = 3;

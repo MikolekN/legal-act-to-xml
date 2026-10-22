@@ -1491,6 +1491,12 @@ a wersjonowanie zgodne z Semantic Versioning.
     jednostki bez zmian; odnośnik oznaczony samą liczbą, do którego nic się nie odwołuje, zostaje tekstem poprzedniego
     odnośnika, jak dotąd. DOCX i TXT bez zmian.
 
+- **Wyliczenie odnośnika PDF ciągnięte na następnej stronie** (Dz. U. 2026 poz. 1322): odnośnik urwany na pozycji
+  zakończonej średnikiem („2) …;”) ciągnie się na następnej stronie kolejną pozycją („3) art. 54 …”) pod kreską
+  odnośników — wcześniej pozycje trafiały do treści jako punkty przepisu nad nimi (powtórzone `eId` § 14 ust. 2 pkt 3
+  i 4). Korpus PDF: jednostki 99,75 → 99,76 %, w pełni zgodnych 1811 → 1812, słowa odnośników 95,92 → 96,12 %;
+    7 dokumentów lepiej (318637: 40 jednostek mniej rozbieżnych), 0 gorzej. DOCX i TXT bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
