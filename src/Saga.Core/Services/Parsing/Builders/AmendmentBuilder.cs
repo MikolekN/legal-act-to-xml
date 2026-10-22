@@ -13,11 +13,16 @@ namespace Saga.Core.Services.Parsing.Builders
     /// mówi, że akt zmieniający jest oparty na paragrafach (ADR-0034) — cytowane „§ N." jest wtedy
     /// jednostką podstawową, nie paragrafem kodeksu.
     /// </summary>
+    /// <param name="QuotesCommonPart">
+    /// Komenda wskazuje część wspólną („w ust. 1 część wspólna otrzymuje brzmienie:") — akapit z myślnikiem bez stylu jest
+    /// nią, a nie tiretem.
+    /// </param>
     public sealed record AmendmentBuildInput(
         IReadOnlyList<CollectedAmendmentParagraph> Paragraphs,
         StructuralAmendmentReference? Target,
         AmendmentOperationType OperationType,
-        bool SectionIsBasicUnit = false);
+        bool SectionIsBasicUnit = false,
+        bool QuotesCommonPart = false);
 
     /// <summary>
     /// Typ klasyfikacji akapitu w treści nowelizacji.
@@ -72,6 +77,12 @@ namespace Saga.Core.Services.Parsing.Builders
         // Akt zmieniający oparty na paragrafach: cytowane „§ N." to jednostka podstawowa (ADR-0034).
         private bool _sectionIsBasicUnit;
 
+        /// <summary>Komenda wskazuje część wspólną — <see cref="AmendmentBuildInput.QuotesCommonPart"/>.</summary>
+        private bool _quotesCommonPart;
+
+        /// <summary>Cel komendy — wyznacza wyliczenie, które zamyka cytowana sama część wspólna.</summary>
+        private StructuralReference? _target;
+
         /// <summary>
         /// Buduje AmendmentContent z listy zebranych akapitów nowelizacji.
         /// Klasyfikuje każdy akapit, buduje encje i organizuje je hierarchicznie.
@@ -89,6 +100,8 @@ namespace Saga.Core.Services.Parsing.Builders
 
             ResetState();
             _sectionIsBasicUnit = input.SectionIsBasicUnit;
+            _quotesCommonPart = input.QuotesCommonPart;
+            _target = input.Target?.Structure;
 
             content.ObjectType = DetermineObjectType(input.Paragraphs, _sectionIsBasicUnit);
 
@@ -253,6 +266,16 @@ namespace Saga.Core.Services.Parsing.Builders
                 return;
 
             var (entityKind, overriddenStyleKind) = ClassifyWithStyleOverride(para, _sectionIsBasicUnit);
+
+            // Komenda wskazuje część wspólną, a akapit zaczyna się myślnikiem: to ona, nie tiret — bez stylu (PDF) i w stylu
+            // innej jednostki (tiretu, punktu — korpus 310239), bo komenda mówi, co cytat zawiera (Dz. U. 2026 poz. 1348:
+            // „a) w ust. 1 część wspólna otrzymuje brzmienie:" / „„– w zakresie …”").
+            if (_quotesCommonPart && entityKind == AmendmentEntityKind.Tiret
+                && _openTirets.Count == 0 && OpensQuotedCommonPart(content))
+            {
+                BuildQuotedCommonPart(para, content);
+                return;
+            }
 
             // Akapit w stylu jednostki bez żadnego oznaczenia w treści jest dalszą treścią jednostki, za którą
             // stoi (ADR-0039). Bez jednostki przed sobą otwiera cytat i zostaje jednostką bez odczytanego
@@ -807,6 +830,43 @@ namespace Saga.Core.Services.Parsing.Builders
                 ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,
                     "Część wspólna rozpoznana bez stylu i bez myślnika: akapit małą literą tuż za pozycją wyliczenia.");
             return true;
+        }
+
+        /// <summary>
+        /// Część wspólna, którą wskazuje komenda, cytowana bez stylu. Zamyka pozycje cytowane przed nią („w ust. 1 pkt 2
+        /// i część wspólna otrzymują brzmienie:"), a cytowana sama — wyliczenie jednostki wskazanej komendą: ustęp
+        /// (artykuł) zamyka punkty, punkt — litery, litera — tirety. Gospodarz stoi poza cytatem, więc adres dostaje
+        /// część wspólna od celu (<see cref="AmendmentTargetPairing.AnchorContentUnits"/>).
+        /// </summary>
+        /// <summary>
+        /// Myślnik może tu zaczynać część wspólną wskazaną komendą: cytat jeszcze niczego nie ma albo stoi za pozycją
+        /// cytowaną na szczycie (punkt, litera) bez własnych pozycji, która nie kończy się znakiem ani spójnikiem
+        /// (<see cref="CommonPartPlacement.ClosesBeforeDash"/>). Myślnik za literą z dwukropkiem to jej tiret.
+        /// </summary>
+        private bool OpensQuotedCommonPart(AmendmentContent content)
+        {
+            if (content.Articles.Count == 0 && content.Paragraphs.Count == 0 && content.Points.Count == 0
+                && content.Letters.Count == 0 && content.Tirets.Count == 0 && content.CommonParts.Count == 0)
+                return true;
+
+            BaseEntity? item = _currentParagraph is null && _currentPoint is { Letters.Count: 0 } point ? point
+                : _currentPoint is null && _currentLetter is { Tirets.Count: 0 } letter ? letter
+                : null;
+            return item is not null && CommonPartPlacement.ClosesBeforeDash(item.ContentText);
+        }
+
+        private void BuildQuotedCommonPart(CollectedAmendmentParagraph para, AmendmentContent content)
+        {
+            var itemType = content.Letters.Count > 0 ? UnitType.Letter
+                : content.Points.Count > 0 ? UnitType.Point
+                : _target switch
+                {
+                    { Letter: not null } => UnitType.Tiret,
+                    { Point: not null } => UnitType.Letter,
+                    _ => UnitType.Point,
+                };
+
+            content.CommonParts.Add(new CommonPart(CommonPartType.WrapUp, string.Empty, para.Text) { ListItemType = itemType });
         }
 
         private void BuildAmendmentCommonPart(CollectedAmendmentParagraph para, AmendmentContent content)

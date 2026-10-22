@@ -3437,6 +3437,13 @@ namespace Saga.Core.Tests
             // Komenda nazywa część wspólną — zostaje częścią wspólną.
             var commonPart = Export("1) w art. 5 część wspólna otrzymuje brzmienie:", commonPartStyle, "„– wymierza się karę.”;");
             Assert.Single(commonPart.Descendants(), e => e.Name.LocalName == "czesc-wspolna-punkt");
+
+            // Bez stylu (PDF, Dz. U. 2026 poz. 1348) akapit z myślnikiem rozpoznaje komenda: część wspólna, nie tiret,
+            // i cel części wspólnej, nie całego ustępu.
+            var styleless = Export("1) w art. 5 w ust. 1 część wspólna otrzymuje brzmienie:", null!, "„– wymierza się karę.”;");
+            var quoted = Assert.Single(styleless.Descendants(), e => e.Name.LocalName == "cytat-strukt");
+            Assert.Equal("czesc-wspolna-punkt", Assert.Single(quoted.Elements()).Name.LocalName);
+            Assert.EndsWith("art_5__ust_1__czw", quoted.Attribute("element-eId")?.Value);
         }
 
         // ============================================================

@@ -285,7 +285,8 @@ namespace Saga.Core.Services.Parsing
                 collector.Paragraphs,
                 collector.Targets.FirstOrDefault(),
                 AmendmentOperationType.Modification,
-                context.SectionIsBasicUnit);
+                context.SectionIsBasicUnit,
+                QuotesCommonPart: AmendmentCommandParser.QuotesCommonPartPattern.IsMatch(collector.Owner?.ContentText ?? string.Empty));
 
             // Odnośnik jako przedmiot komendy: jego treść nie przechodzi przez rozpoznawanie jednostek (ADR-0059).
             // Zdanie albo akapit jako przedmiot komendy: treść cytowana jest tekstem, bez względu na style (ADR-0079).

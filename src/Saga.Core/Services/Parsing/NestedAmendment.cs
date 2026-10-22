@@ -21,7 +21,8 @@ namespace Saga.Core.Services.Parsing
 
             var content = QuotedTextSubject.Read(command, paragraphs)
                 ?? new AmendmentBuilder().Build(new AmendmentBuildInput(
-                    paragraphs, null, AmendmentOperationType.Modification, sectionIsBasicUnit));
+                    paragraphs, null, AmendmentOperationType.Modification, sectionIsBasicUnit,
+                    QuotesCommonPart: AmendmentCommandParser.QuotesCommonPartPattern.IsMatch(command)));
             AmendmentBuilder.DemoteLoneCommonParts(content, command);
             if (content is { PlainText.Length: > 0 })
                 content.PlainTextIsSentences = AmendmentFinalizer.SentenceObjectPattern.IsMatch(command.TrimEnd());

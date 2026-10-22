@@ -281,6 +281,66 @@ namespace Saga.Core.Tests
             Assert.Null(content.PlainText);
         }
 
+        [Theory]
+        // Dz. U. 2026 poz. 1348: „a) w ust. 1 część wspólna otrzymuje brzmienie:" — cytat bez stylu (PDF).
+        [InlineData(null, UnitType.Point)]
+        [InlineData("1", UnitType.Letter)]
+        public void DashLineWithoutStyle_UnderACommandNamingTheCommonPart_IsTheCommonPart(string? point, UnitType items)
+        {
+            var target = new StructuralAmendmentReference { Structure = new StructuralReference { Article = "11", Paragraph = "1", Point = point } };
+            var paragraphs = new List<CollectedAmendmentParagraph> { new("– w zakresie określonym w umowie.", null, null) };
+
+            var content = _builder.Build(new AmendmentBuildInput(paragraphs, target, AmendmentOperationType.Modification, QuotesCommonPart: true));
+
+            Assert.Empty(content.Tirets);
+            var commonPart = Assert.Single(content.CommonParts);
+            Assert.Equal("– w zakresie określonym w umowie.", commonPart.ContentText);
+            Assert.Equal(items, commonPart.ListItemType);
+        }
+
+        [Fact]
+        public void DashLineAfterAnOpenQuotedPoint_UnderACommandNamingTheCommonPart_ClosesThePoints()
+        {
+            // „w ust. 1 pkt 2 i część wspólna otrzymują brzmienie:" — korpus 360425; myślnik w stylu tiretu.
+            var paragraphs = new List<CollectedAmendmentParagraph>
+            {
+                new("2) przedsiębiorcy prowadzący działalność w zakresie obrotu paliwami", null, null),
+                CreateParagraph("– są obowiązani do przekazywania informacji.", "ZTIRzmtirartykuempunktem", AmendmentTargetKind.Tiret),
+            };
+
+            var content = _builder.Build(new AmendmentBuildInput(paragraphs, null, AmendmentOperationType.Modification, QuotesCommonPart: true));
+
+            Assert.Equal(UnitType.Point, Assert.Single(content.CommonParts).ListItemType);
+            Assert.Empty(Assert.Single(content.Points).Letters);
+            Assert.Empty(content.Tirets);
+        }
+
+        [Fact]
+        public void DashLineAfterALetterOpeningTirets_UnderACommandNamingTheCommonPart_IsItsTiret()
+        {
+            var paragraphs = new List<CollectedAmendmentParagraph>
+            {
+                new("a) w przypadku osób fizycznych:", null, null),
+                new("– w terminie 14 dni,", null, null),
+            };
+
+            var content = _builder.Build(new AmendmentBuildInput(paragraphs, null, AmendmentOperationType.Modification, QuotesCommonPart: true));
+
+            Assert.Single(Assert.Single(content.Letters).Tirets);
+            Assert.Empty(content.CommonParts);
+        }
+
+        [Fact]
+        public void DashLineWithoutStyle_UnderAnotherCommand_StaysATiret()
+        {
+            var paragraphs = new List<CollectedAmendmentParagraph> { new("– w zakresie określonym w umowie.", null, null) };
+
+            var content = _builder.Build(new AmendmentBuildInput(paragraphs, null, AmendmentOperationType.Modification));
+
+            Assert.Single(content.Tirets);
+            Assert.Empty(content.CommonParts);
+        }
+
         // ============================================================
         // Pełna hierarchia: ART → UST → PKT → LIT → TIR
         // ============================================================

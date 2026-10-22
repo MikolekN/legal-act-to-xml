@@ -200,6 +200,14 @@ namespace Saga.Core.Services.Parsing
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// Komenda, której przedmiotem jest część wspólna: „część wspólna otrzymuje brzmienie:", „pkt 2 i część wspólna
+        /// otrzymują brzmienie:", „dodaje się część wspólną w brzmieniu:".
+        /// </summary>
+        internal static readonly Regex QuotesCommonPartPattern = new(
+            @"\bczęść\s+wspóln[aą]\b(?:\s+\S+){0,2}?\s+(?:otrzymuj\w*\s+brzmienie|w\s+brzmieniu)",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
         /// „po wyrazach „X" dodaje się wyrazy „Y"" i „przed wyrazami „X" dodaje się wyrazy „Y"" (§ 87 ZTP) —
         /// komenda kompletna w akapicie. Wstawka „przecinek i" („dodaje się przecinek i wyrazy „Y"") dokłada
         /// przecinek przed dodanymi wyrazami. Dodanie „od nowego wiersza" nie pasuje: nie da się go zapisać

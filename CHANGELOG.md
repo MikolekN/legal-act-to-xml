@@ -1511,6 +1511,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   Blok strefy przypisów, który nie jest odnośnikiem ani jego dalszym akapitem, wraca do treści swojej strony.
   Korpus PDF bez zmian; akty ISAP 1–57 bez zmian.
 
+- **Część wspólna wskazana komendą** (Dz. U. 2026 poz. 1348): „a) w ust. 1 część wspólna otrzymuje brzmienie:” i dalej
+  „„– w zakresie …”” — bez stylu części wspólnej (PDF) albo w stylu tiretu myślnik dawał tiret, a cel wskazywał cały
+  ustęp (`zastap art_11__ust_1`). Komenda mówi, co cytat zawiera: myślnik na początku cytatu albo tuż za cytowaną
+  pozycją bez znaku końcowego jest częścią wspólną, a cel — `…__ust_1__czw`. Korpus DOCX: 5
+  dokumentów (część wspólna zamiast tiretu, także w przytoczonym przepisie zmieniającym), ocena i schemat bez zmian;
+  PDF: w pełni zgodnych 1812 → 1819, 17 dokumentów lepiej, 0 gorzej.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
