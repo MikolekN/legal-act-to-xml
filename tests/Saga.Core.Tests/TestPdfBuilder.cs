@@ -45,7 +45,7 @@ namespace Saga.Core.Tests
             ['Ą'] = "Aogonek", ['Ć'] = "Cacute", ['Ę'] = "Eogonek", ['Ł'] = "Lslash", ['Ń'] = "Nacute",
             ['Ó'] = "Oacute", ['Ś'] = "Sacute", ['Ź'] = "Zacute", ['Ż'] = "Zdotaccent",
             ['„'] = "quotedblbase", ['”'] = "quotedblright", ['“'] = "quotedblleft",
-            ['–'] = "endash", ['—'] = "emdash", ['§'] = "section",
+            ['–'] = "endash", ['—'] = "emdash", ['‒'] = "figuredash", ['§'] = "section",
         };
 
         public TestPdfBuilder AddPage()

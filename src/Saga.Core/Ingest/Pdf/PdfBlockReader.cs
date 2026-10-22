@@ -74,7 +74,7 @@ namespace Saga.Core.Ingest.Pdf
         private static readonly Regex UnconditionalMarkerPattern = new(
             @"^(?:(?:Art\.|§)\s*" + UnitNumberWithDot + ArticleNumberBeforeParagraph + @"|USTAWA\b|ROZPORZĄDZENIE\b|OBWIESZCZENIE\b|UCHWAŁA\b|ZARZĄDZENIE\b" +
             @"|CZĘŚĆ\s|KSIĘGA\s|TYTUŁ\s|DZIAŁ\s|ROZDZIAŁ\s|Rozdział\s|ODDZIAŁ\s|Oddział\s" +
-            @"|[a-z]{1,2}\)(?:\[[^\[\]]*\])?\s|[–\-−]\s)",
+            @"|[a-z]{1,2}\)(?:\[[^\[\]]*\])?\s|[" + Dashes.Any + @"]\s)",
             RegexOptions.Compiled);
 
         /// <summary>
@@ -656,7 +656,7 @@ namespace Saga.Core.Ingest.Pdf
                 }
 
                 bool boundary = prev == null || prev.Table is not null
-                    || (forceBoundary?.Invoke(line) ?? IsMarkerBoundary(line, prev))
+                    || (forceBoundary?.Invoke(line) ?? IsMarkerBoundary(line, prev, blockFirst))
                     || DesignationLinePattern.IsMatch(prev.Text)
                     || (forceBoundary is null && RepealNoteLinePattern.IsMatch(line.Text.Trim()))
                     || (forceBoundary is null && IsTitleZoneBoundary(line, titleZone))
@@ -840,21 +840,44 @@ namespace Saga.Core.Ingest.Pdf
         /// Granica na markerze jednostki: bezwarunkowa (Art./§/tiret/litera/nagłówki) albo warunkowa
         /// (cyfrowa „N)/N.", cytat „) — ta druga tylko po wierszu domkniętym interpunkcją i niekończącym
         /// się skrótem referencyjnym („poz.", „nr", „art."…), by zawinięcie zdania nie tworzyło
-        /// fałszywego punktu/cytatu.
+        /// fałszywego punktu/cytatu. Kolejny numer listy, której pozycję zaczyna blok, otwiera blok i bez interpunkcji.
         /// </summary>
-        private static bool IsMarkerBoundary(PdfTextLine line, PdfTextLine prev)
+        private static bool IsMarkerBoundary(PdfTextLine line, PdfTextLine prev, PdfTextLine? blockFirst)
         {
             if (UnconditionalMarkerPattern.IsMatch(line.Text))
+                return true;
+
+            // Odwołanie do odnośnika za znakiem domykającym („wyłącznie:[51)]", „4) (uchylony)[19)]") nie otwiera wiersza.
+            var prevText = TrailingFootnoteAnchor.Replace(prev.Text.TrimEnd(), string.Empty);
+            if (ContinuesNumbering(blockFirst, line) && !ReferenceAbbreviationEndPattern.IsMatch(prevText))
                 return true;
 
             if (!ConditionalMarkerPattern.IsMatch(line.Text))
                 return false;
 
-            // Odwołanie do odnośnika za znakiem domykającym („wyłącznie:[51)]", „4) (uchylony)[19)]") nie otwiera wiersza.
-            var prevText = TrailingFootnoteAnchor.Replace(prev.Text.TrimEnd(), string.Empty);
             return (ClosedLineEndPattern.IsMatch(prevText) && !ReferenceAbbreviationEndPattern.IsMatch(prevText))
                 || IsUppercaseHeading(prevText);
         }
+
+        /// <summary>
+        /// Wiersz zaczyna się następnym numerem listy, której pozycję zaczyna blok („2. Akademia Sztuk Pięknych w Gdańsku" →
+        /// „3. Akademia …"). Pozycje wykazu nie kończą się interpunkcją (załącznik Dz. U. 2026 poz. 1323: 519 nazw), więc
+        /// o granicy rozstrzyga ciągłość numeracji — bez niej wykaz sklejał się w kilkanaście akapitów.
+        /// </summary>
+        private static bool ContinuesNumbering(PdfTextLine? blockFirst, PdfTextLine line)
+        {
+            if (blockFirst is null)
+                return false;
+
+            var current = ListNumberPattern.Match(blockFirst.Text);
+            var next = ListNumberPattern.Match(line.Text);
+            return current.Success && next.Success
+                && current.Groups["delimiter"].Value == next.Groups["delimiter"].Value
+                && int.Parse(next.Groups["number"].Value) == int.Parse(current.Groups["number"].Value) + 1;
+        }
+
+        /// <summary>Numer pozycji listy na początku wiersza: „12. " albo „12) ".</summary>
+        private static readonly Regex ListNumberPattern = new(@"^(?<number>\d{1,4})(?<delimiter>[\.\)])\s", RegexOptions.Compiled);
 
         /// <summary>Odwołanie do odnośnika na końcu wiersza — indeks górny z nawiasem („[19)]", „[1), 2)]").</summary>
         private static readonly Regex TrailingFootnoteAnchor = new(@"\s*\[[^\[\]]*\)[^\[\]]*\]$", RegexOptions.Compiled);

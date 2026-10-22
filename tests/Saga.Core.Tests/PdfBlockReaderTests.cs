@@ -493,6 +493,45 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TiretWrittenWithAFigureDash_StartsItsOwnBlock()
+        {
+            // Dz. U. 2026 poz. 1290: tirety zapisane myślnikiem cyfrowym (U+2012) sklejały się z literą przed nimi i z cytatem
+            // pierwszego tiretu — komenda drugiego tiretu trafiała do cytatu jako nowelizacja zagnieżdżona.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("b) w ust. 3:", 70, 700)
+                .AddText("‒ pkt 2 otrzymuje brzmienie:", 80, 686)
+                .AddText("„2) jako sąd pierwszej instancji sprawy członków rady;”,", 90, 672)
+                .AddText("‒ po pkt 2 dodaje się pkt 2a w brzmieniu:", 80, 658))
+                .Build();
+
+            var blocks = Read(pdf).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("‒ pkt 2 otrzymuje brzmienie:", blocks);
+            Assert.Contains("‒ po pkt 2 dodaje się pkt 2a w brzmieniu:", blocks);
+        }
+
+        [Fact]
+        public void ListItemsWithoutPunctuation_SplitOnTheNextNumber()
+        {
+            // Dz. U. 2026 poz. 1323, załącznik: 519 nazw „N. Nazwa" bez interpunkcji — numer warunkowy otwierał blok tylko
+            // po wierszu domkniętym interpunkcją, więc wykaz sklejał się w kilkanaście akapitów. Numer, który nie jest
+            // następnym („w ust. 1. … 7. Archiwum"), ani wiersz po skrócie referencyjnym granicy nie stawiają.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("WYKAZ PODMIOTÓW", 200, 720)
+                .AddText("2. Akademia Sztuk Pięknych w Gdańsku", 57, 700)
+                .AddText("3. Akademia Sztuk Pięknych w Warszawie", 57, 686)
+                .AddText("4. Akademia Zamojska w Zamościu", 57, 672)
+                .AddText("7. Apsys Polska", 57, 658))
+                .Build();
+
+            var blocks = Read(pdf).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("2. Akademia Sztuk Pięknych w Gdańsku", blocks);
+            Assert.Contains("3. Akademia Sztuk Pięknych w Warszawie", blocks);
+            Assert.Contains("4. Akademia Zamojska w Zamościu 7. Apsys Polska", blocks);
+        }
+
+        [Fact]
         public void SpaceSetInSuperscriptSize_StaysOutsideTheSuperscript()
         {
             // „po art. 4e² dodaje się" — spacja za indeksem złożona jego rozmiarem i podniesiona jak on.

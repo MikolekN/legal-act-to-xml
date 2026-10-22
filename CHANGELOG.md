@@ -1439,6 +1439,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   zachowuje `element-do-eId` jak automatyczna (ADR-0016) — przedział kasuje tylko adres zastępczy celu bez adresu
   (ADR-0100). Korpus DOCX: 4 dokumenty z przedziałem, ocena i zgodność ze schematem bez zmian.
 
+- **Tiret PDF zapisany myślnikiem cyfrowym** (U+2012, Dz. U. 2026 poz. 1290): znacznik tiretu w składaniu bloków PDF
+  bierze warianty myślnika z `Dashes`, jak klasyfikator — wcześniej tiret sklejał się z literą przed nim i z cytatem
+  poprzedniego tiretu, a komenda drugiego tiretu trafiała do cytatu pierwszego jako nowelizacja zagnieżdżona.
+- **Pozycja listy PDF bez interpunkcji**: wiersz z następnym numerem listy, której pozycję zaczyna blok („2. Akademia …”
+  → „3. Akademia …”), otwiera nowy blok, chyba że poprzedni wiersz kończy się skrótem referencyjnym. Wykaz 530 podmiotów
+  w załączniku Dz. U. 2026 poz. 1323 sklejał się w 23 akapity.
+  - Korpus PDF (obie zmiany): jednostki zgodne z DOCX 99,68 % → 99,75 %, dokumenty w pełni zgodne 1778 → 1808;
+    60 dokumentów z mniejszą różnicą jednostek, żaden z większą; słowa bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
