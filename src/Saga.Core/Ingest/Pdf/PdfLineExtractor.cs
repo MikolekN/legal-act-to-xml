@@ -1,5 +1,6 @@
 #nullable enable
 using System.Text;
+using System.Text.RegularExpressions;
 using UglyToad.PdfPig.Content;
 
 namespace Saga.Core.Ingest.Pdf
@@ -16,6 +17,12 @@ namespace Saga.Core.Ingest.Pdf
         private const double SuperscriptSizeRatio = 0.75;
         private const double SuperscriptRaiseRatio = 0.2;
         private const double LineClusterToleranceRatio = 0.7;
+
+        /// <summary>
+        /// Indeks górny złożony z nawiasami („9[1]” w Dz. U. 2026 poz. 1340 — nawiasy też są podniesione i mniejsze):
+        /// notacja [x] obejmuje go drugi raz. Zostaje jedna para, jak przy indeksie bez nawiasów.
+        /// </summary>
+        private static readonly Regex DoubledSuperscriptPattern = new(@"\[\[([^\[\]]*)\]\]", RegexOptions.Compiled);
 
         // 0,2 em (nie 0,25): PDF-y bez glifów spacji (odstępy słów przez przesunięcia TJ) mają odstępy
         // międzywyrazowe 0,20-0,25 em przy wyjustowaniu; kerning międzyliterowy nie zbliża się do 0,2 em.
@@ -164,7 +171,7 @@ namespace Saga.Core.Ingest.Pdf
 
             return new PdfTextLine
             {
-                Text = sb.ToString(),
+                Text = DoubledSuperscriptPattern.Replace(sb.ToString(), "[$1]"),
                 PageNumber = page.Number,
                 StartX = ordered[0].StartBaseLine.X,
                 BaselineY = baselineY,

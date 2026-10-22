@@ -413,6 +413,22 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void Superscript_SetWithItsBrackets_KeepsOnePair()
+        {
+            // Dz. U. 2026 poz. 1340: indeks złożony razem z nawiasami („32[1]”, nawiasy też podniesione i mniejsze) —
+            // kanał [x] obejmował go drugi raz („Art. 32[[1]].”), a artykuł 32¹ czytał się jako 32.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("Art. 15", 57, 700, 11)
+                .AddText("[1]", 89.6, 703.5, 7)
+                .AddText(". Nowa jednostka dodana nowelizacją.", 98, 700, 11))
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains(blocks, b => b.Text.StartsWith("Art. 15[1]. Nowa jednostka"));
+        }
+
+        [Fact]
         public void SpaceSetInSuperscriptSize_StaysOutsideTheSuperscript()
         {
             // „po art. 4e² dodaje się" — spacja za indeksem złożona jego rozmiarem i podniesiona jak on.

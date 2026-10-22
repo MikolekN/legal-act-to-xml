@@ -131,6 +131,21 @@ namespace Saga.Core.Tests
             Assert.Equal(expected, paragraph.GetFullText());
         }
 
+        [Theory]
+        // 358822_3213229: „art. 809[1] § 2” — indeks złożony razem z nawiasami ma już notację kanału („809[[1]]”
+        // nie był powołaniem artykułu 809¹); nawias tylko z jednej strony to treść indeksu.
+        [InlineData("[1]", "art. 809[1] § 2")]
+        [InlineData("1]", "art. 809[1]] § 2")]
+        public void GetFullText_SuperscriptSetWithItsBrackets_KeepsOnePair(string superscript, string expected)
+        {
+            var paragraph = new Paragraph(
+                new Run(new Text("art. 809") { Space = SpaceProcessingModeValues.Preserve }),
+                Superscript(superscript),
+                new Run(new Text(" § 2") { Space = SpaceProcessingModeValues.Preserve }));
+
+            Assert.Equal(expected, paragraph.GetFullText());
+        }
+
         [Fact]
         public void GetFullText_NonBreakingHyphen_IsAHyphen()
         {

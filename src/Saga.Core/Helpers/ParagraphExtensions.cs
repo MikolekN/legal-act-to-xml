@@ -237,9 +237,11 @@ namespace Saga.Core
                 return;
             }
 
+            // Indeks złożony razem z nawiasami („art. 809[1]”) ma już notację kanału — drugiej pary nie dostaje.
+            var bracketed = core.Length > 2 && core[0] == '[' && core.IndexOfAny(['[', ']'], 1) == core.Length - 1;
             var leading = value.Length - value.TrimStart().Length;
             var trailing = value.Length - value.TrimEnd().Length;
-            sb.Append(value, 0, leading).Append('[').Append(core).Append(']').Append(value, value.Length - trailing, trailing);
+            sb.Append(value, 0, leading).Append(bracketed ? core : $"[{core}]").Append(value, value.Length - trailing, trailing);
         }
 
         /// <summary>

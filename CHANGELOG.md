@@ -1415,6 +1415,11 @@ a wersjonowanie zgodne z Semantic Versioning.
     przez stronę złączone, 2 nowe segmenty na zmianie orientacji, 1 formularz z rozdzielonym nagłówkiem; wyniki
     `--format-parity` bez zmian.
 
+- **Indeks górny złożony razem z nawiasami** („ust. 9[1]” w Dz. U. 2026 poz. 1340 — nawiasy też podniesione i mniejsze):
+  notacja kanału `[x]` obejmowała go drugi raz („Art. 32[[1]].”), więc artykuł 32¹ czytał się jako 32 z „[[1]].” w treści,
+  a cel „w art. 32 w ust. 9¹” tracił indeks (`art_32__ust_9__zdn_2`). Zostaje jedna para — w PDF (`PdfLineExtractor`)
+  i w DOCX (`ParagraphExtensions`, „art. 809[1] § 2”). Korpus DOCX i PDF: te same 4 dokumenty, ocena bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
