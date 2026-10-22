@@ -87,6 +87,9 @@ namespace Saga.Core.Tests
         [InlineData("Art. 1. Organy podejmują prak-", "tyczne i proporcjonalne środki.", "podejmują praktyczne i proporcjonalne")]
         [InlineData("Art. 1. Wspiera się rozwój społeczno-", "-gospodarczy kraju oraz regionów.", "rozwój społeczno-gospodarczy kraju")]
         [InlineData("Art. 1. Pomoc w związku z epidemią COVID-", "19 przysługuje do końca roku.", "epidemią COVID-19 przysługuje")]
+        // Dz. U. 2026 poz. 881: „czy" na początku wiersza to końcówka przymiotnika, nie spójnik za dywizem zawieszonym.
+        [InlineData("3) sąd apelacyjny działający jako sąd odwoław-", "czy w okresie 2 lat stwierdził obrazę przepisów;", "sąd odwoławczy w okresie")]
+        [InlineData("Art. 1. Udziela się pożyczek krótko-", "czy długoterminowych na zasadach rynkowych.", "pożyczek krótko- czy długoterminowych")]
         public void TrailingHyphen_IsAWordBreak_UnlessRepeatedOnTheNextLine(string first, string second, string expected)
         {
             var pdf = new TestPdfBuilder().AddPage()

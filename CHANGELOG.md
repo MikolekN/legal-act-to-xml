@@ -1589,6 +1589,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   zakończony kropką — rozdział zostawał bez tytułu, a akapit (przed pierwszym artykułem rozdziału) ginął. Kropka skrótu
   „r." po roku nie kończy zdania.
 
+- **„czy" za dywizem na końcu wiersza PDF**: Dz. U. 2026 poz. 881 — „sąd odwoław-" / „czy w okresie 2 lat …" wychodziło
+  jako „odwoław- czy": „czy" na początku wiersza uchodziło za spójnik za dywizem zawieszonym („krótko- czy
+  długoterminowe", ADR-0111). Spójnik bywa końcówką przeniesionego wyrazu: gdy dokument zna wyraz sklejony albo człon
+  przed „czy" kończy się spółgłoską, dywiz to przeniesienie.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

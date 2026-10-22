@@ -88,7 +88,7 @@ namespace Saga.Core.Ingest.Pdf
                 buffer[^1] = '-';
                 buffer.Append(next, 1, next.Length - 1);
             }
-            else if (SuspendedHyphenFollowerPattern.IsMatch(next))
+            else if (SuspendedHyphenFollowerPattern.IsMatch(next) && !IsWordBrokenBeforeAnEnding(buffer, next))
             {
                 buffer[^1] = '-';
                 buffer.Append(' ').Append(next);
@@ -124,17 +124,42 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Człon przed dywizem stoi w dokumencie przed dywizem złożenia, a wyrazu sklejonego dokument nie zna.</summary>
         private bool IsAttestedCompound(StringBuilder buffer, string next)
         {
-            var start = buffer.Length - 1;
-            while (start > 0 && char.IsLetter(buffer[start - 1]))
-                start--;
-            var head = buffer.ToString(start, buffer.Length - 1 - start).ToLowerInvariant();
+            var head = HeadBeforeHyphen(buffer);
             if (!compoundHeads.Contains(head))
                 return false;
 
+            return !words.Contains(head + FirstWord(next));
+        }
+
+        /// <summary>
+        /// Spójnik na początku wiersza bywa końcówką przeniesionego wyrazu („odwoław-" / „czy w okresie 2 lat" — Dz. U. 2026
+        /// poz. 881; tak kończą się przymiotniki: „badawczy", „wykonawczy"): wyraz sklejony zna dokument, a przed „czy"
+        /// człon dywizu zawieszonego kończy się samogłoską („krótko- czy długoterminowe") — po spółgłosce to przeniesienie.
+        /// </summary>
+        private bool IsWordBrokenBeforeAnEnding(StringBuilder buffer, string next)
+        {
+            var head = HeadBeforeHyphen(buffer);
+            var follower = FirstWord(next);
+            return head.Length > 0
+                && (words.Contains(head + follower) || (follower == "czy" && !"aąeęiouóy".Contains(head[^1])));
+        }
+
+        /// <summary>Litery przed dywizem kończącym bufor, małymi literami.</summary>
+        private static string HeadBeforeHyphen(StringBuilder buffer)
+        {
+            var start = buffer.Length - 1;
+            while (start > 0 && char.IsLetter(buffer[start - 1]))
+                start--;
+            return buffer.ToString(start, buffer.Length - 1 - start).ToLowerInvariant();
+        }
+
+        /// <summary>Litery na początku tekstu, małymi literami.</summary>
+        private static string FirstWord(string next)
+        {
             var end = 0;
             while (end < next.Length && char.IsLetter(next[end]))
                 end++;
-            return !words.Contains(head + next[..end].ToLowerInvariant());
+            return next[..end].ToLowerInvariant();
         }
     }
 }
