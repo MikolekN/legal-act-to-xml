@@ -1552,6 +1552,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   łacińskiej (а, е, о, р, с, х, у, і, ј, ѕ, һ, ԁ) w oznaczeniu na początku akapitu czyta się jako łacińska — w każdym
   formacie źródłowym; reszta tekstu zostaje jak w akcie.
 
+- **Cudzysłów za spójnikiem na końcu wiersza PDF**: Dz. U. 2026 poz. 1324 — „… w podsystemie „infrastruktura”,
+  „sterowanie – urządzenia przytorowe” lub" / „„energia” lub w zasadach …". Wiersz kończący się „oraz/lub/albo" uchodzi
+  za domknięty (tak przechodzi pozycja wyliczenia w następną), więc cudzysłów otwierał nowy blok, a reszta zdania
+  stawała się `fragment`. Cudzysłów za spójnikiem ciągnie zdanie, jak za przecinkiem. Tak samo cytat zamknięty w swoim
+  wierszu, za którym zdanie biegnie dalej, także za dwukropkiem („klauzuli następującej treści:" / „„Jestem świadomy …”.
+  Klauzula ta zastępuje …" — poz. 1328); treść cytowana nowelizacji kończy się na swoim cudzysłowie i otwiera blok jak dotąd.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

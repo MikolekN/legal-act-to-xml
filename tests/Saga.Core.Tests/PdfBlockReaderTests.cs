@@ -1443,6 +1443,45 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void QuoteAfterALineEndingWithAConjunction_ContinuesTheSentence()
+        {
+            // Dz. U. 2026 poz. 1324: zawinięcie zdania tuż przed cudzysłowem — „lub" kończy wiersz, a nie pozycję wyliczenia.
+            var blocks = ReadLines(
+                "4. W przypadku dokonania istotnych zmian w podsystemie „infrastruktura”, „sterowanie” lub",
+                "„energia” lub w zasadach ich eksploatacji zarządca zawiadamia o tym Prezesa UTK.",
+                "5. Prezes UTK prowadzi rejestr.");
+
+            Assert.Contains(blocks, b => b.Text == "4. W przypadku dokonania istotnych zmian w podsystemie „infrastruktura”, „sterowanie” " +
+                                              "lub „energia” lub w zasadach ich eksploatacji zarządca zawiadamia o tym Prezesa UTK.");
+            Assert.Contains(blocks, b => b.Text == "5. Prezes UTK prowadzi rejestr.");
+        }
+
+        [Fact]
+        public void QuoteClosedInItsLineWithTheSentenceGoingOn_ContinuesTheSentenceAfterAColon()
+        {
+            // Dz. U. 2026 poz. 1328: cytat w zdaniu za dwukropkiem — nie treść cytowana nowelizacji.
+            var blocks = ReadLines(
+                "7. Składający oświadczenie jest obowiązany do zawarcia w nim klauzuli następującej treści:",
+                "„Jestem świadomy odpowiedzialności karnej za złożenie fałszywego oświadczenia”. Klauzula ta zastępuje",
+                "pouczenie organu o odpowiedzialności karnej.");
+
+            Assert.Contains(blocks, b => b.Text.StartsWith("7. Składający", StringComparison.Ordinal)
+                                         && b.Text.EndsWith("Klauzula ta zastępuje pouczenie organu o odpowiedzialności karnej.", StringComparison.Ordinal));
+        }
+
+        [Fact]
+        public void QuotedWordingAfterAColon_StartsABlock()
+        {
+            // Treść cytowana nowelizacji kończy się na swoim cudzysłowie — za dwukropkiem otwiera blok jak dotąd.
+            var blocks = ReadLines(
+                "1) w art. 5 pkt 3 otrzymuje brzmienie:",
+                "„3) zakład pracy;”,",
+                "2) w art. 6 uchyla się ust. 2.");
+
+            Assert.Contains(blocks, b => b.Text == "„3) zakład pracy;”,");
+        }
+
+        [Fact]
         public void ParagraphSignAfterALineEndingWithAnArticleReference_ContinuesTheReference()
         {
             // Dz. U. 2026 poz. 1311: „art. 64cd" / „§ 3." to jedno powołanie — paragraf nie zaczyna się za zdaniem bez kropki.

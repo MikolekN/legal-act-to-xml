@@ -1021,8 +1021,15 @@ namespace Saga.Core.Ingest.Pdf
                 return false;
 
             // Cudzysłów za przecinkiem ciągnie wyliczenie nazw („„IMIĘ”, „NAZWISKO”,” / „„WAŻNA DO:”;" — M.P. 2026
-            // poz. 939); cytat nowelizacji otwiera się za dwukropkiem.
-            if (line.Text.StartsWith(QuotationMarks.Opening) && CommaEndPattern.IsMatch(prevText))
+            // poz. 939), a za spójnikiem — zdanie („w podsystemie „infrastruktura” … lub” / „„energia” lub w zasadach …"
+            // — Dz. U. 2026 poz. 1324); cytat nowelizacji otwiera się za dwukropkiem.
+            if (line.Text.StartsWith(QuotationMarks.Opening) && (CommaEndPattern.IsMatch(prevText) || ConjunctionEndPattern.IsMatch(prevText)))
+                return false;
+
+            // Cytat zamknięty w tym samym wierszu, za którym zdanie biegnie dalej, należy do zdania także za dwukropkiem
+            // („klauzuli następującej treści:" / „„Jestem świadomy … oświadczenia”. Klauzula ta zastępuje …" — Dz. U. 2026
+            // poz. 1328); treść cytowana nowelizacji kończy się na swoim cudzysłowie.
+            if (InlineQuotePattern.IsMatch(line.Text))
                 return false;
 
             return (ClosedLineEndPattern.IsMatch(prevText) && !ReferenceAbbreviationEndPattern.IsMatch(prevText))
@@ -1037,6 +1044,14 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>Wiersz kończy się przecinkiem, także za cudzysłowem zamykającym.</summary>
         private static readonly Regex CommaEndPattern = new($@",[{QuotationMarks.ClosingOrStraight}]*$", RegexOptions.Compiled);
+
+        /// <summary>Wiersz kończy się spójnikiem, którym pozycja wyliczenia przechodzi w następną („oraz", „lub", „albo").</summary>
+        private static readonly Regex ConjunctionEndPattern = new(@"(?:^|\s)(?:oraz|lub|albo)$", RegexOptions.Compiled);
+
+        /// <summary>Wiersz zaczyna cytat bez cytatów zagnieżdżonych, który zamyka się w nim, a za nim biegną dalsze wyrazy.</summary>
+        private static readonly Regex InlineQuotePattern = new(
+            $@"^{QuotationMarks.Opening}[^{QuotationMarks.Opening}{QuotationMarks.Closing}]*[{QuotationMarks.Closing}][.,;:]?\s+\p{{L}}",
+            RegexOptions.Compiled);
 
         /// <summary>
         /// Nagłówek wersalikami na początku strony po wierszu, który nim nie jest („rewers" pod wzorem na końcu strony,
