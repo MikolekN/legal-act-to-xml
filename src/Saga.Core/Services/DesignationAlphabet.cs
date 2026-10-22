@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace Saga.Core.Services
 {
     /// <summary>
@@ -19,6 +21,31 @@ namespace Saga.Core.Services
 
         /// <summary>Mała litera oznaczenia — łacińska albo polska.</summary>
         internal static bool IsLowerLetter(char c) => c is >= 'a' and <= 'z' || PolishLower.Contains(c);
+
+        /// <summary>
+        /// Litery cyrylicy nie do odróżnienia od łacińskich w druku i ich łacińskie odpowiedniki. Oznaczenie zna tylko
+        /// litery łacińskie i polskie, więc taka litera w oznaczeniu to łacińska wpisana w innym układzie klawiatury
+        /// („а)" z U+0430 — Dz. U. 2026 poz. 1324 i poprzedni tekst jednolity tej ustawy).
+        /// </summary>
+        private const string CyrillicLookalikes = "аеорсхуіјѕһԁ";
+        private const string LatinOfLookalikes = "aeopcxyijshd";
+
+        private static readonly Regex LeadingLetterDesignation = new(
+            @"^\s*[" + QuotationMarks.OpeningOrStraight + @"]?(?<designation>[a-z" + CyrillicLookalikes + @"]{1,2})\)", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Tekst akapitu z oznaczeniem litery na początku zapisanym literami łacińskimi („а) art. 6 …" → „a) art. 6 …");
+        /// ten sam napis, gdy oznaczenie jest łacińskie albo go nie ma. Reszta tekstu zostaje jak w akcie.
+        /// </summary>
+        internal static string WithLatinLeadingDesignation(string text)
+        {
+            var designation = LeadingLetterDesignation.Match(text).Groups["designation"];
+            if (!designation.Success || designation.Value.All(IsLowerLetter))
+                return text;
+
+            var latin = string.Concat(designation.Value.Select(c => CyrillicLookalikes.IndexOf(c) is var i and >= 0 ? LatinOfLookalikes[i] : c));
+            return text[..designation.Index] + latin + text[(designation.Index + designation.Length)..];
+        }
 
         /// <summary>
         /// Oznaczenie sprowadzone do liter bazowych („ł" → „l") — do porównań kolejności: polska litera

@@ -1,5 +1,6 @@
 using DocumentFormat.OpenXml.Packaging;
 using Saga.Core.Ingest;
+using Saga.Core.Services;
 using Saga.Core.Services.Classify.Document;
 using Saga.Core.Services.Parsing;
 using Saga.Model;
@@ -103,6 +104,9 @@ namespace Saga.Core
             DocumentClassificationResult? classification = null,
             Action<DocumentBlock, ParsingContext>? observeBlock = null)
         {
+            // Oznaczenie litery wpisane cyrylicą łudząco podobną do łaciny („а)") — w każdym formacie źródłowym.
+            blocks = blocks.Select(WithLatinDesignation).ToList();
+
             // Cytat nowelizacji, którego nie domknięto, trwa do końca dokumentu i wchłania resztę aktu
             // zmieniającego. Widać to dopiero na końcu, więc dokument buduje się wtedy ponownie, z granicą
             // cytatu wskazaną z góry (ADR-0049). Każdy przebieg dokłada jedną nową granicę albo jest ostatni.
@@ -122,6 +126,17 @@ namespace Saga.Core
 
             publication?.FillJournal(document);
             return document;
+        }
+
+        /// <summary>Blok z oznaczeniem litery zapisanym literami łacińskimi (<see cref="DesignationAlphabet.WithLatinLeadingDesignation"/>).</summary>
+        private static DocumentBlock WithLatinDesignation(DocumentBlock block)
+        {
+            // Pusty wpis listy bloków potok pomija — zostaje, jaki był.
+            if (block?.Text is not { } original)
+                return block!;
+
+            var text = DesignationAlphabet.WithLatinLeadingDesignation(original);
+            return ReferenceEquals(text, original) ? block : block with { Text = text };
         }
 
         /// <summary>

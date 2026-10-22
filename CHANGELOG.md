@@ -1546,6 +1546,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   a „[)I)]" (numer zgubiony w warstwie tekstowej) wiąże odnośnik bez oznaczenia. PDF: słowa odnośników 96,12 → 96,13 %,
   15 eksportów z uwagą jako osobnym akapitem odnośnika, 0 gorzej; z aktów ISAP zmienia się poz. 1297 (naprawiona).
 
+- **Oznaczenie litery wpisane cyrylicą**: Dz. U. 2026 poz. 1324 (i poprzedni tekst jednolity tej ustawy w DOCX) drukuje
+  „а)" z cyrylickim „а" (U+0430). Wzorce oznaczeń znają tylko litery łacińskie i polskie, więc litera stawała się
+  `fragment`, następna — literą spoza ZTP, a punkt nad nimi `nie-ztp-punkt`. Litera cyrylicy nie do odróżnienia od
+  łacińskiej (а, е, о, р, с, х, у, і, ј, ѕ, һ, ԁ) w oznaczeniu na początku akapitu czyta się jako łacińska — w każdym
+  formacie źródłowym; reszta tekstu zostaje jak w akcie.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

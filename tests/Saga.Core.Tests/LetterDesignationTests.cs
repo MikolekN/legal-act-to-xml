@@ -35,6 +35,31 @@ namespace Saga.Core.Tests
             Assert.NotEqual(ParagraphKind.Letter, Kind(text));
 
         [Fact]
+        public void LetterTypedInCyrillicLookalike_IsTheLatinLetter()
+        {
+            // Dz. U. 2026 poz. 1324 (i poprzedni tekst jednolity tej ustawy w DOCX): „а)" z cyrylickim „а" (U+0430).
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Art. 3a. Przepisów rozporządzenia nie stosuje się do przewozów:",
+                "1) międzynarodowych, z tym że:",
+                "а) art. 6 ust. 4 tego rozporządzenia stosuje się od dnia 7 czerwca 2025 r.,",
+                "b) art. 10 tego rozporządzenia stosuje się od dnia 7 czerwca 2030 r.",
+            }.Select(text => new DocumentBlock { Text = text }).ToList());
+
+            var point = document.Articles.Single().Paragraphs.Single().Points.Single();
+            Assert.Equal(["a", "b"], point.Letters.Select(letter => letter.Number!.Value));
+            Assert.StartsWith("art. 6 ust. 4", point.Letters[0].ContentText);
+        }
+
+        [Theory]
+        [InlineData("а) treść", "a) treść")]
+        [InlineData("„с) treść", "„c) treść")]
+        [InlineData("a) треść", "a) треść")]          // reszta tekstu zostaje jak w akcie
+        [InlineData("аа treść", "аа treść")] // bez nawiasu to nie oznaczenie
+        public void LeadingDesignation_IsWrittenInLatinLetters(string text, string expected) =>
+            Assert.Equal(expected, Saga.Core.Services.DesignationAlphabet.WithLatinLeadingDesignation(text));
+
+        [Fact]
         public void StyleClassifiedLetter_WithNonConformingMarker_StillStripsPrefixAndParsesNumber()
         {
             // Ścieżka stylowa bez zmian: litera ze stylu LIT z markerem spoza § 56 (wersalik „A)") wciąż ma
