@@ -136,7 +136,15 @@ namespace Saga.Core.Services.Parsing
                 return false;
 
             if (!ParsingFactories.AttachWrapUpCommonPart(parent, text))
-                return false;
+            {
+                // Wyliczenie zamknęła już część wspólna: drugi myślnik to jej drugie brzmienie w tekście jednolitym
+                // (Dz. U. 2026 poz. 1335), jak w TryHandleWrapUp — dalsza treść, którą WordingVersions czyta jako wersję.
+                if (((IHasCommonParts)parent).CommonParts.LastOrDefault(CommonPartPlacement.IsClosing) is not { } closing)
+                    return false;
+
+                closing.Continuation.Add(new ContentBlock { Text = text.Trim() });
+                return true;
+            }
 
             Log.Warning("Myślnik bez stylu uznany za część wspólną (poprzednia jednostka bez znaku końcowego): {Text}", text);
             ValidationReporter.AddValidationMessage(parent, ValidationLevel.Info,

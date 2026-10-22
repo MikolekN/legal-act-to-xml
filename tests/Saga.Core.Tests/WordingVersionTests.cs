@@ -822,20 +822,20 @@ namespace Saga.Core.Tests
         private const string CommonPartStyle = "CZWSPPKTczwsplnapunktw";
 
         // Korpus: 311012_2800574, art. 99a ust. 4 — część wspólna wydrukowana dwa razy.
-        private static LegalDocument CommonPartPrintedTwice() => Parse(
+        private static LegalDocument CommonPartPrintedTwice(string? style = CommonPartStyle) => Parse(
             Block("Art. 2. 1. W przypadku:"),
             Block("1) sprzedaży suszu tytoniowego,"),
             Block("2) nabycia suszu tytoniowego"),
             new DocumentBlock
             {
                 Text = "– bez jego oznaczenia znakami akcyzy, stawka akcyzy wynosi 812 zł za każdy kilogram.[1)]",
-                StyleId = CommonPartStyle,
+                StyleId = style,
                 Footnotes = [new BlockFootnote("1", ["Część wspólna w tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2."])],
             },
             new DocumentBlock
             {
                 Text = "– bez jego oznaczenia znakami akcyzy, stawka akcyzy wynosi 1336 zł za każdy kilogram.[2)]",
-                StyleId = CommonPartStyle,
+                StyleId = style,
                 Footnotes = [new BlockFootnote("2", ["Część wspólna w brzmieniu ustalonym przez art. 1 pkt 2 lit. b ustawy z dnia 9 maja 2025 r. o zmianie ustawy o podatku akcyzowym (Dz. U. poz. 680); wejdzie w życie z dniem 1 stycznia 2026 r."])],
             });
 
@@ -852,6 +852,20 @@ namespace Saga.Core.Tests
             Assert.All(closing, part => Assert.Empty(part.Continuation));
             Assert.Contains("1336 zł", closing[1].ContentText);
             Assert.All(closing, part => Assert.Equal(new DateTime(2026, 1, 1), part.Version!.ChangeDate));
+        }
+
+        [Fact]
+        public void CommonPartPrintedTwice_WithoutStyles_IsTwoCommonPartsOfOneEnumeration()
+        {
+            // PDF (Dz. U. 2026 poz. 1335, art. 552 ust. 2b): drugi myślnik za wyliczeniem zamkniętym częścią wspólną to
+            // jej drugie brzmienie — nie tiret ostatniego punktu.
+            var paragraph = ParagraphsOf(CommonPartPrintedTwice(style: null), "2").Single();
+            var closing = paragraph.CommonParts.Where(part => part.Type == CommonPartType.WrapUp).ToList();
+
+            Assert.Equal(
+                new WordingVersionKind?[] { WordingVersionKind.Current, WordingVersionKind.Future },
+                closing.Select(part => part.Version?.Kind));
+            Assert.Empty(paragraph.Points[^1].Letters);
         }
 
         [Fact]

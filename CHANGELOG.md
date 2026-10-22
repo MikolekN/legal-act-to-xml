@@ -1565,6 +1565,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   oznaczenie dokleiło się do objaśnień wzoru 5b, a cały wzór 5c wszedł do załącznika 5b. Oznaczenie załącznika na
   początku strony otwiera blok, jak nagłówek wersalikami.
 
+- **Drugie brzmienie wprowadzenia i części wspólnej bez stylów (PDF)**: Dz. U. 2026 poz. 1335, art. 552 — tekst
+  jednolity drukuje wprowadzenie do wyliczenia i część wspólną w dwóch brzmieniach, każde z odnośnikiem
+  ([ADR-0065](docs/adr/0065-drugie-brzmienie-w-osobnym-akapicie-nalezy-do-tego-samego-fragmentu.md)). W PDF drugie
+  wprowadzenie sklejało się z pierwszym w jedno zdanie, a z dwóch myślników pierwszy zamykał wyliczenie, drugi stawał
+  się tiretem ostatniego punktu (`nie-ztp-punkt`, `nie-ztp-tiret`). Wiersz zaczęty wielką literą pod dwukropkiem
+  z odwołaniem do odnośnika otwiera blok, a myślnik za wyliczeniem zamkniętym już częścią wspólną jest jej dalszą
+  treścią — jak w DOCX — którą `WordingVersions` czyta jako drugie brzmienie.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

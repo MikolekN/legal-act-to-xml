@@ -1476,6 +1476,19 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SecondWordingOfAnIntroduction_AfterAColonWithAFootnoteReference_StartsABlock()
+        {
+            // Dz. U. 2026 poz. 1335: dwa brzmienia wprowadzenia do wyliczenia, każde z odnośnikiem (ADR-0065).
+            var blocks = ReadLines(
+                "2. Ustalenie wysokości opłaty w okresie do dnia 31 grudnia 2026 r. następuje na podstawie:[67)]",
+                "Ustalenie wysokości opłaty w okresie do dnia 31 grudnia 2029 r. następuje na podstawie:[68)]",
+                "1) określonego w pozwoleniu wodnoprawnym celu i zakresu korzystania z wód;");
+
+            Assert.Contains(blocks, b => b.Text == "2. Ustalenie wysokości opłaty w okresie do dnia 31 grudnia 2026 r. następuje na podstawie:[67)]");
+            Assert.Contains(blocks, b => b.Text == "Ustalenie wysokości opłaty w okresie do dnia 31 grudnia 2029 r. następuje na podstawie:[68)]");
+        }
+
+        [Fact]
         public void QuoteClosedInItsLineWithTheSentenceGoingOn_ContinuesTheSentenceAfterAColon()
         {
             // Dz. U. 2026 poz. 1328: cytat w zdaniu za dwukropkiem — nie treść cytowana nowelizacji.
