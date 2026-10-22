@@ -323,7 +323,8 @@ komórki jest blokiem z `TableCell`, jak w DOCX — bez stylów Word, więc klas
 warstwie syntaktycznej (regex) i układzie (wcięcia). Odnośniki ze strefy przypisów wiąże ze znacznikami treści `PdfFootnotes`
 (oznaczenie i strona odwołania) — blok niesie `Footnotes` i znacznik o numerze jednoznacznym, jak w DOCX; akapity
 odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnika. Treść złożoną w poprzek strony pionowej
-(szeroka tabela) `PdfRotation` przenosi z obramowaniem do układu, w którym jest pozioma; tabela przecięta stroną to jedna
+(szeroka tabela) `PdfRotation` przenosi z obramowaniem do układu, w którym jest pozioma, a napisy pod innym kątem
+`PdfLineExtractor` czyta w ich własnym kierunku; tabela przecięta stroną to jedna
 tabela, gdy na następnej stronie stoi tuż za nią z tymi samymi kolumnami. Dywiz na końcu wiersza rozstrzyga
 `PdfHyphenation` ([ADR-0111](adr/0111-przeniesienie-wyrazu-w-pdf-traci-dywiz-zlozenie-powtarza-dywiz.md)).
 Litery, których na stronie nie widać — przycięte albo zakryte białym prostokątem, jak nagłówek oryginału pod nagłówkiem

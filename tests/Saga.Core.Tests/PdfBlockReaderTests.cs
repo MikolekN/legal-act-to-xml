@@ -299,6 +299,53 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void VerticalHeaderInATableCell_ReadsAsOneLine()
+        {
+            // Napis pionowy w komórce (podpis kolumny obrócony o ćwierć obrotu) — każda litera była osobnym wierszem.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 400);
+            builder.AddText("§ 1. Mierniki:", 57, 720);
+            builder.AddGrid([705, 600], [57, 80, 400]);
+            builder.AddRotatedText("Bazowa", 72, 610, 9);
+            builder.AddText("Wartość docelowa miernika", 85, 690);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Equal(["Bazowa", "Wartość docelowa miernika"],
+                blocks.Where(b => b.TableCell is not null).Select(b => b.Text.Trim()));
+        }
+
+        [Fact]
+        public void UpsideDownText_ReadsLeftToRight()
+        {
+            // M.P. 2026 poz. 1017: napis odwrócony o pół obrotu biegnie od prawej do lewej — wychodził wspak i z odstępem
+            // za każdą literą („1 R A Z S B O").
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("§ 1. Obszary programu:", 57, 720)
+                .AddUpsideDownText("OBSZAR 1", 300, 650))
+                .Build();
+
+            Assert.Contains(Read(pdf), b => b.Text.Trim() == "OBSZAR 1");
+        }
+
+        [Fact]
+        public void UpsideDownLabelInsideATableSetAcrossThePage_IsInItsCell()
+        {
+            // M.P. 2026 poz. 1017: w tabeli w poprzek strony podpis obszaru stoi pod kątem prostym do tekstu tabeli — na
+            // stronie do góry nogami. Należy do komórki, a nie do strony pionowej (dzielił załącznik na segmenty).
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddRotatedText("Tabela – zestawienie kosztów programu wieloletniego", 80, 100)
+                .AddGrid(rows: [100, 300, 500], columns: [95, 175])
+                .AddUpsideDownText("OBSZAR 1", 170, 150, 9)
+                .AddRotatedText("Kwota łącznie", 130, 310)
+                .Build();
+
+            var cells = Read(pdf).Where(b => b.TableCell is not null).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Equal(["OBSZAR 1", "Kwota łącznie"], cells);
+        }
+
+        [Fact]
         public void ContentSetAcrossThePage_IsLandscape_AndTheRestOfTheDocumentIsNot()
         {
             // Orientacja jak sekcja DOCX: załącznik dzieli się na segmenty pionowe i poziome (atrybut „orientacja”).

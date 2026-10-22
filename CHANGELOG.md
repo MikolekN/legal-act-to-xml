@@ -1456,6 +1456,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus PDF: 30 eksportów z nagłówkami załączników wydzielonymi na początku strony, 3 dokumenty z mniejszą różnicą
     jednostek, żaden z większą; w pełni zgodnych z DOCX 1808 → 1811. Reguła wersalików nie zmienia korpusu.
 
+- **Napisy PDF pod innym kątem** (M.P. 2026 poz. 1017): litery, których linia bazowa biegnie inaczej niż wiersze układu
+  (napis pionowy w komórce, napis odwrócony do góry nogami), czyta się w ich własnym kierunku, a kolejne wiersze napisu
+  składają się w jeden wiersz w porządku czytania (`PdfLineExtractor`). Wcześniej każda litera była osobnym wierszem albo
+  napis wychodził wspak z odstępem za każdą literą („i c ś o n d u l … 1 R A Z S B O”). Na stronie z treścią w poprzek
+  napis leżący w jej obszarze (poszerzonym o zachodzące na niego obramowanie) należy do niej — trafia do komórki tabeli,
+  a nie na stronę pionową, która dzieliła załącznik na 12 segmentów.
+  - Korpus PDF: 4 dokumenty z odczytanymi wyrazami zamiast liter („kamizelka”, „W-70”, „równoważnika”), jednostki bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

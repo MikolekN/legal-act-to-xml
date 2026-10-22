@@ -14,10 +14,11 @@ namespace Saga.Core.Tests
     {
         /// <summary>
         /// Tekst w wierszu; <c>Rotated</c> — obrócony o ćwierć obrotu, biegnący w górę strony (treść w poprzek strony);
+        /// <c>UpsideDown</c> — obrócony o pół obrotu, biegnący od prawej do lewej;
         /// <c>Clip</c> — prostokąt przycięcia (x, y, szerokość, wysokość), poza którym tekst nie jest widoczny.
         /// </summary>
         internal sealed record TextRun(string Text, double X, double Y, double Size, bool Rotated = false,
-            (double X, double Y, double Width, double Height)? Clip = null);
+            (double X, double Y, double Width, double Height)? Clip = null, bool UpsideDown = false);
 
         /// <summary>Odcinek rysowany kreską — obramowanie tabeli.</summary>
         internal sealed record Rule(double X1, double Y1, double X2, double Y2);
@@ -106,6 +107,10 @@ namespace Saga.Core.Tests
         /// </summary>
         public TestPdfBuilder AddRotatedText(string text, double x, double y, double size = 11) => Add(new TextRun(text, x, y, size, Rotated: true));
 
+        /// <summary>Dodaje tekst odwrócony o pół obrotu: biegnie od punktu x, y w lewo, litery do góry nogami.</summary>
+        public TestPdfBuilder AddUpsideDownText(string text, double x, double y, double size = 11) =>
+            Add(new TextRun(text, x, y, size, UpsideDown: true));
+
         /// <summary>
         /// Dodaje tekst przycięty prostokątem (<c>q … re W n BT … ET Q</c>) — tak wydawca nakłada na stronę dokumentu
         /// własny nagłówek, a treść oryginału przycina do pasa pod nim.
@@ -185,7 +190,7 @@ namespace Saga.Core.Tests
                 if (run.Clip is { } clip)
                     sb.Append(CultureInfo.InvariantCulture, $"q {Pt(clip.X)} {Pt(clip.Y)} {Pt(clip.Width)} {Pt(clip.Height)} re W n ");
                 sb.Append(CultureInfo.InvariantCulture,
-                    $"BT /F1 {Pt(run.Size)} Tf {(run.Rotated ? "0 1 -1 0" : "1 0 0 1")} {Pt(run.X)} {Pt(run.Y)} Tm (");
+                    $"BT /F1 {Pt(run.Size)} Tf {(run.Rotated ? "0 1 -1 0" : run.UpsideDown ? "-1 0 0 -1" : "1 0 0 1")} {Pt(run.X)} {Pt(run.Y)} Tm (");
                 foreach (var c in run.Text)
                 {
                     if (c == '(' || c == ')' || c == '\\')

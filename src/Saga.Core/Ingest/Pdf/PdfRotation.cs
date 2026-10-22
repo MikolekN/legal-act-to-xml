@@ -58,11 +58,15 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>Litera przeniesiona do układu treści obróconej — dla wyodrębniania wierszy jest pozioma.</summary>
         internal static Letter Letter(Letter letter, int direction, double pageWidth, double pageHeight) =>
+            Transformed(letter, point => Point(point, direction, pageWidth, pageHeight));
+
+        /// <summary>Litera z punktami przeniesionymi odwzorowaniem <paramref name="map"/> (obrót o wielokrotność ćwierci).</summary>
+        internal static Letter Transformed(Letter letter, Func<PdfPoint, PdfPoint> map) =>
             new(letter.Value,
-                Rectangle(letter.BoundingBox, direction, pageWidth, pageHeight),
-                Rectangle(letter.GlyphRectangleLoose, direction, pageWidth, pageHeight),
-                Point(letter.StartBaseLine, direction, pageWidth, pageHeight),
-                Point(letter.EndBaseLine, direction, pageWidth, pageHeight),
+                Mapped(letter.BoundingBox, map),
+                Mapped(letter.GlyphRectangleLoose, map),
+                map(letter.StartBaseLine),
+                map(letter.EndBaseLine),
                 letter.Width,
                 letter.FontSize,
                 letter.FontDetails,
@@ -71,5 +75,11 @@ namespace Saga.Core.Ingest.Pdf
                 letter.FillColor,
                 letter.PointSize,
                 letter.TextSequence);
+
+        private static PdfRectangle Mapped(PdfRectangle box, Func<PdfPoint, PdfPoint> map)
+        {
+            var (a, b) = (map(box.BottomLeft), map(box.TopRight));
+            return new PdfRectangle(Math.Min(a.X, b.X), Math.Min(a.Y, b.Y), Math.Max(a.X, b.X), Math.Max(a.Y, b.Y));
+        }
     }
 }

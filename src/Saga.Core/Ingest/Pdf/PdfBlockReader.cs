@@ -299,10 +299,17 @@ namespace Saga.Core.Ingest.Pdf
                 {
                     var direction = rotated.Direction;
                     var (width, height) = (page.Width, page.Height);
-                    var inFrame = rotated.Turned.ToHashSet();
+
+                    // Napis pod innym kątem w obrębie treści obróconej (podpis kolumny tabeli — M.P. 2026 poz. 1017) należy do
+                    // niej; poza nią zostaje w układzie strony nagłówek i numer strony, które rozpoznaje filtr artefaktów.
+                    var area = Area(page, rotated.Turned);
+                    var turnedLetters = rotated.Turned.ToHashSet();
+                    var inFrame = rotated.Turned
+                        .Concat(letters.Where(letter => !turnedLetters.Contains(letter) && Contains(area, letter)))
+                        .ToHashSet();
                     allLines.AddRange(PdfLineExtractor.ExtractLines(page, letters.Where(letter => !inFrame.Contains(letter)).ToList())
                         .Select(line => Normalized(line) with { IsLandscape = wide }));
-                    ReadLetters(page, rotated.Turned.Select(letter => PdfRotation.Letter(letter, direction, width, height)).ToList(),
+                    ReadLetters(page, letters.Where(inFrame.Contains).Select(letter => PdfRotation.Letter(letter, direction, width, height)).ToList(),
                         box => PdfRotation.Rectangle(box, direction, width, height), frameHeight: width, landscape: !wide);
                 }
                 else
@@ -370,6 +377,34 @@ namespace Saga.Core.Ingest.Pdf
 
             blocks.AddRange(footnotes);
             return blocks;
+        }
+
+        /// <summary>
+        /// Obszar treści złożonej w poprzek strony: prostokąt otaczający linie bazowe jej liter, poszerzony o rysunki,
+        /// które na niego zachodzą — obramowanie tabeli sięga za ostatni wiersz liter (podpis kolumny „Województwa /
+        /// części budżetowe" stoi 11 pt poza nim). Kreska pod nagłówkiem wydawcy na niego nie zachodzi.
+        /// </summary>
+        private static PdfRectangle Area(Page page, IReadOnlyList<Letter> letters)
+        {
+            var points = letters.SelectMany(letter => new[] { letter.StartBaseLine, letter.EndBaseLine }).ToList();
+            var area = new PdfRectangle(points.Min(p => p.X), points.Min(p => p.Y), points.Max(p => p.X), points.Max(p => p.Y));
+            double left = area.Left, bottom = area.Bottom, right = area.Right, top = area.Top;
+            foreach (var path in page.Paths)
+            {
+                if (path.IsClipping || path.GetBoundingRectangle() is not { } box
+                    || box.Right < area.Left || box.Left > area.Right || box.Top < area.Bottom || box.Bottom > area.Top)
+                    continue;
+
+                (left, bottom, right, top) = (Math.Min(left, box.Left), Math.Min(bottom, box.Bottom), Math.Max(right, box.Right), Math.Max(top, box.Top));
+            }
+
+            return new PdfRectangle(left, bottom, right, top);
+        }
+
+        private static bool Contains(PdfRectangle area, Letter letter)
+        {
+            var (x, y) = ((letter.StartBaseLine.X + letter.EndBaseLine.X) / 2, (letter.StartBaseLine.Y + letter.EndBaseLine.Y) / 2);
+            return x >= area.Left && x <= area.Right && y >= area.Bottom && y <= area.Top;
         }
 
         /// <summary>Tekst wiersza zastępczego tabeli — nie jest treścią; blokiem nie zostaje.</summary>

@@ -2,6 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using UglyToad.PdfPig.Content;
+using UglyToad.PdfPig.Core;
 
 namespace Saga.Core.Ingest.Pdf
 {
@@ -39,17 +40,125 @@ namespace Saga.Core.Ingest.Pdf
             if (letters.Count == 0)
                 return new List<PdfTextLine>();
 
-            var clusters = ClusterIntoLines(WithoutOverprints(letters));
-            var lines = new List<PdfTextLine>(clusters.Count);
-            foreach (var cluster in clusters)
+            var height = frameHeight ?? page.Height;
+            var lines = new List<PdfTextLine>();
+            foreach (var group in letters.GroupBy(DirectionOf))
             {
-                var line = BuildLine(cluster, page, frameHeight ?? page.Height);
-                if (!string.IsNullOrWhiteSpace(line.Text))
-                    lines.Add(line);
+                if (group.Key == WritingDirection.Forward)
+                {
+                    lines.AddRange(Built(page, group.ToList(), height).Select(built => built.Line));
+                    continue;
+                }
+
+                lines.AddRange(TurnedLines(page, group.ToList(), group.Key, height));
             }
 
             // Porządek czytania: od góry strony (Y malejąco).
             return lines.OrderByDescending(l => l.BaselineY).ToList();
+        }
+
+        /// <summary>Kierunek linii bazowej litery względem układu, w którym czyta się wiersze.</summary>
+        private enum WritingDirection
+        {
+            Forward,
+            Up,
+            Down,
+            Backward,
+        }
+
+        private static WritingDirection DirectionOf(Letter letter)
+        {
+            var (dx, dy) = (letter.EndBaseLine.X - letter.StartBaseLine.X, letter.EndBaseLine.Y - letter.StartBaseLine.Y);
+            if (Math.Abs(dy) > Math.Abs(dx))
+                return dy > 0 ? WritingDirection.Up : WritingDirection.Down;
+            return dx < 0 ? WritingDirection.Backward : WritingDirection.Forward;
+        }
+
+        /// <summary>
+        /// Wiersze z liter pisanych pod innym kątem niż reszta układu — napis pionowy w tabeli albo odwrócony do góry
+        /// nogami (w tabeli w poprzek strony M.P. 2026 poz. 1017 napisy „OBSZAR 1 Personel ochrony ludności" biegną
+        /// od prawej do lewej). Litery czyta się w układzie, w którym są poziome, a wiersz stoi w miejscu napisu: na jego
+        /// lewej krawędzi i górze. Wcześniej każda litera była osobnym wierszem albo wiersz wychodził wspak („i c ś o n …").
+        /// </summary>
+        private static IEnumerable<PdfTextLine> TurnedLines(Page page, List<Letter> letters, WritingDirection direction, double height)
+        {
+            Func<PdfPoint, PdfPoint> toForward = direction switch
+            {
+                WritingDirection.Up => point => new PdfPoint(point.Y, -point.X),
+                WritingDirection.Down => point => new PdfPoint(-point.Y, point.X),
+                _ => point => new PdfPoint(-point.X, -point.Y),
+            };
+
+            var originals = new Dictionary<Letter, Letter>(ReferenceEqualityComparer.Instance);
+            var turned = letters.Select(letter =>
+            {
+                var forward = PdfRotation.Transformed(letter, toForward);
+                originals[forward] = letter;
+                return forward;
+            }).ToList();
+
+            // Wiersze jednego napisu (odstęp nie większy niż półtorej wysokości pisma) to jeden wiersz w porządku czytania:
+            // w układzie strony kolejność wierszy napisu odwróconego albo pionowego byłaby inna niż przy czytaniu.
+            foreach (var run in Runs(Built(page, turned, height).ToList()))
+            {
+                var source = run.SelectMany(built => built.Cluster).Select(letter => originals[letter]).ToList();
+                var xs = source.SelectMany(letter => new[] { letter.StartBaseLine.X, letter.EndBaseLine.X }).ToList();
+                var ys = source.SelectMany(letter => new[] { letter.StartBaseLine.Y, letter.EndBaseLine.Y }).ToList();
+                yield return run[0].Line with
+                {
+                    Text = Joined(run.Select(built => built.Line.Text)),
+                    StartX = xs.Min(),
+                    BaselineY = ys.Max(),
+                };
+            }
+        }
+
+        /// <summary>Kolejne wiersze napisu: odstęp linii bazowych nie większy niż półtorej wysokości pisma.</summary>
+        private static IEnumerable<List<(List<Letter> Cluster, PdfTextLine Line)>> Runs(List<(List<Letter> Cluster, PdfTextLine Line)> lines)
+        {
+            var run = new List<(List<Letter> Cluster, PdfTextLine Line)>();
+            foreach (var built in lines)
+            {
+                if (run.Count > 0 && run[^1].Line.BaselineY - built.Line.BaselineY > RunLineGapRatio * Math.Max(built.Line.DominantSize, 1.0))
+                {
+                    yield return run;
+                    run = [];
+                }
+
+                run.Add(built);
+            }
+
+            if (run.Count > 0)
+                yield return run;
+        }
+
+        private const double RunLineGapRatio = 1.5;
+
+        /// <summary>Wiersze napisu sklejone odstępem; dywiz po literze na końcu wiersza łączy wyraz.</summary>
+        private static string Joined(IEnumerable<string> lines)
+        {
+            var text = new StringBuilder();
+            foreach (var line in lines.Select(line => line.Trim()))
+            {
+                if (text.Length > 1 && text[^1] == '-' && char.IsLetter(text[^2]) && line.Length > 0 && char.IsLower(line[0]))
+                    text.Length--;
+                else if (text.Length > 0)
+                    text.Append(' ');
+                text.Append(line);
+            }
+
+            return text.ToString();
+        }
+
+        /// <summary>Wiersze z liter jednego kierunku, poziomych w układzie, w którym się je czyta — razem z literami wiersza.</summary>
+        private static IEnumerable<(List<Letter> Cluster, PdfTextLine Line)> Built(Page page, IReadOnlyList<Letter> letters, double height)
+        {
+            foreach (var cluster in ClusterIntoLines(WithoutOverprints(letters)))
+            {
+                var line = BuildLine(cluster, page, height);
+                if (!string.IsNullOrWhiteSpace(line.Text))
+                    yield return (cluster, line);
+            }
         }
 
         /// <summary>
