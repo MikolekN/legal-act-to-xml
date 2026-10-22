@@ -22,8 +22,10 @@ namespace Saga.Core.Ingest.Pdf
     /// 6. Składanie wierszy w bloki-akapity: granica na markerze jednostki (nadzbiór wzorców — tylko
     ///    segmentacja), skoku wcięcia (&gt; 0,5 em) lub odstępie pionowym (&gt; 1,9× typowej interlinii);
     ///    granica strony NIE jest granicą bloku (jednostka przecięta stroną się skleja). Odstęp akapitowy (&gt; 1,3×
-    ///    interlinii) dzieli akapity bez oznaczenia, poza wierszami tabeli. Dehyfenacja
-    ///    wyłącznie „-" (U+002D) na końcu wiersza + mała litera na początku następnego.
+    ///    interlinii) dzieli akapity bez oznaczenia, poza wierszami tabeli. Dywiz na końcu wiersza po literze
+    ///    i mała litera na początku następnego to przeniesienie wyrazu — dywiz znika; dywiz powtórzony na początku
+    ///    następnego wiersza to złożenie (konwencja składu Dz. U., ADR-0111), a bez niej — człon złożenia, który
+    ///    dokument zapisuje gdzie indziej w środku wiersza (<see cref="PdfHyphenation"/>).
     /// 7. Wcięcia: X pierwszego wiersza bloku względem dominującego lewego marginesu → twips (1 pt = 20 twips).
     /// 8. Strefa tytułowa: nagłówek rodzaju (z organem), data aktu i przedmiot to osobne bloki, a przedmiot kończy
     ///    się na początku treści — skład nie oddziela ich odstępem większym od interlinii.
@@ -347,11 +349,13 @@ namespace Saga.Core.Ingest.Pdf
             var textLines = bodyLines.Where(l => l.Table is null).ToList();
             var dominantLeft = BodyLeftMargin(textLines);
 
+            var hyphenation = PdfHyphenation.From(lines.Where(l => l.Table is null).Select(l => l.Text)
+                .Concat(tables.SelectMany(t => t.Table!.Cells).SelectMany(cell => cell.Lines).Select(l => l.Text)));
             var lastPages = new List<int>();
             var body = AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
-                startIndex: 0, forceBoundary: null, lastPages);
+                startIndex: 0, forceBoundary: null, hyphenation, lastPages);
             var footnotes = AssembleBlocks(footnoteLines, docDominantSize, dominantLeft, BlockRole.FootnoteText,
-                startIndex: body.Count, forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text));
+                startIndex: body.Count, forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text), hyphenation);
 
             // Odnośniki przed winietą: winieta scala swoje bloki, a strony bloków (lastPages) idą równolegle do listy.
             var blocks = JournalMasthead.Mark(PdfFootnotes.Link(body, lastPages, footnotes)).ToList();
@@ -538,13 +542,12 @@ namespace Saga.Core.Ingest.Pdf
         /// wymuszony (przypisy). Granica STRONY nie jest granicą bloku (jednostka przecięta stroną
         /// się skleja). CELOWO bez granicy na skoku wcięcia: skład Dziennika Ustaw używa wcięcia
         /// WISZĄCEGO (marker przy marginesie, kontynuacje głębiej) — granica wcięciowa cięłaby każdy
-        /// zawinięty punkt/literę/tiret i gubiła tekst. Dywiz na końcu wiersza: sklejenie bezpośrednie
-        /// z ZACHOWANIEM dywizu (decyzja użytkownika — patrz komentarz przy sklejaniu).
+        /// zawinięty punkt/literę/tiret i gubiła tekst. Dywiz na końcu wiersza rozstrzyga <paramref name="hyphenation"/>.
         /// </summary>
         /// <param name="lastPages">Gdy podana — dostaje stronę ostatniego wiersza każdego bloku (blok bywa przecięty stroną).</param>
         private static List<DocumentBlock> AssembleBlocks(
             List<PdfTextLine> lines, double emSize, double dominantLeft, BlockRole role,
-            int startIndex, Func<PdfTextLine, bool>? forceBoundary, List<int>? lastPages = null)
+            int startIndex, Func<PdfTextLine, bool>? forceBoundary, PdfHyphenation hyphenation, List<int>? lastPages = null)
         {
             var blocks = new List<DocumentBlock>();
             if (lines.Count == 0)
@@ -603,7 +606,7 @@ namespace Saga.Core.Ingest.Pdf
 
                 foreach (var cell in table.Cells)
                 {
-                    var cellBlocks = AssembleBlocks(cell.Lines, emSize, cell.Bounds.Left, role, startIndex: 0, forceBoundary: null);
+                    var cellBlocks = AssembleBlocks(cell.Lines, emSize, cell.Bounds.Left, role, startIndex: 0, forceBoundary: null, hyphenation);
                     if (cellBlocks.Count == 0)
                         cellBlocks.Add(new DocumentBlock { Text = string.Empty, Role = role });
 
@@ -662,27 +665,12 @@ namespace Saga.Core.Ingest.Pdf
                 }
                 else
                 {
-                    // Kontynuacja akapitu: wiersz zakończony dywizem skleja się BEZPOŚREDNIO (dywiz zostaje).
-                    // DECYZJA UŻYTKOWNIKA (2026-07-19, zamiast dehyfenacji z planu): bez słownika nie da się
-                    // odróżnić dywizu złożenia („społeczno-gospodarczy") od dzielenia wyrazów składem
-                    // („posta-nowienia"); usuwanie scala złożenia NIEODWRACALNIE, zachowanie zostawia
-                    // widoczny i odwracalny artefakt — mniejsza szkoda dla wierności tekstu prawnego.
-                    // Glif odstępu, który skład zostawia na końcu wiersza (także za dywizem: „moto- "), nie wchodzi
-                    // do sklejenia — o odstępie między wierszami decyduje ta reguła, nie strumień PDF. Dywiz
-                    // zawieszony („Tele- i Radiokomunikacji", „dwu- lub trzyletni") rozpoznaje spójnik na początku
-                    // następnego wiersza: zostaje za nim odstęp.
+                    // Kontynuacja akapitu. Glif odstępu, który skład zostawia na końcu wiersza (także za dywizem: „moto- "),
+                    // nie wchodzi do sklejenia — o odstępie między wierszami decyduje ta reguła, nie strumień PDF.
                     while (buffer.Length > 0 && buffer[^1] == ' ')
                         buffer.Length--;
 
-                    if (buffer.Length > 0 && buffer[^1] == '-' && !SuspendedHyphenFollowerPattern.IsMatch(line.Text))
-                    {
-                        buffer.Append(line.Text);
-                    }
-                    else
-                    {
-                        buffer.Append(' ');
-                        buffer.Append(line.Text);
-                    }
+                    hyphenation.Join(buffer, line.Text);
                 }
 
                 prev = line;
@@ -784,13 +772,6 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         private static readonly Regex LegalBasisEndPattern = new(
             @"\bco\s+następuje\s*:\s*$", RegexOptions.Compiled);
-
-        /// <summary>
-        /// Spójnik za dywizem zawieszonym („Tele- i Radiokomunikacji", „krótko- lub długoterminowe", „od pięcio- do
-        /// dziesięcioletnich") — początek wiersza po dywizie, który nie dzieli wyrazu.
-        /// </summary>
-        private static readonly Regex SuspendedHyphenFollowerPattern = new(
-            @"^(?:i|lub|albo|oraz|czy|bądź|ani|do)\s", RegexOptions.Compiled);
 
         /// <summary>Miejsce w strefie tytułowej bloku, który zaczyna się wierszem <paramref name="line"/>.</summary>
         private static TitleZone NextTitleZone(PdfTextLine line, TitleZone previous)

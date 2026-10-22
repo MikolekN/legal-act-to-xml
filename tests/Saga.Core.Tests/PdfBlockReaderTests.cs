@@ -81,19 +81,56 @@ namespace Saga.Core.Tests
                 blocks[0].Text);
         }
 
-        [Fact]
-        public void TrailingHyphen_IsKeptAndJoinedDirectly()
+        [Theory]
+        // ADR-0111, konwencja składu Dz. U.: przeniesienie wyrazu nie powtarza dywizu (Dz. U. 2026 poz. 1358: „prak-" /
+        // „tyczne") — dywiz znika; złożenie dzielone na dywizie ma go powtórzonego na początku wiersza — zostaje jeden.
+        [InlineData("Art. 1. Organy podejmują prak-", "tyczne i proporcjonalne środki.", "podejmują praktyczne i proporcjonalne")]
+        [InlineData("Art. 1. Wspiera się rozwój społeczno-", "-gospodarczy kraju oraz regionów.", "rozwój społeczno-gospodarczy kraju")]
+        [InlineData("Art. 1. Pomoc w związku z epidemią COVID-", "19 przysługuje do końca roku.", "epidemią COVID-19 przysługuje")]
+        public void TrailingHyphen_IsAWordBreak_UnlessRepeatedOnTheNextLine(string first, string second, string expected)
         {
-            // DECYZJA UŻYTKOWNIKA (zamiast dehyfenacji z planu): dywiz złożenia jest nieodróżnialny
-            // od dzielenia wyrazów — zachowujemy dywiz i sklejamy bez spacji („nie zgubić informacji").
             var pdf = new TestPdfBuilder().AddPage()
-                .AddText("Art. 1. Wspiera się rozwój społeczno-", 57, 700)
-                .AddText("gospodarczy kraju oraz regionów.", 57, 686)
+                .AddText(first, 57, 700)
+                .AddText(second, 57, 686)
                 .Build();
 
             var blocks = Read(pdf);
 
-            Assert.Contains("społeczno-gospodarczy kraju", blocks[0].Text);
+            Assert.Contains(expected, blocks[0].Text);
+        }
+
+        [Theory]
+        // PDF z edytora (korpus, 297516) dzieli złożenie bez powtórzonego dywizu. Człon „kolejowo-” stoi w dokumencie
+        // w środku wiersza przed dywizem — zostaje złożeniem; „okreś-” nie — przeniesienie.
+        [InlineData("Art. 2. Przejazd kolejowo-", "drogowy kategorii A.", "Przejazd kolejowo-drogowy kategorii")]
+        [InlineData("Art. 2. Zarządca okreś-", "la wymagania przejazdu.", "Zarządca określa wymagania")]
+        public void TrailingHyphen_BeforeLowercase_KeepsACompoundTheDocumentWritesWhole(string first, string second, string expected)
+        {
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Przejazdy kolejowo-drogowe oznacza się tablicą.", 57, 700)
+                .AddText(first, 57, 680)
+                .AddText(second, 57, 666)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains(expected, blocks[1].Text);
+        }
+
+        [Fact]
+        public void TrailingHyphen_BeforeLowercase_JoinsAWordTheDocumentWritesWhole_EvenAfterACompoundHead()
+        {
+            // „samo-chodu”: człon „samo” stoi w dokumencie przed dywizem („samo-pomocy”), ale wyraz „samochodu” też —
+            // wyraz sklejony rozstrzyga na korzyść przeniesienia.
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Grupy samo-pomocy korzystają z samochodu gminy.", 57, 700)
+                .AddText("Art. 2. Kierowca samo-", 57, 680)
+                .AddText("chodu ma uprawnienia.", 57, 666)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains("Kierowca samochodu ma", blocks[1].Text);
         }
 
         [Fact]
@@ -108,7 +145,7 @@ namespace Saga.Core.Tests
 
             var blocks = Read(pdf);
 
-            Assert.Contains("motocykli i moto-rowerów następuje", blocks[0].Text);
+            Assert.Contains("motocykli i motorowerów następuje", blocks[0].Text);
         }
 
         [Theory]

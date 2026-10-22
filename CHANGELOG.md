@@ -1390,6 +1390,16 @@ a wersjonowanie zgodne z Semantic Versioning.
     artykuły mniej, 5 załączników i 3 podpisy więcej w 3 dokumentach), w pełni zgodnych z DOCX 1755 → 1777; korpus DOCX bez
     zmian (ocena 2179).
 
+- **Przeniesienie wyrazu na końcu wiersza PDF** (ADR-0111): dywiz po literze przed małą literą następnego wiersza
+  znika („prak-” / „tyczne” → „praktyczne”) — wcześniej zostawał (decyzja z 2026-07-19), a w aktach urzędowych dotyczy
+  kilkunastu procent wierszy. Złożenie poznaje się po dywizie powtórzonym na początku następnego wiersza (konwencja
+  składu Dz. U. i M.P.), a w PDF-ie bez tej konwencji — po członie, który dokument zapisuje gdzie indziej w środku
+  wiersza przed dywizem („kolejowo-drogowe”), o ile nie zna wyrazu sklejonego (`PdfHyphenation`). Dywiz zawieszony
+  przed spójnikiem i dywiz przed wielką literą albo cyfrą zostają.
+  - Korpus PDF: 856 eksportów ze zmianą treści; słowa treści 99,78 % → 99,89 %, nadmiar słów 0,42 % → 0,17 %, w pełni
+    zgodnych z DOCX 1777 → 1778. Wobec tekstu DOCX: 16 164 przeniesienia sklejone dobrze, 55 sklejeń sprzecznych
+    z DOCX — w większości dywizy wpisane ręcznie w samym DOCX („okreś-lając”), kilkanaście to złożenia bez świadka.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
