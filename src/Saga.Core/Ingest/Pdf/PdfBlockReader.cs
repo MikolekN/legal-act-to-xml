@@ -828,6 +828,7 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && LegalBasisEndPattern.IsMatch(prev.Text))
                     || (forceBoundary is null && IsHeadingOpeningAPage(line, prev))
                     || (forceBoundary is null && StartsSecondWordingOfAnIntroduction(line, prev))
+                    || (forceBoundary is null && IsTitleUnderAnAttachmentLine(line, blockFirst))
                     || (forceBoundary is null && (TableCaptionPattern.IsMatch(line.Text) || TableCaptionPattern.IsMatch(prev.Text)))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
@@ -1065,6 +1066,14 @@ namespace Saga.Core.Ingest.Pdf
         private static bool IsHeadingOpeningAPage(PdfTextLine line, PdfTextLine prev) =>
             line.PageNumber != prev.PageNumber
             && ((IsUppercaseHeading(line.Text) && !IsUppercaseHeading(prev.Text)) || AnnexDesignationLinePattern.IsMatch(line.Text.Trim()));
+
+        /// <summary>
+        /// Tytuł załącznika wersalikami pod wierszem przyłączenia („Załącznik do rozporządzenia … (Dz. U. poz. 1337)" /
+        /// „KALENDARZ WYBORCZY" — Dz. U. 2026 poz. 1337). Tytuł stoi pośrodku strony, więc położenie go od wiersza
+        /// przyłączenia nie oddziela, a odstęp bywa zwykłą interlinią; wiersz przyłączenia nie kończy się wersalikami.
+        /// </summary>
+        private static bool IsTitleUnderAnAttachmentLine(PdfTextLine line, PdfTextLine? blockFirst) =>
+            blockFirst is not null && AttachmentLinePattern.IsMatch(blockFirst.Text.Trim()) && IsUppercaseHeading(line.Text);
 
         /// <summary>
         /// Drugie brzmienie wprowadzenia do wyliczenia w tekście jednolitym — akapit bez oznaczenia zaraz pod pierwszym

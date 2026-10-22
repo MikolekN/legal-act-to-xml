@@ -1573,6 +1573,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   z odwołaniem do odnośnika otwiera blok, a myślnik za wyliczeniem zamkniętym już częścią wspólną jest jej dalszą
   treścią — jak w DOCX — którą `WordingVersions` czyta jako drugie brzmienie.
 
+- **Tytuł załącznika pod wierszem przyłączenia w PDF**: Dz. U. 2026 poz. 1337 — „KALENDARZ WYBORCZY" pośrodku
+  strony, zwykłą interlinią pod „Załącznik do rozporządzenia … (Dz. U. poz. 1337)", wchodził do `zalacznik-do`,
+  a załącznik nie miał tytułu. Wiersz wersalikami pod wierszem przyłączenia otwiera blok.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

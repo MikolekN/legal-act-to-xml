@@ -525,6 +525,22 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void AnnexTitleInCapitals_UnderTheAttachmentLine_StartsItsOwnBlock()
+        {
+            // Dz. U. 2026 poz. 1337: „KALENDARZ WYBORCZY" pośrodku strony, zwykłą interlinią pod wierszem przyłączenia.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("Załącznik do rozporządzenia Prezesa Rady Ministrów", 300, 780);
+            builder.AddText("z dnia 14 października 2026 r. (Dz. U. poz. 1337)", 300, 766);
+            builder.AddText("KALENDARZ WYBORCZY", 250, 752);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("Załącznik do rozporządzenia Prezesa Rady Ministrów z dnia 14 października 2026 r. (Dz. U. poz. 1337)", blocks);
+            Assert.Contains("KALENDARZ WYBORCZY", blocks);
+        }
+
+        [Fact]
         public void AnnexDesignation_AtThePageStartByTheLeftMargin_StartsItsOwnBlock()
         {
             // Dz. U. 2026 poz. 1328: „Załącznik nr 5c" nad wzorem złożonym w poprzek strony stoi przy lewym marginesie
