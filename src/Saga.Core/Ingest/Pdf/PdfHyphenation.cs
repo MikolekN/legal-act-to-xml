@@ -66,13 +66,17 @@ namespace Saga.Core.Ingest.Pdf
         /// („metylo-" / „-tert-butylowym") — złożenie, zostaje jeden; przed spójnikiem („Tele- i Radiokomunikacji") — dywiz
         /// zawieszony, zostaje z odstępem; przed małą literą — przeniesienie („prak-" / „tyczne"), dywiz znika, chyba że
         /// dokument świadczy o złożeniu; przed wielką literą albo cyfrą („Warszawa-Praga", „COVID-19") dywiz zostaje.
+        /// Półpauza po cyfrze przed cyfrą to przedział („2023–2029”) — bez odstępu.
         /// </summary>
         internal void Join(StringBuilder buffer, string next)
         {
             var hyphenated = buffer.Length > 1 && (buffer[^1] == '-' || buffer[^1] == SoftHyphen) && char.IsLetter(buffer[^2]);
             if (!hyphenated)
             {
-                if (buffer.Length > 0 && buffer[^1] != '-')
+                // Półpauza przedziału liczb („2023–” / „2029 r.”) łączy liczby bez odstępu, jak w jednym wierszu.
+                var numberRange = buffer.Length > 1 && buffer[^1] == '–' && char.IsDigit(buffer[^2])
+                    && next.Length > 0 && char.IsDigit(next[0]);
+                if (buffer.Length > 0 && buffer[^1] != '-' && !numberRange)
                     buffer.Append(' ');
                 buffer.Append(next);
                 return;

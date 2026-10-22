@@ -235,6 +235,36 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ContentSetAcrossThePage_IsLandscape_AndTheRestOfTheDocumentIsNot()
+        {
+            // Orientacja jak sekcja DOCX: załącznik dzieli się na segmenty pionowe i poziome (atrybut „orientacja”).
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Koszty programu określa załącznik do uchwały.", 57, 700)
+                .AddPage()
+                .AddRotatedText("Tabela – zestawienie kosztów programu wieloletniego", 80, 100)
+                .AddGrid(rows: [100, 300, 500], columns: [95, 115, 135])
+                .AddRotatedText("Część", 111, 110)
+                .AddRotatedText("Kwota", 111, 310)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.False(Assert.Single(blocks, b => b.Text.StartsWith("Art. 1.")).IsLandscape);
+            Assert.All(blocks.Where(b => b.Source.PageNumber == 2), b => Assert.True(b.IsLandscape));
+            Assert.Equal(4, blocks.Count(b => b.TableCell is not null));
+        }
+
+        [Fact]
+        public void WidePage_IsLandscape()
+        {
+            var pdf = new TestPdfBuilder { PageWidth = 842, PageHeight = 595 }.AddPage()
+                .AddText("Art. 1. Przepis na stronie poziomej.", 57, 500)
+                .Build();
+
+            Assert.True(Assert.Single(Read(pdf)).IsLandscape);
+        }
+
+        [Fact]
         public void ReferenceToAnArticle_AtTheLineStart_ContinuesTheSentence()
         {
             // Dz. U. 2026 poz. 1336 (art. 28 § 2 k.p.w.): zawinięcie postawiło „Art. 57 § 1 Kodeksu …" na początku wiersza —
@@ -829,9 +859,50 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void BorderedTableContinuedOnTheNextPage_IsOneTable()
+        public void BorderedTable_ColumnLineDrawnPerCell_SeparatesCellsMergedDownwards()
         {
-            // Tabela przecięta stroną: na następnej stronie te same kolumny, bez tekstu przed nimi.
+            // M.P. 2026 poz. 948: edytor rysuje obramowanie komórkami, więc linia między dwiema kolumnami scalonymi
+            // w pionie składa się z kawałków; środkowy nie styka się z żadną linią wiersza. Bez sklejenia kawałków
+            // w jedną linię wypadał z obramowania i „Nazwa zadania” zlewała się z „Cel” i „Jednostka”.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 400);
+            builder.AddText("§ 1. Mierniki programu:", 57, 720);
+            double[] columns = [57, 150, 250, 350, 500], rows = [705, 685, 665, 645, 625];
+            foreach (var x in columns)
+                for (var r = 0; r + 1 < rows.Length; r++)
+                    builder.AddLine(x, rows[r], x, rows[r + 1]);
+            foreach (var y in new double[] { 705, 645, 625 })
+                builder.AddLine(57, y, 500, y);
+            builder.AddLine(57, 685, 150, 685);
+            builder.AddLine(350, 685, 500, 685);
+            builder.AddLine(350, 665, 500, 665);
+            builder.AddText("Część", 60, 692);
+            builder.AddText("Nazwa zadania", 155, 692);
+            builder.AddText("Cel", 255, 692);
+            builder.AddText("Miernik", 355, 692);
+            builder.AddText("Jednostka", 60, 672);
+            builder.AddText("Wartość", 355, 672);
+            builder.AddText("Bazowa", 355, 652);
+            builder.AddText("1", 60, 632);
+            builder.AddText("2", 155, 632);
+            builder.AddText("3", 255, 632);
+            builder.AddText("4", 355, 632);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Equal(
+                [(0, 0, 1, "Część"), (0, 1, 3, "Nazwa zadania"), (0, 2, 3, "Cel"), (0, 3, 1, "Miernik"), (1, 0, 2, "Jednostka"),
+                    (1, 3, 1, "Wartość"), (2, 3, 1, "Bazowa"), (3, 0, 1, "1"), (3, 1, 1, "2"), (3, 2, 1, "3"), (3, 3, 1, "4")],
+                blocks.Where(b => b.TableCell is not null).Select(b => (b.TableCell!.Row, b.TableCell.Column, b.TableCell.RowSpan, b.Text)));
+        }
+
+        [Theory]
+        // Tabela przecięta stroną: na następnej stronie te same kolumny, bez tekstu przed nimi. Edytor dopasowuje
+        // szerokości kolumn na każdej stronie osobno — linie rozjeżdżają się o kilka punktów (M.P. 2026 poz. 948).
+        [InlineData(57, 200, 500)]
+        [InlineData(55, 203, 504)]
+        public void BorderedTableContinuedOnTheNextPage_IsOneTable(double left, double middle, double right)
+        {
             var builder = new TestPdfBuilder().AddPage();
             WithBodyPadding(builder, fromY: 700);
             builder.AddText("§ 1. Stawki:", 57, 600);
@@ -839,9 +910,9 @@ namespace Saga.Core.Tests
             builder.AddText("1", 60, 572);
             builder.AddText("stawka pierwsza", 205, 572);
             builder.AddPage();
-            builder.AddGrid([800, 780], [57, 200, 500]);
+            builder.AddGrid([800, 780], [left, middle, right]);
             builder.AddText("2", 60, 787);
-            builder.AddText("stawka druga", 205, 787);
+            builder.AddText("stawka druga", 208, 787);
             WithBodyPadding(builder, fromY: 700);
 
             var blocks = Read(builder.Build());
@@ -851,6 +922,69 @@ namespace Saga.Core.Tests
                 [(0, 0, "1"), (0, 1, "stawka pierwsza"), (1, 0, "2"), (1, 1, "stawka druga")],
                 cells.Select(b => (b.TableCell!.Row, b.TableCell.Column, b.Text)));
             Assert.All(cells, b => Assert.Equal(0, b.TableCell!.Table));
+        }
+
+        [Fact]
+        public void BorderedTableCell_NarrowerThanAWord_JoinsTheBrokenWordAndNumber()
+        {
+            // M.P. 2026 poz. 948: w kolumnie na jeden znak edytor stawia literę pod literą, a liczba przechodzi do
+            // następnego wiersza za przecinkiem dziesiętnym; przedział lat łamie się za półpauzą.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 400);
+            builder.AddText("§ 1. Mierniki:", 57, 720);
+            builder.AddGrid([705, 640], [57, 70, 200, 400, 500]);
+            var y = 697.0;
+            foreach (var letter in "Bazowa")
+            {
+                builder.AddText(letter.ToString(), 59, y, 8);
+                y -= 9;
+            }
+
+            builder.AddText("4 761 777,", 75, 697, 8);
+            builder.AddText("307", 75, 688, 8);
+            builder.AddText("2023–", 205, 697, 8);
+            builder.AddText("2029 r.", 205, 688, 8);
+            builder.AddText("W", 405, 697, 8);
+            builder.AddText("ramach", 405, 688, 8);
+            builder.AddText("zadania", 405, 679, 8);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Equal(["Bazowa", "4 761 777,307", "2023–2029 r.", "W ramach zadania"],
+                blocks.Where(b => b.TableCell is not null).Select(b => b.Text));
+        }
+
+        [Fact]
+        public void NumberRange_BrokenAfterTheEnDash_JoinsWithoutASpace()
+        {
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Program realizuje się w latach 2023–", 57, 700)
+                .AddText("2029 na obszarze całego kraju.", 57, 686)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains("w latach 2023–2029 na obszarze", blocks[0].Text);
+        }
+
+        [Fact]
+        public void BorderedTableOnTheNextPage_WithOtherColumns_IsAnotherTable()
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("§ 1. Stawki:", 57, 600);
+            builder.AddGrid([585, 565], [57, 200, 500]);
+            builder.AddText("1", 60, 572);
+            builder.AddText("stawka pierwsza", 205, 572);
+            builder.AddPage();
+            builder.AddGrid([800, 780], [57, 300, 500]);
+            builder.AddText("Kod", 60, 787);
+            builder.AddText("Opis", 305, 787);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Equal([0, 0, 1, 1], blocks.Where(b => b.TableCell is not null).Select(b => b.TableCell!.Table));
         }
 
         [Fact]

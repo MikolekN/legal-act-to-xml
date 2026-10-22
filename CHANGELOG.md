@@ -1400,6 +1400,21 @@ a wersjonowanie zgodne z Semantic Versioning.
     zgodnych z DOCX 1777 → 1778. Wobec tekstu DOCX: 16 164 przeniesienia sklejone dobrze, 55 sklejeń sprzecznych
     z DOCX — w większości dywizy wpisane ręcznie w samym DOCX („okreś-lając”), kilkanaście to złożenia bez świadka.
 
+- **Tabela PDF złożona w poprzek strony** (M.P. 2026 poz. 948): nagłówek tabeli dzieli się na właściwe komórki — linię
+  kolumny rysowaną kawałkami (edytor rysuje obramowanie komórkami) skleja się w jedną, a kawałek, który nie stykał się
+  z żadną linią wiersza, wypadał z obramowania i zlewał sąsiednie komórki scalone w pionie („CzęśćNazwa zadania Cel
+  Programu”). Ciąg tabeli na następnej stronie jest tą samą tabelą także wtedy, gdy edytor dopasował szerokości kolumn
+  o kilka punktów inaczej (tolerancja 1 % szerokości tabeli) — wcześniej ciąg wychodził osobną tabelą, w akcie 948
+  poza cytatem nowelizacji. W wąskiej komórce litery piętrzone pojedynczo tworzą wyraz („B” / „a” / „z” … → „Bazowa”),
+  a liczba złamana za przecinkiem dziesiętnym jedną liczbę („777,” / „307” → „777,307”); przedział złamany za półpauzą
+  między liczbami nie dostaje odstępu („2023–2029 r.”, także w treści: „art. 96–100”).
+- **Orientacja strony PDF**: blok PDF niesie `IsLandscape` — strona szersza niż wysoka albo treść złożona w poprzek strony
+  pionowej (jak sekcja DOCX), więc segmenty załącznika z PDF dostają atrybut `orientacja`. W korpusie orientacja zgadza
+  się z DOCX w każdym z 607 załączników, które w obu eksportach mają segmenty (wcześniej PDF nie podawał jej wcale).
+  - Korpus PDF: poza atrybutem orientacji 126 eksportów ze zmianą — 120 to przedziały po półpauzie, 3 tabele ciągnięte
+    przez stronę złączone, 2 nowe segmenty na zmianie orientacji, 1 formularz z rozdzielonym nagłówkiem; wyniki
+    `--format-parity` bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

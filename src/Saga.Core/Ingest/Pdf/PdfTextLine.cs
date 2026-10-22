@@ -32,6 +32,12 @@ namespace Saga.Core.Ingest.Pdf
         public double MaxGap { get; init; }
 
         /// <summary>
+        /// Wiersz leży na stronie poziomej — szerszej niż wysoka albo w treści złożonej w poprzek strony pionowej
+        /// (odpowiednik orientacji sekcji DOCX; załącznik dzieli się na tej granicy na segmenty).
+        /// </summary>
+        public bool IsLandscape { get; init; }
+
+        /// <summary>
         /// Wiersz zastępczy tabeli z obramowaniem: stoi w miejscu tabeli na stronie (góra siatki), a komórki niosą
         /// własne wiersze. Null dla wiersza tekstu.
         /// </summary>

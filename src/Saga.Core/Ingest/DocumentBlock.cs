@@ -49,8 +49,8 @@ namespace Saga.Core.Ingest
         public BlockSymbol? LeadingSymbol { get; init; }
 
         /// <summary>
-        /// Czy strona, na której stoi blok, jest pozioma — z ustawień sekcji DOCX (<c>w:pgSz</c>). Null, gdy źródło
-        /// układu strony nie podaje (PDF, TXT, sekcja bez rozmiaru strony).
+        /// Czy strona, na której stoi blok, jest pozioma — z ustawień sekcji DOCX (<c>w:pgSz</c>), w PDF z rozmiaru strony
+        /// albo z treści złożonej w poprzek strony. Null, gdy źródło układu strony nie podaje (TXT, sekcja bez rozmiaru strony).
         /// </summary>
         public bool? IsLandscape { get; init; }
 

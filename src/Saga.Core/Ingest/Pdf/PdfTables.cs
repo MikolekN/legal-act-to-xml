@@ -74,7 +74,7 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         internal static List<PdfTable> Find(Page page, IReadOnlyList<Letter> letters, Func<PdfRectangle, PdfRectangle>? toFrame)
         {
-            var segments = Segments(page, toFrame);
+            var segments = Joined(Segments(page, toFrame));
             var tables = new List<PdfTable>();
             foreach (var component in Components(segments))
             {
@@ -142,6 +142,56 @@ namespace Saga.Core.Ingest.Pdf
             }
 
             return segments;
+        }
+
+        /// <summary>
+        /// Odcinki jednej linii stykające się końcami — jedna linia. Edytor rysuje obramowanie komórkami, więc linia
+        /// kolumny pod scalonym nagłówkiem składa się z kawałków, z których środkowe nie przecinają żadnej linii
+        /// poprzecznej: osobno wypadłyby z obramowania tabeli, a komórki po obu ich stronach zlałyby się w jedną
+        /// (nagłówek tabeli w M.P. 2026 poz. 948).
+        /// </summary>
+        private static List<Segment> Joined(List<Segment> segments)
+        {
+            var joined = new List<Segment>();
+            foreach (var orientation in segments.GroupBy(s => s.Horizontal))
+            {
+                // Linia to odcinki o położeniu różnym najwyżej o tolerancję; w niej łączy się kawałki od początku.
+                var line = new List<Segment>();
+                foreach (var segment in orientation.OrderBy(s => s.At))
+                {
+                    if (line.Count > 0 && segment.At - line[^1].At > Tolerance)
+                    {
+                        JoinLine(line, joined);
+                        line.Clear();
+                    }
+
+                    line.Add(segment);
+                }
+
+                JoinLine(line, joined);
+            }
+
+            return joined;
+        }
+
+        private static void JoinLine(List<Segment> line, List<Segment> joined)
+        {
+            Segment? current = null;
+            foreach (var segment in line.OrderBy(s => s.From))
+            {
+                if (current is { } open && segment.From <= open.To + Tolerance)
+                {
+                    current = open with { To = Math.Max(open.To, segment.To) };
+                    continue;
+                }
+
+                if (current is { } done)
+                    joined.Add(done);
+                current = segment;
+            }
+
+            if (current is { } last)
+                joined.Add(last);
         }
 
         /// <summary>Grupy odcinków połączonych przecięciami — każda to obramowanie jednej tabeli.</summary>

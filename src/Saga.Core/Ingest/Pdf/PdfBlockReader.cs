@@ -290,6 +290,8 @@ namespace Saga.Core.Ingest.Pdf
 
                 // Treść złożona w poprzek strony (szeroka tabela na stronie pionowej) czyta się w układzie, w którym jest
                 // pozioma, za resztą strony; obramowanie tabeli należy wtedy do niej, więc w układzie strony tabel się nie szuka.
+                // Orientacja jak w sekcji DOCX: strona szersza niż wysoka, a treść w poprzek strony — odwrotna do niej.
+                var wide = page.Width > page.Height;
                 var turned = PdfRotation.Turned(page.Letters);
                 if (turned is { } rotated)
                 {
@@ -297,27 +299,30 @@ namespace Saga.Core.Ingest.Pdf
                     var (width, height) = (page.Width, page.Height);
                     var inFrame = rotated.Turned.ToHashSet();
                     allLines.AddRange(PdfLineExtractor.ExtractLines(page, page.Letters.Where(letter => !inFrame.Contains(letter)).ToList())
-                        .Select(Normalized));
+                        .Select(line => Normalized(line) with { IsLandscape = wide }));
                     ReadLetters(page, rotated.Turned.Select(letter => PdfRotation.Letter(letter, direction, width, height)).ToList(),
-                        box => PdfRotation.Rectangle(box, direction, width, height), frameHeight: width);
+                        box => PdfRotation.Rectangle(box, direction, width, height), frameHeight: width, landscape: !wide);
                 }
                 else
                 {
-                    ReadLetters(page, page.Letters, toFrame: null, frameHeight: page.Height);
+                    ReadLetters(page, page.Letters, toFrame: null, frameHeight: page.Height, landscape: wide);
                 }
             }
 
             // Tabela z obramowaniem: jej litery czyta się komórkami, nie wierszami strony.
-            void ReadLetters(Page page, IReadOnlyList<Letter> letters, Func<PdfRectangle, PdfRectangle>? toFrame, double frameHeight)
+            void ReadLetters(Page page, IReadOnlyList<Letter> letters, Func<PdfRectangle, PdfRectangle>? toFrame, double frameHeight,
+                bool landscape)
             {
                 var pageTables = PdfTables.Find(page, letters, toFrame);
                 var inTables = pageTables.SelectMany(table => table.Cells).SelectMany(cell => cell.Letters).ToHashSet();
                 var freeLetters = inTables.Count == 0 ? letters : letters.Where(letter => !inTables.Contains(letter)).ToList();
-                allLines.AddRange(PdfLineExtractor.ExtractLines(page, freeLetters, frameHeight).Select(Normalized));
+                allLines.AddRange(PdfLineExtractor.ExtractLines(page, freeLetters, frameHeight)
+                    .Select(line => Normalized(line) with { IsLandscape = landscape }));
                 foreach (var table in pageTables)
                 {
                     foreach (var cell in table.Cells)
-                        cell.Lines.AddRange(PdfLineExtractor.ExtractLines(page, cell.Letters, frameHeight).Select(Normalized));
+                        cell.Lines.AddRange(PdfLineExtractor.ExtractLines(page, cell.Letters, frameHeight)
+                            .Select(line => Normalized(line) with { IsLandscape = landscape }));
                     tables.Add(new PdfTextLine
                     {
                         Text = TablePlaceholder,
@@ -326,6 +331,7 @@ namespace Saga.Core.Ingest.Pdf
                         BaselineY = table.Top,
                         DominantSize = double.MaxValue,
                         PageHeight = frameHeight,
+                        IsLandscape = landscape,
                         Table = table,
                     });
                 }
@@ -545,9 +551,11 @@ namespace Saga.Core.Ingest.Pdf
         /// zawinięty punkt/literę/tiret i gubiła tekst. Dywiz na końcu wiersza rozstrzyga <paramref name="hyphenation"/>.
         /// </summary>
         /// <param name="lastPages">Gdy podana — dostaje stronę ostatniego wiersza każdego bloku (blok bywa przecięty stroną).</param>
+        /// <param name="inCell">Wiersze komórki tabeli — wąska komórka łamie wyraz i liczbę bez dywizu (<see cref="IsBrokenInsideAWord"/>).</param>
         private static List<DocumentBlock> AssembleBlocks(
             List<PdfTextLine> lines, double emSize, double dominantLeft, BlockRole role,
-            int startIndex, Func<PdfTextLine, bool>? forceBoundary, PdfHyphenation hyphenation, List<int>? lastPages = null)
+            int startIndex, Func<PdfTextLine, bool>? forceBoundary, PdfHyphenation hyphenation, List<int>? lastPages = null,
+            bool inCell = false)
         {
             var blocks = new List<DocumentBlock>();
             if (lines.Count == 0)
@@ -582,6 +590,7 @@ namespace Saga.Core.Ingest.Pdf
                         BlockIndex = startIndex + blocks.Count,
                         PageNumber = blockFirst.PageNumber,
                     },
+                    IsLandscape = blockFirst.IsLandscape,
                 });
                 buffer.Clear();
                 blockFirst = null;
@@ -606,7 +615,8 @@ namespace Saga.Core.Ingest.Pdf
 
                 foreach (var cell in table.Cells)
                 {
-                    var cellBlocks = AssembleBlocks(cell.Lines, emSize, cell.Bounds.Left, role, startIndex: 0, forceBoundary: null, hyphenation);
+                    var cellBlocks = AssembleBlocks(cell.Lines, emSize, cell.Bounds.Left, role, startIndex: 0, forceBoundary: null,
+                        hyphenation, inCell: true);
                     if (cellBlocks.Count == 0)
                         cellBlocks.Add(new DocumentBlock { Text = string.Empty, Role = role });
 
@@ -624,6 +634,7 @@ namespace Saga.Core.Ingest.Pdf
                         blocks.Add(cellBlock with
                         {
                             TableCell = place,
+                            IsLandscape = placeholder.IsLandscape,
                             Source = new BlockSourceLocation { BlockIndex = startIndex + blocks.Count, PageNumber = placeholder.PageNumber },
                         });
                     }
@@ -670,7 +681,10 @@ namespace Saga.Core.Ingest.Pdf
                     while (buffer.Length > 0 && buffer[^1] == ' ')
                         buffer.Length--;
 
-                    hyphenation.Join(buffer, line.Text);
+                    if (inCell && prev is not null && IsBrokenInsideAWord(prev.Text, line.Text))
+                        buffer.Append(line.Text);
+                    else
+                        hyphenation.Join(buffer, line.Text);
                 }
 
                 prev = line;
@@ -680,12 +694,42 @@ namespace Saga.Core.Ingest.Pdf
             return blocks;
         }
 
-        private static bool SameColumns(PdfTable first, PdfTable second) =>
-            first.Columns.Count == second.Columns.Count
-            && first.Columns.Zip(second.Columns).All(pair => Math.Abs(pair.First - pair.Second) <= ColumnTolerancePoints);
+        /// <summary>
+        /// Komórka węższa od wyrazu: edytor łamie go bez dywizu w dowolnym miejscu — w kolumnie na jeden znak litera stoi
+        /// pod literą („B” / „a” / „z” … — „Bazowa”), a liczba przechodzi do następnego wiersza za przecinkiem dziesiętnym
+        /// („4 761 777,” / „307”). Tabela w poprzek strony w M.P. 2026 poz. 948. Jednoliterowy wyraz przed dłuższym
+        /// („W” / „ramach zadania”) zostaje osobnym wyrazem — litery piętrzą się tylko pojedynczo.
+        /// </summary>
+        private static bool IsBrokenInsideAWord(string previous, string next) =>
+            (StackedLetterPattern.IsMatch(previous) && StackedLetterPattern.IsMatch(next))
+            || (BrokenDecimalPattern.IsMatch(previous) && DecimalPartPattern.IsMatch(next));
 
-        /// <summary>Tolerancja położenia linii kolumn tej samej tabeli na kolejnych stronach.</summary>
+        /// <summary>Wiersz z jedną literą — litera wyrazu złożonego w kolumnie na jeden znak.</summary>
+        private static readonly Regex StackedLetterPattern = new(@"^\s*\p{L}\s*$", RegexOptions.Compiled);
+
+        /// <summary>Wiersz z samą liczbą zakończoną przecinkiem dziesiętnym („4 761 777,”).</summary>
+        private static readonly Regex BrokenDecimalPattern = new(@"^\s*\d[\d\s]*,\s*$", RegexOptions.Compiled);
+
+        /// <summary>Wiersz zaczynający się cyframi części dziesiętnej, po których nic albo odstęp.</summary>
+        private static readonly Regex DecimalPartPattern = new(@"^\s*\d+(?:\s|$)", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Te same kolumny: tyle samo linii, każda w tym samym miejscu z tolerancją rosnącą z szerokością tabeli — edytor
+        /// dopasowuje szerokość kolumn na każdej stronie osobno, więc linie szerokiej tabeli rozjeżdżają się o kilka
+        /// punktów (tabela w poprzek strony w M.P. 2026 poz. 948: do 3,6 pt przy 714 pt szerokości).
+        /// </summary>
+        private static bool SameColumns(PdfTable first, PdfTable second)
+        {
+            var tolerance = Math.Max(ColumnTolerancePoints, ColumnToleranceShare * (first.Right - first.Left));
+            return first.Columns.Count == second.Columns.Count
+                && first.Columns.Zip(second.Columns).All(pair => Math.Abs(pair.First - pair.Second) <= tolerance);
+        }
+
+        /// <summary>Najmniejsza tolerancja położenia linii kolumn tej samej tabeli na kolejnych stronach.</summary>
         private const double ColumnTolerancePoints = 2;
+
+        /// <summary>Tolerancja położenia linii kolumn jako część szerokości tabeli.</summary>
+        private const double ColumnToleranceShare = 0.01;
 
         /// <summary>
         /// Granica w strefie tytułowej: data aktu zamyka blok nagłówka rodzaju (i organu), za datą zaczyna się przedmiot,

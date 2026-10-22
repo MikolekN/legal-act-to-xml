@@ -314,7 +314,7 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 | `Role` | `BlockRole` (`Body`, `FootnoteText`, `JournalHeader`, …) — bloki spoza głównego biegu treści są filtrowane przez orkiestrator i klasyfikator |
 | `TableCell` | Komórka tabeli, w której stoi blok (`BlockTableCell`: numer tabeli, wiersz, kolumna siatki, `ColumnSpan`, `RowSpan`, kontynuacja scalenia pionowego, wiersz nagłówka) — tylko DOCX (`DocxTables`); `null` poza tabelą. Dziś nikt jej nie czyta: potok traktuje akapity tabel jak zwykłe |
 | `Footnotes` | Przypisy, do których odwołuje się blok (`BlockFootnote`: oznaczenie jak w akcie, numer znacznika, ciąg numeracji i akapity treści) — tylko DOCX, gdzie treść przypisu leży w osobnej części pakietu (`DocxFootnotes`); w `Text` stoi znacznik `[N)]` z numerem `Marker`, jednoznacznym także wtedy, gdy sekcja dokumentu wznawia numerację ([ADR-0061](adr/0061-odnosnik-ma-oznaczenie-jak-w-akcie-a-znacznik-numer-jednoznaczny.md)); odwołanie z własnym znakiem („3)”, „*”) też jest odnośnikiem — oznaczeniem jest ten znak ([ADR-0095](adr/0095-odwolanie-z-wlasnym-znakiem-jest-odnosnikiem-z-kolejnym-znacznikiem.md)) |
-| `IsLandscape` | Czy blok stoi na stronie poziomej — z ustawień sekcji DOCX (`w:pgSz`: `w:orient` albo strona szersza niż wyższa); `null` dla PDF/TXT i sekcji bez rozmiaru strony. Czyta je eksport załączników ([ADR-0077](adr/0077-segment-zalacznika-to-ciag-stron-jednej-orientacji.md)) |
+| `IsLandscape` | Czy blok stoi na stronie poziomej — z ustawień sekcji DOCX (`w:pgSz`: `w:orient` albo strona szersza niż wyższa), w PDF ze strony szerszej niż wysoka albo z treści złożonej w poprzek strony pionowej; `null` dla TXT i sekcji bez rozmiaru strony. Czyta je eksport załączników ([ADR-0077](adr/0077-segment-zalacznika-to-ciag-stron-jednej-orientacji.md)) |
 | `IsEmpty` | `true` gdy `Text` jest pusty/białe znaki |
 
 `PdfBlockReader` (PdfPig) składa bloki z geometrii linii tekstu (`PdfLineExtractor`, `BlockAssembler`,
@@ -322,7 +322,10 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 komórki jest blokiem z `TableCell`, jak w DOCX — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
 warstwie syntaktycznej (regex) i układzie (wcięcia). Odnośniki ze strefy przypisów wiąże ze znacznikami treści `PdfFootnotes`
 (oznaczenie i strona odwołania) — blok niesie `Footnotes` i znacznik o numerze jednoznacznym, jak w DOCX; akapity
-odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnika.
+odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnika. Treść złożoną w poprzek strony pionowej
+(szeroka tabela) `PdfRotation` przenosi z obramowaniem do układu, w którym jest pozioma; tabela przecięta stroną to jedna
+tabela, gdy na następnej stronie stoi tuż za nią z tymi samymi kolumnami. Dywiz na końcu wiersza rozstrzyga
+`PdfHyphenation` ([ADR-0111](adr/0111-przeniesienie-wyrazu-w-pdf-traci-dywiz-zlozenie-powtarza-dywiz.md)).
 Poza markerami jednostek granicę bloku stawiają: strefa tytułowa (nagłówek rodzaju z organem, data aktu, przedmiot,
 początek treści), wiersze końcowe odsunięte w prawo (podpis, wiersz przyłączenia, oznaczenie załącznika), adnotacja
 o uchyleniu w osobnym wierszu i wiersz domknięty jednostką uchyloną — także z odwołaniem do odnośnika za znakiem
@@ -994,6 +997,9 @@ src/Saga.Core/
 │       ├── PdfBlockReader.cs        # Adapter PDF (PdfPig) — warstwa tekstowa
 │       ├── PdfLineExtractor.cs      # Ekstrakcja linii z geometrii PDF
 │       ├── PdfTables.cs             # Tabele z obramowania (siatka odcinków, scalenia komórek)
+│       ├── PdfRotation.cs           # Treść złożona w poprzek strony — układ, w którym jest pozioma
+│       ├── PdfHyphenation.cs        # Dywiz na końcu wiersza: przeniesienie albo złożenie (ADR-0111)
+│       ├── PdfFootnotes.cs          # Odnośniki ze strefy przypisów powiązane ze znacznikami treści
 │       ├── PdfTextLine.cs           # Linia tekstu PDF z pozycją
 │       └── PageArtifactFilter.cs    # Filtrowanie artefaktów strony (nagłówki/stopki/numery stron)
 └── Services/
