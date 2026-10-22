@@ -1502,6 +1502,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   `eId`). Powołanie pisze „pkt” bez kropki (§ 158 ZTP), więc tylko „pkt” bez kropki zostaje skrótem urywającym wiersz.
   Korpus PDF bez zmian.
 
+- **Zamiana liczby i cyfry** (Dz. U. 2026 poz. 1356): „w § 1 w pkt 1 liczbę „2026” zastępuje się liczbą „2031””
+  i „cyfrę „0” zastępuje się cyfrą „9”” dają `now:zamien-tekst` jak zamiana wyrazów — wcześniej przepis nie miał
+  instrukcji. Korpus DOCX: 16 instrukcji w 11 dokumentach, ocena (2209) i zgodność ze schematem bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

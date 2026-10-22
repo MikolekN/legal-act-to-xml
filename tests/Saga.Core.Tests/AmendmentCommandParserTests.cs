@@ -145,6 +145,19 @@ namespace Saga.Core.Tests
         }
 
         [Theory]
+        // Dz. U. 2026 poz. 1356; korpus 322716 i 320870.
+        [InlineData("w § 1 w pkt 1 liczbę „2026” zastępuje się liczbą „2031”.", "2026", "2031")]
+        [InlineData("w art. 10 w ust. 2 liczby „26” zastępuje się liczbami „32”;", "26", "32")]
+        [InlineData("w pkt 3 cyfrę „0” zastępuje się cyfrą „9”;", "0", "9")]
+        public void ReplacedNumber_IsATextChangeLikeReplacedWords(string text, string old, string @new)
+        {
+            var cmd = AmendmentCommandParser.TextChangeCommands(text).Single();
+
+            Assert.Equal(AmendmentCommandKind.ReplaceWords, cmd.Kind);
+            Assert.Equal((old, @new), (cmd.OldWording, cmd.NewWording));
+        }
+
+        [Theory]
         // Komendy o jednostkach nie są zmianami w tekście.
         [InlineData("w art. 5 uchyla się ust. 2;")]
         [InlineData("po art. 5 dodaje się art. 5a w brzmieniu:")]

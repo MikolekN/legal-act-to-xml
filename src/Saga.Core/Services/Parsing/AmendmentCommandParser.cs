@@ -190,11 +190,13 @@ namespace Saga.Core.Services.Parsing
         /// Obsługuje też formę § 88 („użyte … wyrazy „X" zastępuje się użytymi w odpowiedniej liczbie
         /// i przypadku wyrazami „Y"") — dopuszczalna wstawka między „zastępuje się" a „wyrazami" —
         /// oraz proste cudzysłowy "…" jako ogranicznik brzmień (kanał TXT/PDF; Sanitize nie normalizuje cudzysłowów).
-        /// Dwukropek przed nowym brzmieniem („zastępuje się wyrazami: „Y”") komendy nie zmienia.
+        /// Dwukropek przed nowym brzmieniem („zastępuje się wyrazami: „Y”") komendy nie zmienia. Tak samo zmienia się
+        /// liczbę i cyfrę („w pkt 1 liczbę „2026” zastępuje się liczbą „2031”" — Dz. U. 2026 poz. 1356; w korpusie
+        /// 16 komend).
         /// </summary>
         internal static readonly Regex ReplaceWordsPattern = new(
-            $@"wyraz(?:y|ów|em)?\s+{Quoted("old")}\s+zastępuje\s+się\s+"
-            + $@"(?:[^{QuotationMarks.Any}]{{0,80}}?)wyraz(?:ami|em|y)?(?:\s*:)?\s+{Quoted("new")}",
+            $@"(?:wyraz(?:y|ów|em)?|liczb[ęy]|cyfr[ęy])\s+{Quoted("old")}\s+zastępuje\s+się\s+"
+            + $@"(?:[^{QuotationMarks.Any}]{{0,80}}?)(?:wyraz(?:ami|em|y)?|liczb(?:ą|ami)|cyfr(?:ą|ami))(?:\s*:)?\s+{Quoted("new")}",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
