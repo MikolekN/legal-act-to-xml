@@ -1524,6 +1524,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   narysowanym później innym pismem (zderzenie co najmniej ćwierci liter) jest niewidoczny. Korpus PDF bez zmian; z 64
   aktów ISAP zmienia się tylko ten.
 
+- **Publikator z numerem dziennika sprzed 2012 r.**: Dz. U. 2026 poz. 1306 — tekst jednolity przytacza przepisy
+  zmieniające z 2014 r., które wskazują akty zmieniane jako „(Dz. U. Nr 89, poz. 555, z późn. zm.)" i „(Dz. U. z 2011 r.
+  Nr 287, poz. 1687, ze zm.)". Wzorzec publikatora nie znał numeru przed „poz.", więc 39 instrukcji miało pusty akt,
+  `eId` bez prefiksu aktu i powtórzone `art_61__par_1`. Numer dziennika się pomija (pozycja jest unikalna w roczniku),
+  a kolejne „i Nr 230, poz. 1371" to dalsza pozycja listy. Korpus DOCX nie ma takich publikatorów — eksporty bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

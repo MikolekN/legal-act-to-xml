@@ -13,11 +13,16 @@ namespace Saga.Core.Services
     {
         // Regex dla publikatorów typu "Dz. U. z 2020 r. poz. 1234, 5678 i 9012" oraz "M.P. poz. 1029"
         // (Monitor Polski — uchwały i zarządzenia; § 158 ust. 7 ZTP stosuje się do obu dzienników). „Dz. U. 2025 r. poz. 881"
-        // bez „z" to literówka źródła — rok z „r." czyta się tak samo.
+        // bez „z" to literówka źródła — rok z „r." czyta się tak samo. Do 2011 r. dziennik miał też numery
+        // („Dz. U. z 2011 r. Nr 217, poz. 1280 i Nr 230, poz. 1371"); pozycja jest unikalna w roczniku, więc numer
+        // się pomija, a kolejne „Nr …, poz." należą do listy pozycji.
         private static readonly Regex JournalRegex = new Regex(
-            @"(?<source>(?:Dz\.\s*U\.|(?<monitor>M\.\s?P\.))\s*(?:(?:z\s*(?<year>\d{4})\s*r\.?)|(?:(?<year>\d{4})\s*r\.))?\s*poz\.\s*(?<positions>[\d,\sandi]+(?:,\s*[\d,\sandi]+)*))",
+            @"(?<source>(?:Dz\.\s*U\.|(?<monitor>M\.\s?P\.))\s*(?:(?:z\s*(?<year>\d{4})\s*r\.?)|(?:(?<year>\d{4})\s*r\.))?\s*(?:Nr\s*\d+\s*,?\s*)?poz\.\s*(?<positions>(?:Nr\s*\d+\s*,?\s*poz\.|[\d,\sandi])+))",
             RegexOptions.Compiled | RegexOptions.IgnoreCase
         );
+
+        // Numer dziennika przed kolejną pozycją tego samego rocznika („… i Nr 230, poz. 1371").
+        private static readonly Regex IssueNumber = new(@"Nr\s*\d+\s*,?\s*poz\.", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         // Data aktu w jego tytule („ustawie z dnia 18 stycznia 2024 r.") — rok, w którym akt wydano.
         private static readonly Regex ActDateRegex = new Regex(
@@ -108,7 +113,7 @@ namespace Saga.Core.Services
                     continue;
                 }
 
-                var positionsStr = m.Groups["positions"].Success ? m.Groups["positions"].Value : "";
+                var positionsStr = m.Groups["positions"].Success ? IssueNumber.Replace(m.Groups["positions"].Value, " ") : "";
 
                 // Dziennik jest częścią tożsamości aktu: bez niego ELI nie ma segmentu „DU" albo „MP".
                 var publisher = m.Groups["monitor"].Success ? PublisherType.MonitorPolski : PublisherType.DziennikUstaw;

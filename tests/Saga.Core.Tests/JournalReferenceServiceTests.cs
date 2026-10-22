@@ -69,6 +69,27 @@ namespace Saga.Core.Tests
             Assert.Empty(article.Journals);
         }
 
+        [Theory]
+        // Dz. U. 2026 poz. 1306 (tekst jednolity z przepisami zmieniającymi z 2014 r.): publikator sprzed 2012 r. z numerem
+        // dziennika. Pozycja jest unikalna w roczniku — numer nie wchodzi do identyfikatora.
+        [InlineData("Art. 19. W ustawie z dnia 6 kwietnia 1990 r. o Policji (Dz. U. z 2011 r. Nr 287, poz. 1687, ze zm.) " +
+                    "w art. 20 wprowadza się następujące zmiany:", 2011, new[] { 1687 })]
+        [InlineData("Art. 20. W ustawie z dnia 6 czerwca 1997 r. – Kodeks postępowania karnego (Dz. U. Nr 89, poz. 555, " +
+                    "z późn. zm.) wprowadza się następujące zmiany:", 1997, new[] { 555 })]
+        // Kolejny numer tego samego rocznika to dalsza pozycja na liście.
+        [InlineData("Art. 21. W ustawie z dnia 1 stycznia 2010 r. o zmianie (Dz. U. z 2011 r. Nr 217, poz. 1280 i Nr 230, poz. 1371) " +
+                    "uchyla się art. 2.", 2011, new[] { 1280, 1371 })]
+        public void JournalWithIssueNumber_IsReadByYearAndPosition(string text, int year, int[] positions)
+        {
+            var article = new Article { ContentText = text };
+
+            _service.ParseJournalReferences(article);
+
+            var journal = Assert.Single(article.Journals);
+            Assert.Equal(year, journal.Year);
+            Assert.Equal(positions, journal.Positions);
+        }
+
         [Fact]
         public void ParseJournalReferences_MergesPositionsForSameYear()
         {
@@ -175,6 +196,7 @@ namespace Saga.Core.Tests
         [InlineData("§ 2 uchwały nr 151 Rady Ministrów z dnia 22 sierpnia 2023 r. zmieniającej uchwałę w sprawie programu (M.P. poz. 1029), który stanowi:", "MP/2023/1029")]
         [InlineData("§ 2 zarządzenia nr 81 Prezesa Rady Ministrów z dnia 24 lipca 2017 r. (M. P. z 2018 r. poz. 756), który stanowi:", "MP/2018/756")]
         [InlineData("art. 19 ustawy z dnia 21 listopada 2025 r. o zmianie ustawy (Dz. U. poz. 1792), który stanowi:", "DU/2025/1792")]
+        [InlineData("art. 20 ustawy z dnia 6 czerwca 1997 r. – Kodeks karny (Dz. U. Nr 88, poz. 553, z późn. zm.), który stanowi:", "DU/1997/553")]
         public void ReadSingleAct_ReadsThePublisherWithTheJournal(string text, string eli)
         {
             Assert.Equal(new[] { eli }, JournalReferenceService.ReadSingleAct(text)!.GetELIStrings());
