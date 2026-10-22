@@ -422,6 +422,57 @@ namespace Saga.Core.Tests
             Assert.Contains("Warszawa-Praga oraz", blocks[0].Text);
         }
 
+        [Theory]
+        // M.P. 2026 poz. 939: w wersalikach wielka litera po dywizie nie świadczy o złożeniu — „RZECZ-" / „POSPOLITA" to
+        // przeniesienie; skrótowiec złożony z krótkim członem („PKP-" / „PLK") zostaje przy dywizie.
+        [InlineData("1. W lewym górnym rogu napis „RZECZ-", "POSPOLITA POLSKA” w kolorze czarnym.", "„RZECZPOSPOLITA POLSKA”")]
+        [InlineData("1. Zarządcą linii jest spółka PKP-", "PLK S.A. z siedzibą w Warszawie.", "PKP-PLK S.A.")]
+        public void TrailingHyphen_InAllCapitals_IsAWordBreakAfterALongHead(string first, string second, string expected)
+        {
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText(first, 57, 700)
+                .AddText(second, 57, 686)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Contains(expected, blocks[0].Text);
+        }
+
+        [Fact]
+        public void HeadingInCapitals_AtThePageStart_StartsItsOwnBlock()
+        {
+            // M.P. 2026 poz. 939: podpis „rewers" pod wzorem na końcu strony i „OPIS WZORU …" na następnej sklejały się,
+            // bo granica strony nie jest granicą bloku.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("rewers", 120, 90);
+            builder.AddPage();
+            builder.AddText("OPIS WZORU LEGITYMACJI SŁUŻBOWEJ", 150, 780);
+            builder.AddText("1. Legitymacja ma formę karty w formacie ID-1.", 57, 750);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("rewers", blocks);
+            Assert.Contains("OPIS WZORU LEGITYMACJI SŁUŻBOWEJ", blocks);
+        }
+
+        [Fact]
+        public void QuoteAfterAComma_ContinuesTheList()
+        {
+            // M.P. 2026 poz. 939: wyliczenie napisów zawinięte przed cudzysłowem otwierało nowy blok („„WAŻNA DO:”;").
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("4) poniżej napisy w kolorze czarnym: „IMIĘ”, „NAZWISKO”, „STANOWISKO”,", 57, 700)
+                .AddText("„WAŻNA DO:”;", 70, 686)
+                .AddText("5) w prawym dolnym rogu godło.", 57, 672))
+                .Build();
+
+            var blocks = Read(pdf).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("4) poniżej napisy w kolorze czarnym: „IMIĘ”, „NAZWISKO”, „STANOWISKO”, „WAŻNA DO:”;", blocks);
+        }
+
         [Fact]
         public void UnitCutByPageBoundary_JoinsAcrossPages()
         {

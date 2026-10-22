@@ -1448,6 +1448,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus PDF (obie zmiany): jednostki zgodne z DOCX 99,68 % → 99,75 %, dokumenty w pełni zgodne 1778 → 1808;
     60 dokumentów z mniejszą różnicą jednostek, żaden z większą; słowa bez zmian.
 
+- **PDF z M.P. 2026 poz. 939 (wzór legitymacji)**: przeniesienie w tekście wersalikami („RZECZ-” / „POSPOLITA”) traci
+  dywiz jak przeniesienie przed małą literą — wielka litera po dywizie nie świadczy tam o złożeniu (człon co najmniej
+  czterech liter; skrótowce złożone „PKP-PLK” zostają); nagłówek wersalikami na początku strony po wierszu, który nim nie
+  jest, otwiera blok („rewers” pod wzorem i „OPIS WZORU …” na następnej stronie się sklejały); cudzysłów na początku
+  wiersza za przecinkiem nie otwiera bloku — ciągnie wyliczenie („„IMIĘ”, „NAZWISKO”,” / „„WAŻNA DO:”;”).
+  - Korpus PDF: 30 eksportów z nagłówkami załączników wydzielonymi na początku strony, 3 dokumenty z mniejszą różnicą
+    jednostek, żaden z większą; w pełni zgodnych z DOCX 1808 → 1811. Reguła wersalików nie zmienia korpusu.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

@@ -65,7 +65,8 @@ namespace Saga.Core.Ingest.Pdf
         /// Dokleja wiersz do bloku. Dywiz na końcu wiersza po literze: powtórzony na początku następnego wiersza
         /// („metylo-" / „-tert-butylowym") — złożenie, zostaje jeden; przed spójnikiem („Tele- i Radiokomunikacji") — dywiz
         /// zawieszony, zostaje z odstępem; przed małą literą — przeniesienie („prak-" / „tyczne"), dywiz znika, chyba że
-        /// dokument świadczy o złożeniu; przed wielką literą albo cyfrą („Warszawa-Praga", „COVID-19") dywiz zostaje.
+        /// dokument świadczy o złożeniu; przed wielką literą albo cyfrą („Warszawa-Praga", „COVID-19") dywiz zostaje — chyba
+        /// że tekst jest pisany wersalikami, w których wielkość liter niczego nie mówi („RZECZ-" / „POSPOLITA").
         /// Półpauza po cyfrze przed cyfrą to przedział („2023–2029”) — bez odstępu.
         /// </summary>
         internal void Join(StringBuilder buffer, string next)
@@ -92,7 +93,7 @@ namespace Saga.Core.Ingest.Pdf
                 buffer[^1] = '-';
                 buffer.Append(' ').Append(next);
             }
-            else if (next.Length > 0 && char.IsLower(next[0]) && !IsAttestedCompound(buffer, next))
+            else if (next.Length > 0 && (char.IsLower(next[0]) || IsAllCapsBreak(buffer, next)) && !IsAttestedCompound(buffer, next))
             {
                 buffer.Length--;
                 buffer.Append(next);
@@ -102,6 +103,22 @@ namespace Saga.Core.Ingest.Pdf
                 buffer[^1] = '-';
                 buffer.Append(next);
             }
+        }
+
+        /// <summary>
+        /// Przeniesienie w tekście wersalikami: przed dywizem co najmniej cztery wielkie litery, za nim wyraz z co najmniej
+        /// trzech wielkich liter („RZECZ-" / „POSPOLITA POLSKA" — M.P. 2026 poz. 939). Skrótowce złożone („PKP-PLK") mają
+        /// krótszy człon i zostają przy dywizie.
+        /// </summary>
+        private static bool IsAllCapsBreak(StringBuilder buffer, string next)
+        {
+            var head = 0;
+            while (head < buffer.Length - 1 && char.IsUpper(buffer[buffer.Length - 2 - head]))
+                head++;
+            var tail = 0;
+            while (tail < next.Length && char.IsUpper(next[tail]))
+                tail++;
+            return head >= 4 && tail >= 3;
         }
 
         /// <summary>Człon przed dywizem stoi w dokumencie przed dywizem złożenia, a wyrazu sklejonego dokument nie zna.</summary>

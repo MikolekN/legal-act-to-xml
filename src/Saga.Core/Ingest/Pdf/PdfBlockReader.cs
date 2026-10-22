@@ -663,6 +663,7 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && IsClosingLineBoundary(line, prev, dominantLeft))
                     || (forceBoundary is null && AnnouncementCommonPartPattern.IsMatch(line.Text))
                     || (forceBoundary is null && LegalBasisEndPattern.IsMatch(prev.Text))
+                    || (forceBoundary is null && IsHeadingOpeningAPage(line, prev))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
                     || (forceBoundary is null && line.PageNumber == prev.PageNumber
@@ -855,9 +856,25 @@ namespace Saga.Core.Ingest.Pdf
             if (!ConditionalMarkerPattern.IsMatch(line.Text))
                 return false;
 
+            // Cudzysłów za przecinkiem ciągnie wyliczenie nazw („„IMIĘ”, „NAZWISKO”,” / „„WAŻNA DO:”;" — M.P. 2026
+            // poz. 939); cytat nowelizacji otwiera się za dwukropkiem.
+            if (line.Text.StartsWith(QuotationMarks.Opening) && CommaEndPattern.IsMatch(prevText))
+                return false;
+
             return (ClosedLineEndPattern.IsMatch(prevText) && !ReferenceAbbreviationEndPattern.IsMatch(prevText))
                 || IsUppercaseHeading(prevText);
         }
+
+        /// <summary>Wiersz kończy się przecinkiem, także za cudzysłowem zamykającym.</summary>
+        private static readonly Regex CommaEndPattern = new($@",[{QuotationMarks.ClosingOrStraight}]*$", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Nagłówek wersalikami na początku strony po wierszu, który nim nie jest („rewers" pod wzorem na końcu strony,
+        /// „OPIS WZORU LEGITYMACJI …" na następnej — M.P. 2026 poz. 939). Granica strony nie jest granicą bloku, a odstęp
+        /// pionowy między stronami nic nie mówi — nagłówek przecięty stroną zostaje razem, bo i poprzedni wiersz jest wersalikami.
+        /// </summary>
+        private static bool IsHeadingOpeningAPage(PdfTextLine line, PdfTextLine prev) =>
+            line.PageNumber != prev.PageNumber && IsUppercaseHeading(line.Text) && !IsUppercaseHeading(prev.Text);
 
         /// <summary>
         /// Wiersz zaczyna się następnym numerem listy, której pozycję zaczyna blok („2. Akademia Sztuk Pięknych w Gdańsku" →
