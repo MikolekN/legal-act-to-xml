@@ -326,6 +326,9 @@ odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnik
 (szeroka tabela) `PdfRotation` przenosi z obramowaniem do układu, w którym jest pozioma; tabela przecięta stroną to jedna
 tabela, gdy na następnej stronie stoi tuż za nią z tymi samymi kolumnami. Dywiz na końcu wiersza rozstrzyga
 `PdfHyphenation` ([ADR-0111](adr/0111-przeniesienie-wyrazu-w-pdf-traci-dywiz-zlozenie-powtarza-dywiz.md)).
+Litery, których na stronie nie widać — przycięte albo zakryte białym prostokątem, jak nagłówek oryginału pod nagłówkiem
+wydawcy — odrzuca przed składaniem wierszy `PdfVisibleText`
+([ADR-0112](adr/0112-adapter-pdf-czyta-tylko-tekst-widoczny-na-stronie.md)).
 Poza markerami jednostek granicę bloku stawiają: strefa tytułowa (nagłówek rodzaju z organem, data aktu, przedmiot,
 początek treści), wiersze końcowe odsunięte w prawo (podpis, wiersz przyłączenia, oznaczenie załącznika), adnotacja
 o uchyleniu w osobnym wierszu i wiersz domknięty jednostką uchyloną — także z odwołaniem do odnośnika za znakiem
@@ -999,6 +1002,7 @@ src/Saga.Core/
 │       ├── PdfTables.cs             # Tabele z obramowania (siatka odcinków, scalenia komórek)
 │       ├── PdfRotation.cs           # Treść złożona w poprzek strony — układ, w którym jest pozioma
 │       ├── PdfHyphenation.cs        # Dywiz na końcu wiersza: przeniesienie albo złożenie (ADR-0111)
+│       ├── PdfVisibleText.cs        # Litery widoczne na stronie: bez przyciętych i zakrytych (ADR-0112)
 │       ├── PdfFootnotes.cs          # Odnośniki ze strefy przypisów powiązane ze znacznikami treści
 │       ├── PdfTextLine.cs           # Linia tekstu PDF z pozycją
 │       └── PageArtifactFilter.cs    # Filtrowanie artefaktów strony (nagłówki/stopki/numery stron)

@@ -130,5 +130,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0109](0109-akapit-w-stylu-oznaczenia-bez-oznaczenia-jest-wierszem-naglowkowym.md) | Akapit w stylu oznaczenia jednostki systematyzacyjnej bez oznaczenia („A. Ubezpieczenie …” w stylu oznaczenia rozdziału) jest wierszem nagłówkowym bez oznaczenia — pod tytułem `specjalny` (jak ADR-0067), nie znika | Accepted | 2026-10-20 |
 | [0110](0110-styl-zmian-bez-komendy-w-tekscie-jednolitym-jest-trescia-aktu.md) | Akapit w stylu zmian (Z…) bez komendy nowelizacyjnej przed nim i bez cudzysłowu jest w tekście jednolitym treścią samego aktu, czytaną po treści; poza tekstem jednolitym — tylko oznaczenie i tytuł jednostki systematyzacyjnej | Accepted | 2026-10-22 |
 | [0111](0111-przeniesienie-wyrazu-w-pdf-traci-dywiz-zlozenie-powtarza-dywiz.md) | Dywiz na końcu wiersza PDF przed małą literą to przeniesienie wyrazu i znika; złożenie poznaje się po dywizie powtórzonym na początku następnego wiersza (konwencja składu Dz. U.) | Accepted | 2026-10-22 |
+| [0112](0112-adapter-pdf-czyta-tylko-tekst-widoczny-na-stronie.md) | Adapter PDF czyta tylko tekst widoczny na stronie — litery przycięte i zakryte białym prostokątem odpadają, treść za krawędzią strony zostaje | Accepted | 2026-10-22 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

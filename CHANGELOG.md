@@ -1420,6 +1420,18 @@ a wersjonowanie zgodne z Semantic Versioning.
   a cel „w art. 32 w ust. 9¹” tracił indeks (`art_32__ust_9__zdn_2`). Zostaje jedna para — w PDF (`PdfLineExtractor`)
   i w DOCX (`ParagraphExtensions`, „art. 809[1] § 2”). Korpus DOCX i PDF: te same 4 dokumenty, ocena bez zmian.
 
+- **Tekst niewidoczny na stronie PDF** (ADR-0112): litery przycięte albo zakryte białym prostokątem narysowanym po nich
+  odpadają przed składaniem wierszy (`PdfVisibleText`). Wydawca nakłada na strony załączników organu własny nagłówek,
+  a nagłówek oryginału przycina albo zakrywa — w warstwie tekstowej zostawał i przeplatał się z nagłówkiem wydawcy
+  („ZałączZnaiłąkcznnrik1nr 1”): w M.P. 2026 poz. 1012 oba załączniki (17 tabel) trafiały do treści obwieszczenia,
+  w Dz. U. 2026 poz. 1320 tytuł załącznika był nieczytelny. Treść za krawędzią strony i wiersz przecięty krawędzią
+  komórki zostają.
+- **Obramowanie tabeli PDF z narożnikami 0,5 × 2 pt**: kawałek cieńszy od kreski i dłuższy niż szeroki jest odcinkiem —
+  bez narożników linie kolumn kończyły się 1,7 pt przed liniami wierszy i tabela była tekstem (M.P. 2026 poz. 1012,
+  tabele B–E).
+  - Korpus PDF bez zmian (PDF-y z LibreOffice nie przycinają nagłówków i rysują obramowanie kreską); akty urzędowe
+    1–19 bez zmian w liczbie słów.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

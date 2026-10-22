@@ -126,9 +126,11 @@ namespace Saga.Core.Ingest.Pdf
 
                     var box = toFrame is null ? drawn : toFrame(drawn);
 
-                    if (box.Height <= ThinStroke && box.Width > ThinStroke)
+                    // Kawałek cieńszy od kreski i dłuższy niż szeroki to odcinek — także narożnik komórki 0,5 × 2 pt, bez
+                    // którego linia kolumny kończy się prawie 2 pt przed linią wiersza (M.P. 2026 poz. 1012, tabela B).
+                    if (box.Height <= ThinStroke && box.Width > box.Height)
                         segments.Add(new Segment(true, (box.Bottom + box.Top) / 2, box.Left, box.Right));
-                    else if (box.Width <= ThinStroke && box.Height > ThinStroke)
+                    else if (box.Width <= ThinStroke && box.Height > box.Width)
                         segments.Add(new Segment(false, (box.Left + box.Right) / 2, box.Bottom, box.Top));
                     else if (path.IsStroked && subpath.IsDrawnAsRectangle)
                     {

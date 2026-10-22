@@ -279,8 +279,10 @@ namespace Saga.Core.Ingest.Pdf
             for (int i = 1; i <= pageCount; i++)
             {
                 var page = document.GetPage(i);
-                pageLetterCounts.Add(page.Letters.Count);
-                foreach (var letter in page.Letters)
+                // Litery przycięte albo zakryte nie stoją na stronie (nagłówek oryginału pod nagłówkiem wydawcy).
+                var letters = PdfVisibleText.Visible(page);
+                pageLetterCounts.Add(letters.Count);
+                foreach (var letter in letters)
                 {
                     totalChars += letter.Value.Length;
                     // Zliczanie per ZNAK — Letter.Value bywa wieloznakowe (ligatury/ToUnicode),
@@ -292,20 +294,20 @@ namespace Saga.Core.Ingest.Pdf
                 // pozioma, za resztą strony; obramowanie tabeli należy wtedy do niej, więc w układzie strony tabel się nie szuka.
                 // Orientacja jak w sekcji DOCX: strona szersza niż wysoka, a treść w poprzek strony — odwrotna do niej.
                 var wide = page.Width > page.Height;
-                var turned = PdfRotation.Turned(page.Letters);
+                var turned = PdfRotation.Turned(letters);
                 if (turned is { } rotated)
                 {
                     var direction = rotated.Direction;
                     var (width, height) = (page.Width, page.Height);
                     var inFrame = rotated.Turned.ToHashSet();
-                    allLines.AddRange(PdfLineExtractor.ExtractLines(page, page.Letters.Where(letter => !inFrame.Contains(letter)).ToList())
+                    allLines.AddRange(PdfLineExtractor.ExtractLines(page, letters.Where(letter => !inFrame.Contains(letter)).ToList())
                         .Select(line => Normalized(line) with { IsLandscape = wide }));
                     ReadLetters(page, rotated.Turned.Select(letter => PdfRotation.Letter(letter, direction, width, height)).ToList(),
                         box => PdfRotation.Rectangle(box, direction, width, height), frameHeight: width, landscape: !wide);
                 }
                 else
                 {
-                    ReadLetters(page, page.Letters, toFrame: null, frameHeight: page.Height, landscape: wide);
+                    ReadLetters(page, letters, toFrame: null, frameHeight: page.Height, landscape: wide);
                 }
             }
 

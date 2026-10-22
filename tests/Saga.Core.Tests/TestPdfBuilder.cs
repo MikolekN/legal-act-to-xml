@@ -12,14 +12,26 @@ namespace Saga.Core.Tests
     /// </summary>
     internal sealed class TestPdfBuilder
     {
-        /// <summary>Tekst w wierszu; <c>Rotated</c> — obrócony o ćwierć obrotu, biegnący w górę strony (treść w poprzek strony).</summary>
-        internal sealed record TextRun(string Text, double X, double Y, double Size, bool Rotated = false);
+        /// <summary>
+        /// Tekst w wierszu; <c>Rotated</c> — obrócony o ćwierć obrotu, biegnący w górę strony (treść w poprzek strony);
+        /// <c>Clip</c> — prostokąt przycięcia (x, y, szerokość, wysokość), poza którym tekst nie jest widoczny.
+        /// </summary>
+        internal sealed record TextRun(string Text, double X, double Y, double Size, bool Rotated = false,
+            (double X, double Y, double Width, double Height)? Clip = null);
 
         /// <summary>Odcinek rysowany kreską — obramowanie tabeli.</summary>
         internal sealed record Rule(double X1, double Y1, double X2, double Y2);
 
+        /// <summary>
+        /// Wypełniony prostokąt rysowany przed tekstem (kawałek obramowania, białe tło komórki) albo biały po nim
+        /// (zakrycie tekstu).
+        /// </summary>
+        internal sealed record Box(double X, double Y, double Width, double Height, bool White = false);
+
         private readonly List<List<TextRun>> _pages = new();
         private readonly List<List<Rule>> _rules = new();
+        private readonly List<List<Box>> _boxes = new();
+        private readonly List<List<Box>> _covers = new();
         private readonly Dictionary<char, (byte Code, string GlyphName)> _mapped = new();
         private byte _nextCode = 0x80;
 
@@ -40,6 +52,8 @@ namespace Saga.Core.Tests
         {
             _pages.Add(new List<TextRun>());
             _rules.Add(new List<Rule>());
+            _boxes.Add(new List<Box>());
+            _covers.Add(new List<Box>());
             return this;
         }
 
@@ -49,6 +63,27 @@ namespace Saga.Core.Tests
             if (_pages.Count == 0)
                 AddPage();
             _rules[^1].Add(new Rule(x1, y1, x2, y2));
+            return this;
+        }
+
+        /// <summary>
+        /// Wypełniony prostokąt na OSTATNIEJ stronie, rysowany przed tekstem — czarny: obramowanie składane kawałkami,
+        /// biały: tło komórki.
+        /// </summary>
+        public TestPdfBuilder AddFilledBox(double x, double y, double width, double height, bool white = false)
+        {
+            if (_pages.Count == 0)
+                AddPage();
+            _boxes[^1].Add(new Box(x, y, width, height, white));
+            return this;
+        }
+
+        /// <summary>Biały prostokąt na OSTATNIEJ stronie, rysowany PO tekście — zakrywa to, co pod nim.</summary>
+        public TestPdfBuilder AddCover(double x, double y, double width, double height)
+        {
+            if (_pages.Count == 0)
+                AddPage();
+            _covers[^1].Add(new Box(x, y, width, height, White: true));
             return this;
         }
 
@@ -70,6 +105,13 @@ namespace Saga.Core.Tests
         /// tak skład stawia szeroką tabelę na stronie pionowej.
         /// </summary>
         public TestPdfBuilder AddRotatedText(string text, double x, double y, double size = 11) => Add(new TextRun(text, x, y, size, Rotated: true));
+
+        /// <summary>
+        /// Dodaje tekst przycięty prostokątem (<c>q … re W n BT … ET Q</c>) — tak wydawca nakłada na stronę dokumentu
+        /// własny nagłówek, a treść oryginału przycina do pasa pod nim.
+        /// </summary>
+        public TestPdfBuilder AddClippedText(string text, double x, double y, (double X, double Y, double Width, double Height) clip, double size = 11) =>
+            Add(new TextRun(text, x, y, size, Clip: clip));
 
         private TestPdfBuilder Add(TextRun run)
         {
@@ -106,7 +148,8 @@ namespace Saga.Core.Tests
                 objects.Add($"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {Pt(PageWidth)} {Pt(PageHeight)}] " +
                     $"/Resources << /Font << /F1 3 0 R >> >> /Contents {contentObj} 0 R >>");
 
-                var content = BuildRules(_rules[i]) + BuildContentStream(_pages[i]);
+                var content = BuildRules(_rules[i]) + BuildBoxes(_boxes[i]) + BuildContentStream(_pages[i])
+                    + (_covers[i].Count > 0 ? "\n" + BuildBoxes(_covers[i]).TrimEnd('\n') : string.Empty);
                 objects.Add($"<< /Length {content.Length} >>\nstream\n{content}\nendstream");
             }
 
@@ -139,6 +182,8 @@ namespace Saga.Core.Tests
             var sb = new StringBuilder();
             foreach (var run in runs)
             {
+                if (run.Clip is { } clip)
+                    sb.Append(CultureInfo.InvariantCulture, $"q {Pt(clip.X)} {Pt(clip.Y)} {Pt(clip.Width)} {Pt(clip.Height)} re W n ");
                 sb.Append(CultureInfo.InvariantCulture,
                     $"BT /F1 {Pt(run.Size)} Tf {(run.Rotated ? "0 1 -1 0" : "1 0 0 1")} {Pt(run.X)} {Pt(run.Y)} Tm (");
                 foreach (var c in run.Text)
@@ -150,9 +195,17 @@ namespace Saga.Core.Tests
                     else
                         sb.Append('\\').Append(Convert.ToString(_mapped[c].Code, 8).PadLeft(3, '0'));
                 }
-                sb.Append(") Tj ET\n");
+                sb.Append(run.Clip is null ? ") Tj ET\n" : ") Tj ET Q\n");
             }
             return sb.ToString().TrimEnd('\n');
+        }
+
+        private static string BuildBoxes(List<Box> boxes)
+        {
+            var sb = new StringBuilder();
+            foreach (var box in boxes)
+                sb.Append(CultureInfo.InvariantCulture, $"{(box.White ? 1 : 0)} g {Pt(box.X)} {Pt(box.Y)} {Pt(box.Width)} {Pt(box.Height)} re f 0 g\n");
+            return sb.ToString();
         }
 
         private static string BuildRules(List<Rule> rules)

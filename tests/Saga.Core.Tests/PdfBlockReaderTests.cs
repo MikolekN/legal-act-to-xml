@@ -235,6 +235,70 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TextOutsideItsClip_IsNotOnThePage()
+        {
+            // M.P. 2026 poz. 1012: wydawca przycina stronę oryginału do pasa pod swoim nagłówkiem — nagłówek oryginału
+            // („Załącznik nr 1” 12 pt) leży poza obszarem przycięcia i przeplatał się z nagłówkiem wydawcy („ZałączZnaiłąk…”).
+            var clip = (X: 50.0, Y: 100.0, Width: 500.0, Height: 589.0);
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddText("Załącznik nr 1", 488, 731.4, 9)
+                .AddClippedText("Załącznik nr 1", 457, 729.3, clip, 12)
+                .AddClippedText("§ 1. Stawki opłat za gazy lub pyły wprowadzane do powietrza.", 62, 660, clip)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Equal(["Załącznik nr 1", "§ 1. Stawki opłat za gazy lub pyły wprowadzane do powietrza."], blocks.Select(b => b.Text.Trim()));
+        }
+
+        [Fact]
+        public void TextCoveredByAWhiteBoxDrawnAfterIt_IsNotOnThePage_ButTextOnAWhiteBackgroundIs()
+        {
+            // M.P. 2026 poz. 1012 s. 3: wydawca zakrywa tytuł oryginału białym prostokątem. Białe tło narysowane przed
+            // tekstem (komórka tabeli) niczego nie zakrywa.
+            var pdf = new TestPdfBuilder().AddPage()
+                .AddFilledBox(50, 640, 500, 40, white: true)
+                .AddText("§ 1. Stawki opłat za gazy lub pyły wprowadzane do powietrza.", 62, 660)
+                .AddText("I. JEDNOSTKOWE STAWKI OPŁAT ZA GAZY LUB PYŁY", 70, 736)
+                .AddCover(50, 712, 500, 56)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.Equal(["§ 1. Stawki opłat za gazy lub pyły wprowadzane do powietrza."], blocks.Select(b => b.Text.Trim()));
+        }
+
+        [Fact]
+        public void BorderedTable_DrawnWithShortCornerPieces_IsATable()
+        {
+            // M.P. 2026 poz. 1012, tabela B: linie kolumn kończą się 1,7 pt przed liniami wierszy, a lukę wypełnia
+            // narożnik 0,5 × 2 pt — za krótki na odcinek, więc obramowanie rozpadało się i tabela była tekstem.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 400);
+            builder.AddText("§ 1. Stawki:", 57, 720);
+            foreach (var y in new double[] { 702, 682, 662 })
+                builder.AddFilledBox(57.5, y, 442, 0.5);
+            foreach (var x in new double[] { 57, 200, 499.5 })
+            {
+                builder.AddFilledBox(x, 682.5, 0.5, 17.5);
+                builder.AddFilledBox(x, 662.5, 0.5, 17.5);
+                foreach (var y in new double[] { 700.5, 680.5, 660.5 })
+                    builder.AddFilledBox(x, y, 0.5, 2);
+            }
+
+            builder.AddText("Lp.", 60, 689);
+            builder.AddText("Rodzaj operacji", 205, 689);
+            builder.AddText("1", 60, 669);
+            builder.AddText("Napełnianie zbiorników", 205, 669);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Equal(
+                [(0, 0, "Lp."), (0, 1, "Rodzaj operacji"), (1, 0, "1"), (1, 1, "Napełnianie zbiorników")],
+                blocks.Where(b => b.TableCell is not null).Select(b => (b.TableCell!.Row, b.TableCell.Column, b.Text)));
+        }
+
+        [Fact]
         public void ContentSetAcrossThePage_IsLandscape_AndTheRestOfTheDocumentIsNot()
         {
             // Orientacja jak sekcja DOCX: załącznik dzieli się na segmenty pionowe i poziome (atrybut „orientacja”).
