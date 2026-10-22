@@ -115,6 +115,8 @@ namespace Saga.Core.Tests
         [InlineData("w załączniku nr 14 do ustawy „Plany finansowe państwowych osób prawnych” plan finansowy Polskiej Organizacji Turystycznej, ustalony w tabeli 14, otrzymuje brzmienie określone w załączniku nr 9 do niniejszej ustawy.", "14", "plan finansowy Polskiej Organizacji Turystycznej, ustalony w tabeli 14", "9")]
         // Korpus: 335318_2975891 — wyraz przeniesiony w źródle ręcznie.
         [InlineData("w załączniku nr 1 do rozporządzenia tabela nr 1 otrzymuje brzmienie okreś-lone w załączniku do niniejszego rozporządzenia.", "1", "tabela nr 1", "1")]
+        // M.P. 2026 poz. 912: załącznik Programu, który sam jest załącznikiem uchwały zmienianej — część jej jedynego załącznika.
+        [InlineData("załącznik nr 1 do Programu „Wydatki z budżetu państwa na lata 2024–2030” otrzymuje brzmienie określone w załączniku do niniejszej uchwały.", "1", "załącznik nr 1 do Programu „Wydatki z budżetu państwa na lata 2024–2030”", "1")]
         public void PartOfAnAnnexReplacedByReference_IsAnInstructionOnThatAnnex(string text, string target, string part, string source)
         {
             Assert.Equal([(false, target, part, source)], ReadParts(text));

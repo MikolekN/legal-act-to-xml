@@ -50,6 +50,14 @@ namespace Saga.Core.Services.Parsing
             InAnnex + @"(?:\S.*?\s+)?dodaje\s+się\s+(?<part>\S.*?)\s+w\s+brzmieniu\s+" + Specified + @"ym\s+" + Sources,
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        // Załącznik części załącznika: „załącznik nr 1 do Programu „Wydatki …” otrzymuje brzmienie określone w załączniku do
+        // niniejszej uchwały" (Program jest załącznikiem uchwały zmienianej — M.P. 2026 poz. 912). Załącznik samego aktu
+        // nazywa się „do ustawy", „do rozporządzenia" …, więc ten jest częścią załącznika, w którym stoi.
+        private static readonly Regex NestedAnnexReplacement = new(
+            @"(?<![\p{L}])(?<part>załącznik\s+nr\s+\d+[a-z]*\s+do\s+(?!(?:ustaw|rozporządze|uchwał|zarządze|obwieszcze|kodeks|niniejsz)\p{L}*)[\p{L}]+"
+            + $@"(?:\s+{QuotationMarks.Opening}[^{QuotationMarks.Closing}]*[{QuotationMarks.Closing}])?)\s+otrzymuje\s+brzmienie\s+" + Specified + @"e\s+" + Sources,
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         private static readonly Regex Range = new($@"^(?<from>\d+)\s*[{Dashes.Any}]\s*(?<to>\d+)$", RegexOptions.Compiled);
         private static readonly Regex Item = new($@"\d+[a-z]*(?:\s*[{Dashes.Any}]\s*\d+[a-z]*)?", RegexOptions.Compiled);
         private static readonly Regex Number = new(@"\d+[a-z]*", RegexOptions.Compiled);
@@ -67,6 +75,9 @@ namespace Saga.Core.Services.Parsing
             var addition = Addition.Match(text);
             if (addition.Success)
                 return [Added(addition)];
+
+            if (NestedAnnexReplacement.Match(text) is { Success: true } nested)
+                return [Part(nested, adds: false)];
 
             var replacement = Replacement.Match(text);
             if (replacement.Success)

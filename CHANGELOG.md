@@ -1464,6 +1464,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   a nie na stronę pionową, która dzieliła załącznik na 12 segmentów.
   - Korpus PDF: 4 dokumenty z odczytanymi wyrazami zamiast liter („kamizelka”, „W-70”, „równoważnika”), jednostki bez zmian.
 
+- **Załącznik części załącznika zmieniany odesłaniem** (M.P. 2026 poz. 912): „załącznik nr 1 do Programu „…” otrzymuje
+  brzmienie określone w załączniku do niniejszej uchwały” — Program jest załącznikiem uchwały zmienianej — daje instrukcję
+  ręczną na załączniku, w którym stoi, z częścią nazwaną jak w przepisie (ADR-0108); wcześniej przepis nie miał instrukcji.
+  Załącznik samego aktu („do ustawy”, „do rozporządzenia” …) czyta się jak dotąd. Korpus DOCX bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
