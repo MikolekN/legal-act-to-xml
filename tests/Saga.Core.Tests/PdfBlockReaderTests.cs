@@ -1524,6 +1524,23 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void NoteWithAnUnreadableMark_ReturnsToTheContentOfItsPage()
+        {
+            // M.P. 2026 poz. 951: „* Wizerunek nie przedstawia monety w skali 1:1." pod tabelą wzoru — gwiazdka w indeksie górnym
+            // otwiera strefę przypisów, ale odnośnikiem z odczytanym oznaczeniem to nie jest; blok ginął.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage(), fromY: 700)
+                .AddText("*", 57, 93.5, 6)
+                .AddText("Wizerunek nie przedstawia monety w skali 1:1.", 63, 90, 10)
+                .Build();
+
+            var blocks = Read(pdf);
+
+            Assert.DoesNotContain(blocks, b => b.Role == BlockRole.FootnoteText);
+            Assert.Equal("[*] Wizerunek nie przedstawia monety w skali 1:1.", blocks[^1].Text);
+            Assert.Equal(BlockRole.Body, blocks[^1].Role);
+        }
+
+        [Fact]
         public void NoteUnderAFormWithoutTheSeparator_StaysContent()
         {
             // Objaśnienie pod wzorem („Objaśnienie: ¹⁾ Symbol …") albo uwaga pod tabelą nie ma kreski odnośników — w DOCX to

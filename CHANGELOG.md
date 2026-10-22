@@ -1506,6 +1506,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   i „cyfrę „0” zastępuje się cyfrą „9”” dają `now:zamien-tekst` jak zamiana wyrazów — wcześniej przepis nie miał
   instrukcji. Korpus DOCX: 16 instrukcji w 11 dokumentach, ocena (2209) i zgodność ze schematem bez zmian.
 
+- **Uwaga pod wzorem PDF z gwiazdką nie ginie** (M.P. 2026 poz. 951): „* Wizerunek nie przedstawia monety w skali 1:1.”
+  pod tabelą wzoru otwierała strefę przypisów, ale oznaczenia „*” odnośnik nie czyta, więc blok znikał z eksportu.
+  Blok strefy przypisów, który nie jest odnośnikiem ani jego dalszym akapitem, wraca do treści swojej strony.
+  Korpus PDF bez zmian; akty ISAP 1–57 bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

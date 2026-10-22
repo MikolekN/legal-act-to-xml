@@ -389,9 +389,19 @@ namespace Saga.Core.Ingest.Pdf
                 forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text) || PdfFootnotes.OpensBareNote(l.Text), hyphenation);
 
             // Odnośniki przed winietą: winieta scala swoje bloki, a strony bloków (lastPages) idą równolegle do listy.
-            var blocks = JournalMasthead.Mark(PdfFootnotes.Link(body, lastPages, footnotes)).ToList();
+            var linked = PdfFootnotes.Link(body, lastPages, footnotes);
 
-            blocks.AddRange(footnotes);
+            // Blok strefy przypisów, który odnośnikiem nie jest, wraca do treści — za ostatni blok swojej strony.
+            var unreadable = PdfFootnotes.Unreadable(footnotes);
+            foreach (var block in unreadable)
+            {
+                var page = block.Source.PageNumber ?? 0;
+                var after = linked.FindLastIndex(b => (b.Source.PageNumber ?? 0) <= page);
+                linked.Insert(after + 1, block with { Role = BlockRole.Body });
+            }
+
+            var blocks = JournalMasthead.Mark(linked).ToList();
+            blocks.AddRange(footnotes.Except(unreadable));
             return blocks;
         }
 

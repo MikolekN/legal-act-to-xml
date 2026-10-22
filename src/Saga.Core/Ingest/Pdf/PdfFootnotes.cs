@@ -208,6 +208,26 @@ namespace Saga.Core.Ingest.Pdf
             }
         }
 
+        /// <summary>
+        /// Bloki strefy przypisów, które nie są odnośnikiem ani jego dalszym akapitem: oznaczenia nie da się odczytać
+        /// („[*] Wizerunek nie przedstawia monety …" pod tabelą wzoru — M.P. 2026 poz. 951), a odnośnika przed nimi nie ma.
+        /// Nie wiążą się z niczym, więc wracają do treści strony — inaczej ich tekst by zginął.
+        /// </summary>
+        internal static List<DocumentBlock> Unreadable(IReadOnlyList<DocumentBlock> footnotes)
+        {
+            var unreadable = new List<DocumentBlock>();
+            var anyNote = false;
+            foreach (var block in footnotes)
+            {
+                if (Start.IsMatch(block.Text))
+                    anyNote = true;
+                else if (!anyNote)
+                    unreadable.Add(block);
+            }
+
+            return unreadable;
+        }
+
         /// <summary>Oznaczenia odnośników, do których tekst odwołuje się znacznikiem w indeksie górnym („[1), 2)]" → 1, 2).</summary>
         internal static IEnumerable<string> ReferencedSymbols(string text) =>
             Superscript.Matches(text).SelectMany(superscript => Item.Matches(superscript.Value).Select(item => item.Groups["symbol"].Value));
