@@ -145,5 +145,10 @@ namespace Saga.Core.Services.EntryIntoForce
         internal static readonly Regex OnAnnouncementDay = new(
             @"z\s+dniem\s+ogłoszenia",
             Opts);
+
+        /// <summary>„z dniem podjęcia" (uchwała), „z dniem podpisania" (zarządzenie), „z dniem wydania"</summary>
+        internal static readonly Regex OnAdoptionDay = new(
+            @"z\s+dniem\s+(?:podjęcia|podpisania|wydania)",
+            Opts);
     }
 }

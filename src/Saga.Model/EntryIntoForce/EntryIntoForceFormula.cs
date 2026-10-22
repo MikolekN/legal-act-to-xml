@@ -30,6 +30,9 @@ namespace Saga.Model.EntryIntoForce
         /// <summary>„z dniem ogłoszenia"</summary>
         OnAnnouncementDay,
 
+        /// <summary>„z dniem podjęcia / podpisania / wydania" — w dniu, którym akt jest datowany</summary>
+        OnAdoptionDay,
+
         /// <summary>„z dniem <dzień> <miesiąc> <rok> r."</summary>
         OnSpecificDate,
 

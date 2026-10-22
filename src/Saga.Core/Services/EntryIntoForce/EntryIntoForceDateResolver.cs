@@ -2,6 +2,9 @@ using Saga.Model.EntryIntoForce;
 
 namespace Saga.Core.Services.EntryIntoForce
 {
+    /// <summary>Punkty odniesienia formuł: dzień ogłoszenia i dzień, którym akt jest datowany (podjęcia, wydania).</summary>
+    internal readonly record struct ReferenceDates(DateTime? Announcement, DateTime? Act);
+
     /// <summary>
     /// Wylicza datę wejścia w życie z rozpoznanej formuły.
     /// Zwraca null, gdy formuła nie prowadzi do daty kalendarzowej
@@ -9,13 +12,16 @@ namespace Saga.Core.Services.EntryIntoForce
     /// </summary>
     internal static class EntryIntoForceDateResolver
     {
-        internal static DateTime? Resolve(EntryIntoForceFormula? formula, DateTime? announcementDate)
+        internal static DateTime? Resolve(EntryIntoForceFormula? formula, DateTime? announcementDate, DateTime? actDate = null)
         {
             if (formula is null || !formula.IsResolvable)
                 return null;
 
             if (formula.Kind == EntryIntoForceFormulaKind.OnSpecificDate)
                 return formula.ExplicitDate;
+
+            if (formula.Kind == EntryIntoForceFormulaKind.OnAdoptionDay)
+                return actDate;
 
             var reference = formula.ReferenceDateOverride ?? announcementDate;
             if (reference is not { } baseDate)

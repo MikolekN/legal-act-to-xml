@@ -24,6 +24,7 @@ namespace Saga.Core.Services.EntryIntoForce
             (EntryIntoForcePatterns.AfterYears, EntryIntoForceFormulaKind.AfterYearsFromAnnouncement, 1),
             (EntryIntoForcePatterns.AfterDays, EntryIntoForceFormulaKind.AfterDaysFromAnnouncement, null),
             (EntryIntoForcePatterns.OnAnnouncementDay, EntryIntoForceFormulaKind.OnAnnouncementDay, null),
+            (EntryIntoForcePatterns.OnAdoptionDay, EntryIntoForceFormulaKind.OnAdoptionDay, null),
         };
 
         /// <summary>Rozpoznaje formułę w podanej klauzuli.</summary>

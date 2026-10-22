@@ -1432,6 +1432,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   - Korpus PDF bez zmian (PDF-y z LibreOffice nie przycinają nagłówków i rysują obramowanie kreską); akty urzędowe
     1–19 bez zmian w liczbie słów.
 
+- **Wejście w życie „z dniem podjęcia”** (także „podpisania”, „wydania”): nowa formuła `OnAdoptionDay` liczy datę od dnia,
+  którym akt jest datowany, nie od ogłoszenia — uchwała Senatu (M.P. 2026 poz. 1014) nie miała zdarzenia wejścia w życie
+  ani dat jednostek; teraz 2026-10-13, jak w ELI. Korpus DOCX nie ma tej formuły w treści własnej aktu.
+- **Odmiana wyrazów w przedziale jednostek** („w art. 75a w ust. 1–3, w różnym przypadku, wyrazy …”): instrukcja ręczna
+  zachowuje `element-do-eId` jak automatyczna (ADR-0016) — przedział kasuje tylko adres zastępczy celu bez adresu
+  (ADR-0100). Korpus DOCX: 4 dokumenty z przedziałem, ocena i zgodność ze schematem bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

@@ -72,16 +72,19 @@ namespace Saga.Core.Services.Parsing
             foreach (var target in amendment.Targets.Concat(amendment.TextChanges.SelectMany(change => change.Targets)))
             {
                 var structure = target.Structure;
-                var manual = inflected
-                    || (structure.Footnote is not null && footnoteInside)
+                var unaddressable = (structure.Footnote is not null && footnoteInside)
                     || structure.ActTitle
                     || structure is { Annex.Length: > 0, InAnnexContent: true }
                     || (IsAnnexItself(structure) && !wholeAnnexText && !annexRepealed);
-                if (!manual)
+                if (!inflected && !unaddressable)
                     continue;
 
                 target.IsManual = true;
-                target.RangeEnd = null;
+
+                // Adres zastępczy (najgłębsza adresowalna jednostka) nie ma końca przedziału. Cel odmiany wyrazów ma własny
+                // adres, więc przedział zostaje („w art. 75a w ust. 1–3, w różnym przypadku, wyrazy …" — M.P. 2026 poz. 1014).
+                if (unaddressable)
+                    target.RangeEnd = null;
             }
         }
 

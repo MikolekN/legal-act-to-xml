@@ -48,9 +48,10 @@ namespace Saga.Core.Services.EntryIntoForce
             if (announcementDate is null)
                 Log.Warning("Brak daty ogłoszenia — daty względem dnia ogłoszenia pozostaną nierozstrzygnięte");
 
-            var info = BuildInfo(main, announcementDate);
+            var dates = new ReferenceDates(announcementDate, document.ActDate);
+            var info = BuildInfo(main, dates);
 
-            CollectPartials(document, candidates, main, announcementDate, info);
+            CollectPartials(document, candidates, main, dates, info);
             RecordStrays(candidates, main, info);
 
             document.EntryIntoForce = info;
@@ -78,7 +79,7 @@ namespace Saga.Core.Services.EntryIntoForce
         // Reguła ogólna
         // ============================================================
 
-        private static EntryIntoForceInfo BuildInfo(ClauseCandidate main, DateTime? announcementDate)
+        private static EntryIntoForceInfo BuildInfo(ClauseCandidate main, ReferenceDates dates)
         {
             // Reguła ogólna kończy się w miejscu pierwszego wyjątku.
             var generalPart = CutAtFirstMarker(main.Tail);
@@ -89,7 +90,7 @@ namespace Saga.Core.Services.EntryIntoForce
             {
                 RawText = main.Text,
                 Formula = formula,
-                ResolvedDate = EntryIntoForceDateResolver.Resolve(formula, announcementDate),
+                ResolvedDate = EntryIntoForceDateResolver.Resolve(formula, dates.Announcement, dates.Act),
                 RetroactiveFrom = retroactive,
                 RetroactiveFromRawText = retroRaw,
                 SourceUnitEId = main.Owner.Id,
@@ -118,16 +119,16 @@ namespace Saga.Core.Services.EntryIntoForce
             LegalDocument document,
             IReadOnlyList<ClauseCandidate> candidates,
             ClauseCandidate main,
-            DateTime? announcementDate,
+            ReferenceDates dates,
             EntryIntoForceInfo info)
         {
             var sectionSignIsBasicUnit = SectionSignRole.IsBasicUnit(document.Classification);
 
             // Wyjątki w treści klauzuli głównej („…, z wyjątkiem art. 2, który wchodzi w życie …").
             foreach (var (units, tail) in SplitInlineExceptions(main.Tail))
-                info.Partials.Add(BuildPartial(units, tail, announcementDate, main.Owner, info, sectionSignIsBasicUnit));
+                info.Partials.Add(BuildPartial(units, tail, dates, main.Owner, info, sectionSignIsBasicUnit));
 
-            CollectProvisos(main, announcementDate, info, sectionSignIsBasicUnit);
+            CollectProvisos(main, dates, info, sectionSignIsBasicUnit);
 
             // Wyjątki jako osobne pozycje listy pod klauzulą kończącą się „z wyjątkiem:".
             if (!main.OpensExceptionList)
@@ -142,7 +143,7 @@ namespace Saga.Core.Services.EntryIntoForce
                     continue;
                 }
 
-                info.Partials.Add(BuildPartial(units, item.Tail, announcementDate, item.Owner, info, sectionSignIsBasicUnit));
+                info.Partials.Add(BuildPartial(units, item.Tail, dates, item.Owner, info, sectionSignIsBasicUnit));
             }
         }
 
@@ -193,7 +194,7 @@ namespace Saga.Core.Services.EntryIntoForce
         /// w życie z dniem …") jest zwykłym wyjątkiem daty, tyle że zapisanym bez zaimka względnego.
         /// </summary>
         private static void CollectProvisos(
-            ClauseCandidate main, DateTime? announcementDate, EntryIntoForceInfo info, bool sectionSignIsBasicUnit)
+            ClauseCandidate main, ReferenceDates dates, EntryIntoForceInfo info, bool sectionSignIsBasicUnit)
         {
             foreach (var chunk in SplitProvisos(main.Tail))
             {
@@ -205,7 +206,7 @@ namespace Saga.Core.Services.EntryIntoForce
                     info.Partials.Add(BuildPartial(
                         UnitsBefore(chunk, verb.Index),
                         chunk[(verb.Index + verb.Length)..].Trim(),
-                        announcementDate, main.Owner, info, sectionSignIsBasicUnit));
+                        dates, main.Owner, info, sectionSignIsBasicUnit));
                     continue;
                 }
 
@@ -262,7 +263,7 @@ namespace Saga.Core.Services.EntryIntoForce
         private static PartialEntryIntoForce BuildPartial(
             string unitsText,
             string formulaTail,
-            DateTime? announcementDate,
+            ReferenceDates dates,
             BaseEntity owner,
             EntryIntoForceInfo info,
             bool sectionSignIsBasicUnit)
@@ -275,7 +276,7 @@ namespace Saga.Core.Services.EntryIntoForce
             {
                 Targets = enumeration.Targets.ToList(),
                 Formula = formula,
-                ResolvedDate = EntryIntoForceDateResolver.Resolve(formula, announcementDate),
+                ResolvedDate = EntryIntoForceDateResolver.Resolve(formula, dates.Announcement, dates.Act),
                 RetroactiveFrom = retroactive,
                 RawText = $"{unitsText}, {formulaTail}".Trim(),
                 SourceUnitEId = owner.Id,

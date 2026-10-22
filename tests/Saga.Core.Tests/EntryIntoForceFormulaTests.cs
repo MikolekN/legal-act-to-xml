@@ -38,6 +38,9 @@ namespace Saga.Core.Tests
         [InlineData("pierwszego dnia miesiąca następującego po miesiącu ogłoszenia.", EntryIntoForceFormulaKind.FirstDayOfMonthAfterAnnouncementMonth)]
         [InlineData("z dniem określonym w komunikacie, o którym mowa w art. 18 ust. 1", EntryIntoForceFormulaKind.DeterminedByCommunication)]
         [InlineData("w terminie określonym w ustawie z dnia 15 maja 2024 r.", EntryIntoForceFormulaKind.DeterminedByIntroducingAct)]
+        // M.P. 2026 poz. 1014: „Uchwała wchodzi w życie z dniem podjęcia." — data uchwały, nie ogłoszenia.
+        [InlineData("z dniem podjęcia.", EntryIntoForceFormulaKind.OnAdoptionDay)]
+        [InlineData("z dniem podpisania.", EntryIntoForceFormulaKind.OnAdoptionDay)]
         public void PointFormulas_AreRecognized(string tail, EntryIntoForceFormulaKind kind)
         {
             Assert.Equal(kind, EntryIntoForceFormulaParser.Parse(tail).Kind);
@@ -201,6 +204,15 @@ namespace Saga.Core.Tests
         {
             Assert.Equal(Announced,
                 EntryIntoForceDateResolver.Resolve(Formula(EntryIntoForceFormulaKind.OnAnnouncementDay), Announced));
+        }
+
+        [Fact]
+        public void OnAdoptionDay_IsTheActDate_NotTheAnnouncementDate()
+        {
+            var adopted = new DateTime(2025, 1, 10);
+            Assert.Equal(adopted,
+                EntryIntoForceDateResolver.Resolve(Formula(EntryIntoForceFormulaKind.OnAdoptionDay), Announced, adopted));
+            Assert.Null(EntryIntoForceDateResolver.Resolve(Formula(EntryIntoForceFormulaKind.OnAdoptionDay), Announced));
         }
 
         [Fact]

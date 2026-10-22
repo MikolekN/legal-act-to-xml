@@ -40,6 +40,18 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void InflectedWords_InARangeOfUnits_KeepTheRangeEnd()
+        {
+            // M.P. 2026 poz. 1014: „w art. 75a w ust. 1–3, w różnym przypadku, wyrazy …" — cel ma własny adres, więc
+            // przedział zostaje jak w instrukcji automatycznej (ADR-0016); kasuje go tylko adres zastępczy (ADR-0100).
+            var xml = Export("1) użyte w art. 40 w ust. 1–3 oraz w art. 64, w różnym przypadku, wyrazy „zespół” zastępuje się użytymi w odpowiednim przypadku wyrazami „CSIRT”.");
+
+            var manual = xml.Descendants().Where(e => e.Attribute("funkcja")?.Value == "zastap-recznie").ToList();
+            Assert.Equal([("DU/2021/200__art_40__ust_1", "DU/2021/200__art_40__ust_3"), ("DU/2021/200__art_64", null)],
+                manual.Select(e => (e.Attribute("element-eId")?.Value, e.Attribute("element-do-eId")?.Value)));
+        }
+
+        [Fact]
         public void WordsInOneForm_StayAnAutomaticChange()
         {
             var xml = Export("1) w art. 40 wyrazy „zespół” zastępuje się wyrazami „CSIRT”.");
