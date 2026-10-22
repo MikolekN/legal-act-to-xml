@@ -1443,6 +1443,21 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ParagraphSignAfterALineEndingWithAnArticleReference_ContinuesTheReference()
+        {
+            // Dz. U. 2026 poz. 1311: „art. 64cd" / „§ 3." to jedno powołanie — paragraf nie zaczyna się za zdaniem bez kropki.
+            var blocks = ReadLines(
+                "§ 3. Obowiązek zwrotu przedawnia się w terminie, w którym zaistniały zdarzenia określone w art. 64cd",
+                "§ 3. Złożenie wniosku przerywa bieg terminu przedawnienia.",
+                "§ 4. Obowiązek zapłaty stosuje się do art. 5.",
+                "§ 5. Bieg terminu nie ulega przerwaniu.");
+
+            Assert.Contains(blocks, b => b.Text == "§ 3. Obowiązek zwrotu przedawnia się w terminie, w którym zaistniały zdarzenia " +
+                                              "określone w art. 64cd § 3. Złożenie wniosku przerywa bieg terminu przedawnienia.");
+            Assert.Contains(blocks, b => b.Text == "§ 5. Bieg terminu nie ulega przerwaniu.");
+        }
+
+        [Fact]
         public void RaisedDigitInAFontCloseToTheText_IsASuperscript()
         {
             // Dz. U. 2026 poz. 1292: oznaczenie odnośnika „2" 7,9 pt przy tekście 9,8 pt, podniesione o 4 pt — powyżej progu

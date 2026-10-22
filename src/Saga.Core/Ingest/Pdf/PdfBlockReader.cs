@@ -213,6 +213,14 @@ namespace Saga.Core.Ingest.Pdf
         private static readonly Regex ReferenceAbbreviationEndPattern = new(
             @"(?:\b(?:poz|[Nn]r|str|art|ust|lit)\.?|\bpkt|§)\s*$", RegexOptions.Compiled);
 
+        /// <summary>
+        /// Wiersz urwany na powołaniu artykułu („… określone w art. 64cd" / „§ 3. Złożenie wniosku …" — Dz. U. 2026
+        /// poz. 1311): „§ N." w następnym wierszu dopełnia powołanie, nie otwiera paragrafu. Paragraf zaczyna się za
+        /// zdaniem domkniętym interpunkcją, a oznaczenie artykułu pisze się wielką literą.
+        /// </summary>
+        private static readonly Regex ArticleReferenceEndPattern = new(
+            @"(?<!\p{L})art\.\s*\d+\p{Ll}{0,4}(?:\[[^\[\]]*\])?\s*$", RegexOptions.Compiled);
+
         /// <summary>Początek przypisu: „N)" (także w kanale [N)]) lub gwiazdki — nawias WYMAGANY
         /// (bez niego goła liczba „2023 r. …" na początku zawiniętej kontynuacji rozcinałaby przypis).
         /// Odnośnik oznaczony literą („[a)]" — tekst jednolity oznacza tak odnośniki obwieszczenia) tylko w kanale
@@ -996,11 +1004,11 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         private static bool IsMarkerBoundary(PdfTextLine line, PdfTextLine prev, PdfTextLine? blockFirst)
         {
-            if (UnconditionalMarkerPattern.IsMatch(line.Text))
-                return true;
-
             // Odwołanie do odnośnika za znakiem domykającym („wyłącznie:[51)]", „4) (uchylony)[19)]") nie otwiera wiersza.
             var prevText = TrailingFootnoteAnchor.Replace(prev.Text.TrimEnd(), string.Empty);
+            if (UnconditionalMarkerPattern.IsMatch(line.Text))
+                return !(line.Text.StartsWith('§') && ArticleReferenceEndPattern.IsMatch(prevText));
+
             if (ContinuesNumbering(blockFirst, line) && !ReferenceAbbreviationEndPattern.IsMatch(prevText))
                 return true;
 

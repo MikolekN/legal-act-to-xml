@@ -1530,6 +1530,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   `eId` bez prefiksu aktu i powtórzone `art_61__par_1`. Numer dziennika się pomija (pozycja jest unikalna w roczniku),
   a kolejne „i Nr 230, poz. 1371" to dalsza pozycja listy. Korpus DOCX nie ma takich publikatorów — eksporty bez zmian.
 
+- **Powołanie artykułu urwane przed „§" w PDF**: Dz. U. 2026 poz. 1311 — „… zdarzenia określone w art. 64cd" na końcu
+  wiersza i „§ 3. Złożenie wniosku …" w następnym; oznaczenie paragrafu otwierało blok bezwarunkowo, więc art. 65a
+  dostawał drugi § 3 (powtórzone `eId`). „§ N." za wierszem kończącym się powołaniem „art. N" (małą literą, bez
+  kropki) dopełnia powołanie — paragraf zaczyna się za zdaniem domkniętym interpunkcją.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
