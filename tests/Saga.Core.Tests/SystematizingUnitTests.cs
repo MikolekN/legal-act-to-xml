@@ -299,6 +299,24 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TitleEndingWithTheYearAbbreviation_IsTheChapterTitle_WithoutStyles()
+        {
+            // Dz. U. 2026 poz. 505 (PDF): kropka skrótu „r." nie kończy zdania — tytuł nie ginie.
+            const string heading = "Emerytura funkcjonariusza przyjętego do służby po raz pierwszy po dniu 31 grudnia 2012 r.";
+
+            var document = LegalDocumentParser.ParseBlocks(new[]
+            {
+                "Art. 18. Emerytura wynosi 40% podstawy jej wymiaru.",
+                "Rozdział 1a",
+                heading,
+                "Art. 18a. 1. Funkcjonariuszowi przyjętemu po raz pierwszy przysługuje emerytura.",
+            }.Select(text => new Ingest.DocumentBlock { Text = text }).ToList());
+
+            var chapter = Assert.IsType<Saga.Model.SystematizingUnits.Chapter>(document.Articles.Single(a => a.Number?.Value == "18a").Parent!.Parent);
+            Assert.Equal(heading, chapter.Heading);
+        }
+
+        [Fact]
         public void BookTitleInPartOrBookStyle_IsAssigned_EvenWhenLong()
         {
             // KPC (TJ 302049_2704309): tytuł księgi w tym samym stylu CZĘŚĆ(KSIĘGA) co jej oznaczenie,

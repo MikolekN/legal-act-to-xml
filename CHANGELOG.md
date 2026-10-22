@@ -1584,6 +1584,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   są tylko inne artefakty — jak nagłówek, stopka i metryczka składu („DDUTJ.60.214.2025 łamanie …"); znane nagłówki
   Dziennika Ustaw i Monitora Polskiego usuwa jak dotąd lista wzorców.
 
+- **Tytuł zakończony skrótem roku**: Dz. U. 2026 poz. 505 — „Rozdział 1a" / „Emerytura funkcjonariusza przyjętego do
+  służby po raz pierwszy po dniu 31 grudnia 2012 r.". Bez stylu tytuł rozpoznaje jego budowa, a ta odrzucała akapit
+  zakończony kropką — rozdział zostawał bez tytułu, a akapit (przed pierwszym artykułem rozdziału) ginął. Kropka skrótu
+  „r." po roku nie kończy zdania.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
