@@ -36,9 +36,24 @@ namespace Saga.Core.Ingest.Pdf
 
         private static readonly Regex Item = new(@"(?<![\p{L}\d])(?<symbol>\d{1,3}|[a-z]{1,2})\)", RegexOptions.Compiled);
 
-        /// <summary>Oznaczenie na początku bloku odnośnika („[1)] …", „1) …", „[a)] …", bez oznaczenia — „[)] …").</summary>
+        /// <summary>
+        /// Oznaczenie na początku bloku odnośnika („[1)] …", „1) …", „[a)] …", bez oznaczenia — „[)] …", sama liczba
+        /// w indeksie górnym — „[1] …").
+        /// </summary>
         private static readonly Regex Start = new(
-            @"^(?:\[(?<symbol>\d{1,3}|[a-z]{1,2})?\)\]|(?<plain>(?<symbol>\d{1,3})\)))\s*", RegexOptions.Compiled);
+            @"^(?:\[(?<symbol>\d{1,3}|[a-z]{1,2})?\)\]|(?<plain>(?<symbol>\d{1,3})\))|\[(?<bare>(?<symbol>\d{1,3}))\](?=\s))\s*",
+            RegexOptions.Compiled);
+
+        /// <summary>Odnośnik oznaczony samą liczbą w indeksie górnym („[1] W przypadku …") — tak oznacza odnośniki część wzorów w załącznikach.</summary>
+        private static readonly Regex BareStart = new(@"^\[\d{1,3}\]\s", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Odwołanie do odnośnika oznaczonego samą liczbą („przemysłowe[3]", „R.[1]"). Liczba w indeksie górnym bywa też
+        /// wykładnikiem jednostki („mln m[3]") i indeksem oznaczenia jednostki („art. 9[1]", „21a[1]") — za liczbą albo
+        /// samą jednostką miary odwołaniem nie jest.
+        /// </summary>
+        private static readonly Regex BareReference = new(
+            @"(?<!\d\p{Ll}{0,3}|(?<!\p{L})[kcdm]?m)\[(?<symbol>\d{1,3})\]", RegexOptions.Compiled);
 
         /// <summary>Akapit, który otwiera wyliczenie albo jest jego pozycją — następny „N)" jest jego dalszą pozycją.</summary>
         private static readonly Regex OpensItem = new(@"[:;]\s*$", RegexOptions.Compiled);
@@ -46,12 +61,18 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Treść pozycji wyliczenia: mała litera albo nawias („(uchylony)"), nie wielka litera nowego odnośnika.</summary>
         private static readonly Regex ItemText = new(@"^[\p{Ll}(]", RegexOptions.Compiled);
 
-        private sealed class Note(string symbol, int page, string text)
+        private sealed class Note(string symbol, int page, string text, bool bare = false, string mark = "")
         {
             public string Symbol { get; } = symbol;
             public int Page { get; } = page;
             public List<string> Paragraphs { get; } = [text];
             public bool Used { get; set; }
+
+            /// <summary>Oznaczony samą liczbą w indeksie górnym — odwołuje się do niego <see cref="BareReference"/>.</summary>
+            public bool Bare { get; } = bare;
+
+            /// <summary>Oznaczenie na początku bloku, jak je wydrukowano („[1]").</summary>
+            public string Mark { get; } = mark;
         }
 
         /// <summary>
@@ -77,7 +98,8 @@ namespace Saga.Core.Ingest.Pdf
                 if (continues)
                     previous!.Paragraphs.Add(block.Text.Trim());
                 else if (start.Success)
-                    notes.Add(new Note(start.Groups["symbol"].Value, block.Source.PageNumber ?? 0, text));
+                    notes.Add(new Note(start.Groups["symbol"].Value, block.Source.PageNumber ?? 0, text, start.Groups["bare"].Success,
+                        start.Value.Trim()));
             }
 
             return notes;
@@ -91,6 +113,7 @@ namespace Saga.Core.Ingest.Pdf
             IReadOnlyList<DocumentBlock> body, IReadOnlyList<int> lastPages, IReadOnlyList<DocumentBlock> footnotes)
         {
             var notes = ReadNotes(footnotes);
+            FoldUnreferencedBareNotes(notes, body, lastPages);
 
             var result = new List<DocumentBlock>(body.Count);
             var numbering = new Numbering();
@@ -137,15 +160,64 @@ namespace Saga.Core.Ingest.Pdf
                     });
                 });
 
+                // Odwołanie samą liczbą łączy się tylko z odnośnikiem tak samo oznaczonym — wykładnik bez odnośnika zostaje.
+                text = BareReference.Replace(text, reference =>
+                {
+                    var symbol = reference.Groups["symbol"].Value;
+                    var note = notes.FirstOrDefault(n => OnThesePages(n) && n.Bare && n.Symbol == symbol);
+                    if (note is null)
+                        return reference.Value;
+
+                    note.Used = true;
+                    var (marker, run) = numbering.Next(symbol);
+                    (attached ??= []).Add(new BlockFootnote(symbol, note.Paragraphs) { Marker = marker, Run = run });
+                    return "[" + marker + ")]";
+                });
+
                 result.Add(attached is null && text == block.Text ? block : block with { Text = text, Footnotes = attached ?? block.Footnotes });
             }
 
             return result;
         }
 
+        /// <summary>
+        /// Odnośnik oznaczony samą liczbą, do którego żaden tekst na jego stronie się nie odwołuje („[11] Niniejszy dokument …"
+        /// w strefie przypisów albo odwołanie w komórce tabeli zaczętej na wcześniejszej stronie), jest dalszym tekstem
+        /// poprzedniego odnośnika — jak czytało się go przed rozpoznaniem takich oznaczeń. Bez odwołania nie miałby gdzie
+        /// stanąć i jego tekst by zginął.
+        /// </summary>
+        private static void FoldUnreferencedBareNotes(List<Note> notes, IReadOnlyList<DocumentBlock> body, IReadOnlyList<int> lastPages)
+        {
+            for (var n = notes.Count - 1; n > 0; n--)
+            {
+                var note = notes[n];
+                if (!note.Bare)
+                    continue;
+
+                var referenced = body.Where((block, i) =>
+                        (block.Source.PageNumber ?? 0) <= note.Page && note.Page <= (i < lastPages.Count ? lastPages[i] : block.Source.PageNumber ?? 0))
+                    .Any(block => BareReferencedSymbols(block.Text).Contains(note.Symbol));
+                if (referenced)
+                    continue;
+
+                // Odnośnik bywa już poszerzony o następny, złożony do niego wcześniej (pętla idzie od końca).
+                var previous = notes[n - 1];
+                previous.Paragraphs[^1] += " " + note.Mark + " " + note.Paragraphs[0];
+                previous.Paragraphs.AddRange(note.Paragraphs.Skip(1));
+                notes.RemoveAt(n);
+            }
+        }
+
         /// <summary>Oznaczenia odnośników, do których tekst odwołuje się znacznikiem w indeksie górnym („[1), 2)]" → 1, 2).</summary>
         internal static IEnumerable<string> ReferencedSymbols(string text) =>
             Superscript.Matches(text).SelectMany(superscript => Item.Matches(superscript.Value).Select(item => item.Groups["symbol"].Value));
+
+        /// <summary>Oznaczenia odnośników, do których tekst odwołuje się samą liczbą w indeksie górnym („przemysłowe[3]" → 3).</summary>
+        internal static IEnumerable<string> BareReferencedSymbols(string text) =>
+            BareReference.Matches(text).Select(reference => reference.Groups["symbol"].Value);
+
+        /// <summary>Blok strefy przypisów zaczyna odnośnik oznaczony samą liczbą w indeksie górnym.</summary>
+        internal static bool OpensBareNote(string text) => BareStart.IsMatch(text);
 
         /// <summary>Numery znaczników kolejnych odnośników: ciąg numeracji zmienia się, gdy oznaczenia zaczynają się od nowa.</summary>
         private sealed class Numbering

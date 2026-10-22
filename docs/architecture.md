@@ -322,7 +322,11 @@ format-agnostyczny odpowiednik akapitu Word, wspólny dla DOCX/PDF/TXT:
 komórki jest blokiem z `TableCell`, jak w DOCX — bez stylów Word, więc klasyfikacja akapitu opiera się tam głównie na
 warstwie syntaktycznej (regex) i układzie (wcięcia). Odnośniki ze strefy przypisów wiąże ze znacznikami treści `PdfFootnotes`
 (oznaczenie i strona odwołania) — blok niesie `Footnotes` i znacznik o numerze jednoznacznym, jak w DOCX; akapity
-odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnika. Treść złożoną w poprzek strony pionowej
+odnośnika bez oznaczenia i pozycje jego wyliczenia są akapitami tego odnośnika. Odnośnik oznaczony samą liczbą w indeksie
+górnym (wzory w załącznikach) wiąże się z odwołaniem tą liczbą, ale nie z wykładnikiem jednostki („m²") ani z indeksem
+oznaczenia jednostki („art. 9¹"); pod tekstem pisanym tym samym małym pismem (podpis pod wzorem) strefa przypisów
+zaczyna się od pierwszego odnośnika przywołanego wyżej na stronie, nad którym stoi kreska odnośników (objaśnienie pod
+wzorem bez kreski zostaje treścią). Treść złożoną w poprzek strony pionowej
 (szeroka tabela) `PdfRotation` przenosi z obramowaniem do układu, w którym jest pozioma, a napisy pod innym kątem
 `PdfLineExtractor` czyta w ich własnym kierunku; tabela przecięta stroną to jedna
 tabela, gdy na następnej stronie stoi tuż za nią z tymi samymi kolumnami. Dywiz na końcu wiersza rozstrzyga

@@ -1479,6 +1479,18 @@ a wersjonowanie zgodne z Semantic Versioning.
     to teraz same ustępy pod „Art. N.”; ocena 2179 → 2209 dokumentów bez winy. Zgodnych ze schematem 2012 → 1996
     (16 tylko przez zapowiedziany atrybut); wobec kopii schematu ze zmianą autora żaden z 44 nie ma nowego błędu.
 
+- **Odnośniki wzorów w załącznikach PDF** (Dz. U. 2026 poz. 1292): odnośnik oznaczony samą liczbą w indeksie górnym
+  („¹ W przypadku …”) pod podpisem sporządzającego złożonym tym samym małym pismem jest odnośnikiem, a odwołanie tą
+  liczbą („przemysłowe³”) — jego znacznikiem; wykładnik jednostki („mln m³”) i indeks oznaczenia („art. 9¹”) nim nie są.
+  Wcześniej odnośniki strony wychodziły jednym akapitem tekstu „[1] … [2] …” pod wzorem. Także: cyfra wyraźnie
+  podniesiona w piśmie bliskim tekstowi (7,9 pt przy 9,8 pt) jest indeksem górnym; podpis tabeli „Tabela nr 1” w osobnym
+  wierszu nie dopisuje się do tytułu załącznika; linia siatki, przy której nie zaczyna się żadna komórka (podkreślenie pola
+  w ramce wzoru), nie dzieli tabeli na wiersze („rowspan=19” w tabeli o jednym wierszu).
+  - Akty ISAP: 4 z 48 lepiej (Dz. U. 2026 poz. 1292, 1297, 1355; M.P. 2026 poz. 1017); korpus PDF: słowa odnośników
+    95,77 → 95,92 %, nadmiar słów treści 0,17 → 0,16 % — 14 dokumentów lepiej (tekst odnośników nie wycieka do treści),
+    jednostki bez zmian; odnośnik oznaczony samą liczbą, do którego nic się nie odwołuje, zostaje tekstem poprzedniego
+    odnośnika, jak dotąd. DOCX i TXT bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

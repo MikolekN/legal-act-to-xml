@@ -257,6 +257,14 @@ namespace Saga.Core.Ingest.Pdf
         private static readonly Regex SuperscriptFootnoteStartPattern = new(
             @"^\[(?:\d+\)?|(?:[a-z]{1,2})?\)|\*+)\]", RegexOptions.Compiled);
 
+        /// <summary>
+        /// Oznaczenie odnośnika w indeksie górnym na początku wiersza strefy przypisów, z którego da się odczytać jego
+        /// symbol: „[1)]" albo sama liczba („[1] W przypadku …" — tak oznacza odnośniki część wzorów w załącznikach).
+        /// Zwykłe „1)" bywa pozycją wyliczenia, więc tu się nie liczy.
+        /// </summary>
+        private static readonly Regex NoteSymbolStartPattern = new(
+            @"^\[(?<symbol>\d{1,3})\)?\]\s", RegexOptions.Compiled);
+
         public SourceFormat Format => SourceFormat.Pdf;
 
         public IReadOnlyList<DocumentBlock> ReadBlocks(Stream stream)
@@ -274,6 +282,7 @@ namespace Saga.Core.Ingest.Pdf
             var allLines = new List<PdfTextLine>();
             var pageLetterCounts = new List<int>(pageCount);
             var tables = new List<PdfTextLine>();
+            var separators = new Dictionary<int, List<double>>();
             int totalChars = 0, replacementChars = 0;
 
             for (int i = 1; i <= pageCount; i++)
@@ -314,6 +323,7 @@ namespace Saga.Core.Ingest.Pdf
                 }
                 else
                 {
+                    separators[page.Number] = FootnoteSeparators(page);
                     ReadLetters(page, letters, toFrame: null, frameHeight: page.Height, landscape: wide);
                 }
             }
@@ -359,7 +369,7 @@ namespace Saga.Core.Ingest.Pdf
             // Wiersz zastępczy tabeli staje w porządku czytania strony po wierszach artefaktów — numer strony
             // ani paginacja nie są tabelą, a tabela nie powtarza się na stronach jak nagłówek.
             lines.AddRange(tables);
-            var (bodyLines, footnoteLines) = SplitFootnoteZone(lines, docDominantSize);
+            var (bodyLines, footnoteLines) = SplitFootnoteZone(lines, docDominantSize, separators);
 
             var textLines = bodyLines.Where(l => l.Table is null).ToList();
             var dominantLeft = BodyLeftMargin(textLines);
@@ -370,7 +380,8 @@ namespace Saga.Core.Ingest.Pdf
             var body = AssembleBlocks(bodyLines, docDominantSize, dominantLeft, BlockRole.Body,
                 startIndex: 0, forceBoundary: null, hyphenation, lastPages);
             var footnotes = AssembleBlocks(footnoteLines, docDominantSize, dominantLeft, BlockRole.FootnoteText,
-                startIndex: body.Count, forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text), hyphenation);
+                startIndex: body.Count,
+                forceBoundary: l => FootnoteStartPattern.IsMatch(l.Text) || PdfFootnotes.OpensBareNote(l.Text), hyphenation);
 
             // Odnośniki przed winietą: winieta scala swoje bloki, a strony bloków (lastPages) idą równolegle do listy.
             var blocks = JournalMasthead.Mark(PdfFootnotes.Link(body, lastPages, footnotes)).ToList();
@@ -507,7 +518,7 @@ namespace Saga.Core.Ingest.Pdf
         /// Przypisy wracają osobną listą (emisja na końcu dokumentu).
         /// </summary>
         private static (List<PdfTextLine> Body, List<PdfTextLine> Footnotes) SplitFootnoteZone(
-            List<PdfTextLine> lines, double docDominantSize)
+            List<PdfTextLine> lines, double docDominantSize, IReadOnlyDictionary<int, List<double>> separators)
         {
             var body = new List<PdfTextLine>();
             var footnotes = new List<PdfTextLine>();
@@ -528,6 +539,10 @@ namespace Saga.Core.Ingest.Pdf
                     (zoneStart, hasZone) = FindFootnoteZone(noteLines, CloseFootnoteSizeRatio * docDominantSize,
                         line => SuperscriptFootnoteStartPattern.IsMatch(line.Text) || continuedMidSentence
                             || IsReferencedOnPage(line, noteLines));
+                if (!hasZone)
+                    (zoneStart, hasZone) = FindReferencedFootnoteZone(noteLines, CloseFootnoteSizeRatio * Math.Max(docDominantSize,
+                        noteLines.Where(l => l.Table is null).Select(l => l.DominantSize).DefaultIfEmpty(0).Max()),
+                        separators.GetValueOrDefault(pageGroup.Key) ?? []);
 
                 // Wiersze strefy niosą oznaczenie w kanale indeksu górnego; treść strony — tak, jak ją złożono.
                 if (hasZone)
@@ -564,6 +579,62 @@ namespace Saga.Core.Ingest.Pdf
                 .SelectMany(other => other.Table is { } table ? table.Cells.SelectMany(cell => cell.Lines) : [other])
                 .Any(other => !ReferenceEquals(other, line) && PdfFootnotes.ReferencedSymbols(other.Text).Contains(symbol));
         }
+
+        /// <summary>
+        /// Strefa przypisów pod tekstem pisanym tym samym małym fontem (podpis sporządzającego pod wzorem w załączniku):
+        /// najdłuższy sufiks małego fontu zaczyna się wtedy tym tekstem, nie przypisem. Strefą jest dalsza część sufiksu
+        /// od wiersza, który otwiera odnośnik znacznikiem w indeksie górnym, gdy każdy odnośnik otwarty od tego miejsca
+        /// ma odwołanie wyżej na stronie, a tuż nad nim stoi kreska oddzielająca odnośniki (<see cref="FootnoteSeparators"/>) —
+        /// objaśnienie pod wzorem albo uwaga pod tabelą („Objaśnienie: ¹⁾ Symbol …") kreski nie ma i zostaje treścią.
+        /// Wzór w załączniku bywa złożony innym pismem niż akt (11,8 pt i przypisy 9,8 pt przy akcie 10 pt — Dz. U. 2026
+        /// poz. 1292), więc „mały" liczy się tu względem największego pisma strony.
+        /// </summary>
+        private static (int Start, bool Found) FindReferencedFootnoteZone(
+            List<PdfTextLine> pageLines, double maxSize, List<double> separators)
+        {
+            int small = pageLines.Count;
+            while (small > 0 && pageLines[small - 1].DominantSize <= maxSize)
+                small--;
+
+            for (var start = small; start < pageLines.Count; start++)
+            {
+                var first = pageLines[start];
+                var above = start > 0 ? pageLines[start - 1].BaselineY : double.MaxValue;
+                if (!NoteSymbolStartPattern.IsMatch(first.Text)
+                    || !separators.Any(y => y > first.BaselineY && y < Math.Min(above, first.BaselineY + SeparatorReach * first.DominantSize)))
+                    continue;
+
+                var referenced = pageLines.Take(start)
+                    .SelectMany(line => line.Table is { } table ? table.Cells.SelectMany(cell => cell.Lines) : [line])
+                    .SelectMany(line => PdfFootnotes.ReferencedSymbols(line.Text).Concat(PdfFootnotes.BareReferencedSymbols(line.Text)))
+                    .ToHashSet();
+                var symbols = pageLines.Skip(start)
+                    .Select(line => NoteSymbolStartPattern.Match(line.Text))
+                    .Where(match => match.Success)
+                    .Select(match => match.Groups["symbol"].Value);
+                if (symbols.All(referenced.Contains))
+                    return (start, true);
+            }
+
+            return (pageLines.Count, false);
+        }
+
+        /// <summary>Kreska oddzielająca odnośniki stoi nad pierwszym z nich najwyżej o tyle rozmiarów jego pisma.</summary>
+        private const double SeparatorReach = 3;
+
+        /// <summary>
+        /// Kreski mogące oddzielać odnośniki od tekstu strony (linia bazowa ich góry): krótki poziomy odcinek — obrys albo
+        /// cienki wypełniony prostokąt nie szerszy niż 40 % strony (Dziennik Ustaw: ok. 141 pt). Linia tabeli biegnie przez
+        /// całą jej szerokość. Na stronie z treścią w poprzek układ jest inny — tam strefy tą drogą się nie szuka.
+        /// </summary>
+        private static List<double> FootnoteSeparators(Page page) =>
+            page.Paths
+                .Where(path => !path.IsClipping && (path.IsStroked || path.IsFilled))
+                .SelectMany(path => path.Select(subpath => subpath.GetBoundingRectangle()))
+                .OfType<PdfRectangle>()
+                .Where(box => box.Height < 2 && box.Width >= 30 && box.Width <= 0.4 * page.Width)
+                .Select(box => box.Top)
+                .ToList();
 
         /// <summary>
         /// Strefa przypisów strony: najdłuższy sufiks wierszy o foncie nie większym niż <paramref name="maxSize"/>,
@@ -699,6 +770,7 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && AnnouncementCommonPartPattern.IsMatch(line.Text))
                     || (forceBoundary is null && LegalBasisEndPattern.IsMatch(prev.Text))
                     || (forceBoundary is null && IsHeadingOpeningAPage(line, prev))
+                    || (forceBoundary is null && (TableCaptionPattern.IsMatch(line.Text) || TableCaptionPattern.IsMatch(prev.Text)))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
                     || (forceBoundary is null && line.PageNumber == prev.PageNumber
@@ -899,6 +971,12 @@ namespace Saga.Core.Ingest.Pdf
             return (ClosedLineEndPattern.IsMatch(prevText) && !ReferenceAbbreviationEndPattern.IsMatch(prevText))
                 || IsUppercaseHeading(prevText);
         }
+
+        /// <summary>
+        /// Podpis tabeli w osobnym wierszu („Tabela nr 1", dosunięty do prawej pod tytułem załącznika — Dz. U. 2026
+        /// poz. 1292): stoi sam, nie kończy tytułu nad nim i nie zaczyna akapitu pod nim.
+        /// </summary>
+        private static readonly Regex TableCaptionPattern = new(@"^\s*Tabela\s+(?:nr\s+)?\d+[a-z]?\.?\s*$", RegexOptions.Compiled);
 
         /// <summary>Wiersz kończy się przecinkiem, także za cudzysłowem zamykającym.</summary>
         private static readonly Regex CommaEndPattern = new($@",[{QuotationMarks.ClosingOrStraight}]*$", RegexOptions.Compiled);

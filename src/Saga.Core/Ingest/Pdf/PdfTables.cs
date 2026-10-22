@@ -257,20 +257,26 @@ namespace Saga.Core.Ingest.Pdf
                 }
             }
 
-            var cells = Enumerable.Range(0, rowCount * columnCount)
+            var areas = Enumerable.Range(0, rowCount * columnCount)
                 .GroupBy(Find)
-                .Select(group =>
+                .Select(group => (
+                    Top: group.Min(i => i / columnCount), Bottom: group.Max(i => i / columnCount),
+                    Left: group.Min(i => i % columnCount), Right: group.Max(i => i % columnCount)))
+                .ToList();
+
+            // Linia, przy której nie zaczyna się żadna komórka (podkreślenie pola wewnątrz ramki wzoru — Dz. U. 2026
+            // poz. 1292), nie dzieli wierszy: ramka z jedną komórką to jeden wiersz, nie komórka scalona z 19 wierszy.
+            var starts = areas.Select(area => area.Top).Distinct().Order().ToList();
+            int NewRow(int row) => starts.Count(start => start <= row) - 1;
+
+            var cells = areas
+                .Select(area => new PdfTableCell
                 {
-                    int top = group.Min(i => i / columnCount), bottom = group.Max(i => i / columnCount);
-                    int left = group.Min(i => i % columnCount), right = group.Max(i => i % columnCount);
-                    return new PdfTableCell
-                    {
-                        Row = top,
-                        Column = left,
-                        RowSpan = bottom - top + 1,
-                        ColumnSpan = right - left + 1,
-                        Bounds = (columns[left], columns[right + 1], rows[bottom + 1], rows[top]),
-                    };
+                    Row = NewRow(area.Top),
+                    Column = area.Left,
+                    RowSpan = NewRow(area.Bottom) - NewRow(area.Top) + 1,
+                    ColumnSpan = area.Right - area.Left + 1,
+                    Bounds = (columns[area.Left], columns[area.Right + 1], rows[area.Bottom + 1], rows[area.Top]),
                 })
                 .OrderBy(cell => cell.Row).ThenBy(cell => cell.Column)
                 .ToList();
@@ -282,7 +288,7 @@ namespace Saga.Core.Ingest.Pdf
                 Left = columns[0],
                 Right = columns[^1],
                 Columns = columns,
-                RowCount = rowCount,
+                RowCount = starts.Count,
                 Cells = cells,
             };
         }

@@ -1397,6 +1397,123 @@ namespace Saga.Core.Tests
             Assert.Contains(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("1) wiersz tabeli"));
         }
 
+        [Fact]
+        public void RaisedDigitInAFontCloseToTheText_IsASuperscript()
+        {
+            // Dz. U. 2026 poz. 1292: oznaczenie odnośnika „2" 7,9 pt przy tekście 9,8 pt, podniesione o 4 pt — powyżej progu
+            // 0,75× rozmiaru, a jednak indeks górny.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("2", 57, 704, 8)
+                .AddText("Jeżeli występuje w złożu.", 64, 700, 10))
+                .Build();
+
+            Assert.Contains(Read(pdf), b => b.Text.StartsWith("[2] Jeżeli występuje", StringComparison.Ordinal));
+        }
+
+        /// <summary>
+        /// Strona wzoru w załączniku jak w Dz. U. 2026 poz. 1292: akt 10 pt, wzór 12 pt, podpis sporządzającego i odnośniki
+        /// 10 pt; odnośniki oznaczone samą liczbą w indeksie górnym. Szerokości wg metryk AFM Helvetiki — indeks górny stoi
+        /// tuż za wyrazem, jak w składzie („m²", „wolny²").
+        /// </summary>
+        private static IReadOnlyList<DocumentBlock> ReadFormWithBareNumberFootnotes(bool separator = true)
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            for (var i = 0; i < 6; i++)
+                builder.AddText($"§ {i + 1}. Przepis rozporządzenia wypełniający stronę aktu.", 57, 700 - 14 * i, 10);
+            builder.AddPage()
+                .AddText("Załącznik nr 1", 400, 780, 12)
+                .AddText("Powierzchnia w m", 57, 700, 12)    // 8,057 em × 12 pt = 96,7 pt
+                .AddText("2", 153.8, 704, 8)
+                .AddText("Metan wolny", 57, 680, 12)         // 5,613 em × 12 pt = 67,4 pt
+                .AddText("2", 124.5, 684, 8)
+                .AddText("(podpis z podaniem imienia i nazwiska", 200, 400, 10)
+                .AddText("albo nr decyzji uznającej kwalifikacje)", 200, 388, 10)
+                .AddText("2", 57, 94, 6.5)
+                .AddText("Jeżeli występuje w złożu.", 64, 90, 10);
+            if (separator)
+                builder.AddLine(57, 103, 198, 103);
+            return Read(builder.Build());
+        }
+
+        [Fact]
+        public void BareNumberFootnoteUnderASignatureInTheSameFont_IsAFootnote()
+        {
+            var blocks = ReadFormWithBareNumberFootnotes();
+
+            Assert.StartsWith("[2] Jeżeli", Assert.Single(blocks, b => b.Role == BlockRole.FootnoteText).Text);
+            Assert.Contains(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("(podpis z podaniem", StringComparison.Ordinal));
+        }
+
+        [Fact]
+        public void BareNumberNoteWithoutAReference_StaysTextOfThePreviousFootnote()
+        {
+            // M.P. 2017 (korpus 326564): w strefie przypisów za odnośnikiem stoi „¹¹ Niniejszy dokument …", do którego nic się
+            // nie odwołuje. Osobny blok bez odwołania nie miałby gdzie stanąć — jego tekst zostaje w poprzednim odnośniku.
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 2. Ustawa wchodzi w życie po upływie 3 miesięcy.", "1",
+                "Ustawa została ogłoszona w dniu 21 kwietnia 2017 r.");
+            builder.AddText("11", 57, 81.5, 6).AddText("Niniejszy dokument został przygotowany.", 66, 78, 8);
+
+            var footnote = Assert.Single(Read(builder.Build()).SelectMany(b => b.Footnotes));
+
+            Assert.Equal(["Ustawa została ogłoszona w dniu 21 kwietnia 2017 r. [11] Niniejszy dokument został przygotowany."],
+                footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void NoteUnderAFormWithoutTheSeparator_StaysContent()
+        {
+            // Objaśnienie pod wzorem („Objaśnienie: ¹⁾ Symbol …") albo uwaga pod tabelą nie ma kreski odnośników — w DOCX to
+            // zwykły akapit załącznika.
+            var blocks = ReadFormWithBareNumberFootnotes(separator: false);
+
+            Assert.DoesNotContain(blocks, b => b.Role == BlockRole.FootnoteText);
+            Assert.Contains(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("[2] Jeżeli", StringComparison.Ordinal));
+        }
+
+        [Fact]
+        public void BareNumberReference_IsLinked_ButAnExponentOfAUnitIsNot()
+        {
+            var blocks = ReadFormWithBareNumberFootnotes();
+
+            // „m[2]" to wykładnik jednostki, nie odwołanie — odnośnik 2 należy do „Metan wolny".
+            Assert.Contains(blocks, b => b.Text == "Powierzchnia w m[2]");
+            var referencing = Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            Assert.StartsWith("Metan wolny[", referencing.Text);
+            var footnote = Assert.Single(referencing.Footnotes);
+            Assert.Equal("2", footnote.Symbol);
+            Assert.Equal(["Jeżeli występuje w złożu."], footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void TableCaptionUnderAHeading_IsItsOwnBlock()
+        {
+            // Dz. U. 2026 poz. 1292, załącznik nr 7: podpis „Tabela nr 1" pod tytułem załącznika dopisywał się do tytułu.
+            var blocks = ReadPlaced(
+                ("GRANICZNE WARTOŚCI PARAMETRÓW DEFINIUJĄCYCH ZŁOŻE", 110),
+                ("I JEGO GRANICE DLA ZŁOŻA WĘGLOWODORÓW", 150),
+                ("Tabela nr 1", 450));
+
+            Assert.DoesNotContain(blocks, b => b.Text.Contains("WĘGLOWODORÓW Tabela", StringComparison.Ordinal));
+            Assert.Contains(blocks, b => b.Text == "Tabela nr 1");
+        }
+
+        [Fact]
+        public void RulingThatEndsNoCell_DoesNotSplitTheFrameIntoRows()
+        {
+            // Dz. U. 2026 poz. 1292, załącznik nr 1: ramka wzoru z podkreśleniami pól dochodzącymi do jej krawędzi — komórka
+            // „scalona z 19 wierszy" w tabeli o jednym wierszu.
+            var builder = WithBodyPadding(new TestPdfBuilder().AddPage(), fromY: 400)
+                .AddLine(57, 700, 500, 700).AddLine(57, 600, 500, 600)
+                .AddLine(57, 600, 57, 700).AddLine(500, 600, 500, 700)
+                .AddLine(57, 650, 150, 650)
+                .AddText("Finansujący dokumentację:", 60, 680)
+                .AddText("Wykonawca dokumentacji:", 60, 630);
+
+            var cell = Assert.Single(Read(builder.Build()), b => b.TableCell is not null).TableCell!;
+
+            Assert.Equal((0, 1), (cell.Row, cell.RowSpan));
+        }
+
         /// <summary>
         /// Strona z przepisem, którego zdanie kończy znacznik odnośnika w indeksie górnym, i z odnośnikiem na dole strony.
         /// </summary>

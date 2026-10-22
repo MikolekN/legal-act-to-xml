@@ -11,12 +11,20 @@ namespace Saga.Core.Ingest.Pdf
     /// (oś Y PdfPig rośnie do góry — sortowanie malejąco), scalanie liter w tekst z wstawianiem
     /// spacji z odstępów oraz detekcja indeksu górnego → notacja [x] (§ 89 ust. 6 ZTP; łapie też
     /// odnośniki § 163). Kryteria superscriptu: rozmiar ≤ 0,75× dominanty wiersza ORAZ linia bazowa
-    /// podniesiona o &gt; 0,2× rozmiaru dominanty względem bazy wiersza.
+    /// podniesiona o &gt; 0,2× rozmiaru dominanty względem bazy wiersza; cyfra — także ≤ 0,85× przy podniesieniu &gt; 0,35×.
     /// </summary>
     internal static class PdfLineExtractor
     {
         private const double SuperscriptSizeRatio = 0.75;
         private const double SuperscriptRaiseRatio = 0.2;
+
+        /// <summary>
+        /// Cyfra złożona fontem bliższym treści (≤ 0,85×), ale wyraźnie podniesiona (&gt; 0,35×), też jest indeksem górnym —
+        /// tak bywa złożone oznaczenie odnośnika we wzorze załącznika („2" 7,9 pt przy treści 9,8 pt, Dz. U. 2026 poz. 1292).
+        /// Tylko cyfra: mniejszy tekst na innej linii bazowej (sąsiednia komórka tabeli) nie staje się indeksem.
+        /// </summary>
+        private const double RaisedDigitSizeRatio = 0.85;
+        private const double RaisedDigitRaiseRatio = 0.35;
         private const double LineClusterToleranceRatio = 0.7;
 
         /// <summary>
@@ -215,6 +223,7 @@ namespace Saga.Core.Ingest.Pdf
                 preferHigher: false);
 
             var ordered = cluster.OrderBy(l => l.StartBaseLine.X).ToList();
+            var raisedDigits = RaisedDigits(ordered, dominantSize, baselineY);
             var sb = new StringBuilder();
             bool inSuperscript = false;
             Letter? prev = null;
@@ -243,8 +252,9 @@ namespace Saga.Core.Ingest.Pdf
                 lastInk = letter;
 
                 bool isSuper = dominantSize > 0
-                    && letter.PointSize <= SuperscriptSizeRatio * dominantSize
-                    && letter.StartBaseLine.Y - baselineY > SuperscriptRaiseRatio * dominantSize;
+                    && ((letter.PointSize <= SuperscriptSizeRatio * dominantSize
+                            && letter.StartBaseLine.Y - baselineY > SuperscriptRaiseRatio * dominantSize)
+                        || raisedDigits.Contains(letter));
 
                 if (prev != null)
                 {
@@ -288,6 +298,36 @@ namespace Saga.Core.Ingest.Pdf
                 PageHeight = pageHeight,
                 MaxGap = maxGap,
             };
+        }
+
+        /// <summary>
+        /// Cyfry indeksu górnego złożone pismem bliższym tekstowi (<see cref="RaisedDigitSizeRatio"/>). Ciąg cyfr, za którym
+        /// stoi nawias albo kropka („3)" we wzorze złożonym na kilku liniach bazowych — Dz. U. 2025 poz. 878), jest numerem
+        /// wyliczenia, nie indeksem.
+        /// </summary>
+        private static HashSet<Letter> RaisedDigits(List<Letter> ordered, double dominantSize, double baselineY)
+        {
+            var result = new HashSet<Letter>();
+            bool IsRaisedDigit(Letter letter) => dominantSize > 0
+                && char.IsDigit(letter.Value[0])
+                && letter.PointSize <= RaisedDigitSizeRatio * dominantSize
+                && letter.StartBaseLine.Y - baselineY > RaisedDigitRaiseRatio * dominantSize;
+
+            for (var i = 0; i < ordered.Count; i++)
+            {
+                if (!IsRaisedDigit(ordered[i]))
+                    continue;
+
+                var end = i;
+                while (end < ordered.Count && IsRaisedDigit(ordered[end]))
+                    end++;
+
+                if (end >= ordered.Count || ordered[end].Value is not (")" or "."))
+                    result.UnionWith(ordered.Skip(i).Take(end - i));
+                i = end - 1;
+            }
+
+            return result;
         }
 
         /// <summary>Dominanta (moda) wartości; kierunek rozstrzygania remisów podaje wywołujący.</summary>
