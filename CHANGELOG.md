@@ -1559,6 +1559,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   wierszu, za którym zdanie biegnie dalej, także za dwukropkiem („klauzuli następującej treści:" / „„Jestem świadomy …”.
   Klauzula ta zastępuje …" — poz. 1328); treść cytowana nowelizacji kończy się na swoim cudzysłowie i otwiera blok jak dotąd.
 
+- **Oznaczenie załącznika na początku strony PDF**: Dz. U. 2026 poz. 1328 — „Załącznik nr 5c" nad wzorem złożonym
+  w poprzek strony stoi przy lewym marginesie, w jednym wierszu z nagłówkiem oryginału („Poz. 000", zdjętym jako artefakt
+  strony), więc zaczyna się odstępami. Granica wiersza końcowego szuka go po prawej stronie i go nie widziała:
+  oznaczenie dokleiło się do objaśnień wzoru 5b, a cały wzór 5c wszedł do załącznika 5b. Oznaczenie załącznika na
+  początku strony otwiera blok, jak nagłówek wersalikami.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

@@ -1057,9 +1057,13 @@ namespace Saga.Core.Ingest.Pdf
         /// Nagłówek wersalikami na początku strony po wierszu, który nim nie jest („rewers" pod wzorem na końcu strony,
         /// „OPIS WZORU LEGITYMACJI …" na następnej — M.P. 2026 poz. 939). Granica strony nie jest granicą bloku, a odstęp
         /// pionowy między stronami nic nie mówi — nagłówek przecięty stroną zostaje razem, bo i poprzedni wiersz jest wersalikami.
+        /// Tak samo oznaczenie załącznika na początku strony („Załącznik nr 5c" nad wzorem — Dz. U. 2026 poz. 1328): na stronie
+        /// wzoru złożonego w poprzek stoi przy lewym marginesie, więc granica wiersza końcowego, która go szuka po prawej, go nie widzi,
+        /// a w jednym wierszu z nagłówkiem oryginału („Dziennik Ustaw – 143 – Poz. 000", zdjętym jako artefakt strony) zaczyna się odstępami.
         /// </summary>
         private static bool IsHeadingOpeningAPage(PdfTextLine line, PdfTextLine prev) =>
-            line.PageNumber != prev.PageNumber && IsUppercaseHeading(line.Text) && !IsUppercaseHeading(prev.Text);
+            line.PageNumber != prev.PageNumber
+            && ((IsUppercaseHeading(line.Text) && !IsUppercaseHeading(prev.Text)) || AnnexDesignationLinePattern.IsMatch(line.Text.Trim()));
 
         /// <summary>
         /// Wiersz zaczyna się następnym numerem listy, której pozycję zaczyna blok („2. Akademia Sztuk Pięknych w Gdańsku" →

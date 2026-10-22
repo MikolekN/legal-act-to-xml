@@ -525,6 +525,25 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void AnnexDesignation_AtThePageStartByTheLeftMargin_StartsItsOwnBlock()
+        {
+            // Dz. U. 2026 poz. 1328: „Załącznik nr 5c" nad wzorem złożonym w poprzek strony stoi przy lewym marginesie
+            // i doklejał się do objaśnień wzoru z poprzedniej strony.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("9) Podać w formie: gg-mm, gdzie gg oznacza godzinę, mm oznacza minuty.", 57, 90);
+            builder.AddPage();
+            builder.AddText("Załącznik nr 5c", 60, 780);
+            builder.AddText("WZÓR KARTY EWIDENCJI ODPADÓW", 150, 750);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("9) Podać w formie: gg-mm, gdzie gg oznacza godzinę, mm oznacza minuty.", blocks);
+            Assert.Contains("Załącznik nr 5c", blocks);
+        }
+
+        [Fact]
         public void QuoteAfterAComma_ContinuesTheList()
         {
             // M.P. 2026 poz. 939: wyliczenie napisów zawinięte przed cudzysłowem otwierało nowy blok („„WAŻNA DO:”;").
