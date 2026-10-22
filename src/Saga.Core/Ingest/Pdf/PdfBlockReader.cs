@@ -205,8 +205,13 @@ namespace Saga.Core.Ingest.Pdf
             $@"(?:[;:,.][{QuotationMarks.ClosingOrStraight}]*|(?:^|\s)(?:oraz|lub|albo)|\((?:uchylon|pominięt|utracił|utraciła|wygasł|skreślon)[^()]{{0,12}}\))$",
             RegexOptions.Compiled);
 
+        /// <summary>
+        /// Wiersz urwany na skrócie powołania („w art." / „12. …"): numer w następnym wierszu należy do powołania, nie
+        /// otwiera jednostki. „pkt" pisze się w powołaniu bez kropki (§ 158 ZTP), więc „pkt." kończy zdanie („wynosi
+        /// 5 pkt." / „2. Całkowita …" — Dz. U. 2026 poz. 1346).
+        /// </summary>
         private static readonly Regex ReferenceAbbreviationEndPattern = new(
-            @"(?:\b(?:poz|[Nn]r|str|art|ust|pkt|lit)\.?|§)\s*$", RegexOptions.Compiled);
+            @"(?:\b(?:poz|[Nn]r|str|art|ust|lit)\.?|\bpkt|§)\s*$", RegexOptions.Compiled);
 
         /// <summary>Początek przypisu: „N)" (także w kanale [N)]) lub gwiazdki — nawias WYMAGANY
         /// (bez niego goła liczba „2023 r. …" na początku zawiniętej kontynuacji rozcinałaby przypis).

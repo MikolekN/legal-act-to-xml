@@ -1497,6 +1497,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   i 4). Korpus PDF: jednostki 99,75 → 99,76 %, w pełni zgodnych 1811 → 1812, słowa odnośników 95,92 → 96,12 %;
     7 dokumentów lepiej (318637: 40 jednostek mniej rozbieżnych), 0 gorzej. DOCX i TXT bez zmian.
 
+- **„pkt.” na końcu wiersza PDF kończy zdanie** (Dz. U. 2026 poz. 1346): „… wynosi 5 pkt.” i „2. Całkowita wartość …”
+  w następnym wierszu — ustęp sklejał się z punktem, a jego punkty dostawały adresy pierwszego ustępu (5 powtórzonych
+  `eId`). Powołanie pisze „pkt” bez kropki (§ 158 ZTP), więc tylko „pkt” bez kropki zostaje skrótem urywającym wiersz.
+  Korpus PDF bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

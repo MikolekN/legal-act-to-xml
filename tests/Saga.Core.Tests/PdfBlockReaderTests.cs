@@ -1398,6 +1398,32 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void LineEndingWithPointsAbbreviatedWithADot_IsClosed()
+        {
+            // Dz. U. 2026 poz. 1346: „wynosi 5 pkt." kończy zdanie — powołanie pisze „pkt" bez kropki — więc „2." w następnym
+            // wierszu otwiera ustęp, a nie dopisuje się do punktu.
+            var blocks = ReadLines(
+                "§ 12. 1. Całkowita wartość punktowa artykułu naukowego, o którym mowa w:",
+                "1) § 8 pkt 1, wynosi 20 pkt;",
+                "2) § 8 pkt 2, wynosi 5 pkt.",
+                "2. Całkowita wartość punktowa monografii naukowej wynosi 80 pkt.");
+
+            Assert.Contains(blocks, b => b.Text == "2) § 8 pkt 2, wynosi 5 pkt.");
+            Assert.Contains(blocks, b => b.Text.StartsWith("2. Całkowita wartość", StringComparison.Ordinal));
+        }
+
+        [Fact]
+        public void LineEndingWithPointsReference_ContinuesInTheNextLine()
+        {
+            // „pkt" bez kropki to powołanie — numer w następnym wierszu jest jego częścią.
+            var blocks = ReadLines(
+                "§ 3. Wniosek, o którym mowa w § 2 ust. 1 pkt",
+                "2. lit. a, składa się w terminie 14 dni.");
+
+            Assert.Contains(blocks, b => b.Text == "§ 3. Wniosek, o którym mowa w § 2 ust. 1 pkt 2. lit. a, składa się w terminie 14 dni.");
+        }
+
+        [Fact]
         public void RaisedDigitInAFontCloseToTheText_IsASuperscript()
         {
             // Dz. U. 2026 poz. 1292: oznaczenie odnośnika „2" 7,9 pt przy tekście 9,8 pt, podniesione o 4 pt — powyżej progu
