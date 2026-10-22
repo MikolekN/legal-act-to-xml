@@ -11,8 +11,9 @@ namespace Saga.Core.Services.Parsing
     /// („1) ustawą …") i część wspólna podpunktów. Przytoczone przepisy („…, który stanowi: „Art. 57. …"")
     /// i tabele są dalszą treścią jednostki, za którą stoją; podpis trafia do dokumentu.
     /// Potok aktu tu nie pracuje — przytoczony artykuł nie jest artykułem żadnego z dwóch aktów dokumentu.
-    /// Przytoczenie złożone z całych artykułów (paragrafów aktu wykonawczego) buduje się jak treść cytowaną
-    /// w nowelizacji (<see cref="AmendmentBuilder"/>) i trafia do jednostki jako <see cref="Quotation"/>; tak samo
+    /// Przytoczenie złożone z całych artykułów (paragrafów aktu wykonawczego) albo z ustępów artykułu, którego
+    /// oznaczenie stoi przed cudzysłowem, buduje się jak treść cytowaną w nowelizacji (<see cref="AmendmentBuilder"/>)
+    /// i trafia do jednostki jako <see cref="Quotation"/>; tak samo
     /// przytoczony odnośnik, który treść jednostki wymienia („nie obejmuje odnośnika nr 2 …"). Każde inne przytoczenie
     /// zostaje akapitami tekstu.
     /// </summary>
@@ -24,7 +25,8 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Cudzysłów otwarty za oznaczeniem artykułu („Art. 78. „1. Uznaje się …") — przytoczony jest ustęp, a oznaczenie
-        /// jego artykułu stoi przed cudzysłowem. Przytoczenie zaczyna się od tego akapitu (ADR-0075).
+        /// jego artykułu stoi przed cudzysłowem. Przytoczenie zaczyna się od tego akapitu (ADR-0075), a oznaczenie
+        /// zostaje poza nim (ADR-0113).
         /// </summary>
         private static readonly Regex QuoteAfterArticleDesignation = new(
             $@"^(?<designation>(?:Art\.|§)\s*\d+{DesignationAlphabet.LowerLetter}*(?:\[[^\]]*\])?\.)\s*{QuotationMarks.Opening}",
@@ -44,6 +46,9 @@ namespace Saga.Core.Services.Parsing
             var quoteDepth = 0;
             var quotedSinceSubPoint = false;
             var quoted = new List<CollectedAmendmentParagraph>();
+
+            // Oznaczenie artykułu przed cudzysłowem otwartego przytoczenia („Art. 9. „2. …"); null — cudzysłów stoi przed nim.
+            string? designationBeforeQuote = null;
 
             for (var i = 0; i < blocks.Count; i++)
             {
@@ -74,9 +79,12 @@ namespace Saga.Core.Services.Parsing
 
                 var text = blocks[i].Text.CollapseWhitespace().Trim();
 
-                // „Art. 78. „1. …" czyta się jak „„Art. 78. 1. …": cudzysłów obejmuje ustęp, a ustęp należy do artykułu.
+                // „Art. 78. „1. …" buduje się jak „„Art. 78. 1. …": ustęp należy do artykułu i od niego ma adres.
                 if (quoteDepth == 0 && QuoteAfterArticleDesignation.Match(text) is { Success: true } cited)
-                    text = QuotationMarks.Opening + cited.Groups["designation"].Value + " " + text[cited.Length..];
+                {
+                    designationBeforeQuote = cited.Groups["designation"].Value;
+                    text = QuotationMarks.Opening + designationBeforeQuote + " " + text[cited.Length..];
+                }
 
                 if (quoteDepth > 0 || QuoteBalanceTracker.OpensQuote(text))
                 {
@@ -165,9 +173,12 @@ namespace Saga.Core.Services.Parsing
             // Domknięte przytoczenie: jednostki, gdy da się je zbudować w całości; inaczej akapity tekstu i tabele.
             void AttachQuotation(List<CollectedAmendmentParagraph> paragraphs)
             {
+                var designation = designationBeforeQuote;
+                designationBeforeQuote = null;
+
                 var owner = (BaseEntity?)subPoint ?? point;
                 if (owner is not null && !string.IsNullOrWhiteSpace(owner.ContentText)
-                    && BuildQuotation(paragraphs, owner.ContentText, sectionIsBasicUnit) is { } quotation)
+                    && BuildQuotation(paragraphs, owner.ContentText, sectionIsBasicUnit, designation) is { } quotation)
                 {
                     Attach(new ContentBlock { Quotation = quotation });
                     paragraphs.Clear();
@@ -208,9 +219,12 @@ namespace Saga.Core.Services.Parsing
         /// bez komendy przed sobą nie jest jednostką przytaczanego artykułu, więc przytoczenie zostaje tekstem.
         /// Tabela w środku przytoczenia jest dalszą treścią jednostki, za którą stoi. Przytoczony odnośnik
         /// (<see cref="QuotedFootnoteReader.Cited"/>) jest odnośnikiem pod adresem <c>odn_N</c> aktu przytaczanego.
+        /// Oznaczenie artykułu przed cudzysłowem (<paramref name="designationBeforeQuote"/>) zostaje przy przytoczeniu,
+        /// gdy za cudzysłowem stoi oznaczony ustęp — przytoczone są wtedy ustępy, nie artykuł (ADR-0113).
         /// </summary>
         private static Quotation? BuildQuotation(
-            IReadOnlyList<CollectedAmendmentParagraph> paragraphs, string ownerText, bool sectionIsBasicUnit)
+            IReadOnlyList<CollectedAmendmentParagraph> paragraphs, string ownerText, bool sectionIsBasicUnit,
+            string? designationBeforeQuote = null)
         {
             // Tabela na granicy przytoczenia niesie jego cudzysłów w komórce; jednostką nie zaczyna się ani nie kończy.
             if (paragraphs[0].Table is not null || paragraphs[^1].Table is not null)
@@ -260,6 +274,7 @@ namespace Saga.Core.Services.Parsing
                 Content = content,
                 SourceAct = JournalReferenceService.ReadSingleAct(ownerText),
                 TrailingPunctuation = quotes.Punctuation,
+                ArticleDesignation = content.Articles[0].Paragraphs is [{ IsImplicit: false }, ..] ? designationBeforeQuote : null,
             };
         }
 

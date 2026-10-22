@@ -1469,6 +1469,16 @@ a wersjonowanie zgodne z Semantic Versioning.
   ręczną na załączniku, w którym stoi, z częścią nazwaną jak w przepisie (ADR-0108); wcześniej przepis nie miał instrukcji.
   Załącznik samego aktu („do ustawy”, „do rozporządzenia” …) czyta się jak dotąd. Korpus DOCX bez zmian.
 
+- **Przytoczona część artykułu w obwieszczeniu** ([ADR-0113](docs/adr/0113-przytoczona-czesc-artykulu-stoi-we-fragmencie-zdania-z-oznaczeniem-artykulu.md)): „…, które stanowią:”
+  i dalej „Art. 9. „2. W latach szkolnych …”” — zdanie podpunktu kończy się wprowadzeniem, a kolejny fragment tego
+  samego zdania niesie „Art. 9.” z `tpg:znastepnym="true"` i `tresc-strukt` z samymi ustępami (`…__art_9__ust_2`,
+  `nr` 2) — zapis autora schematu (pytanie 27). Wcześniej przytoczenie wychodziło jako `artykul`, a jedyny ustęp jako
+  `ustep-n` bez numeru. Atrybut wejdzie do schematu (`ZdanieTyp` z `tpg:typoSpecjalne`); do synchronizacji kopii
+  `schema/` jest to oczekiwana niezgodność.
+  - Korpus DOCX: 61 przytoczeń w 44 tekstach jednolitych — 48 `ustep-n` bez numeru i 13 artykułów z kilkoma ustępami
+    to teraz same ustępy pod „Art. N.”; ocena 2179 → 2209 dokumentów bez winy. Zgodnych ze schematem 2012 → 1996
+    (16 tylko przez zapowiedziany atrybut); wobec kopii schematu ze zmianą autora żaden z 44 nie ma nowego błędu.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

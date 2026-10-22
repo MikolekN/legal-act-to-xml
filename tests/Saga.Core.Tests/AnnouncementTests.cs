@@ -185,6 +185,32 @@ namespace Saga.Core.Tests
             Assert.Equal(new[] { "1", "2" }, paragraph.Points.Select(point => point.Number?.Value));
         }
 
+        [Fact]
+        public void QuoteOpenedAfterTheArticleDesignation_LeavesTheDesignationOutsideTheQuotation()
+        {
+            // Przytoczony jest ustęp, nie artykuł: oznaczenie artykułu jest tekstem zdania punktu, a ustęp ma adres
+            // w swoim artykule (ADR-0113).
+            var quotation = Assert.Single(Parse(WithQuotation("Art. 57. „2. Przepisy stosuje się do odbudowy.”"))
+                .Announcement!.Points[1].Continuation).Quotation!;
+
+            Assert.Equal("Art. 57.", quotation.ArticleDesignation);
+            var paragraph = Assert.Single(Assert.Single(quotation.Content.Articles).Paragraphs);
+            Assert.Equal("art_57__ust_2", paragraph.Id);
+        }
+
+        [Theory]
+        // Cudzysłów przed oznaczeniem — przytoczony jest cały artykuł.
+        [InlineData("„Art. 57. 2. Przepisy stosuje się do odbudowy.”")]
+        // Za cudzysłowem nie ma oznaczenia ustępu — przytoczona jest cała treść artykułu.
+        [InlineData("Art. 57. „Przepisy stosuje się do odbudowy.”")]
+        public void QuotationOfAWholeArticle_HasNoDesignationOutsideIt(string quoted)
+        {
+            var quotation = Assert.Single(Parse(WithQuotation(quoted)).Announcement!.Points[1].Continuation).Quotation!;
+
+            Assert.Null(quotation.ArticleDesignation);
+            Assert.Equal("57", Assert.Single(quotation.Content.Articles).Number?.Value);
+        }
+
         [Theory]
         // Przytoczony ustęp wymagałby adresu z treści punktu („art. 5 ust. 3 ustawy …").
         [InlineData("„3. W przypadku gdy osoba posiada zaświadczenie, przepisu nie stosuje się.”")]
@@ -548,6 +574,48 @@ namespace Saga.Core.Tests
             Assert.Equal(
                 new[] { "DU/2024/1473__art_57", "DU/2024/1473__art_57__pkt_1", "DU/2024/1473__art_57__pkt_2" },
                 quoted.Descendants().Select(e => e.Attribute("eId")?.Value).OfType<string>());
+        }
+
+        [Fact]
+        public void QuotedParagraphsOfAnArticle_AreExportedInASentenceFragmentAfterItsDesignation()
+        {
+            var announcement = LegalDocumentConverter.Convert(Parse(WithQuotation(
+                    "Art. 57. „2. Przepisy stosuje się do odbudowy.",
+                    "3. Przepisów nie stosuje się do remontu.”;")))
+                .Elements().Single();
+
+            var fragments = announcement.Elements().Where(e => e.Name.LocalName == "punkt-OTJ").ElementAt(1)
+                .Elements().Single(e => e.Name.LocalName == "p").Elements().ToList();
+            Assert.Equal(2, fragments.Count);
+            var (introduction, designation) = (fragments[0], fragments[1]);
+
+            // Zdanie punktu kończy się wprowadzeniem; dalszy fragment tego samego zdania niesie oznaczenie artykułu.
+            Assert.EndsWith("który stanowi:", introduction.Value);
+            Assert.Equal(introduction.Attribute("nr")!.Value, designation.Attribute("nr")!.Value);
+            Assert.Equal(introduction.Attributes().Single(a => a.Name.LocalName == "zdGUID").Value,
+                designation.Attributes().Single(a => a.Name.LocalName == "zdGUID").Value);
+            Assert.Equal((int)introduction.Attribute("fragment")! + 1, (int)designation.Attribute("fragment")!);
+            Assert.Equal("true", designation.Attributes().Single(a => a.Name.LocalName == "znastepnym").Value);
+            Assert.Equal("Art. 57.", designation.Nodes().OfType<XText>().First().Value);
+            Assert.Equal(";", designation.Nodes().OfType<XText>().Last().Value);
+
+            // W cudzysłowie same ustępy, z numerami i adresami w swoim artykule.
+            var quoted = Assert.Single(designation.Elements());
+            Assert.Equal("tresc-strukt", quoted.Name.LocalName);
+            Assert.Equal(new[] { "ustep", "ustep" }, quoted.Elements().Select(e => e.Name.LocalName));
+            Assert.Equal(new[] { "DU/2024/1473__art_57__ust_2", "DU/2024/1473__art_57__ust_3" },
+                quoted.Elements().Select(e => e.Attribute("eId")!.Value));
+            Assert.Equal(new[] { "2", "3" }, quoted.Elements().Select(e => e.Elements().First().Value));
+        }
+
+        [SchemaPlFact]
+        public void QuotedParagraphOfAnArticle_IsSchemaValid_ExceptForTheAnnouncedTypographyOfTheSentence()
+        {
+            // Atrybut tpg:znastepnym przy zdaniu dopiero wejdzie do schematu (pytanie 27, ADR-0113) — poza nim zgodny.
+            var problems = SchemaPl.Validator.ValidateActBody(LegalDocumentConverter.Convert(
+                Parse(WithQuotation("Art. 57. „2. Przepisy stosuje się do odbudowy.”"))).Elements().First());
+
+            Assert.All(problems, problem => Assert.Contains("znastepnym", problem));
         }
 
         [SchemaPlFact]

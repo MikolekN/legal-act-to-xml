@@ -20,6 +20,13 @@ namespace Saga.Model
         /// <summary>Akt, z którego pochodzi przytoczenie; null, gdy treść jednostki go nie wskazuje.</summary>
         public JournalInfo? SourceAct { get; set; }
 
+        /// <summary>
+        /// Oznaczenie artykułu (paragrafu) stojące przed cudzysłowem („Art. 9. „2. …"") — przytoczona jest część
+        /// pierwszego artykułu treści, jego ustępy, a nie cały artykuł; oznaczenie jest tekstem zdania jednostki
+        /// (ADR-0113). Null, gdy cudzysłów otwiera przytoczenie przed oznaczeniem.
+        /// </summary>
+        public string? ArticleDesignation { get; set; }
+
         /// <summary>Interpunkcja za zamykającym cudzysłowem — należy do zdania jednostki, nie do przytoczenia.</summary>
         public string? TrailingPunctuation { get; set; }
 

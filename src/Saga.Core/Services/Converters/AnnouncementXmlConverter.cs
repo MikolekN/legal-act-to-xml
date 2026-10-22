@@ -68,7 +68,7 @@ namespace Saga.Core.Services.Converters
             var text = Element(XmlConverterConstants.Contents.TextSection);
             var context = SentenceProcessor.Process(point.TextSegments, null, text);
             element.Add(text);
-            AppendQuotations(text, point);
+            AppendQuotations(text, point, context);
             EmbeddedContentXmlConverter.AppendEmbedded(element, point);
 
             foreach (var subPoint in point.Points)
@@ -89,7 +89,7 @@ namespace Saga.Core.Services.Converters
             var text = Element(XmlConverterConstants.Contents.TextSection);
             SentenceProcessor.Process(subPoint.TextSegments, context, text);
             element.Add(text);
-            AppendQuotations(text, subPoint);
+            AppendQuotations(text, subPoint, context);
             EmbeddedContentXmlConverter.AppendEmbedded(element, subPoint);
 
             return element;
@@ -99,8 +99,10 @@ namespace Saga.Core.Services.Converters
         /// Przytoczenia jednostki trafiają do jej ostatniego zdania („…, który stanowi: „Art. 19. …";"), jak
         /// w przykładzie autorów schematu; interpunkcja za cudzysłowem zostaje w zdaniu. Akt, z którego pochodzą
         /// jednostki, niesie adnotacja elementu — schemat nie daje <c>tresc-strukt</c> atrybutu aktu.
+        /// Przytoczenie części artykułu („Art. 9. „2. …"") otwiera nowy fragment zdania z oznaczeniem artykułu,
+        /// a w nim same ustępy (ADR-0113).
         /// </summary>
-        private static void AppendQuotations(XElement text, BaseEntity unit)
+        private static void AppendQuotations(XElement text, BaseEntity unit, SentenceContext? context)
         {
             foreach (var quotation in unit.Continuation.Select(block => block.Quotation).OfType<Quotation>())
             {
@@ -110,7 +112,7 @@ namespace Saga.Core.Services.Converters
                     new XAttribute(XmlConverterConstants.Contents.GUID, Guid.NewGuid().ToString()));
                 if (quotation.Content.Footnote is { } footnote)
                     quoted.Add(FootnoteContentXml.Quoted(footnote));
-                quoted.Add(quotation.Content.Articles.Select(article => ArticleXmlConverter.ToXml(article)));
+                quoted.Add(QuotedUnits(quotation));
                 quoted.AddAnnotation(new ActPrefixXml.QuotedAct(quotation.SourceAct?.GetELIStrings().FirstOrDefault()));
 
                 var sentence = text.Elements().LastOrDefault(e => e.Name.LocalName == XmlConverterConstants.Contents.Sentence.Element);
@@ -120,10 +122,47 @@ namespace Saga.Core.Services.Converters
                     continue;
                 }
 
+                if (quotation.ArticleDesignation is { } designation)
+                    sentence = DesignationFragment(sentence, designation, context);
+
                 sentence.Add(quoted);
                 if (quotation.TrailingPunctuation is { Length: > 0 } trailing)
                     sentence.Add(trailing);
             }
+        }
+
+        /// <summary>
+        /// Przytoczone jednostki. Gdy oznaczenie artykułu stoi przed cudzysłowem, pierwszy artykuł wnosi same ustępy —
+        /// jawne i adresowane w nim (<c>art_9__ust_2</c>), także gdy przytoczony jest jeden; dalsze artykuły
+        /// przytoczenia wychodzą w całości.
+        /// </summary>
+        private static IEnumerable<XElement?> QuotedUnits(Quotation quotation) => quotation.ArticleDesignation is null
+            ? quotation.Content.Articles.Select(article => ArticleXmlConverter.ToXml(article))
+            : quotation.Content.Articles[0].Paragraphs
+                .Select(paragraph => ParagraphXmlConverter.ToXml(paragraph, quotedWithoutArticle: true))
+                .Concat(quotation.Content.Articles.Skip(1).Select(article => ArticleXmlConverter.ToXml(article)));
+
+        /// <summary>
+        /// Fragment zdania z oznaczeniem artykułu przytoczonej części („Art. 9."), za fragmentem, który kończy się
+        /// wprowadzeniem („…, które stanowią:"): to samo zdanie (numer i <c>gd:zdGUID</c>), kolejny numer fragmentu;
+        /// wiersz łączy się z przytoczeniem (<c>tpg:znastepnym</c>) — zapis autora schematu (pytanie 27). Kolejne
+        /// fragmenty zdania, w następnych podpunktach, liczą się dalej od niego.
+        /// </summary>
+        private static XElement DesignationFragment(XElement sentence, string designation, SentenceContext? context)
+        {
+            var guid = (string?)sentence.Attribute(XmlConverterConstants.Contents.Sentence.GUID);
+            var fragmentNumber = (int)sentence.Attribute(XmlConverterConstants.Contents.Sentence.Fragment)! + 1;
+            var fragment = SentenceContext.ToXml(
+                text: designation,
+                number: (int)sentence.Attribute(XmlConverterConstants.Contents.Sentence.Number)!,
+                guid: guid,
+                fragment: fragmentNumber);
+            fragment.Add(new XAttribute(XmlConverterConstants.Contents.Sentence.JoinsWithNext, "true"));
+            sentence.AddAfterSelf(fragment);
+
+            if (context is not null && context.ReferenceSentenceGUID == guid)
+                context.CurrentFragment = fragmentNumber;
+            return fragment;
         }
 
         private static XElement Unit(string name, BaseEntity unit) =>

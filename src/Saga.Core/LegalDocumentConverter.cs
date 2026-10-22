@@ -80,6 +80,8 @@ namespace Saga.Core.Services
 
             if (ContainsMathML(rootElement))
                 rootElement.Add(new XAttribute(XNamespace.Xmlns + "mml", XmlConverterConstants.MathMLNamespace));
+            if (rootElement.Descendants().Attributes().Any(a => a.Name.Namespace == XmlConverterConstants.TypographyNamespace))
+                rootElement.Add(new XAttribute(XNamespace.Xmlns + "tpg", XmlConverterConstants.TypographyNamespace.NamespaceName));
 
             return rootElement;
         }

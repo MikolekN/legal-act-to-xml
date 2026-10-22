@@ -2984,6 +2984,64 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0113: przytoczona część artykułu stoi we fragmentcie zdania z oznaczeniem artykułu
+        // ============================================================
+
+        [Fact]
+        public void Adr0113_QuotedPartOfAnArticle_StandsInASentenceFragmentWithTheArticleDesignation()
+        {
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "DZIENNIK USTAW RZECZYPOSPOLITEJ POLSKIEJ", Role = BlockRole.JournalHeader },
+                new() { Text = "Warszawa, dnia 11 sierpnia 2025 r.", Role = BlockRole.JournalHeader },
+                new() { Text = "Poz. 1094", Role = BlockRole.JournalHeader },
+            };
+            string[] lines =
+            [
+                "Obwieszczenie", "Marszałka Sejmu Rzeczypospolitej Polskiej", "z dnia 6 sierpnia 2025 r.",
+                "w sprawie ogłoszenia jednolitego tekstu ustawy o odbudowie obiektów budowlanych",
+                "1. Na podstawie art. 16 ust. 1 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy.",
+                "2. Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje:",
+                "1) art. 78 ust. 2 i art. 79 ustawy z dnia 15 maja 2024 r. o wspieraniu rodziców (Dz. U. poz. 858), które stanowią:",
+                "Art. 78. „2. Wojewoda może przyznawać dofinansowanie.”",
+                "„Art. 79. Programy mogą być dofinansowane.”;",
+                "2) art. 81 tej ustawy, który stanowi:",
+                "„Art. 81. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.”.",
+                "Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 sierpnia 2025 r. (Dz. U. poz. 1094)",
+                "USTAWA", "z dnia 11 sierpnia 2001 r.", "o odbudowie obiektów budowlanych",
+                "Art. 1. Ustawa reguluje zasady odbudowy.",
+            ];
+            blocks.AddRange(lines.Select(line => new DocumentBlock { Text = line }));
+            var xml = LegalDocumentConverter.Convert(
+                LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var subPoints = xml.Descendants().Where(e => e.Name.LocalName == "podpunkt-OTJ").ToList();
+            var first = subPoints[0].Elements().Single(e => e.Name.LocalName == "p").Elements().ToList();
+            var second = subPoints[1].Elements().Single(e => e.Name.LocalName == "p").Elements().Single();
+
+            // Wprowadzenie, potem fragment tego samego zdania z „Art. 78." łączący się z przytoczeniem (zapis autora
+            // schematu, pytanie 27); kolejny podpunkt liczy fragmenty dalej.
+            Assert.Equal(2, first.Count);
+            Assert.EndsWith("które stanowią:", first[0].Value);
+            var designation = first[1];
+            Assert.Equal("Art. 78.", designation.Nodes().OfType<XText>().First().Value);
+            var typography = XNamespace.Get("https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0");
+            Assert.Equal("true", designation.Attribute(typography + "znastepnym")?.Value);
+            var fragment = (int)first[0].Attribute("fragment")!;
+            Assert.Equal(new[] { fragment + 1, fragment + 2 },
+                new[] { (int)designation.Attribute("fragment")!, (int)second.Attribute("fragment")! });
+
+            // Przytoczony ustęp stoi sam, z numerem i adresem w artykule; dalsze przytoczenie — cały artykuł.
+            var quotations = designation.Elements().Where(e => e.Name.LocalName == "tresc-strukt").ToList();
+            Assert.Equal(new[] { "ustep", "artykul" },
+                quotations.Select(quotation => Assert.Single(quotation.Elements()).Name.LocalName));
+            var paragraph = quotations[0].Elements().Single();
+            Assert.Equal("DU/2024/858__art_78__ust_2", paragraph.Attribute("eId")?.Value);
+            Assert.Equal("2", paragraph.Elements().First(e => e.Name.LocalName == "nr").Value);
+            Assert.DoesNotContain(xml.Descendants(), e => e.Attribute("eId")?.Value == "DU/2024/858__art_78");
+        }
+
+        // ============================================================
         // ADR-0076: cudzysłów otwarty pod przepisem trwa do domknięcia, bez względu na style
         // ============================================================
 

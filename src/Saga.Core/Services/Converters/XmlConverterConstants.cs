@@ -12,6 +12,9 @@ namespace Saga.Core.Services.Converters
         /// <summary>Przestrzeń atrybutów GUID schematu (GUIDs.xsd) — prefiks „gd".</summary>
         internal static readonly XNamespace GuidNamespace = "https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0";
         internal const string MathMLNamespace = "http://www.w3.org/1998/Math/MathML";
+
+        /// <summary>Przestrzeń atrybutów typografii schematu (typografia.xsd) — prefiks „tpg".</summary>
+        internal static readonly XNamespace TypographyNamespace = "https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0";
         internal const string ELIUrl = "https://eli.gov.pl/";
         internal const string Act = "ustawa";
 
@@ -332,6 +335,9 @@ namespace Saga.Core.Services.Converters
                 internal const string ReferenceGUID = "ref-zdGUID";
                 internal const string Fragment = "fragment";
                 internal static readonly XName FragmentGUID = GuidNamespace + "fragmentGUID";
+
+                /// <summary>Wiersz fragmentu łączy się z dalszą treścią („Art. 9." przed przytoczonym ustępem, ADR-0113).</summary>
+                internal static readonly XName JoinsWithNext = TypographyNamespace + "znastepnym";
             }
             internal static class CommonPart
             {

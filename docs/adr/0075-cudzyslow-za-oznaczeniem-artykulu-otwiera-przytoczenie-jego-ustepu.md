@@ -1,6 +1,6 @@
 # ADR-0075: Cudzysłów otwarty za oznaczeniem artykułu otwiera przytoczenie ustępu tego artykułu
 
-- Status: Accepted
+- Status: Accepted — Superseded in part by [ADR-0113](0113-przytoczona-czesc-artykulu-stoi-we-fragmencie-zdania-z-oznaczeniem-artykulu.md) (budowa przytoczenia: oznaczenie artykułu poza cudzysłowem, same ustępy)
 - Data: 2026-10-14
 
 ## Kontekst

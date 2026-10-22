@@ -89,6 +89,7 @@ namespace Saga.Core.Services.Converters
         private static XElement SerializeContentBlock(ContentBlock block) => block.Quotation is { } quotation
             ? new XElement("quotation",
                 quotation.SourceAct?.GetELIStrings().FirstOrDefault() is { } act ? new XAttribute("sourceAct", act) : null,
+                quotation.ArticleDesignation is { } designation ? new XAttribute("articleDesignation", designation) : null,
                 SerializeAmendmentContent(quotation.Content))
             : SerializeTextOrTable(block);
 

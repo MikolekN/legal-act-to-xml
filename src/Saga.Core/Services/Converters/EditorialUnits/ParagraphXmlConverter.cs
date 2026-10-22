@@ -10,9 +10,13 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class ParagraphXmlConverter
     {
-        internal static XElement? ToXml(Paragraph paragraph, SentenceContext? previousSentenceContext = null)
+        /// <param name="quotedWithoutArticle">
+        /// Ustęp przytoczony bez swojego artykułu („Art. 9. „2. …"") — jawny i adresowany w artykule, także gdy
+        /// przytoczony jest tylko on (ADR-0113).
+        /// </param>
+        internal static XElement? ToXml(Paragraph paragraph, SentenceContext? previousSentenceContext = null, bool quotedWithoutArticle = false)
         {
-            var isImplicit = IsParagraphImplicit(paragraph);
+            var isImplicit = !quotedWithoutArticle && IsParagraphImplicit(paragraph);
             var designated = UnitAddressXml.HasDesignation(paragraph);
             var isPathological = IsPathological(paragraph) || (!isImplicit && !designated) || paragraph.CodeParagraphWithoutSign;
 
