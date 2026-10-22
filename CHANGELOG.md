@@ -1577,6 +1577,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   strony, zwykłą interlinią pod „Załącznik do rozporządzenia … (Dz. U. poz. 1337)", wchodził do `zalacznik-do`,
   a załącznik nie miał tytułu. Wiersz wersalikami pod wierszem przyłączenia otwiera blok.
 
+- **Wiersz odnośnika powtórzony na dwóch stronach nie jest stopką (PDF)**: Dz. U. 2026 poz. 305 — odnośniki 1 i 2
+  wymieniają te same publikatory UE, więc wiersz „str. 35, Dz. Urz. UE L 227 …, str. 130," stoi słowo w słowo na dole
+  dwóch z trzech stron. Sygnał powtórzeniowy filtra artefaktów strony (≥ 60% stron) uznawał go za stopkę i usuwał
+  z obu odnośników. Wiersz usuwany za samo powtórzenie musi teraz stać na skraju strony — między nim a krawędzią
+  są tylko inne artefakty — jak nagłówek, stopka i metryczka składu („DDUTJ.60.214.2025 łamanie …"); znane nagłówki
+  Dziennika Ustaw i Monitora Polskiego usuwa jak dotąd lista wzorców.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

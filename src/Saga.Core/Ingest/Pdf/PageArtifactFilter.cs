@@ -8,7 +8,10 @@ namespace Saga.Core.Ingest.Pdf
     /// Usuwa artefakty stron (nagłówki/stopki/paginację) z wierszy PDF — inaczej nagłówek strony
     /// wpadałby między jednostki redakcyjne i psuł ciągłość numeracji. Dwa sygnały (suma):
     /// 1) POZYCYJNO-POWTÓRZENIOWY: wiersz w strefie marginesu (górne/dolne 8% wysokości strony),
-    ///    którego znormalizowana treść (cyfry → #) powtarza się na ≥ 60% stron dokumentu;
+    ///    którego znormalizowana treść (cyfry → #) powtarza się na ≥ 60% stron dokumentu, stojący na skraju strony:
+    ///    między nim a krawędzią są tylko inne artefakty. Nagłówek, stopka i metryczka składu („DDUTJ.60.214.2025
+    ///    łamanie …") są skrajnymi wierszami strony; wiersz odnośnika powtórzony słowo w słowo na dole dwóch stron
+    ///    („str. 35, Dz. Urz. UE L 227 …" w odnośnikach 1 i 2 — Dz. U. 2026 poz. 305) ma pod sobą dalszy tekst;
     /// 2) WHITELIST: znane artefakty publikacyjne (Dziennik Ustaw, paginacja „– N –", „Poz. N")
     ///    w strefie marginesu — działa też dla dokumentów jednostronicowych.
     /// </summary>
@@ -51,7 +54,7 @@ namespace Saga.Core.Ingest.Pdf
                 pages.Add(line.PageNumber);
             }
 
-            bool IsRepeatedArtifact(PdfTextLine line) =>
+            bool IsRepeated(PdfTextLine line) =>
                 pageCount >= 2
                 && marginRepeats.TryGetValue(Normalize(line.Text), out var pages)
                 && pages.Count >= RepetitionThreshold * pageCount;
@@ -59,9 +62,34 @@ namespace Saga.Core.Ingest.Pdf
             bool IsKnownArtifact(PdfTextLine line) =>
                 KnownArtifacts.Any(p => p.IsMatch(line.Text.Trim()));
 
-            return lines
-                .Where(l => !(IsInMarginZone(l) && (IsRepeatedArtifact(l) || IsKnownArtifact(l))))
-                .ToList();
+            // Artefakty od krawędzi strony do pierwszego wiersza, który nim nie jest — osobno od góry i od dołu.
+            var artifacts = new HashSet<PdfTextLine>(ReferenceEqualityComparer.Instance);
+            foreach (var page in lines.Where(IsInMarginZone).GroupBy(l => l.PageNumber))
+            {
+                var top = page.Where(l => l.BaselineY > l.PageHeight / 2).OrderByDescending(l => l.BaselineY);
+                var bottom = page.Where(l => l.BaselineY <= l.PageHeight / 2).OrderBy(l => l.BaselineY);
+                foreach (var fromEdge in new[] { top, bottom })
+                {
+                    foreach (var line in fromEdge)
+                    {
+                        if (IsKnownArtifact(line))
+                            artifacts.Add(line);
+                        else if (IsRepeated(line) && !HasTextBetweenItAndTheEdge(line, lines, artifacts))
+                            artifacts.Add(line);
+                    }
+                }
+            }
+
+            return lines.Where(l => !artifacts.Contains(l)).ToList();
+        }
+
+        /// <summary>Na stronie wiersza stoi bliżej krawędzi tekst, który nie jest artefaktem.</summary>
+        private static bool HasTextBetweenItAndTheEdge(PdfTextLine line, List<PdfTextLine> lines, HashSet<PdfTextLine> artifacts)
+        {
+            var atTop = line.BaselineY > line.PageHeight / 2;
+            return lines.Any(other => other.PageNumber == line.PageNumber && !ReferenceEquals(other, line)
+                && !artifacts.Contains(other)
+                && (atTop ? other.BaselineY > line.BaselineY : other.BaselineY < line.BaselineY));
         }
 
         private static bool IsInMarginZone(PdfTextLine line) =>

@@ -612,6 +612,42 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void FootnoteLineRepeatedOnTwoPages_WithTextBelowIt_IsNotAPageArtifact()
+        {
+            // Dz. U. 2026 poz. 305: odnośniki 1 i 2 wymieniają te same publikatory — wiersz „str. 35, Dz. Urz. UE L 227 …"
+            // stoi słowo w słowo na dole obu stron, ale pod nim jest dalszy tekst odnośnika. Stopka stoi na skraju strony.
+            var builder = new TestPdfBuilder();
+            for (int p = 1; p <= 2; p++)
+            {
+                builder.AddPage();
+                WithBodyPadding(builder, fromY: 700);
+                builder.AddText("str. 35, Dz. Urz. UE L 227 z 01.09.2022, str. 136, Dz. Urz. UE L 102 z 17.04.2023, str. 1,", 66, 60, 8);
+                builder.AddText(p == 1 ? "Dz. Urz. UE L 2025/2649 z 31.12.2025)." : "Dz. Urz. UE L 2025/2649 z 31.12.2025.", 66, 50, 8);
+            }
+
+            var blocks = Read(builder.Build());
+
+            Assert.Equal(2, blocks.Count(b => b.Text.Contains("Dz. Urz. UE L 227", StringComparison.Ordinal)));
+        }
+
+        [Fact]
+        public void TypesetterSlugRepeatedAtThePageEdge_IsAPageArtifact()
+        {
+            // Metryczka składu nad nagłówkiem („DDUTJ.60.214.2025 łamanie 2025-12-22 AMAR (Word)") na obu stronach.
+            var builder = new TestPdfBuilder();
+            for (int p = 1; p <= 2; p++)
+            {
+                builder.AddPage();
+                builder.AddText("DDUTJ.60.214.2025 łamanie 2025-12-22 AMAR (Word)", 51, 804, 12);
+                WithBodyPadding(builder, fromY: 700);
+            }
+
+            var blocks = Read(builder.Build());
+
+            Assert.DoesNotContain(blocks, b => b.Text.Contains("DDUTJ", StringComparison.Ordinal));
+        }
+
+        [Fact]
         public void Superscript_UnitNumber_YieldsBracketChannel()
         {
             // „Art. 15¹" — indeks górny mniejszym fontem z podniesioną linią bazową → kanał [1].
