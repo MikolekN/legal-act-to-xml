@@ -225,9 +225,14 @@ namespace Saga.Core.Ingest.Pdf
         /// (bez niego goła liczba „2023 r. …" na początku zawiniętej kontynuacji rozcinałaby przypis).
         /// Odnośnik oznaczony literą („[a)]" — tekst jednolity oznacza tak odnośniki obwieszczenia) tylko w kanale
         /// indeksu górnego: goła „a)" na początku wiersza to litera wyliczenia. Sam nawias w indeksie górnym („[)]")
-        /// to znacznik, którego oznaczenia warstwa tekstowa nie zapisała (zdarza się w PDF z LibreOffice).</summary>
+        /// to znacznik, którego oznaczenia warstwa tekstowa nie zapisała (zdarza się w PDF z LibreOffice). Tekst jednolity
+        /// oznacza cyframi rzymskimi odnośniki do odnośników („[I)] W brzmieniu ustalonym …"), a odwołanie do takiego
+        /// odnośnika stoi w indeksie górnym tuż za oznaczeniem odnośnika („[1)I)] Niniejsza ustawa …" — Dz. U. 2026 poz. 1313).</summary>
         private static readonly Regex FootnoteStartPattern = new(
-            @"^(?:\[?\d+\)\]?\s|\[(?:[a-z]{1,2})?\)\]\s?|\*+\s?)", RegexOptions.Compiled);
+            @"^(?:\[?\d+\)(?:" + RomanNoteMark + @"\))*\]?\s|\[(?:[a-z]{1,2}|" + RomanNoteMark + @")?\)\]\s?|\*+\s?)", RegexOptions.Compiled);
+
+        /// <summary>Oznaczenie odnośnika do odnośnika w tekście jednolitym: cyfry rzymskie („I)", „II)").</summary>
+        private const string RomanNoteMark = "[IVX]{1,4}";
 
         /// <summary>Przypis zakończony: ostatni wiersz strefy kończy zdanie — następna strona go nie kontynuuje.</summary>
         private static readonly Regex FootnoteEndPattern = new(
@@ -268,7 +273,7 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>Początek przypisu znacznikiem w indeksie górnym — kanał <c>[N)]</c> albo <c>[*]</c> z <see cref="PdfLineExtractor"/>.</summary>
         private static readonly Regex SuperscriptFootnoteStartPattern = new(
-            @"^\[(?:\d+\)?|(?:[a-z]{1,2})?\)|\*+)\]", RegexOptions.Compiled);
+            @"^\[(?:\d+\)?(?:" + RomanNoteMark + @"\))*|(?:[a-z]{1,2}|" + RomanNoteMark + @")?\)|\*+)\]", RegexOptions.Compiled);
 
         /// <summary>
         /// Oznaczenie odnośnika w indeksie górnym na początku wiersza strefy przypisów, z którego da się odczytać jego

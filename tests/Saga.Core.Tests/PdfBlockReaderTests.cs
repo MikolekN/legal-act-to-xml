@@ -1783,6 +1783,93 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void RomanNoteReferencedFromTheFootnoteMark_IsAParagraphOfThatFootnote()
+        {
+            // Dz. U. 2026 poz. 1313: odnośnik do odnośnika — odwołanie „I)" w indeksie górnym tuż za oznaczeniem „1)",
+            // a odnośnik „I)" pod nim. Jak w DOCX: dalszy akapit odnośnika 1, nie treść przepisu ani osobny odnośnik.
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Ustawa reguluje działalność gospodarczą", "1", footnote: null);
+            builder.AddText("1)I)", 57, 113.5, 6);
+            builder.AddText("Niniejsza ustawa w zakresie swojej regulacji wdraża dyrektywę 2006/123/WE.", 70, 110, 8);
+            builder.AddText("I)", 57, 93.5, 6);
+            builder.AddText("W brzmieniu ustalonym przez art. 16 pkt 1 ustawy o cudzoziemcach.", 70, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var footnote = Assert.Single(blocks.SelectMany(b => b.Footnotes));
+            Assert.Equal(("1", "1"), (footnote.Symbol, footnote.Marker));
+            Assert.Equal(
+                ["[I)] Niniejsza ustawa w zakresie swojej regulacji wdraża dyrektywę 2006/123/WE.",
+                 "[I)] W brzmieniu ustalonym przez art. 16 pkt 1 ustawy o cudzoziemcach."],
+                footnote.Paragraphs);
+            Assert.DoesNotContain(blocks, b => b.Role == BlockRole.Body && b.Text.Contains("Niniejsza ustawa"));
+        }
+
+        [Fact]
+        public void RomanReferenceAfterAFootnoteReference_FoldsItsNoteIntoThatFootnote()
+        {
+            // Dz. U. 2026 poz. 1297: „chorób zawodowych[1)I)]" — odnośnik „I)" (stoi nad odnośnikiem 1) jest uwagą o odnośniku 1.
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Wykaz chorób zawodowych", "1)I", footnote: null);
+            builder.AddText("I)", 57, 113.5, 6);
+            builder.AddText("Odnośnik nr 1 dodany do tytułu rozporządzenia przez § 1 pkt 1 rozporządzenia zmieniającego.", 70, 110, 8);
+            builder.AddText("1)", 57, 93.5, 6);
+            builder.AddText("Niniejsze rozporządzenie wdraża dyrektywę 2023/2668.", 70, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var referencing = Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            Assert.EndsWith("[1)I)]", referencing.Text);
+            var footnote = Assert.Single(referencing.Footnotes);
+            Assert.Equal(("1", "1"), (footnote.Symbol, footnote.Marker));
+            Assert.Equal(
+                ["Niniejsze rozporządzenie wdraża dyrektywę 2023/2668.",
+                 "[I)] Odnośnik nr 1 dodany do tytułu rozporządzenia przez § 1 pkt 1 rozporządzenia zmieniającego."],
+                footnote.Paragraphs);
+        }
+
+        [Fact]
+        public void RomanReferenceFoldedIntoItsFootnote_LeavesTheUnnumberedFootnoteToItsOwnReference()
+        {
+            // 315435_2812486 (PDF z DOCX): „[a)I)]" w tytule i „8)[)]" niżej — odwołanie „I)" po złożeniu uwagi do odnośnika
+            // „a" brało odnośnik bez oznaczenia, który należy do punktu 8.
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Przepis pierwszy", "a)I", footnote: null);
+            builder.AddText("Art. 2. Przepis drugi", 57, 680);
+            builder.AddText(")", 170, 683.5, 6);
+            builder.AddText("a)", 57, 133.5, 6);
+            builder.AddText("Niniejsza ustawa służy stosowaniu rozporządzenia 2021/784.", 70, 130, 8);
+            builder.AddText("I)", 57, 113.5, 6);
+            builder.AddText("Odnośnik dodany przez art. 1 pkt 1 ustawy zmieniającej.", 70, 110, 8);
+            builder.AddText(")", 57, 93.5, 6);
+            builder.AddText("Dodany przez art. 1 pkt 2 ustawy zmieniającej.", 70, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var first = Assert.Single(Assert.Single(blocks, b => b.Text.StartsWith("Art. 1.")).Footnotes);
+            Assert.Equal(["Niniejsza ustawa służy stosowaniu rozporządzenia 2021/784.", "[I)] Odnośnik dodany przez art. 1 pkt 1 ustawy zmieniającej."],
+                first.Paragraphs);
+            var second = Assert.Single(Assert.Single(blocks, b => b.Text.StartsWith("Art. 2.")).Footnotes);
+            Assert.Equal(["Dodany przez art. 1 pkt 2 ustawy zmieniającej."], second.Paragraphs);
+        }
+
+        [Fact]
+        public void RomanReferenceAfterAnUnnumberedReference_FoldsItsNoteIntoTheUnnumberedFootnote()
+        {
+            // 323582_2889281 (PDF z DOCX): warstwa tekstowa zgubiła numer odwołania — „o rynku mocy[)I)]".
+            var builder = AddReferencingPage(new TestPdfBuilder(), "Art. 1. Ustawa o rynku mocy", ")I", footnote: null);
+            builder.AddText(")", 57, 113.5, 6);
+            builder.AddText("Niniejsza ustawa służy stosowaniu rozporządzenia 2024/1747.", 70, 110, 8);
+            builder.AddText("I)", 57, 93.5, 6);
+            builder.AddText("Dodany przez art. 1 pkt 1 ustawy o zmianie ustawy o rynku mocy.", 70, 90, 8);
+
+            var blocks = Read(builder.Build());
+
+            var referencing = Assert.Single(blocks, b => b.Footnotes.Count > 0);
+            Assert.EndsWith("[1)I)]", referencing.Text);
+            var footnote = Assert.Single(referencing.Footnotes);
+            Assert.Equal(["Niniejsza ustawa służy stosowaniu rozporządzenia 2024/1747.", "[I)] Dodany przez art. 1 pkt 1 ustawy o zmianie ustawy o rynku mocy."],
+                footnote.Paragraphs);
+        }
+
+        [Fact]
         public void FootnoteNumberPrintedTwice_IsLinkedToItsReference()
         {
             // Automatyczny numer odnośnika i ten sam numer wpisany ręcznie: odnośnik 1 drukuje się „11)".

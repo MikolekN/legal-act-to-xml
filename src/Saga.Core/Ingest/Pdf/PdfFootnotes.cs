@@ -30,18 +30,20 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>
         /// Znacznik bez oznaczenia — warstwa tekstowa zapisała z indeksu górnego tylko nawias („[)]"), także z przecinkiem
-        /// oddzielającym go od następnego odwołania („[),]").
+        /// oddzielającym go od następnego odwołania („[),]"), także z odwołaniem rzymskim tuż za nim („[)I)]").
         /// </summary>
-        private static readonly Regex UnnumberedMarker = new(@"^\[\s*\)\s*(?<comma>,)?\s*\]$", RegexOptions.Compiled);
+        private static readonly Regex UnnumberedMarker = new(@"^\[\s*\)\s*(?<comma>,)?\s*(?<roman>[IVX]{1,4}\))?\]$", RegexOptions.Compiled);
 
-        private static readonly Regex Item = new(@"(?<![\p{L}\d])(?<symbol>\d{1,3}|[a-z]{1,2})\)", RegexOptions.Compiled);
+        private static readonly Regex Item = new(@"(?<![\p{L}\d])(?<symbol>\d{1,3}|[a-z]{1,2}|[IVX]{1,4})\)", RegexOptions.Compiled);
 
         /// <summary>
         /// Oznaczenie na początku bloku odnośnika („[1)] …", „1) …", „[a)] …", bez oznaczenia — „[)] …", sama liczba
-        /// w indeksie górnym — „[1] …").
+        /// w indeksie górnym — „[1] …"). Tekst jednolity oznacza cyframi rzymskimi odnośniki do odnośników („[I)] W brzmieniu
+        /// ustalonym …"); odwołanie do takiego odnośnika bywa złożone w jednym indeksie górnym z oznaczeniem odnośnika,
+        /// którego dotyczy („[1)I)] Niniejsza ustawa …" — Dz. U. 2026 poz. 1313).
         /// </summary>
         private static readonly Regex Start = new(
-            @"^(?:\[(?<symbol>\d{1,3}|[a-z]{1,2})?\)\]|(?<plain>(?<symbol>\d{1,3})\))|\[(?<bare>(?<symbol>\d{1,3}))\](?=\s))\s*",
+            @"^(?:\[(?<symbol>\d{1,3}|[a-z]{1,2}|(?<roman>[IVX]{1,4}))?\)(?<glued>(?:[IVX]{1,4}\))+)?\]|(?<plain>(?<symbol>\d{1,3})\))|\[(?<bare>(?<symbol>\d{1,3}))\](?=\s))\s*",
             RegexOptions.Compiled);
 
         /// <summary>Odnośnik oznaczony samą liczbą w indeksie górnym („[1] W przypadku …") — tak oznacza odnośniki część wzorów w załącznikach.</summary>
@@ -61,7 +63,7 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Treść pozycji wyliczenia: mała litera albo nawias („(uchylony)"), nie wielka litera nowego odnośnika.</summary>
         private static readonly Regex ItemText = new(@"^[\p{Ll}(]", RegexOptions.Compiled);
 
-        private sealed class Note(string symbol, int page, string text, bool bare = false, string mark = "")
+        private sealed class Note(string symbol, int page, string text, bool bare = false, string mark = "", bool roman = false)
         {
             public string Symbol { get; } = symbol;
             public int Page { get; } = page;
@@ -71,7 +73,10 @@ namespace Saga.Core.Ingest.Pdf
             /// <summary>Oznaczony samą liczbą w indeksie górnym — odwołuje się do niego <see cref="BareReference"/>.</summary>
             public bool Bare { get; } = bare;
 
-            /// <summary>Oznaczenie na początku bloku, jak je wydrukowano („[1]").</summary>
+            /// <summary>Odnośnik do odnośnika oznaczony cyframi rzymskimi („[I)] W brzmieniu ustalonym …").</summary>
+            public bool Roman { get; } = roman;
+
+            /// <summary>Oznaczenie na początku bloku, jak je wydrukowano („[1]", „[1)I)]").</summary>
             public string Mark { get; } = mark;
         }
 
@@ -95,14 +100,60 @@ namespace Saga.Core.Ingest.Pdf
                         || (start.Groups["plain"].Success
                             && (OpensItem.IsMatch(previous.Paragraphs[^1]) || ItemText.IsMatch(text))));
 
+                // Odwołanie do odnośnika rzymskiego złożone przy oznaczeniu zostaje na początku treści, jak w DOCX („I) Niniejsza …").
+                if (start.Groups["glued"].Success)
+                    text = "[" + start.Groups["glued"].Value + "] " + text;
+
                 if (continues)
                     previous!.Paragraphs.Add(block.Text.Trim());
                 else if (start.Success)
                     notes.Add(new Note(start.Groups["symbol"].Value, block.Source.PageNumber ?? 0, text, start.Groups["bare"].Success,
-                        start.Value.Trim()));
+                        start.Value.Trim(), start.Groups["roman"].Success));
             }
 
             return notes;
+        }
+
+        /// <summary>
+        /// Odnośnik rzymski to uwaga o innym odnośniku („[I)] W brzmieniu ustalonym …", „[I)] Odnośnik nr 1 dodany …"),
+        /// gdy odwołanie do niego stoi w jednym indeksie górnym tuż za odwołaniem do tamtego („chorób zawodowych[1)I)]" —
+        /// Dz. U. 2026 poz. 1297) albo za oznaczeniem tamtego odnośnika („[1)I)] Niniejsza ustawa …" — poz. 1313), a bez
+        /// odwołania — odnośnika przed nim. Jest wtedy dalszym akapitem tamtego odnośnika, jak w DOCX: odnośnik do odnośnika
+        /// to w Wordzie tekst wpisany w odnośnik. Osobnym odnośnikiem zostaje tylko z własnym odwołaniem w treści („…[I)]").
+        /// </summary>
+        private static void FoldRomanNotesOfNotes(List<Note> notes, IReadOnlyList<DocumentBlock> body, IReadOnlyList<int> lastPages)
+        {
+            for (var n = notes.Count - 1; n >= 0; n--)
+            {
+                var note = notes[n];
+                if (!note.Roman)
+                    continue;
+
+                bool OnNotePage(Note other) => other.Page == note.Page && !other.Roman;
+                // Oznaczenie odwołania, przy którym stoi odwołanie rzymskie: „a" w „[a)I)]", puste w „[)I)]" (warstwa tekstowa
+                // zgubiła numer); null, gdy odwołanie rzymskie stoi samo.
+                var glued = body.Where((block, i) =>
+                        (block.Source.PageNumber ?? 0) <= note.Page && note.Page <= (i < lastPages.Count ? lastPages[i] : block.Source.PageNumber ?? 0))
+                    .SelectMany(block => Superscript.Matches(block.Text))
+                    .SelectMany(superscript => Item.Matches(superscript.Value)
+                        .Where(item => item.Groups["symbol"].Value == note.Symbol)
+                        .Select(item => superscript.Value[1..item.Index]))
+                    .Select(before => before.Contains(')') ? Item.Matches(before).LastOrDefault()?.Groups["symbol"].Value ?? string.Empty : null)
+                    .ToList();
+                if (glued.Any(symbol => symbol is null))
+                    continue;
+
+                var reference = note.Symbol + ")";
+                var target = (glued.Count == 0 ? null : notes.FirstOrDefault(other => OnNotePage(other) && other.Symbol == glued[0]))
+                    ?? notes.FirstOrDefault(other => OnNotePage(other) && other.Mark.Contains(reference, StringComparison.Ordinal))
+                    ?? (n > 0 ? notes[n - 1] : notes.FirstOrDefault(other => !other.Roman));
+                if (target is null)
+                    continue;
+
+                target.Paragraphs.Add(note.Mark + " " + note.Paragraphs[0]);
+                target.Paragraphs.AddRange(note.Paragraphs.Skip(1));
+                notes.RemoveAt(n);
+            }
         }
 
         /// <param name="body">Bloki treści w kolejności czytania.</param>
@@ -114,6 +165,7 @@ namespace Saga.Core.Ingest.Pdf
         {
             var notes = ReadNotes(footnotes);
             FoldUnreferencedBareNotes(notes, body, lastPages);
+            FoldRomanNotesOfNotes(notes, body, lastPages);
 
             var result = new List<DocumentBlock>(body.Count);
             var numbering = new Numbering();
@@ -139,7 +191,7 @@ namespace Saga.Core.Ingest.Pdf
                         unnumbered.Used = true;
                         var (symbol, marker, run) = numbering.NextUnknown();
                         (attached ??= []).Add(new BlockFootnote(symbol, unnumbered.Paragraphs) { Marker = marker, Run = run });
-                        return "[" + marker + ")" + unnumberedMarker.Groups["comma"].Value + "]";
+                        return "[" + marker + ")" + unnumberedMarker.Groups["comma"].Value + unnumberedMarker.Groups["roman"].Value + "]";
                     }
 
                     return Item.Replace(superscript.Value, item =>
@@ -147,9 +199,11 @@ namespace Saga.Core.Ingest.Pdf
                         var symbol = item.Groups["symbol"].Value;
                         // Numer złożony dwa razy („[11)]" przy odwołaniu „1)"): automatyczny numer Worda i ten sam numer
                         // wpisany ręcznie w indeksie górnym — DOCX wpisany numer pomija, PDF drukuje oba.
+                        // Odwołanie rzymskie, którego uwaga weszła do odnośnika obok, zostaje tekstem — nie bierze odnośnika
+                        // bez oznaczenia, który należy do innego odwołania.
                         var note = notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol == symbol)
                             ?? (char.IsDigit(symbol[0]) ? notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol == symbol + symbol) : null)
-                            ?? notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol.Length == 0);
+                            ?? (char.IsUpper(symbol[0]) ? null : notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol.Length == 0));
                         if (note is null)
                             return item.Value;
 
@@ -245,20 +299,37 @@ namespace Saga.Core.Ingest.Pdf
             private int _run = -1;
             private int _last;
             private bool _letters;
+            private bool _roman;
 
             internal (string Marker, int Run) Next(string symbol)
             {
-                var letters = !char.IsDigit(symbol[0]);
-                var value = letters
-                    ? (symbol[0] - 'a' + 1) + 26 * (symbol.Length - 1)
+                var roman = char.IsUpper(symbol[0]);
+                var letters = !roman && !char.IsDigit(symbol[0]);
+                var value = roman ? RomanValue(symbol)
+                    : letters ? (symbol[0] - 'a' + 1) + 26 * (symbol.Length - 1)
                     : int.Parse(symbol, NumberStyles.None, CultureInfo.InvariantCulture);
 
-                if (_run < 0 || letters != _letters || value <= _last)
+                if (_run < 0 || letters != _letters || roman != _roman || value <= _last)
                     _run++;
 
                 _last = value;
                 _letters = letters;
+                _roman = roman;
                 return ((_run * RunBase + value).ToString(CultureInfo.InvariantCulture), _run);
+            }
+
+            /// <summary>Wartość oznaczenia rzymskiego („IV" → 4).</summary>
+            private static int RomanValue(string symbol)
+            {
+                static int Digit(char c) => c switch { 'I' => 1, 'V' => 5, _ => 10 };
+                var value = 0;
+                for (var i = 0; i < symbol.Length; i++)
+                {
+                    var digit = Digit(symbol[i]);
+                    value += i + 1 < symbol.Length && digit < Digit(symbol[i + 1]) ? -digit : digit;
+                }
+
+                return value;
             }
 
             /// <summary>Odnośnik bez oznaczenia: następny w bieżącym ciągu numeracji (oznaczenie odtworzone z kolejności).</summary>

@@ -1533,7 +1533,18 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Powołanie artykułu urwane przed „§" w PDF**: Dz. U. 2026 poz. 1311 — „… zdarzenia określone w art. 64cd" na końcu
   wiersza i „§ 3. Złożenie wniosku …" w następnym; oznaczenie paragrafu otwierało blok bezwarunkowo, więc art. 65a
   dostawał drugi § 3 (powtórzone `eId`). „§ N." za wierszem kończącym się powołaniem „art. N" (małą literą, bez
-  kropki) dopełnia powołanie — paragraf zaczyna się za zdaniem domkniętym interpunkcją.
+  kropki) dopełnia powołanie — paragraf zaczyna się za zdaniem domkniętym interpunkcją. PDF: w pełni zgodnych
+  1819 → 1820, 7 eksportów bez osieroconego „§ N.", 0 gorzej.
+
+- **Odnośniki do odnośników w PDF tekstu jednolitego**: obwieszczenie oznacza cyframi rzymskimi uwagę o odnośniku
+  („[I)] W brzmieniu ustalonym przez art. 16 pkt 1 ustawy …"), a odwołanie do niej składa w jednym indeksie górnym
+  z oznaczeniem odnośnika („[1)I)] Niniejsza ustawa …" — Dz. U. 2026 poz. 1313) albo z odwołaniem w treści
+  („chorób zawodowych[1)I)]" — poz. 1297). Strefa przypisów nie rozpoznawała takiego początku: odnośnik trafiał do
+  treści, a jego wyliczenie dyrektyw — jako punkty 1 i 2 przepisu nad nim (powtórzone `eId`). Uwaga rzymska jest teraz
+  dalszym akapitem odnośnika, którego dotyczy — tak jak w DOCX, gdzie jest tekstem wpisanym w odnośnik; osobnym
+  odnośnikiem zostaje tylko z własnym odwołaniem w treści. Odwołanie rzymskie nie bierze odnośnika bez oznaczenia,
+  a „[)I)]" (numer zgubiony w warstwie tekstowej) wiąże odnośnik bez oznaczenia. PDF: słowa odnośników 96,12 → 96,13 %,
+  15 eksportów z uwagą jako osobnym akapitem odnośnika, 0 gorzej; z aktów ISAP zmienia się poz. 1297 (naprawiona).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
