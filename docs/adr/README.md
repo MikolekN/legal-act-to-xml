@@ -132,5 +132,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0111](0111-przeniesienie-wyrazu-w-pdf-traci-dywiz-zlozenie-powtarza-dywiz.md) | Dywiz na końcu wiersza PDF przed małą literą to przeniesienie wyrazu i znika; złożenie poznaje się po dywizie powtórzonym na początku następnego wiersza (konwencja składu Dz. U.) | Accepted | 2026-10-22 |
 | [0112](0112-adapter-pdf-czyta-tylko-tekst-widoczny-na-stronie.md) | Adapter PDF czyta tylko tekst widoczny na stronie — litery przycięte i zakryte białym prostokątem odpadają, treść za krawędzią strony zostaje | Accepted | 2026-10-22 |
 | [0113](0113-przytoczona-czesc-artykulu-stoi-we-fragmencie-zdania-z-oznaczeniem-artykulu.md) | Przytoczona część artykułu w obwieszczeniu („Art. 9. „2. …”) stoi w osobnym fragmencie zdania jednostki z oznaczeniem artykułu i `tpg:znastepnym`; w `tresc-strukt` same ustępy z adresem w artykule (zapis autora schematu, z wyprzedzeniem wobec schematu) | Accepted | 2026-10-22 |
+| [0114](0114-tekst-nadrukowany-innym-pismem-przeslania-tekst-pod-nim.md) | Tekst narysowany później innym pismem na tekście, którego nie zakryto (nagłówek wydawcy na nagłówku oryginału), przesłania go — adapter PDF czyta tylko tekst wierzchni | Accepted | 2026-10-22 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

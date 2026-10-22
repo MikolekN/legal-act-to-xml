@@ -1518,6 +1518,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   dokumentów (część wspólna zamiast tiretu, także w przytoczonym przepisie zmieniającym), ocena i schemat bez zmian;
   PDF: w pełni zgodnych 1812 → 1819, 17 dokumentów lepiej, 0 gorzej.
 
+- **Nagłówek wydawcy nadrukowany na nagłówku oryginału** ([ADR-0114](docs/adr/0114-tekst-nadrukowany-innym-pismem-przeslania-tekst-pod-nim.md)): Dz. U. 2026 poz. 1341 —
+  „Załącznik do rozporządzenia … (Dz. U. poz. 1341)” (8 pt) napisany wprost na „… (Dz. U. poz. …)” (12,5 pt) bez
+  zakrycia; wiersze przeplatały się, a 179-stronicowy załącznik wchodził do § 3. Ciąg tekstu przykryty tekstem
+  narysowanym później innym pismem (zderzenie co najmniej ćwierci liter) jest niewidoczny. Korpus PDF bez zmian; z 64
+  aktów ISAP zmienia się tylko ten.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

@@ -269,6 +269,25 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TextOverprintedByLaterTextInAnotherSize_IsNotOnThePage()
+        {
+            // Dz. U. 2026 poz. 1341: wydawca pisze nagłówek załącznika (8 pt) na nagłówku oryginału (12,5 pt) bez zakrycia
+            // go — wiersze przeplatały się („Mini[Z]s[a]t[łą]r[c]a[z] …"), a załącznik przepadał w ostatnim paragrafie.
+            var builder = new TestPdfBuilder().AddPage()
+                .AddText("Załącznik do rozporządzenia", 355, 770, 12.5)
+                .AddText("Ministra Infrastruktury z dnia 29", 355, 755, 12.5)
+                .AddText("września 2026 r. (Dz. U. poz. ...)", 355, 741, 12.5);
+            WithBodyPadding(builder, fromY: 600);
+            builder.AddText("Załącznik do rozporządzenia Ministra Infrastruktury", 377, 762, 8)
+                .AddText("z dnia 29 września 2026 r. (Dz. U. poz. 1341)", 377, 753, 8);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Contains(blocks, b => b.Text == "Załącznik do rozporządzenia Ministra Infrastruktury z dnia 29 września 2026 r. (Dz. U. poz. 1341)");
+            Assert.DoesNotContain(blocks, b => b.Text.Contains("poz. ...", StringComparison.Ordinal));
+        }
+
+        [Fact]
         public void BorderedTable_DrawnWithShortCornerPieces_IsATable()
         {
             // M.P. 2026 poz. 1012, tabela B: linie kolumn kończą się 1,7 pt przed liniami wierszy, a lukę wypełnia

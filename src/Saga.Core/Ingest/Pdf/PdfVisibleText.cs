@@ -37,6 +37,14 @@ namespace Saga.Core.Ingest.Pdf
             if (letters.Count == 0)
                 return letters;
 
+            var shown = Unclipped(page, letters);
+            var visible = WithoutOverprinted(shown);
+            return visible.Count == letters.Count ? letters : visible;
+        }
+
+        /// <summary>Litery w obszarze przycięcia i niezakryte białym prostokątem.</summary>
+        private static IReadOnlyList<Letter> Unclipped(Page page, IReadOnlyList<Letter> letters)
+        {
             var (clips, covers) = Trace(page.Operations);
             if (covers.Count == 0 && clips.All(clip => clip is null))
                 return letters;
@@ -46,12 +54,95 @@ namespace Saga.Core.Ingest.Pdf
                 return letters;
 
             var sheet = new PdfRectangle(0, 0, page.Width, page.Height);
-            var visible = letters.Where(letter =>
+            return letters.Where(letter =>
                     KeptAnyway(letter, sheet)
                     || ((clips[letter.TextSequence - 1] is not { } clip || Touches(letter, clip))
                         && !covers.Any(cover => letter.TextSequence <= cover.Shown && Inside(letter, cover.Box))))
                 .ToList();
-            return visible.Count == letters.Count ? letters : visible;
+        }
+
+        /// <summary>Udział liter ciągu, które zderzają się z tekstem narysowanym później, od którego ciąg jest nadrukowany.</summary>
+        private const double OverprintShare = 0.25;
+
+        /// <summary>Najmniej liter ciągu zderzonych z tekstem narysowanym później — pojedyncze zetknięcia nie wystarczą.</summary>
+        private const int OverprintMinLetters = 5;
+
+        /// <summary>Część mniejszej z dwóch liter, którą musi przykryć druga, żeby litery się zderzyły.</summary>
+        private const double CollisionShare = 0.3;
+
+        /// <summary>Skok linii bazowej (w rozmiarach pisma), od którego zaczyna się nowy ciąg — inny blok tekstu.</summary>
+        private const double RunLineJump = 2;
+
+        /// <summary>
+        /// Tekst nadrukowany na innym tekście bez zakrycia go: wydawca pisze nagłówek załącznika na nagłówku oryginału
+        /// (Dz. U. 2026 poz. 1341 — „Załącznik do rozporządzenia … (Dz. U. poz. …)" 12,5 pt pod „… (Dz. U. poz. 1341)" 8 pt).
+        /// Na stronie nie da się odczytać żadnego, a w warstwie tekstowej ich wiersze przeplatały się, więc załącznik
+        /// przepadał. Widać tekst narysowany później: ciąg kolejnych operacji pokazujących tekst jednym pismem znika, gdy
+        /// zderza się z ciągiem narysowanym po nim innym pismem — co najmniej <see cref="OverprintMinLetters"/> liter
+        /// i <see cref="OverprintShare"/> jego liter. Litera powtórzona tym samym pismem (pogrubienie nadrukiem) i indeks
+        /// górny obok tekstu tego warunku nie spełniają.
+        /// </summary>
+        private static IReadOnlyList<Letter> WithoutOverprinted(IReadOnlyList<Letter> letters)
+        {
+            var runs = new List<List<Letter>>();
+            foreach (var letter in letters.OrderBy(l => l.TextSequence))
+            {
+                // Ciąg to jeden blok tekstu: kolejne operacje tym samym pismem bez skoku o więcej niż dwa wiersze.
+                var last = runs.Count > 0 ? runs[^1] : null;
+                if (last is not null && letter.TextSequence - last[^1].TextSequence <= 1
+                    && Math.Abs(letter.PointSize - last[^1].PointSize) < 0.5
+                    && Math.Abs(letter.StartBaseLine.Y - last[^1].StartBaseLine.Y) <= RunLineJump * letter.PointSize)
+                    last.Add(letter);
+                else
+                    runs.Add([letter]);
+            }
+
+            if (runs.Count < 2)
+                return letters;
+
+            var boxes = runs.Select(Bounds).ToList();
+            var hidden = new HashSet<Letter>();
+            for (var i = 0; i < runs.Count; i++)
+            {
+                var inked = runs[i].Where(l => !string.IsNullOrWhiteSpace(l.Value)).ToList();
+                if (inked.Count < OverprintMinLetters)
+                    continue;
+
+                var collided = new HashSet<Letter>();
+                for (var j = i + 1; j < runs.Count; j++)
+                {
+                    if (Math.Abs(runs[j][0].PointSize - runs[i][0].PointSize) < 0.5 || !Overlap(boxes[i], boxes[j]))
+                        continue;
+                    foreach (var later in runs[j].Where(l => !string.IsNullOrWhiteSpace(l.Value)))
+                        foreach (var earlier in inked)
+                            if (Collide(earlier, later))
+                                collided.Add(earlier);
+                }
+
+                if (collided.Count >= OverprintMinLetters && collided.Count >= OverprintShare * inked.Count)
+                    hidden.UnionWith(runs[i]);
+            }
+
+            return hidden.Count == 0 ? letters : letters.Where(letter => !hidden.Contains(letter)).ToList();
+        }
+
+        private static PdfRectangle Bounds(List<Letter> run) => new(
+            run.Min(l => l.BoundingBox.Left), run.Min(l => l.BoundingBox.Bottom),
+            run.Max(l => l.BoundingBox.Right), run.Max(l => l.BoundingBox.Top));
+
+        private static bool Overlap(PdfRectangle a, PdfRectangle b) =>
+            a.Left < b.Right && b.Left < a.Right && a.Bottom < b.Top && b.Bottom < a.Top;
+
+        private static bool Collide(Letter a, Letter b)
+        {
+            var (x, y) = (a.BoundingBox, b.BoundingBox);
+            var width = Math.Min(x.Right, y.Right) - Math.Max(x.Left, y.Left);
+            var height = Math.Min(x.Top, y.Top) - Math.Max(x.Bottom, y.Bottom);
+            if (width <= 0 || height <= 0)
+                return false;
+
+            var smaller = Math.Min(x.Width * x.Height, y.Width * y.Height);
+            return smaller > 0 && width * height >= CollisionShare * smaller;
         }
 
         /// <summary>
