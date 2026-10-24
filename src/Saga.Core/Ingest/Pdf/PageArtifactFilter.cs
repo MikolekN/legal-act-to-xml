@@ -1,4 +1,5 @@
 #nullable enable
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -64,6 +65,7 @@ namespace Saga.Core.Ingest.Pdf
 
             // Artefakty od krawędzi strony do pierwszego wiersza, który nim nie jest — osobno od góry i od dołu.
             var artifacts = new HashSet<PdfTextLine>(ReferenceEqualityComparer.Instance);
+            artifacts.UnionWith(OwnPageNumbers(lines, IsKnownArtifact));
             foreach (var page in lines.Where(IsInMarginZone).GroupBy(l => l.PageNumber))
             {
                 var top = page.Where(l => l.BaselineY > l.PageHeight / 2).OrderByDescending(l => l.BaselineY);
@@ -82,6 +84,27 @@ namespace Saga.Core.Ingest.Pdf
 
             return lines.Where(l => !artifacts.Contains(l)).ToList();
         }
+
+        /// <summary>
+        /// Własna paginacja dokumentu ogłoszonego w załączniku — goła liczba na skraju strony, która rośnie razem
+        /// z numerem strony PDF („1" … „41" pod stronami 3–43 programu — M.P. 2026 poz. 672). Sama liczba bywa komórką
+        /// tabeli na dole strony, więc rozstrzyga ciąg: ta sama różnica między liczbą a numerem strony na co najmniej
+        /// trzech stronach i nic poza znanymi artefaktami między liczbą a krawędzią.
+        /// </summary>
+        private static IEnumerable<PdfTextLine> OwnPageNumbers(List<PdfTextLine> lines, Func<PdfTextLine, bool> isKnownArtifact)
+        {
+            var known = new HashSet<PdfTextLine>(lines.Where(l => IsInMarginZone(l) && isKnownArtifact(l)), ReferenceEqualityComparer.Instance);
+            return lines
+                .Where(l => IsInMarginZone(l) && BarePageNumber.IsMatch(l.Text) && !HasTextBetweenItAndTheEdge(l, lines, known))
+                .GroupBy(l => (Offset: int.Parse(l.Text.Trim(), CultureInfo.InvariantCulture) - l.PageNumber, Top: l.BaselineY > l.PageHeight / 2))
+                .Where(g => g.Select(l => l.PageNumber).Distinct().Count() >= MinimumNumberedPages)
+                .SelectMany(g => g);
+        }
+
+        private static readonly Regex BarePageNumber = new(@"^\s*\d{1,4}\s*$", RegexOptions.Compiled);
+
+        /// <summary>Najmniej stron z własną paginacją, by goła liczba na skraju strony była numerem strony.</summary>
+        private const int MinimumNumberedPages = 3;
 
         /// <summary>Na stronie wiersza stoi bliżej krawędzi tekst, który nie jest artefaktem.</summary>
         private static bool HasTextBetweenItAndTheEdge(PdfTextLine line, List<PdfTextLine> lines, HashSet<PdfTextLine> artifacts)

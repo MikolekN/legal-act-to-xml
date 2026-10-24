@@ -1611,6 +1611,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   zdanie wraca do kolumny oznaczenia pozycji wyliczenia (dalsze wiersze pozycji stoją głębiej), zaczyna nowy akapit —
   dalszą treść jednostki, jak w DOCX ([ADR-0029](docs/adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)).
 
+- **Własna paginacja dokumentu w załączniku PDF**: M.P. 2026 poz. 672 — program ogłoszony w załączniku ma własne numery
+  stron („1" … „41" u dołu stron 3–43), a goła liczba nie jest znanym artefaktem (bywa komórką tabeli) ani nie powtarza się
+  po normalizacji, więc numery trafiały do treści punktów i akapitów. Goła liczba na skraju strony, która na co najmniej
+  trzech stronach rośnie razem z numerem strony PDF (ta sama różnica), jest paginacją i odpada; liczba spoza ciągu albo
+  z tekstem pod sobą zostaje.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

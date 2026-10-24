@@ -634,6 +634,26 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void OwnPageNumbersOfAnAnnexedDocument_AreArtifacts_ButANumberOutOfTheSequenceStays()
+        {
+            // M.P. 2026 poz. 672: program w załączniku numeruje swoje strony gołą liczbą pod tekstem („1" na stronie 3 PDF …).
+            var builder = new TestPdfBuilder();
+            for (int p = 1; p <= 4; p++)
+            {
+                builder.AddPage();
+                WithBodyPadding(builder, fromY: 700);
+                builder.AddText(p == 4 ? "15" : (p + 2).ToString(System.Globalization.CultureInfo.InvariantCulture), 294, 52);
+            }
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.DoesNotContain("3", blocks);
+            Assert.DoesNotContain("4", blocks);
+            Assert.DoesNotContain("5", blocks);
+            Assert.Contains("15", blocks);
+        }
+
+        [Fact]
         public void TypesetterSlugRepeatedAtThePageEdge_IsAPageArtifact()
         {
             // Metryczka składu nad nagłówkiem („DDUTJ.60.214.2025 łamanie 2025-12-22 AMAR (Word)") na obu stronach.
