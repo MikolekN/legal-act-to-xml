@@ -1600,6 +1600,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   przywołuje dalej inny akt z tego samego rocznika („… (Dz. U. poz. 2653) w § 5 wyrazy „… (Dz. U. poz. 1234).”") —
   instrukcje wskazywały akt z cytatu. Pozycje zostają w kolejności wypisania.
 
+- **Podstawa zdarzenia w akcie opartym na paragrafach powołuje „§"**: Dz. U. 2026 poz. 661 — „§ 3. Rozporządzenie
+  wchodzi w życie …" dawało `podstawa="art. 3"`, bo powołanie budowano z eId, a paragraf aktu wykonawczego ma w adresie
+  segment `art` ([ADR-0034](docs/adr/0034-paragraf-jest-jednostka-podstawowa-aktu-wykonawczego.md)). Podstawa jest
+  tekstem powołania, nie adresem — dla paragrafu brzmi „§ 3"; `dowod` zostaje adresem.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

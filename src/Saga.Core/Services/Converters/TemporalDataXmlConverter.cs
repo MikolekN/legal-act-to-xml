@@ -193,7 +193,7 @@ namespace Saga.Core.Services.Converters
             var stated = lifecycleEvent.SourceUnitEId ?? document.EntryIntoForce?.SourceUnitEId;
             if (stated is not null && WellFormedPrefix.Match(stated) is { Success: true, Value: var source })
             {
-                if (Citation(source) is { } citation)
+                if (Citation(source, IsSectionUnit(source, document)) is { } citation)
                     element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Basis, citation));
                 if (document.SourceJournal.GetELIStrings().FirstOrDefault() is { } eli)
                     element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Source, XmlConverterConstants.ELIUrl + "eli/" + eli));
@@ -252,8 +252,18 @@ namespace Saga.Core.Services.Converters
                    ?? written;
         }
 
+        /// <summary>
+        /// Jednostka podstawowa eId jest paragrafem aktu opartego na paragrafach: w adresie ma segment <c>art</c>
+        /// (ADR-0034), w powołaniu — „§" („§ 3. Rozporządzenie wchodzi w życie …" — Dz. U. 2026 poz. 661).
+        /// </summary>
+        private static bool IsSectionUnit(string eId, LegalDocument document)
+        {
+            var basic = eId.Split(EIdSegment.Separator)[0];
+            return document.Articles.Any(article => article.IsSection && article.Id == basic);
+        }
+
         /// <summary>Powołanie jednostki z jej eId („art_43__pkt_1" → „art. 43 pkt 1"); null dla poziomu spoza tabeli.</summary>
-        private static string? Citation(string eId)
+        private static string? Citation(string eId, bool sectionBased)
         {
             var parts = new List<string>();
             foreach (var segment in eId.Split(EIdSegment.Separator))
@@ -261,7 +271,7 @@ namespace Saga.Core.Services.Converters
                 var split = segment.IndexOf('_');
                 var label = segment[..split] switch
                 {
-                    "art" => "art.",
+                    "art" => sectionBased && parts.Count == 0 ? "§" : "art.",
                     "ust" => "ust.",
                     "par" => "§",
                     "pkt" => "pkt",

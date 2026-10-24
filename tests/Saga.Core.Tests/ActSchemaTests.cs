@@ -225,6 +225,20 @@ namespace Saga.Core.Tests
             Assert.Equal(("art. 3", "DU/2024/928__art_3"), BasisOf(xml, "2027-01-01"));
         }
 
+        [Fact]
+        public void EventOfASectionBasedAct_CitesTheSection()
+        {
+            // Dz. U. 2026 poz. 661: „§ 3. Rozporządzenie wchodzi w życie …" — adres ma segment art (ADR-0034), powołanie „§ 3".
+            var xml = Export(
+                "ROZPORZĄDZENIE", "MINISTRA SPRAWIEDLIWOŚCI", "z dnia 17 maja 2026 r.", "w sprawie doręczeń pism",
+                "Na podstawie art. 131 § 5 ustawy z dnia 6 czerwca 1997 r. – Kodeks postępowania karnego zarządza się, co następuje:",
+                "§ 1. Przepis pierwszy.",
+                "§ 2. Przepis drugi.",
+                "§ 3. Rozporządzenie wchodzi w życie z dniem 1 czerwca 2026 r.");
+
+            Assert.Equal(("§ 3", "DU/2024/928__art_3"), BasisOf(xml, "2026-06-01"));
+        }
+
         // ============================================================
         // Zakres wyjątku: adres jednostki w akcie zmienianym
         // ============================================================
