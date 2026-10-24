@@ -1605,6 +1605,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   segment `art` ([ADR-0034](docs/adr/0034-paragraf-jest-jednostka-podstawowa-aktu-wykonawczego.md)). Podstawa jest
   tekstem powołania, nie adresem — dla paragrafu brzmi „§ 3"; `dowod` zostaje adresem.
 
+- **Zdanie za wyliczeniem w PDF**: Dz. U. 2026 poz. 980 — „3) posiada pozytywną opinię … funkcji" / „dyrektora." /
+  „Przepisy ust. 3 pkt 3–6 stosuje się odpowiednio.": gdy odstęp pionowy był tylko trochę większy niż między punktami,
+  zdanie doklejało się do ostatniego punktu jako jego zdanie drugie. Wiersz bez oznaczenia, który za wierszem kończącym
+  zdanie wraca do kolumny oznaczenia pozycji wyliczenia (dalsze wiersze pozycji stoją głębiej), zaczyna nowy akapit —
+  dalszą treść jednostki, jak w DOCX ([ADR-0029](docs/adr/0029-akapit-bez-oznaczenia-jest-dalsza-trescia-jednostki.md)).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

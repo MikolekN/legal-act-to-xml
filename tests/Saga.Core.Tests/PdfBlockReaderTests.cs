@@ -1544,6 +1544,56 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SentenceAfterAList_BackInTheMarkerColumn_StartsABlock()
+        {
+            // Dz. U. 2026 poz. 980: zdanie za wyliczeniem wraca do kolumny oznaczenia punktu; dalszy wiersz punktu stoi głębiej.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("4. Dyrektorem placówki może być osoba, która:", 72, 730);
+            builder.AddText("3) posiada pozytywną opinię organizatora dotyczącą predyspozycji do pełnienia funkcji", 51, 714);
+            builder.AddText("dyrektora.", 72, 702);
+            builder.AddText("Przepisy ust. 3 pkt 3–6 stosuje się odpowiednio.", 51, 686);
+            builder.AddText("5. W przypadku wszczęcia postępowania karnego dyrektora zawiesza się.", 72, 670);
+            WithBodyPadding(builder, fromY: 640);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text).ToList();
+
+            Assert.Contains("3) posiada pozytywną opinię organizatora dotyczącą predyspozycji do pełnienia funkcji dyrektora.", blocks);
+            Assert.Contains("Przepisy ust. 3 pkt 3–6 stosuje się odpowiednio.", blocks);
+        }
+
+        [Fact]
+        public void SentenceAfterAOneLineLastPoint_BackInTheMarkerColumn_StartsABlock()
+        {
+            // Dz. U. 2026 poz. 980, art. 191 ust. 9: ostatni punkt w jednym wierszu, odstęp jak między punktami.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("9. Gmina ponosi wydatki w wysokości:", 72, 730);
+            builder.AddText("2) 30 % wydatków – w drugim roku pobytu dziecka;", 51, 715);
+            builder.AddText("3) 50 % wydatków – w trzecim roku i następnych latach pobytu dziecka.", 51, 700);
+            builder.AddText("Przepisy ust. 2–4 i 7 stosuje się odpowiednio.", 51, 685);
+            WithBodyPadding(builder, fromY: 650);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text).ToList();
+
+            Assert.Contains("3) 50 % wydatków – w trzecim roku i następnych latach pobytu dziecka.", blocks);
+            Assert.Contains("Przepisy ust. 2–4 i 7 stosuje się odpowiednio.", blocks);
+        }
+
+        [Fact]
+        public void ParagraphContinuedAtTheMargin_AfterAFirstLineIndent_StaysOneBlock()
+        {
+            // Ustęp ma wcięcie pierwszego wiersza, nie wiszące: dalszy wiersz przy marginesie ciągnie go dalej.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("3. W placówce typu rodzinnego można zatrudnić tylko osobę wskazaną przez dyrektora.", 72, 730);
+            builder.AddText("Może to być osoba z nim spokrewniona lub jego małżonek.", 51, 718);
+            WithBodyPadding(builder, fromY: 690);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text).ToList();
+
+            Assert.Contains("3. W placówce typu rodzinnego można zatrudnić tylko osobę wskazaną przez dyrektora. " +
+                            "Może to być osoba z nim spokrewniona lub jego małżonek.", blocks);
+        }
+
+        [Fact]
         public void QuoteClosedInItsLineWithTheSentenceGoingOn_ContinuesTheSentenceAfterAColon()
         {
             // Dz. U. 2026 poz. 1328: cytat w zdaniu za dwukropkiem — nie treść cytowana nowelizacji.

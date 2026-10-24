@@ -829,6 +829,7 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && IsHeadingOpeningAPage(line, prev))
                     || (forceBoundary is null && StartsSecondWordingOfAnIntroduction(line, prev))
                     || (forceBoundary is null && IsTitleUnderAnAttachmentLine(line, blockFirst))
+                    || (forceBoundary is null && ReturnsToTheMarkerColumnAfterASentence(line, prev, blockFirst))
                     || (forceBoundary is null && (TableCaptionPattern.IsMatch(line.Text) || TableCaptionPattern.IsMatch(prev.Text)))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
@@ -1066,6 +1067,38 @@ namespace Saga.Core.Ingest.Pdf
         private static bool IsHeadingOpeningAPage(PdfTextLine line, PdfTextLine prev) =>
             line.PageNumber != prev.PageNumber
             && ((IsUppercaseHeading(line.Text) && !IsUppercaseHeading(prev.Text)) || AnnexDesignationLinePattern.IsMatch(line.Text.Trim()));
+
+        /// <summary>
+        /// Zdanie za wyliczeniem w nowym akapicie („3) posiada pozytywną opinię … funkcji" / „dyrektora." / „Przepisy ust. 3
+        /// pkt 3–6 stosuje się odpowiednio." — Dz. U. 2026 poz. 980). Pozycja wyliczenia ma wcięcie wiszące: jej dalsze wiersze
+        /// stoją głębiej niż oznaczenie, więc wiersz bez oznaczenia, który wraca do kolumny oznaczenia za wierszem kończącym
+        /// zdanie, jej nie ciągnie. Odstęp pionowy tego nie rozstrzyga — bywa ledwie większy niż między pozycjami. Pozycja
+        /// w jednym wierszu („3) 50 % wydatków … w pieczy zastępczej." / „Przepisy ust. 2–4 i 7 stosuje się odpowiednio.")
+        /// wcięcia nie pokazuje, ale kropka kończy ostatnią pozycję wyliczenia (§ 56 ZTP), a jej dalszy wiersz nie wraca
+        /// do kolumny oznaczenia — przy wcięciu pierwszego wiersza ustępu wraca do marginesu, nie do wcięcia.
+        /// </summary>
+        private static bool ReturnsToTheMarkerColumnAfterASentence(PdfTextLine line, PdfTextLine prev, PdfTextLine? blockFirst)
+        {
+            if (blockFirst is null || line.PageNumber != prev.PageNumber
+                || !(ListNumberPattern.IsMatch(blockFirst.Text) || ListLetterPattern.IsMatch(blockFirst.Text)))
+                return false;
+
+            var text = line.Text.TrimStart();
+            var prevText = TrailingFootnoteAnchor.Replace(prev.Text.TrimEnd(), string.Empty);
+            return prevText.EndsWith('.')
+                && text.Length > 0 && char.IsUpper(text[0])
+                && Math.Abs(line.StartX - blockFirst.StartX) <= MarkerColumnTolerancePoints
+                && (ReferenceEquals(prev, blockFirst) || prev.StartX - blockFirst.StartX >= HangingIndentMinPoints);
+        }
+
+        /// <summary>Litera wyliczenia na początku wiersza: „a) ", „zb) ".</summary>
+        private static readonly Regex ListLetterPattern = new(@"^[a-z]{1,2}\)\s", RegexOptions.Compiled);
+
+        /// <summary>Tolerancja kolumny oznaczenia pozycji wyliczenia.</summary>
+        private const double MarkerColumnTolerancePoints = 1.5;
+
+        /// <summary>Najmniejsze wcięcie wiszące dalszych wierszy pozycji wyliczenia względem jej oznaczenia.</summary>
+        private const double HangingIndentMinPoints = 6;
 
         /// <summary>
         /// Tytuł załącznika wersalikami pod wierszem przyłączenia („Załącznik do rozporządzenia … (Dz. U. poz. 1337)" /
