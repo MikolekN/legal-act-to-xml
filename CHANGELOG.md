@@ -1594,6 +1594,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   długoterminowe", ADR-0111). Spójnik bywa końcówką przeniesionego wyrazu: gdy dokument zna wyraz sklejony albo człon
   przed „czy" kończy się spółgłoską, dywiz to przeniesienie.
 
+- **Akt zmieniany to pierwsza wypisana pozycja publikatora**: Dz. U. 2026 poz. 638 — „W ustawie … – Kodeks postępowania
+  karnego (Dz. U. z 2026 r. poz. 490 i 421)": pozycje rocznika były sortowane, więc aktem zmienianym instrukcji stawała się
+  najmniejsza — zmiana ogłoszona przed tekstem jednolitym (DU/2026/421 zamiast DU/2026/490). Tak samo, gdy przepis
+  przywołuje dalej inny akt z tego samego rocznika („… (Dz. U. poz. 2653) w § 5 wyrazy „… (Dz. U. poz. 1234).”") —
+  instrukcje wskazywały akt z cytatu. Pozycje zostają w kolejności wypisania.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

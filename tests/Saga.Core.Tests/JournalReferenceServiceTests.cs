@@ -90,6 +90,23 @@ namespace Saga.Core.Tests
             Assert.Equal(positions, journal.Positions);
         }
 
+        [Theory]
+        // Pierwsza wypisana pozycja to akt zmieniany: dalsze są jego zmianami, także ogłoszonymi wcześniej w tym roczniku
+        // (Dz. U. 2026 poz. 638), albo innym aktem przywołanym dalej w przepisie (korpus 335351).
+        [InlineData("Art. 1. W ustawie z dnia 6 czerwca 1997 r. – Kodeks postępowania karnego (Dz. U. z 2026 r. poz. 490 i 421) " +
+                    "w art. 25 w § 1 pkt 2 otrzymuje brzmienie:", "DU/2026/490")]
+        [InlineData("§ 1. W rozporządzeniu Ministra Edukacji i Nauki z dnia 4 grudnia 2023 r. zmieniającym rozporządzenie (Dz. U. poz. 2653) " +
+                    "w § 5 wyrazy „określonym w komunikacie wydanym na podstawie art. 74 ustawy z dnia 26 maja 2023 r. o aplikacji mObywatel " +
+                    "(Dz. U. poz. 1234).” zastępuje się wyrazami „określonym w komunikacie”.", "DU/2023/2653")]
+        public void AmendedAct_IsTheFirstCitedPosition(string text, string eli)
+        {
+            var article = new Article { ContentText = text, IsSection = text.StartsWith('§') };
+
+            _service.ParseJournalReferences(article);
+
+            Assert.Equal(eli, article.Journals[0].GetELIStrings().First());
+        }
+
         [Fact]
         public void ParseJournalReferences_MergesPositionsForSameYear()
         {

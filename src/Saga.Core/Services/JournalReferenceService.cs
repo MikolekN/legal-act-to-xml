@@ -145,8 +145,11 @@ namespace Saga.Core.Services
                     .Select(n => n!.Value)
                     .ToList();
 
+                // Kolejność wypisania, nie liczbowa: pierwsza pozycja to akt (jego tekst jednolity), dalsze — jego zmiany,
+                // także ogłoszone wcześniej („(Dz. U. z 2026 r. poz. 490 i 421)" — Dz. U. 2026 poz. 638), albo inny akt
+                // przywołany dalej w tym samym przepisie („… (Dz. U. poz. 2653) w § 5 wyrazy „… (Dz. U. poz. 1234).”").
                 journalInfo.Positions.AddRange(positionNumbers);
-                journalInfo.Positions = journalInfo.Positions.Distinct().OrderBy(p => p).ToList();
+                journalInfo.Positions = journalInfo.Positions.Distinct().ToList();
             }
 
             return journals;
