@@ -1645,6 +1645,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   Rep. C, pod którym …" dzieliło punkt na dwa zdania. Repertorium oznacza się literą, więc skrót wymaga dopełnienia
   jak „ds." albo „im.".
 
+- **Zdanie pod tytułem wersalikami i podpis tabeli na górze strony PDF**: Dz. U. 2026 poz. 669, załącznik nr 3 —
+  odstęp pod tytułem „KRYTERIA KLASYFIKACJI … ZAOPATRZENIA MEDYCZNEGO" był ledwie większy niż interlinia, więc pierwszy
+  akapit („Do obrotu w sklepach …") stawał się częścią tytułu; zdanie pod wierszem wersalikami, złożone innym stopniem
+  pisma albo z odstępem większym niż interlinia, zaczyna nowy blok. Podpis „Tabela nr 1. Wykaz substancji, …" na górze
+  strony za zdaniem zakończonym kropką doklejał się do ostatniego punktu — zaczyna blok.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

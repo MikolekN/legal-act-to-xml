@@ -831,6 +831,8 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && IsTitleUnderAnAttachmentLine(line, blockFirst))
                     || (forceBoundary is null && ReturnsToTheMarkerColumnAfterASentence(line, prev, blockFirst))
                     || (forceBoundary is null && (TableCaptionPattern.IsMatch(line.Text) || TableCaptionPattern.IsMatch(prev.Text)))
+                    || (forceBoundary is null && IsTableCaptionAfterASentence(line, prev))
+                    || (forceBoundary is null && !inCell && IsSentenceUnderAnUppercaseHeading(line, prev, typicalGap))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
                     || (forceBoundary is null && line.PageNumber == prev.PageNumber
@@ -1044,6 +1046,41 @@ namespace Saga.Core.Ingest.Pdf
         /// poz. 1292): stoi sam, nie kończy tytułu nad nim i nie zaczyna akapitu pod nim.
         /// </summary>
         private static readonly Regex TableCaptionPattern = new(@"^\s*Tabela\s+(?:nr\s+)?\d+[a-z]?\.?\s*$", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Podpis tabeli z jej tytułem w jednym wierszu („Tabela nr 1. Wykaz substancji, które …") za zdaniem zakończonym
+        /// kropką — na górze strony, pod którą kończy się poprzedni akapit (Dz. U. 2026 poz. 669, załącznik nr 3), odstęp
+        /// pionowy nic nie mówi, a podpis doklejał się do ostatniego punktu.
+        /// </summary>
+        private static bool IsTableCaptionAfterASentence(PdfTextLine line, PdfTextLine prev) =>
+            TableCaptionWithTitlePattern.IsMatch(line.Text)
+            && TrailingFootnoteAnchor.Replace(prev.Text.TrimEnd(), string.Empty).EndsWith('.');
+
+        private static readonly Regex TableCaptionWithTitlePattern = new(@"^\s*Tabela\s+(?:nr\s+)?\d+[a-z]?\.\s+\p{Lu}", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Zdanie pod tytułem wersalikami („… ZAOPATRZENIA MEDYCZNEGO" / „Do obrotu w sklepach … są dopuszczone …" — Dz. U.
+        /// 2026 poz. 669, załącznik nr 3): odstęp pod tytułem bywa ledwie większy niż interlinia, ale tytuł i akapit różni
+        /// wielkość liter i pismo — tytuł nie przechodzi w zdanie. Dwa sygnały: wiersz zaczyna się jak zdanie (wielka litera,
+        /// za nią mała) pod wierszem wersalikami, a do tego zmienia się stopień pisma albo odstęp jest większy niż interlinia.
+        /// </summary>
+        private static bool IsSentenceUnderAnUppercaseHeading(PdfTextLine line, PdfTextLine prev, double typicalGap)
+        {
+            var text = line.Text.TrimStart();
+            if (text.Length < 2 || !char.IsUpper(text[0]) || !char.IsLower(text[1])
+                || !IsUppercaseHeading(prev.Text) || IsUppercaseHeading(line.Text))
+                return false;
+
+            var otherSize = Math.Abs(line.DominantSize - prev.DominantSize) >= HeadingSizeDifferencePoints;
+            var widerGap = line.PageNumber == prev.PageNumber && prev.BaselineY - line.BaselineY > HeadingGapRatio * typicalGap;
+            return otherSize || widerGap;
+        }
+
+        /// <summary>Najmniejsza różnica stopnia pisma między tytułem a akapitem pod nim (10 pt i 9,3 pt w Dz. U.).</summary>
+        private const double HeadingSizeDifferencePoints = 0.3;
+
+        /// <summary>Odstęp pod tytułem większy niż interlinia akapitu — mniejszy niż odstęp akapitowy (<see cref="ParagraphSpacingRatio"/>).</summary>
+        private const double HeadingGapRatio = 1.15;
 
         /// <summary>Wiersz kończy się przecinkiem, także za cudzysłowem zamykającym.</summary>
         private static readonly Regex CommaEndPattern = new($@",[{QuotationMarks.ClosingOrStraight}]*$", RegexOptions.Compiled);

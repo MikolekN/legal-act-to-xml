@@ -542,6 +542,44 @@ namespace Saga.Core.Tests
             Assert.Contains("OPIS WZORU LEGITYMACJI SŁUŻBOWEJ", blocks);
         }
 
+        [Theory]
+        // Dz. U. 2026 poz. 669, załącznik nr 3: tytuł 10 pt, akapit 9,3 pt, odstęp mniejszy niż odstęp akapitowy.
+        [InlineData(9.3, true)]
+        // Ten sam stopień i interlinia — nic nie mówi, że tytuł się skończył.
+        [InlineData(10, false)]
+        public void SentenceUnderATitleInCapitals_InAnotherSize_StartsItsOwnBlock(double paragraphSize, bool separate)
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("KRYTERIA KLASYFIKACJI PRODUKTÓW LECZNICZYCH DO WYKAZÓW", 130, 726, 10);
+            builder.AddText("ORAZ SKLEPACH SPECJALISTYCZNYCH ZAOPATRZENIA MEDYCZNEGO", 128, 714, 10);
+            builder.AddText("Do obrotu w sklepach ogólnodostępnych są dopuszczone produkty lecznicze.", 69, 700, paragraphSize);
+            WithBodyPadding(builder, fromY: 650);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Equal(separate, blocks.Contains("Do obrotu w sklepach ogólnodostępnych są dopuszczone produkty lecznicze."));
+            Assert.Equal(separate, blocks.Any(b => b.EndsWith("ZAOPATRZENIA MEDYCZNEGO", StringComparison.Ordinal)));
+        }
+
+        [Fact]
+        public void TableCaptionWithItsTitle_AtThePageStart_AfterASentence_StartsItsOwnBlock()
+        {
+            // Dz. U. 2026 poz. 669, załącznik nr 3: „3) … przedawkowania." na końcu strony, „Tabela nr 1. Wykaz substancji, …"
+            // na następnej — podpis doklejał się do punktu.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("3) niekontrolowane stosowanie wiąże się z ryzykiem przedawkowania.", 57, 90);
+            builder.AddPage();
+            builder.AddText("Tabela nr 1. Wykaz substancji, które mogą występować w produktach leczniczych", 52, 756);
+            builder.AddText("dopuszczonych do obrotu w sklepach ogólnodostępnych", 52, 745);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("3) niekontrolowane stosowanie wiąże się z ryzykiem przedawkowania.", blocks);
+            Assert.Contains(blocks, b => b.StartsWith("Tabela nr 1. Wykaz substancji", StringComparison.Ordinal));
+        }
+
         [Fact]
         public void AnnexTitleInCapitals_UnderTheAttachmentLine_StartsItsOwnBlock()
         {
