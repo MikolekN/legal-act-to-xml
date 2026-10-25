@@ -1662,6 +1662,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   glifu pomiędzy jest rozstrzeleniem — wyrazy dzieli dalej glif spacji. W PDF-ie bez glifów spacji luka zostaje
   odstępem.
 
+- **Punktory w PDF**: M.P. 2026 poz. 343 i 909 — pozycje wyliczenia z punktorem („✓", „•", „▪") bez odstępu
+  akapitowego sklejały się w jeden akapit ze zdaniem, które je wprowadza. Punktor na początku wiersza zaczyna blok,
+  jak tiret.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

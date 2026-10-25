@@ -617,6 +617,24 @@ namespace Saga.Core.Tests
             Assert.Equal(separate, blocks.Any(b => b.EndsWith("ZAOPATRZENIA MEDYCZNEGO", StringComparison.Ordinal)));
         }
 
+        [Theory]
+        // M.P. 2026 poz. 909: pozycje bez odstępu akapitowego („✓" w M.P. 2026 poz. 343 i „▪" Helvetica nie ma).
+        [InlineData("•")]
+        public void BulletedItems_WithoutParagraphSpacing_AreSeparateBlocks(string bullet)
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("Działania w następujących obszarach:", 57, 760);
+            builder.AddText($"{bullet} wsparcie rozwoju infrastruktury,", 70, 746);
+            builder.AddText($"{bullet} wymiana łóżek szpitalnych.", 70, 732);
+            WithBodyPadding(builder, fromY: 690);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("Działania w następujących obszarach:", blocks);
+            Assert.Contains($"{bullet} wsparcie rozwoju infrastruktury,", blocks);
+            Assert.Contains($"{bullet} wymiana łóżek szpitalnych.", blocks);
+        }
+
         [Fact]
         public void TableCaptionWithItsTitle_AtThePageStart_AfterASentence_StartsItsOwnBlock()
         {

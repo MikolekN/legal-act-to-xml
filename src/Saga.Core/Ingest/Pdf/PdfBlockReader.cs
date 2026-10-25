@@ -70,12 +70,17 @@ namespace Saga.Core.Ingest.Pdf
         /// Oznaczenie artykułu i paragrafu kończy kropka za numerem („Art. 28.", „§ 2.", „Art. 480–524."): powołanie,
         /// które zawinięcie zdania postawiło na początku wiersza („Art. 57 § 1 Kodeksu postępowania karnego stosuje się
         /// odpowiednio." — Dz. U. 2026 poz. 1336), granicy nie wyznacza.
+        /// Punktor wyliczenia („•", „▪", „✓" — programy ogłaszane w M.P., objaśnienia wzorów deklaracji) zaczyna pozycję jak
+        /// tiret: bez odstępu przed nią wszystkie pozycje sklejały się w jeden akapit (M.P. 2026 poz. 343, 909).
         /// </summary>
         private static readonly Regex UnconditionalMarkerPattern = new(
             @"^(?:(?:Art\.|§)\s*" + UnitNumberWithDot + ArticleNumberBeforeParagraph + @"|USTAWA\b|ROZPORZĄDZENIE\b|OBWIESZCZENIE\b|UCHWAŁA\b|ZARZĄDZENIE\b" +
             @"|CZĘŚĆ\s|KSIĘGA\s|TYTUŁ\s|DZIAŁ\s|ROZDZIAŁ\s|Rozdział\s|ODDZIAŁ\s|Oddział\s" +
-            @"|[a-z]{1,2}\)(?:\[[^\[\]]*\])?\s|[" + Dashes.Any + @"]\s)",
+            @"|[a-z]{1,2}\)(?:\[[^\[\]]*\])?\s|[" + Dashes.Any + @"]\s|[" + Bullets + @"]\s)",
             RegexOptions.Compiled);
+
+        /// <summary>Punktory wyliczeń w tekście PDF.</summary>
+        private const string Bullets = "•●▪■◦✓✔➢►";
 
         /// <summary>
         /// Numer artykułu albo paragrafu z kropką: litery i indeks górny („5a", „48ł", „5[1]"), zakres — także z powtórzonym
