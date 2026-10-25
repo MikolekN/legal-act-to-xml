@@ -696,12 +696,44 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// Odnotowuje zmianę załączników zapisaną odesłaniem do załączników aktu zmieniającego
-        /// (<see cref="AnnexInstructionReader"/>) — dołączy ją nowelizacja tego przepisu.
+        /// (<see cref="AnnexInstructionReader"/>) — dołączy ją nowelizacja tego przepisu. Załącznik, w którym przepis stoi
+        /// z woli przepisu nadrzędnego, niesie cel odziedziczony z jego miejsca („2) w załączniku do uchwały:").
         /// </summary>
         private static void NoteAnnexInstructions(ParsingContext context, string text)
         {
-            if (GetOwner(context) is { } owner && AnnexInstructionReader.Read(text) is { Count: > 0 } instructions)
+            if (GetOwner(context) is not { } owner)
+                return;
+
+            var instructions = AnnexInstructionReader.Read(text);
+            if (instructions.Count == 0
+                && context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid) is [{ Structure.Annex: { Length: > 0 } enclosingAnnex }, ..])
+            {
+                instructions = AnnexInstructionReader.ReadPartUnderAnAnnex(owner.ContentText, enclosingAnnex, PlacesInTheAnnex(owner));
+            }
+
+            if (instructions.Count > 0)
                 context.PendingAnnexInstructions[owner.Guid] = instructions;
+        }
+
+        /// <summary>
+        /// Miejsca w załączniku podane przez przepisy nadrzędne, od najdalszego: „a) w tabeli XII:" nad „– część I. …
+        /// otrzymuje brzmienie określone w załączniku nr 2 …" — bez nich dwie części „część I" tabel XII i XIII
+        /// (korpus 326724) nie różniłyby się niczym. Kończy je przepis, który nazywa załącznik, albo taki, który miejsca
+        /// nie podaje.
+        /// </summary>
+        private static List<string> PlacesInTheAnnex(BaseEntity owner)
+        {
+            var places = new List<string>();
+            for (var ancestor = owner.Parent; ancestor is not null; ancestor = ancestor.Parent)
+            {
+                var place = AnnexInstructionReader.PlaceOfAnIntroduction(ancestor.ContentText, out var namesTheAnnex);
+                if (place is not null)
+                    places.Insert(0, place);
+                if (namesTheAnnex || place is null)
+                    break;
+            }
+
+            return places;
         }
 
         /// <summary>Nowelizacja bez treści cytowanej i bez zmian w tekście — niesie to, co na nią czekało.</summary>

@@ -132,6 +132,23 @@ namespace Saga.Core.Tests
             Assert.Equal([(true, target, part, "1")], ReadParts(text));
         }
 
+        [Fact]
+        public void PartNamedUnderAPlaceInAnAnnex_IsAnInstructionOnTheEnclosingAnnex()
+        {
+            // M.P. 2026 poz. 343: „2) w załączniku do uchwały:" / „a) rozdział I „Informacje ogólne” otrzymuje brzmienie
+            // określone w załączniku nr 1 do niniejszej uchwały" — załącznik nazywa przepis nadrzędny.
+            const string replaced = "rozdział I „Informacje ogólne” otrzymuje brzmienie określone w załączniku nr 1 do niniejszej uchwały,";
+            const string added = "po podrozdziale III.5. „Geriatria” dodaje się podrozdział III.5a. „Centrum Zdrowia 75+” w brzmieniu określonym w załączniku nr 3 do niniejszej uchwały,";
+
+            Assert.Equal([(false, "1", "rozdział I „Informacje ogólne”", "1")],
+                AnnexInstructionReader.ReadPartUnderAnAnnex(replaced, enclosingAnnex: "1").Select(i => (i.Adds, i.Target, i.Part, i.Source)));
+            Assert.Equal([(true, "13", "podrozdział III.5a. „Centrum Zdrowia 75+”", "3")],
+                AnnexInstructionReader.ReadPartUnderAnAnnex(added, enclosingAnnex: "13").Select(i => (i.Adds, i.Target, i.Part, i.Source)));
+
+            // Bez miejsca w załączniku część nie wskazuje żadnego załącznika aktu zmienianego.
+            Assert.Empty(AnnexInstructionReader.Read(replaced));
+        }
+
         private static System.Xml.Linq.XElement Convert(params string[] body)
         {
             // Akt bez nagłówka dziennika nie ma własnego prefiksu — adres załącznika aktu zmieniającego zostaje bez niego.
@@ -186,6 +203,63 @@ namespace Saga.Core.Tests
             Assert.Equal("brak", Attr(citation, "cudzyslowy"));
             Assert.Equal("tabela D", citation.Value);
             Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "zastap");
+        }
+
+        [Fact]
+        public void PartChangedByReference_UnderAPlaceInAnAnnex_IsAManualInstructionOnThatAnnex()
+        {
+            // Korpus 307572_2743131: „10) w załączniku nr 13 do ustawy „Plany finansowe państwowych funduszy celowych”:" /
+            // „a) plan finansowy …, ustalony w tabeli 9, otrzymuje brzmienie określone w załączniku nr 7 do niniejszej ustawy,".
+            var xml = Convert(
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w załączniku nr 13 do ustawy „Plany finansowe państwowych funduszy celowych”:",
+                "a) plan finansowy Funduszu Cyberbezpieczeństwa, ustalony w tabeli 9, otrzymuje brzmienie określone w załączniku nr 7 do niniejszej ustawy,",
+                "b) po planie finansowym Funduszu Pracy dodaje się plan finansowy Funduszu Solidarnościowego w brzmieniu określonym w załączniku nr 8 do niniejszej ustawy;",
+                "2) w załączniku nr 14 do ustawy uchyla się tabelę 3.");
+
+            var citations = xml.Descendants().Where(e => e.Name.LocalName == "cytat-w-tekscie").ToList();
+            Assert.Equal(["zastap-recznie", "dodaj-recznie"], citations.Take(2).Select(c => Attr(c, "funkcja")));
+            Assert.All(citations.Take(2), c => Assert.Equal("DU/2021/200__zal_13", Attr(c, "element-eId")));
+            Assert.Equal("plan finansowy Funduszu Cyberbezpieczeństwa, ustalony w tabeli 9", citations[0].Value);
+            Assert.Equal("plan finansowy Funduszu Solidarnościowego", citations[1].Value);
+        }
+
+        [Fact]
+        public void PartChangedByReference_UnderPlacesInAnAnnex_StartsWithThosePlaces()
+        {
+            // Korpus 326724_2995341: „3) w załączniku nr 3 do rozporządzenia:" / „a) w tabeli XII:" / „– część I. …" i znów
+            // „b) w tabeli XIII:" / „– część I. …" — bez tabeli obie części brzmiałyby tak samo.
+            var xml = Convert(
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w załączniku nr 3 do ustawy:",
+                "a) w tabeli XII:",
+                "– część I. Wszystkie urzędy otrzymuje brzmienie określone w załączniku nr 2 do niniejszej ustawy,",
+                "b) w tabeli XIII:",
+                "– część I. Wszystkie urzędy otrzymuje brzmienie określone w załączniku nr 5 do niniejszej ustawy,",
+                "c) tabela XV otrzymuje brzmienie określone w załączniku nr 7 do niniejszej ustawy;",
+                "2) w załączniku nr 4 do ustawy w tabeli B:",
+                "a) część A otrzymuje brzmienie określone w załączniku nr 8 do niniejszej ustawy.");
+
+            var citations = xml.Descendants().Where(e => e.Name.LocalName == "cytat-w-tekscie").ToList();
+            Assert.Equal(
+                ["w tabeli XII część I. Wszystkie urzędy", "w tabeli XIII część I. Wszystkie urzędy", "tabela XV", "w tabeli B część A"],
+                citations.Select(c => c.Value));
+            Assert.Equal(["DU/2021/200__zal_3", "DU/2021/200__zal_3", "DU/2021/200__zal_3", "DU/2021/200__zal_4"],
+                citations.Select(c => Attr(c, "element-eId")));
+        }
+
+        [Theory]
+        [InlineData("w tabeli XII:", "w tabeli XII", false)]
+        [InlineData("w rozdziale III „Wsparcie rozwoju infrastruktury”:", "w rozdziale III „Wsparcie rozwoju infrastruktury”", false)]
+        [InlineData("w załączniku nr 3 do rozporządzenia:", null, true)]
+        [InlineData("w załączniku nr 4 do rozporządzenia w tabeli B:", "w tabeli B", true)]
+        [InlineData("w załączniku do uchwały wprowadza się następujące zmiany:", null, true)]
+        [InlineData("w ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:", null, false)]
+        [InlineData("w art. 5 ust. 2 otrzymuje brzmienie:", null, false)]
+        public void PlaceOfAnIntroduction_IsWhatTheParentProvisionNames(string text, string? place, bool namesTheAnnex)
+        {
+            Assert.Equal(place, AnnexInstructionReader.PlaceOfAnIntroduction(text, out var names));
+            Assert.Equal(namesTheAnnex, names);
         }
 
         [SchemaPlFact]

@@ -1623,6 +1623,15 @@ a wersjonowanie zgodne z Semantic Versioning.
   jak komenda bez dwukropka, komendą dopiero wtedy, gdy następny blok otwiera cudzysłów; przepis dostaje ostrzeżenie.
   „Dodaje się odnośnik według wzoru:" przed cytatem wzoru komendą nie jest.
 
+- **Część załącznika zmieniana odesłaniem pod miejscem w załączniku**: M.P. 2026 poz. 343 — „2) w załączniku do
+  uchwały:" / „a) rozdział I „Informacje ogólne” otrzymuje brzmienie określone w załączniku nr 1 do niniejszej
+  uchwały": załącznik nazywał przepis nadrzędny, a sam przepis tylko część, więc zmiana nie dawała żadnej instrukcji
+  (8 komend tej uchwały; w korpusie DOCX m.in. plany finansowe funduszy w 307572 i tabele w 326724). Część dostaje
+  instrukcję ręczną na załączniku odziedziczonym z miejsca przepisu nadrzędnego, jak część nazwana razem z załącznikiem
+  ([ADR-0108](docs/adr/0108-czesc-zalacznika-zmieniana-odeslaniem-to-instrukcja-reczna.md)); część zaczyna się
+  miejscami podanymi przez przepisy pośrednie („w tabeli XII część I. …"), inaczej dwie „część I" tabel XII i XIII
+  brzmiałyby tak samo.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

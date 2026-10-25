@@ -58,6 +58,27 @@ namespace Saga.Core.Services.Parsing
             + $@"(?:\s+{QuotationMarks.Opening}[^{QuotationMarks.Closing}]*[{QuotationMarks.Closing}])?)\s+otrzymuje\s+brzmienie\s+" + Specified + @"e\s+" + Sources,
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        // Część zmieniana albo dodawana odesłaniem w przepisie pod miejscem w załączniku („2) w załączniku do uchwały:" /
+        // „a) rozdział I „Informacje ogólne” otrzymuje brzmienie określone w załączniku nr 1 do niniejszej uchwały" —
+        // M.P. 2026 poz. 343): załącznik nazywa przepis nadrzędny, ten nazywa tylko część.
+        private static readonly Regex PartReplacementUnderAnAnnex = new(
+            @"^(?<part>\S.*?)\s+otrzymuj[eą]\s+brzmienie\s+" + Specified + @"e\s+" + Sources,
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        private static readonly Regex PartAdditionUnderAnAnnex = new(
+            @"^(?:\S.*?\s+)?dodaje\s+się\s+(?<part>\S.*?)\s+w\s+brzmieniu\s+" + Specified + @"ym\s+" + Sources,
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        // Przepis nadrzędny podający miejsce zmian: „w załączniku nr 3 do rozporządzenia:", „w tabeli XII:",
+        // „w rozdziale III „…”:" — ewentualnie z zapowiedzią zmian, która miejsca nie zmienia.
+        private static readonly Regex AnnexOfAnIntroduction = new(
+            @"(?<![\p{L}])w\s+załączniku(?:\s+nr\s+\d+[a-z]*)?(?:\s+do\s+(?!niniejsz)[\p{L}]+)?"
+            + $@"(?:\s+{QuotationMarks.Opening}[^{QuotationMarks.Closing}]*[{QuotationMarks.Closing}])?(?<rest>[^:]*):\s*$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly Regex PlaceIntroduction = new(@"^w\s+[^:]+:\s*$", RegexOptions.Compiled);
+        private static readonly Regex NamesAnAct = new(@"\bz\s+dnia\b|\((?:Dz\.|M\.\s?P\.)", RegexOptions.Compiled);
+        private static readonly Regex ChangesAnnounced = new(@"\s*\bwprowadza\s+się\s+(?:następując[eą]\s+)?zmian[ay]\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         private static readonly Regex Range = new($@"^(?<from>\d+)\s*[{Dashes.Any}]\s*(?<to>\d+)$", RegexOptions.Compiled);
         private static readonly Regex Item = new($@"\d+[a-z]*(?:\s*[{Dashes.Any}]\s*\d+[a-z]*)?", RegexOptions.Compiled);
         private static readonly Regex Number = new(@"\d+[a-z]*", RegexOptions.Compiled);
@@ -65,6 +86,57 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>Najdłuższy przedział rozwijany w pojedyncze załączniki; dłuższy to raczej błąd odczytu.</summary>
         private const int LongestRange = 50;
+
+        /// <summary>
+        /// Część zmieniana albo dodawana odesłaniem w przepisie, który stoi w załączniku aktu zmienianego z woli przepisu
+        /// nadrzędnego („w załączniku nr 13 do ustawy:") i nazywa tylko część — instrukcja na tym załączniku. Treść
+        /// przepisu bez jego oznaczenia; <paramref name="places"/> — miejsca w załączniku z przepisów nadrzędnych, od
+        /// najdalszego („w tabeli XII"), którymi część się zaczyna, tak jak w przepisie, który nazywa wszystko sam
+        /// („w tabeli VI część I. Urzędy morskie"). Pusta lista, gdy przepis nie zmienia części odesłaniem.
+        /// </summary>
+        internal static IReadOnlyList<AnnexInstruction> ReadPartUnderAnAnnex(string? content, string enclosingAnnex, IReadOnlyList<string>? places = null)
+        {
+            if (string.IsNullOrWhiteSpace(content))
+                return [];
+
+            content = content.Trim();
+            var added = PartAdditionUnderAnAnnex.Match(content);
+            var match = added.Success ? added : PartReplacementUnderAnAnnex.Match(content);
+            if (!match.Success)
+                return [];
+
+            var instruction = Part(match, adds: added.Success, enclosingAnnex);
+            if (places is { Count: > 0 })
+                instruction.Part = string.Join(" ", places.Append(instruction.Part));
+            return [instruction];
+        }
+
+        /// <summary>
+        /// Miejsce w załączniku, które podaje przepis nadrzędny zakończony dwukropkiem: „w tabeli XII:" → „w tabeli XII",
+        /// „w załączniku nr 3 do rozporządzenia w tabeli XII:" → „w tabeli XII" (i <paramref name="namesTheAnnex"/>);
+        /// null, gdy przepis miejsca nie podaje (sam załącznik też nie jest miejscem w nim). Przepis nazywający akt
+        /// („w ustawie z dnia …") miejscem w załączniku nie jest.
+        /// </summary>
+        internal static string? PlaceOfAnIntroduction(string? text, out bool namesTheAnnex)
+        {
+            namesTheAnnex = false;
+            text = text?.Trim();
+            if (string.IsNullOrEmpty(text))
+                return null;
+
+            if (AnnexOfAnIntroduction.Match(text) is { Success: true } annex)
+            {
+                namesTheAnnex = true;
+                var rest = ChangesAnnounced.Replace(annex.Groups["rest"].Value, string.Empty).Trim();
+                return rest.Length > 0 ? rest : null;
+            }
+
+            if (!PlaceIntroduction.IsMatch(text) || NamesAnAct.IsMatch(text))
+                return null;
+
+            var place = ChangesAnnounced.Replace(text.TrimEnd().TrimEnd(':'), string.Empty).Trim();
+            return AmendmentCommandParser.HasChangeVerb(place) ? null : place;
+        }
 
         /// <summary>Instrukcje zapisane w przepisie; pusta lista, gdy przepis nie zmienia załączników odesłaniem.</summary>
         internal static IReadOnlyList<AnnexInstruction> Read(string? text)
@@ -93,10 +165,10 @@ namespace Saga.Core.Services.Parsing
         /// Część załącznika zmieniana albo dodawana odesłaniem: jedna instrukcja na załącznik, w którym stoi, z częścią
         /// nazwaną tak jak w przepisie. Załącznik bez numeru to jedyny — „1" (ADR-0099).
         /// </summary>
-        private static AnnexInstruction Part(Match match, bool adds) => new()
+        private static AnnexInstruction Part(Match match, bool adds, string? enclosingAnnex = null) => new()
         {
             Adds = adds,
-            Target = match.Groups["target"].Success ? match.Groups["target"].Value : Annex.OnlyAnnexNumber,
+            Target = match.Groups["target"].Success ? match.Groups["target"].Value : enclosingAnnex ?? Annex.OnlyAnnexNumber,
             Part = match.Groups["part"].Value.Trim().TrimEnd(',', ' '),
             Source = Expand(match.Groups["sources"].Value, single: !match.Groups["sourcesPlural"].Success).FirstOrDefault(),
         };
