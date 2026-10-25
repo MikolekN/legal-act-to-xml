@@ -838,10 +838,11 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && (TableCaptionPattern.IsMatch(line.Text) || TableCaptionPattern.IsMatch(prev.Text)))
                     || (forceBoundary is null && IsTableCaptionAfterASentence(line, prev))
                     || (forceBoundary is null && !inCell && IsSentenceUnderAnUppercaseHeading(line, prev, typicalGap))
+                    || (forceBoundary is null && !inCell && ChangesTheTypeSize(line, prev))
                     || (line.PageNumber == prev.PageNumber
-                        && prev.BaselineY - line.BaselineY > ParagraphGapRatio * typicalGap)
+                        && prev.BaselineY - line.BaselineY > ParagraphGapRatio * LineGapOf(line, prev, typicalGap, emSize))
                     || (forceBoundary is null && line.PageNumber == prev.PageNumber
-                        && prev.BaselineY - line.BaselineY > ParagraphSpacingRatio * typicalGap
+                        && prev.BaselineY - line.BaselineY > ParagraphSpacingRatio * LineGapOf(line, prev, typicalGap, emSize)
                         && !IsTabular(prev) && !IsTabular(line));
 
                 if (boundary)
@@ -1107,6 +1108,38 @@ namespace Saga.Core.Ingest.Pdf
             var widerGap = line.PageNumber == prev.PageNumber && prev.BaselineY - line.BaselineY > HeadingGapRatio * typicalGap;
             return otherSize || widerGap;
         }
+
+        /// <summary>
+        /// Nagłówek złożony dużo większym pismem niż tekst wokół („Vb. Wsparcie procesów konsolidacyjnych …" 17,5 pt pod
+        /// akapitem 9,7 pt na końcu poprzedniej strony — M.P. 2026 poz. 343): stopień pisma nie zmienia się w środku akapitu,
+        /// a na granicy strony odstęp pionowy nic nie mówi. Oba wiersze niosą tekst: indeks dolny wzoru w osobnym wierszu
+        /// („przez" / „l" / „świadczeniodawcę l" w objaśnieniu wzoru — korpus 324577) skokiem pisma nie jest.
+        /// </summary>
+        private static bool ChangesTheTypeSize(PdfTextLine line, PdfTextLine prev)
+        {
+            var (larger, smaller) = (Math.Max(line.DominantSize, prev.DominantSize), Math.Min(line.DominantSize, prev.DominantSize));
+            return smaller > 0 && larger / smaller >= TypeSizeJumpRatio && larger - smaller >= TypeSizeJumpPoints
+                && HasText(line) && HasText(prev);
+        }
+
+        private static bool HasText(PdfTextLine line) => line.Text.Count(char.IsLetter) >= MinHeadingLetters;
+
+        private const double TypeSizeJumpRatio = 1.25;
+        private const double TypeSizeJumpPoints = 2;
+        private const int MinHeadingLetters = 3;
+
+        /// <summary>
+        /// Interlinia, wobec której mierzy się odstęp między dwoma wierszami: wiersze pisma dużo większego od tekstu aktu
+        /// (nagłówek w dwóch wierszach, 17,5 pt z interlinią 24,5 pt) stoją dalej od siebie niż wiersze tekstu, a ich odstęp
+        /// to wciąż interlinia. Tekst aktu i drobny druk (komórki tabel) mierzy się typową interlinią.
+        /// </summary>
+        private static double LineGapOf(PdfTextLine line, PdfTextLine prev, double typicalGap, double emSize) =>
+            Math.Abs(line.DominantSize - prev.DominantSize) < HeadingSizeDifferencePoints && line.DominantSize >= TypeSizeJumpRatio * emSize
+                ? Math.Max(typicalGap, OwnLeadingRatio * line.DominantSize)
+                : typicalGap;
+
+        /// <summary>Interlinia składu wobec stopnia pisma.</summary>
+        private const double OwnLeadingRatio = 1.2;
 
         /// <summary>Najmniejsza różnica stopnia pisma między tytułem a akapitem pod nim (10 pt i 9,3 pt w Dz. U.).</summary>
         private const double HeadingSizeDifferencePoints = 0.3;

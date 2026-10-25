@@ -617,6 +617,43 @@ namespace Saga.Core.Tests
             Assert.Equal(separate, blocks.Any(b => b.EndsWith("ZAOPATRZENIA MEDYCZNEGO", StringComparison.Ordinal)));
         }
 
+        [Fact]
+        public void SubscriptOnItsOwnLine_DoesNotBreakTheParagraph()
+        {
+            // Korpus 324577: objaśnienie wzoru „B – liczbę jednostek … przez" / „l" (indeks 7 pt) / „świadczeniodawcę l, …"
+            // — indeks w osobnym wierszu to nie zmiana stopnia pisma nagłówka.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("B – liczbę jednostek sprawozdawczych wykonanych w okresie, przez", 57, 700);
+            builder.AddText("l", 120, 693, 7);
+            builder.AddText("świadczeniodawcę l, w okresie obliczeniowym, w zakresie świadczeń.", 57, 680);
+            WithBodyPadding(builder, fromY: 640);
+
+            var first = Read(builder.Build()).First().Text;
+
+            Assert.Contains("przez l świadczeniodawcę l, w okresie obliczeniowym", first);
+        }
+
+        [Fact]
+        public void HeadingInALargerSize_AtThePageStart_IsOneBlockOfItsOwn()
+        {
+            // M.P. 2026 poz. 343: „… paliatywnej i hospicyjnej." na końcu strony 24, na stronie 25 nagłówek 17,5 pt
+            // w dwóch wierszach z interlinią 24,5 pt — doklejał się do akapitu, a jego drugi wiersz odpadał.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("Opieka obejmuje osoby w terminalnej fazie choroby paliatywnej i hospicyjnej.", 79, 100, 9.7);
+            builder.AddPage();
+            builder.AddText("Vb. Wsparcie procesów konsolidacyjnych w podmiotach", 79, 747, 17.5);
+            builder.AddText("leczniczych – „Zdrowy szpital – bezpieczny pacjent”", 93, 722.4, 17.5);
+            builder.AddText("Wsparcie procesów konsolidacyjnych dotyczyć będzie podmiotów leczniczych.", 79, 690, 9.7);
+            WithBodyPadding(builder, fromY: 650);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("Opieka obejmuje osoby w terminalnej fazie choroby paliatywnej i hospicyjnej.", blocks);
+            Assert.Contains("Vb. Wsparcie procesów konsolidacyjnych w podmiotach leczniczych – „Zdrowy szpital – bezpieczny pacjent”", blocks);
+            Assert.Contains("Wsparcie procesów konsolidacyjnych dotyczyć będzie podmiotów leczniczych.", blocks);
+        }
+
         [Theory]
         // M.P. 2026 poz. 909: pozycje bez odstępu akapitowego („✓" w M.P. 2026 poz. 343 i „▪" Helvetica nie ma).
         [InlineData("•")]

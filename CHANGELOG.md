@@ -1666,6 +1666,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   akapitowego sklejały się w jeden akapit ze zdaniem, które je wprowadza. Punktor na początku wiersza zaczyna blok,
   jak tiret.
 
+- **Nagłówek większym pismem w PDF**: M.P. 2026 poz. 343 — nagłówek programu 17,5 pt („Vb. Wsparcie procesów
+  konsolidacyjnych …") na górze strony doklejał się do akapitu 9,7 pt z końca poprzedniej, a jego drugi wiersz odpadał,
+  bo interlinia dużego pisma (24,5 pt) przekraczała próg odstępu akapitowego liczony z interlinii tekstu. Skok stopnia
+  pisma (o 25 % i co najmniej 2 pt) zaczyna blok, a odstęp między wierszami tego samego stopnia mierzy się interlinią
+  tego pisma.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
