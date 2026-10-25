@@ -1092,9 +1092,10 @@ namespace Saga.Core.Ingest.Pdf
 
         /// <summary>
         /// Podpis tabeli w osobnym wierszu („Tabela nr 1", dosunięty do prawej pod tytułem załącznika — Dz. U. 2026
-        /// poz. 1292): stoi sam, nie kończy tytułu nad nim i nie zaczyna akapitu pod nim.
+        /// poz. 1292): stoi sam, nie kończy tytułu nad nim i nie zaczyna akapitu pod nim. Tak samo oznaczenie wzoru
+        /// („Wzór nr 1" nad wzorem legitymacji na górze strony — Dz. U. 2026 poz. 439).
         /// </summary>
-        private static readonly Regex TableCaptionPattern = new(@"^\s*Tabela\s+(?:nr\s+)?\d+[a-z]?\.?\s*$", RegexOptions.Compiled);
+        private static readonly Regex TableCaptionPattern = new(@"^\s*(?:Tabela|Wzór)\s+(?:nr\s+)?\d+[a-z]?\.?\s*$", RegexOptions.Compiled);
 
         /// <summary>
         /// Podpis tabeli z jej tytułem w jednym wierszu („Tabela nr 1. Wykaz substancji, które …") za zdaniem zakończonym
@@ -1184,7 +1185,14 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         private static bool IsHeadingOpeningAPage(PdfTextLine line, PdfTextLine prev) =>
             line.PageNumber != prev.PageNumber
-            && ((IsUppercaseHeading(line.Text) && !IsUppercaseHeading(prev.Text)) || AnnexDesignationLinePattern.IsMatch(line.Text.Trim()));
+            && ((IsUppercaseHeading(line.Text) && !IsUppercaseHeading(prev.Text)) || AnnexDesignationLinePattern.IsMatch(line.Text.Trim())
+                || RomanHeadingPattern.IsMatch(line.Text.Trim()));
+
+        /// <summary>
+        /// Nagłówek z oznaczeniem rzymskim na początku strony („II. Legitymacja przedszkolna." pod „rewers" z końca
+        /// poprzedniej strony — Dz. U. 2026 poz. 439; „VII. Monitoring Programu …").
+        /// </summary>
+        private static readonly Regex RomanHeadingPattern = new(@"^[IVXLC]+[a-z]?(?:\.\d+[a-z]?)*\.\s+\p{Lu}", RegexOptions.Compiled);
 
         /// <summary>
         /// Zdanie za wyliczeniem w nowym akapicie („3) posiada pozytywną opinię … funkcji" / „dyrektora." / „Przepisy ust. 3

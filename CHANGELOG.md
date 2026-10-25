@@ -1708,6 +1708,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   i litery, a zdanie wracało do marginesu, na lewo od kolumny oznaczenia. Tiret jest pozycją wyliczenia jak punkt; za
   dalszym wierszem pozycji wciętym głębiej niż oznaczenie granicą jest powrót do kolumny oznaczenia albo na lewo od niej.
 
+- **Oznaczenie wzoru i nagłówek rzymski na górze strony PDF**: Dz. U. 2026 poz. 439 — „Wzór nr 1" na górze strony
+  doklejał się do ustępu z końca poprzedniej, a „II. Legitymacja przedszkolna." do podpisu „rewers". Oznaczenie wzoru
+  w osobnym wierszu stoi samo, jak podpis tabeli, a nagłówek z oznaczeniem rzymskim na początku strony zaczyna blok.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

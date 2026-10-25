@@ -1799,6 +1799,29 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void TemplateDesignationAndRomanHeading_AtThePageStart_StartTheirOwnBlocks()
+        {
+            // Dz. U. 2026 poz. 439: „Wzór nr 1" na górze strony za ustępem z końca poprzedniej, a „II. Legitymacja
+            // przedszkolna." na górze strony za podpisem „rewers".
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("12. Fotografia i dane na legitymacji są nanoszone techniką termotransferową.", 57, 90);
+            builder.AddPage();
+            builder.AddText("Wzór nr 1", 57, 780);
+            builder.AddText("Legitymacja szkolna dla uczniów szkół dla dzieci i młodzieży", 57, 766);
+            builder.AddText("rewers", 57, 90);
+            builder.AddPage();
+            builder.AddText("II. Legitymacja przedszkolna.", 57, 780);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("12. Fotografia i dane na legitymacji są nanoszone techniką termotransferową.", blocks);
+            Assert.Contains("Wzór nr 1", blocks);
+            Assert.Contains("II. Legitymacja przedszkolna.", blocks);
+        }
+
+        [Fact]
         public void SentenceAfterADoubleTiret_BackAtTheMargin_StartsABlock()
         {
             // Dz. U. 2026 poz. 439: tiret podwójny z dalszym wierszem wciętym głębiej, a zdanie o całym wyliczeniu wraca
