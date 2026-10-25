@@ -378,6 +378,51 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void QuotedUnitAfterAnInsertionWithoutTheWordingPhrase_IsTheAddedUnit()
+        {
+            // Dz. U. 2026 poz. 635, art. 13 pkt 2 lit. b: „dodaje się ust. 5:" bez „w brzmieniu". „„5. …" to treść
+            // cytowana — dodawany ustęp, a nie ustęp 5 artykułu zmieniającego.
+            var (orch, ctx) = NewPipeline();
+
+            Feed(orch, ctx,
+                "Art. 1. W ustawie wprowadza się następujące zmiany:",
+                "1) w art. 59:",
+                "a) uchyla się ust. 3 i 4,",
+                "b) dodaje się ust. 5:",
+                "„5. Wolne środki Funduszu w walutach obcych mogą być lokowane w bankach.”;",
+                "2) w art. 60 uchyla się ust. 2.",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.");
+            orch.Finalize(ctx);
+
+            var article = ctx.Document.Articles.First();
+            var paragraph = Assert.Single(article.Paragraphs);
+            Assert.Equal(new[] { "1", "2" }, paragraph.Points.Select(p => p.Number?.Value));
+
+            var letters = paragraph.Points[0].Letters;
+            Assert.Equal(new[] { "a", "b" }, letters.Select(l => l.Number?.Value));
+            Assert.Equal("5", Assert.Single(letters[1].Amendment!.Content!.Paragraphs).Number?.Value);
+            Assert.Contains(letters[1].ValidationMessages, m => m.Message.Contains("Komenda nowelizacyjna bez „w brzmieniu”"));
+        }
+
+        [Fact]
+        public void QuotedTemplateAfterAddingAFootnote_IsNotAnAmendment()
+        {
+            // 347307_3175441, § 8 ust. 2: „dodaje się odnośnik według wzoru:" — przedmiot nie jest jednostką aktu
+            // z oznaczeniem, więc cytat wzoru nie jest dodawaną treścią.
+            var (orch, ctx) = NewPipeline();
+
+            Feed(orch, ctx,
+                "Art. 1. 1. Przy jednostce redakcyjnej, której treść zostanie zmieniona, dodaje się odnośnik według wzoru:",
+                "„W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku … .”.",
+                "2. Jednostkę w przyszłym brzmieniu zapisuje się pogrubioną czcionką.",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.");
+            orch.Finalize(ctx);
+
+            var paragraph = ctx.Document.Articles.First().Paragraphs[0];
+            Assert.Null(paragraph.Amendment);
+        }
+
+        [Fact]
         public void QuotedArticleAfterAnAnnouncementClause_IsNotAnAmendment()
         {
             // Obwieszczenie tekstu jednolitego przytacza artykuły („…, które stanowią:") — to nie komenda;

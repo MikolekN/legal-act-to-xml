@@ -162,6 +162,25 @@ namespace Saga.Core.Services.Parsing
             AmendmentFinalizer.RepealPattern.IsMatch(text)
             && RepealedUnitLevels(WithoutTextChanges(text)).Contains(UnitLevel.Sentence);
 
+        /// <summary>
+        /// Dodanie jednostki z oznaczeniem zakończone dwukropkiem, ale bez zwrotu „w brzmieniu" („dodaje się ust. 5:" —
+        /// Dz. U. 2026 poz. 635; § 88 ZTP) — usterka zapisu jak komenda bez dwukropka. Przedmiotem musi być jednostka
+        /// z oznaczeniem stojąca zaraz za czasownikiem: „dodaje się odnośnik według wzoru:" przed cytatem wzoru nie dodaje
+        /// niczego do aktu.
+        /// </summary>
+        internal static bool AddsNamedUnitWithoutWordingPhrase(string text)
+        {
+            text = text.TrimEnd();
+            if (!text.EndsWith(':') || AmendmentFinalizer.ModificationPattern.IsMatch(text))
+                return false;
+
+            return InsertionVerb.Matches(text).Any(verb =>
+                UnitReferenceTokenizer.Tokenize(text[(verb.Index + verb.Length)..], systematizing: true)
+                    is [{ Kind: UnitTokenKind.UnitKeyword }, { Kind: UnitTokenKind.Designation or UnitTokenKind.Range }, ..]);
+        }
+
+        private static readonly Regex InsertionVerb = new(@"\bdodaj[eą]\s+się\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         /// <summary>Poziomy jednostek stojących zaraz za czasownikiem uchylenia — przedmioty komendy.</summary>
         private static IEnumerable<UnitLevel> RepealedUnitLevels(string text)
         {

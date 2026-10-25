@@ -1617,6 +1617,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   trzech stronach rośnie razem z numerem strony PDF (ta sama różnica), jest paginacją i odpada; liczba spoza ciągu albo
   z tekstem pod sobą zostaje.
 
+- **Dodanie jednostki bez „w brzmieniu"**: Dz. U. 2026 poz. 635, art. 13 pkt 2 lit. b — „dodaje się ust. 5:" i w następnym
+  bloku „„5. Wolne środki …”;": zwrot nie zapowiadał brzmienia, więc cytowany ustęp stawał się ustępem 5 artykułu
+  zmieniającego, a cały artykuł — elementami `nie-ztp-*`. Dodanie jednostki z oznaczeniem zakończone dwukropkiem jest,
+  jak komenda bez dwukropka, komendą dopiero wtedy, gdy następny blok otwiera cudzysłów; przepis dostaje ostrzeżenie.
+  „Dodaje się odnośnik według wzoru:" przed cytatem wzoru komendą nie jest.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

@@ -135,19 +135,20 @@ namespace Saga.Core.Services.Parsing
 
             // 4. Brak stylu + już w nowelizacji → pozostaje w nowelizacji
 
-            // 5. Komenda bez dwukropka („ust. 1 otrzymuje brzmienie") i blok w cudzysłowie otwierającym:
-            //    to treść cytowana, a nie jednostka aktu — przepis aktu nie zaczyna się od „. Bez tej reguły
-            //    „„1. …" stawało się ustępem artykułu zmieniającego. Sam cudzysłów nie wystarcza: obwieszczenie
-            //    tekstu jednolitego przytacza całe artykuły („…, które stanowią:") i nie jest to nowelizacja.
+            // 5. Komenda bez dwukropka („ust. 1 otrzymuje brzmienie") albo dodanie bez „w brzmieniu" („dodaje się
+            //    ust. 5:") i blok w cudzysłowie otwierającym: to treść cytowana, a nie jednostka aktu — przepis aktu
+            //    nie zaczyna się od „. Bez tej reguły „„1. …" stawało się ustępem artykułu zmieniającego. Sam cudzysłów
+            //    nie wystarcza: obwieszczenie tekstu jednolitego przytacza całe artykuły („…, które stanowią:") i nie
+            //    jest to nowelizacja.
             if (!context.InsideAmendment
                 && QuoteBalanceTracker.OpensQuote(text)
                 && GetOwner(context) is { } owner
-                && AmendmentFinalizer.ModificationWithoutColonPattern.IsMatch(owner.ContentText))
+                && MissingPartOfTheCommand(owner.ContentText) is { } missing)
             {
                 context.InsideAmendment = true;
-                Log.Warning("Komenda nowelizacyjna bez dwukropka — blok w cudzysłowie przyjęty jako treść cytowana: {Text}", text);
+                Log.Warning("Komenda nowelizacyjna bez {Missing} — blok w cudzysłowie przyjęty jako treść cytowana: {Text}", missing, text);
                 ValidationReporter.AddValidationMessage(owner, ValidationLevel.Warning,
-                    "Komenda nowelizacyjna bez dwukropka — treść w cudzysłowie przyjęta jako cytowana.");
+                    $"Komenda nowelizacyjna bez {missing} — treść w cudzysłowie przyjęta jako cytowana.");
                 return;
             }
 
@@ -177,6 +178,16 @@ namespace Saga.Core.Services.Parsing
                 && ParagraphClassifier.ParseNumberForKind(classification.Kind, text) is { } number
                 && new NumberingHint { ExpectedKind = classification.Kind, ExpectedNumber = open }.IsContinuous(number);
         }
+
+        /// <summary>
+        /// Czego brakuje komendzie zapowiadającej brzmienie, by była zapisana poprawnie — dwukropka za „otrzymuje
+        /// brzmienie" albo zwrotu „w brzmieniu" za dodawaną jednostką; null, gdy przepis taką komendą nie jest. Komendą
+        /// czyni go dopiero cudzysłów otwierający następnego bloku.
+        /// </summary>
+        private static string? MissingPartOfTheCommand(string text) =>
+            AmendmentFinalizer.ModificationWithoutColonPattern.IsMatch(text) ? "dwukropka"
+            : AmendmentCommandParser.AddsNamedUnitWithoutWordingPhrase(text) ? "„w brzmieniu”"
+            : null;
 
         /// <summary>Akapit zawiera komendę — zmianę brzmienia, uchylenie albo zmianę wyrazów.</summary>
         private static bool StartsCommand(string text) =>
