@@ -1641,6 +1641,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   Nowy rodzaj formuły `DayAfterAdoption` („… po dniu podjęcia / podpisania / wydania") liczy dzień po dacie aktu,
   jak „z dniem podjęcia" liczy samą datę.
 
+- **Skrót „Rep." nie kończy zdania**: Dz. U. 2026 poz. 295 — „… w centralnym repertorium wniosków elektronicznych
+  Rep. C, pod którym …" dzieliło punkt na dwa zdania. Repertorium oznacza się literą, więc skrót wymaga dopełnienia
+  jak „ds." albo „im.".
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

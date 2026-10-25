@@ -14,7 +14,7 @@ namespace Saga.Core.Helpers
         /// <summary>Skrót bezpośrednio przed kropką.</summary>
         internal static readonly Regex Pattern = new(
             @"(?<!\p{L})(?:m\.st|m\.in|ds|im|ul|al|pl|pn|art|ust|pkt|lit|poz|rozdz|oddz|cz|zd|str"
-            + @"|prof|dr|ks|gen|mgr|dz|np|tj|tzw|godz)$",
+            + @"|prof|dr|ks|gen|mgr|dz|np|tj|tzw|godz|rep)$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         internal static bool EndsAbbreviation(string text, int dotIndex)

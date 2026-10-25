@@ -33,6 +33,8 @@ namespace Saga.Core.Tests
         [InlineData("tj.", "Organ nadzoru, tj. Komisja Nadzoru Finansowego, wydaje zezwolenie.")]
         [InlineData("m.in.", "Rozporządzenie określa m.in. Wykaz substancji objętych ograniczeniem.")]
         [InlineData("godz.", "Wniosek składa się do godz. Szesnastej w dniu poprzedzającym posiedzenie.")]
+        // Dz. U. 2026 poz. 295: repertorium oznaczone literą.
+        [InlineData("rep.", "Notariusz podaje numer w centralnym repertorium wniosków elektronicznych Rep. C, pod którym został zarejestrowany wniosek.")]
         public void SplitIntoSentences_Skrot_NieJestGranica(string skrot, string text)
         {
             Assert.NotNull(skrot);
