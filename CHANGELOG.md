@@ -1712,6 +1712,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   doklejał się do ustępu z końca poprzedniej, a „II. Legitymacja przedszkolna." do podpisu „rewers". Oznaczenie wzoru
   w osobnym wierszu stoi samo, jak podpis tabeli, a nagłówek z oznaczeniem rzymskim na początku strony zaczyna blok.
 
+- **Nawias znacznika gwiazdki w PDF**: Dz. U. 2026 poz. 555 — w „…str. 41)*)" i „*) W odniesieniu …" w indeksie
+  górnym stoi tylko nawias; czytany jako odwołanie bez oznaczenia, bez odnośnika na stronie ginął i zostawała sama
+  gwiazdka (26 znaczników). Nawias tuż za gwiazdką jest częścią znacznika objaśnienia i wychodzi indeksem górnym
+  ([ADR-0083](docs/adr/0083-objasnienie-gwiazdki-nie-jest-pozycja-wyliczenia-a-jej-znacznik-jest-indeksem-gornym.md)).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

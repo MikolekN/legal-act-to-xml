@@ -184,6 +184,11 @@ namespace Saga.Core.Ingest.Pdf
                     // i dostaje kolejny numer bieżącego ciągu; bez odnośnika zostaje sam ślad — ginie.
                     if (UnnumberedMarker.Match(superscript.Value) is { Success: true } unnumberedMarker)
                     {
+                        // Nawias znacznika objaśnienia przy gwiazdce zwykłej („41)*[)]", „*[)] W odniesieniu …" — Dz. U. 2026
+                        // poz. 555) nie jest odwołaniem do odnośnika — zostaje i wychodzi indeksem górnym (ADR-0083).
+                        if (superscript.Index > 0 && block.Text[superscript.Index - 1] == '*')
+                            return superscript.Value;
+
                         var unnumbered = notes.FirstOrDefault(n => OnThesePages(n) && n.Symbol.Length == 0);
                         if (unnumbered is null)
                             return string.Empty;

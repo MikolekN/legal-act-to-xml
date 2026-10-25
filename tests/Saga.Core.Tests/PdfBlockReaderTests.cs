@@ -1799,6 +1799,25 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ParenthesisOfAnAsteriskMarker_InSuperscript_StaysInTheText()
+        {
+            // Dz. U. 2026 poz. 555: „…str. 41)*)" i objaśnienie „*) W odniesieniu …" — w indeksie górnym tylko nawias; bez
+            // odnośnika bez oznaczenia na stronie znacznik „[)]" ginął i zostawała sama gwiazdka (ADR-0083).
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("Regulamin nr 10*", 57, 700);
+            builder.AddText(")", 142, 703.5, 7);
+            builder.AddText("*", 57, 680);
+            builder.AddText(")", 61.3, 683.5, 7);
+            builder.AddText("W odniesieniu do regulaminów ONZ stosuje się najnowszą serię poprawek.", 66, 680);
+            WithBodyPadding(builder, fromY: 640);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains(blocks, b => b.StartsWith("Regulamin nr 10*[)]", StringComparison.Ordinal));
+            Assert.Contains(blocks, b => b.StartsWith("*[)] W odniesieniu do regulaminów ONZ", StringComparison.Ordinal));
+        }
+
+        [Fact]
         public void TemplateDesignationAndRomanHeading_AtThePageStart_StartTheirOwnBlocks()
         {
             // Dz. U. 2026 poz. 439: „Wzór nr 1" na górze strony za ustępem z końca poprzedniej, a „II. Legitymacja
