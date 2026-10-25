@@ -682,6 +682,15 @@ namespace Saga.Core.Services.Parsing
                     return;
                 }
 
+                // Akt wydany bez podstawy ustawowej podaje w tym miejscu cel i formułę („W celu stworzenia warunków …,
+                // Rada Ministrów uchwala, co następuje:" — M.P. 2026 poz. 617). Akt oparty na paragrafach nie ma preambuły,
+                // a schemat ma na fragment z formułą tylko podstawę prawną — inaczej akapit przepadał.
+                if (context.Document.LegalBasis.Length == 0 && context.SectionIsBasicUnit && EnactmentClauseEnd.IsMatch(text))
+                {
+                    context.Document.LegalBasis = text;
+                    return;
+                }
+
                 if (TryAddToPreamble(context, text))
                     return;
 
@@ -811,6 +820,10 @@ namespace Saga.Core.Services.Parsing
         /// i tytuł – uchylone)", „(Rozdział 3b – oznaczenie i tytuł rozdziału – uchylone)".
         /// </summary>
         private static readonly Regex RepealedDesignationOnly = new(@"\boznaczeni[ea]\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>Formuła wydania aktu kończąca akapit przed pierwszym paragrafem („… uchwala, co następuje:", „zarządza się, …").</summary>
+        private static readonly Regex EnactmentClauseEnd = new(
+            @"\b(?:uchwala|zarządza|postanawia)(?:\s+się)?,?\s+co\s+następuje\s*:\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
         /// Tytuł ze stylu szablonu: styl tytułu jednostki albo — dla części i księgi — ten sam styl

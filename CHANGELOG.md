@@ -1686,6 +1686,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   przy interlinii 12 pt, więc odstęp 24 pt pod przedmiotem uchwały nie dzielił go od zdania z formułą „Rada Ministrów
   uchwala, co następuje:", które trafiało do tytułu. Interlinię liczy się z odstępów nie większych niż dwa stopnie pisma.
 
+- **Akt bez podstawy ustawowej zachowuje akapit z formułą**: M.P. 2026 poz. 617 — uchwała Rady Ministrów zamiast
+  „Na podstawie art. …" podaje cel („W celu stworzenia warunków …, Rada Ministrów uchwala, co następuje:"). Akt oparty
+  na paragrafach nie ma preambuły, więc akapit przepadał, a uchwała bez podstawy prawnej nie była zgodna ze schematem.
+  Akapit przed pierwszym paragrafem zakończony formułą wydania aktu jest jego podstawą prawną (pytanie 32 do autorów
+  schematu).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

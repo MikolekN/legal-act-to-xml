@@ -146,6 +146,27 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void Resolution_WithoutAStatutoryBasis_KeepsItsEnactmentClauseAsTheLegalBasis()
+        {
+            // M.P. 2026 poz. 617: zamiast „Na podstawie art. …" cel i formuła — akapit przepadał, a uchwała bez
+            // podstawy prawnej nie była zgodna ze schematem.
+            var act = Export(
+            [
+                "UCHWAŁA NR 142",
+                "RADY MINISTRÓW",
+                "z dnia 16 czerwca 2026 r.",
+                "w sprawie podjęcia działań w celu utworzenia stałej bazy",
+                "W celu stworzenia warunków do podjęcia działań, Rada Ministrów uchwala, co następuje:",
+                "§ 1. Upoważnia się Ministra Obrony Narodowej do podjęcia działań.",
+                "§ 2. Uchwała wchodzi w życie z dniem podjęcia.",
+            ]);
+
+            var basis = act.Elements().Single(e => e.Name.LocalName == "podstawa-prawna");
+            Assert.Equal("W celu stworzenia warunków do podjęcia działań, Rada Ministrów uchwala, co następuje:", basis.Value);
+            Assert.Equal(2, act.Elements().Count(e => e.Name.LocalName == "paragraf"));
+        }
+
+        [Fact]
         public void Resolution_InForceTheDayAfterItsAdoption_HasThatEvent()
         {
             // M.P. 2026 poz. 349: uchwała Sejmu z dnia 27 marca 2026 r. — „Art. 2. Uchwała wchodzi w życie z dniem
