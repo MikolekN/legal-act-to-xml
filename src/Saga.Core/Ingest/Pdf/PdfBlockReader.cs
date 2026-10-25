@@ -892,10 +892,37 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         private static bool SameColumns(PdfTable first, PdfTable second)
         {
+            if (first.Columns.Count != second.Columns.Count)
+                return false;
+
             var tolerance = Math.Max(ColumnTolerancePoints, ColumnToleranceShare * (first.Right - first.Left));
-            return first.Columns.Count == second.Columns.Count
-                && first.Columns.Zip(second.Columns).All(pair => Math.Abs(pair.First - pair.Second) <= tolerance);
+            return first.Columns.Zip(second.Columns).All(pair => Math.Abs(pair.First - pair.Second) <= tolerance)
+                || SameColumnsAtAnotherScale(first, second);
         }
+
+        /// <summary>
+        /// Te same kolumny na stronie złożonej w nieco innej skali: strona tabeli Dz. U. 2026 poz. 669 (załącznik nr 2)
+        /// jest o 2 % szersza od sąsiednich — prawa krawędź 521,2 → 531,8 pt, a linia między „Lp." i nazwą 102,7 → 104,4 pt.
+        /// Krawędzie wyznaczają skalę i przesunięcie, a linie wewnętrzne muszą po nich trafić w swoje miejsca tak dokładnie
+        /// jak na stronie bez zmiany skali; tabela bez linii wewnętrznej nie ma czym tego potwierdzić.
+        /// </summary>
+        private static bool SameColumnsAtAnotherScale(PdfTable first, PdfTable second)
+        {
+            if (first.Columns.Count < 3)
+                return false;
+
+            var firstWidth = first.Columns[^1] - first.Columns[0];
+            var secondWidth = second.Columns[^1] - second.Columns[0];
+            if (firstWidth <= 0 || Math.Abs(secondWidth / firstWidth - 1) > PageScaleTolerance)
+                return false;
+
+            var scale = secondWidth / firstWidth;
+            return first.Columns.Zip(second.Columns).All(pair =>
+                Math.Abs(second.Columns[0] + (pair.First - first.Columns[0]) * scale - pair.Second) <= ColumnTolerancePoints);
+        }
+
+        /// <summary>Największa różnica skali stron, na których ciągnie się jedna tabela (3 %).</summary>
+        private const double PageScaleTolerance = 0.03;
 
         /// <summary>Najmniejsza tolerancja położenia linii kolumn tej samej tabeli na kolejnych stronach.</summary>
         private const double ColumnTolerancePoints = 2;

@@ -1651,6 +1651,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   pisma albo z odstępem większym niż interlinia, zaczyna nowy blok. Podpis „Tabela nr 1. Wykaz substancji, …" na górze
   strony za zdaniem zakończonym kropką doklejał się do ostatniego punktu — zaczyna blok.
 
+- **Tabela PDF na stronie złożonej w innej skali**: Dz. U. 2026 poz. 669, załącznik nr 2 — strony tabel różnią się
+  skalą o 2 % (prawa krawędź 521,2 → 531,8 pt), więc linie kolumn nie trafiały w tolerancję i „Tabela nr 2" oraz
+  „Tabela nr 3" wychodziły jako po trzy tabele. Krawędzie wyznaczają skalę i przesunięcie strony; gdy linie wewnętrzne
+  trafiają po nich w swoje miejsca, to ta sama tabela.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

@@ -1284,6 +1284,9 @@ namespace Saga.Core.Tests
         // szerokości kolumn na każdej stronie osobno — linie rozjeżdżają się o kilka punktów (M.P. 2026 poz. 948).
         [InlineData(57, 200, 500)]
         [InlineData(55, 203, 504)]
+        // Strona złożona w skali o 2 % większej (Dz. U. 2026 poz. 669): prawa krawędź o 10 pt dalej, linia wewnętrzna
+        // tam, gdzie wypada po skali.
+        [InlineData(58, 204, 510.3)]
         public void BorderedTableContinuedOnTheNextPage_IsOneTable(double left, double middle, double right)
         {
             var builder = new TestPdfBuilder().AddPage();
@@ -1350,8 +1353,11 @@ namespace Saga.Core.Tests
             Assert.Contains("w latach 2023–2029 na obszarze", blocks[0].Text);
         }
 
-        [Fact]
-        public void BorderedTableOnTheNextPage_WithOtherColumns_IsAnotherTable()
+        [Theory]
+        [InlineData(57, 300, 500)]
+        // Krawędzie jak po zmianie skali o 2 %, ale linia wewnętrzna nie tam, gdzie by po niej wypadła.
+        [InlineData(58, 215, 510.3)]
+        public void BorderedTableOnTheNextPage_WithOtherColumns_IsAnotherTable(double left, double middle, double right)
         {
             var builder = new TestPdfBuilder().AddPage();
             WithBodyPadding(builder, fromY: 700);
@@ -1360,7 +1366,7 @@ namespace Saga.Core.Tests
             builder.AddText("1", 60, 572);
             builder.AddText("stawka pierwsza", 205, 572);
             builder.AddPage();
-            builder.AddGrid([800, 780], [57, 300, 500]);
+            builder.AddGrid([800, 780], [left, middle, right]);
             builder.AddText("Kod", 60, 787);
             builder.AddText("Opis", 305, 787);
             WithBodyPadding(builder, fromY: 700);
