@@ -566,8 +566,10 @@ namespace Saga.Core.Ingest.Pdf
 
                 var continued = previousPageHadFootnotes;
                 var continuedMidSentence = previousFootnoteOpen;
+                var pageSeparators = separators.GetValueOrDefault(pageGroup.Key) ?? [];
                 var (zoneStart, hasZone) = FindFootnoteZone(noteLines, FootnoteSizeRatio * docDominantSize,
-                    line => FootnoteStartPattern.IsMatch(line.Text) || continued);
+                    line => FootnoteStartPattern.IsMatch(line.Text)
+                        || (continued && ContinuesAFootnote(line, continuedMidSentence, pageSeparators)));
                 if (!hasZone)
                     (zoneStart, hasZone) = FindFootnoteZone(noteLines, CloseFootnoteSizeRatio * docDominantSize,
                         line => SuperscriptFootnoteStartPattern.IsMatch(line.Text) || continuedMidSentence
@@ -575,10 +577,10 @@ namespace Saga.Core.Ingest.Pdf
                 if (!hasZone)
                     (zoneStart, hasZone) = FindReferencedFootnoteZone(noteLines, CloseFootnoteSizeRatio * Math.Max(docDominantSize,
                         noteLines.Where(l => l.Table is null).Select(l => l.DominantSize).DefaultIfEmpty(0).Max()),
-                        separators.GetValueOrDefault(pageGroup.Key) ?? []);
+                        pageSeparators);
                 if (!hasZone && continued)
                     (zoneStart, hasZone) = FindContinuedEnumerationZone(noteLines, CloseFootnoteSizeRatio * docDominantSize,
-                        separators.GetValueOrDefault(pageGroup.Key) ?? []);
+                        pageSeparators);
 
                 // Wiersze strefy niosą oznaczenie w kanale indeksu górnego; treść strony — tak, jak ją złożono.
                 if (hasZone)
@@ -596,6 +598,20 @@ namespace Saga.Core.Ingest.Pdf
             }
 
             return (body, footnotes);
+        }
+
+        /// <summary>
+        /// Drobny druk u dołu strony bez oznaczenia odnośnika jest dalszym ciągiem odnośnika z poprzedniej strony, gdy ten
+        /// urwał się w pół zdania, gdy sam zaczyna się małą literą (środek zdania) albo gdy tuż nad nim stoi kreska
+        /// odnośników. Źródło wykresu wyśrodkowane pod wykresem („Źródło: Opracowanie MZ na podstawie danych …" — M.P. 2026
+        /// poz. 343) za odnośnikiem zamkniętym kropką nie spełnia żadnego z tych warunków i zostaje treścią strony.
+        /// </summary>
+        private static bool ContinuesAFootnote(PdfTextLine line, bool previousOpen, List<double> separators)
+        {
+            var text = line.Text.TrimStart();
+            return previousOpen
+                || (text.Length > 0 && char.IsLower(text[0]))
+                || separators.Any(y => y > line.BaselineY && y < line.BaselineY + SeparatorReach * line.DominantSize);
         }
 
         /// <summary>

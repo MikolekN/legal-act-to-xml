@@ -1676,6 +1676,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   dzielił się na zdanie „N." i resztę. Inicjał uznawano tylko po dwukropku podpisu, po tytule albo po innym inicjale;
   na samym początku tekstu jedna litera z kropką też zdania nie zamyka.
 
+- **Drobny druk u dołu strony PDF po zamkniętym odnośniku**: M.P. 2026 poz. 343 — wyśrodkowane źródło wykresu
+  („Źródło: Opracowanie MZ …") na stronie po stronie z odnośnikami trafiało do odnośnika 3 jako jego dalszy ciąg, bo
+  wystarczało, że poprzednia strona miała odnośniki. Dalszym ciągiem odnośnika bez oznaczenia jest drobny druk, gdy
+  odnośnik urwał się w pół zdania, gdy sam zaczyna się małą literą albo gdy tuż nad nim stoi kreska odnośników.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

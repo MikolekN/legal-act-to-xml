@@ -2347,6 +2347,25 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SmallSourceLineUnderAChart_AfterAClosedFootnote_StaysBodyText()
+        {
+            // M.P. 2026 poz. 343: odnośnik zamknięty na stronie 21, na stronie 22 pod wykresem wyśrodkowane „Źródło: …"
+            // drobnym drukiem, bez kreski odnośników — doklejało się do odnośnika jako jego dalszy ciąg.
+            var builder = new TestPdfBuilder();
+            builder.AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("3) N. Arias-Casais et al. EAPC Atlas of Palliative Care in Europe 2019.", 57, 90, 8);
+            builder.AddPage();
+            WithBodyPadding(builder, fromY: 700);
+            builder.AddText("Źródło: opracowanie MZ na podstawie danych z NFZ, KRN i GUS", 178, 157, 8);
+
+            var blocks = Read(builder.Build());
+
+            Assert.Contains(blocks, b => b.Role == BlockRole.Body && b.Text.StartsWith("Źródło: opracowanie MZ", StringComparison.Ordinal));
+            Assert.DoesNotContain(blocks, b => b.Role == BlockRole.FootnoteText && b.Text.Contains("Źródło", StringComparison.Ordinal));
+        }
+
+        [Fact]
         public void WrappedJournalReference_DoesNotBecomeFalsePointBoundary()
         {
             // Zawinięcie wewnątrz „(Dz. U. poz. ⏎ 1234) wprowadza się…" nie może rozciąć zdania
