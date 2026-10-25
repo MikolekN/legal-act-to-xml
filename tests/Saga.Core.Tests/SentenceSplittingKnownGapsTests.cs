@@ -72,6 +72,8 @@ namespace Saga.Core.Tests
         [InlineData("Szpital Kliniczny im. J. Babińskiego prowadzi rejestr pacjentów.")]
         [InlineData("Opinię sporządził prof. A. Nowak z zespołem biegłych.")]
         [InlineData("Marszałek Sejmu: J. K. Nowak")]
+        // M.P. 2026 poz. 343, odnośnik 3: inicjał na samym początku tekstu — zdania z jednej litery nie ma.
+        [InlineData("N. Arias-Casais et al. EAPC Atlas of Palliative Care in Europe 2019, EAPC Press, Belgia, 2019")]
         public void SplitIntoSentences_InicjalPoTytuleLubInicjale_NieJestGranica(string text)
         {
             var segments = ParsingFactories.SplitIntoSentences(text);

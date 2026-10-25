@@ -1672,6 +1672,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   pisma (o 25 % i co najmniej 2 pt) zaczyna blok, a odstęp między wierszami tego samego stopnia mierzy się interlinią
   tego pisma.
 
+- **Inicjał na początku tekstu nie kończy zdania**: M.P. 2026 poz. 343 — odnośnik „N. Arias-Casais et al. EAPC Atlas …"
+  dzielił się na zdanie „N." i resztę. Inicjał uznawano tylko po dwukropku podpisu, po tytule albo po innym inicjale;
+  na samym początku tekstu jedna litera z kropką też zdania nie zamyka.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

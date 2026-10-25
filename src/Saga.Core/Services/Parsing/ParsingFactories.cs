@@ -299,7 +299,8 @@ namespace Saga.Core.Services.Parsing
         /// Sam kształt nie wystarcza: „…określa tabela A. Opłatę pobiera się…" kończy zdanie.
         /// Inicjał uznajemy więc tylko w kontekście osoby: po dwukropku formuły podpisu
         /// („Prezydent Rzeczypospolitej Polskiej: A. Duda"), po tytule („im. J. Babińskiego")
-        /// albo na końcu łańcucha inicjałów, przed którym stoi jedno z nich („Marszałek Sejmu: J. K. Nowak").
+        /// albo na końcu łańcucha inicjałów, przed którym stoi jedno z nich („Marszałek Sejmu: J. K. Nowak"),
+        /// albo na samym początku tekstu („N. Arias-Casais et al." w odnośniku).
         /// Łańcuch wymaga odstępów między inicjałami — „…Papierów Wartościowych S.A. Przepis…" kończy zdanie.
         /// </summary>
         private static bool EndsPersonInitial(string text, int dotIndex, int nextCharIndex)
@@ -319,6 +320,11 @@ namespace Saga.Core.Services.Parsing
                 var before = text.AsSpan(0, initialStart);
                 var trimmed = before.TrimEnd();
                 if ((trimmed.Length > 0 && trimmed[^1] == ':') || PersonTitleBeforeInitial.IsMatch(trimmed))
+                    return true;
+
+                // Na samym początku tekstu jedna litera z kropką zdania nie zamyka — zdania z jednej litery nie ma
+                // („N. Arias-Casais et al. …" w odnośniku M.P. 2026 poz. 343).
+                if (trimmed.Length == 0)
                     return true;
 
                 if (trimmed.Length == before.Length || !PrecedingInitial.IsMatch(trimmed))
