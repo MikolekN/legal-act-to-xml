@@ -146,6 +146,26 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void Resolution_InForceTheDayAfterItsAdoption_HasThatEvent()
+        {
+            // M.P. 2026 poz. 349: uchwała Sejmu z dnia 27 marca 2026 r. — „Art. 2. Uchwała wchodzi w życie z dniem
+            // następującym po dniu podjęcia." Bez tej formuły akt nie miał żadnego zdarzenia wejścia w życie.
+            var act = Export(
+            [
+                "UCHWAŁA",
+                "SEJMU RZECZYPOSPOLITEJ POLSKIEJ",
+                "z dnia 27 marca 2026 r.",
+                "w sprawie zmiany Regulaminu Sejmu Rzeczypospolitej Polskiej",
+                "Art. 1. Ustanawia się regulamin.",
+                "Art. 2. Uchwała wchodzi w życie z dniem następującym po dniu podjęcia.",
+            ]);
+
+            var events = act.Descendants().Where(e => e.Name.LocalName == "Zdarzenie").ToList();
+            var entry = Assert.Single(events, e => e.Attribute("rodzaj")?.Value == "wejscie-w-zycie");
+            Assert.Equal("2026-03-28", entry.Attribute("data")?.Value);
+        }
+
+        [Fact]
         public void Resolution_WithItsOrganInTitleCase_HasItsTitleZone()
         {
             // M.P. 2026 poz. 948: adapter PDF składa nagłówek w jeden wiersz pisany jak nazwa własna (ADR-0090) — wzorzec

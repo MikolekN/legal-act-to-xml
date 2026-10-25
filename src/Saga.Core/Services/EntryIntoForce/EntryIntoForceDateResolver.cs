@@ -23,6 +23,9 @@ namespace Saga.Core.Services.EntryIntoForce
             if (formula.Kind == EntryIntoForceFormulaKind.OnAdoptionDay)
                 return actDate;
 
+            if (formula.Kind == EntryIntoForceFormulaKind.DayAfterAdoption)
+                return actDate?.AddDays(1);
+
             var reference = formula.ReferenceDateOverride ?? announcementDate;
             if (reference is not { } baseDate)
                 return null;

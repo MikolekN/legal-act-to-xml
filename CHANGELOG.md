@@ -1636,6 +1636,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   w wierszu justowanym za znakiem spacji stoi jeszcze luka szersza niż próg odstępu, a adapter dokładał drugą spację.
   Odstęp między wyrazami jest jeden, ile by nie był szeroki.
 
+- **Wejście w życie „z dniem następującym po dniu podjęcia"**: M.P. 2026 poz. 349 — uchwała Sejmu z dnia 27 marca
+  2026 r. nie miała żadnego zdarzenia wejścia w życie, bo formuły „następnego dnia" znały tylko dzień ogłoszenia.
+  Nowy rodzaj formuły `DayAfterAdoption` („… po dniu podjęcia / podpisania / wydania") liczy dzień po dacie aktu,
+  jak „z dniem podjęcia" liczy samą datę.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

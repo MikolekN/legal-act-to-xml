@@ -33,6 +33,9 @@ namespace Saga.Model.EntryIntoForce
         /// <summary>„z dniem podjęcia / podpisania / wydania" — w dniu, którym akt jest datowany</summary>
         OnAdoptionDay,
 
+        /// <summary>„z dniem następującym po dniu podjęcia / podpisania / wydania" — nazajutrz po dniu, którym akt jest datowany</summary>
+        DayAfterAdoption,
+
         /// <summary>„z dniem <dzień> <miesiąc> <rok> r."</summary>
         OnSpecificDate,
 

@@ -150,5 +150,10 @@ namespace Saga.Core.Services.EntryIntoForce
         internal static readonly Regex OnAdoptionDay = new(
             @"z\s+dniem\s+(?:podjęcia|podpisania|wydania)",
             Opts);
+
+        /// <summary>„z dniem następującym po dniu podjęcia" (uchwała Sejmu — M.P. 2026 poz. 349), „… po dniu podpisania"</summary>
+        internal static readonly Regex DayAfterAdoption = new(
+            @"z\s+dniem\s+następującym\s+po\s+dniu\s+(?:podjęcia|podpisania|wydania)",
+            Opts);
     }
 }

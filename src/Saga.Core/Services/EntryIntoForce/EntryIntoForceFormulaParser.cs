@@ -16,6 +16,7 @@ namespace Saga.Core.Services.EntryIntoForce
             (EntryIntoForcePatterns.FirstDayAfterLapseOfDays, EntryIntoForceFormulaKind.FirstDayOfMonthAfterLapseOfDays, null),
             (EntryIntoForcePatterns.FirstDayOfMonthAfterAnnouncementMonth, EntryIntoForceFormulaKind.FirstDayOfMonthAfterAnnouncementMonth, null),
             (EntryIntoForcePatterns.DayAfterAnnouncement, EntryIntoForceFormulaKind.DayAfterAnnouncement, null),
+            (EntryIntoForcePatterns.DayAfterAdoption, EntryIntoForceFormulaKind.DayAfterAdoption, null),
             (EntryIntoForcePatterns.DeterminedByCommunication, EntryIntoForceFormulaKind.DeterminedByCommunication, null),
             (EntryIntoForcePatterns.DeterminedByIntroducingAct, EntryIntoForceFormulaKind.DeterminedByIntroducingAct, null),
             (EntryIntoForcePatterns.OnSpecificDate, EntryIntoForceFormulaKind.OnSpecificDate, null),
