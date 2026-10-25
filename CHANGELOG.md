@@ -1632,6 +1632,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   miejscami podanymi przez przepisy pośrednie („w tabeli XII część I. …"), inaczej dwie „część I" tabel XII i XIII
   brzmiałyby tak samo.
 
+- **Podwójne odstępy w wierszach justowanych PDF**: M.P. 2026 poz. 672 — „Progress  in  International" w odnośniku:
+  w wierszu justowanym za znakiem spacji stoi jeszcze luka szersza niż próg odstępu, a adapter dokładał drugą spację.
+  Odstęp między wyrazami jest jeden, ile by nie był szeroki.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

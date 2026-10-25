@@ -242,7 +242,7 @@ namespace Saga.Core.Ingest.Pdf
                         inSuperscript = false;
                     }
 
-                    sb.Append(' ');
+                    AppendSpace(sb);
                     prev = letter;
                     continue;
                 }
@@ -266,7 +266,7 @@ namespace Saga.Core.Ingest.Pdf
                             sb.Append(']');
                             inSuperscript = false;
                         }
-                        sb.Append(' ');
+                        AppendSpace(sb);
                     }
                 }
 
@@ -298,6 +298,18 @@ namespace Saga.Core.Ingest.Pdf
                 PageHeight = pageHeight,
                 MaxGap = maxGap,
             };
+        }
+
+        /// <summary>
+        /// Jeden odstęp między wyrazami. W wierszu justowanym odstęp bywa szerszy niż znak spacji, który go zapisuje
+        /// („Progress  in  International" w odnośniku M.P. 2026 poz. 672): za spacją stoi jeszcze luka większa niż
+        /// <see cref="SpaceGapRatio"/> — to wciąż ten sam odstęp, nie drugi.
+        /// </summary>
+        private static void AppendSpace(StringBuilder sb)
+        {
+            if (sb.Length > 0 && sb[^1] == ' ')
+                return;
+            sb.Append(' ');
         }
 
         /// <summary>

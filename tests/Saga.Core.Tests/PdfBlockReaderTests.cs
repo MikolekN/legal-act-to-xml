@@ -46,6 +46,21 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void WideJustifiedGapAfterASpace_IsOneSpace()
+        {
+            // M.P. 2026 poz. 672, odnośnik 2: „Progress  in  International" — w wierszu justowanym za znakiem spacji
+            // stoi jeszcze szeroka luka; to ten sam odstęp między wyrazami.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Progress ", 57, 700)
+                .AddText("in ", 150, 700)
+                .AddText("International Reading Literacy Study.", 175, 700))
+                .Build();
+
+            var first = Read(pdf).First(b => b.Text.StartsWith("Art. 1."));
+            Assert.Equal("Art. 1. Progress in International Reading Literacy Study.", first.Text);
+        }
+
+        [Fact]
         public void ReadingOrder_TopToBottom_BlockPerUnitLine()
         {
             var pdf = new TestPdfBuilder().AddPage()
