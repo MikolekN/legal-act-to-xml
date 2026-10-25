@@ -239,10 +239,13 @@ namespace Saga.Core.Services.Parsing
 
         /// <summary>
         /// „skreśla się wyrazy „X"" (§ 87 ZTP) — komenda kompletna w akapicie. Kolejne wyrazy w cudzysłowie
-        /// dołączone spójnikiem („skreśla się wyrazy „X" oraz „Y"") to kolejne skreślenia.
+        /// dołączone spójnikiem („skreśla się wyrazy „X" oraz „Y"") to kolejne skreślenia. Między czasownikiem a wyrazami
+        /// może stać miejsce ich użycia (§ 88 ZTP: „skreśla się użyte w art. 299 w § 1 i 2 oraz w art. 299d wyrazy
+        /// „spraw podatkowych”" — Dz. U. 2026 poz. 846, w korpusie 5 plików) — bez tego komendę brało uchylenie i
+        /// wychodziły uchylenia całych jednostek.
         /// </summary>
         internal static readonly Regex DeleteWordsPattern = new(
-            $@"skreśla\s+się\s+wyraz(?:y)?\s+{QuotedWords}(?<more>\s+(?:oraz|i)\s+{QuotedWords})*",
+            $@"skreśla\s+się\s+(?:użyt\p{{L}}*\s+[^{QuotationMarks.Any}]*?)?wyraz(?:y)?\s+{QuotedWords}(?<more>\s+(?:oraz|i)\s+{QuotedWords})*",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private static readonly Regex QuotedWordsPattern = new(QuotedWords, RegexOptions.Compiled);

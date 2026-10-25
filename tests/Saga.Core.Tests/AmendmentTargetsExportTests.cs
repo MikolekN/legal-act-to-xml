@@ -330,6 +330,35 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void DeletedWords_UsedInSeveralUnits_AreDeletedInEach_NotRepealedUnits()
+        {
+            // Dz. U. 2026 poz. 846 (§ 88 ZTP): miejsce użycia stoi między „skreśla się" a wyrazami — komendę brało
+            // uchylenie i wychodziły uchylenia całych jednostek.
+            var (xml, _) = Convert("1) skreśla się użyte w art. 299 w § 1 i 2 oraz w art. 299d wyrazy „spraw podatkowych”;");
+
+            var instructions = Commands(xml);
+            Assert.Equal(["zamien-tekst", "zamien-tekst", "zamien-tekst"], instructions.Select(i => i.Name.LocalName));
+            Assert.Equal(["art_299__par_1", "art_299__par_2", "art_299d"], instructions.Select(i => Attr(i, "element-eId")));
+            Assert.All(instructions, i => Assert.Equal("spraw podatkowych", Attr(i, "stary-tekst")));
+            Assert.All(instructions, i => Assert.Equal(string.Empty, Attr(i, "nowy-tekst")));
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "uchyl");
+        }
+
+        [Fact]
+        public void InflectedDeletedWord_UsedInSeveralUnits_IsAManualInstructionOnEach()
+        {
+            // Dz. U. 2026 poz. 846: „… w różnej liczbie i różnym przypadku, wyraz „sprawa”" — formy stoją tylko w akcie
+            // zmienianym (ADR-0103).
+            var (xml, _) = Convert(
+                "1) skreśla się użyty w art. 296 w § 1 i w § 3 oraz w art. 297 w § 3, w różnej liczbie i różnym przypadku, wyraz „sprawa”;");
+
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "uchyl");
+            var manual = xml.Descendants().Where(e => e.Name.LocalName == "cytat-w-tekscie").ToList();
+            Assert.Equal(["art_296__par_1", "art_296__par_3", "art_297__par_3"], manual.Select(c => Attr(c, "element-eId")));
+            Assert.All(manual, c => Assert.EndsWith("-recznie", Attr(c, "funkcja"), StringComparison.Ordinal));
+        }
+
+        [Fact]
         public void SeveralDeletedPhrases_AreSeparateInstructions()
         {
             // Korpus: „w § 6 w ust. 1 w pkt 5 skreśla się wyrazy „jarząbków," oraz „i łysek"".

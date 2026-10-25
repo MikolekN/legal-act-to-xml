@@ -1697,6 +1697,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   ministrów i odwołania do odnośników), więc strefa tytułowa przepadała: bez tytułu, daty i organu, niezgodnie ze
   schematem. Wyraz nazwy organu może kończyć odwołanie do odnośnika i dwukropek.
 
+- **Skreślenie wyrazów z miejscem ich użycia**: Dz. U. 2026 poz. 846 — „skreśla się użyte w art. 299 w § 1 i 2 oraz
+  w art. 299d wyrazy „spraw podatkowych”" (§ 88 ZTP) dawało uchylenie art. 299 § 1, § 2 i całego art. 299d, bo komenda
+  skreślenia wyrazów znała tylko „skreśla się wyrazy …" i przepis brało uchylenie; z „w różnej liczbie i różnym
+  przypadku" — tak samo zamiast instrukcji ręcznych. W korpusie DOCX 5 plików (4 z uchyleniami jednostek, 1 bez
+  instrukcji). Miejsce użycia między czasownikiem a wyrazami należy do komendy skreślenia.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
