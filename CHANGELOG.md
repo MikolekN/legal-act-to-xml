@@ -1656,6 +1656,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   „Tabela nr 3" wychodziły jako po trzy tabele. Krawędzie wyznaczają skalę i przesunięcie strony; gdy linie wewnętrzne
   trafiają po nich w swoje miejsca, to ta sama tabela.
 
+- **Tekst rozstrzelony w PDF**: Dz. U. 2026 poz. 1188 — „Opis:" złożony ze stałym odstępem międzyliterowym 0,2 em
+  wychodził jako „O p i s :", bo luka między literami przekraczała próg odstępu; tak samo „Z a ł ą c z n i k i d o …"
+  w PDF-ach z edytora. Na stronie, która odstępy wyrazów zapisuje glifem spacji, ciąg równych luk między literami bez
+  glifu pomiędzy jest rozstrzeleniem — wyrazy dzieli dalej glif spacji. W PDF-ie bez glifów spacji luka zostaje
+  odstępem.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

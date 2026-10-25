@@ -45,6 +45,62 @@ namespace Saga.Core.Tests
             Assert.Contains("małżonkom", first.Text);
         }
 
+        /// <summary>Szerokości glifów Helvetiki (1/1000 em) dla tekstu rozstrzelonego składanego litera po literze.</summary>
+        private static readonly Dictionary<char, double> HelveticaWidths = new()
+        {
+            ['Z'] = 611, ['a'] = 556, ['ł'] = 222, ['ą'] = 556, ['c'] = 500, ['z'] = 500, ['n'] = 556, ['i'] = 222,
+            ['k'] = 500, ['d'] = 556, ['o'] = 556, ['O'] = 778, ['p'] = 556, ['s'] = 500, [':'] = 278, [' '] = 278,
+            ['P'] = 667, ['r'] = 333, ['e'] = 556, ['l'] = 222, ['t'] = 278, ['.'] = 278, ['b'] = 556, ['u'] = 556, ['j'] = 222,
+        };
+
+        /// <summary>Tekst rozstrzelony: każdy znak osobno, za każdym stała luka (jak operator Tc); spacja to glif.</summary>
+        private static TestPdfBuilder AddLetterSpaced(TestPdfBuilder builder, string text, double x, double y, double size, double spacing)
+        {
+            foreach (var c in text)
+            {
+                builder.AddText(c.ToString(), x, y, size);
+                x += HelveticaWidths[c] * size / 1000 + spacing;
+            }
+
+            return builder;
+        }
+
+        [Theory]
+        // Dz. U. 2026 poz. 1188: „Opis:" rozstrzelone o 0,203 em — luka tuż ponad progiem odstępu.
+        [InlineData("Opis:", "Opis:")]
+        // Korpus 323968_3000558: wyrazy tekstu rozstrzelonego dzieli glif spacji.
+        [InlineData("Załączniki do", "Załączniki do")]
+        public void LetterSpacedText_OnAPageWithSpaceGlyphs_KeepsItsWords(string text, string expected)
+        {
+            var builder = new TestPdfBuilder().AddPage();
+            AddLetterSpaced(builder, text, 100, 760, 10, 2.03);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains(expected, blocks);
+        }
+
+        [Fact]
+        public void WordsSetWithoutSpaceGlyphs_KeepTheirSpaces_EvenWhenTheGapsAreEqual()
+        {
+            // PDF bez glifów spacji: odstęp wyrazu to sama luka, równa między jednoliterowymi wyrazami („a i b i c").
+            var builder = new TestPdfBuilder().AddPage();
+            for (var line = 0; line < 5; line++)
+            {
+                var x = 57.0;
+                foreach (var word in new[] { "Przepis", "lit.", "a", "i", "b", "i", "c", "stosuje" })
+                {
+                    builder.AddText(word, x, 700 - line * 14, 10);
+                    x += word.Sum(c => HelveticaWidths[c]) * 10 / 1000 + 2.4;
+                }
+            }
+
+            var first = Read(builder.Build()).First().Text;
+
+            Assert.StartsWith("Przepis lit. a i b i c stosuje", first);
+        }
+
         [Fact]
         public void WideJustifiedGapAfterASpace_IsOneSpace()
         {

@@ -161,9 +161,10 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Wiersze z liter jednego kierunku, poziomych w układzie, w którym się je czyta — razem z literami wiersza.</summary>
         private static IEnumerable<(List<Letter> Cluster, PdfTextLine Line)> Built(Page page, IReadOnlyList<Letter> letters, double height)
         {
+            var spaceGlyphs = UsesSpaceGlyphs(letters);
             foreach (var cluster in ClusterIntoLines(WithoutOverprints(letters)))
             {
-                var line = BuildLine(cluster, page, height);
+                var line = BuildLine(cluster, page, height, spaceGlyphs);
                 if (!string.IsNullOrWhiteSpace(line.Text))
                     yield return (cluster, line);
             }
@@ -213,7 +214,7 @@ namespace Saga.Core.Ingest.Pdf
             return clusters;
         }
 
-        private static PdfTextLine BuildLine(List<Letter> cluster, Page page, double pageHeight)
+        private static PdfTextLine BuildLine(List<Letter> cluster, Page page, double pageHeight, bool spaceGlyphs)
         {
             // Rozmiar tekstu podstawowego i jego baza (dominanta Y liter tego rozmiaru; remis — NIŻSZE Y, bo superscript
             // ma bazę podniesioną).
@@ -224,6 +225,7 @@ namespace Saga.Core.Ingest.Pdf
 
             var ordered = cluster.OrderBy(l => l.StartBaseLine.X).ToList();
             var raisedDigits = RaisedDigits(ordered, dominantSize, baselineY);
+            var letterSpaced = spaceGlyphs ? LetterSpacedLetters(ordered, dominantSize) : [];
             var sb = new StringBuilder();
             bool inSuperscript = false;
             Letter? prev = null;
@@ -259,7 +261,7 @@ namespace Saga.Core.Ingest.Pdf
                 if (prev != null)
                 {
                     var gap = letter.StartBaseLine.X - prev.EndBaseLine.X;
-                    if (gap > SpaceGapRatio * Math.Max(dominantSize, 1.0))
+                    if (gap > SpaceGapRatio * Math.Max(dominantSize, 1.0) && !letterSpaced.Contains(letter))
                     {
                         if (inSuperscript)
                         {
@@ -299,6 +301,77 @@ namespace Saga.Core.Ingest.Pdf
                 MaxGap = maxGap,
             };
         }
+
+        /// <summary>
+        /// Litery tekstu rozstrzelonego, przed którymi luka nie jest odstępem między wyrazami: „Opis:" złożony ze stałym
+        /// odstępem międzyliterowym 0,2 em (Dz. U. 2026 poz. 1188), „Z a ł ą c z n i k i  d o …" w PDF-ach z edytora. Na
+        /// stronie, która odstępy wyrazów zapisuje glifem spacji, ciąg co najmniej <see cref="MinLetterSpacedGaps"/> luk
+        /// równych sobie między literami bez glifu pomiędzy to rozstrzelenie; krótszy ciąg z tą samą luką w tym wierszu
+        /// („d o" za „Załączniki") — też. Między wyrazami tekstu rozstrzelonego stoi glif spacji, więc wyrazy zostają osobno.
+        /// </summary>
+        private static HashSet<Letter> LetterSpacedLetters(List<Letter> ordered, double dominantSize)
+        {
+            var letterSpaced = new HashSet<Letter>(ReferenceEqualityComparer.Instance);
+            if (dominantSize <= 0)
+                return letterSpaced;
+
+            var runs = new List<(int From, int To, double Min, double Max)>();
+            for (var i = 0; i < ordered.Count; i++)
+            {
+                var end = i;
+                while (end + 1 < ordered.Count && IsSpacedLetterPair(ordered[end], ordered[end + 1], dominantSize))
+                    end++;
+                if (end == i)
+                    continue;
+
+                var gaps = Enumerable.Range(i, end - i).Select(k => ordered[k + 1].StartBaseLine.X - ordered[k].EndBaseLine.X).ToList();
+                runs.Add((i, end, gaps.Min(), gaps.Max()));
+                i = end;
+            }
+
+            var spread = LetterSpacingSpreadRatio * dominantSize;
+            var uniform = runs.Where(run => run.Max - run.Min <= spread).ToList();
+            var established = uniform.Where(run => run.To - run.From >= MinLetterSpacedGaps).ToList();
+            foreach (var run in uniform)
+            {
+                var spaced = established.Any(other => Math.Max(other.Max, run.Max) - Math.Min(other.Min, run.Min) <= spread);
+                if (!spaced)
+                    continue;
+                for (var k = run.From + 1; k <= run.To; k++)
+                    letterSpaced.Add(ordered[k]);
+            }
+
+            return letterSpaced;
+        }
+
+        /// <summary>
+        /// Dwie litery z luką ponad progiem odstępu, ale nie szerszą niż rozstrzelenie bywa. Znak przestankowy też należy
+        /// do rozstrzelenia — odstęp międzyliterowy stoi i za ostatnią literą („Opis:" dawało „Opis :").
+        /// </summary>
+        private static bool IsSpacedLetterPair(Letter first, Letter second, double dominantSize)
+        {
+            if (!IsLetterOrPunctuation(first) || !IsLetterOrPunctuation(second))
+                return false;
+            var gap = second.StartBaseLine.X - first.EndBaseLine.X;
+            return gap > SpaceGapRatio * dominantSize && gap <= MaxLetterSpacingRatio * dominantSize;
+        }
+
+        private static bool IsLetterOrPunctuation(Letter letter) =>
+            letter.Value.Length > 0 && (char.IsLetter(letter.Value[0]) || char.IsPunctuation(letter.Value[0]));
+
+        /// <summary>
+        /// Litery zapisujące odstępy wyrazów glifem spacji — co najmniej <see cref="SpaceGlyphShare"/> liter to spacje.
+        /// W PDF-ie bez glifów spacji odstęp wyrazu to sama luka i bywa nie szerszy niż rozstrzelenie, więc tam luki
+        /// zostają odstępami.
+        /// </summary>
+        private static bool UsesSpaceGlyphs(IReadOnlyList<Letter> letters) =>
+            letters.Count(letter => string.IsNullOrWhiteSpace(letter.Value)) >= Math.Max(MinSpaceGlyphs, SpaceGlyphShare * letters.Count);
+
+        private const int MinLetterSpacedGaps = 3;
+        private const double LetterSpacingSpreadRatio = 0.06;
+        private const double MaxLetterSpacingRatio = 0.8;
+        private const double SpaceGlyphShare = 0.05;
+        private const int MinSpaceGlyphs = 3;
 
         /// <summary>
         /// Jeden odstęp między wyrazami. W wierszu justowanym odstęp bywa szerszy niż znak spacji, który go zapisuje
