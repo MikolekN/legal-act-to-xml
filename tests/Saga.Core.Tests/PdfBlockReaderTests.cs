@@ -1799,6 +1799,24 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SentenceAfterADoubleTiret_BackAtTheMargin_StartsABlock()
+        {
+            // Dz. U. 2026 poz. 439: tiret podwójny z dalszym wierszem wciętym głębiej, a zdanie o całym wyliczeniu wraca
+            // do marginesu — na lewo od kolumny oznaczenia.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("d) numer blankietu, który składa się z:", 72, 730);
+            builder.AddText("– – cztery cyfry oznaczające rok produkcji blankietu, które umieszcza w miejscu", 90, 716);
+            builder.AddText("oznaczonym we wzorze symbolem YYYY.", 102, 704);
+            builder.AddText("Skrót nazwy producenta blankietu jest wykonany w technice grawerowania laserowego.", 51, 690);
+            WithBodyPadding(builder, fromY: 650);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text).ToList();
+
+            Assert.Contains("– – cztery cyfry oznaczające rok produkcji blankietu, które umieszcza w miejscu oznaczonym we wzorze symbolem YYYY.", blocks);
+            Assert.Contains("Skrót nazwy producenta blankietu jest wykonany w technice grawerowania laserowego.", blocks);
+        }
+
+        [Fact]
         public void ParagraphContinuedAtTheMargin_AfterAFirstLineIndent_StaysOneBlock()
         {
             // Ustęp ma wcięcie pierwszego wiersza, nie wiszące: dalszy wiersz przy marginesie ciągnie go dalej.

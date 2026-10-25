@@ -1194,23 +1194,33 @@ namespace Saga.Core.Ingest.Pdf
         /// w jednym wierszu („3) 50 % wydatków … w pieczy zastępczej." / „Przepisy ust. 2–4 i 7 stosuje się odpowiednio.")
         /// wcięcia nie pokazuje, ale kropka kończy ostatnią pozycję wyliczenia (§ 56 ZTP), a jej dalszy wiersz nie wraca
         /// do kolumny oznaczenia — przy wcięciu pierwszego wiersza ustępu wraca do marginesu, nie do wcięcia.
+        /// Za dalszym wierszem wciętym głębiej niż oznaczenie granicą jest i powrót na lewo od kolumny oznaczenia: tiret
+        /// podwójny „– – … symbolem YYYY." i zdanie o całym wyliczeniu od marginesu („Skrót nazwy producenta …" — Dz. U.
+        /// 2026 poz. 439). Tiret i tiret podwójny są pozycjami wyliczenia jak punkt i litera.
         /// </summary>
         private static bool ReturnsToTheMarkerColumnAfterASentence(PdfTextLine line, PdfTextLine prev, PdfTextLine? blockFirst)
         {
             if (blockFirst is null || line.PageNumber != prev.PageNumber
-                || !(ListNumberPattern.IsMatch(blockFirst.Text) || ListLetterPattern.IsMatch(blockFirst.Text)))
+                || !(ListNumberPattern.IsMatch(blockFirst.Text) || ListLetterPattern.IsMatch(blockFirst.Text) || ListTiretPattern.IsMatch(blockFirst.Text)))
                 return false;
 
             var text = line.Text.TrimStart();
             var prevText = TrailingFootnoteAnchor.Replace(prev.Text.TrimEnd(), string.Empty);
-            return prevText.EndsWith('.')
-                && text.Length > 0 && char.IsUpper(text[0])
-                && Math.Abs(line.StartX - blockFirst.StartX) <= MarkerColumnTolerancePoints
-                && (ReferenceEquals(prev, blockFirst) || prev.StartX - blockFirst.StartX >= HangingIndentMinPoints);
+            if (!prevText.EndsWith('.') || text.Length == 0 || !char.IsUpper(text[0]))
+                return false;
+
+            if (ReferenceEquals(prev, blockFirst))
+                return Math.Abs(line.StartX - blockFirst.StartX) <= MarkerColumnTolerancePoints;
+
+            return prev.StartX - blockFirst.StartX >= HangingIndentMinPoints
+                && line.StartX <= blockFirst.StartX + MarkerColumnTolerancePoints;
         }
 
         /// <summary>Litera wyliczenia na początku wiersza: „a) ", „zb) ".</summary>
         private static readonly Regex ListLetterPattern = new(@"^[a-z]{1,2}\)\s", RegexOptions.Compiled);
+
+        /// <summary>Tiret albo tiret wielokrotny na początku wiersza: „– ", „– – ".</summary>
+        private static readonly Regex ListTiretPattern = new($@"^[{Dashes.Any}](?:\s+[{Dashes.Any}])*\s", RegexOptions.Compiled);
 
         /// <summary>Tolerancja kolumny oznaczenia pozycji wyliczenia.</summary>
         private const double MarkerColumnTolerancePoints = 1.5;

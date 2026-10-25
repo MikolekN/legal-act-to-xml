@@ -1703,6 +1703,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   przypadku" — tak samo zamiast instrukcji ręcznych. W korpusie DOCX 5 plików (4 z uchyleniami jednostek, 1 bez
   instrukcji). Miejsce użycia między czasownikiem a wyrazami należy do komendy skreślenia.
 
+- **Zdanie za wyliczeniem tiretów w PDF**: Dz. U. 2026 poz. 439 — zdanie o całym wyliczeniu („Skrót nazwy producenta
+  blankietu …") za tiretem podwójnym doklejało się do niego, bo regułę zdania za wyliczeniem znały tylko punkty
+  i litery, a zdanie wracało do marginesu, na lewo od kolumny oznaczenia. Tiret jest pozycją wyliczenia jak punkt; za
+  dalszym wierszem pozycji wciętym głębiej niż oznaczenie granicą jest powrót do kolumny oznaczenia albo na lewo od niej.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
