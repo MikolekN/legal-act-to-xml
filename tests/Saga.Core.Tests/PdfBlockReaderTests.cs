@@ -634,6 +634,36 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void OnePageActWithShortParagraphs_SplitsTheClauseUnderTheTitle()
+        {
+            // M.P. 2026 poz. 617: odstępy przed nagłówkami i krótkimi paragrafami przeważały nad interlinią, więc typowa
+            // interlinia wychodziła 19,9 pt i odstęp 24 pt pod przedmiotem uchwały nie dzielił go od zdania z formułą.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("MONITOR POLSKI", 142, 757, 47.5);
+            builder.AddText("DZIENNIK URZĘDOWY RZECZYPOSPOLITEJ POLSKIEJ", 142, 720, 22);
+            builder.AddText("Warszawa, dnia 16 czerwca 2026 r.", 198, 671.5, 14);
+            builder.AddText("Poz. 617", 273, 643.4, 14);
+            builder.AddText("UCHWAŁA NR 142", 247, 592, 10);
+            builder.AddText("RADY MINISTRÓW", 244, 577, 10);
+            builder.AddText("z dnia 16 czerwca 2026 r.", 246, 559, 10);
+            builder.AddText("w sprawie podjęcia działań w celu utworzenia stałej bazy", 74, 535, 10);
+            builder.AddText("na terytorium Rzeczypospolitej Polskiej", 212, 523, 10);
+            builder.AddText("W celu stworzenia warunków do podjęcia działań w celu utworzenia", 72, 499, 10);
+            builder.AddText("bazy, Rada Ministrów uchwala, co następuje:", 51, 487, 10);
+            builder.AddText("§ 1. Upoważnia się Ministra Obrony Narodowej do podjęcia działań", 72, 467, 10);
+            builder.AddText("zmierzających do utworzenia bazy.", 51, 455, 10);
+            builder.AddText("§ 2. Działania obejmują w szczególności prowadzenie konsultacji", 72, 435, 10);
+            builder.AddText("i uzgodnień oraz przygotowanie propozycji w zakresie utworzenia", 51, 423, 10);
+            builder.AddText("stałej bazy, w tym jej proponowanej lokalizacji oraz kosztów.", 51, 411, 10);
+            builder.AddText("§ 3. Uchwała wchodzi w życie z dniem podjęcia.", 72, 391, 10);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("w sprawie podjęcia działań w celu utworzenia stałej bazy na terytorium Rzeczypospolitej Polskiej", blocks);
+            Assert.Contains(blocks, b => b.StartsWith("W celu stworzenia warunków", StringComparison.Ordinal));
+        }
+
+        [Fact]
         public void HeadingInALargerSize_AtThePageStart_IsOneBlockOfItsOwn()
         {
             // M.P. 2026 poz. 343: „… paliatywnej i hospicyjnej." na końcu strony 24, na stronie 25 nagłówek 17,5 pt

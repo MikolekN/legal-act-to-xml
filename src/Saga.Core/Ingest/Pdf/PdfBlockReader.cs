@@ -1276,25 +1276,38 @@ namespace Saga.Core.Ingest.Pdf
 
         private static readonly Regex BracketContent = new(@"\[[^\[\]]*\]", RegexOptions.Compiled);
 
-        /// <summary>Typowa interlinia: mediana dodatnich odstępów Y kolejnych wierszy tej samej strony.</summary>
+        /// <summary>
+        /// Typowa interlinia: mediana dodatnich odstępów Y kolejnych wierszy tej samej strony — bez odstępów większych niż
+        /// <see cref="InterlineCeilingRatio"/> stopnia pisma, które interlinią nie są (odstęp przed akapitem, nagłówkiem,
+        /// tabelą). W akcie na jedną stronę z paragrafami w jednym wierszu (M.P. 2026 poz. 617) takie odstępy przeważały:
+        /// mediana wychodziła 19,9 pt przy interlinii 12 pt, a odstęp 24 pt pod tytułem nie dzielił akapitów.
+        /// </summary>
         private static double TypicalLineGap(List<PdfTextLine> lines, double emSize)
         {
             var gaps = new List<double>();
+            var interlines = new List<double>();
             for (int i = 1; i < lines.Count; i++)
             {
                 if (lines[i].PageNumber != lines[i - 1].PageNumber)
                     continue;
                 var gap = lines[i - 1].BaselineY - lines[i].BaselineY;
-                if (gap > 0)
-                    gaps.Add(gap);
+                if (gap <= 0)
+                    continue;
+                gaps.Add(gap);
+                if (gap <= InterlineCeilingRatio * Math.Max(lines[i].DominantSize, lines[i - 1].DominantSize))
+                    interlines.Add(gap);
             }
 
-            if (gaps.Count == 0)
+            var measured = interlines.Count > 0 ? interlines : gaps;
+            if (measured.Count == 0)
                 return emSize * 1.2;
 
-            gaps.Sort();
-            return gaps[gaps.Count / 2];
+            measured.Sort();
+            return measured[measured.Count / 2];
         }
+
+        /// <summary>Odstęp wierszy większy niż tyle stopni pisma nie jest interlinią.</summary>
+        private const double InterlineCeilingRatio = 2.0;
 
         private static double Mode(IEnumerable<double> values) =>
             values.GroupBy(v => v)

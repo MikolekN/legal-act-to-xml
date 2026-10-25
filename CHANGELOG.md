@@ -1681,6 +1681,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   wystarczało, że poprzednia strona miała odnośniki. Dalszym ciągiem odnośnika bez oznaczenia jest drobny druk, gdy
   odnośnik urwał się w pół zdania, gdy sam zaczyna się małą literą albo gdy tuż nad nim stoi kreska odnośników.
 
+- **Typowa interlinia PDF bez odstępów akapitowych**: M.P. 2026 poz. 617 — w uchwale na jedną stronę z paragrafami
+  w jednym wierszu odstępy przed nagłówkiem i paragrafami przeważały nad interlinią: mediana odstępów wychodziła 19,9 pt
+  przy interlinii 12 pt, więc odstęp 24 pt pod przedmiotem uchwały nie dzielił go od zdania z formułą „Rada Ministrów
+  uchwala, co następuje:", które trafiało do tytułu. Interlinię liczy się z odstępów nie większych niż dwa stopnie pisma.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
