@@ -1692,6 +1692,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   Akapit przed pierwszym paragrafem zakończony formułą wydania aktu jest jego podstawą prawną (pytanie 32 do autorów
   schematu).
 
+- **Nagłówek rozporządzenia kilku ministrów w PDF**: Dz. U. 2026 poz. 555 — „Rozporządzenie Ministrów: Spraw
+  Wewnętrznych i Administracji[1)], Obrony Narodowej, …" nie był nagłówkiem rodzaju (dwukropek przed wyliczeniem
+  ministrów i odwołania do odnośników), więc strefa tytułowa przepadała: bez tytułu, daty i organu, niezgodnie ze
+  schematem. Wyraz nazwy organu może kończyć odwołanie do odnośnika i dwukropek.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

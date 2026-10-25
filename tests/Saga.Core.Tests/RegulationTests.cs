@@ -68,6 +68,27 @@ namespace Saga.Core.Tests
             Assert.EndsWith("zarządza się, co następuje:", document.LegalBasis);
         }
 
+        [Theory]
+        // Dz. U. 2026 poz. 555: rozporządzenie czterech ministrów — organ „Ministrów: Spraw …, Obrony …" z dwukropkiem;
+        // adapter PDF składa nagłówek w jeden wiersz pisany jak nazwa własna, z odwołaniami do odnośników.
+        [InlineData("Rozporządzenie Ministrów: Spraw Wewnętrznych i Administracji[1)], Obrony Narodowej, Finansów i Gospodarki[2)] oraz Sprawiedliwości")]
+        [InlineData("ROZPORZĄDZENIE", "MINISTRÓW: SPRAW WEWNĘTRZNYCH I ADMINISTRACJI, OBRONY NARODOWEJ, FINANSÓW I GOSPODARKI ORAZ SPRAWIEDLIWOŚCI")]
+        public void HeadingOfAJointRegulation_WithAColonAfterMinisters_IsItsTitleZone(params string[] heading)
+        {
+            var document = Parse(heading.Concat(
+            [
+                "z dnia 17 kwietnia 2026 r.",
+                "zmieniające rozporządzenie w sprawie pojazdów specjalnych",
+                "Na podstawie art. 66 ust. 7 ustawy z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym (Dz. U. z 2024 r. poz. 1251) zarządza się, co następuje:",
+                "§ 1. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ]));
+
+            Assert.Equal("z dnia 17 kwietnia 2026 r.", document.DateLine);
+            Assert.Equal("zmieniające rozporządzenie w sprawie pojazdów specjalnych", document.Subject);
+            Assert.Contains("Sprawiedliwości", document.IssuerLine, StringComparison.OrdinalIgnoreCase);
+            Assert.StartsWith("Na podstawie art. 66 ust. 7", document.LegalBasis);
+        }
+
         [Fact]
         public void SectionSignInAStatute_StaysACodeParagraph()
         {

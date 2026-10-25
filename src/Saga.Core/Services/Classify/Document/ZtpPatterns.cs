@@ -31,7 +31,7 @@ namespace Saga.Core.Services.Classify.Document
         /// dotyczy tylko słowa kluczowego — spójnie z nagłówkami uchwały/zarządzenia.
         /// </summary>
         internal static readonly Regex RegulationHeaderPattern = new(
-            @"^(?:ROZPORZĄDZENIE|Rozporządzenie)(?:\s+(?<organ>[A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\s\-,\.]+|" + TitleCaseOrgan + @"))?$",
+            @"^(?:ROZPORZĄDZENIE|Rozporządzenie)(?:\s+(?<organ>[A-ZĄĆĘŁŃÓŚŹŻ](?:[A-ZĄĆĘŁŃÓŚŹŻ\s\-,\.:]|\[[^\[\]]*\])+|" + TitleCaseOrgan + @"))?$",
             RegexOptions.Compiled);
 
         /// <summary>
@@ -50,10 +50,17 @@ namespace Saga.Core.Services.Classify.Document
         /// <summary>
         /// Organ w dopełniaczu pisany jak nazwa własna („Ministra Finansów i Gospodarki") — ta sama gramatyka co
         /// w nagłówku obwieszczenia: wyrazy wielką literą i dozwolone spójniki; wyraz małą literą spoza listy
-        /// (czasownik prozy) unieważnia dopasowanie.
+        /// (czasownik prozy) unieważnia dopasowanie. Za wyrazem może stać odwołanie do odnośnika z kanału PDF („[1)]")
+        /// i dwukropek przed wyliczeniem ministrów wydających akt wspólnie („Ministrów: Spraw Wewnętrznych …, Obrony
+        /// Narodowej …" — Dz. U. 2026 poz. 555).
         /// </summary>
         private const string TitleCaseOrgan =
-            @"(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*[,\)]?)(?:\s+(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*|i|oraz|do|ds|w|z|na|dla|spraw)[,\)]?)*";
+            @"(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*" + OrganWordEnd + @")(?:\s+(?:[A-ZĄĆĘŁŃÓŚŹŻ][\p{L}0-9\-]*|i|oraz|do|ds|w|z|na|dla|spraw)" + OrganWordEnd + @")*";
+
+        // Odwołanie do odnośnika tylko w środku nazwy — za nim dalszy organ („…Administracji[1)], Obrony …"). Na końcu wiersza
+        // („Rozporządzenie Ministra … Administracji[1)]" w środku tekstu jednolitego z PDF — korpus 357444) wiersz z odnośnikiem
+        // nagłówkiem rodzaju nie zostaje: akapit nagłówka aktu w środku dokumentu jest pomijany, a z nim treść odnośnika.
+        private const string OrganWordEnd = @"(?:\[[^\[\]]*\](?=[,:\s]))?[,:\)]?";
 
         // § 138a: uchwała / zarządzenie. Zakotwiczone na $ (jak pozostałe nagłówki) i tak zbudowane,
         // by NIE łapać zwykłych zdań („Uchwała wchodzi w życie…"): po nazwie dopuszczalny jest tylko opcjonalny
