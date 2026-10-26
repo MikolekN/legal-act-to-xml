@@ -617,20 +617,73 @@ namespace Saga.Core.Tests
             Assert.Equal(separate, blocks.Any(b => b.EndsWith("ZAOPATRZENIA MEDYCZNEGO", StringComparison.Ordinal)));
         }
 
-        [Fact]
-        public void SubscriptOnItsOwnLine_DoesNotBreakTheParagraph()
+        [Theory]
+        // Korpus 324577: objaśnienie wzoru „B – liczbę jednostek … przez" / „l" (indeks 7 pt) / „świadczeniodawcę l, …"
+        // — indeks w osobnym wierszu to nie zmiana stopnia pisma nagłówka; tak samo wiersz samych indeksów.
+        [InlineData("l")]
+        [InlineData("l l l l L'l")]
+        public void SubscriptOnItsOwnLine_DoesNotBreakTheParagraph(string subscripts)
         {
-            // Korpus 324577: objaśnienie wzoru „B – liczbę jednostek … przez" / „l" (indeks 7 pt) / „świadczeniodawcę l, …"
-            // — indeks w osobnym wierszu to nie zmiana stopnia pisma nagłówka.
             var builder = new TestPdfBuilder().AddPage();
             builder.AddText("B – liczbę jednostek sprawozdawczych wykonanych w okresie, przez", 57, 700);
-            builder.AddText("l", 120, 693, 7);
+            builder.AddText(subscripts, 120, 693, 7);
             builder.AddText("świadczeniodawcę l, w okresie obliczeniowym, w zakresie świadczeń.", 57, 680);
             WithBodyPadding(builder, fromY: 640);
 
             var first = Read(builder.Build()).First().Text;
 
-            Assert.Contains("przez l świadczeniodawcę l, w okresie obliczeniowym", first);
+            Assert.Contains($"przez {subscripts} świadczeniodawcę l, w okresie obliczeniowym", first);
+        }
+
+        [Fact]
+        public void AttachmentLineInSmallType_StaysOneBlock_BesideTightlySetSmallType()
+        {
+            // M.P. 2026 poz. 343: wiersz przyłączenia 8 pt w dwóch wierszach co 9 pt, a w dokumencie wykresy z opisami 8 pt
+            // złożonymi ciaśniej — interlinia stopnia 8 pt nie może zejść poniżej stopnia ze światłem.
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 760);
+            for (var i = 0; i < 12; i++)
+                builder.AddText($"opis wykresu {i + 1}", 300, 500 - i * 6.8, 8);
+            builder.AddPage();
+            builder.AddText("Załączniki do uchwały nr 93 Rady Ministrów", 400, 762.4, 8);
+            builder.AddText("z dnia 12 marca 2026 r. (M.P. poz. 343)", 400, 753.4, 8);
+            WithBodyPadding(builder, fromY: 700);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("Załączniki do uchwały nr 93 Rady Ministrów z dnia 12 marca 2026 r. (M.P. poz. 343)", blocks);
+        }
+
+        [Fact]
+        public void CaptionUnderADottedPlaceholder_IsItsOwnBlock()
+        {
+            // Korpus 341292: „..........................................." i pod nim „(podpis organu)".
+            var builder = new TestPdfBuilder().AddPage();
+            WithBodyPadding(builder, fromY: 760);
+            builder.AddText("...........................................", 300, 600);
+            builder.AddText("(podpis organu)", 330, 590, 8);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("...........................................", blocks);
+            Assert.Contains("(podpis organu)", blocks);
+        }
+
+        [Fact]
+        public void SentenceAtTheMargin_UnderACentredTitleInCapitals_StartsItsOwnBlock()
+        {
+            // Korpus 335157: „WZÓR UPROSZCZONEGO ŚWIADECTWA ZDOLNOŚCI ŻEGLUGOWEJ" pośrodku, pod nim zwykłą interlinią „Opis"
+            // przy marginesie — tym samym pismem.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("WZÓR UPROSZCZONEGO ŚWIADECTWA ZDOLNOŚCI ŻEGLUGOWEJ", 139, 654, 10);
+            builder.AddText("Opis", 57, 642, 10);
+            builder.AddText("I. Format A4.", 57, 619, 10);
+            WithBodyPadding(builder, fromY: 590);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text.Trim()).ToList();
+
+            Assert.Contains("WZÓR UPROSZCZONEGO ŚWIADECTWA ZDOLNOŚCI ŻEGLUGOWEJ", blocks);
+            Assert.Contains("Opis", blocks);
         }
 
         [Fact]
@@ -1856,6 +1909,24 @@ namespace Saga.Core.Tests
 
             Assert.Contains("– – cztery cyfry oznaczające rok produkcji blankietu, które umieszcza w miejscu oznaczonym we wzorze symbolem YYYY.", blocks);
             Assert.Contains("Skrót nazwy producenta blankietu jest wykonany w technice grawerowania laserowego.", blocks);
+        }
+
+        [Fact]
+        public void CommonPartAfterAList_KeepsItsNextSentenceAtTheMargin()
+        {
+            // Korpus 351826: część wspólna za wyliczeniem zaczyna się myślnikiem, a jej dalsze zdanie wraca do marginesu —
+            // to wciąż ta sama część wspólna, nie zdanie za wyliczeniem.
+            var builder = new TestPdfBuilder().AddPage();
+            builder.AddText("2) nie zawiera wymaganych dokumentów", 57, 730);
+            builder.AddText("– Prezes URE niezwłocznie wzywa wnioskodawcę do uzupełnienia wniosku w terminie", 57, 716);
+            builder.AddText("7 dni od dnia doręczenia wezwania.", 66, 704);
+            builder.AddText("Nieuzupełnienie wniosku w wyznaczonym terminie skutkuje pozostawieniem wniosku.", 57, 692);
+            WithBodyPadding(builder, fromY: 650);
+
+            var blocks = Read(builder.Build()).Select(b => b.Text).ToList();
+
+            Assert.Contains("– Prezes URE niezwłocznie wzywa wnioskodawcę do uzupełnienia wniosku w terminie 7 dni od dnia doręczenia wezwania. " +
+                            "Nieuzupełnienie wniosku w wyznaczonym terminie skutkuje pozostawieniem wniosku.", blocks);
         }
 
         [Fact]

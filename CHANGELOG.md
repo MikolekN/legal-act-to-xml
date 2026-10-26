@@ -1717,6 +1717,18 @@ a wersjonowanie zgodne z Semantic Versioning.
   gwiazdka (26 znaczników). Nawias tuż za gwiazdką jest częścią znacznika objaśnienia i wychodzi indeksem górnym
   ([ADR-0083](docs/adr/0083-objasnienie-gwiazdki-nie-jest-pozycja-wyliczenia-a-jej-znacznik-jest-indeksem-gornym.md)).
 
+- **Granice bloków PDF po pomiarze korpusu**: typową interlinią zostaje mediana wszystkich odstępów, a poprawka na akt
+  z przewagą odstępów akapitowych (M.P. 2026 poz. 617) mierzy interlinię wierszami tekstu aktu do 1,6 stopnia pisma,
+  i to tylko w akcie do dwóch stron (w Dz. U. 2026 poz. 1341 mediana 20 pt to interlinia 179-stronicowego załącznika) —
+  miary węższe (sam stopień tekstu aktu, osobno każdy stopień) psuły korpus: wykaz drobnym drukiem przeważał (338939),
+  ankieta z szeroką interlinią dzieliła się na wiersze (337228), pozycje wzoru co 21 pt sklejały się (Dz. U. 2026
+  poz. 1314); skok stopnia pisma wymaga wyrazu w obu wierszach, nie samych indeksów wzoru („l l l l L'l" — 324577),
+  i pisma większego niż tekst aktu — etykiety drobnym drukiem na marginesie programu (M.P. 2026 poz. 1017) dzieliły
+  zdania w pół; zdanie przy marginesie pod wyśrodkowanym tytułem wersalikami zaczyna blok
+  („Opis" pod „WZÓR UPROSZCZONEGO ŚWIADECTWA …" — 335157); zdanie od marginesu za pozycją wyliczenia dotyczy tylko
+  tiretu podwójnego — pojedynczy myślnik zaczyna też część wspólną, której dalsze zdanie do niej należy (351826); wiersz
+  samych kropek (miejsce na podpis) kończy blok, więc „(podpis organu)" pod nim jest osobnym akapitem (341292).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

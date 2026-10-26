@@ -853,8 +853,9 @@ namespace Saga.Core.Ingest.Pdf
                     || (forceBoundary is null && ReturnsToTheMarkerColumnAfterASentence(line, prev, blockFirst))
                     || (forceBoundary is null && (TableCaptionPattern.IsMatch(line.Text) || TableCaptionPattern.IsMatch(prev.Text)))
                     || (forceBoundary is null && IsTableCaptionAfterASentence(line, prev))
-                    || (forceBoundary is null && !inCell && IsSentenceUnderAnUppercaseHeading(line, prev, typicalGap))
-                    || (forceBoundary is null && !inCell && ChangesTheTypeSize(line, prev))
+                    || (forceBoundary is null && LeaderOnlyLinePattern.IsMatch(prev.Text))
+                    || (forceBoundary is null && !inCell && IsSentenceUnderAnUppercaseHeading(line, prev, typicalGap, dominantLeft))
+                    || (forceBoundary is null && !inCell && ChangesTheTypeSize(line, prev, emSize))
                     || (line.PageNumber == prev.PageNumber
                         && prev.BaselineY - line.BaselineY > ParagraphGapRatio * LineGapOf(line, prev, typicalGap, emSize))
                     || (forceBoundary is null && line.PageNumber == prev.PageNumber
@@ -1106,15 +1107,22 @@ namespace Saga.Core.Ingest.Pdf
             TableCaptionWithTitlePattern.IsMatch(line.Text)
             && TrailingFootnoteAnchor.Replace(prev.Text.TrimEnd(), string.Empty).EndsWith('.');
 
+        /// <summary>
+        /// Wiersz samych kropek — miejsce na podpis albo wpis we wzorze; podpis pod nim („(podpis organu)" — korpus 341292)
+        /// jest osobnym akapitem, jak w DOCX.
+        /// </summary>
+        private static readonly Regex LeaderOnlyLinePattern = new(@"^[\s.…_]{8,}$", RegexOptions.Compiled);
+
         private static readonly Regex TableCaptionWithTitlePattern = new(@"^\s*Tabela\s+(?:nr\s+)?\d+[a-z]?\.\s+\p{Lu}", RegexOptions.Compiled);
 
         /// <summary>
         /// Zdanie pod tytułem wersalikami („… ZAOPATRZENIA MEDYCZNEGO" / „Do obrotu w sklepach … są dopuszczone …" — Dz. U.
         /// 2026 poz. 669, załącznik nr 3): odstęp pod tytułem bywa ledwie większy niż interlinia, ale tytuł i akapit różni
         /// wielkość liter i pismo — tytuł nie przechodzi w zdanie. Dwa sygnały: wiersz zaczyna się jak zdanie (wielka litera,
-        /// za nią mała) pod wierszem wersalikami, a do tego zmienia się stopień pisma albo odstęp jest większy niż interlinia.
+        /// za nią mała) pod wierszem wersalikami, a do tego zmienia się stopień pisma, odstęp jest większy niż interlinia albo
+        /// tytuł stoi pośrodku, a wiersz przy marginesie („WZÓR UPROSZCZONEGO ŚWIADECTWA …" / „Opis" — korpus 335157).
         /// </summary>
-        private static bool IsSentenceUnderAnUppercaseHeading(PdfTextLine line, PdfTextLine prev, double typicalGap)
+        private static bool IsSentenceUnderAnUppercaseHeading(PdfTextLine line, PdfTextLine prev, double typicalGap, double dominantLeft)
         {
             var text = line.Text.TrimStart();
             if (text.Length < 2 || !char.IsUpper(text[0]) || !char.IsLower(text[1])
@@ -1123,23 +1131,34 @@ namespace Saga.Core.Ingest.Pdf
 
             var otherSize = Math.Abs(line.DominantSize - prev.DominantSize) >= HeadingSizeDifferencePoints;
             var widerGap = line.PageNumber == prev.PageNumber && prev.BaselineY - line.BaselineY > HeadingGapRatio * typicalGap;
-            return otherSize || widerGap;
+            var backToTheMargin = Math.Abs(line.StartX - dominantLeft) <= MarkerColumnTolerancePoints
+                && prev.StartX - dominantLeft >= CentredTitleIndentPoints;
+            return otherSize || widerGap || backToTheMargin;
         }
+
+        /// <summary>Wcięcie, od którego wiersz tytułu uznaje się za wyśrodkowany, a nie za wcięcie akapitu.</summary>
+        private const double CentredTitleIndentPoints = 40;
 
         /// <summary>
         /// Nagłówek złożony dużo większym pismem niż tekst wokół („Vb. Wsparcie procesów konsolidacyjnych …" 17,5 pt pod
         /// akapitem 9,7 pt na końcu poprzedniej strony — M.P. 2026 poz. 343): stopień pisma nie zmienia się w środku akapitu,
         /// a na granicy strony odstęp pionowy nic nie mówi. Oba wiersze niosą tekst: indeks dolny wzoru w osobnym wierszu
-        /// („przez" / „l" / „świadczeniodawcę l" w objaśnieniu wzoru — korpus 324577) skokiem pisma nie jest.
+        /// („przez" / „l" / „świadczeniodawcę l" w objaśnieniu wzoru — korpus 324577) skokiem pisma nie jest. Większy z nich
+        /// jest większy niż tekst aktu, jak nagłówek: etykiety drobnym drukiem na marginesie programu („OCHRONY",
+        /// „SYSTEMOWA" — M.P. 2026 poz. 1017) przeplatają się z wierszami tekstu i nagłówkami nie są.
         /// </summary>
-        private static bool ChangesTheTypeSize(PdfTextLine line, PdfTextLine prev)
+        private static bool ChangesTheTypeSize(PdfTextLine line, PdfTextLine prev, double emSize)
         {
             var (larger, smaller) = (Math.Max(line.DominantSize, prev.DominantSize), Math.Min(line.DominantSize, prev.DominantSize));
             return smaller > 0 && larger / smaller >= TypeSizeJumpRatio && larger - smaller >= TypeSizeJumpPoints
+                && larger >= TypeSizeJumpRatio * emSize
                 && HasText(line) && HasText(prev);
         }
 
-        private static bool HasText(PdfTextLine line) => line.Text.Count(char.IsLetter) >= MinHeadingLetters;
+        /// <summary>Wiersz niesie wyraz, nie same indeksy wzoru („l l l l L'l" pod wzorem — korpus 324577).</summary>
+        private static bool HasText(PdfTextLine line) => HeadingWord.IsMatch(line.Text);
+
+        private static readonly Regex HeadingWord = new(@"\p{L}{" + MinHeadingLetters + ",}", RegexOptions.Compiled);
 
         private const double TypeSizeJumpRatio = 1.25;
         private const double TypeSizeJumpPoints = 2;
@@ -1204,7 +1223,7 @@ namespace Saga.Core.Ingest.Pdf
         /// do kolumny oznaczenia — przy wcięciu pierwszego wiersza ustępu wraca do marginesu, nie do wcięcia.
         /// Za dalszym wierszem wciętym głębiej niż oznaczenie granicą jest i powrót na lewo od kolumny oznaczenia: tiret
         /// podwójny „– – … symbolem YYYY." i zdanie o całym wyliczeniu od marginesu („Skrót nazwy producenta …" — Dz. U.
-        /// 2026 poz. 439). Tiret i tiret podwójny są pozycjami wyliczenia jak punkt i litera.
+        /// 2026 poz. 439). Tiret podwójny jest pozycją wyliczenia jak punkt i litera (<see cref="ListTiretPattern"/>).
         /// </summary>
         private static bool ReturnsToTheMarkerColumnAfterASentence(PdfTextLine line, PdfTextLine prev, PdfTextLine? blockFirst)
         {
@@ -1227,8 +1246,12 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Litera wyliczenia na początku wiersza: „a) ", „zb) ".</summary>
         private static readonly Regex ListLetterPattern = new(@"^[a-z]{1,2}\)\s", RegexOptions.Compiled);
 
-        /// <summary>Tiret albo tiret wielokrotny na początku wiersza: „– ", „– – ".</summary>
-        private static readonly Regex ListTiretPattern = new($@"^[{Dashes.Any}](?:\s+[{Dashes.Any}])*\s", RegexOptions.Compiled);
+        /// <summary>
+        /// Tiret wielokrotny na początku wiersza: „– – ". Pojedynczy myślnik za wyliczeniem zaczyna też część wspólną, której
+        /// dalsze zdanie od marginesu należy do niej („– Prezes URE niezwłocznie wzywa … wezwania." / „Nieuzupełnienie
+        /// wniosku …" — korpus 351826), więc pozycją wyliczenia dla tej reguły jest tylko tiret podwójny i głębszy.
+        /// </summary>
+        private static readonly Regex ListTiretPattern = new($@"^[{Dashes.Any}](?:\s+[{Dashes.Any}])+\s", RegexOptions.Compiled);
 
         /// <summary>Tolerancja kolumny oznaczenia pozycji wyliczenia.</summary>
         private const double MarkerColumnTolerancePoints = 1.5;
@@ -1295,10 +1318,15 @@ namespace Saga.Core.Ingest.Pdf
         private static readonly Regex BracketContent = new(@"\[[^\[\]]*\]", RegexOptions.Compiled);
 
         /// <summary>
-        /// Typowa interlinia: mediana dodatnich odstępów Y kolejnych wierszy tej samej strony — bez odstępów większych niż
-        /// <see cref="InterlineCeilingRatio"/> stopnia pisma, które interlinią nie są (odstęp przed akapitem, nagłówkiem,
-        /// tabelą). W akcie na jedną stronę z paragrafami w jednym wierszu (M.P. 2026 poz. 617) takie odstępy przeważały:
-        /// mediana wychodziła 19,9 pt przy interlinii 12 pt, a odstęp 24 pt pod tytułem nie dzielił akapitów.
+        /// Typowa interlinia: mediana dodatnich odstępów Y kolejnych wierszy tej samej strony. Gdy przeważają w niej odstępy
+        /// akapitowe — akt na jedną stronę z paragrafami w jednym wierszu (M.P. 2026 poz. 617: mediana 19,9 pt przy interlinii
+        /// 12 pt, a odstęp 24 pt pod tytułem nie dzielił akapitów) — miarą jest mediana odstępów wierszy tekstu aktu nie większych niż
+        /// <see cref="InterlineCeilingRatio"/> stopnia pisma, gdy mediana wszystkich przekracza ją więcej niż
+        /// <see cref="ParagraphGapDominanceRatio"/> razy — tylko w akcie krótkim (do <see cref="ShortActPages"/> stron): w długim
+        /// wiersze akapitów zawsze przeważają, a mediana większa od interlinii tekstu aktu to interlinia obszernego załącznika
+        /// złożonego szerzej (Dz. U. 2026 poz. 1341: 20 pt przy 11 pt aktu — z poprawką każdy jego wiersz był akapitem).
+        /// Miara dla każdego stopnia osobno zawodziła: we wzorze, którego każdy wiersz jest osobną pozycją co 21 pt
+        /// (Dz. U. 2026 poz. 1314), odstęp pozycji brała za interlinię.
         /// </summary>
         private static double TypicalLineGap(List<PdfTextLine> lines, double emSize)
         {
@@ -1312,20 +1340,41 @@ namespace Saga.Core.Ingest.Pdf
                 if (gap <= 0)
                     continue;
                 gaps.Add(gap);
-                if (gap <= InterlineCeilingRatio * Math.Max(lines[i].DominantSize, lines[i - 1].DominantSize))
+                if (IsBodySize(lines[i], emSize) && IsBodySize(lines[i - 1], emSize) && gap <= InterlineCeilingRatio * emSize)
                     interlines.Add(gap);
             }
 
-            var measured = interlines.Count > 0 ? interlines : gaps;
-            if (measured.Count == 0)
+            if (gaps.Count == 0)
                 return emSize * 1.2;
 
-            measured.Sort();
-            return measured[measured.Count / 2];
+            var median = Median(gaps);
+            var shortAct = lines.Select(line => line.PageNumber).Distinct().Count() <= ShortActPages;
+            return shortAct && interlines.Count >= MinInterlineSamples && median > ParagraphGapDominanceRatio * Median(interlines)
+                ? Median(interlines)
+                : median;
         }
 
-        /// <summary>Odstęp wierszy większy niż tyle stopni pisma nie jest interlinią.</summary>
-        private const double InterlineCeilingRatio = 2.0;
+        private static bool IsBodySize(PdfTextLine line, double emSize) => Math.Abs(line.DominantSize - emSize) < BodySizeTolerancePoints;
+
+        private static double Median(List<double> values)
+        {
+            values.Sort();
+            return values[values.Count / 2];
+        }
+
+        /// <summary>Odstęp wierszy większy niż tyle stopni pisma nie jest interlinią — interlinia składu to 1,15–1,5 stopnia, odstęp przed akapitem co najmniej 1,8.</summary>
+        private const double InterlineCeilingRatio = 1.6;
+
+        /// <summary>Najmniej odstępów nie większych niż <see cref="InterlineCeilingRatio"/> stopnia, by nimi mierzyć interlinię.</summary>
+        private const int MinInterlineSamples = 3;
+
+        /// <summary>Ile razy mediana wszystkich odstępów musi przekraczać interlinię, by uznać, że przeważają odstępy akapitowe.</summary>
+        private const double ParagraphGapDominanceRatio = 1.5;
+
+        private const double BodySizeTolerancePoints = 0.5;
+
+        /// <summary>Najwięcej stron aktu, w którym odstępy akapitowe mogą przeważyć nad interlinią.</summary>
+        private const int ShortActPages = 2;
 
         private static double Mode(IEnumerable<double> values) =>
             values.GroupBy(v => v)
