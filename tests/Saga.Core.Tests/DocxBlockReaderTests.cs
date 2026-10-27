@@ -164,6 +164,29 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ItalicText_ResolvesCharacterAndParagraphStyles_AsAToggle()
+        {
+            // Kursywa stylu akapitu przechodzi na przebiegi, wprost „w:i=0" ją wyłącza, a kursywa stylu znaku w akapicie
+            // kursywą ją znosi (właściwość przełączana); styl znaku dziedziczy kursywę po stylu bazowym.
+            const string styles =
+                @"<w:style w:type=""paragraph"" w:default=""1"" w:styleId=""Normal""><w:name w:val=""Normal""/></w:style>" +
+                @"<w:style w:type=""paragraph"" w:styleId=""Pochyly""><w:name w:val=""Pochyly""/><w:basedOn w:val=""Normal""/><w:rPr><w:i/></w:rPr></w:style>" +
+                @"<w:style w:type=""character"" w:styleId=""Kkursywa""><w:name w:val=""_K_ - kursywa""/><w:rPr><w:i/></w:rPr></w:style>" +
+                @"<w:style w:type=""character"" w:styleId=""Pochodny""><w:name w:val=""Pochodny""/><w:basedOn w:val=""Kkursywa""/><w:rPr><w:b/></w:rPr></w:style>";
+            static string Run(string text, string properties = "") =>
+                $@"<w:r>{(properties.Length > 0 ? $"<w:rPr>{properties}</w:rPr>" : string.Empty)}<w:t xml:space=""preserve"">{text}</w:t></w:r>";
+            var body =
+                @"<w:p><w:pPr><w:pStyle w:val=""Pochyly""/></w:pPr>" + Run("pierwszy ") + Run("drugi ", @"<w:i w:val=""0""/>") +
+                Run("trzeci ", @"<w:rStyle w:val=""Kkursywa""/>") + Run("czwarty") + "</w:p>" +
+                "<w:p>" + Run("Minister Zdrowia: wz. ") + Run("K. Kęcka", @"<w:rStyle w:val=""Pochodny""/>") + "</w:p>";
+
+            var blocks = Read(DocxFixtures.WithBodyXmlAndStyles(body, styles));
+
+            Assert.Equal(["pierwszy", "czwarty"], blocks[0].Layout!.ItalicText);
+            Assert.Equal(["K. Kęcka"], blocks[1].Layout!.ItalicText);
+        }
+
+        [Fact]
         public void ToBlock_NoBoldSpecified_IsNull()
         {
             var paragraph = new Paragraph(new Run(new Text("Treść bez formatowania runu.")));

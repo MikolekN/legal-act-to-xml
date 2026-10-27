@@ -1757,6 +1757,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   spacje. Akapity odnośnika mają teraz odstępy zwinięte jak treść bloku; twarda spacja to wskazówka łamania wiersza,
   nie znak tekstu — [ADR-0115](docs/adr/0115-odstepy-w-tresci-odnosnika-zwiniete-jak-w-tresci-aktu.md).
 
+- **Osoba podpisująca w kursywie**: `organ-podpisujacy` ma osobę w `<i>`, jak w przykładach autorów schematu, gdy źródło
+  składa ją kursywą — w DOCX stylem znaku „Kkursywa” albo kursywą wprost (wszystkie 2333 formuły podpisu korpusu), w PDF
+  pismem kursywnym; „wz.” i „z up.” zostają przed `i`. Czytnik DOCX rozwiązuje kursywę stylu znaku i akapitu
+  (`DocxItalics`, właściwość przełączana) — [ADR-0116](docs/adr/0116-osoba-w-podpisie-w-kursywie-tylko-gdy-zrodlo-ja-tak-sklada.md).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

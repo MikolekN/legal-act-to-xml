@@ -750,6 +750,7 @@ namespace Saga.Core.Ingest.Pdf
             var typicalGap = TypicalLineGap(lines, emSize);
 
             var buffer = new StringBuilder();
+            var italicText = new List<string>();
             PdfTextLine? blockFirst = null;
             PdfTextLine? prev = null;
             var titleZone = TitleZone.None;
@@ -770,6 +771,7 @@ namespace Saga.Core.Ingest.Pdf
                     {
                         LeftIndentTwips = (int)Math.Round(Math.Max(0, blockFirst.StartX - dominantLeft) * PointsToTwips),
                         FontSizeHalfPoints = blockFirst.DominantSize * 2,
+                        ItalicText = [.. italicText],
                     },
                     Source = new BlockSourceLocation
                     {
@@ -779,6 +781,7 @@ namespace Saga.Core.Ingest.Pdf
                     IsLandscape = blockFirst.IsLandscape,
                 });
                 buffer.Clear();
+                italicText.Clear();
                 blockFirst = null;
             }
 
@@ -867,6 +870,7 @@ namespace Saga.Core.Ingest.Pdf
                     FlushBlock();
                     blockFirst = line;
                     buffer.Append(line.Text);
+                    italicText.AddRange(line.ItalicText);
                     titleZone = forceBoundary is not null ? TitleZone.None : NextTitleZone(line, titleZone);
                 }
                 else
@@ -880,6 +884,7 @@ namespace Saga.Core.Ingest.Pdf
                         buffer.Append(line.Text);
                     else
                         hyphenation.Join(buffer, line.Text);
+                    italicText.AddRange(line.ItalicText);
                 }
 
                 prev = line;

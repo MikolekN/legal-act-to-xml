@@ -231,6 +231,7 @@ namespace Saga.Core.Ingest.Pdf
             Letter? prev = null;
             Letter? lastInk = null;
             double maxGap = 0;
+            var italic = new ItalicFragments();
 
             for (var i = 0; i < ordered.Count; i++)
             {
@@ -250,6 +251,7 @@ namespace Saga.Core.Ingest.Pdf
                     }
 
                     AppendSpace(sb);
+                    italic.Space();
                     prev = letter;
                     continue;
                 }
@@ -274,6 +276,7 @@ namespace Saga.Core.Ingest.Pdf
                             inSuperscript = false;
                         }
                         AppendSpace(sb);
+                        italic.Space();
                     }
                 }
 
@@ -289,6 +292,7 @@ namespace Saga.Core.Ingest.Pdf
                 }
 
                 sb.Append(letter.Value);
+                italic.Add(letter);
                 prev = letter;
             }
 
@@ -308,6 +312,7 @@ namespace Saga.Core.Ingest.Pdf
                 DominantSize = dominantSize,
                 PageHeight = pageHeight,
                 MaxGap = maxGap,
+                ItalicText = italic.Fragments(),
             };
         }
 
@@ -391,6 +396,44 @@ namespace Saga.Core.Ingest.Pdf
             return Math.Abs(space.StartBaseLine.Y - before.StartBaseLine.Y) > shift
                 && Math.Abs(space.StartBaseLine.Y - after.StartBaseLine.Y) > shift
                 && after.StartBaseLine.X - before.EndBaseLine.X < StraySpaceRoomRatio * space.Width;
+        }
+
+        /// <summary>
+        /// Kolejne litery pisma kursywnego wiersza jako fragmenty tekstu — nazwisko w formule podpisu („K. Nawrocki",
+        /// TimesNewRomanPS-ItalicMT za „Prezydent Rzeczypospolitej Polskiej:" pismem prostym). Odstęp nie przerywa fragmentu.
+        /// </summary>
+        private sealed class ItalicFragments
+        {
+            private readonly List<string> _fragments = [];
+            private readonly StringBuilder _current = new();
+
+            internal void Add(Letter letter)
+            {
+                if (letter.FontDetails?.IsItalic == true)
+                    _current.Append(letter.Value);
+                else
+                    Close();
+            }
+
+            internal void Space()
+            {
+                if (_current.Length > 0)
+                    _current.Append(' ');
+            }
+
+            internal IReadOnlyList<string> Fragments()
+            {
+                Close();
+                return _fragments;
+            }
+
+            private void Close()
+            {
+                var fragment = _current.ToString().Trim().Normalize(NormalizationForm.FormC);
+                if (fragment.Length > 0)
+                    _fragments.Add(fragment);
+                _current.Clear();
+            }
         }
 
         private const double StrayBaselineRatio = 0.05;

@@ -128,7 +128,7 @@ namespace Saga.Core.Services.Parsing
                 }
 
                 // Formuła podpisu; obwieszczenie wydane wspólnie ma ich kilka.
-                if (ActSignatureParser.TryParse(text) is { } signature)
+                if (ActSignatureParser.TryParse(text, blocks[i].Layout?.ItalicText) is { } signature)
                 {
                     if (document.Signature is null)
                         document.Signature = signature;

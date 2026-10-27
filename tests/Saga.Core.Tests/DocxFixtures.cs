@@ -142,6 +142,25 @@ namespace Saga.Core.Tests
             return stream.ToArray();
         }
 
+        /// <summary>
+        /// Jak <see cref="WithBodyXml"/>, z częścią stylów o podanych definicjach (<c>&lt;w:style&gt;…</c>) — do
+        /// formatowania dziedziczonego ze stylu akapitu albo znaku.
+        /// </summary>
+        internal static byte[] WithBodyXmlAndStyles(string bodyInnerXml, string stylesInnerXml)
+        {
+            using var stream = new MemoryStream();
+            using (var document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                var main = document.AddMainDocumentPart();
+                main.Document = new Word.Document(
+                    $@"<w:document xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main""><w:body>{bodyInnerXml}</w:body></w:document>");
+                main.AddNewPart<StyleDefinitionsPart>().Styles = new Word.Styles(
+                    $@"<w:styles xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">{stylesInnerXml}</w:styles>");
+            }
+
+            return stream.ToArray();
+        }
+
         // ============================================================
         // Przypisy
         // ============================================================

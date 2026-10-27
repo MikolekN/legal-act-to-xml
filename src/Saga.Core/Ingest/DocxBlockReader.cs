@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Text;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using Saga.Core.Exceptions;
@@ -95,12 +96,13 @@ namespace Saga.Core.Ingest
             blocks.AddRange(ReadPageHeaderBlocks(mainPart));
             var footnotes = DocxFootnotes.Read(mainPart);
             var tables = DocxTables.Read(mainPart.Document);
+            var italics = DocxItalics.Read(mainPart);
             var index = 0;
             var paragraphs = mainPart.Document.Descendants<Word.Paragraph>().ToList();
             var landscape = PageOrientation(mainPart.Document, paragraphs);
             foreach (var paragraph in paragraphs)
             {
-                blocks.Add(ToBlock(paragraph, index, footnotes, tables) with { IsLandscape = landscape[index] });
+                blocks.Add(ToBlock(paragraph, index, footnotes, tables, italics) with { IsLandscape = landscape[index] });
                 index++;
             }
 
@@ -208,7 +210,8 @@ namespace Saga.Core.Ingest
         /// Tekst surowy (bez Trim/Sanitize) — normalizację wykonuje orkiestrator.
         /// </summary>
         internal static DocumentBlock ToBlock(
-            Word.Paragraph paragraph, int? blockIndex, DocxFootnotes? footnotes = null, DocxTables? tables = null)
+            Word.Paragraph paragraph, int? blockIndex, DocxFootnotes? footnotes = null, DocxTables? tables = null,
+            DocxItalics? italics = null)
         {
             var referenced = footnotes?.ReferencedBy(paragraph) ?? [];
             return new()
@@ -219,7 +222,7 @@ namespace Saga.Core.Ingest
                 Footnotes = referenced,
                 TableCell = tables?.CellOf(paragraph),
                 StyleId = paragraph.StyleId(),
-                Layout = ExtractLayout(paragraph),
+                Layout = ExtractLayout(paragraph, italics),
                 Source = new BlockSourceLocation { BlockIndex = blockIndex },
             };
         }
@@ -232,7 +235,7 @@ namespace Saga.Core.Ingest
         /// Wyciąga metadane układu z właściwości akapitu i runów. Zwraca null, gdy
         /// akapit nie niesie żadnego sygnału układu (parytet z PDF/TXT bez layoutu).
         /// </summary>
-        private static BlockLayoutInfo? ExtractLayout(Word.Paragraph paragraph)
+        private static BlockLayoutInfo? ExtractLayout(Word.Paragraph paragraph, DocxItalics? italics)
         {
             var pPr = paragraph.ParagraphProperties;
             var indentation = pPr?.Indentation;
@@ -272,9 +275,10 @@ namespace Saga.Core.Ingest
             bool? isBold = DominantFlag(boldTrue, boldFalse);
             bool? isItalic = DominantFlag(italicTrue, italicFalse);
             double? fontSize = DominantSize(sizeWeights);
+            var italicText = ItalicText(paragraph, italics);
 
             if (left is null && firstLine is null && hanging is null && alignment is null
-                && isBold is null && isItalic is null && fontSize is null)
+                && isBold is null && isItalic is null && fontSize is null && italicText.Count == 0)
                 return null;
 
             return new BlockLayoutInfo
@@ -285,9 +289,61 @@ namespace Saga.Core.Ingest
                 Alignment = alignment,
                 IsBold = isBold,
                 IsItalic = isItalic,
+                ItalicText = italicText,
                 FontSizeHalfPoints = fontSize,
             };
         }
+
+        /// <summary>
+        /// Kolejne przebiegi w kursywie jako fragmenty tekstu (<see cref="BlockLayoutInfo.ItalicText"/>); przebieg bez
+        /// widocznego tekstu nie przerywa fragmentu. Bez stylów dokumentu — sama kursywa wprost.
+        /// </summary>
+        private static List<string> ItalicText(Word.Paragraph paragraph, DocxItalics? italics)
+        {
+            var fragments = new List<string>();
+            var current = new StringBuilder();
+            var paragraphStyle = paragraph.StyleId();
+            foreach (var run in paragraph.Descendants<Word.Run>())
+            {
+                var text = RunText(run);
+                if (text.Trim().Length == 0)
+                {
+                    current.Append(text);
+                    continue;
+                }
+
+                if (italics?.IsItalic(run, paragraphStyle) ?? DocxItalics.IsDirectlyItalic(run))
+                {
+                    current.Append(text);
+                    continue;
+                }
+
+                AddFragment(fragments, current);
+            }
+
+            AddFragment(fragments, current);
+            return fragments;
+        }
+
+        private static void AddFragment(List<string> fragments, StringBuilder current)
+        {
+            var fragment = current.ToString().CollapseWhitespace().Trim();
+            if (fragment.Length > 0)
+                fragments.Add(fragment);
+            current.Clear();
+        }
+
+        // Znaki jak w GetFullText: łącznik nierozdzielający w nazwisku dwuczłonowym („Dziemianowicz-Bąk", 40 podpisów
+        // korpusu) jest osobnym elementem, nie znakiem tekstu.
+        private static string RunText(Word.Run run) =>
+            string.Concat(run.ChildElements.Select(child => child switch
+            {
+                Word.Text text => text.Text,
+                Word.TabChar or Word.Break or Word.CarriageReturn => " ",
+                Word.NoBreakHyphen => "-",
+                Word.SymbolChar symbol when ParagraphExtensions.SymbolText(symbol) is { } character => character.ToString(),
+                _ => string.Empty,
+            }));
 
         /// <summary>Parsuje miarę twips (Word emituje całkowite twips; miary uniwersalne → null).</summary>
         private static int? ParseTwips(StringValue? value)

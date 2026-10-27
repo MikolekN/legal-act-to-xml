@@ -465,6 +465,7 @@ namespace Saga.Core.Services.Converters
                 internal const string Explanation = "objasnienie";
             }
             internal const string Superscript = "sup";
+            internal const string Italic = "i";
             internal const string eId = "eId";
             internal static readonly XName GUID = GuidNamespace + "GUID";
             internal const string MissingEId = "brak-eid";

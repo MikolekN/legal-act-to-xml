@@ -102,7 +102,10 @@ namespace Saga.Core.Tests
             Assert.Null(ActSignatureParser.TryParse(text));
         }
 
-        private static LegalDocument Parse(params (string Text, string? Style)[] lines)
+        private static LegalDocument Parse(params (string Text, string? Style)[] lines) =>
+            Parse(lines.Select(line => new DocumentBlock { Text = line.Text, StyleId = line.Style }));
+
+        private static LegalDocument Parse(IEnumerable<DocumentBlock> body)
         {
             var blocks = new List<DocumentBlock>
             {
@@ -110,7 +113,7 @@ namespace Saga.Core.Tests
                 new() { Text = "Warszawa, dnia 24 czerwca 2024 r.", Role = BlockRole.JournalHeader },
                 new() { Text = "Poz. 928", Role = BlockRole.JournalHeader },
             };
-            blocks.AddRange(lines.Select(line => new DocumentBlock { Text = line.Text, StyleId = line.Style }));
+            blocks.AddRange(body);
 
             return LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
         }
@@ -168,6 +171,100 @@ namespace Saga.Core.Tests
         public void SignedAct_IsSchemaValid_AsAWhole()
         {
             Assert.Empty(SchemaPl.Validator.Validate(LegalDocumentConverter.Convert(SignedAct())));
+        }
+
+        // Kursywa osoby w formule podpisu (ADR-0116): styl znaku szablonu RCL albo kursywa wprost.
+        private const string ItalicCharacterStyle =
+            @"<w:style w:type=""character"" w:styleId=""Kkursywa""><w:name w:val=""_K_ - kursywa""/><w:rPr><w:i/></w:rPr></w:style>";
+
+        private static string Line(params string[] runs) => $"<w:p>{string.Concat(runs)}</w:p>";
+
+        private static string Run(string text, string properties = "") =>
+            $@"<w:r>{(properties.Length > 0 ? $"<w:rPr>{properties}</w:rPr>" : string.Empty)}<w:t xml:space=""preserve"">{text}</w:t></w:r>";
+
+        private static LegalDocument ActSignedInDocx(string personRunProperties)
+        {
+            var body = string.Concat(
+                Line(Run("USTAWA")), Line(Run("z dnia 14 czerwca 2024 r.")), Line(Run("o ochronie sygnalistów")),
+                Line(Run("Art. 1. Ustawa określa zasady ochrony sygnalistów.")),
+                Line(Run("Art. 2. Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.")),
+                Line(Run("Prezydent Rzeczypospolitej Polskiej: "), Run("A. Duda", personRunProperties)));
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXmlAndStyles(body, ItalicCharacterStyle));
+            return LegalDocumentParser.Parse(stream, "ustawa.docx", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+        }
+
+        [Theory]
+        // Korpus DOCX: 1692 z 2333 podpisów ma nazwisko w stylu znaku „Kkursywa", 641 — kursywę wprost.
+        [InlineData(@"<w:rStyle w:val=""Kkursywa""/>")]
+        [InlineData("<w:i/>")]
+        public void PersonSetInItalics_StandsInsideI_AsInTheExamplesOfTheSchemaAuthors(string personRunProperties)
+        {
+            var signature = LegalDocumentConverter.Convert(ActSignedInDocx(personRunProperties))
+                .Descendants().Single(e => e.Name.LocalName == "organ-podpisujacy");
+
+            Assert.Equal("Prezydent Rzeczypospolitej Polskiej: A. Duda", signature.Value);
+            var italic = Assert.Single(signature.Elements());
+            Assert.Equal("i", italic.Name.LocalName);
+            Assert.Equal("osoba", Assert.Single(italic.Elements()).Name.LocalName);
+        }
+
+        [Fact]
+        public void DoubleBarrelledSurnameWithANonBreakingHyphen_StaysInItalics()
+        {
+            // 40 podpisów korpusu: łącznik w „Dziemianowicz-Bąk" to element w:noBreakHyphen, nie znak w w:t.
+            var body = string.Concat(
+                Line(Run("ROZPORZĄDZENIE")), Line(Run("MINISTRA RODZINY, PRACY I POLITYKI SPOŁECZNEJ")),
+                Line(Run("z dnia 14 czerwca 2024 r.")), Line(Run("w sprawie wzoru wniosku")),
+                Line(Run("§ 1. Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.")),
+                Line(Run("Minister Rodziny, Pracy i Polityki Społecznej: "),
+                    @"<w:r><w:rPr><w:i/></w:rPr><w:t>A. Dziemianowicz</w:t><w:noBreakHyphen/><w:t>Bąk</w:t></w:r>"));
+            using var stream = new MemoryStream(DocxFixtures.WithBodyXmlAndStyles(body, ItalicCharacterStyle));
+            var document = LegalDocumentParser.Parse(stream, "rozporzadzenie.docx", new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            Assert.True(document.Signature!.IsPersonItalic);
+            Assert.Equal("Dziemianowicz-Bąk", document.Signature.Surname);
+        }
+
+        [Fact]
+        public void PersonInUprightType_HasNoI()
+        {
+            var signature = LegalDocumentConverter.Convert(ActSignedInDocx(personRunProperties: string.Empty))
+                .Descendants().Single(e => e.Name.LocalName == "organ-podpisujacy");
+
+            Assert.Equal("osoba", Assert.Single(signature.Elements()).Name.LocalName);
+        }
+
+        [SchemaPlFact]
+        public void SignatureWithAPersonInItalics_IsSchemaValid()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                "Art. 1. Ustawa określa zasady ochrony sygnalistów.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.",
+            ];
+            var act = Parse(lines.Select(line => new DocumentBlock { Text = line }).Append(new DocumentBlock
+            {
+                Text = "Prezydent Rzeczypospolitej Polskiej: A. Duda",
+                StyleId = SignatureStyle,
+                Layout = new BlockLayoutInfo { ItalicText = ["A. Duda"] },
+            }));
+
+            var xml = LegalDocumentConverter.Convert(act);
+
+            Assert.Single(xml.Descendants(), e => e.Name.LocalName == "i" && e.Parent?.Name.LocalName == "organ-podpisujacy");
+            Assert.Empty(SchemaPl.Validator.Validate(xml));
+        }
+
+        [Theory]
+        [InlineData("A. Duda", true)]
+        [InlineData("A.Duda", true)]
+        [InlineData("wz. A. Duda", true)]
+        [InlineData("Duda", false)]
+        [InlineData("Prezydent Rzeczypospolitej Polskiej", false)]
+        public void PersonWithinAnItalicFragment_IsItalic(string fragment, bool expected)
+        {
+            Assert.Equal(expected, ActSignatureParser.TryParse("Prezydent Rzeczypospolitej Polskiej: A. Duda", [fragment])!.IsPersonItalic);
         }
 
         [Fact]

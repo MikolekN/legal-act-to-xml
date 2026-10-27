@@ -37,6 +37,9 @@ namespace Saga.Core.Ingest.Pdf
         /// </summary>
         public bool IsLandscape { get; init; }
 
+        /// <summary>Fragmenty wiersza złożone pismem kursywnym (<see cref="BlockLayoutInfo.ItalicText"/>).</summary>
+        public IReadOnlyList<string> ItalicText { get; init; } = [];
+
         /// <summary>
         /// Wiersz zastępczy tabeli z obramowaniem: stoi w miejscu tabeli na stronie (góra siatki), a komórki niosą
         /// własne wiersze. Null dla wiersza tekstu.

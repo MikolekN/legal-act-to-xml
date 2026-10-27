@@ -33,6 +33,13 @@ namespace Saga.Core.Ingest
         /// <summary>Dominanta kursywy runów/liter bloku.</summary>
         public bool? IsItalic { get; init; }
 
+        /// <summary>
+        /// Fragmenty bloku złożone kursywą, w kolejności tekstu — kolejne przebiegi (DOCX) albo litery (PDF) w kursywie.
+        /// W odróżnieniu od <see cref="IsItalic"/> DOCX rozwiązuje tu także kursywę ze stylu znaku i akapitu (nazwisko
+        /// w formule podpisu stoi w stylu znaku „Kkursywa"). Pusta, gdy źródło kursywy nie zna (TXT) albo jej w bloku nie ma.
+        /// </summary>
+        public IReadOnlyList<string> ItalicText { get; init; } = [];
+
         /// <summary>Dominujący rozmiar czcionki (half-points, jak w OpenXml).</summary>
         public double? FontSizeHalfPoints { get; init; }
     }

@@ -134,5 +134,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0113](0113-przytoczona-czesc-artykulu-stoi-we-fragmencie-zdania-z-oznaczeniem-artykulu.md) | Przytoczona część artykułu w obwieszczeniu („Art. 9. „2. …”) stoi w osobnym fragmencie zdania jednostki z oznaczeniem artykułu i `tpg:znastepnym`; w `tresc-strukt` same ustępy z adresem w artykule (zapis autora schematu, z wyprzedzeniem wobec schematu) | Accepted | 2026-10-22 |
 | [0114](0114-tekst-nadrukowany-innym-pismem-przeslania-tekst-pod-nim.md) | Tekst narysowany później innym pismem na tekście, którego nie zakryto (nagłówek wydawcy na nagłówku oryginału), przesłania go — adapter PDF czyta tylko tekst wierzchni | Accepted | 2026-10-22 |
 | [0115](0115-odstepy-w-tresci-odnosnika-zwiniete-jak-w-tresci-aktu.md) | Odstępy w treści odnośnika są zwinięte jak w treści aktu — twarda spacja, tabulator i podwójna spacja wychodzą zwykłą spacją; bez `tpg:typografia nieprzenosic` | Accepted | 2026-10-27 |
+| [0116](0116-osoba-w-podpisie-w-kursywie-tylko-gdy-zrodlo-ja-tak-sklada.md) | Osoba w formule podpisu stoi w `i` tylko wtedy, gdy źródło składa ją kursywą (DOCX: styl znaku lub kursywa wprost, PDF: pismo kursywne; TXT nigdy) | Accepted | 2026-10-27 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

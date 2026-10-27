@@ -3072,6 +3072,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0116: osoba w formule podpisu stoi w <i> tylko wtedy, gdy źródło składa ją kursywą
+        // ============================================================
+
+        [Fact]
+        public void Adr0116_SigningPersonStandsInItalics_OnlyWhenTheSourceSetsItInItalics()
+        {
+            // Kursywa przychodzi z czytnika (BlockLayoutInfo.ItalicText: styl znaku lub kursywa wprost w DOCX, pismo
+            // kursywne w PDF); TXT jej nie zna, więc nie zgaduje się jej z samej formuły.
+            XElement SigningAuthority(BlockLayoutInfo? layout)
+            {
+                string[] lines =
+                [
+                    "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                    "Art. 1. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+                ];
+                var blocks = lines.Select(line => new DocumentBlock { Text = line })
+                    .Append(new DocumentBlock { Text = "Prezydent Rzeczypospolitej Polskiej: K. Nawrocki", Layout = layout }).ToList();
+                var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+                return LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "organ-podpisujacy");
+            }
+
+            var italic = SigningAuthority(new BlockLayoutInfo { ItalicText = ["K. Nawrocki"] });
+            Assert.Equal("i", Assert.Single(italic.Elements()).Name.LocalName);
+            Assert.Equal("osoba", Assert.Single(italic.Elements().Single().Elements()).Name.LocalName);
+
+            Assert.Equal("osoba", Assert.Single(SigningAuthority(layout: null).Elements()).Name.LocalName);
+            Assert.Equal("osoba", Assert.Single(SigningAuthority(new BlockLayoutInfo { ItalicText = ["Prezydent"] }).Elements()).Name.LocalName);
+        }
+
+        // ============================================================
         // ADR-0076: cudzysłów otwarty pod przepisem trwa do domknięcia, bez względu na style
         // ============================================================
 

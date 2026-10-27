@@ -10,13 +10,19 @@ namespace Saga.Core.Services.Converters
     /// </summary>
     internal static class SignatureXmlConverter
     {
-        /// <summary>„Prezydent Rzeczypospolitej Polskiej: A. Duda" jako tekst z wyróżnioną osobą.</summary>
-        internal static XElement ToXml(ActSignature signature) =>
-            Element(XmlConverterConstants.Signatures.SigningAuthority,
+        /// <summary>
+        /// „Prezydent Rzeczypospolitej Polskiej: A. Duda" jako tekst z wyróżnioną osobą; osoba złożona w akcie kursywą
+        /// stoi w <c>i</c>, jak w przykładach autorów schematu (ADR-0116).
+        /// </summary>
+        internal static XElement ToXml(ActSignature signature)
+        {
+            var person = Person(XmlConverterConstants.Signatures.Person, signature,
+                new XAttribute(XmlConverterConstants.Signatures.Signing, true),
+                new XAttribute(XmlConverterConstants.Signatures.PersonGUID, signature.PersonGuid.ToString()));
+            return Element(XmlConverterConstants.Signatures.SigningAuthority,
                 signature.Authority + ": " + (signature.Capacity is { Length: > 0 } capacity ? capacity + " " : string.Empty),
-                Person(XmlConverterConstants.Signatures.Person, signature,
-                    new XAttribute(XmlConverterConstants.Signatures.Signing, true),
-                    new XAttribute(XmlConverterConstants.Signatures.PersonGUID, signature.PersonGuid.ToString())));
+                signature.IsPersonItalic ? Element(XmlConverterConstants.Contents.Italic, person) : person);
+        }
 
         /// <summary>Organ podpisujący w <c>Organy</c>.</summary>
         internal static XElement ToAuthority(ActSignature signature) => ToAuthority(signature, issuing: false);

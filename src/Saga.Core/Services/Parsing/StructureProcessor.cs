@@ -702,7 +702,7 @@ namespace Saga.Core.Services.Parsing
 
             // Formuła podpisu za ostatnim przepisem („Prezydent Rzeczypospolitej Polskiej: A. Duda").
             // Akt wydany wspólnie ma ich kilka — pierwsza jest podpisem aktu, kolejne stoją za nią.
-            if (ActSignatureParser.TryParse(text) is { } signature)
+            if (ActSignatureParser.TryParse(text, layout?.ItalicText) is { } signature)
             {
                 if (context.Document.Signature is null)
                     context.Document.Signature = signature;

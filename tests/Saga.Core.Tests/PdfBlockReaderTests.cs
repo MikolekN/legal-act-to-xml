@@ -147,6 +147,20 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void LettersInItalicType_AreTheItalicTextOfTheBlock()
+        {
+            // Dz. U. 2026 poz. 567: „Prezydent Rzeczypospolitej Polskiej:" pismem prostym, „K. Nawrocki" — kursywą.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("Prezydent Rzeczypospolitej Polskiej: ", 300, 700)
+                .AddItalicText("K. Nawrocki", 490, 700))
+                .Build();
+
+            var signature = Read(pdf).First(b => b.Text.StartsWith("Prezydent"));
+            Assert.Equal(["K. Nawrocki"], signature.Layout!.ItalicText);
+            Assert.Empty(Read(pdf).First(b => b.Text.StartsWith("Art. 90.")).Layout!.ItalicText);
+        }
+
+        [Fact]
         public void LetterWithACombiningMark_IsOneComposedLetter()
         {
             // M.P. 2026 poz. 560 i 943: „ą" złożone z litery i znaku łączącego (ogonek U+0328) — dwa glify, znak

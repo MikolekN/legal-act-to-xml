@@ -20,19 +20,27 @@ namespace Saga.Core.Services.Parsing
 
         private static readonly Regex Whitespace = new(@"\s+", RegexOptions.Compiled);
 
-        internal static ActSignature? TryParse(string? text)
+        /// <param name="italicText">
+        /// Fragmenty akapitu złożone kursywą (<see cref="Ingest.BlockLayoutInfo.ItalicText"/>): osoba, która w całości
+        /// stoi w jednym z nich, jest kursywą (<see cref="ActSignature.IsPersonItalic"/>).
+        /// </param>
+        internal static ActSignature? TryParse(string? text, IReadOnlyList<string>? italicText = null)
         {
             var match = Formula.Match(text?.Trim() ?? string.Empty);
             if (!match.Success)
                 return null;
 
-            return new ActSignature
+            var signature = new ActSignature
             {
                 Authority = match.Groups["authority"].Value.Trim(),
                 Capacity = match.Groups["capacity"].Success ? Whitespace.Replace(match.Groups["capacity"].Value, " ") : null,
                 GivenName = Whitespace.Replace(match.Groups["given"].Value.Trim(), " "),
                 Surname = match.Groups["surname"].Value,
             };
+            var person = Whitespace.Replace(signature.GivenName + signature.Surname, string.Empty);
+            signature.IsPersonItalic = italicText?.Any(fragment =>
+                Whitespace.Replace(fragment, string.Empty).Contains(person, StringComparison.OrdinalIgnoreCase)) == true;
+            return signature;
         }
     }
 }

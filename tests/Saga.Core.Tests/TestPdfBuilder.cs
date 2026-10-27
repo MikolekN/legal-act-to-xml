@@ -15,10 +15,11 @@ namespace Saga.Core.Tests
         /// <summary>
         /// Tekst w wierszu; <c>Rotated</c> — obrócony o ćwierć obrotu, biegnący w górę strony (treść w poprzek strony);
         /// <c>UpsideDown</c> — obrócony o pół obrotu, biegnący od prawej do lewej;
-        /// <c>Clip</c> — prostokąt przycięcia (x, y, szerokość, wysokość), poza którym tekst nie jest widoczny.
+        /// <c>Clip</c> — prostokąt przycięcia (x, y, szerokość, wysokość), poza którym tekst nie jest widoczny;
+        /// <c>Italic</c> — pismo pochyłe (Helvetica-Oblique).
         /// </summary>
         internal sealed record TextRun(string Text, double X, double Y, double Size, bool Rotated = false,
-            (double X, double Y, double Width, double Height)? Clip = null, bool UpsideDown = false);
+            (double X, double Y, double Width, double Height)? Clip = null, bool UpsideDown = false, bool Italic = false);
 
         /// <summary>Odcinek rysowany kreską — obramowanie tabeli.</summary>
         internal sealed record Rule(double X1, double Y1, double X2, double Y2);
@@ -102,6 +103,10 @@ namespace Saga.Core.Tests
         /// <summary>Dodaje tekst na OSTATNIEJ stronie. Współrzędne w punktach; Y rośnie do góry.</summary>
         public TestPdfBuilder AddText(string text, double x, double y, double size = 11) => Add(new TextRun(text, x, y, size));
 
+        /// <summary>Jak <see cref="AddText"/>, ale pismem pochyłym (nazwisko w formule podpisu).</summary>
+        public TestPdfBuilder AddItalicText(string text, double x, double y, double size = 11) =>
+            Add(new TextRun(text, x, y, size, Italic: true));
+
         /// <summary>
         /// Dodaje tekst obrócony o ćwierć obrotu (biegnie w górę strony od punktu x, y; wiersze następują w prawo) —
         /// tak skład stawia szeroką tabelę na stronie pionowej.
@@ -137,8 +142,9 @@ namespace Saga.Core.Tests
 
             var objects = new List<string>();
 
-            // 1: katalog, 2: drzewo stron, 3: font, 4: encoding; strony i strumienie dalej.
+            // 1: katalog, 2: drzewo stron, 3: font, 4: encoding; strony i strumienie dalej, na końcu font pochyły.
             int pageObjStart = 5;
+            int italicFontObj = pageObjStart + _pages.Count * 2;
             var pageRefs = new List<string>();
             for (int i = 0; i < _pages.Count; i++)
                 pageRefs.Add($"{pageObjStart + i * 2} 0 R");
@@ -152,13 +158,14 @@ namespace Saga.Core.Tests
             {
                 int contentObj = pageObjStart + i * 2 + 1;
                 objects.Add($"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {Pt(PageWidth)} {Pt(PageHeight)}] " +
-                    $"/Resources << /Font << /F1 3 0 R >> >> /Contents {contentObj} 0 R >>");
+                    $"/Resources << /Font << /F1 3 0 R /F2 {italicFontObj} 0 R >> >> /Contents {contentObj} 0 R >>");
 
                 var content = BuildRules(_rules[i]) + BuildBoxes(_boxes[i]) + BuildContentStream(_pages[i])
                     + (_covers[i].Count > 0 ? "\n" + BuildBoxes(_covers[i]).TrimEnd('\n') : string.Empty);
                 objects.Add($"<< /Length {content.Length} >>\nstream\n{content}\nendstream");
             }
 
+            objects.Add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding 4 0 R >>");
             return AssembleFile(objects);
         }
 
@@ -191,7 +198,7 @@ namespace Saga.Core.Tests
                 if (run.Clip is { } clip)
                     sb.Append(CultureInfo.InvariantCulture, $"q {Pt(clip.X)} {Pt(clip.Y)} {Pt(clip.Width)} {Pt(clip.Height)} re W n ");
                 sb.Append(CultureInfo.InvariantCulture,
-                    $"BT /F1 {Pt(run.Size)} Tf {(run.Rotated ? "0 1 -1 0" : run.UpsideDown ? "-1 0 0 -1" : "1 0 0 1")} {Pt(run.X)} {Pt(run.Y)} Tm (");
+                    $"BT /F{(run.Italic ? 2 : 1)} {Pt(run.Size)} Tf {(run.Rotated ? "0 1 -1 0" : run.UpsideDown ? "-1 0 0 -1" : "1 0 0 1")} {Pt(run.X)} {Pt(run.Y)} Tm (");
                 foreach (var c in run.Text)
                 {
                     if (c == '(' || c == ')' || c == '\\')

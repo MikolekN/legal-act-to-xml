@@ -28,7 +28,7 @@ namespace Saga.Core.Services.Parsing
             var signatures = new List<ActSignature>();
             foreach (var block in blocks)
             {
-                if (block.TableCell is null && ActSignatureParser.TryParse(TextOf(block)) is { } signature)
+                if (block.TableCell is null && ActSignatureParser.TryParse(TextOf(block), block.Layout?.ItalicText) is { } signature)
                     signatures.Add(signature);
                 else
                     content.Add(block);

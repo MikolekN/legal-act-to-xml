@@ -27,5 +27,11 @@ namespace Saga.Model
 
         /// <summary>Nazwisko („Duda", „Kidawa-Błońska").</summary>
         public string Surname { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Osoba złożona w akcie kursywą — tak stoi nazwisko w formule podpisu aktów z szablonu RCL i w Dzienniku Ustaw.
+        /// Znane tylko ze źródła, które niesie formatowanie (DOCX, PDF); w eksporcie <c>i</c> wokół <c>osoba</c>.
+        /// </summary>
+        public bool IsPersonItalic { get; set; }
     }
 }
