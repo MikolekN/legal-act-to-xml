@@ -858,7 +858,8 @@ Encje implicit:
 `CommonPart` to wirtualna jednostka redakcyjna reprezentująca tekst przed (`Intro`) lub po (`WrapUp`) liście elementów wyliczeniowych:
 - Tworzone automatycznie przez `ParsingFactories.AttachIntroCommonPart()` przed dodaniem pierwszego elementu do listy
 - Są rodzeństwem elementów wyliczeniowych (nie ich dziećmi)
-- W eksporcie: wprowadzenie zostaje zdaniem gospodarza (pozycje wyliczenia są jego dalszymi fragmentami), a część
+- W eksporcie: wprowadzenie zostaje zdaniem gospodarza (pozycje wyliczenia są jego dalszymi fragmentami — na każdym
+  poziomie, także tirety podwójne i dalsze pod tiretem, który nie ma części wspólnych), a część
   wspólna po wyliczeniu to element `czesc-wspolna-punkt` / `-litera` / `-tiret` z eId gospodarza i segmentem `czw`
   — [ADR-0025](adr/0025-czesc-wspolna-ma-eid-gospodarza-z-czw.md)
 - Część wspólna, po której stoi kolejna pozycja tego samego wyliczenia, jest rozstrzygana przy tej pozycji

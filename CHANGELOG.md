@@ -1734,6 +1734,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   Kodeksu karnego: bez stylu `S_KARN` sankcja zostawała osobnym fragmentem. Jak w treści aktu rozstrzygają dwa sygnały
   z trzech — styl, początek „podlega" i niedokończone zdanie przed nią.
 
+- **Tirety podwójne ciągną łańcuch fragmentów zdania**: tiret wprowadzający tirety podwójne nie ma części wspólnych,
+  więc jego tekst nie dostawał roli wprowadzenia do wyliczenia, a każdy tiret podwójny zaczynał nowe zdanie
+  (`fragment="1"`, nowy `gd:zdGUID`) — tak też w przykładzie DU20260000252 w repozytorium schematu. Autorzy schematu
+  potwierdzili (2026-10-27), że to błąd przykładu: tirety podwójne i dalsze kontynuują numerację fragmentów zdania
+  wprowadzenia, jak tirety pod literą. W korpusie DOCX 401 tiretów podwójnych w 64 plikach.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

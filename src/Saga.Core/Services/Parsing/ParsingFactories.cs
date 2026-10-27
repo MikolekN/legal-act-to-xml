@@ -583,23 +583,29 @@ namespace Saga.Core.Services.Parsing
         /// Logika:
         ///   - 1 segment  -> caly segment jest Intro
         ///   - N segmentow -> ostatni segment jest Intro
-        /// Warunki wstepne: rodzic implementuje IHasCommonParts i IHasTextSegments,
-        /// posiada segmenty tekstu i nie ma jeszcze CommonPart Intro.
+        /// Warunki wstepne: rodzic implementuje IHasTextSegments, posiada segmenty tekstu i nie ma jeszcze
+        /// CommonPart Intro. Rodzic bez części wspólnych (tiret wprowadzający tirety podwójne) dostaje tylko
+        /// rolę wprowadzenia — jego pozycje ciągną łańcuch fragmentów zdania jak pozycje punktu i litery (ADR-0115).
         /// </summary>
         public static void AttachIntroCommonPart(BaseEntity parent)
         {
-            if (parent is not IHasCommonParts hasCommonParts) return;
             if (parent is not IHasTextSegments hasTextSegments) return;
 
             var segments = hasTextSegments.TextSegments;
             if (segments.Count == 0) return;
 
+            // 1 segment -> caly jest intro; wiele segmentow -> ostatni jest intro
+            var introSegment = segments.Count == 1 ? segments[0] : segments[^1];
+            if (parent is not IHasCommonParts hasCommonParts)
+            {
+                introSegment.Role = "ListIntro";
+                return;
+            }
+
             // Nie dodawaj ponownie jesli intro juz istnieje
             if (hasCommonParts.CommonParts.Any(cp => cp.Type == CommonPartType.Intro))
                 return;
 
-            // 1 segment -> caly jest intro; wiele segmentow -> ostatni jest intro
-            var introSegment = segments.Count == 1 ? segments[0] : segments[^1];
             introSegment.Role = "ListIntro";
 
             var commonPart = new CommonPart(

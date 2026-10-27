@@ -1,3 +1,5 @@
+using Saga.Core.Ingest;
+using Saga.Core.Services;
 using Saga.Core.Services.Parsing;
 using Saga.Model;
 using Saga.Model.EditorialUnits;
@@ -108,6 +110,49 @@ namespace Saga.Core.Tests
             var intro = letter.CommonParts[0];
             Assert.Equal(CommonPartType.Intro, intro.Type);
             Assert.Same(letter, intro.Parent);
+        }
+
+        [Fact]
+        public void AttachIntro_TiretParent_MarksItsIntroWithoutACommonPart()
+        {
+            // Tiret wprowadzający tirety podwójne nie ma części wspólnych, ale jego wprowadzenie ciągnie łańcuch
+            // fragmentów zdania tak jak wprowadzenie litery (odpowiedź autorów schematu na pytanie 31).
+            var tiret = new Tiret { ContentText = "w pkt 10:" };
+            ParsingFactories.SetContentAndSegments(tiret, tiret.ContentText);
+
+            ParsingFactories.AttachIntroCommonPart(tiret);
+
+            Assert.Equal("ListIntro", tiret.TextSegments[0].Role);
+        }
+
+        [Fact]
+        public void DoubleTirets_ContinueTheSentenceFragmentChain()
+        {
+            // Przykład DU20260000252 w repozytorium schematu zaczynał przy tiretach podwójnych nowe zdania — to błąd
+            // przykładu: tirety podwójne i dalsze ciągną numerację fragmentów zdania wprowadzenia.
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o krajowym systemie cyberbezpieczeństwa",
+                "Art. 1. W ustawie z dnia 5 lipca 2018 r. o krajowym systemie cyberbezpieczeństwa (Dz. U. poz. 20) wprowadza się następujące zmiany:",
+                "1) w art. 26:",
+                "a) w ust. 3:",
+                "– w pkt 10:",
+                "– – wyrazy „sektorowymi zespołami” zastępuje się wyrazami „CSIRT sektorowymi”,",
+                "– – wyrazy „zagrożeniom” zastępuje się wyrazem „cyberzagrożeniom”,",
+                "– w pkt 11 wyraz „zespołów” zastępuje się wyrazem „CSIRT”,",
+                "b) uchyla się ust. 4;",
+                "2) w art. 27 uchyla się ust. 1.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var article = xml.Descendants().First(e => e.Name.LocalName == "artykul");
+            var sentences = article.Descendants().Where(e => e.Name.LocalName == "zdanie").ToList();
+            Assert.Contains(article.Descendants(), e => e.Name.LocalName == "podw-tiret");
+            Assert.Single(sentences.Select(s => s.Attributes().Single(a => a.Name.LocalName == "zdGUID").Value).Distinct());
+            Assert.Equal(Enumerable.Range(1, sentences.Count).Select(n => n.ToString()), sentences.Select(s => s.Attribute("fragment")!.Value));
         }
 
         [Fact]
