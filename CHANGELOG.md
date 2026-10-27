@@ -1729,6 +1729,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   tiretu podwójnego — pojedynczy myślnik zaczyna też część wspólną, której dalsze zdanie do niej należy (351826); wiersz
   samych kropek (miejsce na podpis) kończy blok, więc „(podpis organu)" pod nim jest osobnym akapitem (341292).
 
+- **Sankcja karna cytowanego przepisu bez stylu**: korpus 353997 (PDF) — „… utraty życia albo ciężkiego uszczerbku na
+  zdrowiu," i w osobnym akapicie „podlega karze pozbawienia wolności od 3 miesięcy do lat 5." w cytowanym paragrafie
+  Kodeksu karnego: bez stylu `S_KARN` sankcja zostawała osobnym fragmentem. Jak w treści aktu rozstrzygają dwa sygnały
+  z trzech — styl, początek „podlega" i niedokończone zdanie przed nią.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

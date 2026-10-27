@@ -423,6 +423,26 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SanctionOfAQuotedProvision_WithoutAStyle_ClosesItsSentence()
+        {
+            // Korpus 353997 (PDF): sankcja „podlega karze …" w osobnym akapicie cytowanego paragrafu kodeksu, bez stylu —
+            // „podlega" i zdanie urwane przecinkiem to dwa sygnały, jak w treści aktu.
+            var (orch, ctx) = NewPipeline();
+
+            Feed(orch, ctx,
+                "Art. 1. W ustawie wprowadza się następujące zmiany:",
+                "1) w art. 217a dotychczasową treść oznacza się jako § 1 i dodaje się § 2 w brzmieniu:",
+                "„§ 2. Jeżeli sprawca czynu określonego w § 1 naraża pokrzywdzonego na niebezpieczeństwo utraty życia,",
+                "podlega karze pozbawienia wolności od 3 miesięcy do lat 5.”;",
+                "Art. 2. Ustawa wchodzi w życie z dniem ogłoszenia.");
+            orch.Finalize(ctx);
+
+            var content = ctx.Document.Articles.First().Paragraphs[0].Points.Single().Amendment!.Content!;
+            var quoted = Assert.Single(content.Paragraphs);
+            Assert.EndsWith("utraty życia, podlega karze pozbawienia wolności od 3 miesięcy do lat 5.", quoted.ContentText);
+        }
+
+        [Fact]
         public void QuotedArticleAfterAnAnnouncementClause_IsNotAnAmendment()
         {
             // Obwieszczenie tekstu jednolitego przytacza artykuły („…, które stanowią:") — to nie komenda;

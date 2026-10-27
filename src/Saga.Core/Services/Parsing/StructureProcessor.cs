@@ -282,7 +282,7 @@ namespace Saga.Core.Services.Parsing
                 : block.Text) ?? string.Empty;
 
         /// <summary>Początek sankcji karnej: „podlega karze…", także po myślniku.</summary>
-        private static readonly Regex SanctionStart = new(
+        internal static readonly Regex SanctionStart = new(
             $@"^(?:[{Dashes.Any}]\s*)?podlega\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private const string SanctionStyleName = "S_KARN";

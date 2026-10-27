@@ -441,7 +441,7 @@ namespace Saga.Core.Services.Parsing.Builders
                     BuildAmendmentCommonPart(para, content);
                     break;
                 default:
-                    if (para.StyleInfo?.TargetKind == AmendmentTargetKind.PenalSanction && TryContinueWithSanction(para.Text))
+                    if ((para.StyleInfo?.TargetKind == AmendmentTargetKind.PenalSanction || IsStylelessSanction(para.Text)) && TryContinueWithSanction(para.Text))
                         break;
 
                     AttachText(para.Text, content, symbol: para.LeadingSymbol);
@@ -673,6 +673,18 @@ namespace Saga.Core.Services.Parsing.Builders
             _currentTiretIndex = 0;
             _openTirets.Clear();
             _openTiretIndents.Clear();
+        }
+
+        /// <summary>
+        /// Sankcja karna cytowanego przepisu bez stylu (PDF): dwa sygnały z trzech, jak w treści aktu — akapit zaczyna się od
+        /// „podlega", a zdanie przed nim się nie skończyło („… na zdrowiu," / „podlega karze pozbawienia wolności od 3 miesięcy
+        /// do lat 5." — korpus 353997, Kodeks karny w cytacie).
+        /// </summary>
+        private bool IsStylelessSanction(string text)
+        {
+            var before = ((BaseEntity?)_currentLetter ?? (BaseEntity?)_currentPoint ?? _currentParagraph)?.ContentText.TrimEnd();
+            return StructureProcessor.SanctionStart.IsMatch(text)
+                && before is { Length: > 0 } && before[^1] is not ('.' or ';' or ':');
         }
 
         /// <summary>
