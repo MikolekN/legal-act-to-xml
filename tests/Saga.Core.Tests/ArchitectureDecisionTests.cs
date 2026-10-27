@@ -3,6 +3,7 @@ using System.Xml.Linq;
 using Saga.Core.Ingest;
 using Saga.Core.Ingest.Pdf;
 using Saga.Core.Services;
+using Saga.Core.Services.Converters;
 using Saga.Core.Services.EntryIntoForce;
 using Saga.Core.Services.Parsing;
 using Saga.Core.Services.UnitReferences;
@@ -3069,6 +3070,46 @@ namespace Saga.Core.Tests
             Assert.Equal(expected, Assert.Single(Assert.Single(document.Footnotes).Paragraphs));
             var footnote = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "odnosnik");
             Assert.Equal(expected, footnote.Value);
+        }
+
+        // ============================================================
+        // ADR-0123: instrukcje now: stoją przed tekstem zdania
+        // ============================================================
+
+        [Fact]
+        public void Adr0123_AmendmentInstructions_StandBeforeTheSentenceText_InTheOrderOfTheirTargets()
+        {
+            // Każda instrukcja now: stoi przed tekstem zdania, które ją zapisuje; kilka uchyleń — w kolejności celów, zmiana
+            // znaku przed uchyleniem zapisanym dalej. Cytat ręczny (uchyl-recznie) zostaje za tekstem.
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 2 w ust. 1 uchyla się pkt 31, 32 i 34;",
+                "2) w art. 44 w ust. 4 w pkt 4 średnik zastępuje się kropką i uchyla się pkt 5;",
+                "3) w załączniku nr 2 do ustawy uchyla się lp. 7.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var sentences = xml.Descendants().Where(e => e.Name.LocalName == "punkt")
+                .Select(point => point.Element(point.Name.Namespace + "p")!.Elements().Single(e => e.Name.LocalName == "zdanie"))
+                .ToList();
+            List<string> Leading(XElement sentence) => sentence.Nodes().Where(node => node is not XText { Value: "" })
+                .TakeWhile(node => node is XElement element && element.Name.Namespace == XmlConverterConstants.AmendmentNamespace)
+                .Cast<XElement>().Select(e => $"{e.Name.LocalName} {e.Attribute("element-eId")?.Value}").ToList();
+
+            Assert.Equal(["uchyl DU/2021/200__art_2__ust_1__pkt_31", "uchyl DU/2021/200__art_2__ust_1__pkt_32",
+                "uchyl DU/2021/200__art_2__ust_1__pkt_34"], Leading(sentences[0]));
+            Assert.Equal(["zamien-tekst DU/2021/200__art_44__ust_4__pkt_4", "uchyl DU/2021/200__art_44__ust_4__pkt_5"], Leading(sentences[1]));
+            Assert.All(xml.Descendants().Where(e => e.Name.Namespace == XmlConverterConstants.AmendmentNamespace && e.Parent?.Name.LocalName == "zdanie"),
+                instruction => Assert.All(instruction.NodesBeforeSelf(), node =>
+                    Assert.True(node is XText { Value: "" } || node is XElement { Name.NamespaceName: var ns } && ns == XmlConverterConstants.AmendmentNamespace)));
+
+            var manual = Assert.IsType<XElement>(sentences[2].LastNode);
+            Assert.Equal("uchyl-recznie", manual.Attribute("funkcja")?.Value);
+            Assert.Equal("w załączniku nr 2 do ustawy uchyla się lp. 7.", string.Concat(sentences[2].Nodes().OfType<XText>().Select(text => text.Value)));
         }
 
         // ============================================================

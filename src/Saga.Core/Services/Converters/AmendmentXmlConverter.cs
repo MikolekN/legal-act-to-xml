@@ -46,8 +46,7 @@ namespace Saga.Core.Services.Converters
 
             if (amendment.OperationType == AmendmentOperationType.Repeal)
             {
-                foreach (var command in commands)
-                    AddRepealInstruction(amendment, command, sentence);
+                AddRepealInstructions(amendment, commands, sentence);
                 AddTextChangeInstructions(amendment, commands, sentence);
                 return;
             }
@@ -232,7 +231,7 @@ namespace Saga.Core.Services.Converters
         /// Uchylenie celu bez adresu: tekstu do uchylenia akt zmieniający nie przytacza, więc cytat niesie przedmiot uchylenia
         /// tak, jak nazywa go przepis („lp. 7"), bez cudzysłowów — to wskazanie dla tego, kto zmianę wprowadzi ręcznie.
         /// </summary>
-        private static void AddManualRepeal(Amendment amendment, Command command, XElement zdanie)
+        private static XElement ManualRepeal(Amendment amendment, Command command)
         {
             var raw = command.Target?.RawText?.Trim() ?? string.Empty;
             var repealed = RepealedObject.Match(raw) is { Success: true } match ? match.Groups["object"].Value : raw;
@@ -242,7 +241,7 @@ namespace Saga.Core.Services.Converters
             ApplyAttributes(citation, amendment, command, isStructural: false);
             citation.SetAttributeValue(XmlConverterConstants.Contents.Citation.Quotation.QuotationAttribute,
                 XmlConverterConstants.Contents.Citation.Quotation.QuotationNone);
-            zdanie.Add(citation);
+            return citation;
         }
 
         /// <summary>
@@ -286,25 +285,36 @@ namespace Saga.Core.Services.Converters
                 element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementDoAttribute, end));
         }
 
-        private static void AddRepealInstruction(Amendment amendment, Command command, XNode? sentence)
+        /// <summary>
+        /// Uchylenie: <c>now:uchyl</c> na każdy cel, przed tekstem zdania jak każda instrukcja <c>now:</c> (ADR-0123),
+        /// w kolejności celów; cel bez adresu — cytat <c>uchyl-recznie</c> za tekstem (ADR-0100).
+        /// </summary>
+        private static void AddRepealInstructions(Amendment amendment, List<Command> commands, XNode? sentence)
         {
             if (sentence is not XElement zdanie)
                 return;
 
-            if (command.Target is { IsManual: true })
+            XNamespace now = XmlConverterConstants.AmendmentNamespace;
+            var instructions = new List<XElement>();
+            var manual = new List<XElement>();
+
+            foreach (var command in commands)
             {
-                AddManualRepeal(amendment, command, zdanie);
-                return;
+                if (command.Target is { IsManual: true })
+                {
+                    manual.Add(ManualRepeal(amendment, command));
+                    continue;
+                }
+
+                var uchyl = new XElement(now + XmlConverterConstants.Contents.Instruction.Repeal);
+                uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
+                AddTargetAttributes(uchyl, amendment, command.Target);
+                uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
+                instructions.Add(uchyl);
             }
 
-            XNamespace now = XmlConverterConstants.AmendmentNamespace;
-
-            var uchyl = new XElement(now + XmlConverterConstants.Contents.Instruction.Repeal);
-            uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
-            AddTargetAttributes(uchyl, amendment, command.Target);
-            uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
-
-            zdanie.Add(uchyl);
+            zdanie.AddFirst(instructions);
+            zdanie.Add(manual);
         }
 
         /// <summary>

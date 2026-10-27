@@ -1,6 +1,6 @@
 # ADR-0052: Zmiana wyrazów jest instrukcją `now:zamien-tekst`, nie cytatem
 
-- Status: Accepted (sprostowanie do konsekwencji: położenie instrukcji w zdaniu nie jest w przykładach ustalone — DU/2026/252 stawia je najczęściej za tekstem zdania; skreślenie wyrazów i dalsze postaci: [ADR-0053](0053-skreslenie-wyrazow-to-zamiana-na-pusty-tekst.md), [ADR-0054](0054-zamiana-znaku-konczacego-jednostke-ma-wlasny-cel.md))
+- Status: Accepted (sprostowanie do konsekwencji: położenie instrukcji w zdaniu nie jest w przykładach ustalone — DU/2026/252 stawia je najczęściej za tekstem zdania; skreślenie wyrazów i dalsze postaci: [ADR-0053](0053-skreslenie-wyrazow-to-zamiana-na-pusty-tekst.md), [ADR-0054](0054-zamiana-znaku-konczacego-jednostke-ma-wlasny-cel.md); w części o położeniu `now:uchyl` w zdaniu Superseded by [ADR-0123](0123-instrukcje-nowelizacyjne-stoja-przed-tekstem-zdania.md))
 - Data: 2026-10-12
 
 ## Kontekst

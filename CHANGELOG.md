@@ -1807,6 +1807,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   ([ADR-0122](docs/adr/0122-komendy-w-osobnych-zdaniach-jednostki-to-osobne-nowelizacje.md)). W korpusie DOCX takiego
   zapisu nie ma — eksport bez zmian.
 
+- **Uchylenie przed tekstem zdania**: `now:uchyl` stoi, jak pozostałe instrukcje `now:`, przed tekstem zdania, które
+  je zapisuje — kilka uchyleń w kolejności celów — zgodnie z odpowiedzią autora schematu i przykładem DU/2026/26.
+  Cytaty i cytaty instrukcji ręcznych zostają w toku zdania
+  ([ADR-0123](docs/adr/0123-instrukcje-nowelizacyjne-stoja-przed-tekstem-zdania.md)).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

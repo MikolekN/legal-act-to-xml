@@ -221,6 +221,19 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void RepealedUnit_IsAnInstructionBeforeTheSentenceText()
+        {
+            // Odpowiedź autora schematu (2026-10-27): instrukcja przed tekstem, jak w DU/2026/26 (ADR-0123).
+            var (xml, _) = Convert("1) w art. 77 uchyla się ust. 5;");
+
+            var instruction = Assert.Single(Commands(xml));
+            Assert.Equal("uchyl", instruction.Name.LocalName);
+            var sentence = instruction.Parent!;
+            Assert.Same(instruction, sentence.Nodes().First(node => node is not XText { Value: "" }));
+            Assert.Equal("w art. 77 uchyla się ust. 5;", sentence.Value);
+        }
+
+        [Fact]
         public void ReplacedWords_DoNotCarryAFootnoteOfThisAct_NorASoftHyphen()
         {
             // 306779_2736407: odnośnik aktu zmieniającego („z późn. zm.⁸⁾") stoi w wyrazach skreślanych; 331615_3027942:
