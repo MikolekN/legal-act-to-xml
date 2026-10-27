@@ -147,6 +147,23 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void LetterWithACombiningMark_IsOneComposedLetter()
+        {
+            // M.P. 2026 poz. 560 i 943: „ą" złożone z litery i znaku łączącego (ogonek U+0328) — dwa glify, znak
+            // łączący nad końcem litery, bez własnego przesuwu.
+            var zarza = "Zarza".Sum(c => HelveticaWidths[c]) * 11 / 1000;
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Uchwała ", 57, 700)
+                .AddText("Zarza", 200, 700)
+                .AddText("\u0328", 200 + zarza - 1.6, 700)
+                .AddText("du wchodzi w życie z dniem podjęcia.", 200 + zarza, 700))
+                .Build();
+
+            var first = Read(pdf).First(b => b.Text.StartsWith("Art. 1."));
+            Assert.Equal("Art. 1. Uchwała Zarządu wchodzi w życie z dniem podjęcia.", first.Text);
+        }
+
+        [Fact]
         public void ReadingOrder_TopToBottom_BlockPerUnitLine()
         {
             var pdf = new TestPdfBuilder().AddPage()

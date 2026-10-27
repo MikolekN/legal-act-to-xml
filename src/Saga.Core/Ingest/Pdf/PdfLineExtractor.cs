@@ -297,7 +297,11 @@ namespace Saga.Core.Ingest.Pdf
 
             return new PdfTextLine
             {
-                Text = DoubledSuperscriptPattern.Replace(sb.ToString(), "[$1]"),
+                // Litera ze znakiem diakrytycznym bywa w PDF-ie dwoma glifami — literą i znakiem łączącym („A" + ogonek
+                // U+0328 w rozstrzelonym „ZARZĄDU", M.P. 2026 poz. 560; całe „Założenia polityki pieniężnej", M.P. 2026
+                // poz. 943). Postać złożona (NFC) to jedna litera: znak łączący nie dzieli wyrazu przy wielkości liter
+                // („ZarząDu") ani przy porównaniu słów.
+                Text = DoubledSuperscriptPattern.Replace(sb.ToString(), "[$1]").Normalize(NormalizationForm.FormC),
                 PageNumber = page.Number,
                 StartX = ordered[0].StartBaseLine.X,
                 BaselineY = baselineY,

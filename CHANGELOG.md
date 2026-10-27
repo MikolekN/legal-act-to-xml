@@ -1746,6 +1746,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   zostawiają mu miejsca, nie jest odstępem. Spacja na linii bazowej wyrazów zostaje — w ściśniętej komórce odstęp bywa
   węższy niż pół spacji („przez podmiot", Dz. U. 2026 poz. 1310).
 
+- **PDF: litera ze znakiem łączącym to jedna litera**: „ą" złożone z „a" i ogonka U+0328 (dwa glify) zostawało w tekście
+  w postaci rozłożonej — organ w rozstrzelonym nagłówku uchwały wychodził jako „ZarząDu" (znak łączący dzielił wyraz
+  przy wielkości liter, M.P. 2026 poz. 560), a całe „Założenia polityki pieniężnej" (M.P. 2026 poz. 943) miały 563
+  takich liter. Tekst wiersza PDF jest w postaci złożonej (NFC).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem
