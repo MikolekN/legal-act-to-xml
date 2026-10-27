@@ -1,6 +1,6 @@
 # ADR-0011: Data reguły ogólnej wejścia w życie trafia na wszystkie jednostki. Brak daty znaczy nierozstrzygnięty wyjątek
 
-- Status: -
+- Status: - (w części o dacie nowelizacji zastąpiony przez [ADR-0121](0121-tresc-cytowana-wchodzi-w-zycie-ze-zdaniem-ktore-ja-przytacza.md))
 - Data: 2026-07-31
 
 ## Kontekst

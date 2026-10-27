@@ -154,8 +154,58 @@ namespace Saga.Core.Tests
             Assert.Equal(General, quotedParagraph.EffectiveDate);
             Assert.Equal(General, quotedParagraph.TextSegments.Single().EffectiveDate);
 
-            // Nowelizacja wchodzi w życie razem z jednostką, która ją zarządza.
+            // Nowelizacja wchodzi w życie razem ze zdaniem, które ją przytacza (ADR-0121).
             Assert.Equal(General, point.Amendment.EffectiveDate);
+        }
+
+        private static (Paragraph Host, Article Quoted) WithQuotedArticle(LegalDocument document)
+        {
+            var paragraph = document.Articles.Single().Paragraphs.Single();
+            var quoted = new Article { Number = new EntityNumber { Value = "85a" } };
+            quoted.Paragraphs.Add(new Paragraph { Number = new EntityNumber { Value = "1" } });
+
+            var content = new AmendmentContent();
+            content.Articles.Add(quoted);
+            paragraph.Amendment = new Amendment { Content = content };
+            return (paragraph, quoted);
+        }
+
+        [Fact]
+        public void ExceptionOnTheQuotingSentence_ReachesTheAmendmentAndItsQuotedContent_NotTheUnit()
+        {
+            var document = BuildTree();
+            var (paragraph, quoted) = WithQuotedArticle(document);
+
+            // Cytat stoi w ostatnim zdaniu jednostki — tam dopisuje go eksport.
+            var map = new EntryIntoForceExceptionMap();
+            map.MarkSegment(paragraph.TextSegments[1], new EntryDates(Exception, ExceptionRetroactive));
+
+            EffectiveDatePropagator.Propagate(document, new EntryDates(General, null), map);
+
+            Assert.Equal(General, paragraph.EffectiveDate);
+            Assert.Equal(General, paragraph.Points.Single().EffectiveDate);
+            Assert.Equal(Exception, paragraph.Amendment!.EffectiveDate);
+            Assert.Equal(ExceptionRetroactive, paragraph.Amendment.RetroactiveFrom);
+            Assert.Equal(Exception, quoted.EffectiveDate);
+            Assert.Equal(Exception, quoted.Paragraphs.Single().EffectiveDate);
+            Assert.Equal(ExceptionRetroactive, quoted.Paragraphs.Single().RetroactiveFrom);
+        }
+
+        [Fact]
+        public void ExceptionOnAnEarlierSentence_LeavesTheQuotedContentWithTheUnit()
+        {
+            var document = BuildTree();
+            var (paragraph, quoted) = WithQuotedArticle(document);
+
+            var map = new EntryIntoForceExceptionMap();
+            map.MarkSegment(paragraph.TextSegments[0], new EntryDates(Exception, null));
+
+            EffectiveDatePropagator.Propagate(document, new EntryDates(General, Retroactive), map);
+
+            Assert.Equal(General, paragraph.Amendment!.EffectiveDate);
+            Assert.Equal(Retroactive, paragraph.Amendment.RetroactiveFrom);
+            Assert.Equal(General, quoted.Paragraphs.Single().EffectiveDate);
+            Assert.Equal(Retroactive, quoted.Paragraphs.Single().RetroactiveFrom);
         }
 
         [Fact]

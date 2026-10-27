@@ -29,7 +29,7 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0007](0007-klasyfikacja-nie-mutuje-type.md) | Rozpoznany rodzaj aktu ląduje w `Classification`, nigdy w `LegalDocument.Type` | Accepted | 2026-07-20 |
 | [0009](0009-jedno-zrodlo-liczebnikow-polskich.md) | Słownik polskich liczebników. Generuje także fragment regexa do ich wyszukiwania | - | 2026-07-29 |
 | [0010](0010-jeden-kursor-sciezki-jednostek.md) | Kursor ścieżki jednostek | - | 2026-07-30 |
-| [0011](0011-data-ogolna-rozsylana-po-calym-drzewie.md) | Data reguły ogólnej wejścia w życie trafia na wszystkie jednostki. Brak daty znaczy nierozstrzygnięty wyjątek | - | 2026-07-31 |
+| [0011](0011-data-ogolna-rozsylana-po-calym-drzewie.md) | Data reguły ogólnej wejścia w życie trafia na wszystkie jednostki. Brak daty znaczy nierozstrzygnięty wyjątek | - (w części zastąpiony przez 0121) | 2026-07-31 |
 | [0012](0012-naglowek-strony-jako-rola-bloku.md) | Nagłówek aktu | - | 2026-08-28 |
 | [0013](0013-moc-wsteczna-przyslania-date-dopiero-na-wyjsciu.md) | Moc wsteczna przysłania datę wejścia w życie dopiero przy zapisie; model trzyma obie daty osobno | - (w części zastąpiony przez 0022) | 2026-09-03 |
 | [0014](0014-skroty-jednostek-w-eid.md) | Skróty jednostek w eId (levelType) wyznacza jedna zamknięta tabela — także w adresach wskazywanych | Accepted | 2026-09-23 |
@@ -139,5 +139,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0118](0118-kursywa-i-pogrubienie-w-tresci-tylko-dla-czesci-akapitu.md) | Kursywa i pogrubienie wchodzą do treści (`i`, `b`), gdy wyróżniają część akapitu; na całym akapicie — stylem czy wprost — są typografią wiersza (nagłówek tabeli, „lp.”, wiersz rodzaju aktu, przepis w nowym brzmieniu TJ) | Accepted | 2026-10-27 |
 | [0119](0119-sankcja-karna-i-adres-internetowy-z-brzmienia-tekstu.md) | Sankcję karną i adres internetowy oznacza eksport z brzmienia tekstu: `rola="sankcja-karna"` na części wspólnej, inaczej element `sankcja-karna` (od „podlega … karze/grzywnie” do końca zdania); adresy `https?://`/`www.` w `h` | Accepted | 2026-10-27 |
 | [0120](0120-kursywa-i-pogrubienie-z-pdf-z-pisma-liter.md) | Kursywa i pogrubienie z PDF czyta się z pisma liter (flaga kursywy; pogrubienie z flagi albo nazwy fontu), zakresy idą przez przepisania wiersza i składanie bloku; indeksu dolnego z PDF nie ma (obniżone glify to równania) | Accepted | 2026-10-27 |
+| [0121](0121-tresc-cytowana-wchodzi-w-zycie-ze-zdaniem-ktore-ja-przytacza.md) | Nowelizacja i jej treść cytowana wchodzą w życie ze zdaniem, które je przytacza (ostatni segment jednostki): wyjątek wskazujący to zdanie obejmuje cytat; zdanie w `cytat-w-tekscie` niesie te daty | Accepted | 2026-10-27 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

@@ -1792,6 +1792,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   Adres zapisany w tekście („https://www.gov.pl/…”, „www.bip.gov.pl”) stoi w `h`
   ([ADR-0119](docs/adr/0119-sankcja-karna-i-adres-internetowy-z-brzmienia-tekstu.md)).
 
+- **Daty treści cytowanej ze zdania, które ją przytacza**: zdanie przytoczone w `cytat-w-tekscie` („zdanie pierwsze
+  otrzymuje brzmienie: „…””) wychodziło bez `wejscie-w-zycie` i `okres`, choć zdanie, w którym stoi, je miało; teraz
+  niesie jego daty, jak w przykładzie autorów schematu (Dz. U. 2026 poz. 26, art. 12 pkt 7). Wyjątek klauzuli
+  wskazujący samo zdanie („art. 1 pkt 2 zdanie pierwsze, które wchodzi w życie …”, także z mocą wsteczną) obejmuje
+  cytat w tym zdaniu — tekstowy i strukturalny; wcześniej cytat brał datę jednostki
+  ([ADR-0121](docs/adr/0121-tresc-cytowana-wchodzi-w-zycie-ze-zdaniem-ktore-ja-przytacza.md)). W korpusie DOCX 151 zdań w 62 plikach, poza tym eksport bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

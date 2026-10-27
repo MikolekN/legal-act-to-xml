@@ -36,21 +36,30 @@ namespace Saga.Core.Services.EntryIntoForce
 
             Write(unit, governing);
 
+            // Treść cytowana nowelizacji stoi w ostatnim zdaniu jednostki i wchodzi w życie razem z nim — także
+            // wtedy, gdy wyjątek klauzuli wskazuje samo to zdanie, a nie jednostkę (ADR-0121).
+            var quoting = governing;
             if (unit is IHasTextSegments holder)
             {
                 foreach (var segment in holder.TextSegments)
-                    Write(segment, new EntryDates(
+                {
+                    quoting = new EntryDates(
                         exceptions.TryGetSegment(segment, out var segmentEntry) ? segmentEntry : governing.Entry,
                         exceptions.TryGetSegmentRetroactivity(segment, out var segmentRetro)
                             ? segmentRetro
-                            : governing.RetroactiveFrom));
+                            : governing.RetroactiveFrom);
+                    Write(segment, quoting);
+                }
             }
 
             if (unit is IHasAmendments { Amendment: { } amendment })
-                Write(amendment, governing);
+                Write(amendment, quoting);
 
-            foreach (var child in EditorialUnitWalker.Children(unit, includeAmendmentContent: true))
+            foreach (var child in EditorialUnitWalker.Children(unit, includeAmendmentContent: false))
                 Paint(child, governing, exceptions, visited);
+
+            foreach (var quoted in EditorialUnitWalker.AmendmentContent(unit))
+                Paint(quoted, quoting, exceptions, visited);
         }
 
         private static void Write(IEntersIntoForce target, EntryDates dates)

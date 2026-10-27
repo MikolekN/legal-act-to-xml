@@ -489,13 +489,14 @@ namespace Saga.Core.Services.Converters
 
         private static void AddTextCitation(Amendment amendment, Command command, XNode? sentence, string text, List<XElement> blocks)
         {
-            // Zdanie przytoczone w całości wychodzi jako zdanie, nie jako fragment tekstu (ADR-0057).
+            // Zdanie przytoczone w całości wychodzi jako zdanie, nie jako fragment tekstu (ADR-0057), z datami
+            // nowelizacji — czyli zdania, które je przytacza (ADR-0121).
             var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element);
             if (amendment.Content is { PlainTextIsSentences: true })
             {
                 var number = 0;
                 foreach (var sentenceText in ParsingFactories.SplitIntoSentences(text))
-                    citation.Add(SentenceContext.ToXml(text: sentenceText.Text, number: ++number));
+                    citation.Add(SentenceContext.ToXml(text: sentenceText.Text, number: ++number, dated: amendment));
             }
 
             if (!citation.HasElements)

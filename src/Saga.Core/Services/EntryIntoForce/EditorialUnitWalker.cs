@@ -16,6 +16,13 @@ namespace Saga.Core.Services.EntryIntoForce
             if (!includeAmendmentContent)
                 yield break;
 
+            foreach (var quoted in AmendmentContent(unit))
+                yield return quoted;
+        }
+
+        /// <summary>Jednostki treści cytowanej nowelizacji jednostki — poddrzewo odpięte od <c>RootPart</c>.</summary>
+        internal static IEnumerable<BaseEntity> AmendmentContent(BaseEntity unit)
+        {
             if (unit is not IHasAmendments { Amendment.Content: { } content })
                 yield break;
 

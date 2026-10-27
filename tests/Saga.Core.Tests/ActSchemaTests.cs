@@ -188,6 +188,64 @@ namespace Saga.Core.Tests
             Assert.Equal(Attr(main, "id"), Attr(Unit("DU/2024/928__art_1"), "okres"));
         }
 
+        [Fact]
+        public void QuotedSentence_TakesTheDateAndGroupOfTheSentenceItStandsIn()
+        {
+            // Jak w przykładzie autorów schematu (DU/2026/26, art. 12 pkt 7): zdanie w „cytat-w-tekscie"
+            // niesie tę samą datę i grupę co zdanie, w którym stoi — także datę wyjątku.
+            var xml = Export(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 126 zdanie pierwsze otrzymuje brzmienie:",
+                "„Opłatę wnosi się w terminie 14 dni.”;",
+                "2) w art. 127 zdanie drugie otrzymuje brzmienie:",
+                "„Opłaty nie pobiera się od osób zwolnionych.”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 1 pkt 2, " +
+                "który wchodzi w życie z dniem 1 stycznia 2027 r.");
+
+            var quoted = xml.Descendants()
+                .Where(e => e.Name.LocalName == "zdanie" && e.Parent?.Name.LocalName == "cytat-w-tekscie")
+                .ToList();
+            Assert.Equal(2, quoted.Count);
+
+            foreach (var sentence in quoted)
+            {
+                var host = sentence.Ancestors().First(e => e.Name.LocalName == "zdanie");
+                Assert.NotNull(Attr(host, "wejscie-w-zycie"));
+                Assert.Equal(Attr(host, "wejscie-w-zycie"), Attr(sentence, "wejscie-w-zycie"));
+                Assert.Equal(Attr(host, "okres"), Attr(sentence, "okres"));
+            }
+
+            Assert.Equal("2027-01-01", Attr(quoted[1], "wejscie-w-zycie"));
+            Assert.Equal("okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2024-928_odczytane.x", Attr(quoted[1], "okres"));
+        }
+
+        [Fact]
+        public void QuotedSentence_TakesTheRetroactivityOfTheSentenceItStandsIn()
+        {
+            // Moc wsteczna wskazana zdaniem, nie jednostką, obejmuje też zdanie przytoczone w tym zdaniu (ADR-0121).
+            var xml = Export(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 126 zdanie pierwsze otrzymuje brzmienie:",
+                "„Opłatę wnosi się w terminie 14 dni.”;",
+                "2) w art. 127 zdanie drugie otrzymuje brzmienie:",
+                "„Opłaty nie pobiera się od osób zwolnionych.”.",
+                "Art. 2. Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia, z tym że art. 1 pkt 2 zdanie pierwsze " +
+                "z mocą od dnia 1 stycznia 2024 r.");
+
+            var quoted = xml.Descendants()
+                .Where(e => e.Name.LocalName == "zdanie" && e.Parent?.Name.LocalName == "cytat-w-tekscie")
+                .ToList();
+            Assert.Equal(2, quoted.Count);
+            Assert.Equal("2024-06-25", Attr(quoted[0], "wejscie-w-zycie"));
+            Assert.Equal("2024-01-01", Attr(quoted[1], "wejscie-w-zycie"));
+
+            var host = quoted[1].Ancestors().First(e => e.Name.LocalName == "zdanie");
+            Assert.Equal(Attr(host, "okres"), Attr(quoted[1], "okres"));
+            Assert.StartsWith("okr_moc-wsteczna.", Attr(quoted[1], "okres"));
+        }
+
         // ============================================================
         // Podstawa zdarzenia: jednostka klauzuli, która je zapisuje
         // ============================================================

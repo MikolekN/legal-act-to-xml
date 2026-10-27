@@ -3072,6 +3072,42 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0121: treść cytowana nowelizacji wchodzi w życie ze zdaniem, które ją przytacza
+        // ============================================================
+
+        [Fact]
+        public void Adr0121_QuotedContent_EntersIntoForceWithTheSentenceThatQuotesIt()
+        {
+            // Wyjątek wskazuje zdanie punktu, nie punkt: cytat tekstowy i strukturalny stojące w tym zdaniu wchodzą
+            // w życie z nim, a punkt zostaje przy dacie ogólnej.
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 126 zdanie pierwsze otrzymuje brzmienie:",
+                "„Opłatę wnosi się w terminie 14 dni.”;",
+                "2) w art. 127 ust. 1 otrzymuje brzmienie:",
+                "„1. Opłaty nie pobiera się od osób zwolnionych.”.",
+                "Art. 2. Ustawa wchodzi w życie z dniem 1 lipca 2026 r., z wyjątkiem art. 1 pkt 1 zdanie pierwsze " +
+                "oraz pkt 2 zdanie pierwsze, które wchodzą w życie z dniem 1 stycznia 2027 r.",
+            ];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            static string? Date(XElement element) => element.Attribute("wejscie-w-zycie")?.Value;
+            var points = xml.Descendants().Where(e => e.Name.LocalName == "punkt").ToList();
+            Assert.Equal(["2026-07-01", "2026-07-01"], points.Select(Date));
+
+            var quotingSentences = points.Select(point => point.Element(point.Name.Namespace + "p")!.Elements().Single(e => e.Name.LocalName == "zdanie"));
+            Assert.All(quotingSentences, sentence => Assert.Equal("2027-01-01", Date(sentence)));
+
+            var quotedSentence = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "zdanie" && e.Parent?.Name.LocalName == "cytat-w-tekscie");
+            Assert.Equal("2027-01-01", Date(quotedSentence));
+            var quotedParagraph = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "ustep" && e.Ancestors().Any(a => a.Name.LocalName == "cytat-strukt"));
+            Assert.Equal("2027-01-01", Date(quotedParagraph));
+        }
+
+        // ============================================================
         // ADR-0119: sankcja karna i adres internetowy oznacza eksport z brzmienia tekstu
         // ============================================================
 
