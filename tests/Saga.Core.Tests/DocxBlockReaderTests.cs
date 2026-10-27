@@ -1,6 +1,8 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Saga.Core.Ingest;
+using InlineFormat = Saga.Model.InlineFormat;
+using InlineSpan = Saga.Model.InlineSpan;
 
 namespace Saga.Core.Tests
 {
@@ -184,6 +186,57 @@ namespace Saga.Core.Tests
 
             Assert.Equal(["pierwszy", "czwarty"], blocks[0].Layout!.ItalicText);
             Assert.Equal(["K. Kęcka"], blocks[1].Layout!.ItalicText);
+        }
+
+        [Fact]
+        public void Spans_RecordInlineFormattingNextToTheText()
+        {
+            // ADR-0117: tekst bloku bez zmian, formatowanie obok niego. „de" i „minimis" w osobnych przebiegach z odstępem
+            // między nimi to jeden zakres; indeks dolny ze stylu znaku, grupa indeksu górnego z nawiasami kanału.
+            const string styles =
+                @"<w:style w:type=""paragraph"" w:default=""1"" w:styleId=""Normal""><w:name w:val=""Normal""/></w:style>" +
+                @"<w:style w:type=""character"" w:styleId=""Kkursywa""><w:name w:val=""_K_ - kursywa""/><w:rPr><w:i/></w:rPr></w:style>" +
+                @"<w:style w:type=""character"" w:styleId=""IDindeksdolny""><w:name w:val=""_ID_ - indeks dolny""/><w:rPr><w:vertAlign w:val=""subscript""/></w:rPr></w:style>";
+            static string Run(string text, string properties = "") =>
+                $@"<w:r>{(properties.Length > 0 ? $"<w:rPr>{properties}</w:rPr>" : string.Empty)}<w:t xml:space=""preserve"">{text}</w:t></w:r>";
+            var body = "<w:p>" + Run("pomoc ") + Run("de", @"<w:rStyle w:val=""Kkursywa""/>") + Run(" ") +
+                Run("minimis", @"<w:rStyle w:val=""Kkursywa""/>") + Run(", emisja CO") + Run("2", @"<w:rStyle w:val=""IDindeksdolny""/>") +
+                Run(" w m") + Run("3", @"<w:vertAlign w:val=""superscript""/>") + Run(" i ") + Run("zakaz", "<w:b/>") + Run(".") + "</w:p>";
+
+            var block = Read(DocxFixtures.WithBodyXmlAndStyles(body, styles)).Single();
+
+            Assert.Equal("pomoc de minimis, emisja CO2 w m[3] i zakaz.", block.Text);
+            Assert.Equal(
+                [("de minimis", InlineFormat.Italic), ("2", InlineFormat.Subscript), ("[3]", InlineFormat.Superscript), ("zakaz", InlineFormat.Bold)],
+                block.Spans.Select(span => (block.Text.Substring(span.Start, span.Length), span.Format)));
+            Assert.All(block.Spans, span => Assert.Equal(InlineFormat.None, span.FromParagraphStyle));
+        }
+
+        [Fact]
+        public void Spans_MarkFormattingThatTheWholeParagraphHasFromItsStyle()
+        {
+            // Pogrubienie stylu akapitu to typografia rodzaju akapitu (tytuł); konsument formatowania w treści je pomija.
+            const string styles =
+                @"<w:style w:type=""paragraph"" w:styleId=""Tytul""><w:name w:val=""Tytul""/><w:rPr><w:b/></w:rPr></w:style>";
+            var body = @"<w:p><w:pPr><w:pStyle w:val=""Tytul""/></w:pPr><w:r><w:t>o ochronie sygnalistów</w:t></w:r></w:p>";
+
+            var span = Assert.Single(Read(DocxFixtures.WithBodyXmlAndStyles(body, styles)).Single().Spans);
+
+            Assert.Equal(InlineFormat.Bold, span.Format);
+            Assert.Equal(InlineFormat.Bold, span.FromParagraphStyle);
+        }
+
+        [Fact]
+        public void SpanAlignment_CarriesSpansThroughARewrite()
+        {
+            // Numer odnośnika zamieniony na oznaczenie z aktu („[12)]" → „[a)]") przesuwa dalszy tekst.
+            const string from = "Wnioskodawca[12)] składa wniosek w trybie pilnym.";
+            const string to = "Wnioskodawca[a)] składa wniosek w trybie pilnym.";
+            var spans = new[] { new InlineSpan(from.IndexOf("w trybie"), "w trybie".Length, InlineFormat.Italic) };
+
+            var span = Assert.Single(SpanAlignment.Remap(from, to, spans));
+
+            Assert.Equal("w trybie", to.Substring(span.Start, span.Length));
         }
 
         [Fact]

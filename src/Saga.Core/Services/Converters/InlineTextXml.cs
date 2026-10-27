@@ -55,13 +55,27 @@ namespace Saga.Core.Services.Converters
 
         private const string UnitHeadingPrefix = "naglowek-";
 
-        /// <summary>Węzły tekstowe treści aktu (bez metadanych), w kolejności dokumentu.</summary>
+        /// <summary>
+        /// Węzły tekstowe treści aktu (bez metadanych), w kolejności dokumentu — także wewnątrz formatowania znakowego
+        /// (<c>b</c>, <c>i</c>, <c>sub</c> — ADR-0117), które stoi w treści hosta.
+        /// </summary>
         internal static List<XText> Texts(XElement actElement) =>
-            actElement.DescendantNodes().OfType<XText>()
-                .Where(text => text.Parent is { } parent
-                    && (Hosts.Contains(parent.Name.LocalName) || IsUnitHeading(parent) || HoldsDesignation(parent))
-                    && !parent.Ancestors().Any(a => a.Name.LocalName == XmlConverterConstants.Metadata.Element))
-                .ToList();
+            actElement.DescendantNodes().OfType<XText>().Where(IsHostText).ToList();
+
+        /// <summary>Węzeł tekstowy treści aktu, który przyjmuje elementy wewnątrz tekstu (zob. <see cref="Texts"/>).</summary>
+        internal static bool IsHostText(XText text) =>
+            Host(text) is var parent
+            && (Hosts.Contains(parent.Name.LocalName) || IsUnitHeading(parent) || HoldsDesignation(parent))
+            && !parent.Ancestors().Any(a => a.Name.LocalName == XmlConverterConstants.Metadata.Element);
+
+        /// <summary>Element, w którego treści stoi węzeł — z pominięciem formatowania znakowego wokół niego.</summary>
+        internal static XElement Host(XText text)
+        {
+            var parent = text.Parent!;
+            while (InlineFormattingXml.ElementNames.Contains(parent.Name.LocalName) && parent.Parent is { } owner)
+                parent = owner;
+            return parent;
+        }
 
         /// <summary>
         /// Nagłówek jednostki systematyzacyjnej i numer załącznika: tekstu własnego nie mają, ale za numerem
@@ -86,22 +100,50 @@ namespace Saga.Core.Services.Converters
         {
             foreach (var text in Texts(actElement))
             {
-                var matches = Superscript.Matches(text.Value);
+                // Wzorzec patrzy na znak przed nawiasem — także w poprzednim węźle za formatowaniem („x<sub>1</sub>[2]").
+                var context = PrecedingCharacter(text) is { } preceding ? preceding + text.Value : text.Value;
+                var offset = context.Length - text.Value.Length;
+                var matches = Superscript.Matches(context).Where(match => match.Index >= offset).ToList();
                 if (matches.Count == 0)
                     continue;
 
                 var nodes = new List<XNode>();
                 var cursor = 0;
-                foreach (Match match in matches)
+                foreach (var match in matches)
                 {
-                    nodes.Add(new XText(text.Value[cursor..match.Index]));
+                    var index = match.Index - offset;
+                    nodes.Add(new XText(text.Value[cursor..index]));
                     nodes.Add(Element(XmlConverterConstants.Contents.Superscript, match.Groups["index"].Value));
-                    cursor = match.Index + match.Length;
+                    cursor = index + match.Length;
                 }
 
                 if (cursor < text.Value.Length)
                     nodes.Add(new XText(text.Value[cursor..]));
                 text.ReplaceWith(nodes);
+            }
+        }
+
+        /// <summary>
+        /// Znak tuż przed węzłem w treści hosta — w poprzednim węźle tekstowym albo na końcu poprzedzającego formatowania
+        /// znakowego; null, gdy przed węzłem stoi inny element (odnośnik, indeks górny) albo nic.
+        /// </summary>
+        private static char? PrecedingCharacter(XText text)
+        {
+            XNode node = text;
+            while (true)
+            {
+                switch (node.PreviousNode)
+                {
+                    case XText { Value.Length: > 0 } previous:
+                        return previous.Value[^1];
+                    case XElement element when InlineFormattingXml.ElementNames.Contains(element.Name.LocalName):
+                        return element.DescendantNodes().OfType<XText>().LastOrDefault() is { Value.Length: > 0 } last ? last.Value[^1] : null;
+                    case null when node.Parent is { } parent && InlineFormattingXml.ElementNames.Contains(parent.Name.LocalName):
+                        node = parent;
+                        continue;
+                    default:
+                        return null;
+                }
             }
         }
     }

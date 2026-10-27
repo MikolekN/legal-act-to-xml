@@ -152,6 +152,9 @@ namespace Saga.Core
             out DocumentBlock? unclosedQuotationBreak)
         {
             var document = new LegalDocument { Classification = classification };
+            document.FormattedSources.AddRange(blocks
+                .Where(block => block is { Role: BlockRole.Body })
+                .Select(block => new FormattedSource(block.Text, block.Spans)));
 
             JournalHeaderParser.Apply(blocks, document);
             publication?.FillAnnouncementDate(document);

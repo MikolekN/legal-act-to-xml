@@ -148,6 +148,12 @@ namespace Saga.Model
         /// </summary>
         public List<Footnote> Footnotes { get; } = new();
 
+        /// <summary>
+        /// Tekst bloków źródła z formatowaniem znakowym, w kolejności dokumentu — tylko dla eksportu formatowania w treści
+        /// (ADR-0117); nie jest treścią aktu.
+        /// </summary>
+        public List<FormattedSource> FormattedSources { get; } = new();
+
         /// <summary>Załączniki aktu w kolejności dokumentu.</summary>
         public List<Annex> Annexes { get; set; } = new();
 

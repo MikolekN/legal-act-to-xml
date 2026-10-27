@@ -2,6 +2,9 @@ using System.Globalization;
 using System.Text;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Saga.Core.Helpers;
+using Saga.Core.Ingest;
+using InlineFormat = Saga.Model.InlineFormat;
+using InlineSpan = Saga.Model.InlineSpan;
 
 namespace Saga.Core
 {
@@ -31,9 +34,19 @@ namespace Saga.Core
         ///   w miejscu, w którym stoi w akapicie — symbol otwierający wiersz legendy nie znika.
         /// </summary>
         /// <param name="footnoteNumbers">Numer przypisu, pod którym stoi w akcie, dla każdego w:id.</param>
-        public static string GetFullText(this Paragraph paragraph, IReadOnlyDictionary<long, int>? footnoteNumbers = null)
+        public static string GetFullText(this Paragraph paragraph, IReadOnlyDictionary<long, int>? footnoteNumbers = null) =>
+            paragraph.GetFullText(footnoteNumbers, format: null, spans: null);
+
+        /// <summary>
+        /// Jak <see cref="GetFullText(Paragraph, IReadOnlyDictionary{long, int}?)"/>, a do <paramref name="spans"/> dopisuje
+        /// zakresy formatowania znakowego tekstu (ADR-0117): przebiegi w kursywie, pogrubione i w indeksie dolnym według
+        /// <paramref name="format"/>, grupy indeksu górnego „[x]" — zawsze. Tekst wychodzi ten sam.
+        /// </summary>
+        internal static string GetFullText(this Paragraph paragraph, IReadOnlyDictionary<long, int>? footnoteNumbers,
+            DocxRunFormat? format, List<InlineSpan>? spans)
         {
             var sb = new StringBuilder();
+            var paragraphStyle = spans is null ? null : paragraph.StyleId();
             var superscript = new StringBuilder();
             var closeCustomMark = false;
 
@@ -45,7 +58,7 @@ namespace Saga.Core
 
                 if (OfficeMathText.IsMath(element))
                 {
-                    FlushSuperscript(sb, superscript);
+                    FlushSuperscript(sb, superscript, spans);
                     sb.Append(OfficeMathText.Linear(element));
                     continue;
                 }
@@ -85,12 +98,50 @@ namespace Saga.Core
                     continue;
                 }
 
-                FlushSuperscript(sb, superscript);
+                FlushSuperscript(sb, superscript, spans);
+                if (spans is not null && format is not null)
+                    AddSpan(spans, sb, sb.Length, text, format.Of(run, paragraphStyle));
                 sb.Append(text);
             }
 
-            FlushSuperscript(sb, superscript);
+            FlushSuperscript(sb, superscript, spans);
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Zakres przebiegu bez odstępów na brzegach; łączy się z poprzednim o tym samym formacie, gdy dzielą je same
+        /// odstępy („de" · „ " · „minimis" w osobnych przebiegach to jeden zakres).
+        /// </summary>
+        private static void AddSpan(List<InlineSpan> spans, StringBuilder sb, int start, string text,
+            (InlineFormat Format, InlineFormat FromParagraphStyle) format)
+        {
+            var core = text.Trim();
+            if (format.Format == InlineFormat.None || core.Length == 0)
+                return;
+
+            var from = start + (text.Length - text.TrimStart().Length);
+            if (spans.Count > 0 && spans[^1] is var last
+                && last.Format == format.Format && last.FromParagraphStyle == format.FromParagraphStyle
+                && last.End <= from && OnlyWhitespace(sb, text, start, last.End, from))
+            {
+                spans[^1] = last with { Length = from + core.Length - last.Start };
+                return;
+            }
+
+            spans.Add(new InlineSpan(from, core.Length, format.Format, format.FromParagraphStyle));
+        }
+
+        /// <summary>Czy między <paramref name="from"/> a <paramref name="to"/> (tekst już złożony i początek przebiegu) są same odstępy.</summary>
+        private static bool OnlyWhitespace(StringBuilder sb, string text, int start, int from, int to)
+        {
+            for (var i = from; i < to; i++)
+            {
+                var c = i < start ? sb[i] : text[i - start];
+                if (!char.IsWhiteSpace(c))
+                    return false;
+            }
+
+            return true;
         }
 
         /// <param name="customMark">
@@ -222,7 +273,7 @@ namespace Saga.Core
         /// Zamyka grupę indeksu górnego: nawias obejmuje samą treść, a odstępy sformatowane jako indeks
         /// zostają zwykłym tekstem („4.[ ]W sprawach" → „4. W sprawach", „[7) ]w sprawach" → „[7)] w sprawach").
         /// </summary>
-        private static void FlushSuperscript(StringBuilder sb, StringBuilder superscript)
+        private static void FlushSuperscript(StringBuilder sb, StringBuilder superscript, List<InlineSpan>? spans = null)
         {
             if (superscript.Length == 0)
                 return;
@@ -241,7 +292,10 @@ namespace Saga.Core
             var bracketed = core.Length > 2 && core[0] == '[' && core.IndexOfAny(['[', ']'], 1) == core.Length - 1;
             var leading = value.Length - value.TrimStart().Length;
             var trailing = value.Length - value.TrimEnd().Length;
-            sb.Append(value, 0, leading).Append(bracketed ? core : $"[{core}]").Append(value, value.Length - trailing, trailing);
+            var group = bracketed ? core : $"[{core}]";
+            sb.Append(value, 0, leading);
+            spans?.Add(new InlineSpan(sb.Length, group.Length, InlineFormat.Superscript));
+            sb.Append(group).Append(value, value.Length - trailing, trailing);
         }
 
         /// <summary>

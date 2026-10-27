@@ -43,7 +43,7 @@ namespace Saga.Core.Services.Converters
                 var rendered = Render(text.Value, registry, allowRepeats: !quoted);
 
                 // Za numerem nagłówka schemat przyjmuje same odnośniki — znacznik bez odnośnika tego aktu znika.
-                text.ReplaceWith(InlineTextXml.HoldsDesignation(text.Parent!)
+                text.ReplaceWith(InlineTextXml.HoldsDesignation(InlineTextXml.Host(text))
                     ? rendered.OfType<XElement>().Where(IsFootnote)
                     : rendered);
             }

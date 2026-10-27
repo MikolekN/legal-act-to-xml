@@ -3072,6 +3072,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0117: formatowanie znakowe idzie obok tekstu bloku, a eksport odnajduje je w źródle
+        // ============================================================
+
+        [Fact]
+        public void Adr0117_InlineFormatting_TravelsBesideTheText_AndEndsInTheExport()
+        {
+            // Tekst bloku jest ten sam co bez formatowania — parser go nie widzi; indeks dolny przebiegu wychodzi w sub,
+            // a format, który cały akapit ma ze stylu, zostaje typografią akapitu.
+            const string first = "Art. 1. Emisja CO2 nie przekracza normy.";
+            const string second = "Art. 2. Stężenie C2 oznacza się metodą wzorcową.";
+            var blocks = new List<DocumentBlock>
+            {
+                new() { Text = "USTAWA" }, new() { Text = "z dnia 14 czerwca 2024 r." }, new() { Text = "o ochronie powietrza" },
+                new() { Text = first, Spans = [new InlineSpan(first.IndexOf("CO2") + 2, 1, InlineFormat.Subscript)] },
+                new()
+                {
+                    Text = second,
+                    Spans = [new InlineSpan(second.IndexOf("C2") + 1, 1, InlineFormat.Subscript, InlineFormat.Subscript)],
+                },
+            };
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            Assert.Equal("Emisja CO2 nie przekracza normy.", document.Articles.First().Paragraphs.Single().ContentText);
+            var sentences = LegalDocumentConverter.Convert(document).Descendants().Where(e => e.Name.LocalName == "zdanie").ToList();
+            Assert.Equal("Emisja CO2 nie przekracza normy.", sentences[0].Value);
+            Assert.Equal("2", Assert.Single(sentences[0].Elements(), e => e.Name.LocalName == "sub").Value);
+            Assert.Empty(sentences[1].Elements());
+        }
+
+        // ============================================================
         // ADR-0116: osoba w formule podpisu stoi w <i> tylko wtedy, gdy źródło składa ją kursywą
         // ============================================================
 

@@ -19,7 +19,7 @@ kursywą.
 ## Decyzja
 
 - Czytnik podaje fragmenty bloku złożone kursywą (`BlockLayoutInfo.ItalicText`): DOCX — kolejne przebiegi w kursywie
-  z dziedziczeniem stylu znaku i akapitu (`DocxItalics`, kursywa jako właściwość przełączana); PDF — kolejne litery
+  z dziedziczeniem stylu znaku i akapitu (`DocxRunFormat`, kursywa jako właściwość przełączana); PDF — kolejne litery
   pisma kursywnego (`Letter.Font.IsItalic`); TXT — nic.
 - `ActSignatureParser` uznaje osobę za kursywę (`ActSignature.IsPersonItalic`), gdy jej inicjały i nazwisko stoją
   w całości w jednym fragmencie kursywy; `SignatureXmlConverter` stawia wtedy `i` wokół `osoba`. „wz.”/„z up.”
@@ -39,7 +39,8 @@ kursywą.
 - W eksporcie korpusu DOCX `organ-podpisujacy` dostaje `i` wokół `osoba` wszędzie, gdzie źródło składa osobę kursywą;
   PDF — gdy pismo jest kursywne; TXT — nigdy.
 - Kursywa stylów akapitu i znaku jest przełączana: oba style w kursywie dają pismo proste (ECMA-376 § 17.7.3).
-- Model (`ActSignature.IsPersonItalic`) i lokalny golden `sygnalisci.snapshot.xml` niosą nową właściwość.
+- Model niesie nową właściwość (`ActSignature.IsPersonItalic`); model kanoniczny (`CanonicalDtoXmlSerializer`) jej nie
+  zapisuje, więc lokalny golden się nie zmienia.
 
 ## Weryfikacja
 

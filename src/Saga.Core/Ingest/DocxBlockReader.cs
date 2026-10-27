@@ -3,6 +3,7 @@ using System.Text;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using Saga.Core.Exceptions;
+using Saga.Model;
 using Serilog;
 using Word = DocumentFormat.OpenXml.Wordprocessing;
 
@@ -96,13 +97,13 @@ namespace Saga.Core.Ingest
             blocks.AddRange(ReadPageHeaderBlocks(mainPart));
             var footnotes = DocxFootnotes.Read(mainPart);
             var tables = DocxTables.Read(mainPart.Document);
-            var italics = DocxItalics.Read(mainPart);
+            var format = DocxRunFormat.Read(mainPart);
             var index = 0;
             var paragraphs = mainPart.Document.Descendants<Word.Paragraph>().ToList();
             var landscape = PageOrientation(mainPart.Document, paragraphs);
             foreach (var paragraph in paragraphs)
             {
-                blocks.Add(ToBlock(paragraph, index, footnotes, tables, italics) with { IsLandscape = landscape[index] });
+                blocks.Add(ToBlock(paragraph, index, footnotes, tables, format) with { IsLandscape = landscape[index] });
                 index++;
             }
 
@@ -211,18 +212,22 @@ namespace Saga.Core.Ingest
         /// </summary>
         internal static DocumentBlock ToBlock(
             Word.Paragraph paragraph, int? blockIndex, DocxFootnotes? footnotes = null, DocxTables? tables = null,
-            DocxItalics? italics = null)
+            DocxRunFormat? format = null)
         {
             var referenced = footnotes?.ReferencedBy(paragraph) ?? [];
+            var spans = new List<InlineSpan>();
+            var full = paragraph.GetFullText(footnotes?.Numbers, format, spans);
+            var text = DocxFootnotes.WithBareReferencesAsPrinted(full, referenced);
             return new()
             {
-                Text = DocxFootnotes.WithBareReferencesAsPrinted(paragraph.GetFullText(footnotes?.Numbers), referenced),
+                Text = text,
+                Spans = SpanAlignment.Remap(full, text, spans),
                 FormulaMathMl = Helpers.OfficeMathMl.FormulaOf(paragraph)?.ToString(System.Xml.Linq.SaveOptions.DisableFormatting),
                 LeadingSymbol = Helpers.OfficeMathMl.LeadingSymbolOf(paragraph),
                 Footnotes = referenced,
                 TableCell = tables?.CellOf(paragraph),
                 StyleId = paragraph.StyleId(),
-                Layout = ExtractLayout(paragraph, italics),
+                Layout = ExtractLayout(paragraph, format),
                 Source = new BlockSourceLocation { BlockIndex = blockIndex },
             };
         }
@@ -235,7 +240,7 @@ namespace Saga.Core.Ingest
         /// Wyciąga metadane układu z właściwości akapitu i runów. Zwraca null, gdy
         /// akapit nie niesie żadnego sygnału układu (parytet z PDF/TXT bez layoutu).
         /// </summary>
-        private static BlockLayoutInfo? ExtractLayout(Word.Paragraph paragraph, DocxItalics? italics)
+        private static BlockLayoutInfo? ExtractLayout(Word.Paragraph paragraph, DocxRunFormat? format)
         {
             var pPr = paragraph.ParagraphProperties;
             var indentation = pPr?.Indentation;
@@ -275,7 +280,7 @@ namespace Saga.Core.Ingest
             bool? isBold = DominantFlag(boldTrue, boldFalse);
             bool? isItalic = DominantFlag(italicTrue, italicFalse);
             double? fontSize = DominantSize(sizeWeights);
-            var italicText = ItalicText(paragraph, italics);
+            var italicText = ItalicText(paragraph, format);
 
             if (left is null && firstLine is null && hanging is null && alignment is null
                 && isBold is null && isItalic is null && fontSize is null && italicText.Count == 0)
@@ -298,7 +303,7 @@ namespace Saga.Core.Ingest
         /// Kolejne przebiegi w kursywie jako fragmenty tekstu (<see cref="BlockLayoutInfo.ItalicText"/>); przebieg bez
         /// widocznego tekstu nie przerywa fragmentu. Bez stylów dokumentu — sama kursywa wprost.
         /// </summary>
-        private static List<string> ItalicText(Word.Paragraph paragraph, DocxItalics? italics)
+        private static List<string> ItalicText(Word.Paragraph paragraph, DocxRunFormat? format)
         {
             var fragments = new List<string>();
             var current = new StringBuilder();
@@ -312,7 +317,7 @@ namespace Saga.Core.Ingest
                     continue;
                 }
 
-                if (italics?.IsItalic(run, paragraphStyle) ?? DocxItalics.IsDirectlyItalic(run))
+                if (format?.IsItalic(run, paragraphStyle) ?? DocxRunFormat.IsDirectlyItalic(run))
                 {
                     current.Append(text);
                     continue;

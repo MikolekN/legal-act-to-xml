@@ -71,6 +71,7 @@ namespace Saga.Core.Services
             foreach (var annex in document.Annexes)
                 body.Add(AnnexXmlConverter.ToXml(annex));
 
+            InlineFormattingXml.Embed(actElement, document);
             FootnoteXmlConverter.Embed(actElement, document);
             FootnoteXmlConverter.EmbedInNewWords(actElement, document);
             InlineTextXml.EmbedSuperscripts(actElement);

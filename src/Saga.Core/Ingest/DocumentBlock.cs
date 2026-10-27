@@ -1,5 +1,7 @@
 #nullable enable
 
+using Saga.Model;
+
 namespace Saga.Core.Ingest
 {
     /// <summary>
@@ -14,6 +16,12 @@ namespace Saga.Core.Ingest
     public sealed record DocumentBlock
     {
         public required string Text { get; init; }
+
+        /// <summary>
+        /// Zakresy <see cref="Text"/> złożone formatowaniem znakowym (kursywa, pogrubienie, indeks dolny, grupy indeksu
+        /// górnego) — tylko DOCX; obok tekstu, nie w nim, więc wzorce rozpoznawania ich nie widzą (ADR-0117).
+        /// </summary>
+        public IReadOnlyList<InlineSpan> Spans { get; init; } = [];
 
         /// <summary>Identyfikator stylu akapitu — tylko DOCX; null dla PDF/TXT.</summary>
         public string? StyleId { get; init; }

@@ -1760,7 +1760,14 @@ a wersjonowanie zgodne z Semantic Versioning.
 - **Osoba podpisująca w kursywie**: `organ-podpisujacy` ma osobę w `<i>`, jak w przykładach autorów schematu, gdy źródło
   składa ją kursywą — w DOCX stylem znaku „Kkursywa” albo kursywą wprost (wszystkie 2333 formuły podpisu korpusu), w PDF
   pismem kursywnym; „wz.” i „z up.” zostają przed `i`. Czytnik DOCX rozwiązuje kursywę stylu znaku i akapitu
-  (`DocxItalics`, właściwość przełączana) — [ADR-0116](docs/adr/0116-osoba-w-podpisie-w-kursywie-tylko-gdy-zrodlo-ja-tak-sklada.md).
+  (`DocxRunFormat`, właściwość przełączana) — [ADR-0116](docs/adr/0116-osoba-w-podpisie-w-kursywie-tylko-gdy-zrodlo-ja-tak-sklada.md).
+
+- **Indeks dolny w treści**: „CO₂”, „N₂O”, zmienne „PIᵢ” i symbole legendy wzoru („Cₛ”) wychodzą w `sub` zamiast zlewać się
+  w „CO2”, „PIi”, „Cs” (71 dokumentów korpusu DOCX). Czytnik DOCX zapisuje formatowanie znakowe jako zakresy obok tekstu
+  bloku (`DocumentBlock.Spans`, rozwiązywanie stylów w `DocxRunFormat`), a przebieg eksportu `InlineFormattingXml`
+  odnajduje tekst węzłów w źródle i obejmuje zakresy — parser formatowania nie widzi
+  ([ADR-0117](docs/adr/0117-formatowanie-znakowe-idzie-obok-tekstu-a-eksport-odnajduje-je-w-zrodle.md)). Kursywa
+  i pogrubienie w treści — kolejne kroki.
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
