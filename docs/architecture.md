@@ -41,7 +41,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `ActSignature.cs` | Formuła podpisu zamykająca akt: organ, osoba i ewentualne „wz." / „z up." (`Capacity`), jak stoją w akcie (`LegalDocument.Signature`; kolejne formuły aktu wydanego wspólnie — `LegalDocument.CoSignatures`) |
 | `Annex.cs` | Załącznik aktu (`LegalDocument.Annexes`): wskazanie aktu, oznaczenie i numer (eId `zal_1`; bez numeru — bez eId), tytuł, treść w kolejności dokumentu (`AnnexBlock`: akapit, tabela albo jednostka redakcyjna) |
 | `ContentTable.cs` | Tabela w treści: wiersze (znacznik wiersza nagłówka), komórki ze scaleniami i akapitami oraz objaśnienia pod tabelą (`Description`, w eksporcie `opis-tabeli`) |
-| `Footnote.cs` | Odnośnik (przypis): numer jak w akcie i akapity treści; rejestr w `LegalDocument.Footnotes`, miejsce odwołania niesie znacznik `[N)]` w tekście jednostki — [ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md) |
+| `Footnote.cs` | Odnośnik (przypis): numer jak w akcie i akapity treści; rejestr w `LegalDocument.Footnotes`, miejsce odwołania niesie znacznik `[N)]` w tekście jednostki — [ADR-0026](adr/0026-odnosnik-tresc-w-rejestrze-miejsce-w-tekscie.md); akapity z odstępami zwiniętymi jak treść bloku, twarda spacja jako zwykła — [ADR-0115](adr/0115-odstepy-w-tresci-odnosnika-zwiniete-jak-w-tresci-aktu.md) |
 | `CommonPartType.cs` | Enum: `Intro` / `WrapUp` |
 | `LegalActType.cs` | Enum rodzaju aktu: `Statute`, `Bill`, `Regulation`, `Code`, `Ordinance`, `RegulatoryImpactAssessment`, `AmendingStatute`, `Announcement`, `Resolution`, `ExecutiveOrder`, `LocalLegalAct` |
 | `DocumentClassificationResult.cs` | Wynik klasyfikacji dokumentu (rodzaj aktu, pewność, sygnały, uzasadnienie) |

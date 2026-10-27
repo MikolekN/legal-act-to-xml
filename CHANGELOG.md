@@ -1751,6 +1751,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   przy wielkości liter, M.P. 2026 poz. 560), a całe „Założenia polityki pieniężnej" (M.P. 2026 poz. 943) miały 563
   takich liter. Tekst wiersza PDF jest w postaci złożonej (NFC).
 
+- **Odnośniki bez twardych spacji**: treść odnośnika przechodziła do eksportu bez zwinięcia odstępów — w korpusie DOCX
+  95 940 twardych spacji szablonu (U+00A0), 142 wąskie (U+202F), tabulatory i podwójne spacje w `odnosnik`, a z nich
+  w `now:nowy-tekst` i `warunek`. Treść aktu, eksport PDF i przykład autorów schematu mają w tych miejscach zwykłe
+  spacje. Akapity odnośnika mają teraz odstępy zwinięte jak treść bloku; twarda spacja to wskazówka łamania wiersza,
+  nie znak tekstu — [ADR-0115](docs/adr/0115-odstepy-w-tresci-odnosnika-zwiniete-jak-w-tresci-aktu.md).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

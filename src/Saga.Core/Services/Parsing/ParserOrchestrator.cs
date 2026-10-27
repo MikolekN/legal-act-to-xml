@@ -256,7 +256,8 @@ namespace Saga.Core.Services.Parsing
             context.BeginAnnouncedAct(block.Text.CollapseWhitespace().Trim());
         }
 
-        // Treść odnośników leży poza treścią aktu; znacznik odwołania zostaje w tekście bloku.
+        // Treść odnośników leży poza treścią aktu; znacznik odwołania zostaje w tekście bloku. Odstępy zwinięte jak w treści
+        // bloku: twarda spacja szablonu, tabulator i podwójna spacja to układ wiersza, nie tekst odnośnika (ADR-0115).
         private static void RegisterFootnotes(DocumentBlock block, ParsingContext context)
         {
             foreach (var footnote in block.Footnotes)
@@ -267,7 +268,7 @@ namespace Saga.Core.Services.Parsing
                     Marker = footnote.Marker,
                     Run = footnote.Run,
                     IsCustomMark = footnote.IsCustomMark,
-                    Paragraphs = [.. footnote.Paragraphs],
+                    Paragraphs = [.. footnote.Paragraphs.Select(paragraph => paragraph.CollapseWhitespace().Trim())],
                 });
             }
         }

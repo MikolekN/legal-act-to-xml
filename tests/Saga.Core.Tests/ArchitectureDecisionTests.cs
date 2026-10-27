@@ -3042,6 +3042,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0115: odstępy w treści odnośnika zwinięte jak w treści aktu — twarda spacja to zwykła spacja
+        // ============================================================
+
+        [Fact]
+        public void Adr0115_FootnoteText_HasItsWhitespaceCollapsed_LikeTheTextOfTheAct()
+        {
+            // Szablon RCL wstawia twarde spacje po wyrazach jednoliterowych i skrótach; tabulator i podwójna spacja to układ
+            // wiersza przypisu. Treść aktu ma zwykłe spacje (CollapseWhitespace) — odnośnik też, tak jak w przykładzie
+            // autorów schematu DU20260000252.
+            var nbsp = (char)0x00A0;
+            var narrow = (char)0x202F;
+            var note = new BlockFootnote("1",
+                [$"Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w{nbsp}Dz.{nbsp}U. z{nbsp}2024{nbsp}r. poz.{narrow}1871\ti  1897. "])
+            { Marker = "1" };
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                "Art. 1. Ustawy (Dz. U. z 2024 r. poz. 1871, z późn. zm.[1)]) nie stosuje się.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var blocks = lines.Select((line, i) => new DocumentBlock { Text = line, Footnotes = i == 3 ? [note] : [] }).ToList();
+            var document = LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            const string expected = "Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1871 i 1897.";
+            Assert.Equal(expected, Assert.Single(Assert.Single(document.Footnotes).Paragraphs));
+            var footnote = LegalDocumentConverter.Convert(document).Descendants().Single(e => e.Name.LocalName == "odnosnik");
+            Assert.Equal(expected, footnote.Value);
+        }
+
+        // ============================================================
         // ADR-0076: cudzysłów otwarty pod przepisem trwa do domknięcia, bez względu na style
         // ============================================================
 
