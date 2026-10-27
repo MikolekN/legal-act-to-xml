@@ -75,6 +75,8 @@ namespace Saga.Core.Services
             FootnoteXmlConverter.Embed(actElement, document);
             FootnoteXmlConverter.EmbedInNewWords(actElement, document);
             InlineTextXml.EmbedSuperscripts(actElement);
+            PenalSanctionXml.Embed(actElement);
+            HyperlinkXml.Embed(actElement);
 
             TemporalDataXmlConverter.AssignPeriods(actElement, document);
             ActPrefixXml.Apply(actElement, document);

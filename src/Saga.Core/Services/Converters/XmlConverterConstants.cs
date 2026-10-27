@@ -468,6 +468,11 @@ namespace Saga.Core.Services.Converters
             internal const string Italic = "i";
             internal const string Bold = "b";
             internal const string Subscript = "sub";
+            internal const string PenalSanction = "sankcja-karna";
+            internal const string Hyperlink = "h";
+
+            /// <summary>Rola treści części wspólnej (<c>sankcja-karna</c>).</summary>
+            internal const string Role = "rola";
             internal const string eId = "eId";
             internal static readonly XName GUID = GuidNamespace + "GUID";
             internal const string MissingEId = "brak-eid";

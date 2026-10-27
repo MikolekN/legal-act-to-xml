@@ -3072,6 +3072,30 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0119: sankcja karna i adres internetowy oznacza eksport z brzmienia tekstu
+        // ============================================================
+
+        [Fact]
+        public void Adr0119_SanctionAndAddress_AreReadFromTheWording()
+        {
+            // Jak w przykładzie autorów (Dz. U. 2024 poz. 928, art. 56): zwrot od „podlega" do końca zdania, bez kropki;
+            // „podlega opłacie" karą nie jest; adres z tekstu w h.
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o ochronie sygnalistów",
+                "Art. 1. Kto wbrew przepisom ustawy ujawnia tożsamość sygnalisty, podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do roku.",
+                "Art. 2. Wniosek podlega opłacie skarbowej.",
+                "Art. 3. Wzór zgłoszenia jest dostępny na stronie www.rpo.gov.pl.",
+            ];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var sanction = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "sankcja-karna");
+            Assert.Equal("podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do roku", sanction.Value);
+            Assert.Equal("www.rpo.gov.pl", Assert.Single(xml.Descendants(), e => e.Name.LocalName == "h").Value);
+        }
+
+        // ============================================================
         // ADR-0117: formatowanie znakowe idzie obok tekstu bloku, a eksport odnajduje je w źródle
         // ============================================================
 

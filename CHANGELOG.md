@@ -1781,6 +1781,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   nowy wiersz i wcięcie zapisu, które stawały się częścią tekstu zdania („`<zdanie>⏎    <sup>1)</sup> …`”); teraz
   `<zdanie><sup>`, jak w przykładach autorów schematu (`MixedContentXml`).
 
+- **Sankcja karna i adresy internetowe**: zwrot kary domykający przepis („…, podlega grzywnie, karze ograniczenia
+  wolności albo pozbawienia wolności do roku.”) stoi w `sankcja-karna`, bez kropki — jak w przykładzie autorów schematu
+  (Dz. U. 2024 poz. 928); sankcja będąca częścią wspólną wyliczenia to `rola="sankcja-karna"` na części wspólnej.
+  Adres zapisany w tekście („https://www.gov.pl/…”, „www.bip.gov.pl”) stoi w `h`
+  ([ADR-0119](docs/adr/0119-sankcja-karna-i-adres-internetowy-z-brzmienia-tekstu.md)).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

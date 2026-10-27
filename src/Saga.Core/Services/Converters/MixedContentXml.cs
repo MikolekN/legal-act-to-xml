@@ -20,6 +20,8 @@ namespace Saga.Core.Services.Converters
             XmlConverterConstants.Contents.Bold,
             XmlConverterConstants.Contents.Odnosnik.Element,
             XmlConverterConstants.Contents.Odnosnik.ReferenceElement,
+            XmlConverterConstants.Contents.PenalSanction,
+            XmlConverterConstants.Contents.Hyperlink,
         ];
 
         internal static void KeepUnindented(XElement root)
