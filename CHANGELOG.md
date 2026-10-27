@@ -1773,6 +1773,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   „Chrom⁺⁶” i ładunek „B⁺” wychodziły dosłownym nawiasem kanału („10[-6]”, „G[1/6]”) — teraz w `sup`. Symbol legendy wzoru
   (`symbol-txt`) przyjmuje odnośnik i indeks górny jak zdanie („s[39)]” był tekstem).
 
+- **Kursywa i pogrubienie w treści**: wyróżnienie części akapitu z DOCX wychodzi w `i` i `b` — łacina („de minimis”),
+  tytuły aktów, które utraciły moc (§ 108a ZTP), zmienne wzorów, pogrubione wyrazy. Kursywa i pogrubienie całego akapitu
+  (nagłówek tabeli, numer „lp.”, wiersz rodzaju aktu, przepis w nowym brzmieniu tekstu jednolitego) są typografią wiersza
+  i do treści nie wchodzą ([ADR-0118](docs/adr/0118-kursywa-i-pogrubienie-w-tresci-tylko-dla-czesci-akapitu.md)).
+- **Treść mieszana bez wcięć**: element na początku tekstu (indeks górny, odnośnik, formatowanie) dostawał przed sobą
+  nowy wiersz i wcięcie zapisu, które stawały się częścią tekstu zdania („`<zdanie>⏎    <sup>1)</sup> …`”); teraz
+  `<zdanie><sup>`, jak w przykładach autorów schematu (`MixedContentXml`).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

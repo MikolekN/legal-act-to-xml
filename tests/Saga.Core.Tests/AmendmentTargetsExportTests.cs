@@ -216,7 +216,7 @@ namespace Saga.Core.Tests
 
             // Zdanie zachowuje swój tekst w całości, z cudzysłowami; instrukcja stoi przed nim.
             var sentence = instruction.Parent!;
-            Assert.Same(instruction, sentence.FirstNode);
+            Assert.Same(instruction, sentence.Nodes().First(node => node is not XText { Value: "" }));
             Assert.Equal("w art. 5 wyrazy „organ właściwy” zastępuje się wyrazami „organ nadzoru”;", sentence.Value);
         }
 
@@ -475,7 +475,7 @@ namespace Saga.Core.Tests
             Assert.Equal(XmlConverterConstants.AmendmentNamespace, wrap.Name.NamespaceName);
             Assert.Equal("art_24", Attr(wrap, "element-eId"));
             Assert.NotNull(Attr(wrap, "akt"));
-            Assert.Same(wrap, wrap.Parent!.FirstNode);
+            Assert.Same(wrap, wrap.Parent!.Nodes().First(node => node is not XText { Value: "" }));
 
             Assert.Equal(("dodaj-po", "art_24__ust_1"), (Attr(commands[1], "funkcja"), Attr(commands[1], "element-eId")));
             Assert.Equal(new[] { "art_24__ust_2" }, UnitIds(commands[1]));

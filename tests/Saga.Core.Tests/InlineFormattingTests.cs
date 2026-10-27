@@ -90,12 +90,51 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void ItalicAndBold_AreNotExportedYet()
+        public void ItalicAndBoldOfTheRun_StandInIAndB()
         {
-            // Kursywa i pogrubienie w treści — kolejne kroki planu, każdy z własnym pomiarem korpusu.
-            var sentence = FirstSentence(Export(Line(Run("Art. 1. Pomoc "), Run("de minimis", "<w:i/>"), Run(" udziela się "), Run("wyłącznie", "<w:b/>"), Run(" na wniosek."))));
+            // Decyzja użytkownika (2026-10-27): kursywa i pogrubienie tam, gdzie źródło je ma — „de minimis" w stylu
+            // znaku albo kursywą wprost, pogrubienie przebiegu. Przykład autorów DU 2026/252 pomija kursywę (pytanie 35).
+            var sentence = FirstSentence(Export(Line(Run("Art. 1. Pomoc "), Run("de", "<w:i/>"), Run(" "), Run("minimis", "<w:i/>"),
+                Run(" udziela się "), Run("wyłącznie", "<w:b/>"), Run(" na wniosek."))));
 
-            Assert.Empty(sentence.Elements());
+            Assert.Equal("Pomoc de minimis udziela się wyłącznie na wniosek.", sentence.Value);
+            Assert.Equal([("i", "de minimis"), ("b", "wyłącznie")], sentence.Elements().Select(e => (e.Name.LocalName, e.Value)));
+        }
+
+        [Fact]
+        public void BoldOfTheWholeParagraph_IsItsTypography_NotABElement()
+        {
+            // ADR-0118: pogrubienie całego akapitu nadane wprost (dokumenty spoza szablonu, nagłówek tabeli, przepis w nowym
+            // brzmieniu tekstu jednolitego) jest typografią wiersza jak styl akapitu; wyróżnienie to część akapitu.
+            var xml = Export(
+                Line(Run("Art. 1. Brak zgody uważa się za odmowę.", "<w:b/>")),
+                Line(Run("Art. 2. Termin wynosi "), Run("14 dni", "<w:b/>"), Run(".")));
+
+            var sentences = xml.Descendants().Where(e => e.Name.LocalName == "zdanie").ToList();
+            Assert.Empty(sentences[0].Elements());
+            Assert.Equal("14 dni", Assert.Single(sentences[1].Elements(), e => e.Name.LocalName == "b").Value);
+        }
+
+        [Fact]
+        public void TextStartingWithAnInlineElement_IsWrittenWithoutIndentation()
+        {
+            // Zapis z wcięciami wstawiał przed pierwszym elementem treści mieszanej nowy wiersz i wcięcie, które stawały się
+            // częścią tekstu zdania; przykłady autorów schematu mają „<zdanie …><sup>".
+            var xml = Export(Line(Run("Art. 1. "), Run("De minimis", "<w:i/>"), Run(" stosuje się do pomocy.")));
+
+            var written = xml.ToString();
+            Assert.Matches(@"<zdanie[^>]*><i>De minimis</i> stosuje się", written);
+            Assert.Equal("De minimis stosuje się do pomocy.", FirstSentence(XElement.Parse(written)).Value);
+        }
+
+        [Fact]
+        public void BoldAndItalicTogether_NestBoldOutside()
+        {
+            var sentence = FirstSentence(Export(Line(Run("Art. 1. Stosuje się zasadę "), Run("non bis in idem", "<w:b/><w:i/>"), Run(" w każdej sprawie."))));
+
+            var bold = Assert.Single(sentence.Elements());
+            Assert.Equal("b", bold.Name.LocalName);
+            Assert.Equal(("i", "non bis in idem"), (Assert.Single(bold.Elements()).Name.LocalName, bold.Value));
         }
 
         [SchemaPlFact]

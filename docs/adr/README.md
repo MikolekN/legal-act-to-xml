@@ -136,5 +136,6 @@ Czego nie ma i dlaczego odłożone: [backlog.md](../backlog.md).
 | [0115](0115-odstepy-w-tresci-odnosnika-zwiniete-jak-w-tresci-aktu.md) | Odstępy w treści odnośnika są zwinięte jak w treści aktu — twarda spacja, tabulator i podwójna spacja wychodzą zwykłą spacją; bez `tpg:typografia nieprzenosic` | Accepted | 2026-10-27 |
 | [0116](0116-osoba-w-podpisie-w-kursywie-tylko-gdy-zrodlo-ja-tak-sklada.md) | Osoba w formule podpisu stoi w `i` tylko wtedy, gdy źródło składa ją kursywą (DOCX: styl znaku lub kursywa wprost, PDF: pismo kursywne; TXT nigdy) | Accepted | 2026-10-27 |
 | [0117](0117-formatowanie-znakowe-idzie-obok-tekstu-a-eksport-odnajduje-je-w-zrodle.md) | Formatowanie znakowe (kursywa, pogrubienie, indeks dolny) idzie obok tekstu bloku (`DocumentBlock.Spans`), a eksport odnajduje tekst węzłów w źródle i obejmuje zakresy `b`/`i`/`sub`; parser formatowania nie widzi | Accepted | 2026-10-27 |
+| [0118](0118-kursywa-i-pogrubienie-w-tresci-tylko-dla-czesci-akapitu.md) | Kursywa i pogrubienie wchodzą do treści (`i`, `b`), gdy wyróżniają część akapitu; na całym akapicie — stylem czy wprost — są typografią wiersza (nagłówek tabeli, „lp.”, wiersz rodzaju aktu, przepis w nowym brzmieniu TJ) | Accepted | 2026-10-27 |
 
 Nowy ADR: skopiuj [0000-template.md](0000-template.md), nadaj kolejny numer, dopisz wiersz wyżej.

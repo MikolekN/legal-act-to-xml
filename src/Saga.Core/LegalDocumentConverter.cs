@@ -78,6 +78,7 @@ namespace Saga.Core.Services
 
             TemporalDataXmlConverter.AssignPeriods(actElement, document);
             ActPrefixXml.Apply(actElement, document);
+            MixedContentXml.KeepUnindented(rootElement);
 
             if (ContainsMathML(rootElement))
                 rootElement.Add(new XAttribute(XNamespace.Xmlns + "mml", XmlConverterConstants.MathMLNamespace));

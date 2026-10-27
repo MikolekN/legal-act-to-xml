@@ -1568,7 +1568,7 @@ namespace Saga.Core.Tests
             Assert.Equal("trzech dni", instruction.Attribute("stary-tekst")?.Value);
             Assert.Equal("siedmiu dni", instruction.Attribute("nowy-tekst")?.Value);
             Assert.Equal("DU/2021/200__art_9__ust_1", instruction.Attribute("element-eId")?.Value);
-            Assert.Same(instruction, instruction.Parent!.FirstNode);
+            Assert.Same(instruction, instruction.Parent!.Nodes().First(node => node is not XText { Value: "" }));
             Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
         }
 

@@ -16,7 +16,7 @@ namespace Saga.Core.Services.Converters
     internal static class InlineFormattingXml
     {
         /// <summary>Formatowanie przenoszone do eksportu — elementy włączane po kolei, każdy z własnym pomiarem korpusu.</summary>
-        internal const InlineFormat Exported = InlineFormat.Subscript;
+        internal const InlineFormat Exported = InlineFormat.Subscript | InlineFormat.Italic | InlineFormat.Bold;
 
         /// <summary>Elementy formatowania w treści, od zewnętrznego — kolejność zagnieżdżenia.</summary>
         private static readonly (InlineFormat Format, string Element)[] Elements =
@@ -27,6 +27,9 @@ namespace Saga.Core.Services.Converters
         ];
 
         internal static readonly HashSet<string> ElementNames = [.. Elements.Select(element => element.Element)];
+
+        /// <summary>Formatowanie, które na całym akapicie jest typografią wiersza; indeks dolny jest treścią zawsze.</summary>
+        private static readonly InlineFormat[] ParagraphTypography = [InlineFormat.Italic, InlineFormat.Bold];
 
         // Krótki tekst („i", „Cs") szuka się tylko tuż za poprzednim — dalej powtarza się przypadkiem.
         private const int ShortHost = 8;
@@ -165,14 +168,22 @@ namespace Saga.Core.Services.Converters
                 foreach (var source in sources)
                 {
                     var perChar = new InlineFormat[source.Text.Length];
+                    var channel = new bool[source.Text.Length];
                     foreach (var span in source.Spans)
                     {
+                        var start = Math.Max(0, span.Start);
+                        var end = Math.Min(span.End, perChar.Length);
+                        if (span.Format.HasFlag(InlineFormat.Superscript))
+                            Array.Fill(channel, true, start, Math.Max(0, end - start));
+
                         var format = span.Format & ~span.FromParagraphStyle & exported;
                         if (format == InlineFormat.None)
                             continue;
-                        for (var i = Math.Max(0, span.Start); i < Math.Min(span.End, perChar.Length); i++)
+                        for (var i = start; i < end; i++)
                             perChar[i] |= format;
                     }
+
+                    RemoveWholeParagraphFormatting(source.Text, perChar, channel);
 
                     for (var i = 0; i < source.Text.Length; i++)
                     {
@@ -184,6 +195,31 @@ namespace Saga.Core.Services.Converters
                 }
 
                 return new Source(sb.ToString(), [.. formats]);
+            }
+
+            /// <summary>
+            /// Kursywa albo pogrubienie całego akapitu — nadane stylem czy wprost — to typografia wiersza (rodzaj aktu,
+            /// tytuł, nagłówek tabeli, numer w kolumnie „lp.”, przepis w nowym brzmieniu tekstu jednolitego), nie
+            /// wyróżnienie w tekście (ADR-0118). Odstępy i grupy kanału „[…]” (znaczniki odnośników) się nie liczą.
+            /// </summary>
+            private static void RemoveWholeParagraphFormatting(string text, InlineFormat[] formats, bool[] channel)
+            {
+                foreach (var format in ParagraphTypography)
+                {
+                    var any = false;
+                    var whole = true;
+                    for (var i = 0; i < text.Length && whole; i++)
+                    {
+                        if (char.IsWhiteSpace(text[i]) || channel[i])
+                            continue;
+                        any = true;
+                        whole = formats[i].HasFlag(format);
+                    }
+
+                    if (any && whole)
+                        for (var i = 0; i < formats.Length; i++)
+                            formats[i] &= ~format;
+                }
             }
 
             /// <summary>
