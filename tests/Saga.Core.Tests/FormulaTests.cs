@@ -297,6 +297,7 @@ namespace Saga.Core.Tests
             Text("albo", "PKTpunkt"),
             Text("2)", "PKTpunkt"),
             Formula("K=A∙W"),
+            Text("2. Premię wypłaca się co miesiąc.", "USTustnpkodeksu"),
             Text("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.", "ARTartustawynprozporzdzenia"),
         ];
 

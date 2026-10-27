@@ -1837,6 +1837,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   wspólnej …”) — w każdej jednostce. W załączniku instrukcja zostaje ręczna
   ([ADR-0127](docs/adr/0127-czesc-wspolna-jako-miejsce-zmiany-ma-adres-czw.md)).
 
+- **Artykuł z jedynym ustępem oznaczonym**: „Art. 41a. 1. …” bez „2.” (Dz. U. 2025 poz. 1709) wychodzi jako
+  `nie-ztp-artykul` bez własnego akapitu z `nie-ztp-ustep` nr 1 i adresem `…__art_41a__ust_1` — po zmianie schematu
+  przez jego autora. Wcześniej `ustep-n` gubił numer „1.”. W korpusie DOCX 5 artykułów w 5 plikach
+  ([ADR-0128](docs/adr/0128-artykul-z-jedynym-ustepem-oznaczonym-jest-spoza-ztp.md)).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

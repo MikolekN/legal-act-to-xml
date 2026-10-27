@@ -15,11 +15,14 @@ namespace Saga.Core.Services.Converters
         /// </summary>
         internal static XElement ToXml(Article article, bool inSubchapter = false)
         {
+            // Artykuł, którego jedyny ustęp ma oznaczenie, jest spoza ZTP i nie ma własnego akapitu (ADR-0128).
             var articleElement = Element(article.IsSection
                 ? XmlConverterConstants.SectionBasedActs.Section
-                : inSubchapter && HasCodeParagraphs(article)
-                    ? XmlConverterConstants.Contents.CodeArticle
-                    : XmlConverterConstants.Contents.Article);
+                : article.Paragraphs is [var only] && ParagraphXmlConverter.IsLoneDesignated(only)
+                    ? XmlConverterConstants.Contents.NonZtpArticle
+                    : inSubchapter && HasCodeParagraphs(article)
+                        ? XmlConverterConstants.Contents.CodeArticle
+                        : XmlConverterConstants.Contents.Article);
 
             articleElement.Add(UnitAddressXml.Address(article, UnitAddressXml.HasDesignation(article)));
             articleElement.Add(new XAttribute(XmlConverterConstants.Contents.GUID, article.Guid.ToString()));

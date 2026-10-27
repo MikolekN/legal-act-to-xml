@@ -16,9 +16,10 @@ namespace Saga.Core.Services.Converters
         /// </param>
         internal static XElement? ToXml(Paragraph paragraph, SentenceContext? previousSentenceContext = null, bool quotedWithoutArticle = false)
         {
-            var isImplicit = !quotedWithoutArticle && IsParagraphImplicit(paragraph);
+            var lone = !quotedWithoutArticle && IsLoneDesignated(paragraph);
+            var isImplicit = !quotedWithoutArticle && !lone && IsParagraphImplicit(paragraph);
             var designated = UnitAddressXml.HasDesignation(paragraph);
-            var isPathological = IsPathological(paragraph) || (!isImplicit && !designated) || paragraph.CodeParagraphWithoutSign;
+            var isPathological = lone || IsPathological(paragraph) || (!isImplicit && !designated) || paragraph.CodeParagraphWithoutSign;
 
             // Parsowane dokumenty potrafią zawierać puste ustępy
             if (isImplicit
@@ -88,6 +89,14 @@ namespace Saga.Core.Services.Converters
             (!UnitAddressXml.HasDesignation(paragraph) &&
              paragraph.Article is { } article &&
              article.Paragraphs.Any(sibling => sibling.Role == Paragraph.CodeParagraphRole));
+
+        /// <summary>
+        /// Jedyny ustęp artykułu, który ma oznaczenie („Art. 41a. 1. …" bez „2.") — budowa spoza ZTP: ustęp zostaje
+        /// jawny, z numerem i adresem, jako <c>nie-ztp-ustep</c> pod <c>nie-ztp-artykul</c> (ADR-0128).
+        /// </summary>
+        internal static bool IsLoneDesignated(Paragraph paragraph) =>
+            paragraph is { IsImplicit: false, Article: { IsSection: false, IsImplicit: false, Paragraphs.Count: 1 } article } &&
+            UnitAddressXml.HasDesignation(article) && UnitAddressXml.HasDesignation(paragraph);
 
         // Use parent article to check for number of child paragraphs and assigned IsImplicit value as fallback.
         private static bool IsParagraphImplicit(Paragraph paragraph) =>

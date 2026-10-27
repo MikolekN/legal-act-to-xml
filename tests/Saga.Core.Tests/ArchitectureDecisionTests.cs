@@ -1719,6 +1719,49 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0128: artykuł, którego jedyny ustęp ma oznaczenie, to nie-ztp-artykul z nie-ztp-ustep
+        // ============================================================
+
+        [Fact]
+        public void Adr0128_ArticleWhoseOnlyParagraphIsNumbered_IsANonZtpArticleWithANumberedParagraph()
+        {
+            // Dz. U. 2025 poz. 1709, art. 4 pkt 15: „Art. 41a. 1. …" bez „2." — numer i adres ustępu zostają (ustawa powołuje
+            // „art. 41a ust. 1"), artykuł nie ma własnego akapitu. Artykuł bez oznaczenia ustępu zostaje zwykły.
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o ochronie roślin",
+                "Art. 1. W ustawie z dnia 8 marca 2013 r. o środkach ochrony roślin (Dz. U. z 2024 r. poz. 630) po art. 41 dodaje się art. 41a w brzmieniu:",
+                "„Art. 41a. 1. Zabieg z zastosowaniem środków ochrony roślin:",
+                "1) przy użyciu sprzętu agrolotniczego wykonują osoby przeszkolone;",
+                "2) metodą fumigacji wykonują osoby uprawnione.”.",
+                "Art. 2. 1. Ustawa wchodzi w życie z dniem 1 lipca 2026 r.",
+                "Art. 3. Minister ogłasza komunikat.",
+            ];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            static string? EId(XElement element) => element.Attribute("eId")?.Value;
+            XElement Unit(string eId) => xml.Descendants().Single(e => EId(e) == eId && e.Name.LocalName != "JednostkaAktu");
+
+            var quoted = Unit("DU/2024/630__art_41a");
+            Assert.Equal("nie-ztp-artykul", quoted.Name.LocalName);
+            Assert.DoesNotContain(quoted.Elements(), e => e.Name.LocalName == "p");
+            var paragraph = Assert.Single(quoted.Elements(), e => e.Name.LocalName == "nie-ztp-ustep");
+            Assert.Equal("DU/2024/630__art_41a__ust_1", EId(paragraph));
+            Assert.Equal("1", paragraph.Elements().First(e => e.Name.LocalName == "nr").Value);
+            Assert.Equal(
+                ["DU/2024/630__art_41a__ust_1__pkt_1", "DU/2024/630__art_41a__ust_1__pkt_2"],
+                paragraph.Elements().Where(e => e.Name.LocalName == "nie-ztp-punkt").Select(EId));
+
+            Assert.Equal("nie-ztp-artykul", Unit("art_2").Name.LocalName);
+            Assert.Equal("nie-ztp-ustep", Unit("art_2__ust_1").Name.LocalName);
+
+            var plain = Unit("art_3");
+            Assert.Equal("artykul", plain.Name.LocalName);
+            Assert.Single(plain.Elements(), e => e.Name.LocalName == "ustep-n");
+        }
+
+        // ============================================================
         // ADR-0127: część wspólna jako miejsce zmiany ma adres …__czw
         // ============================================================
 
@@ -3007,6 +3050,7 @@ namespace Saga.Core.Tests
                 Block("– jednostki organizacyjne wspierania rodziny i systemu pieczy zastępczej", 862),
                 Block("– zwane dalej „kontrolowanymi jednostkami”,", dashIndent),
                 Block("4) prowadzenie szkoleń.", 0),
+                Block("2. Wojewoda składa sprawozdanie."),
                 Block("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia."),
             };
             var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks,
