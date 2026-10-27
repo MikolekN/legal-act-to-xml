@@ -562,6 +562,22 @@ namespace Saga.Core.Tests
             Assert.Equal("Stawka podatku = [0,033 × cena + (0,001 × cena)2,5] × 0,74, a pole = (a + b)2.", sentence.Value);
         }
 
+        [Theory]
+        // Korpus: wykładnik ułamkowy (338565_3124999), ujemny (348358_3146820), stopień utlenienia i ładunek (328977, 324577).
+        [InlineData("Art. 1. Wartość wynosi 39 × G[1/6] dla każdej stawki.", "1/6", "Wartość wynosi 39 × G1/6 dla każdej stawki.")]
+        [InlineData("Art. 1. Współczynnik nie większy niż 10[-6] m/s obowiązuje.", "-6", "Współczynnik nie większy niż 10-6 m/s obowiązuje.")]
+        [InlineData("Art. 1. Dawka 1 Gy = 1 J kg[-1] jest dopuszczalna.", "-1", "Dawka 1 Gy = 1 J kg-1 jest dopuszczalna.")]
+        [InlineData("Art. 1. Chrom[+6] jest zakazany.", "+6", "Chrom+6 jest zakazany.")]
+        [InlineData("Art. 1. Jon B[–] wiąże się z jonem B[+].", "–", "Jon B– wiąże się z jonem B+.")]
+        public void SignedOrFractionalExponent_IsASupElement(string line, string firstSup, string sentence)
+        {
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.ParseBlocks(new[] { new DocumentBlock { Text = line } }));
+
+            var zdanie = xml.Descendants().Single(e => e.Name.LocalName == "zdanie");
+            Assert.Equal(firstSup, zdanie.Elements().First(e => e.Name.LocalName == "sup").Value);
+            Assert.Equal(sentence, zdanie.Value);
+        }
+
         [Fact]
         public void SuperscriptedArticleAndCodeParagraph_KeepTheSuperscriptInEIdAndNr()
         {

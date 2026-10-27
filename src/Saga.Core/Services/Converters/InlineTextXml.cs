@@ -36,6 +36,9 @@ namespace Saga.Core.Services.Converters
             XmlConverterConstants.Table.Enumeration3,
             XmlConverterConstants.Table.Enumeration4,
             XmlConverterConstants.Table.Description,
+
+            // Symbol legendy wzoru zapisany tekstem („s[39)]", „C[2]") — ZawartoscTekstowaBezCytatuTyp.
+            XmlConverterConstants.Contents.Formula.SymbolAsText,
         ];
 
         // Indeks górny w kanale tekstowym: nawias tuż za literą albo cyfrą — „477[9]", „2[1a]", „m[2]". Znacznik
@@ -47,6 +50,8 @@ namespace Saga.Core.Services.Converters
         private static readonly Regex Superscript = new(
             @"(?<=[\p{L}\d])\[(?<index>[0-9a-z]{1,4})\]|(?<=[\p{L}\d)])\[(?<index>\d+,\d+)\]|(?<=\))\[(?<index>\d{1,2})\]"
             + @"|\[(?<index>\(?\*{1,3}\)?|\(?[IVX]{1,4}\)|\))\]"
+            // Wykładnik ze znakiem albo ułamkiem i sam znak ładunku: „10[-6]", „kg[-1]", „G[1/6]", „Chrom[+6]", „B[+]".
+            + $@"|(?<=[\p{{L}}\d)])\[(?<index>[+{Dashes.Any}]?\d+/\d+|[+{Dashes.Any}]\d+|[+{Dashes.Any}])\]"
             // Znacznik, któremu nie odpowiada osadzony odnośnik — w treści odnośnika („z późn. zm.[1)]", „[a)]") albo
             // z gwiazdkami („[3(**)]") — wychodzi indeksem górnym; kanał tekstowy z nawiasem do eksportu nie trafia. Tylko kształt
             // znacznika: wzór w nawiasie („[D_2022 x (A + B)/n)]") zostaje tekstem.

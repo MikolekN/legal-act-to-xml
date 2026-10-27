@@ -1769,6 +1769,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   ([ADR-0117](docs/adr/0117-formatowanie-znakowe-idzie-obok-tekstu-a-eksport-odnajduje-je-w-zrodle.md)). Kursywa
   i pogrubienie w treści — kolejne kroki.
 
+- **Indeks górny ze znakiem i ułamkiem; symbol legendy wzoru**: wykładnik „10⁻⁶”, „kg⁻¹”, „G¹ᐟ⁶”, stopień utlenienia
+  „Chrom⁺⁶” i ładunek „B⁺” wychodziły dosłownym nawiasem kanału („10[-6]”, „G[1/6]”) — teraz w `sup`. Symbol legendy wzoru
+  (`symbol-txt`) przyjmuje odnośnik i indeks górny jak zdanie („s[39)]” był tekstem).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

@@ -44,11 +44,9 @@ namespace Saga.Core.Services.Converters
             if (source.FormattedCharacters == 0)
                 return new Report(0, 0, 0);
 
-            // Jedno przejście w kolejności dokumentu: węzły treści bez oznaczeń jednostek i symbole legendy wzoru.
+            // Jedno przejście w kolejności dokumentu: węzły treści bez oznaczeń jednostek.
             var hosts = actElement.DescendantNodes().OfType<XText>()
-                .Where(text => InlineTextXml.Host(text) is var host
-                    && (host.Name.LocalName == XmlConverterConstants.Contents.Formula.SymbolAsText
-                        || (InlineTextXml.IsHostText(text) && !InlineTextXml.HoldsDesignation(host))))
+                .Where(text => InlineTextXml.IsHostText(text) && !InlineTextXml.HoldsDesignation(InlineTextXml.Host(text)))
                 .ToList();
 
             var cursor = 0;
