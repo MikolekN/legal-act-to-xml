@@ -41,10 +41,11 @@ namespace Saga.Core.Services.Parsing
 
             foreach (var unit in Units(document))
             {
-                if (unit is not IHasAmendments { Amendment.TextChanges: { Count: > 0 } changes })
+                if (unit is not IHasAmendments owner)
                     continue;
 
-                foreach (var change in changes)
+                var amendments = owner.EarlierSentenceAmendments.Append(owner.Amendment).OfType<Amendment>();
+                foreach (var change in amendments.SelectMany(amendment => amendment.TextChanges))
                     change.OldText = Without(change.OldText);
             }
         }

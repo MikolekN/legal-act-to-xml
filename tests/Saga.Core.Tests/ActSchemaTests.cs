@@ -55,6 +55,22 @@ namespace Saga.Core.Tests
         }
 
         [SchemaPlFact]
+        public void CommandsInSeparateSentences_AreSchemaValid()
+        {
+            // Każda komenda w zdaniu, które ją zapisuje (ADR-0122): uchylenie, zmiana wyrazów i cytat zdania.
+            var xml = Export(
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) art. 127 uchyla się. W art. 128 zdanie drugie otrzymuje brzmienie:",
+                "„Opłaty nie pobiera się od osób zwolnionych.”;",
+                "2) w art. 129 wyrazy „14 dni” zastępuje się wyrazami „30 dni”. Art. 130 uchyla się.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.");
+
+            Assert.Equal(2, xml.Descendants().Count(e => e.Name.LocalName == "uchyl"));
+            Assert.Empty(Problems(xml));
+        }
+
+        [SchemaPlFact]
         public void DesignationsWithPolishLetters_AreSchemaValid()
         {
             // Schemat od wersji 0.3.4 przyjmuje polskie litery w `nr` i w eId („art. 48ł", „lit. ł") — w Prawie

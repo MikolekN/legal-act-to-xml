@@ -39,6 +39,7 @@ namespace Saga.Core.Services.EntryIntoForce
             // Treść cytowana nowelizacji stoi w ostatnim zdaniu jednostki i wchodzi w życie razem z nim — także
             // wtedy, gdy wyjątek klauzuli wskazuje samo to zdanie, a nie jednostkę (ADR-0121).
             var quoting = governing;
+            var bySentence = new Dictionary<int, EntryDates>();
             if (unit is IHasTextSegments holder)
             {
                 foreach (var segment in holder.TextSegments)
@@ -49,11 +50,19 @@ namespace Saga.Core.Services.EntryIntoForce
                             ? segmentRetro
                             : governing.RetroactiveFrom);
                     Write(segment, quoting);
+                    bySentence[segment.Order] = quoting;
                 }
             }
 
-            if (unit is IHasAmendments { Amendment: { } amendment })
-                Write(amendment, quoting);
+            if (unit is IHasAmendments owner)
+            {
+                if (owner.Amendment is { } amendment)
+                    Write(amendment, quoting);
+
+                // Komenda wcześniejszego zdania wchodzi w życie ze swoim zdaniem (ADR-0122).
+                foreach (var earlier in owner.EarlierSentenceAmendments)
+                    Write(earlier, earlier.CommandSentence is { } sentence && bySentence.TryGetValue(sentence, out var dates) ? dates : governing);
+            }
 
             foreach (var child in EditorialUnitWalker.Children(unit, includeAmendmentContent: false))
                 Paint(child, governing, exceptions, visited);

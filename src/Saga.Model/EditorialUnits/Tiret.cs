@@ -25,6 +25,8 @@ namespace Saga.Model.EditorialUnits
         public List<Tiret> Tirets { get; set; } = new();
         public Amendment? Amendment { get; set; }
 
+        public List<Amendment> EarlierSentenceAmendments { get; } = new();
+
         public Tiret()
         {
             UnitType = UnitType.Tiret;

@@ -100,7 +100,7 @@ namespace Saga.Core.Services.Parsing
                 return null;
 
             var skipped = EditorialUnitWalker.SelfAndDescendants(container, includeAmendmentContent: true)
-                .Any(unit => unit is IHasAmendments { Amendment: not null }
+                .Any(unit => unit is IHasAmendments { Amendment: not null } or IHasAmendments { EarlierSentenceAmendments.Count: > 0 }
                     || unit.ValidationMessages.Any(message =>
                         message.Message.StartsWith(StructureProcessor.SkippedParagraphMessage, StringComparison.Ordinal)));
             return skipped ? null : body;

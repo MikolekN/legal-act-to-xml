@@ -231,6 +231,18 @@ namespace Saga.Core.Services.Parsing
         public Dictionary<Guid, IReadOnlyList<AnnexInstruction>> PendingAnnexInstructions { get; } = new();
 
         /// <summary>
+        /// Komendy wcześniejszych zdań jednostki z kilkoma komendami w osobnych zdaniach — czekają na wykrycie komend
+        /// po zbudowaniu jednostki, które da im własne nowelizacje (ADR-0122). Klucz: Guid jednostki.
+        /// </summary>
+        internal Dictionary<Guid, IReadOnlyList<SentenceCommands.Command>> PendingSentenceCommands { get; } = new();
+
+        /// <summary>
+        /// Tekst komendy jednostki, gdy nie jest nim cała jej treść: przy kilku komendach w osobnych zdaniach — zdanie
+        /// komendy, z której powstaje nowelizacja (ADR-0122). Klucz: Guid jednostki.
+        /// </summary>
+        public Dictionary<Guid, string> CommandTexts { get; } = new();
+
+        /// <summary>
         /// Czy aktualnie przetwarza akapity bedace trescia nowelizacji.
         /// Ustawiane na true gdy:
         /// - napotkano akapit ze stylem Z/... (Z/UST, Z/ART, Z/PKT itd.)

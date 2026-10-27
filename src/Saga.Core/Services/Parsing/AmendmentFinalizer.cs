@@ -144,7 +144,7 @@ namespace Saga.Core.Services.Parsing
             //    Zmiana w tekście zapisana w tym samym zdaniu („skreśla się średnik i dodaje się … w brzmieniu:")
             //    o operacji na jednostce nie rozstrzyga — jej czasownik nie jest uchyleniem (ADR-0068).
             var operationType = input.ForcedOperationType
-                ?? DetectOperationType(AmendmentCommandParser.WithoutTextChanges(collector.Owner.ContentText));
+                ?? DetectOperationType(AmendmentCommandParser.WithoutTextChanges(collector.CommandText));
 
             // 2. Zbuduj obiekt Amendment
             var amendment = new Amendment
@@ -153,7 +153,7 @@ namespace Saga.Core.Services.Parsing
                 Content = operationType == AmendmentOperationType.Repeal ? null : content
             };
             if (amendment.Content is { PlainText.Length: > 0 } quoted)
-                quoted.PlainTextIsSentences = SentenceObjectPattern.IsMatch(collector.Owner.ContentText.TrimEnd());
+                quoted.PlainTextIsSentences = SentenceObjectPattern.IsMatch(collector.CommandText.TrimEnd());
 
             amendment.TextChanges.AddRange(input.TextChanges ?? []);
             if (context.PendingTextChanges.Remove(collector.Owner.Guid, out var pendingTextChanges))
@@ -176,8 +176,8 @@ namespace Saga.Core.Services.Parsing
             // 3b. Miejsce w załączniku, którego eId nie zaadresuje („skreśla się lp. 7", „poz. A otrzymuje brzmienie:",
             //     „w kolumnie trzeciej wyrazy …"), jest celem instrukcji ręcznej z adresem najgłębszej adresowalnej
             //     jednostki — automatyczna objęłaby więcej, niż komenda zmienia (ADR-0080, ADR-0100).
-            SentenceTargets.Adjust(amendment, collector.Owner.ContentText);
-            ManualTargets.Mark(amendment, collector.Owner.ContentText);
+            SentenceTargets.Adjust(amendment, collector.CommandText);
+            ManualTargets.Mark(amendment, collector.CommandText);
 
             AmendmentTargetPairing.AnchorContentUnits(amendment);
 
@@ -292,7 +292,7 @@ namespace Saga.Core.Services.Parsing
             if (owner == null)
                 return;
 
-            var command = AmendmentCommandParser.Parse(owner.ContentText);
+            var command = AmendmentCommandParser.Parse(collector.CommandText);
             if (command == null)
                 return;
 

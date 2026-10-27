@@ -105,6 +105,30 @@ namespace Saga.Core.Services.Converters
             }
         }
 
+        /// <summary>
+        /// Nowelizacje komend z wcześniejszych zdań jednostki — każda w zdaniu, w którym stoi jej komenda (ADR-0122).
+        /// Elementy zdań stoją w kolejności segmentów tekstu jednostki; gdy ich liczba się nie zgadza, nowelizacja idzie
+        /// do ostatniego zdania, jak komenda jednostki.
+        /// </summary>
+        internal static void ToXml(IReadOnlyList<Amendment> earlier, IReadOnlyList<TextSegment> segments, XElement textSection)
+        {
+            if (earlier.Count == 0)
+                return;
+
+            var sentences = textSection.Elements().ToList();
+            foreach (var amendment in earlier)
+            {
+                var index = -1;
+                for (var i = 0; i < segments.Count && sentences.Count == segments.Count; i++)
+                {
+                    if (segments[i].Order == amendment.CommandSentence)
+                        index = i;
+                }
+
+                ToXml(amendment, index >= 0 ? sentences[index] : textSection.LastNode);
+            }
+        }
+
         private static List<Command> Commands(Amendment amendment)
         {
             var first = amendment.Guid != Guid.Empty ? amendment.Guid : Guid.NewGuid();

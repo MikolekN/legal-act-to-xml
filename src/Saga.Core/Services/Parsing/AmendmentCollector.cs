@@ -58,6 +58,14 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public IReadOnlyList<StructuralAmendmentReference> Targets { get; private set; } = [];
 
+        private string? _commandText;
+
+        /// <summary>
+        /// Tekst komendy, z której powstaje nowelizacja: treść właściciela, a gdy jednostka niesie komendy w kilku
+        /// zdaniach — tylko zdanie tej komendy (ADR-0122). Pusty bez właściciela.
+        /// </summary>
+        public string CommandText => Owner is null ? string.Empty : _commandText ?? Owner.ContentText;
+
         /// <summary>
         /// Bilans cudzysłowów zbieranej treści (granice nowelizacji bez stylów Z/*, § 94 ZTP).
         /// Uzbrajany przy pierwszym bezstylowym bloku zaczynającym się od „; resetowany z kolektorem.
@@ -87,7 +95,8 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         /// <param name="owner">Encja zawierajaca zwrot nowelizacyjny</param>
         /// <param name="targets">Opcjonalne cele wykryte z referencji strukturalnej</param>
-        public void Begin(BaseEntity owner, IReadOnlyList<StructuralAmendmentReference>? targets = null)
+        /// <param name="commandText">Tekst komendy, gdy nie jest nim cała treść właściciela</param>
+        public void Begin(BaseEntity owner, IReadOnlyList<StructuralAmendmentReference>? targets = null, string? commandText = null)
         {
             if (IsCollecting)
             {
@@ -100,6 +109,7 @@ namespace Saga.Core.Services.Parsing
 
             Owner = owner ?? throw new ArgumentNullException(nameof(owner));
             Targets = targets ?? [];
+            _commandText = commandText;
 
             Log.Debug("AmendmentCollector: rozpoczeto zbieranie nowelizacji dla {OwnerType} [{OwnerId}]",
                 owner.UnitType, owner.Id);
@@ -197,6 +207,7 @@ namespace Saga.Core.Services.Parsing
             _paragraphs.Clear();
             Owner = null;
             Targets = [];
+            _commandText = null;
             QuoteTracker.Reset();
             OpenQuotation.Reset();
 

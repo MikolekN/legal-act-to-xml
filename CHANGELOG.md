@@ -1799,6 +1799,14 @@ a wersjonowanie zgodne z Semantic Versioning.
   cytat w tym zdaniu — tekstowy i strukturalny; wcześniej cytat brał datę jednostki
   ([ADR-0121](docs/adr/0121-tresc-cytowana-wchodzi-w-zycie-ze-zdaniem-ktore-ja-przytacza.md)). W korpusie DOCX 151 zdań w 62 plikach, poza tym eksport bez zmian.
 
+- **Komendy w osobnych zdaniach jednostki**: punkt z dwiema komendami w dwóch zdaniach („2) art. 127 uchyla się.
+  W art. 128 zdanie drugie otrzymuje brzmienie: „…”.”) wychodził jako jedno uchylenie ręczne (`uchyl-recznie` na
+  `art_127` z tekstem obu zdań), a cytat drugiej komendy zostawał `fragment`em za punktem. Teraz każde zdanie z komendą
+  jest osobną komendą z celami ze swojego tekstu: `now:uchyl` na `art_127` w pierwszym zdaniu i `cytat-w-tekscie`
+  na `art_128__zdn_2` w drugim. Komendy przed ostatnią muszą kończyć się w swoim zdaniu (uchylenie, zmiana w tekście)
+  ([ADR-0122](docs/adr/0122-komendy-w-osobnych-zdaniach-jednostki-to-osobne-nowelizacje.md)). W korpusie DOCX takiego
+  zapisu nie ma — eksport bez zmian.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

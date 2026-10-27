@@ -97,7 +97,7 @@ namespace Saga.Core.Services.Parsing
                 return false;
 
             var units = EditorialUnitWalker.SelfAndDescendants(container, includeAmendmentContent: true).ToList();
-            if (units.Any(unit => unit is IHasAmendments { Amendment: not null }
+            if (units.Any(unit => unit is IHasAmendments { Amendment: not null } or IHasAmendments { EarlierSentenceAmendments.Count: > 0 }
                     || unit.ValidationMessages.Any(m => m.Message.StartsWith(StructureProcessor.SkippedParagraphMessage, StringComparison.Ordinal))))
                 return false;
 

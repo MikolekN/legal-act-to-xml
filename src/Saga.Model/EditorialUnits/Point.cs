@@ -33,6 +33,8 @@ namespace Saga.Model.EditorialUnits
 
         public Amendment? Amendment { get; set; }
 
+        public List<Amendment> EarlierSentenceAmendments { get; } = new();
+
         public Point()
         {
             UnitType = UnitType.Point;

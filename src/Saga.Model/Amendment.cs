@@ -62,6 +62,12 @@ namespace Saga.Model
         public List<StructuralAmendmentReference> Targets { get; set; } = new();
 
         /// <summary>
+        /// Numer zdania jednostki (<see cref="TextSegment.Order"/>), w którym stoi komenda — tylko przy nowelizacji
+        /// z <see cref="IHasAmendments.EarlierSentenceAmendments"/>; null: komenda ostatniego zdania (ADR-0122).
+        /// </summary>
+        public int? CommandSentence { get; set; }
+
+        /// <summary>
         /// Data wejścia w życie nowelizacji.
         /// </summary>
         public DateTime EffectiveDate { get; set; }

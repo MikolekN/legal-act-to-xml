@@ -231,7 +231,7 @@ namespace Saga.Core.Services.Parsing
                 if (owner != null)
                 {
                     var targets = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid);
-                    context.AmendmentCollector.Begin(owner, targets);
+                    context.AmendmentCollector.Begin(owner, targets, CommandText(context, owner));
                 }
             }
 
@@ -254,7 +254,7 @@ namespace Saga.Core.Services.Parsing
             {
                 var owner = context.AmendmentOwner ?? GetOwner(context);
                 if (owner != null)
-                    collector.Begin(owner, context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid));
+                    collector.Begin(owner, context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid), CommandText(context, owner));
             }
 
             collector.AddTable(table);
@@ -297,11 +297,11 @@ namespace Saga.Core.Services.Parsing
                 collector.Targets.FirstOrDefault(),
                 AmendmentOperationType.Modification,
                 context.SectionIsBasicUnit,
-                QuotesCommonPart: AmendmentCommandParser.QuotesCommonPartPattern.IsMatch(collector.Owner?.ContentText ?? string.Empty));
+                QuotesCommonPart: AmendmentCommandParser.QuotesCommonPartPattern.IsMatch(collector.CommandText));
 
             // Odnośnik jako przedmiot komendy: jego treść nie przechodzi przez rozpoznawanie jednostek (ADR-0059).
             // Zdanie albo akapit jako przedmiot komendy: treść cytowana jest tekstem, bez względu na style (ADR-0079).
-            var footnote = QuotedFootnoteReader.Read(collector.Owner?.ContentText);
+            var footnote = QuotedFootnoteReader.Read(collector.CommandText);
             var quoteAtTheMarker = false;
             var content = footnote is not null
                 ? new AmendmentContent
@@ -309,9 +309,9 @@ namespace Saga.Core.Services.Parsing
                     ObjectType = AmendmentObjectType.None,
                     Footnote = QuotedFootnoteReader.Build(footnote, collector.Paragraphs, out quoteAtTheMarker),
                 }
-                : QuotedTextSubject.Read(collector.Owner?.ContentText, collector.Paragraphs) ?? _amendmentBuilder.Build(buildInput);
+                : QuotedTextSubject.Read(collector.CommandText, collector.Paragraphs) ?? _amendmentBuilder.Build(buildInput);
             if (footnote is null)
-                AmendmentBuilder.DemoteLoneCommonParts(content, collector.Owner?.ContentText);
+                AmendmentBuilder.DemoteLoneCommonParts(content, collector.CommandText);
 
             // Tekst pod przepisem, który niczego nie zmienia („oświadczenie o następującej treści:", „według wzoru:"),
             // jest treścią tego przepisu, nie nowelizacją (ADR-0071).
@@ -330,7 +330,7 @@ namespace Saga.Core.Services.Parsing
             var finalizerInput = new AmendmentFinalizerInput(content, collector, context)
             {
                 Targets = footnote is null ? null
-                    : QuotedFootnoteReader.Target(footnote, collector.Owner?.ContentText) is { } target ? [target]
+                    : QuotedFootnoteReader.Target(footnote, collector.CommandText) is { } target ? [target]
                     : AnnexOfTheOwner(context, collector) is { } annex ? [annex] : [],
             };
             var amendment = _amendmentFinalizer.Finalize(finalizerInput);
@@ -649,6 +649,13 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         public void DetectTrigger(ParsingContext context, string text)
         {
+            // Komendy wcześniejszych zdań jednostki dają własne nowelizacje; dalej idzie tylko zdanie ostatniej (ADR-0122).
+            if (GetOwner(context) is { } holder && context.PendingSentenceCommands.Remove(holder.Guid, out var earlier))
+            {
+                DetectEarlierSentenceCommands(context, holder, earlier);
+                text = context.CommandTexts[holder.Guid];
+            }
+
             NoteContentWrap(context, text);
             NoteAnnexInstructions(context, text);
             DetectCommands(context, text);
@@ -660,6 +667,40 @@ namespace Saga.Core.Services.Parsing
             {
                 FinalizeWithoutContent(context, owner);
             }
+        }
+
+        /// <summary>
+        /// Komendy wcześniejszych zdań jednostki (<see cref="SentenceCommands"/>): każda przechodzi drogę komendy z tekstem
+        /// i celami swojego zdania, a powstała nowelizacja przechodzi do <see cref="IHasAmendments.EarlierSentenceAmendments"/>
+        /// z numerem tego zdania. Cele i tekst komendy jednostki wracają potem do zdania ostatniej komendy.
+        /// </summary>
+        private void DetectEarlierSentenceCommands(ParsingContext context, BaseEntity owner, IReadOnlyList<SentenceCommands.Command> earlier)
+        {
+            if (owner is not IHasAmendments holder)
+                return;
+
+            var unitTargets = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid);
+            var unitCommand = context.CommandTexts[owner.Guid];
+            foreach (var command in earlier)
+            {
+                context.DetectedAmendmentTargets[owner.Guid] = command.Targets;
+                context.CommandTexts[owner.Guid] = command.Text;
+                var before = holder.Amendment;
+                DetectCommands(context, command.Text);
+
+                if (holder.Amendment is { } amendment && amendment != before)
+                {
+                    amendment.CommandSentence = command.Sentence;
+                    holder.EarlierSentenceAmendments.Add(amendment);
+                    holder.Amendment = before;
+                }
+            }
+
+            if (unitTargets is null)
+                context.DetectedAmendmentTargets.Remove(owner.Guid);
+            else
+                context.DetectedAmendmentTargets[owner.Guid] = unitTargets;
+            context.CommandTexts[owner.Guid] = unitCommand;
         }
 
         /// <summary>
@@ -743,7 +784,7 @@ namespace Saga.Core.Services.Parsing
             if (collector.IsCollecting && collector.Count > 0)
                 Flush(context);
 
-            collector.Begin(owner, context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid));
+            collector.Begin(owner, context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid), CommandText(context, owner));
             _amendmentFinalizer.Finalize(new AmendmentFinalizerInput(
                 new AmendmentContent { ObjectType = AmendmentObjectType.None }, collector, context, AmendmentOperationType.Modification));
             collector.Reset();
@@ -841,7 +882,7 @@ namespace Saga.Core.Services.Parsing
                 }
 
                 var targets = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid);
-                collector.Begin(owner, targets);
+                collector.Begin(owner, targets, CommandText(context, owner));
 
                 var content = new AmendmentContent { ObjectType = AmendmentObjectType.None };
                 var finalizerInput = new AmendmentFinalizerInput(content, collector, context);
@@ -864,10 +905,14 @@ namespace Saga.Core.Services.Parsing
         /// (<see cref="Article.IsAmending"/>) albo wtedy, gdy zaraz za nim stoi uchylana jednostka
         /// („uchyla się ust. 3") (ADR-0069).
         /// </summary>
-        private static bool IsRepealCommand(BaseEntity? owner, string structuralText) =>
+        internal static bool IsRepealCommand(BaseEntity? owner, string structuralText) =>
             AmendmentCommandParser.HasRepealVerb(structuralText)
             && (AmendmentFinalizer.FindParentArticle(owner) is { IsAmending: true }
                 || AmendmentCommandParser.RepealsNamedUnit(structuralText));
+
+        /// <summary>Tekst komendy jednostki, gdy nie jest nim cała jej treść (ADR-0122); null — cała treść.</summary>
+        private static string? CommandText(ParsingContext context, BaseEntity owner) =>
+            context.CommandTexts.GetValueOrDefault(owner.Guid);
 
         private static void ArmTrigger(ParsingContext context, string text)
         {
@@ -946,7 +991,7 @@ namespace Saga.Core.Services.Parsing
             }
 
             var targets = context.DetectedAmendmentTargets.GetValueOrDefault(owner.Guid);
-            collector.Begin(owner, targets);
+            collector.Begin(owner, targets, CommandText(context, owner));
 
             var content = new AmendmentContent { ObjectType = AmendmentObjectType.None };
             // Odstęp tuż za cudzysłowem otwierającym („„ , o którym mowa"") jest zabiegiem składu, nie tekstem.

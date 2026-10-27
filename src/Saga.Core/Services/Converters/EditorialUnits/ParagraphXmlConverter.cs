@@ -40,6 +40,7 @@ namespace Saga.Core.Services.Converters
 
             var textSectionElement = Element(XmlConverterConstants.Contents.TextSection);
             SentenceContext? contextToPass = SentenceProcessor.Process(paragraph.TextSegments, previousSentenceContext, textSectionElement);
+            AmendmentXmlConverter.ToXml(paragraph.EarlierSentenceAmendments, paragraph.TextSegments, textSectionElement);
             AmendmentXmlConverter.ToXml(paragraph.Amendment, textSectionElement.LastNode);
             QuotationXmlConverter.Append(paragraph, textSectionElement.LastNode);
             // Ustęp niejawny jest adresowo i treściowo przezroczysty: bez własnego tekstu nie ma czego zapisać.

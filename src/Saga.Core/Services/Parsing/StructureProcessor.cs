@@ -980,23 +980,44 @@ namespace Saga.Core.Services.Parsing
                 return;
 
             // Zacznij od kontekstu rodzica (jeśli istnieje wykryty cel w encji nadrzędnej)
-            var parentTargets = FindParentAmendmentTargets(context, entity);
-            var targets = context.ReferenceService.ReadAmendmentTargets(
-                parentTargets?[0].Structure, entity.ContentText,
-                SectionSignRole.IsBasicUnit(context.Document.Classification));
-
-            if (targets.Count == 0 && parentTargets is not null)
+            var place = FindParentAmendmentTargets(context, entity);
+            IReadOnlyList<StructuralAmendmentReference> TargetsOf(string text)
             {
-                targets = parentTargets
+                var read = context.ReferenceService.ReadAmendmentTargets(
+                    place?[0].Structure, text, SectionSignRole.IsBasicUnit(context.Document.Classification));
+                if (read.Count > 0 || place is null)
+                    return read;
+
+                return place
                     .Select(parent => new StructuralAmendmentReference
                     {
                         Structure = parent.Structure.Clone(),
                         RangeEnd = parent.RangeEnd?.Clone(),
-                        RawText = entity.ContentText,
+                        RawText = text,
                     })
                     .ToList();
             }
 
+            // Kilka komend w osobnych zdaniach: każda ma cele ze swojego zdania, czytane w miejscu wskazanym zdaniem
+            // poprzednim („W art. 5 ust. 2 uchyla się. Ust. 3 otrzymuje brzmienie:"); jednostka bierze cele ostatniej, po
+            // której stoi treść cytowana i pod którą stoją jednostki niższe (ADR-0122).
+            var commandText = entity.ContentText;
+            if (SentenceCommands.Read(entity) is { } commands)
+            {
+                var earlier = new List<SentenceCommands.Command>();
+                foreach (var command in commands.SkipLast(1))
+                {
+                    var read = TargetsOf(command.Text);
+                    earlier.Add(command with { Targets = read });
+                    if (read.Count > 0)
+                        place = read;
+                }
+
+                context.PendingSentenceCommands[entity.Guid] = earlier;
+                commandText = context.CommandTexts[entity.Guid] = commands[^1].Text;
+            }
+
+            var targets = TargetsOf(commandText);
             if (targets.Count == 0)
                 return;
 

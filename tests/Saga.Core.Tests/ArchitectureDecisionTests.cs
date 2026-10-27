@@ -3072,6 +3072,42 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0122: komendy w osobnych zdaniach jednostki to osobne nowelizacje
+        // ============================================================
+
+        [Fact]
+        public void Adr0122_CommandsInSeparateSentences_AreSeparateAmendments_EachInItsSentence()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) art. 127 uchyla się. W art. 128 zdanie drugie otrzymuje brzmienie:",
+                "„Opłaty nie pobiera się od osób zwolnionych.”;",
+                "2) art. 140 uchyla się.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var document = LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
+
+            // Model: komenda ostatniego zdania jest nowelizacją jednostki, wcześniejsza — osobną, ze swoim zdaniem.
+            var point = document.Articles.First().Paragraphs[0].Points[0];
+            var repeal = Assert.Single(point.EarlierSentenceAmendments);
+            Assert.Equal((AmendmentOperationType.Repeal, 1), (repeal.OperationType, repeal.CommandSentence));
+            Assert.Equal("art_127", Assert.Single(repeal.Targets).Structure.ToString());
+            Assert.Equal("art_128__zdn_2", Assert.Single(point.Amendment!.Targets).Structure.ToString());
+
+            // Eksport: każda instrukcja w zdaniu, które ją zapisuje.
+            var sentences = LegalDocumentConverter.Convert(document).Descendants().First(e => e.Name.LocalName == "punkt")
+                .Elements().Single(e => e.Name.LocalName == "p").Elements().ToList();
+            Assert.Equal(
+                [["uchyl DU/2021/200__art_127"], ["cytat-w-tekscie DU/2021/200__art_128__zdn_2"]],
+                sentences.Select(sentence => sentence.Elements()
+                    .Select(e => $"{e.Name.LocalName} {e.Attribute("element-eId")?.Value}").ToArray()));
+        }
+
+        // ============================================================
         // ADR-0121: treść cytowana nowelizacji wchodzi w życie ze zdaniem, które ją przytacza
         // ============================================================
 

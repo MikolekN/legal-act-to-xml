@@ -30,6 +30,8 @@ namespace Saga.Model.EditorialUnits
         public List<Point> Points { get; set; } = new();
         public Amendment? Amendment { get; set; }
 
+        public List<Amendment> EarlierSentenceAmendments { get; } = new();
+
         /// <summary>
         /// Rola paragrafu kodeksu (§) — jednostka mapowana na element paragraf-kodeksu
         /// </summary>

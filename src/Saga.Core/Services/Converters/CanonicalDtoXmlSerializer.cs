@@ -200,7 +200,7 @@ namespace Saga.Core.Services.Converters
             foreach (var point in paragraph.Points)
                 el.Add(SerializePoint(point));
 
-            AddAmendment(el, paragraph.Amendment);
+            AddAmendments(el, paragraph);
             return el;
         }
 
@@ -218,7 +218,7 @@ namespace Saga.Core.Services.Converters
             foreach (var letter in point.Letters)
                 el.Add(SerializeLetter(letter));
 
-            AddAmendment(el, point.Amendment);
+            AddAmendments(el, point);
             return el;
         }
 
@@ -236,7 +236,7 @@ namespace Saga.Core.Services.Converters
             foreach (var tiret in letter.Tirets)
                 el.Add(SerializeTiret(tiret));
 
-            AddAmendment(el, letter.Amendment);
+            AddAmendments(el, letter);
             return el;
         }
 
@@ -251,7 +251,7 @@ namespace Saga.Core.Services.Converters
             foreach (var nested in tiret.Tirets)
                 el.Add(SerializeTiret(nested));
 
-            AddAmendment(el, tiret.Amendment);
+            AddAmendments(el, tiret);
             return el;
         }
 
@@ -278,6 +278,14 @@ namespace Saga.Core.Services.Converters
         // Nowelizacje
         // ============================================================
 
+        // Komendy wcześniejszych zdań jednostki stoją przed jej nowelizacją, z numerem swojego zdania (ADR-0122).
+        private static void AddAmendments(XElement parent, IHasAmendments owner)
+        {
+            foreach (var earlier in owner.EarlierSentenceAmendments)
+                AddAmendment(parent, earlier);
+            AddAmendment(parent, owner.Amendment);
+        }
+
         private static void AddAmendment(XElement parent, Amendment? amendment)
         {
             if (amendment == null)
@@ -285,6 +293,8 @@ namespace Saga.Core.Services.Converters
 
             var el = new XElement("amendment",
                 new XAttribute("operation", amendment.OperationType.ToString()));
+            if (amendment.CommandSentence is { } sentence)
+                el.Add(new XAttribute("sentence", sentence));
 
             el.Add(new XAttribute("effectiveDate", amendment.EffectiveDate.ToString("yyyy-MM-dd")));
             if (amendment.RetroactiveFrom != default)
