@@ -1781,6 +1781,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   nowy wiersz i wcięcie zapisu, które stawały się częścią tekstu zdania („`<zdanie>⏎    <sup>1)</sup> …`”); teraz
   `<zdanie><sup>`, jak w przykładach autorów schematu (`MixedContentXml`).
 
+- **Kursywa i pogrubienie z PDF**: adapter PDF czyta je z pisma liter — kursywę z opisu fontu, pogrubienie z opisu albo
+  z nazwy fontu (PDF z LibreOffice nie ustawia flagi) — i przenosi przez przepisania wiersza i składanie bloku (także
+  wyrażenie przełamane wierszem); dalej jak w DOCX. Indeksu dolnego z PDF nie ma: obniżone glify to równania
+  ([ADR-0120](docs/adr/0120-kursywa-i-pogrubienie-z-pdf-z-pisma-liter.md)).
+
 - **Sankcja karna i adresy internetowe**: zwrot kary domykający przepis („…, podlega grzywnie, karze ograniczenia
   wolności albo pozbawienia wolności do roku.”) stoi w `sankcja-karna`, bez kropki — jak w przykładzie autorów schematu
   (Dz. U. 2024 poz. 928); sankcja będąca częścią wspólną wyliczenia to `rola="sankcja-karna"` na części wspólnej.
