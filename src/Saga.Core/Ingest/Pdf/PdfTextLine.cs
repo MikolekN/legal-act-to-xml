@@ -40,6 +40,9 @@ namespace Saga.Core.Ingest.Pdf
         /// <summary>Fragmenty wiersza złożone pismem kursywnym (<see cref="BlockLayoutInfo.ItalicText"/>).</summary>
         public IReadOnlyList<string> ItalicText { get; init; } = [];
 
+        /// <summary>Zakresy <see cref="Text"/> złożone kursywą albo pogrubieniem i grupy indeksu górnego (ADR-0117).</summary>
+        public IReadOnlyList<Saga.Model.InlineSpan> Spans { get; init; } = [];
+
         /// <summary>
         /// Wiersz zastępczy tabeli z obramowaniem: stoi w miejscu tabeli na stronie (góra siatki), a komórki niosą
         /// własne wiersze. Null dla wiersza tekstu.

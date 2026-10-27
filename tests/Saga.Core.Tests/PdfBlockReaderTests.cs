@@ -161,6 +161,41 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void ItalicAndBoldLetters_AreSpansOfTheBlock_EvenAcrossALineBreak()
+        {
+            // ADR-0117: kursywa i pogrubienie z pisma liter, obok tekstu bloku. „de" na końcu wiersza i „minimis" na początku
+            // następnego to jeden zakres po sklejeniu wierszy.
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Pomoc ", 57, 700).AddItalicText("de", 130, 700)
+                .AddItalicText("minimis", 57, 686).AddText(" udziela się ", 100, 686).AddBoldText("wyłącznie", 170, 686)
+                .AddText(" na wniosek.", 230, 686), fromY: 640)
+                .Build();
+
+            var block = Read(pdf).First(b => b.Text.StartsWith("Art. 1."));
+
+            Assert.Equal("Art. 1. Pomoc de minimis udziela się wyłącznie na wniosek.", block.Text);
+            Assert.Equal(
+                [("de minimis", Saga.Model.InlineFormat.Italic), ("wyłącznie", Saga.Model.InlineFormat.Bold)],
+                block.Spans.Select(span => (block.Text.Substring(span.Start, span.Length), span.Format)));
+        }
+
+        [Fact]
+        public void ItalicFromAPdf_StandsInIInTheExport()
+        {
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("USTAWA", 270, 780).AddText("z dnia 14 czerwca 2024 r.", 240, 765).AddText("o pomocy publicznej", 250, 750)
+                .AddText("Art. 1. Pomoc ", 57, 700).AddItalicText("de minimis", 130, 700).AddText(" udziela się na wniosek.", 190, 700), fromY: 660)
+                .Build();
+
+            using var stream = new MemoryStream(pdf);
+            var document = Saga.Core.LegalDocumentParser.Parse(stream, "ustawa.pdf", new Saga.Core.ParseOptions { Policy = Saga.Core.ParsePolicy.AlwaysParse }).Document!;
+            var sentence = Saga.Core.Services.LegalDocumentConverter.Convert(document).Descendants().First(e => e.Name.LocalName == "zdanie");
+
+            Assert.Equal("Pomoc de minimis udziela się na wniosek.", sentence.Value);
+            Assert.Equal("de minimis", Assert.Single(sentence.Elements(), e => e.Name.LocalName == "i").Value);
+        }
+
+        [Fact]
         public void LetterWithACombiningMark_IsOneComposedLetter()
         {
             // M.P. 2026 poz. 560 i 943: „ą" złożone z litery i znaku łączącego (ogonek U+0328) — dwa glify, znak

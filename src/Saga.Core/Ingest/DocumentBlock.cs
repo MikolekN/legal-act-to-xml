@@ -19,7 +19,8 @@ namespace Saga.Core.Ingest
 
         /// <summary>
         /// Zakresy <see cref="Text"/> złożone formatowaniem znakowym (kursywa, pogrubienie, indeks dolny, grupy indeksu
-        /// górnego) — tylko DOCX; obok tekstu, nie w nim, więc wzorce rozpoznawania ich nie widzą (ADR-0117).
+        /// górnego) — z DOCX, z PDF bez indeksu dolnego; obok tekstu, nie w nim, więc wzorce rozpoznawania ich nie widzą
+        /// (ADR-0117).
         /// </summary>
         public IReadOnlyList<InlineSpan> Spans { get; init; } = [];
 

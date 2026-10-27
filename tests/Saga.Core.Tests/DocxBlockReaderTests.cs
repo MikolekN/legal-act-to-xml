@@ -240,6 +240,19 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SpanAlignment_TreatsAChangeOfCaseAsTheSameCharacter()
+        {
+            // Nagłówek aktu w PDF zapisany zdaniowo (WithTitleCase): pogrubienie całego wiersza zostaje całym wierszem —
+            // inaczej pasowałyby tylko wielkie litery, a zakres rozpadał się na „Ministra F".
+            const string from = "ROZPORZĄDZENIE MINISTRA FINANSÓW";
+            const string to = "Rozporządzenie Ministra Finansów";
+
+            var span = Assert.Single(SpanAlignment.Remap(from, to, [new InlineSpan(0, from.Length, InlineFormat.Bold)]));
+
+            Assert.Equal((0, to.Length), (span.Start, span.Length));
+        }
+
+        [Fact]
         public void ToBlock_NoBoldSpecified_IsNull()
         {
             var paragraph = new Paragraph(new Run(new Text("Treść bez formatowania runu.")));

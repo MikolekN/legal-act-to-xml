@@ -260,7 +260,7 @@ namespace Saga.Core.Ingest.Pdf
         {
             var split = SplitNoteNumberPattern.Match(line.Text);
             return split.Success
-                ? line with { Text = "[" + split.Groups["symbol"].Value + ")]" + line.Text[split.Length..] }
+                ? WithText(line, "[" + split.Groups["symbol"].Value + ")]" + line.Text[split.Length..])
                 : line;
         }
 
@@ -456,7 +456,11 @@ namespace Saga.Core.Ingest.Pdf
 
         private static PdfTextLine Normalized(PdfTextLine line) =>
             // Łącznik nierozdzielający jak w DOCX (TextNormalizer.NonBreakingHyphen).
-            line with { Text = WithoutDuplicatedMarks(line.Text.Replace(TextNormalizer.NonBreakingHyphen, '-')) };
+            WithText(line, WithoutDuplicatedMarks(line.Text.Replace(TextNormalizer.NonBreakingHyphen, '-')));
+
+        /// <summary>Wiersz z przepisanym tekstem — zakresy formatowania przeniesione na nowy tekst (ADR-0117).</summary>
+        private static PdfTextLine WithText(PdfTextLine line, string text) =>
+            text == line.Text ? line : line with { Text = text, Spans = SpanAlignment.Remap(line.Text, text, line.Spans) };
 
         private static double TableFontSize(PdfTextLine placeholder) =>
             placeholder.Table!.Cells.SelectMany(cell => cell.Lines).Select(line => line.DominantSize).DefaultIfEmpty(0).Max();
@@ -751,6 +755,7 @@ namespace Saga.Core.Ingest.Pdf
 
             var buffer = new StringBuilder();
             var italicText = new List<string>();
+            var spans = new List<Saga.Model.InlineSpan>();
             PdfTextLine? blockFirst = null;
             PdfTextLine? prev = null;
             var titleZone = TitleZone.None;
@@ -763,9 +768,12 @@ namespace Saga.Core.Ingest.Pdf
                 if (blockFirst == null || buffer.Length == 0)
                     return;
                 lastPages?.Add(prev?.PageNumber ?? blockFirst.PageNumber);
+                var assembled = buffer.ToString();
+                var text = titleZone == TitleZone.Kind ? WithTitleCase(assembled) : assembled;
                 blocks.Add(new DocumentBlock
                 {
-                    Text = titleZone == TitleZone.Kind ? WithTitleCase(buffer.ToString()) : buffer.ToString(),
+                    Text = text,
+                    Spans = SpanAlignment.Remap(assembled, text, BlockSpans(spans, assembled)),
                     Role = role,
                     Layout = new BlockLayoutInfo
                     {
@@ -782,6 +790,7 @@ namespace Saga.Core.Ingest.Pdf
                 });
                 buffer.Clear();
                 italicText.Clear();
+                spans.Clear();
                 blockFirst = null;
             }
 
@@ -869,6 +878,7 @@ namespace Saga.Core.Ingest.Pdf
                 {
                     FlushBlock();
                     blockFirst = line;
+                    AddLineSpans(spans, buffer.Length, line.Spans);
                     buffer.Append(line.Text);
                     italicText.AddRange(line.ItalicText);
                     titleZone = forceBoundary is not null ? TitleZone.None : NextTitleZone(line, titleZone);
@@ -880,10 +890,12 @@ namespace Saga.Core.Ingest.Pdf
                     while (buffer.Length > 0 && buffer[^1] == ' ')
                         buffer.Length--;
 
+                    var before = buffer.Length;
                     if (inCell && prev is not null && IsBrokenInsideAWord(prev.Text, line.Text))
                         buffer.Append(line.Text);
                     else
                         hyphenation.Join(buffer, line.Text);
+                    JoinLineSpans(spans, buffer, before, line);
                     italicText.AddRange(line.ItalicText);
                 }
 
@@ -892,6 +904,73 @@ namespace Saga.Core.Ingest.Pdf
 
             FlushBlock();
             return blocks;
+        }
+
+        private static void AddLineSpans(List<Saga.Model.InlineSpan> spans, int offset, IReadOnlyList<Saga.Model.InlineSpan> line)
+        {
+            foreach (var span in line)
+                spans.Add(span with { Start = span.Start + offset });
+        }
+
+        /// <summary>
+        /// Zakresy dopisanego wiersza: sklejenie dopisuje go na koniec bufora — ze spacją, bez niej, po usuniętym dywizie
+        /// przeniesienia albo bez dywizu, którym wiersz się zaczyna. Zakres kończący się na usuniętym dywizie skraca się do
+        /// tego, co z poprzedniego wiersza zostało; wiersz dopisany inaczej nie przenosi formatowania.
+        /// </summary>
+        private static void JoinLineSpans(List<Saga.Model.InlineSpan> spans, StringBuilder buffer, int before, PdfTextLine line)
+        {
+            var text = line.Text;
+            var drop = EndsWith(buffer, text) ? 0 : text.Length > 1 && EndsWith(buffer, text[1..]) ? 1 : -1;
+            if (drop < 0)
+                return;
+
+            var appended = buffer.Length - (text.Length - drop);
+            var kept = Math.Min(before, appended);
+            for (var i = 0; i < spans.Count; i++)
+                if (spans[i].End > kept)
+                    spans[i] = spans[i] with { Length = Math.Max(0, kept - spans[i].Start) };
+
+            foreach (var span in line.Spans)
+            {
+                var start = Math.Max(span.Start, drop) - drop + appended;
+                var end = span.End - drop + appended;
+                if (end > start)
+                    spans.Add(span with { Start = start, Length = end - start });
+            }
+        }
+
+        private static bool EndsWith(StringBuilder buffer, string text)
+        {
+            if (text.Length == 0 || buffer.Length < text.Length)
+                return false;
+            for (var i = 0; i < text.Length; i++)
+                if (buffer[buffer.Length - text.Length + i] != text[i])
+                    return false;
+            return true;
+        }
+
+        /// <summary>
+        /// Zakresy bloku w granicach jego tekstu, bez pustych; zakresy jednego formatu, które dzieli sam odstęp (wyrażenie
+        /// przełamane wierszem: „de" / „minimis"), łączą się w jeden — jak przebiegi DOCX.
+        /// </summary>
+        private static List<Saga.Model.InlineSpan> BlockSpans(List<Saga.Model.InlineSpan> spans, string text)
+        {
+            var result = new List<Saga.Model.InlineSpan>();
+            foreach (var span in spans.Where(span => span.Length > 0 && span.Start < text.Length).OrderBy(span => span.Start))
+            {
+                var clipped = span.End > text.Length ? span with { Length = text.Length - span.Start } : span;
+                if (result.Count > 0 && result[^1] is var last && last.Format == clipped.Format
+                    && last.FromParagraphStyle == clipped.FromParagraphStyle && last.End <= clipped.Start
+                    && string.IsNullOrWhiteSpace(text[last.End..clipped.Start]))
+                {
+                    result[^1] = last with { Length = clipped.End - last.Start };
+                    continue;
+                }
+
+                result.Add(clipped);
+            }
+
+            return result;
         }
 
         /// <summary>

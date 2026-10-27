@@ -233,7 +233,7 @@ namespace Saga.Core.Ingest.Pdf
                     return "[" + marker + ")]";
                 });
 
-                result.Add(attached is null && text == block.Text ? block : block with { Text = text, Footnotes = attached ?? block.Footnotes });
+                result.Add(attached is null && text == block.Text ? block : block with { Text = text, Spans = SpanAlignment.Remap(block.Text, text, block.Spans), Footnotes = attached ?? block.Footnotes });
             }
 
             return result;

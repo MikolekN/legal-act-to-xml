@@ -232,6 +232,7 @@ namespace Saga.Core.Ingest.Pdf
             Letter? lastInk = null;
             double maxGap = 0;
             var italic = new ItalicFragments();
+            var spans = new LineSpans();
 
             for (var i = 0; i < ordered.Count; i++)
             {
@@ -247,6 +248,7 @@ namespace Saga.Core.Ingest.Pdf
                     if (inSuperscript)
                     {
                         sb.Append(']');
+                        spans.CloseGroup(sb.Length);
                         inSuperscript = false;
                     }
 
@@ -273,6 +275,7 @@ namespace Saga.Core.Ingest.Pdf
                         if (inSuperscript)
                         {
                             sb.Append(']');
+                            spans.CloseGroup(sb.Length);
                             inSuperscript = false;
                         }
                         AppendSpace(sb);
@@ -282,22 +285,32 @@ namespace Saga.Core.Ingest.Pdf
 
                 if (isSuper && !inSuperscript)
                 {
+                    spans.OpenGroup(sb.Length);
                     sb.Append('[');
                     inSuperscript = true;
                 }
                 else if (!isSuper && inSuperscript)
                 {
                     sb.Append(']');
+                    spans.CloseGroup(sb.Length);
                     inSuperscript = false;
                 }
 
+                if (!isSuper)
+                    spans.Add(sb, sb.Length, letter);
                 sb.Append(letter.Value);
                 italic.Add(letter);
                 prev = letter;
             }
 
             if (inSuperscript)
+            {
                 sb.Append(']');
+                spans.CloseGroup(sb.Length);
+            }
+
+            var raw = sb.ToString();
+            var text = DoubledSuperscriptPattern.Replace(raw, "[$1]").Normalize(NormalizationForm.FormC);
 
             return new PdfTextLine
             {
@@ -305,7 +318,8 @@ namespace Saga.Core.Ingest.Pdf
                 // U+0328 w rozstrzelonym „ZARZĄDU", M.P. 2026 poz. 560; całe „Założenia polityki pieniężnej", M.P. 2026
                 // poz. 943). Postać złożona (NFC) to jedna litera: znak łączący nie dzieli wyrazu przy wielkości liter
                 // („ZarząDu") ani przy porównaniu słów.
-                Text = DoubledSuperscriptPattern.Replace(sb.ToString(), "[$1]").Normalize(NormalizationForm.FormC),
+                Text = text,
+                Spans = SpanAlignment.Remap(raw, text, spans.Spans),
                 PageNumber = page.Number,
                 StartX = ordered[0].StartBaseLine.X,
                 BaselineY = baselineY,
@@ -434,6 +448,63 @@ namespace Saga.Core.Ingest.Pdf
                     _fragments.Add(fragment);
                 _current.Clear();
             }
+        }
+
+        /// <summary>
+        /// Zakresy formatowania wiersza z pisma liter (ADR-0117): kursywa z opisu fontu, pogrubienie z opisu albo z nazwy
+        /// fontu (PDF z LibreOffice nie ustawia flagi pogrubienia: „…-BoldMT"), grupy indeksu górnego kanału „[…]". Kolejne
+        /// litery jednego formatu — także rozdzielone odstępem — to jeden zakres. Indeksu dolnego PDF nie daje: litery
+        /// obniżone to prawie zawsze glify równań.
+        /// </summary>
+        private sealed class LineSpans
+        {
+            private readonly List<Saga.Model.InlineSpan> _spans = [];
+            private int _group = -1;
+
+            internal IReadOnlyList<Saga.Model.InlineSpan> Spans => _spans;
+
+            internal void OpenGroup(int position) => _group = position;
+
+            internal void CloseGroup(int end)
+            {
+                if (_group >= 0)
+                    _spans.Add(new Saga.Model.InlineSpan(_group, end - _group, Saga.Model.InlineFormat.Superscript));
+                _group = -1;
+            }
+
+            internal void Add(StringBuilder sb, int start, Letter letter)
+            {
+                var format = FormatOf(letter);
+                if (format == Saga.Model.InlineFormat.None)
+                    return;
+
+                if (_spans.Count > 0 && _spans[^1] is var last && last.Format == format && last.End <= start)
+                {
+                    var gap = true;
+                    for (var i = last.End; i < start && gap; i++)
+                        gap = char.IsWhiteSpace(sb[i]);
+                    if (gap)
+                    {
+                        _spans[^1] = last with { Length = start + letter.Value.Length - last.Start };
+                        return;
+                    }
+                }
+
+                _spans.Add(new Saga.Model.InlineSpan(start, letter.Value.Length, format));
+            }
+
+            private static Saga.Model.InlineFormat FormatOf(Letter letter)
+            {
+                var format = Saga.Model.InlineFormat.None;
+                if (letter.FontDetails?.IsItalic == true)
+                    format |= Saga.Model.InlineFormat.Italic;
+                if (letter.FontDetails?.IsBold == true || BoldFontName.IsMatch(letter.FontName ?? string.Empty))
+                    format |= Saga.Model.InlineFormat.Bold;
+                return format;
+            }
+
+            private static readonly Regex BoldFontName = new(@"bold|black|heavy|semibold|demi",
+                RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
         }
 
         private const double StrayBaselineRatio = 0.05;
