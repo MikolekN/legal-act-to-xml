@@ -1740,6 +1740,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   potwierdzili (2026-10-27), że to błąd przykładu: tirety podwójne i dalsze kontynuują numerację fragmentów zdania
   wprowadzenia, jak tirety pod literą. W korpusie DOCX 401 tiretów podwójnych w 64 plikach.
 
+- **PDF: spacja z innej linii bazowej nie dzieli wyrazu**: komórka tabeli obok, złożona 2,5 pt niżej, zostawiała
+  glif spacji w środku „85" i po sortowaniu liter wiersza wychodziło „8 5 %" (M.P. 2026 poz. 343, tabela 13; także
+  „N owiny", „1 1. Miejscowość", „o d"). Glif spacji z innej linii bazowej niż litery po obu jego stronach, gdy te nie
+  zostawiają mu miejsca, nie jest odstępem. Spacja na linii bazowej wyrazów zostaje — w ściśniętej komórce odstęp bywa
+  węższy niż pół spacji („przez podmiot", Dz. U. 2026 poz. 1310).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

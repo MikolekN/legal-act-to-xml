@@ -117,6 +117,36 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void SpaceGlyphFromALowerBaseline_DoesNotSplitAWord()
+        {
+            // M.P. 2026 poz. 343, tabela 13: spacja komórki obok złożona 2,5 pt niżej wpadała między cyfry — „8 5 %".
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Udział powyżej ", 57, 700)
+                .AddText("85 % kosztów.", 200, 700)
+                .AddText(" ", 203, 697.5))
+                .Build();
+
+            var first = Read(pdf).First(b => b.Text.StartsWith("Art. 1."));
+            Assert.Equal("Art. 1. Udział powyżej 85 % kosztów.", first.Text);
+        }
+
+        [Fact]
+        public void SpaceGlyphOnTheBaselineOfItsWords_StaysASpace_EvenWithLittleRoom()
+        {
+            // Dz. U. 2026 poz. 1310: w wąskiej komórce wiersz ściśnięty — odstęp wyrazów 1,2 pt przy spacji 2,4 pt.
+            var przez = "przez".Sum(c => HelveticaWidths[c]) * 11 / 1000;
+            var pdf = WithBodyPadding(new TestPdfBuilder().AddPage()
+                .AddText("Art. 1. Zadanie wykonuje ", 57, 700)
+                .AddText("przez", 200, 700)
+                .AddText(" ", 200 + przez, 700)
+                .AddText("podmiot.", 200 + przez + 1.2, 700))
+                .Build();
+
+            var first = Read(pdf).First(b => b.Text.StartsWith("Art. 1."));
+            Assert.Equal("Art. 1. Zadanie wykonuje przez podmiot.", first.Text);
+        }
+
+        [Fact]
         public void ReadingOrder_TopToBottom_BlockPerUnitLine()
         {
             var pdf = new TestPdfBuilder().AddPage()

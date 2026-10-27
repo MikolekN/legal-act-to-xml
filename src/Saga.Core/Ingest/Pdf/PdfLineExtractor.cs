@@ -232,12 +232,17 @@ namespace Saga.Core.Ingest.Pdf
             Letter? lastInk = null;
             double maxGap = 0;
 
-            foreach (var letter in ordered)
+            for (var i = 0; i < ordered.Count; i++)
             {
+                var letter = ordered[i];
                 // Odstęp nie należy do indeksu górnego, nawet złożony jego rozmiarem (spacja za „4e³" w składzie
                 // LibreOffice): w kanale dawałby „art. 4e[3 ]w[ ]brzmieniu", a komenda nowelizacji przestawała pasować.
                 if (string.IsNullOrWhiteSpace(letter.Value))
                 {
+                    if (IsStraySpace(letter, lastInk, ordered.Skip(i + 1).FirstOrDefault(next => !string.IsNullOrWhiteSpace(next.Value))))
+                        continue;
+
+
                     if (inSuperscript)
                     {
                         sb.Append(']');
@@ -367,6 +372,25 @@ namespace Saga.Core.Ingest.Pdf
         private static bool UsesSpaceGlyphs(IReadOnlyList<Letter> letters) =>
             letters.Count(letter => string.IsNullOrWhiteSpace(letter.Value)) >= Math.Max(MinSpaceGlyphs, SpaceGlyphShare * letters.Count);
 
+        /// <summary>
+        /// Glif spacji z innej linii bazowej niż litery po obu jego stronach, które nie zostawiają mu miejsca — wciągnięty
+        /// do wiersza tolerancją grupowania (spacja za „poziom sieci" w komórce obok, 2,5 pt niżej — M.P. 2026 poz. 343)
+        /// wpadał po sortowaniu w środek wyrazu: „8 5 %", „N owiny", „1 1. Miejscowość". Spacja na linii bazowej sąsiadów
+        /// zostaje odstępem nawet bez miejsca: w ściśniętej wąskiej komórce odstęp wyrazów bywa węższy niż pół spacji
+        /// („przez podmiot", Dz. U. 2026 poz. 1310), a „10)pracownik" złożone bez luki ma spację w strumieniu treści.
+        /// </summary>
+        private static bool IsStraySpace(Letter space, Letter? before, Letter? after)
+        {
+            if (before == null || after == null)
+                return false;
+            var shift = StrayBaselineRatio * Math.Max(space.PointSize, 1.0);
+            return Math.Abs(space.StartBaseLine.Y - before.StartBaseLine.Y) > shift
+                && Math.Abs(space.StartBaseLine.Y - after.StartBaseLine.Y) > shift
+                && after.StartBaseLine.X - before.EndBaseLine.X < StraySpaceRoomRatio * space.Width;
+        }
+
+        private const double StrayBaselineRatio = 0.05;
+        private const double StraySpaceRoomRatio = 0.5;
         private const int MinLetterSpacedGaps = 3;
         private const double LetterSpacingSpreadRatio = 0.06;
         private const double MaxLetterSpacingRatio = 0.8;
