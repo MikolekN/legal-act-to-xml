@@ -37,6 +37,22 @@ namespace Saga.Model
             }
         }
 
+        /// <summary>
+        /// Rok, od którego dzienniki urzędowe nie mają numerów — pozycje liczy się w całym roczniku.
+        /// </summary>
+        public const int FirstUnnumberedYear = 2012;
+
+        /// <summary>
+        /// Adres ISAP („WDU20200001280”): „W”, symbol dziennika, rok, numer dziennika (3 cyfry) i pozycja (4 cyfry)
+        /// pierwszej pozycji. Od 2012 r. numer to „000”; wcześniejszego numeru model nie zna, więc wtedy adresu nie ma
+        /// (ADR-0129).
+        /// </summary>
+        public string? IsapAddress() =>
+            PublisherSymbol() is { Length: > 0 } symbol && Year >= FirstUnnumberedYear &&
+            Positions is [var position, ..] && position is > 0 and <= 9999
+                ? $"W{symbol}{Year}000{position:D4}"
+                : null;
+
         public string PublisherSymbol() =>
             Publisher switch
             {

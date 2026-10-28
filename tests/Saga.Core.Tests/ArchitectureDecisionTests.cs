@@ -1719,6 +1719,43 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0129: adres ISAP z danych ogłoszenia — tylko dla dzienników bez numerów (od 2012 r.)
+        // ============================================================
+
+        [Fact]
+        public void Adr0129_IsapAddress_IsBuiltFromTheAnnouncement_OnlyForUnnumberedJournals()
+        {
+            static string? Address(PublisherType publisher, int year, int position) =>
+                new JournalInfo { Publisher = publisher, Year = year, Positions = [position] }.IsapAddress();
+
+            // Wartości z pola `address` API ELI Sejmu.
+            Assert.Equal("WDU20200001280", Address(PublisherType.DziennikUstaw, 2020, 1280));
+            Assert.Equal("WMP20240001050", Address(PublisherType.MonitorPolski, 2024, 1050));
+            Assert.Equal("WDU20120000001", Address(PublisherType.DziennikUstaw, 2012, 1));
+            // Przed 2012 r. adres niesie numer dziennika („WDU20112891700” — nr 289), którego model nie zna.
+            Assert.Null(Address(PublisherType.DziennikUstaw, 2011, 1700));
+            Assert.Null(new JournalInfo().IsapAddress());
+
+            static XElement Convert(params string[] lines) => LegalDocumentConverter.Convert(LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+            static string[] IsapAddresses(XElement xml) =>
+                [.. xml.Descendants().Where(e => e.Name.LocalName == "AdresISAP").Select(e => e.Value)];
+
+            var announced = Convert(
+                "Obwieszczenie", "Prezesa Rady Ministrów", "z dnia 24 września 2024 r.",
+                "w sprawie ogłoszenia jednolitego tekstu rozporządzenia Rady Ministrów w sprawie opłat",
+                "1. Na podstawie art. 16 ust. 3 ustawy ogłasza się jednolity tekst rozporządzenia.",
+                "Załącznik do obwieszczenia Prezesa Rady Ministrów z dnia 24 września 2024 r. (Dz. U. poz. 1451)",
+                "ROZPORZĄDZENIE", "RADY MINISTRÓW", "z dnia 1 lutego 2021 r.", "w sprawie opłat",
+                "§ 1. Rozporządzenie określa wysokość opłat.");
+            Assert.Equal(["WDU20240001451"], IsapAddresses(announced));
+
+            var unannounced = Convert("USTAWA", "z dnia 15 lipca 2025 r.", "o opłatach", "Art. 1. Ustawa określa opłaty.");
+            Assert.Empty(IsapAddresses(unannounced));
+        }
+
+        // ============================================================
         // ADR-0128: artykuł, którego jedyny ustęp ma oznaczenie, to nie-ztp-artykul z nie-ztp-ustep
         // ============================================================
 

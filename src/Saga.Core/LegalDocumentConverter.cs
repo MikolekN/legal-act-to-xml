@@ -182,7 +182,8 @@ namespace Saga.Core.Services
 
             metaElement.Add(new XElement(XmlConverterConstants.Metadata.VersionGUID, Guid.NewGuid().ToString()));
 
-            // metaElement.Add(Element(XmlConverterConstants.Metadata.ISAPAdressElement, "xs:string"));
+            if (document.SourceJournal.IsapAddress() is { } isapAddress)
+                metaElement.Add(Element(XmlConverterConstants.Metadata.ISAPAdressElement, isapAddress));
 
             metaElement.Add(Element(XmlConverterConstants.Metadata.PublisherElement, document.SourceJournal.PublisherSymbol()));
 

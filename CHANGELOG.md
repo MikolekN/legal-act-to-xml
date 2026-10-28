@@ -1842,6 +1842,11 @@ a wersjonowanie zgodne z Semantic Versioning.
   przez jego autora. Wcześniej `ustep-n` gubił numer „1.”. W korpusie DOCX 5 artykułów w 5 plikach
   ([ADR-0128](docs/adr/0128-artykul-z-jedynym-ustepem-oznaczonym-jest-spoza-ztp.md)).
 
+- **Adres ISAP w metadanych**: akt ogłoszony od 2012 r. dostaje `AdresISAP` złożony z dziennika, roku i pozycji
+  („Dz. U. 2020 poz. 1280” → `WDU20200001280`), jak pole `address` API ELI. Dla wcześniejszych roczników adres
+  zawiera numer dziennika, którego parser nie czyta, więc elementu nie ma; nie ma go też bez danych ogłoszenia
+  ([ADR-0129](docs/adr/0129-adres-isap-z-danych-ogloszenia-od-2012.md)).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

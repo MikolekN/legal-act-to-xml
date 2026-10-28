@@ -37,7 +37,7 @@ Czyste klasy DTO bez logiki biznesowej. Definiuje strukturę drzewa aktu prawneg
 | `StructuralAmendmentReference.cs` | Cel nowelizacji — ścieżka strukturalna do zmienianej jednostki, dla przedziału także jego koniec (`RangeEnd`) |
 | `TextSegment.cs` / `TextSegmentType.cs` | Segmenty tekstu (zdania) wewnątrz jednostek redakcyjnych |
 | `ValidationMessage.cs` | Komunikaty diagnostyczne (Info/Warning/Error/Critical) |
-| `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje) |
+| `JournalInfo.cs` | Metadane publikatora (Dz. U. — rok, pozycje); adres ISAP z nich składa `IsapAddress()` — od 2012 r. ([ADR-0129](adr/0129-adres-isap-z-danych-ogloszenia-od-2012.md)) |
 | `ActSignature.cs` | Formuła podpisu zamykająca akt: organ, osoba i ewentualne „wz." / „z up." (`Capacity`), jak stoją w akcie (`LegalDocument.Signature`; kolejne formuły aktu wydanego wspólnie — `LegalDocument.CoSignatures`) |
 | `Annex.cs` | Załącznik aktu (`LegalDocument.Annexes`): wskazanie aktu, oznaczenie i numer (eId `zal_1`; bez numeru — bez eId), tytuł, treść w kolejności dokumentu (`AnnexBlock`: akapit, tabela albo jednostka redakcyjna) |
 | `ContentTable.cs` | Tabela w treści: wiersze (znacznik wiersza nagłówka), komórki ze scaleniami i akapitami oraz objaśnienia pod tabelą (`Description`, w eksporcie `opis-tabeli`) |
