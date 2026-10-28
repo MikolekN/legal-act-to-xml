@@ -1853,6 +1853,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   `Tytul` zaczyna się więc od „Ustawa z dnia …” albo „Rozporządzenie Ministra Finansów z dnia …”, jak w ISAP
   ([ADR-0130](docs/adr/0130-rodzaj-i-organ-aktu-w-eksporcie-maja-stala-wielkosc-liter.md)).
 
+- **Wyliczenie w cytacie jest jednym zdaniem**: „po pkt 4 dodaje się pkt 4a–4l w brzmieniu: …” daje punkty
+  z jednym `zdGUID` i fragmentami 1–12, a nie dwanaście zdań z `fragment="1"`. Tak samo litery i tirety
+  ([ADR-0131](docs/adr/0131-wyliczenie-w-cytacie-to-fragmenty-jednego-zdania-od-1.md)).
+
 - **Grupy czasowe w kolejności chronologicznej**: `GrupaCzasowa` stoją według zdarzenia, od którego biegnie okres,
   jak zdarzenia w `CyklZyciaAktu` i w przykładach autorów schematu — wcześniej najpierw grupa główna, potem
   w kolejności pierwszego użycia w tekście.

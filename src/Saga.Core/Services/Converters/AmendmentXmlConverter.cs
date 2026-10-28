@@ -578,8 +578,14 @@ namespace Saga.Core.Services.Converters
         {
             foreach (var group in units.GroupBy(e => e.GetType()))
             {
+                // Punkty, litery i tirety wyliczenia to fragmenty jednego zdania: łańcuch biegnie przez cały cytat,
+                // od fragmentu 1 — nowelizacja numeruje zdania osobno od tekstu, który ją przytacza (ADR-0131).
+                // Artykuł i ustęp mają własne zdania.
+                var chain = group.Key == typeof(Point) || group.Key == typeof(Letter) || group.Key == typeof(Tiret)
+                    ? new SentenceContext(currentFragment: 0)
+                    : null;
                 var elements = group
-                    .Select(BuildContentElement)
+                    .Select(entity => BuildContentElement(entity, chain))
                     .Where(element => element is not null)
                     .Select(element => element!)
                     .ToList();
@@ -632,14 +638,14 @@ namespace Saga.Core.Services.Converters
             };
         }
 
-        private static XElement? BuildContentElement(BaseEntity entity) =>
+        private static XElement? BuildContentElement(BaseEntity entity, SentenceContext? chain) =>
             entity switch
             {
                 Article article => ArticleXmlConverter.ToXml(article),
                 Paragraph paragraph => ParagraphXmlConverter.ToXml(paragraph),
-                Point point => PointXmlConverter.ToXml(point),
-                Letter letter => LetterXmlConverter.ToXml(letter),
-                Tiret tiret => TiretXmlConverter.ToXml(tiret),
+                Point point => PointXmlConverter.ToXml(point, previousSentenceContext: chain),
+                Letter letter => LetterXmlConverter.ToXml(letter, previousSentenceContext: chain),
+                Tiret tiret => TiretXmlConverter.ToXml(tiret, previousSentenceContext: chain),
                 // Cytat strukturalny przyjmuje te same jednostki co akt, więc i ich nazwy z poziomu aktu.
                 ISystematizingUnit => SystematizingUnitXmlConverter.ToXml(entity, actLevel: true),
                 _ => throw new InvalidOperationException($"Unsupported entity type: {entity.GetType().Name}")

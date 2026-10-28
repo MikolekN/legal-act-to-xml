@@ -1718,6 +1718,36 @@ namespace Saga.Core.Tests
                 (citation.Attribute("funkcja")?.Value, citation.Attribute("element-eId")?.Value));
         }
 
+        // ============================================================
+        // ADR-0131: punkty, litery i tirety jednego cytatu ciągną łańcuch fragmentów od 1
+        // ============================================================
+
+        [Fact]
+        public void Adr0131_QuotedEnumerationItems_AreFragmentsOfOneSentence_StartingAtOne()
+        {
+            // Odpowiedź autorów schematu na pytanie 11: nowelizacja numeruje zdania od fragmentu 1, osobno od zdania,
+            // które ją przytacza; punkty jednego wyliczenia są fragmentami jednego zdania (DU/2026/252 art. 1 pkt 4).
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 1 w ust. 1 wyrazy „A” zastępuje się wyrazami „B”;",
+                "2) w art. 2 po pkt 4 dodaje się pkt 4a–4c w brzmieniu:",
+                "„4a) cyberzagrożenie – zagrożenie dla systemu;",
+                "4b) dostawca – osobę fizyczną albo prawną;",
+                "4c) incydent – zdarzenie w systemie;”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var citation = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "cytat-strukt");
+            var sentences = citation.Elements().Where(e => e.Name.LocalName == "punkt")
+                .Select(point => point.Descendants().First(e => e.Name.LocalName == "zdanie")).ToList();
+            Assert.Equal(["1", "2", "3"], sentences.Select(s => s.Attribute("fragment")!.Value));
+            Assert.Single(sentences.Select(s => s.Attribute(XmlConverterConstants.Contents.Sentence.GUID)!.Value).Distinct());
+            Assert.All(sentences, s => Assert.Equal("1", s.Attribute("nr")!.Value));
+        }
 
         // ============================================================
         // ADR-0130: wielkość liter strefy tytułowej w eksporcie
