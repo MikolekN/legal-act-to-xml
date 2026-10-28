@@ -195,7 +195,7 @@ namespace Saga.Core.Services.Converters
             // element.Add(new XAttribute(XmlConverterConstants.QuotationRefGUIDAttribute, "UNKNOWN"));
 
             var explicitAddress = !string.IsNullOrEmpty(address);
-            if (explicitAddress)
+            if (address is { Length: > 0 })
                 element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, address));
             else
                 AddTargetAttributes(element, amendment, command);
