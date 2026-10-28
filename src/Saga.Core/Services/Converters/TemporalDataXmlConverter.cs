@@ -109,7 +109,22 @@ namespace Saga.Core.Services.Converters
                 element.Add(new XAttribute(XmlConverterConstants.Metadata.Temporal.Period, group.Id), entry);
             }
 
-            foreach (var group in groups)
+            // Grupy w kolejności chronologicznej, jak zdarzenia w CyklZyciaAktu i w przykładach autorów schematu —
+            // według zdarzenia, od którego biegnie okres (okres bez początku — według zdarzenia, które go zamyka);
+            // przy remisie zostaje kolejność pierwszego użycia.
+            var position = events.Select((lifecycleEvent, index) => (lifecycleEvent.Id, index))
+                .GroupBy(pair => pair.Id)
+                .ToDictionary(same => same.Key, same => same.First().index);
+            int Start(TimeGroup group) =>
+                (group is { RetroactiveEventId: null, EntryEventId: null, ConsolidationEventId: null }
+                    ? new[] { group.UntilEventId }
+                    : new[] { group.RetroactiveEventId, group.EntryEventId, group.ConsolidationEventId })
+                    .Where(id => id is not null && position.ContainsKey(id))
+                    .Select(id => position[id!])
+                    .DefaultIfEmpty(int.MaxValue)
+                    .Min();
+
+            foreach (var group in groups.OrderBy(Start))
                 temporal.Add(GroupElement(group, isMain: group == main));
         }
 

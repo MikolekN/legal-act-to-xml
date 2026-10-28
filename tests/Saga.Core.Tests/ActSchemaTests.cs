@@ -206,6 +206,20 @@ namespace Saga.Core.Tests
 
 
         [Fact]
+        public void TemporalGroups_AreInChronologicalOrder_LikeTheLifecycleEvents()
+        {
+            // Jak w przykładach autorów schematu: grupa według zdarzenia, od którego biegnie okres — tu reguła ogólna
+            // z mocą wsteczną od 1 stycznia 2024 r., potem wyjątek art. 2 (dzień po ogłoszeniu), na końcu art. 85a (2027).
+            var starts = Groups(ExportWithExceptionsAndRetroactivity())
+                .Select(group => Attr(group.Elements().First(), "od") ?? Attr(group.Elements().First(), "do")!)
+                .Select(id => System.Text.RegularExpressions.Regex.Match(id, @"\d{4}-\d{2}-\d{2}").Value)
+                .ToList();
+
+            Assert.Equal(3, starts.Count);
+            Assert.Equal(starts.Order(StringComparer.Ordinal), starts);
+        }
+
+        [Fact]
         public void Root_DeclaresTheSchemaNamespaces_AlsoTheUnusedOnes_AndMathMlOnlyWithFormulas()
         {
             // Jak w przykładach autorów schematu: każdy plik ma ten sam nagłówek, także bez typografii i komentarzy.
