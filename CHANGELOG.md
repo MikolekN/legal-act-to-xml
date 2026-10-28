@@ -1825,6 +1825,10 @@ a wersjonowanie zgodne z Semantic Versioning.
   ([ADR-0125](docs/adr/0125-komenda-bez-celu-to-instrukcja-reczna-na-akcie.md)). Cele zwinięte do jednego adresu ręcznego
   („w części „…” uchyla się pkt 3 i 6”) dają jeden cytat zamiast powtórzeń, a punkty dodawanego zdania („w ust. 8
   dodaje się zdanie drugie w brzmieniu: „…: 1) …””) są dodawane w ustępie, nie w zdaniu pierwszym.
+  Zdanie-przedmiot („w art. 7 i 8 zdanie pierwsze otrzymuje brzmienie:”) stoi w każdym miejscu — dotąd art. 7
+  zastępowano w całości; zdanie za przedziałem („w art. 7–9 zdanie pierwsze”) daje instrukcję ręczną na przedziale,
+  zamiast zdania ostatniej jednostki; a „w § 12 w ust. 1 w zdaniu: a) pierwszym …, b) drugim …” wskazuje zdania 1 i 2,
+  nie cały ustęp ([ADR-0126](docs/adr/0126-zdanie-przedmiot-w-kazdym-miejscu-zdanie-miejsce-przy-jednostce.md)).
 
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —

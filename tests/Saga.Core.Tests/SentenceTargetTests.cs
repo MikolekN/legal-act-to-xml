@@ -89,13 +89,110 @@ namespace Saga.Core.Tests
             Assert.Equal([("DU/2021/200__art_5__ust_2", function)], Instructions(xml).Select(i => (i.Target, i.Function)));
         }
 
+        // ============================================================
+        // Zdanie-przedmiot w każdym miejscu, zdanie-miejsce przy swojej jednostce (ADR-0126)
+        // ============================================================
+
+        [Theory]
+        // Przedmiotem jest zdanie — „art. 7" i „art. 8" to miejsca; zdanie stoi w każdym, z powtórzonym „w" czy bez.
+        [InlineData("1) w art. 7 i 8 zdanie pierwsze otrzymuje brzmienie:", "DU/2021/200__art_7__zdn_1", "DU/2021/200__art_8__zdn_1")]
+        [InlineData("1) w art. 7 i w art. 8 zdanie pierwsze otrzymuje brzmienie:", "DU/2021/200__art_7__zdn_1", "DU/2021/200__art_8__zdn_1")]
+        [InlineData("1) w art. 7 ust. 2 i art. 8 ust. 3 zdanie pierwsze otrzymuje brzmienie:",
+            "DU/2021/200__art_7__ust_2__zdn_1", "DU/2021/200__art_8__ust_3__zdn_1")]
+        public void ReplacedSentence_StandsInEveryPlaceBeforeIt(string command, string first, string second)
+        {
+            var xml = Export(command, "„Opłatę wnosi się w terminie 14 dni.”;");
+
+            Assert.Equal([(first, "zastap-tekst"), (second, "zastap-tekst")], Instructions(xml).Select(i => (i.Target, i.Function)));
+        }
+
+        [Theory]
+        [InlineData("1) w art. 5 w ust. 2 i 3 zdanie drugie skreśla się;")]
+        [InlineData("1) w art. 5 w ust. 2 i 3 uchyla się zdanie drugie;")]
+        public void RepealedSentence_StandsInEveryPlaceBeforeIt(string command)
+        {
+            var xml = Export(command);
+
+            Assert.Equal(["DU/2021/200__art_5__ust_2__zdn_2", "DU/2021/200__art_5__ust_3__zdn_2"], Instructions(xml).Select(i => i.Target));
+        }
+
+        [Fact]
+        public void SentencesReplacedInSeveralPlaces_AreOneRangePerPlace()
+        {
+            var xml = Export("1) w art. 7 i 8 zdania pierwsze i drugie otrzymują brzmienie:",
+                "„Opłatę wnosi się w terminie 14 dni. Opłaty nie zwraca się.”;");
+
+            Assert.Equal([("DU/2021/200__art_7__zdn_1", "DU/2021/200__art_7__zdn_2"), ("DU/2021/200__art_8__zdn_1", "DU/2021/200__art_8__zdn_2")],
+                Instructions(xml).Select(i => (i.Target, i.To)));
+        }
+
+        [Theory]
+        // Zdanie-miejsce należy do jednostki, po której stoi (§ 59 ust. 2 ZTP); powtórzone „w zdaniu" wskazuje każde miejsce.
+        // Korpus: Dz. U. 2026 poz. 607.
+        [InlineData("1) w art. 5 w ust. 10 i w ust. 11 w zdaniu pierwszym wyrazy „14 dni” zastępuje się wyrazami „30 dni”;",
+            "DU/2021/200__art_5__ust_10", "DU/2021/200__art_5__ust_11__zdn_1")]
+        // Jednostka i zdanie jako dwa przedmioty uchylenia.
+        [InlineData("1) w art. 5 uchyla się ust. 2 i ust. 3 zdanie drugie;", "DU/2021/200__art_5__ust_2", "DU/2021/200__art_5__ust_3__zdn_2")]
+        // Korpus: 347576_3084408 art. 1 pkt 30 — jednostka głębsza po wyliczeniu należy do ostatniego miejsca.
+        [InlineData("1) w art. 69 i art. 70 ust. 1 wyrazy „art. 10” zastępuje się wyrazami „art. 11”;",
+            "DU/2021/200__art_69", "DU/2021/200__art_70__ust_1")]
+        public void SentenceAsAPlace_StaysWithTheUnitItFollows(string command, string first, string second)
+        {
+            Assert.Equal([first, second], Instructions(Export(command)).Select(i => i.Target));
+        }
+
+        [Theory]
+        // Zdanie w każdej jednostce przedziału: para eId na zdaniach objęłaby tekst między nimi — instrukcja ręczna na przedziale.
+        [InlineData("1) w art. 7–9 zdanie pierwsze otrzymuje brzmienie:", "„Opłatę wnosi się w terminie 14 dni.”;",
+            "DU/2021/200__art_7", "DU/2021/200__art_9", "zastap-recznie")]
+        [InlineData("1) w art. 5 w ust. 2–4 w zdaniu pierwszym wyrazy „14 dni” zastępuje się wyrazami „30 dni”;", null,
+            "DU/2021/200__art_5__ust_2", "DU/2021/200__art_5__ust_4", "zastap-recznie")]
+        [InlineData("1) w art. 5 w ust. 2–4 skreśla się zdanie drugie;", null,
+            "DU/2021/200__art_5__ust_2", "DU/2021/200__art_5__ust_4", "uchyl-recznie")]
+        public void SentenceInEveryUnitOfARange_IsAManualInstructionOnTheRange(
+            string command, string? quote, string from, string to, string function)
+        {
+            var xml = Export(quote is null ? [command] : [command, quote]);
+
+            Assert.Equal([(from, to, function)], Instructions(xml).Select(i => (i.Target, i.To, i.Function)));
+        }
+
+        [Fact]
+        public void SentenceNumberedUnderTheProvisionNamingIt_IsTheTarget()
+        {
+            // Korpus: 322102_3051914 (Dz. U. 2025 poz. 1367 art. 1 pkt 10) — numer zdania podają litery pod „w zdaniu:".
+            var xml = Export(
+                "1) w art. 12 w ust. 1 w zdaniu:",
+                "a) pierwszym wyraz „Przetarg” zastępuje się wyrazami „Przetarg ustny”,",
+                "b) drugim wyraz „przetarg” zastępuje się wyrazami „przetarg ustny”;");
+
+            Assert.Equal([("zamien-tekst", "DU/2021/200__art_12__ust_1__zdn_1"), ("zamien-tekst", "DU/2021/200__art_12__ust_1__zdn_2")],
+                Instructions(xml).Select(i => (i.Name, i.Target)));
+        }
+
+        [Theory]
+        // Zdanie nazwane wyżej bez numeru — adres zdania nieznany: instrukcja ręczna na jednostce (ADR-0102).
+        [InlineData("1) w art. 12 w ust. 1 w zdaniu ostatnim:")]
+        [InlineData("1) w art. 12 w ust. 1 w zdaniu:")]
+        public void SentenceNamedAboveWithoutANumber_IsManual(string place)
+        {
+            var xml = Export(place, "a) wyraz „Przetarg” zastępuje się wyrazami „Przetarg ustny”;");
+
+            Assert.Equal([("DU/2021/200__art_12__ust_1", "zastap-recznie")], Instructions(xml).Select(i => (i.Target, i.Function)));
+        }
+
         [SchemaPlFact]
         public void SentenceTargets_AreSchemaValid()
         {
             var xml = Export(
                 "1) w art. 5 w ust. 2 zdanie drugie otrzymuje brzmienie:", "„Opłatę pobiera się raz w roku.”;",
                 "2) w art. 7a w ust. 7 dodaje się zdanie trzecie w brzmieniu:", "„Opłaty nie zwraca się.”;",
-                "3) w art. 132 w ust. 1 zdanie drugie i trzecie otrzymują brzmienie:", "„Opłatę pobiera się raz w roku. Opłaty nie zwraca się.”.");
+                "3) w art. 132 w ust. 1 zdanie drugie i trzecie otrzymują brzmienie:", "„Opłatę pobiera się raz w roku. Opłaty nie zwraca się.”;",
+                "4) w art. 7 i 8 zdanie pierwsze otrzymuje brzmienie:", "„Opłatę wnosi się w terminie 14 dni.”;",
+                "5) w art. 9–11 zdanie pierwsze otrzymuje brzmienie:", "„Opłatę wnosi się w terminie 14 dni.”;",
+                "6) w art. 12 w ust. 1 w zdaniu:",
+                "a) pierwszym wyraz „Przetarg” zastępuje się wyrazami „Przetarg ustny”,",
+                "b) drugim wyraz „przetarg” zastępuje się wyrazami „przetarg ustny”.");
 
             Assert.Empty(SchemaPl.Validator.ValidateActBody(xml.Elements().First()));
         }

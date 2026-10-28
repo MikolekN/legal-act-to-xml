@@ -1719,6 +1719,41 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0126: zdanie-przedmiot w każdym miejscu, zdanie-miejsce przy jednostce, numer zdania z przepisu niższego
+        // ============================================================
+
+        [Fact]
+        public void Adr0126_ObjectSentenceInEveryPlace_PlaceSentenceWithItsUnit_NumberFromBelow()
+        {
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 7 i 8 zdanie pierwsze otrzymuje brzmienie:",
+                "„Opłatę wnosi się w terminie 14 dni.”;",
+                "2) w art. 9 w ust. 10 i w ust. 11 w zdaniu pierwszym wyrazy „14 dni” zastępuje się wyrazami „30 dni”;",
+                "3) w art. 12 w ust. 1 w zdaniu:",
+                "a) pierwszym wyraz „Przetarg” zastępuje się wyrazami „Przetarg ustny”,",
+                "b) drugim wyraz „przetarg” zastępuje się wyrazami „przetarg ustny”;",
+                "4) w art. 13–15 zdanie drugie skreśla się.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var targets = xml.Descendants().Where(e => e.Attribute("element-eId") is not null)
+                .Select(e => (e.Attribute("element-eId")!.Value, e.Attribute("element-do-eId")?.Value, e.Attribute("funkcja")?.Value))
+                .ToList();
+            Assert.Equal(
+            [
+                ("DU/2021/200__art_7__zdn_1", null, "zastap-tekst"), ("DU/2021/200__art_8__zdn_1", null, "zastap-tekst"),
+                ("DU/2021/200__art_9__ust_10", null, null), ("DU/2021/200__art_9__ust_11__zdn_1", null, null),
+                ("DU/2021/200__art_12__ust_1__zdn_1", null, null), ("DU/2021/200__art_12__ust_1__zdn_2", null, null),
+                ("DU/2021/200__art_13", "DU/2021/200__art_15", "uchyl-recznie"),
+            ], targets);
+        }
+
+        // ============================================================
         // ADR-0125: komenda bez celu to instrukcja ręczna na samym akcie zmienianym
         // ============================================================
 

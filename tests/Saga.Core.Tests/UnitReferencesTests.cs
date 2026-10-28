@@ -237,6 +237,48 @@ namespace Saga.Core.Tests
             Assert.Equal(expected, Read(text));
         }
 
+        [Theory]
+        // Adres kończy się słowem „zdanie" bez numeru — numer podają przepisy niższe (ADR-0126).
+        [InlineData("w § 12 w ust. 1 w zdaniu:", true)]
+        [InlineData("w zdaniu:", true)]
+        [InlineData("w art. 5 zdanie:", true)]
+        [InlineData("w ust. 2 w zdaniach:", true)]
+        [InlineData("w ust. 1 w zdaniu pierwszym:", false)]
+        [InlineData("w ust. 1 w zdaniu ostatnim:", false)]
+        // Wzmianka w prozie zdania nie otwiera.
+        [InlineData("Ślubowanie może być złożone z dodaniem zdania:", false)]
+        [InlineData("w trybie, o którym mowa w zdaniu:", false)]
+        [InlineData("w ust. 1 wyrazy „w zdaniu:” zastępuje się wyrazami „x”;", false)]
+        public void Reader_SentenceLeftOpen_OnlyAtTheEndOfTheAddress(string text, bool open)
+        {
+            Assert.Equal(open, UnitAddressReader.LeavesSentenceOpen(text));
+        }
+
+        [Theory]
+        [InlineData("pierwszym wyraz „Przetarg” zastępuje się wyrazami „Przetarg ustny”,", "art_12__ust_1__zdn_1")]
+        [InlineData("pierwszym i trzecim wyraz „Przetarg” zastępuje się wyrazami „Przetarg ustny”,", "art_12__ust_1__zdn_1", "art_12__ust_1__zdn_3")]
+        [InlineData("ostatnim wyraz „Przetarg” zastępuje się wyrazami „Przetarg ustny”,")]
+        public void Reader_AnnouncedSentence_TakesTheLeadingOrdinal(string text, params string[] expected)
+        {
+            var context = new StructuralReference { Article = "12", Paragraph = "1" };
+
+            Assert.Equal(expected, UnitAddressReader.Read(text, context, sentenceAnnounced: true).Select(address => address.Start.ToString()));
+            Assert.Empty(Read(text, context));
+        }
+
+        [Theory]
+        // Zdanie za przedziałem stoi w każdej jednostce przedziału — przedział zostaje (ADR-0126).
+        [InlineData("w art. 7–9 zdanie pierwsze otrzymuje brzmienie:", "art_7__zdn_1–art_9__zdn_1")]
+        [InlineData("w art. 5 w ust. 2–4 w zdaniu pierwszym wyrazy „14 dni” zastępuje się", "art_5__ust_2__zdn_1–art_5__ust_4__zdn_1")]
+        [InlineData("w art. 5 w ust. 2–4 zdania pierwsze i drugie otrzymują brzmienie:",
+            "art_5__ust_2__zdn_1–art_5__ust_4__zdn_1", "art_5__ust_2__zdn_2–art_5__ust_4__zdn_2")]
+        // Zdanie za wyliczeniem kończy ostatnie odesłanie (§ 59 ust. 2 ZTP); o przedmiocie rozstrzyga SentenceTargets.
+        [InlineData("w art. 7 i 8 zdanie pierwsze otrzymuje brzmienie:", "art_7", "art_8__zdn_1")]
+        public void Reader_SentenceAfterARangeOrAnEnumeration(string text, params string[] expected)
+        {
+            Assert.Equal(expected, Read(text));
+        }
+
         [Fact]
         public void Reader_SystematizingContext_FromTheParentCommand_IsKept()
         {

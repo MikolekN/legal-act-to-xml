@@ -42,9 +42,16 @@ namespace Saga.Core.Services.UnitReferences
         private static readonly Regex RepealVerbBefore = new(
             @"\b(?:uchyla|skreśla)\s+się\s*$", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-        /// <summary>Cele wskazane w tekście komendy.</summary>
+        /// <summary>Słowo „zdanie" zapowiedziane przez przepis nadrzędny („w § 12 w ust. 1 w zdaniu:").</summary>
+        private static readonly UnitToken SentenceKeyword = new(UnitTokenKind.UnitKeyword, "zdaniu") { Level = UnitLevel.Sentence };
+
+        /// <summary>
+        /// Cele wskazane w tekście komendy. <paramref name="sentenceAnnounced"/>: przepis nadrzędny zamknął adres słowem
+        /// „zdanie" bez numeru („w ust. 1 w zdaniu:"), więc liczebnik na początku tego tekstu („pierwszym wyraz …",
+        /// „drugim i trzecim …") jest numerem zdania (ADR-0126).
+        /// </summary>
         internal static IReadOnlyList<UnitAddress> Read(
-            string? text, StructuralReference? context = null, bool sectionSignIsBasicUnit = false)
+            string? text, StructuralReference? context = null, bool sectionSignIsBasicUnit = false, bool sentenceAnnounced = false)
         {
             if (string.IsNullOrWhiteSpace(text))
                 return [];
@@ -55,6 +62,12 @@ namespace Saga.Core.Services.UnitReferences
             var targets = new List<EnumeratedTarget>();
             EnumeratedTarget? pending = null;
             var inRun = false;
+            UnitAddress? unitRange = null;
+            if (sentenceAnnounced)
+            {
+                cursor.Announce(SentenceKeyword);
+                inRun = true;
+            }
 
             var join = EnumerationJoin.None;
             var commandVerb = false;
@@ -139,17 +152,33 @@ namespace Saga.Core.Services.UnitReferences
                     continue;
                 }
 
+                // Zdanie za przedziałem jednostek („w art. 7–9 zdanie pierwsze", „w ust. 2–4 w zdaniu pierwszym") stoi w każdej
+                // jednostce przedziału: cel zachowuje oba końce, każdy z numerem zdania; o instrukcji rozstrzyga SentenceTargets
+                // (ADR-0126).
+                var target = step.Target;
+                if (stepContext.Level != UnitLevel.Sentence)
+                {
+                    unitRange = null;
+                }
+                else
+                {
+                    if (step.Previous == PendingDisposition.Drop)
+                        unitRange = pending?.Address is { End: not null } range ? range : null;
+                    if (unitRange is { End: { } end } && target.Start.Sentence is { } first)
+                        target = new UnitAddress(unitRange.Start.WithSentence(first), end.WithSentence(target.End?.Sentence ?? first));
+                }
+
                 if (pending is not null && step.Previous == PendingDisposition.Flush)
                 {
                     if (join == EnumerationJoin.None || commandVerb)
                         return Completed(targets, pending);
 
                     targets.Add(pending);
-                    pending = new EnumeratedTarget(step.Target, join == EnumerationJoin.Comma);
+                    pending = new EnumeratedTarget(target, join == EnumerationJoin.Comma);
                 }
                 else
                 {
-                    pending = new EnumeratedTarget(step.Target, pending?.JoinedByCommaOnly ?? false);
+                    pending = new EnumeratedTarget(target, pending?.JoinedByCommaOnly ?? false);
                 }
 
                 join = EnumerationJoin.None;
@@ -157,6 +186,29 @@ namespace Saga.Core.Services.UnitReferences
             }
 
             return pending is null ? [] : Completed(targets, pending);
+        }
+
+        /// <summary>
+        /// Adres kończy się słowem „zdanie" bez numeru i dwukropkiem („w ust. 1 w zdaniu:", „zdanie:", „w zdaniach:") —
+        /// numer zdania podają przepisy niższe (ADR-0126). Przed słowem — po co najwyżej jednym przyimku — stoi oznaczenie
+        /// jednostki albo nic; wzmianka w prozie („o którym mowa w zdaniu:", „z dodaniem zdania:") zdania nie otwiera.
+        /// </summary>
+        internal static bool LeavesSentenceOpen(string? text)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return false;
+
+            var tokens = UnitReferenceTokenizer.Tokenize(WithoutQuotedText(text), systematizing: true, annexes: true);
+            if (tokens.Count < 2 || tokens[^1] is not { Kind: UnitTokenKind.Separator, Text: ":" }
+                || tokens[^2] is not { Kind: UnitTokenKind.UnitKeyword, Level: UnitLevel.Sentence })
+            {
+                return false;
+            }
+
+            var before = tokens.Count - 3;
+            if (before >= 0 && tokens[before] is { Kind: UnitTokenKind.Prose } preposition && UnitReferenceTokenizer.IsPreposition(preposition.Text))
+                before--;
+            return before < 0 || tokens[before].Kind is UnitTokenKind.Designation or UnitTokenKind.Range;
         }
 
         /// <summary>Przyimki miejsca: „w tabeli", „po rysunku", „pod tabelą", „przed objaśnieniami", „na końcu".</summary>

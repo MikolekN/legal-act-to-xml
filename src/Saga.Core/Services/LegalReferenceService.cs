@@ -58,6 +58,47 @@ namespace Saga.Core.Services
             return targets;
         }
 
+        /// <summary>
+        /// Cele przepisu bez własnego adresu: miejsca przepisu, który je podał (ADR-0016). Gdy tamten nazwał zdanie bez
+        /// numeru — numer z liczebnika na początku tego przepisu, w każdym miejscu („w zdaniu:" → „a) pierwszym …");
+        /// bez liczebnika albo pod „w zdaniu ostatnim:" — instrukcja ręczna na jednostce (ADR-0102, ADR-0126).
+        /// </summary>
+        public IReadOnlyList<StructuralAmendmentReference> InheritPlace(
+            IReadOnlyList<StructuralAmendmentReference> place, string? placeText, string? contentText)
+        {
+            var address = placeText is null ? null : ManualTargets.WithoutActFormula(placeText);
+            var unnumbered = place.All(target => target.Structure.Sentence is null) && SentenceTargets.NamesASentence(address);
+            if (unnumbered && UnitAddressReader.LeavesSentenceOpen(address))
+            {
+                var sentences = UnitAddressReader.Read(contentText, sentenceAnnounced: true)
+                    .Where(sentence => sentence.Start.Sentence is not null && !NamesAUnit(sentence.Start))
+                    .ToList();
+                if (sentences.Count > 0)
+                {
+                    return place
+                        .SelectMany(target => sentences.Select(sentence => new StructuralAmendmentReference
+                        {
+                            Structure = target.Structure.WithSentence(sentence.Start.Sentence!),
+                            RangeEnd = sentence.End?.Sentence is { } last
+                                ? (target.RangeEnd ?? target.Structure).WithSentence(last)
+                                : target.RangeEnd?.WithSentence(sentence.Start.Sentence!),
+                            RawText = contentText,
+                        }))
+                        .ToList();
+                }
+            }
+
+            return place
+                .Select(target => new StructuralAmendmentReference
+                {
+                    Structure = target.Structure.Clone(),
+                    RangeEnd = target.RangeEnd?.Clone(),
+                    RawText = contentText,
+                    IsManual = unnumbered,
+                })
+                .ToList();
+        }
+
         /// <summary>Odnośnik aktu zmienianego jako miejsce zmiany: „w odnośniku nr 1 (do tytułu ustawy)".</summary>
         private static readonly Regex FootnotePlace = new(
             @"^w\s+odnośniku\s+nr\s+(?<number>\d+[a-z]*)\b", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);

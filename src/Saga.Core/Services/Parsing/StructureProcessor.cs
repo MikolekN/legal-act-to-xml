@@ -980,7 +980,7 @@ namespace Saga.Core.Services.Parsing
                 return;
 
             // Zacznij od kontekstu rodzica (jeśli istnieje wykryty cel w encji nadrzędnej)
-            var place = FindParentAmendmentTargets(context, entity);
+            var (place, placeText) = FindParentAmendmentTargets(context, entity);
             IReadOnlyList<StructuralAmendmentReference> TargetsOf(string text)
             {
                 var read = context.ReferenceService.ReadAmendmentTargets(
@@ -988,14 +988,8 @@ namespace Saga.Core.Services.Parsing
                 if (read.Count > 0 || place is null)
                     return read;
 
-                return place
-                    .Select(parent => new StructuralAmendmentReference
-                    {
-                        Structure = parent.Structure.Clone(),
-                        RangeEnd = parent.RangeEnd?.Clone(),
-                        RawText = text,
-                    })
-                    .ToList();
+                // Przepis bez własnego adresu bierze miejsca przepisu, który je podał — ze zdaniem, które tamten nazwał (ADR-0126).
+                return context.ReferenceService.InheritPlace(place, placeText, text);
             }
 
             // Kilka komend w osobnych zdaniach: każda ma cele ze swojego zdania, czytane w miejscu wskazanym zdaniem
@@ -1010,7 +1004,7 @@ namespace Saga.Core.Services.Parsing
                     var read = TargetsOf(command.Text);
                     earlier.Add(command with { Targets = read });
                     if (read.Count > 0)
-                        place = read;
+                        (place, placeText) = (read, command.Text);
                 }
 
                 context.PendingSentenceCommands[entity.Guid] = earlier;
@@ -1028,19 +1022,20 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Przeszukuje encje nadrzędne w hierarchii (Parent), szukając wcześniej
-        /// wykrytych celów nowelizacji, których kontekst może być odziedziczony.
+        /// Przeszukuje encje nadrzędne w hierarchii (Parent), szukając wcześniej wykrytych celów nowelizacji, których
+        /// kontekst może być odziedziczony — razem z tekstem przepisu, który je podał (ADR-0126).
         /// </summary>
-        private static IReadOnlyList<StructuralAmendmentReference>? FindParentAmendmentTargets(ParsingContext context, BaseEntity entity)
+        private static (IReadOnlyList<StructuralAmendmentReference>? Targets, string? Text) FindParentAmendmentTargets(
+            ParsingContext context, BaseEntity entity)
         {
             var current = entity.Parent;
             while (current != null)
             {
                 if (context.DetectedAmendmentTargets.TryGetValue(current.Guid, out var parentTargets))
-                    return parentTargets;
+                    return (parentTargets, context.CommandTexts.GetValueOrDefault(current.Guid) ?? current.ContentText);
                 current = current.Parent;
             }
-            return null;
+            return (null, null);
         }
 
         /// <summary>Tolerancja wciecia (twips, ~6 pt) przy porownywaniu poziomow tiretow (§ 58 ZTP).</summary>
