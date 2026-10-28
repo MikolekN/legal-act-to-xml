@@ -126,8 +126,7 @@ namespace Saga.Core.Services.Parsing
         /// </summary>
         private static StructuralReference HostOf(StructuralReference target, UnitType? listItemType)
         {
-            var host = target.Clone();
-            host.Sentence = null;
+            var host = target.HostUnit();
             switch (listItemType)
             {
                 case UnitType.Point:
@@ -146,13 +145,11 @@ namespace Saga.Core.Services.Parsing
             return host;
         }
 
-        /// <summary>Cel bez zdania — zdanie wskazuje miejsce zmiany, nie gospodarza cytowanej jednostki (ADR-0102).</summary>
-        private static StructuralReference WithoutSentence(StructuralReference target)
-        {
-            var unit = target.Clone();
-            unit.Sentence = null;
-            return unit;
-        }
+        /// <summary>
+        /// Cel bez zdania i bez części wspólnej — wskazują miejsce zmiany, nie gospodarza cytowanej jednostki (ADR-0102,
+        /// ADR-0127).
+        /// </summary>
+        private static StructuralReference WithoutSentence(StructuralReference target) => target.HostUnit();
 
         private static string AnchorFor(StructuralReference target, BaseEntity unit)
         {

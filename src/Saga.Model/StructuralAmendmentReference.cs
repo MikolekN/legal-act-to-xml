@@ -78,6 +78,14 @@ namespace Saga.Model
         public string? Point { get; set; }
         public string? Letter { get; set; }
         public string? Tiret { get; set; }
+
+        /// <summary>
+        /// Miejscem jest część wspólna zamykająca wyliczenie jednostki wskazanej poziomami wyżej („w ust. 1 w części
+        /// wspólnej" → <c>…__ust_1__czw</c>, ADR-0025, ADR-0127). Bez oznaczenia — jedna na gospodarza; zdanie pod nią liczy
+        /// się w niej samej (<c>…__ust_1__czw__zdn_2</c>).
+        /// </summary>
+        public bool CommonPart { get; set; }
+
         public string? Sentence { get; set; }
 
         /// <summary>Numer odnośnika (przypisu), gdy adres wskazuje odnośnik aktu, a nie jednostkę („odn_1").</summary>
@@ -113,15 +121,28 @@ namespace Saga.Model
         public StructuralReference WithTiret(string value) =>
             new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = value };
 
-        /// <summary>Ustawia zdanie, zachowując wszystkie poziomy nadrzędne.</summary>
+        /// <summary>Ustawia zdanie, zachowując wszystkie poziomy nadrzędne (także część wspólną).</summary>
         public StructuralReference WithSentence(string value) =>
-            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = value };
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, CommonPart = CommonPart, Sentence = value };
+
+        /// <summary>Część wspólna bieżącej jednostki: poziomy jednostek zostają, zdanie się zeruje (ADR-0127).</summary>
+        public StructuralReference WithCommonPart() =>
+            new() { Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, CommonPart = true };
+
+        /// <summary>Sama jednostka — bez miejsca w niej (części wspólnej, zdania).</summary>
+        public StructuralReference HostUnit()
+        {
+            var unit = Clone();
+            unit.CommonPart = false;
+            unit.Sentence = null;
+            return unit;
+        }
 
         /// <summary>Skrót odnośnika w adresie (<c>odn_1</c>).</summary>
         public const string FootnotePrefix = "odn";
 
         public StructuralReference Clone() =>
-            new() { Systematizing = Systematizing, Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, Sentence = Sentence, Footnote = Footnote, ActTitle = ActTitle };
+            new() { Systematizing = Systematizing, Annex = Annex, AnnexContainer = AnnexContainer, Article = Article, Paragraph = Paragraph, ParagraphIsCodeParagraph = ParagraphIsCodeParagraph, Point = Point, Letter = Letter, Tiret = Tiret, CommonPart = CommonPart, Sentence = Sentence, Footnote = Footnote, ActTitle = ActTitle };
 
         public override string ToString()
         {
@@ -141,6 +162,7 @@ namespace Saga.Model
             if (Point != null) parts.Add(EIdSegment.Of("pkt", Point));
             if (Letter != null) parts.Add(EIdSegment.Of("lit", Letter));
             if (Tiret != null) parts.AddRange(TiretSegments(Tiret));
+            if (CommonPart) parts.Add(CommonPartType.WrapUp.ToEIdSegment());
             if (Sentence != null) parts.Add(EIdSegment.Of("zdn", Sentence));
             if (Footnote != null) parts.Add(EIdSegment.Of(FootnotePrefix, Footnote));
 

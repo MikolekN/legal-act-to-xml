@@ -21,7 +21,13 @@ namespace Saga.Core.Services.UnitReferences
         Point = 10,
         Letter = 11,
         Tiret = 12,
-        Sentence = 13,
+
+        /// <summary>
+        /// Część wspólna jako miejsce zmiany („w ust. 1 w części wspólnej", ADR-0127) — między jednostkami a zdaniem: zdanie
+        /// pod nią liczy się w niej, a jednostka po niej zaczyna kolejny cel.
+        /// </summary>
+        CommonPart = 13,
+        Sentence = 14,
     }
 
     /// <summary>Rodzaj tokenu w powołaniu jednostek.</summary>
@@ -102,6 +108,13 @@ namespace Saga.Core.Services.UnitReferences
         /// </summary>
         private const string AnnexKeywordPattern = @"\bzałącznik(?:u|ach|i)?\b(?:\s+nr\b)?";
 
+        /// <summary>
+        /// Część wspólna jako miejsce zmiany — tylko miejscownik po „w" („w ust. 1 w części wspólnej", „w części wspólnej
+        /// punktów"). Mianownik i biernik („część wspólna otrzymuje brzmienie:", „dodaje się część wspólną") to przedmiot
+        /// komendy (ADR-0086); liczby mnogiej adres nie czyta (ADR-0127).
+        /// </summary>
+        private const string CommonPartPlacePattern = @"(?<=\bw\s+)części\s+wspólnej\b(?:\s+(?:punktów|liter|tiretów))?";
+
         /// <summary>Oznaczenie rzymskie jednostki wyższej („dział VIa", „tytuł XIII") — wersaliki.</summary>
         private const string RomanDesignationPattern = @"(?-i:[IVXLC]+[a-z]?)\b";
 
@@ -140,9 +153,12 @@ namespace Saga.Core.Services.UnitReferences
             SystematizingKeywordPattern + "|" + UnitKeywordPattern,
             NumberWithSuperscript + "|" + OrdinalWord + "|" + RomanDesignationPattern + "|" + LetterDesignation);
 
-        /// <summary>Wariant z miejscem w załączniku — dla celów nowelizacji (<see cref="UnitAddressReader"/>, ADR-0080).</summary>
+        /// <summary>
+        /// Wariant z miejscami w akcie zmienianym — załącznikiem (ADR-0080) i częścią wspólną (ADR-0127) — dla celów
+        /// nowelizacji (<see cref="UnitAddressReader"/>).
+        /// </summary>
         private static readonly Regex AnnexTokenPattern = BuildTokenPattern(
-            AnnexKeywordPattern + "|" + SystematizingKeywordPattern + "|" + UnitKeywordPattern,
+            CommonPartPlacePattern + "|" + AnnexKeywordPattern + "|" + SystematizingKeywordPattern + "|" + UnitKeywordPattern,
             NumberWithSuperscript + "|" + OrdinalWord + "|" + RomanDesignationPattern + "|" + LetterDesignation);
 
         private static Regex BuildTokenPattern(string unitKeyword, string designation) => new(
@@ -302,7 +318,8 @@ namespace Saga.Core.Services.UnitReferences
                 if (i + 1 < tokens.Count && IsDesignation(tokens[i + 1]))
                     continue;
 
-                if (i >= 2 && tokens[i - 2].Kind == UnitTokenKind.UnitKeyword)
+                // Część wspólna nie ma oznaczenia — liczebnik przed „zdanie" nie jest jej („w części wspólnej drugie zdanie").
+                if (i >= 2 && tokens[i - 2] is { Kind: UnitTokenKind.UnitKeyword, Level: not UnitLevel.CommonPart })
                     continue;
 
                 (tokens[i - 1], tokens[i]) = (tokens[i], tokens[i - 1]);
@@ -376,7 +393,7 @@ namespace Saga.Core.Services.UnitReferences
             if (k.StartsWith("tytu", StringComparison.Ordinal))
                 return UnitLevel.Title;
             if (k.StartsWith("częś", StringComparison.Ordinal))
-                return UnitLevel.Part;
+                return k.Contains("wspóln", StringComparison.Ordinal) ? UnitLevel.CommonPart : UnitLevel.Part;
             if (k.StartsWith("księ", StringComparison.Ordinal))
                 return UnitLevel.Book;
             if (k.StartsWith("art.", StringComparison.Ordinal) || k.StartsWith("§", StringComparison.Ordinal))

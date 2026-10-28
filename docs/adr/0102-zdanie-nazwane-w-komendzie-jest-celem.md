@@ -1,6 +1,6 @@
 # ADR-0102: Zdanie nazwane w komendzie z numerem jest celem (`…__zdn_N`) każdej zmiany, nie tylko uchylenia
 
-- Status: Accepted (Supersedes w części ADR-0070: zmiany inne niż uchylenie zdania)
+- Status: Accepted (Supersedes w części ADR-0070: zmiany inne niż uchylenie zdania) — Superseded in part by [ADR-0127](0127-czesc-wspolna-jako-miejsce-zmiany-ma-adres-czw.md) (zdanie w części wspólnej)
 - Data: 2026-10-20
 
 ## Kontekst

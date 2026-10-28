@@ -72,7 +72,11 @@ namespace Saga.Core.Services.Parsing
             foreach (var target in amendment.Targets.Concat(amendment.TextChanges.SelectMany(change => change.Targets)))
             {
                 var structure = target.Structure;
-                var unaddressable = (structure.Footnote is not null && footnoteInside)
+                // Część wspólna jednostki załącznika — miejsce w treści załącznika (ADR-0080, ADR-0100): adresem zostaje
+                // jednostka, instrukcja jest ręczna. Eksport nie zna części wspólnej z eId pod jednostką załącznika (ADR-0127).
+                var annexCommonPart = structure is { Annex.Length: > 0, CommonPart: true };
+                var unaddressable = annexCommonPart
+                    || (structure.Footnote is not null && footnoteInside)
                     || structure.ActTitle
                     || structure is { Annex.Length: > 0, InAnnexContent: true }
                     || (IsAnnexItself(structure) && !wholeAnnexText && !annexRepealed);
@@ -80,6 +84,8 @@ namespace Saga.Core.Services.Parsing
                     continue;
 
                 target.IsManual = true;
+                if (annexCommonPart)
+                    target.Structure = structure.HostUnit();
 
                 // Adres zastępczy (najgłębsza adresowalna jednostka) nie ma końca przedziału. Cel odmiany wyrazów ma własny
                 // adres, więc przedział zostaje („w art. 75a w ust. 1–3, w różnym przypadku, wyrazy …" — M.P. 2026 poz. 1014).

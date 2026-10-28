@@ -1719,6 +1719,40 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0127: część wspólna jako miejsce zmiany ma adres …__czw
+        // ============================================================
+
+        [Fact]
+        public void Adr0127_CommonPartNamedAsAPlace_IsTheTarget()
+        {
+            // Odpowiedź autorów schematu na pytanie 7: zmiana w części wspólnej wskazuje część wspólną (…__czw), a jej zdanie
+            // liczy się w niej; cel w całej jednostce zmieniłby też te same wyrazy poza nią. W załączniku — instrukcja ręczna.
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 15i w ust. 1 w części wspólnej w zdaniu drugim po wyrazach „123 zł” dodaje się wyraz „rocznie”;",
+                "2) w art. 66 w ust. 1 w pkt 2 i w części wspólnej po wyrazach „art. 41” dodaje się wyrazy „lub art. 41a”;",
+                "3) w art. 9 w ust. 3 część wspólna otrzymuje brzmienie:",
+                "„– wymierza się karę.”;",
+                "4) w załączniku nr 1 do ustawy w ust. 1 w pkt 4 w części wspólnej wyrazy „A” zastępuje się wyrazami „B”.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var targets = xml.Descendants().Where(e => e.Attribute("element-eId") is not null)
+                .Select(e => (e.Attribute("element-eId")!.Value, e.Attribute("funkcja")?.Value)).ToList();
+            Assert.Equal(
+            [
+                ("DU/2021/200__art_15i__ust_1__czw__zdn_2", null),
+                ("DU/2021/200__art_66__ust_1__pkt_2", null), ("DU/2021/200__art_66__ust_1__czw", null),
+                ("DU/2021/200__art_9__ust_3__czw", "zastap"),
+                ("DU/2021/200__zal_1__ust_1__pkt_4", "zastap-recznie"),
+            ], targets);
+        }
+
+        // ============================================================
         // ADR-0126: zdanie-przedmiot w każdym miejscu, zdanie-miejsce przy jednostce, numer zdania z przepisu niższego
         // ============================================================
 

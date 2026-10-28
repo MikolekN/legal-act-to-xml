@@ -1830,6 +1830,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   zamiast zdania ostatniej jednostki; a „w § 12 w ust. 1 w zdaniu: a) pierwszym …, b) drugim …” wskazuje zdania 1 i 2,
   nie cały ustęp ([ADR-0126](docs/adr/0126-zdanie-przedmiot-w-kazdym-miejscu-zdanie-miejsce-przy-jednostce.md)).
 
+- **Część wspólna jako miejsce zmiany**: „w ust. 1 w części wspólnej wyrazy „X” zastępuje się …” wskazuje część
+  wspólną (`…__ust_1__czw`), a nie cały ustęp — zmiana nie obejmuje już tych samych wyrazów we wprowadzeniu
+  i punktach; zdanie w części wspólnej liczy się w niej (`…__czw__zdn_2`), jak w odpowiedzi autorów schematu na
+  pytanie 7. „w pkt 2 i w części wspólnej” daje oba cele, a miejsce w jednostce odziedziczonej („w ust. 1 i 2: a) w części
+  wspólnej …”) — w każdej jednostce. W załączniku instrukcja zostaje ręczna
+  ([ADR-0127](docs/adr/0127-czesc-wspolna-jako-miejsce-zmiany-ma-adres-czw.md)).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

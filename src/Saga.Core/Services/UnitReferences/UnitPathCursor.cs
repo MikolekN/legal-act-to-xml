@@ -128,9 +128,53 @@ namespace Saga.Core.Services.UnitReferences
             return true;
         }
 
+        /// <summary>
+        /// Część wspólna jako miejsce (ADR-0127, § 56 ZTP). Wprost za jednostką — część wspólna wyliczenia tej jednostki
+        /// (jednostka przestaje być kandydatem); dołączona spójnikiem albo przecinkiem do pozycji wyliczenia („w pkt 2
+        /// i w części wspólnej") — część wspólna wyliczenia, do którego ta pozycja należy (oba są celami). Bez gospodarza
+        /// niczego nie wskazuje.
+        /// </summary>
+        internal UnitStep StepCommonPart(bool besideTheLastItem)
+        {
+            var previous = besideTheLastItem ? PendingDisposition.Flush : PendingDisposition.Drop;
+            var host = besideTheLastItem ? EnumerationHolding(Level) : Path.HostUnit();
+            if (host is null || (host.Article ?? host.Paragraph ?? host.Point ?? host.Letter ?? host.Tiret ?? host.Annex) is null)
+                return new UnitStep(UnitStepStatus.UnresolvableDesignation, previous);
+
+            if (besideTheLastItem && Level == UnitLevel.Tiret && _tiretPath.Count > 0)
+                _tiretPath.RemoveAt(_tiretPath.Count - 1);
+            Path = host.WithCommonPart();
+            Level = UnitLevel.CommonPart;
+            return new UnitStep(UnitStepStatus.Applied, previous);
+        }
+
+        /// <summary>Jednostka, w której stoi wyliczenie pozycji danego poziomu; ustęp i artykuł pozycjami wyliczenia nie są.</summary>
+        private StructuralReference? EnumerationHolding(UnitLevel itemLevel)
+        {
+            var host = Path.HostUnit();
+            switch (itemLevel)
+            {
+                case UnitLevel.Point:
+                    host.Point = host.Letter = host.Tiret = null;
+                    return host;
+                case UnitLevel.Letter:
+                    host.Letter = host.Tiret = null;
+                    return host;
+                case UnitLevel.Tiret:
+                    host.Tiret = _tiretPath.Count > 1 ? string.Join('.', _tiretPath.SkipLast(1)) : null;
+                    return host;
+                default:
+                    return null;
+            }
+        }
+
         /// <summary>Przesuwa ścieżkę o jedno oznaczenie w zamrożonym kontekście.</summary>
         internal UnitStep Step(in UnitStepContext context, string designation)
         {
+            // Część wspólna nie ma oznaczenia — gołe oznaczenie po niej niczego nie wskazuje.
+            if (context.Level == UnitLevel.CommonPart)
+                return new UnitStep(UnitStepStatus.UnresolvableDesignation, PendingDisposition.Flush);
+
             var isTiretDescent =
                 context.Level == UnitLevel.Tiret && context.ExplicitKeyword && context.TiretDepth > 1 &&
                 _tiretPath.Count == context.TiretDepth - 1;

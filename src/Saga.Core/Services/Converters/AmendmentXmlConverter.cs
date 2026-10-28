@@ -584,13 +584,18 @@ namespace Saga.Core.Services.Converters
                     .Select(element => element!)
                     .ToList();
 
-                // Jednostki dodawane W jednostce stoją pod nią samą, nie pod jej zdaniem — „w ust. 8 dodaje się zdanie drugie
-                // w brzmieniu: „…: 1) …”": zdanie po zdaniu pierwszym, punkty w ustępie (ADR-0055, ADR-0102).
+                // Jednostka cytowana stoi przy jednostce, nie przy miejscu w niej: dodawana W jednostce — pod nią samą, nie
+                // pod jej zdaniem („w ust. 8 dodaje się zdanie drugie w brzmieniu: „…: 1) …”", ADR-0055, ADR-0102); po
+                // jednostce, której część wspólna się zmienia — po niej („w pkt 24 w części wspólnej kropkę zastępuje się
+                // średnikiem i dodaje się pkt 25", ADR-0127).
                 var inside = AddsInside(amendment, command, group.First());
+                var structure = command.Target?.Structure;
                 var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
                 ApplyAttributes(citation, amendment, command, isStructural: true,
                     function: inside ? XmlConverterConstants.Contents.Citation.Quotation.Function.AddInside : null,
-                    address: inside && command.Target?.Structure is { Sentence: not null } structure ? WithoutSentence(structure) : null);
+                    address: structure is { CommonPart: true } || (inside && structure is { Sentence: not null })
+                        ? structure.HostUnit().ToString()
+                        : null);
                 citation.Add(elements);
                 if (sentence is XElement zdanie)
                     zdanie.Add(citation);
@@ -625,13 +630,6 @@ namespace Saga.Core.Services.Converters
                 Tiret => target.Tiret is null && (target.Article ?? target.Paragraph ?? target.Point ?? target.Letter) is not null,
                 _ => false,
             };
-        }
-
-        private static string WithoutSentence(StructuralReference structure)
-        {
-            var unit = structure.Clone();
-            unit.Sentence = null;
-            return unit.ToString();
         }
 
         private static XElement? BuildContentElement(BaseEntity entity) =>

@@ -279,6 +279,73 @@ namespace Saga.Core.Tests
             Assert.Equal(expected, Read(text));
         }
 
+        // ============================================================
+        // Część wspólna jako miejsce zmiany (ADR-0127)
+        // ============================================================
+
+        [Fact]
+        public void CommonPartPlace_IsAKeywordOfTheAmendmentAddressOnly()
+        {
+            var tokens = UnitReferenceTokenizer.Tokenize("w ust. 1 w części wspólnej wyrazy", systematizing: true, annexes: true);
+            var keyword = Assert.Single(tokens, token => token is { Kind: UnitTokenKind.UnitKeyword, Level: UnitLevel.CommonPart });
+            Assert.Equal(UnitTokenKind.Prose, tokens[tokens.ToList().IndexOf(keyword) - 1].Kind);
+
+            Assert.DoesNotContain(UnitReferenceTokenizer.Tokenize("w ust. 1 w części wspólnej wyrazy", systematizing: true),
+                token => token.Level == UnitLevel.CommonPart);
+            // Mianownik i biernik to przedmiot komendy (ADR-0086), nie miejsce.
+            Assert.DoesNotContain(UnitReferenceTokenizer.Tokenize("część wspólna otrzymuje brzmienie:", systematizing: true, annexes: true),
+                token => token.Level == UnitLevel.CommonPart);
+            Assert.DoesNotContain(UnitReferenceTokenizer.Tokenize("dodaje się część wspólną w brzmieniu:", systematizing: true, annexes: true),
+                token => token.Level == UnitLevel.CommonPart);
+        }
+
+        [Theory]
+        [InlineData("w art. 6 w ust. 2 w części wspólnej wyrazy", "art_6__ust_2__czw")]
+        [InlineData("w art. 52 w części wspólnej wyrazy", "art_52__czw")]
+        [InlineData("w art. 50 w pkt 5 w części wspólnej wyrazy", "art_50__pkt_5__czw")]
+        [InlineData("w art. 297e w § 1 w części wspólnej skreśla się wyrazy", "art_297e__par_1__czw")]
+        [InlineData("w art. 20 w ust. 1 w pkt 2 w lit. b w części wspólnej wyrazy", "art_20__ust_1__pkt_2__lit_b__czw")]
+        [InlineData("w art. 2 w ust. 1 w części wspólnej punktów wyrazy", "art_2__ust_1__czw")]
+        // Zdanie części wspólnej liczy się w niej samej (odpowiedź autorów schematu na pytanie 7).
+        [InlineData("w art. 15i w ust. 1 w części wspólnej w zdaniu drugim po wyrazach", "art_15i__ust_1__czw__zdn_2")]
+        [InlineData("w art. 5 w ust. 2 w części wspólnej drugie zdanie otrzymuje brzmienie:", "art_5__ust_2__czw__zdn_2")]
+        [InlineData("w art. 7 w pkt 3 w lit. b w części wspólnej w zdaniu drugim wyrazy", "art_7__pkt_3__lit_b__czw__zdn_2")]
+        // Dołączona do pozycji wyliczenia — część wspólna wyliczenia tej pozycji, obok niej.
+        [InlineData("w art. 66 w ust. 1 w pkt 2 i w części wspólnej po wyrazach", "art_66__ust_1__pkt_2", "art_66__ust_1__czw")]
+        [InlineData("w art. 21 w pkt 3 lit. a i w części wspólnej wyrazy", "art_21__pkt_3__lit_a", "art_21__pkt_3__czw")]
+        // Jednostka po części wspólnej zaczyna kolejny cel.
+        [InlineData("w art. 54, w art. 56 w ust. 1 w części wspólnej i w ust. 2 wyrazy", "art_54", "art_56__ust_1__czw", "art_56__ust_2")]
+        [InlineData("w art. 29 w ust. 8, w ust. 9 w części wspólnej, w ust. 10 oraz w art. 31 w ust. 1 po wyrazach",
+            "art_29__ust_8", "art_29__ust_9__czw", "art_29__ust_10", "art_31__ust_1")]
+        // Za czasownikiem, po prozie i przy ustępie miejscem nie jest — cel zostaje, jaki był.
+        [InlineData("w art. 7 w ust. 4 skreśla się wyraz w części wspólnej", "art_7__ust_4")]
+        [InlineData("w art. 13 w ust. 4 we wprowadzeniu do wyliczenia i w części wspólnej wyrazy", "art_13__ust_4")]
+        [InlineData("w art. 5 w ust. 1 i w części wspólnej wyrazy", "art_5__ust_1")]
+        public void Reader_CommonPartAsAPlace(string text, params string[] expected)
+        {
+            Assert.Equal(expected, Read(text));
+        }
+
+        [Fact]
+        public void Reader_CommonPartOfTheInheritedUnit()
+        {
+            // Korpus: 308909_2756164 — „w części wspólnej wyrazy …" pod „w art. 65 w ust. 5 w pkt 12:".
+            Assert.Equal(["art_65__ust_5__pkt_12__czw"],
+                Read("w części wspólnej wyrazy", new StructuralReference { Article = "65", Paragraph = "5", Point = "12" }));
+            Assert.Empty(Read("w części wspólnej wyrazy"));
+        }
+
+        [Fact]
+        public void StructuralReference_CommonPart_StandsBetweenUnitsAndSentence()
+        {
+            var place = new StructuralReference { Article = "15i", Paragraph = "1" }.WithCommonPart();
+
+            Assert.Equal("art_15i__ust_1__czw__zdn_2", place.WithSentence("2").ToString());
+            Assert.Equal("art_15i__ust_1__pkt_3", place.WithPoint("3").ToString());
+            Assert.Equal("art_15i__ust_1__czw", place.Clone().ToString());
+            Assert.Equal("art_15i__ust_1", place.WithSentence("2").HostUnit().ToString());
+        }
+
         [Fact]
         public void Reader_SystematizingContext_FromTheParentCommand_IsKept()
         {

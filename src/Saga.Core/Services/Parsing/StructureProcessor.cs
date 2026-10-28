@@ -983,8 +983,20 @@ namespace Saga.Core.Services.Parsing
             var (place, placeText) = FindParentAmendmentTargets(context, entity);
             IReadOnlyList<StructuralAmendmentReference> TargetsOf(string text)
             {
-                var read = context.ReferenceService.ReadAmendmentTargets(
-                    place?[0].Structure, text, SectionSignRole.IsBasicUnit(context.Document.Classification));
+                var sectionIsBasic = SectionSignRole.IsBasicUnit(context.Document.Classification);
+                var read = context.ReferenceService.ReadAmendmentTargets(place?[0].Structure, text, sectionIsBasic);
+
+                // Miejsce w jednostce odziedziczonej (część wspólna, zdanie — „1) w ust. 1 i 2: a) w części wspólnej …") leży
+                // w każdej jednostce przepisu nadrzędnego (ADR-0127).
+                if (read.Count > 0 && place is { Count: > 1 } parents
+                    && read.All(target => target.Structure.HostUnit().ToString() == parents[0].Structure.HostUnit().ToString()))
+                {
+                    return parents
+                        .SelectMany(parent => context.ReferenceService.ReadAmendmentTargets(parent.Structure, text, sectionIsBasic))
+                        .DistinctBy(target => target.ToString())
+                        .ToList();
+                }
+
                 if (read.Count > 0 || place is null)
                     return read;
 

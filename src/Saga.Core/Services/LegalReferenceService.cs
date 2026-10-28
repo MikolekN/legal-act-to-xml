@@ -143,7 +143,7 @@ namespace Saga.Core.Services
         // (ADR-0018, ADR-0019), a „art. 5 i 5[1]" to zawsze dwa cele.
         private static string Identity(StructuralReference reference) =>
             string.Join('|', reference.Systematizing, reference.Annex, reference.Article, reference.Paragraph, reference.ParagraphIsCodeParagraph,
-                reference.Point, reference.Letter, reference.Tiret, reference.Sentence);
+                reference.Point, reference.Letter, reference.Tiret, reference.CommonPart, reference.Sentence);
 
         private static bool NamesAUnit(StructuralReference reference) =>
             (reference.Systematizing ?? reference.Annex ?? reference.Article ?? reference.Paragraph ?? reference.Point ?? reference.Letter

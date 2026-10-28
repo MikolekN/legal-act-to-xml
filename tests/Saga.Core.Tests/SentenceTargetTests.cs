@@ -181,6 +181,68 @@ namespace Saga.Core.Tests
             Assert.Equal([("DU/2021/200__art_12__ust_1", "zastap-recznie")], Instructions(xml).Select(i => (i.Target, i.Function)));
         }
 
+        // ============================================================
+        // Część wspólna jako miejsce zmiany (ADR-0127)
+        // ============================================================
+
+        [Fact]
+        public void SentenceInTheCommonPart_IsCountedInTheCommonPart()
+        {
+            // Korpus: 310239_2768075; odpowiedź autorów schematu na pytanie 7.
+            var xml = Export("1) w art. 15i w ust. 1 w części wspólnej w zdaniu drugim po wyrazach „123 zł” dodaje się wyraz „rocznie”;");
+
+            Assert.Equal([("zamien-tekst", "DU/2021/200__art_15i__ust_1__czw__zdn_2", null, null)], Instructions(xml));
+        }
+
+        [Fact]
+        public void SentenceRepealedInTheCommonPart_IsTheSentenceOfTheCommonPart()
+        {
+            var xml = Export("1) w art. 5 w ust. 1 w części wspólnej skreśla się zdanie drugie;");
+
+            Assert.Equal([("uchyl", "DU/2021/200__art_5__ust_1__czw__zdn_2", null, null)], Instructions(xml));
+        }
+
+        [Fact]
+        public void SignInTheCommonPartBeforeAnAddedPoint_ChangesTheCommonPart_AndAddsAfterThePoint()
+        {
+            // Korpus: 309531 — „w pkt 24 w części wspólnej kropkę zastępuje się średnikiem i dodaje się pkt 25".
+            var xml = Export("1) w art. 4 w pkt 24 w części wspólnej kropkę zastępuje się średnikiem i dodaje się pkt 25 w brzmieniu:",
+                "„25) pojazd najmowany.”;");
+
+            Assert.Equal([("zamien-tekst", "DU/2021/200__art_4__pkt_24__czw", null, null), ("cytat-strukt", "DU/2021/200__art_4__pkt_24", null, "dodaj-po")],
+                Instructions(xml));
+        }
+
+        [Fact]
+        public void PlaceInTheInheritedUnit_LiesInEveryUnitOfTheProvisionAbove()
+        {
+            var xml = Export(
+                "1) w art. 14 w ust. 1 i 2:",
+                "a) w części wspólnej wyrazy „M” zastępuje się wyrazami „N”,",
+                "b) w zdaniu drugim wyrazy „O” zastępuje się wyrazami „P”;");
+
+            Assert.Equal(["DU/2021/200__art_14__ust_1__czw", "DU/2021/200__art_14__ust_2__czw",
+                "DU/2021/200__art_14__ust_1__zdn_2", "DU/2021/200__art_14__ust_2__zdn_2"], Instructions(xml).Select(i => i.Target));
+        }
+
+        [Fact]
+        public void CommonPartAsTheObject_StaysOneCommonPart()
+        {
+            var xml = Export("1) w art. 9 w ust. 3 część wspólna otrzymuje brzmienie:", "„– wymierza się karę.”;");
+
+            Assert.Equal([("cytat-strukt", "DU/2021/200__art_9__ust_3__czw", null, "zastap")], Instructions(xml));
+            Assert.DoesNotContain(xml.Descendants().Attributes(), attribute => attribute.Value.Contains("czw__czw"));
+        }
+
+        [Fact]
+        public void CommonPartOfAnAnnexUnit_StaysAManualPlaceOnTheUnit()
+        {
+            // Eksport nie zna części wspólnej z eId pod jednostką załącznika — instrukcja ręczna na jednostce (ADR-0100).
+            var xml = Export("1) w załączniku nr 1 do ustawy w ust. 1 w pkt 4 w części wspólnej wyrazy „A” zastępuje się wyrazami „B”.");
+
+            Assert.Equal([("DU/2021/200__zal_1__ust_1__pkt_4", "zastap-recznie")], Instructions(xml).Select(i => (i.Target, i.Function)));
+        }
+
         [SchemaPlFact]
         public void SentenceTargets_AreSchemaValid()
         {

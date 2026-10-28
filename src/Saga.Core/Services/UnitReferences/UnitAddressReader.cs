@@ -63,6 +63,7 @@ namespace Saga.Core.Services.UnitReferences
             EnumeratedTarget? pending = null;
             var inRun = false;
             UnitAddress? unitRange = null;
+            var afterItem = false;   // ostatni rozstrzygający token to udany krok jednostki
             if (sentenceAnnounced)
             {
                 cursor.Announce(SentenceKeyword);
@@ -82,11 +83,39 @@ namespace Saga.Core.Services.UnitReferences
                     case UnitTokenKind.UnitKeyword when token.Level == UnitLevel.Annex && !IsAnnexLocation(tokens, i):
                         inRun = false;
                         join = EnumerationJoin.None;
+                        afterItem = false;
                         continue;
+
+                    case UnitTokenKind.UnitKeyword when token.Level == UnitLevel.CommonPart:
+                        {
+                            // Część wspólna jako miejsce zmiany (ADR-0127). Za czasownikiem komendy i za spójnikiem po prozie
+                            // („we wprowadzeniu do wyliczenia i w części wspólnej") miejscem nie jest — cel zostaje, jaki był.
+                            var joined = join != EnumerationJoin.None;
+                            if (!commandVerb && (!joined || afterItem)
+                                && cursor.StepCommonPart(besideTheLastItem: joined) is { IsApplied: true } placed)
+                            {
+                                var address = new UnitAddress(cursor.Snapshot());
+                                if (pending is not null && placed.Previous == PendingDisposition.Flush)
+                                {
+                                    targets.Add(pending);
+                                    pending = new EnumeratedTarget(address, join == EnumerationJoin.Comma);
+                                }
+                                else
+                                {
+                                    pending = new EnumeratedTarget(address, pending?.JoinedByCommaOnly ?? false);
+                                }
+                            }
+
+                            inRun = false;
+                            join = EnumerationJoin.None;
+                            afterItem = false;
+                            continue;
+                        }
 
                     case UnitTokenKind.UnitKeyword when token.Level == UnitLevel.Annex:
                         cursor.Announce(token);
                         inRun = true;
+                        afterItem = false;
                         if (token.Text.EndsWith("nr", StringComparison.OrdinalIgnoreCase)
                             && i + 1 < tokens.Count && tokens[i + 1].Kind == UnitTokenKind.Designation)
                         {
@@ -102,6 +131,7 @@ namespace Saga.Core.Services.UnitReferences
                     case UnitTokenKind.UnitKeyword:
                         cursor.Announce(token);
                         inRun = true;
+                        afterItem = false;
 
                         // Słowo kluczowe bez oznaczenia w załączniku („w pkt 1.4.1", „w części Rachunek zysków") — miejsce
                         // w treści załącznika poza jego jednostkami (ADR-0080).
@@ -113,6 +143,7 @@ namespace Saga.Core.Services.UnitReferences
                         // „w tabeli nr 1", „po rysunku 9.5.53", „w lp. 5" — miejsce nazwane rzeczownikiem, nie jednostką.
                         pending = InAnnexContent(cursor, pending);
                         inRun = false;
+                        afterItem = false;
                         continue;
 
                     case UnitTokenKind.Separator when IsEnumerationSeparator(token.Text):
@@ -135,6 +166,7 @@ namespace Saga.Core.Services.UnitReferences
                     default:
                         inRun = false;
                         join = EnumerationJoin.None;
+                        afterItem = false;
                         commandVerb |= token.Kind == UnitTokenKind.Prose && CommandVerb.IsMatch(token.Text);
                         addition |= token.Kind == UnitTokenKind.Prose && AdditionVerb.IsMatch(token.Text);
                         continue;
@@ -149,6 +181,7 @@ namespace Saga.Core.Services.UnitReferences
                         pending = InAnnexContent(cursor, pending);
                     inRun = false;
                     join = EnumerationJoin.None;
+                    afterItem = false;
                     continue;
                 }
 
@@ -183,6 +216,7 @@ namespace Saga.Core.Services.UnitReferences
 
                 join = EnumerationJoin.None;
                 commandVerb = false;
+                afterItem = true;
             }
 
             return pending is null ? [] : Completed(targets, pending);
